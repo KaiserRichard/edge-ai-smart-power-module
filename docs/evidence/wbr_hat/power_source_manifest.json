@@ -1,0 +1,48 @@
+{
+  "retrieved": "2026-09-11",
+  "use": "reference only; unmodified; no design copied",
+  "sources": [
+    {
+      "file": "third_party/review/wbr_power/SH-RPi-firmware/src/state_machine.cpp",
+      "url": "https://raw.githubusercontent.com/hatlabs/SH-RPi-firmware/4646cc5dd4f5ff60ee702254bc6c63044ddb5639/src/state_machine.cpp",
+      "revision": "4646cc5dd4f5ff60ee702254bc6c63044ddb5639",
+      "sha256": "f47de4519c451fbd8c6443e89efa9ca421a4b82839e0802e38bce77a5bfbc5a6"
+    },
+    {
+      "file": "third_party/review/wbr_power/SH-RPi-firmware/src/constants.h",
+      "url": "https://raw.githubusercontent.com/hatlabs/SH-RPi-firmware/4646cc5dd4f5ff60ee702254bc6c63044ddb5639/src/constants.h",
+      "revision": "4646cc5dd4f5ff60ee702254bc6c63044ddb5639",
+      "sha256": "a453b4fa3e43e4b540376be998984be4ff5e1ac7226c5f48e8db44d945345241"
+    },
+    {
+      "file": "third_party/review/wbr_power/SH-RPi-firmware/src/analog_io.h",
+      "url": "https://raw.githubusercontent.com/hatlabs/SH-RPi-firmware/4646cc5dd4f5ff60ee702254bc6c63044ddb5639/src/analog_io.h",
+      "revision": "4646cc5dd4f5ff60ee702254bc6c63044ddb5639",
+      "sha256": "922137d8a34a7da92c3b415833cb7a009fdc070bf0b8c82efe2cee27ef1fbe70"
+    },
+    {
+      "file": "third_party/review/wbr_power/SH-RPi-firmware/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/hatlabs/SH-RPi-firmware/4646cc5dd4f5ff60ee702254bc6c63044ddb5639/LICENSE.txt",
+      "revision": "4646cc5dd4f5ff60ee702254bc6c63044ddb5639",
+      "sha256": "28b6041e0c4f107a25ce5750b1550ce64f6b81c8269e6d14a50b1326c7f1560f"
+    },
+    {
+      "file": "third_party/review/wbr_power/SH-RPi-daemon/src/shrpi/daemon.py",
+      "url": "https://raw.githubusercontent.com/hatlabs/SH-RPi-daemon/ca6f23a2d2af77d5f676f308cafcc21bb41adf10/src/shrpi/daemon.py",
+      "revision": "ca6f23a2d2af77d5f676f308cafcc21bb41adf10",
+      "sha256": "6c778c7aab1036181676945412f57c9296c4d083f2e93a3c0f569f4ebdee2e78"
+    },
+    {
+      "file": "third_party/review/wbr_power/SH-RPi-daemon/src/shrpi/state_machine.py",
+      "url": "https://raw.githubusercontent.com/hatlabs/SH-RPi-daemon/ca6f23a2d2af77d5f676f308cafcc21bb41adf10/src/shrpi/state_machine.py",
+      "revision": "ca6f23a2d2af77d5f676f308cafcc21bb41adf10",
+      "sha256": "4d4eb66df1f0c810721112e670c15afce2b8304d4d7de022c934287cdcc9a8ae"
+    },
+    {
+      "file": "third_party/review/wbr_power/SH-RPi-daemon/LICENSE",
+      "url": "https://raw.githubusercontent.com/hatlabs/SH-RPi-daemon/ca6f23a2d2af77d5f676f308cafcc21bb41adf10/LICENSE",
+      "revision": "ca6f23a2d2af77d5f676f308cafcc21bb41adf10",
+      "sha256": "3d2d8ca3720fad67a5d0d21ab0816783797ed064f4382fe01d1f272b6ecb46f7"
+    }
+  ]
+}

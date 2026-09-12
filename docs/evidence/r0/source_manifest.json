@@ -1,0 +1,554 @@
+{
+  "date": "2026-09-11",
+  "project": "Project II V1A standalone Smart DC Power Module",
+  "project_commit": "a9fe716a65587f98dcb28a2f39665b6860a7b500",
+  "branch": "docs/r0-r1-engineering-audit",
+  "worktree_note": "R0/R1 authored evidence uncommitted; no component approved",
+  "use_policy": "REFERENCE only; no circuit/CAD/code adapted or copied into project implementation",
+  "repositories": [
+    {
+      "id": "A1",
+      "path": "third_party/repos/SH-RPi-hardware",
+      "url": "https://github.com/hatlabs/SH-RPi-hardware.git",
+      "commit": "e82e3c9823bbcf94091b22927dd2e0da9cdfac8c",
+      "use": "REFERENCE",
+      "modifications": "None; upstream unchanged",
+      "applicability": "V1A block reference; V1B/V2 storage concepts; HAT/MCU future only",
+      "rights": "CC BY 4.0, Hat Labs Ltd; attribution and changes notice for adaptation",
+      "license_files": [
+        {
+          "path": "third_party/repos/SH-RPi-hardware/LICENSE.md",
+          "sha256": "195310c3fb720ebf884823d9e03e46b92da7fcbf4241e65a72fa3d1f7b10f875",
+          "bytes": 17068
+        }
+      ],
+      "reviewed_files": [
+        {
+          "path": "third_party/repos/SH-RPi-hardware/README.md",
+          "sha256": "4ee089a16da17fa0609c257104de9e02872962be3931eaa1fc5ca49b2076e9c3",
+          "bytes": 1261
+        },
+        {
+          "path": "third_party/repos/SH-RPi-hardware/SH-RPi.kicad_sch",
+          "sha256": "e1d0c31d1b64ea1d83be19e3b0a7fd77b7cdb01dce04984cd12ee360f0ee04e1",
+          "bytes": 35783
+        },
+        {
+          "path": "third_party/repos/SH-RPi-hardware/protection.kicad_sch",
+          "sha256": "c34eeb46926fbab7cf1ae494adad0589207e95ffdd546bc57e4a02f5bc6f7e9c",
+          "bytes": 50942
+        },
+        {
+          "path": "third_party/repos/SH-RPi-hardware/buck_8.8V.kicad_sch",
+          "sha256": "3363c16441c65374af39bcf309c43fd9ed20ac1ca5eb860b80b643b83595645f",
+          "bytes": 167116
+        },
+        {
+          "path": "third_party/repos/SH-RPi-hardware/buck_5V.kicad_sch",
+          "sha256": "87d6cfa99155a2d4ba959901a754342f35038956659b79759b816449bac031b9",
+          "bytes": 70586
+        },
+        {
+          "path": "third_party/repos/SH-RPi-hardware/supercap.kicad_sch",
+          "sha256": "663e27f0bcdc80200f0e20fba229d7aab26090d52154073e3fd3c26dc16817a6",
+          "bytes": 95748
+        },
+        {
+          "path": "third_party/repos/SH-RPi-hardware/control_mcu.kicad_sch",
+          "sha256": "7ef58977b2e93105cad09af21a00c47d79c3f4d1fa9ab9f8e4e6f55fd84f8456",
+          "bytes": 110538
+        },
+        {
+          "path": "third_party/repos/SH-RPi-hardware/SH-RPi.kicad_pcb",
+          "sha256": "69bc0ac83ebedc693671e915ac600d74b0e6bc65f3cd56548f03017bfcf0588e",
+          "bytes": 1756304
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "path": "third_party/repos/1026-RPi-Power-Hat",
+      "url": "https://github.com/wilsondr9999/1026-RPi-Power-Hat.git",
+      "commit": "7af0c4d3cd5b66c6948879393b34898937d37348",
+      "use": "REFERENCE",
+      "modifications": "None; upstream unchanged",
+      "applicability": "V1A input/buck concepts; USB/HAT future only",
+      "rights": "Hardware CERN-OHL-W-2.0; documentation/images CC BY-SA 4.0, Dan Wilson; retain notices and applicable reciprocal source terms",
+      "license_files": [
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/LICENSE-CERN-OHL-W",
+          "sha256": "b40b92b17f7d579da2a317725ca02141672aaea7dd94f80ca78a86c5acb13b1b",
+          "bytes": 14851
+        },
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/LICENSE-CC-BY-SA-4.0",
+          "sha256": "2003829cf643d61b00a76088dd31bb11b8029546f24c56b39fd492adb9281483",
+          "bytes": 20139
+        }
+      ],
+      "reviewed_files": [
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/README.md",
+          "sha256": "92e7564bdfe721b729aee9a27cb09cda5cc6d2395b5cc2d6e03034c684e3195f",
+          "bytes": 19238
+        },
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/KiCAD Project/Power Input.kicad_sch",
+          "sha256": "ac94807c7c0b96b0f903a007439eef8a11b1a11e633ca49f3435fea685bb2830",
+          "bytes": 91899
+        },
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/KiCAD Project/5V Regulator.kicad_sch",
+          "sha256": "4eb8b31165e92ff1408bd58a0ef7d9d676e3a86590eafcb6a56629b6d58ef3f3",
+          "bytes": 94275
+        },
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/KiCAD Project/1026 RPi Power Hat.kicad_sch",
+          "sha256": "75c0cd8ae1db6133b097bd2dd7572d33e7adb8ea009388d29eb3bf0e4408ba21",
+          "bytes": 40362
+        },
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/KiCAD Project/1026 RPi Power Hat.kicad_pcb",
+          "sha256": "079df5689ac0fe68fc901af3a0cf412e07b1ec8c3dd3256a2ae605ee7e21d1b6",
+          "bytes": 2541681
+        },
+        {
+          "path": "third_party/repos/1026-RPi-Power-Hat/KiCAD Project/BOM/1026 RPi Power Hat.csv",
+          "sha256": "741302c17c6979d8fb2dcea9684826b85d5b6d57a93eebf30d341719fac33316",
+          "bytes": 19717
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "path": "third_party/repos/UPS-Hat-RPi",
+      "url": "https://github.com/sbcshop/UPS-Hat-RPi.git",
+      "commit": "14926b39f14ee541c9e5aa879d2b654a4e4605ad",
+      "use": "REFERENCE",
+      "modifications": "None; upstream unchanged",
+      "applicability": "V1A sensing-boundary caution; battery backup future V2 only",
+      "rights": "Root MIT, SB Components; hardware/vendor-PDF/font scope not assumed",
+      "license_files": [
+        {
+          "path": "third_party/repos/UPS-Hat-RPi/LICENSE",
+          "sha256": "8dd27abb0301d4ddfe33276ea91957dc7fe9111801bb43dd6604bf51b823ae40",
+          "bytes": 1070
+        }
+      ],
+      "reviewed_files": [
+        {
+          "path": "third_party/repos/UPS-Hat-RPi/README.md",
+          "sha256": "9c92f4247298d2744c67ad28a177f2811840ca618121aadfe7769c6629153258",
+          "bytes": 4100
+        },
+        {
+          "path": "third_party/repos/UPS-Hat-RPi/Design Data/SCH UPS HAT OLED V2.pdf",
+          "sha256": "efe736d0e01cc80c9f83fd668817e507a2a9d7e477f33c230665fd7af3585188",
+          "bytes": 3169138
+        },
+        {
+          "path": "third_party/repos/UPS-Hat-RPi/INA219_UPS.py",
+          "sha256": "7f68872b21b102d7b54d08c0a7cf98e4d2b730ee4aef5ec66796bedebbb0f6c3",
+          "bytes": 6945
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "C1",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56837.pdf",
+      "revision": "SLVSGM3B, January 2024",
+      "sections": "sections 7.2-7.4, pp.17-24",
+      "block_components": "TPS56837 buck and layout",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/ti_converters/tps56837.pdf",
+      "sha256": "6d47e6df4508ca271bfb67ba72e4d7f84d19e64fda3f89a5fe0fb616e7f4b5a8",
+      "bytes": 1980506
+    },
+    {
+      "id": "C1E",
+      "url": "https://www.ti.com/lit/pdf/slvuce1",
+      "revision": "SLVUCE1A, August 2023",
+      "sections": "p.2; pp.8-12",
+      "block_components": "TPS56837RPAR / 744325330 / GRM32ER71E226KE15L",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/ti_converters/tps56837_evm.pdf",
+      "sha256": "333f3e215361a6dad88c37697275457f379bef80d192d3b672f4ae3c51b28929",
+      "bytes": 1475814
+    },
+    {
+      "id": "C2",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56637.pdf",
+      "revision": "SLVSEG1A, September 2019",
+      "sections": "pp.18-20,24-25",
+      "block_components": "TPS56637 5V/6A reference",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/ti_converters/tps56637.pdf",
+      "sha256": "18edaff6769b0d5c3d0cdef66df1232538cd357bbaac214df138969f9b0d6745",
+      "bytes": 1798868
+    },
+    {
+      "id": "C2E",
+      "url": "https://www.ti.com/lit/pdf/slvube3",
+      "revision": "SLVUBE3B, June 2021",
+      "sections": "p.3; pp.6-9",
+      "block_components": "TPS56637 / IHLP3232DZER3R3M11",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/ti_converters/tps56637_evm.pdf",
+      "sha256": "9128f18013449a9dc10398243ce615a477f4972641a9f8cd5c3613b14aacba7c",
+      "bytes": 1035104
+    },
+    {
+      "id": "C3E",
+      "url": "https://www.ti.com/lit/pdf/snvu621",
+      "revision": "SNVU621D, July 2021",
+      "sections": "p.8, pp.10-11,13-15,17-18",
+      "block_components": "LM61460-Q1 EVM 5V/6A/400kHz",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/ti_converters/lm61460_evm.pdf",
+      "sha256": "b11f7b7cd9e336f32824738c3859b9ef836840a4e8b0550018aa05fc178fdfff",
+      "bytes": 1578905
+    },
+    {
+      "id": "C4",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56528.pdf",
+      "revision": "SLVSBV3B, November 2016",
+      "sections": "pp.1,12-16",
+      "block_components": "TPS56528 18V/5A class",
+      "applicability": "V1A conditional low-input alternative",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/ti_converters/tps56528.pdf",
+      "sha256": "1107e136b78ea52e6ca72dd165a4cc4a202c00c5b194b4a7b03f7ebd8119b45d",
+      "bytes": 1456511
+    },
+    {
+      "id": "C5",
+      "url": "https://www.richtek.com/assets/product_file/RT6365/DS6365-02.pdf",
+      "revision": "DS6365-02, March 2020",
+      "sections": "pp.1-2; application and layout sections",
+      "block_components": "RT6365 asynchronous buck",
+      "applicability": "V1A comparison; A1 interpretation",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/RT6365_DS6365-02.pdf",
+      "sha256": "2f4c854bd9b625c757705fa4fc390934a6e9207bae9198416caeebce6ce239d6",
+      "bytes": 705781
+    },
+    {
+      "id": "M1",
+      "url": "https://www.ti.com/lit/ds/symlink/ina228.pdf",
+      "revision": "SLYS021A, May 2022",
+      "sections": "pp.3-7,30-39; section 7.3",
+      "block_components": "INA228 power/energy/current monitor",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/TI_INA228_SLYS021A.pdf",
+      "sha256": "a138d39eeee04f8388426fed204c2f4012e75d36e95b60b0751ef003cd277447",
+      "bytes": 2473528
+    },
+    {
+      "id": "M2",
+      "url": "https://www.ti.com/lit/ug/sbou241e/sbou241e.pdf",
+      "revision": "SBOU241E, August 2022",
+      "sections": "Fig.6-1 p.23, pp.27-30",
+      "block_components": "SENS063 monitoring circuit and Kelvin layout",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/TI_INA228_EVM_SBOU241E.pdf",
+      "sha256": "05419823933b71973aa76825e70156ee1d8af6ee18322aca6a31243c5bf36040",
+      "bytes": 4805144
+    },
+    {
+      "id": "M3",
+      "url": "https://www.ti.com/lit/an/sboa511a/sboa511a.pdf",
+      "revision": "SBOA511A, September 2021",
+      "sections": "pp.3-7",
+      "block_components": "Shunt sizing/calibration",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/TI_DIGITAL_POWER_MONITORS_SBOA511A.pdf",
+      "sha256": "b0e36f2e90d0ad451a1c67ed677e92a76fae21f713f3c8d2514ffaab9098b756",
+      "bytes": 583371
+    },
+    {
+      "id": "M4",
+      "url": "https://www.ti.com/lit/ds/symlink/ina226.pdf",
+      "revision": "SBOS547C, August 2026",
+      "sections": "pp.4-6,22-28,31",
+      "block_components": "INA226 fallback",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/TI_INA226_SBOS547C.pdf",
+      "sha256": "c9b67f886d4a5241a5e070723f7b61867409eeb27eed768b9cdd9cb17e03ca2d",
+      "bytes": 1516957
+    },
+    {
+      "id": "M5",
+      "url": "https://www.vishay.com/docs/30131/wsl2726.pdf",
+      "revision": "Document 30131, 29-Jun-2026",
+      "sections": "pp.1-2",
+      "block_components": "WSL2726 Kelvin shunts, order codes and component TCR",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/Vishay_WSL2726_30131_2026-06-29.pdf",
+      "sha256": "583946079d110ac74dc7987e1f1d2c5a170253b03f123b993c414761c6b89373",
+      "bytes": 165739
+    },
+    {
+      "id": "P1",
+      "url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "revision": "SLVSE94G, June 2024",
+      "sections": "pp.20-22,37-39 and limits",
+      "block_components": "TPS26630/31 with external reverse-protection devices",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/TI_TPS2663_SLVSE94G.pdf",
+      "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+      "bytes": 5728602
+    },
+    {
+      "id": "P2",
+      "url": "https://www.ti.com/lit/ds/symlink/lm7480-q1.pdf",
+      "revision": "SNOSD95C, December 2020",
+      "sections": "pp.3-7,15-16,35",
+      "block_components": "LM74800-Q1 back-to-back FET disconnect",
+      "applicability": "V1A; future V2 reverse-feed boundary",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf",
+      "sha256": "38ea1e89cc677020c8a10096649fa7933d2aeff8c0cd97ca9a78c1f8f5b9b500",
+      "bytes": 9773286
+    },
+    {
+      "id": "F1",
+      "url": "https://www.ti.com/lit/ds/symlink/lmp8646.pdf",
+      "revision": "SNOSC63B, December 2014",
+      "sections": "p.1 typical application; application section",
+      "block_components": "LMP8646/LM3102 current-limit charging concept",
+      "applicability": "V1B/V2 only; A1 provenance",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; preserve original notices; no open hardware/CAD reuse license inferred",
+      "evidence_level": "cached official source and authored review; detailed limitations in 01_REFERENCE_AUDIT.md",
+      "path": "third_party/documents/TI_LMP8646.pdf",
+      "sha256": "83c84321496ead0397d613d2613c4b2cce41acd7d4000d3f17efa64ab4cd936d",
+      "bytes": 1198932
+    },
+    {
+      "id": "C3",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "revision": "SNVSBD5D, July 2022",
+      "sections": "sections 9.2,11; pp.43-44,48-49",
+      "block_components": "LM61460 36V/6A buck",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; no open hardware license inferred",
+      "evidence_level": "Remote PDF read; prior cache attempt exceeded size limit; no local digest",
+      "cache_status": "remote_only"
+    },
+    {
+      "id": "C6",
+      "url": "https://www.ti.com/lit/gpn/LM64440-Q1",
+      "revision": "SNVSBW0D, July 2026",
+      "sections": "variant/pin table and sections 7-8",
+      "block_components": "LM64440APPQRYFRQ1 is 4A",
+      "applicability": "V1A predecessor rating check",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; no open hardware license inferred",
+      "evidence_level": "Initial search/index showed Rev C; resolved official PDF reports Rev D; no local digest",
+      "cache_status": "remote_only"
+    },
+    {
+      "id": "P3",
+      "url": "https://www.ti.com/lit/ds/symlink/lm74500-q1.pdf",
+      "revision": "SNOSDB7, December 2020",
+      "sections": "p.1 and operating limits",
+      "block_components": "LM74500-Q1 no reverse-current blocking",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; no open hardware license inferred",
+      "evidence_level": "Remote PDF only",
+      "cache_status": "remote_only"
+    },
+    {
+      "id": "P4",
+      "url": "https://www.ti.com/lit/ds/symlink/tps25982.pdf",
+      "revision": "SLVSEI3D, May 2026 (prior review)",
+      "sections": "p.1; pp.21-22",
+      "block_components": "TPS25982 24V operating ceiling",
+      "applicability": "V1A fault-envelope screening",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; no open hardware license inferred",
+      "evidence_level": "Prior review only; not re-downloaded or freshly qualified",
+      "cache_status": "remote_only"
+    },
+    {
+      "id": "F2",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc3350.pdf",
+      "revision": "Rev D, August 2021 revision history",
+      "sections": "pp.16-18,21-22; PCB layout considerations",
+      "block_components": "LTC3350 charging/balancing/backup example",
+      "applicability": "V1B/V2 only",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; no open hardware license inferred",
+      "evidence_level": "Official remote PDF read; local curl failed code 92 HTTP/2; no local copy",
+      "cache_status": "remote_only"
+    },
+    {
+      "id": "F3",
+      "url": "https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/technical/eaton-supercapacitor-application-guidelines.pdf",
+      "revision": "PS-5006, effective December 2017",
+      "sections": "pp.2-3",
+      "block_components": "Supercapacitor charge/balance concepts",
+      "applicability": "V1B/V2 only",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; no open hardware license inferred",
+      "evidence_level": "Official remote PDF read; local curl failed code 92 HTTP/2; p.3 equation-label inconsistency recorded",
+      "cache_status": "remote_only"
+    },
+    {
+      "id": "C1L",
+      "url": "https://www.we-online.com/components/products/datasheet/744325330.pdf",
+      "revision": "Not frozen; component-level review OPEN",
+      "sections": "Electrical ratings and current/temperature curves",
+      "block_components": "744325330 reference inductor",
+      "applicability": "V1A",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "Copyright manufacturer; no open hardware license inferred",
+      "evidence_level": "Manufacturer URL identified/opened, subsequent read failed; do not assert resolved current ratings",
+      "cache_status": "remote_only"
+    },
+    {
+      "id": "H1",
+      "url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf",
+      "revision": "Release 1; build 2026-03-17 / 1026f0c6e305",
+      "path": "third_party/documents/raspberry-pi-usb-pd-release1.pdf",
+      "sha256": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e",
+      "bytes": 434270,
+      "sections": "printed pp.5,7-8",
+      "block_components": "Raspberry Pi power/interface reference",
+      "applicability": "V1A optional SBC load context",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "CC BY-ND 4.0 plus colophon terms",
+      "evidence_level": "Existing pinned cache; old failed LICENCE lookup retained in original manifest"
+    },
+    {
+      "id": "H2",
+      "url": "https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf",
+      "revision": "2024-12-05 / 6df06cc-clean",
+      "path": "third_party/documents/raspberry-pi-hat-plus.pdf",
+      "sha256": "3a0932253767147038383162ac9f4b5aac3adb048c30bd1f9177a462a054ca1e",
+      "bytes": 1210200,
+      "sections": "chapters 2-4,6",
+      "block_components": "Raspberry Pi power/interface reference",
+      "applicability": "Future HAT/WBR only; general backfeed lesson",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "CC BY-ND 4.0 plus colophon terms",
+      "evidence_level": "Existing pinned cache; old failed LICENCE lookup retained in original manifest"
+    },
+    {
+      "id": "H3",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/5e2c40fe1125bb8ff7374de2c11c94761084eb1f/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+      "revision": "5e2c40fe1125bb8ff7374de2c11c94761084eb1f",
+      "path": "third_party/documents/raspberry-pi-power-supplies.adoc",
+      "sha256": "49f6478c1c0164237ebcf1d28aac4709e843d2b5c06442539bacae05e49eafb1",
+      "bytes": 9271,
+      "sections": "power requirements and diagnostics",
+      "block_components": "Raspberry Pi power/interface reference",
+      "applicability": "V1A optional load reference",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "H3 full LICENSE.md text/link CC BY-SA 4.0; introduction inconsistent",
+      "evidence_level": "Existing pinned cache; old failed LICENCE lookup retained in original manifest"
+    },
+    {
+      "id": "H4",
+      "url": "https://raw.githubusercontent.com/raspberrypi/hats/348dbf88d870bf50d6b4f23dbe2b64d60363f23c/designguide.md",
+      "revision": "348dbf88d870bf50d6b4f23dbe2b64d60363f23c",
+      "path": "third_party/documents/raspberry-pi-legacy-hat-designguide.md",
+      "sha256": "3f63eba24fa05e389e50cc31e5e96a614a58da55a3d3bfe5308a79b6c04b6c13",
+      "bytes": 8836,
+      "sections": "legacy power/reverse-diode discussion",
+      "block_components": "Raspberry Pi power/interface reference",
+      "applicability": "Future HAT only",
+      "use": "REFERENCE",
+      "modifications": "None",
+      "rights": "File-specific reuse rights unresolved; no adaptation",
+      "evidence_level": "Existing pinned cache; old failed LICENCE lookup retained in original manifest"
+    }
+  ],
+  "additional_license_evidence": [
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/LICENSE.md",
+      "sha256": "234247fb0cd987c3dd6a1918ca62cf5b9a519e5e9cbbf8007a63a8913206e2df",
+      "bytes": 18771
+    }
+  ],
+  "preserved_manifests": [
+    "docs/evidence/r0/environment.json",
+    "docs/evidence/r0/raspberry_pi_sources.json",
+    "docs/evidence/wbr_hat/power_source_manifest.json",
+    "third_party/documents/ti_converters/download_manifest.json"
+  ],
+  "limitations": [
+    "Remote-only sources lack local digests; exact revision/section captured in audit",
+    "Pin verification uses local Git commit objects for A1-A3; Pi source pins are URL identities with cached file digests, not full local repository objects",
+    "Manufacturer/vendor PDF rights are not inferred from an upstream GitHub root license",
+    "V1A-V1B interface parameters remain TBD"
+  ]
+}

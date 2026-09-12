@@ -1,0 +1,21 @@
+# Upstream checkouts and downloaded authoritative documents are pinned by manifests.
+third_party/repos/
+third_party/documents/
+third_party/review/
+
+# Local tooling and transient review outputs.
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+tmp/
+
+# KiCad local state and backups; authored designs remain trackable.
+*.kicad_prl
+*.lck
+*-backups/
+
+# Credentials must never be committed.
+.env
+.env.*
+!.env.example

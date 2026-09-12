@@ -1,0 +1,184 @@
+{
+  "date": "2026-09-12",
+  "scope": "R2 delta only; R0 source pack preserved",
+  "sources": [
+    {
+      "id": "BUCK",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "revision": "SNVSBD5D Jul2022; RJR package4223976/H Jun2026",
+      "path": "third_party/documents/r2/TI_LM61460_SNVSBD5D.pdf",
+      "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d",
+      "bytes": 3093699,
+      "use": "ADAPTED functional circuit; BIAS ground,6.8uH,5.1V divider,50V banks,EN gating",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "BUCK_EVM",
+      "url": "https://www.ti.com/lit/pdf/snvu621",
+      "revision": "SNVU621D Jul2021",
+      "path": "third_party/documents/ti_converters/lm61460_evm.pdf",
+      "sha256": "b11f7b7cd9e336f32824738c3859b9ef836840a4e8b0550018aa05fc178fdfff",
+      "bytes": 1578905,
+      "use": "REFERENCE Q1 EVM circuit,loop topology,thermal conditions; no PCB copied",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "INPUT",
+      "url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "revision": "SLVSE94G Jun2024",
+      "path": "third_party/documents/TI_TPS2663_SLVSE94G.pdf",
+      "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+      "bytes": 5728602,
+      "use": "ADAPTED Fig8-7 external FET topology; custom dividers,current limit and startup",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "INPUT_EVM",
+      "url": "https://www.ti.com/lit/ug/slvubi8a/slvubi8a.pdf",
+      "revision": "SLVUBI8A Mar2019",
+      "path": "third_party/documents/r2/TI_TPS26630-33EVM_SLVUBI8A.pdf",
+      "sha256": "b05d9ea2ee56f0b4439f318c4456985c3a11a40566c38b91f32d5ffcde63bb18",
+      "bytes": 1146851,
+      "use": "REFERENCE pin topology; omitted configurable EVM networks",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "INPUT_FET",
+      "url": "https://www.ti.com/lit/ds/symlink/csd19537q3.pdf",
+      "revision": "SLPS549B Nov2022",
+      "path": "third_party/documents/r2/TI_CSD19537Q3_SLPS549B.pdf",
+      "sha256": "d74d65b7815d46d642a11c89834ee71245ae6d3541595df2b4fcfa21dfbd4903",
+      "bytes": 979540,
+      "use": "REFERENCE pins,rating,SOA; original project symbol",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "PULLDOWN_FET",
+      "url": "https://www.onsemi.com/pdf/datasheet/bss138-d.pdf",
+      "revision": "BSS138/D Rev7 Apr2024",
+      "path": "third_party/documents/r2/onsemi_BSS138.pdf",
+      "sha256": "f315b0eb0ff600a2f3231cf403951bb12cd02c70119c668629b1b2665c2b058d",
+      "bytes": 420992,
+      "use": "REFERENCE pin mapping and device limits",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "OUTPUT",
+      "url": "https://www.ti.com/lit/ds/symlink/lm7480-q1.pdf",
+      "revision": "SNOSD95C Dec2020",
+      "path": "third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf",
+      "sha256": "38ea1e89cc677020c8a10096649fa7933d2aeff8c0cd97ca9a78c1f8f5b9b500",
+      "bytes": 9773286,
+      "use": "REFERENCE only; output circuit intentionally not implemented",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "INA228",
+      "url": "https://www.ti.com/lit/ds/symlink/ina228.pdf",
+      "revision": "SLYS021A May2022",
+      "path": "third_party/documents/TI_INA228_SLYS021A.pdf",
+      "sha256": "a138d39eeee04f8388426fed204c2f4012e75d36e95b60b0751ef003cd277447",
+      "bytes": 2473528,
+      "use": "ADAPTED Fig8-1 input/filter and supply arrangement",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "INA228_EVM",
+      "url": "https://www.ti.com/lit/ug/sbou241e/sbou241e.pdf",
+      "revision": "SBOU241E Aug2022",
+      "path": "third_party/documents/TI_INA228_EVM_SBOU241E.pdf",
+      "sha256": "05419823933b71973aa76825e70156ee1d8af6ee18322aca6a31243c5bf36040",
+      "bytes": 4805144,
+      "use": "REFERENCE Fig6-1; no EVM CAD copied",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "SHUNT",
+      "url": "https://www.vishay.com/docs/30131/wsl2726.pdf",
+      "revision": "30131 Rev29-Jun-2026",
+      "path": "third_party/documents/Vishay_WSL2726_30131_2026-06-29.pdf",
+      "sha256": "583946079d110ac74dc7987e1f1d2c5a170253b03f123b993c414761c6b89373",
+      "bytes": 165739,
+      "use": "REFERENCE rating,Kelvin terminals and ordering code",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "LDO",
+      "url": "https://www.ti.com/lit/ds/symlink/tps709.pdf",
+      "revision": "SBVS186H Jul2021",
+      "path": "third_party/documents/r2/TI_TPS709_SBVS186H.pdf",
+      "sha256": "f37b072c265ba83cf6e484bf03c81a72b624cdc09680d90e018e6c97c044049c",
+      "bytes": 2271835,
+      "use": "ADAPTED local3.3V supply;EN floating,22uF output candidate",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "I2C",
+      "url": "https://www.ti.com/lit/ds/symlink/tca9517.pdf",
+      "revision": "SCPS242D Jul2017",
+      "path": "third_party/documents/r2/TI_TCA9517_SCPS242D.pdf",
+      "sha256": "fde93fd601168d6f457bbf38377f8ee5eb14ab2589ed52974fdf9c847163f22c",
+      "bytes": 722351,
+      "use": "ADAPTED host A/local B supply isolation;10k local/4.7k host pullups",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "CLAMP_DIODE",
+      "url": "https://www.diodes.com/assets/Datasheets/ds13004.pdf",
+      "revision": "DS13004 Rev22-2 Jul2015",
+      "path": "third_party/documents/r2/Diodes_B260_DS13004.pdf",
+      "sha256": "19ab27e98e717e7012275062b715964897882f3ce95eab846f71d5f2b485ab5b",
+      "bytes": 399710,
+      "use": "REFERENCE B260-13-F ratings,polarity,SMB package",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "CAP_MIRROR",
+      "url": "https://product.tdk.com/info/en/documents/chara_sheet/C5750X7R1H226M250KB.pdf",
+      "revision": "19-Mar-2019 characterization; local mirror, original mirror URL unrecovered",
+      "path": "third_party/documents/r2/TDK_C5750X7R1H226M250KB_mirror.pdf",
+      "sha256": "b32be691c9267eef582ab049657b79aac42bae2fd9a586b9a5ef39bc5527d53e",
+      "bytes": 257509,
+      "use": "REFERENCE typical curves; official PDF retrieval403; not guaranteed minima",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer/document/revision citation; do not redistribute altered source artwork"
+    },
+    {
+      "id": "INDUCTOR",
+      "url": "https://www.coilcraft.com/getmedia/345e50d6-a804-4ecb-9a92-5185221faf3e/xal8080.pdf",
+      "revision": "Document839 05/01/26",
+      "use": "REFERENCE remote manufacturer PDF and product page; download403, no local PDF",
+      "license": "Coilcraft copyright",
+      "attribution": "Coilcraft Document839"
+    },
+    {
+      "id": "CAP_OFFICIAL",
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C5750X7R1H226M250KB",
+      "revision": "Live product record inspected2026-09-12",
+      "use": "REFERENCE ratings and recommended land dimensions; no official curve cache",
+      "license": "TDK copyright",
+      "attribution": "TDK C5750X7R1H226M250KB product record"
+    },
+    {
+      "id": "TVS_CANDIDATE",
+      "url": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smbj_datasheet.pdf.pdf",
+      "revision": "OPEN; manufacturer search excerpt only",
+      "use": "CANDIDATE only; exact document not recovered; no final coordination claim",
+      "license": "Littelfuse copyright",
+      "attribution": "Littelfuse SMBJ series; full source verification outstanding"
+    }
+  ]
+}

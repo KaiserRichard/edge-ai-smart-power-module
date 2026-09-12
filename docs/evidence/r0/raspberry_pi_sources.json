@@ -1,0 +1,46 @@
+[
+  {
+    "path": "third_party/documents/raspberry-pi-hat-plus.pdf",
+    "url": "https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf",
+    "revision": "2024-12-05 / 6df06cc-clean",
+    "rights": "CC BY-ND 4.0; colophon additional resource-use terms",
+    "sha256": "3a0932253767147038383162ac9f4b5aac3adb048c30bd1f9177a462a054ca1e",
+    "bytes": 1210200,
+    "retrieved": "2026-09-11",
+    "use": "reference only, unchanged"
+  },
+  {
+    "path": "third_party/documents/raspberry-pi-usb-pd-release1.pdf",
+    "url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf",
+    "revision": "Release 1; build 2026-03-17 / 1026f0c6e305",
+    "rights": "CC BY-ND 4.0; colophon additional resource-use terms",
+    "sha256": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e",
+    "bytes": 434270,
+    "retrieved": "2026-09-11",
+    "use": "reference only, unchanged"
+  },
+  {
+    "path": "third_party/documents/raspberry-pi-power-supplies.adoc",
+    "url": "https://raw.githubusercontent.com/raspberrypi/documentation/5e2c40fe1125bb8ff7374de2c11c94761084eb1f/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+    "revision": "5e2c40fe1125bb8ff7374de2c11c94761084eb1f",
+    "rights": "See downloaded LICENCE; reference only",
+    "sha256": "49f6478c1c0164237ebcf1d28aac4709e843d2b5c06442539bacae05e49eafb1",
+    "bytes": 9271,
+    "retrieved": "2026-09-11",
+    "use": "reference only, unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/raspberrypi/documentation/5e2c40fe1125bb8ff7374de2c11c94761084eb1f/LICENCE",
+    "error": "curl: (56) The requested URL returned error: 404\n"
+  },
+  {
+    "path": "third_party/documents/raspberry-pi-legacy-hat-designguide.md",
+    "url": "https://raw.githubusercontent.com/raspberrypi/hats/348dbf88d870bf50d6b4f23dbe2b64d60363f23c/designguide.md",
+    "revision": "348dbf88d870bf50d6b4f23dbe2b64d60363f23c",
+    "rights": "Legacy official guidance; no circuit copied",
+    "sha256": "3f63eba24fa05e389e50cc31e5e96a614a58da55a3d3bfe5308a79b6c04b6c13",
+    "bytes": 8836,
+    "retrieved": "2026-09-11",
+    "use": "reference only, unchanged"
+  }
+]

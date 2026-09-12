@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "filename": "V1A.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [],
+    "meta": {
+      "version": 3
+    }
+  },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    }
+  },
+  "sheets": [
+    [
+      "576b2f55-cbc6-5266-8df6-9cffc8340346",
+      "00_TOP"
+    ],
+    [
+      "37852ec5-fee5-5973-89ae-3cd309e38c33",
+      "01_INPUT_PROTECTION"
+    ],
+    [
+      "5dffa0bc-750e-519f-9b00-1681dc612371",
+      "02_BUCK_5V"
+    ],
+    [
+      "75179989-af4b-5de8-b22b-4510e541985c",
+      "03_OUTPUT_PROTECTION"
+    ],
+    [
+      "6055d333-b195-5ef3-b19f-42ca0fee65c8",
+      "04_POWER_MONITOR"
+    ],
+    [
+      "8d9c57c5-d3a6-5649-afb2-3a00633471f3",
+      "05_IO_TEST"
+    ]
+  ],
+  "text_variables": {
+    "RELEASE_STATUS": "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED"
+  }
+}

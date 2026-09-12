@@ -1,0 +1,47 @@
+{
+  "status": "REVIEW DRAFT - RELEASE BLOCKED",
+  "components": [
+    {
+      "ref": "TP301",
+      "value": "VOUT_5V1",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP302",
+      "value": "VOUT_PROTECTED",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    }
+  ],
+  "schematic_notes": [
+    "SOURCE: TI LM7480-Q1 SNOSD95C sections 8/9; candidate analysis in OUTPUT_PROTECTION.md.",
+    "FUNCTION REQUIRED: independent OV detection/disconnect and reverse-feed block.",
+    "NO DISCONNECT IS FITTED. VOUT_5V1 and VOUT_PROTECTED ARE ELECTRICALLY SEPARATE.",
+    "MODIFICATION: reference circuit deliberately not captured until its threshold/let-through budget closes.",
+    "RATIONALE: missing load fault-voltage/time and capacitance limits; no unsupported protection promise.",
+    "R2 BLOCKER: detector, FETs, trip/recovery and SOA cannot be released yet. No bypass or jumper.",
+    "With this draft, VIN cannot power the output. An external LOAD_5V1 supply powers the monitor only."
+  ],
+  "passive_start": 76.2
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "counts": {
+    "markdown_files": 16,
+    "relative_links": 66,
+    "json_files": 5,
+    "hashed_records": 58,
+    "repository_pins": 3
+  },
+  "errors": [],
+  "limitations": [
+    "C3: remote-only/limited evidence; see audit",
+    "C6: remote-only/limited evidence; see audit",
+    "P3: remote-only/limited evidence; see audit",
+    "P4: remote-only/limited evidence; see audit",
+    "F2: remote-only/limited evidence; see audit",
+    "F3: remote-only/limited evidence; see audit",
+    "C1L: remote-only/limited evidence; see audit",
+    "Checks authored Markdown; upstream README links are outside project control.",
+    "External URLs and remote Git objects are not re-fetched by this offline checker.",
+    "Hashes verify recorded bytes, not electrical correctness or license clearance.",
+    "Completion claims and numerical/engineering interpretation require human review."
+  ]
+}

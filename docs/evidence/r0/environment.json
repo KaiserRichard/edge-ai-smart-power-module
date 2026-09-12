@@ -1,0 +1,116 @@
+{
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "machine": "x86_64",
+  "python": "3.11.0rc2",
+  "tool_paths": {
+    "kicad-cli": null,
+    "git": "/usr/local/bin/git",
+    "python3": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+    "pdftotext": null,
+    "pdftoppm": null,
+    "pdfinfo": null,
+    "uv": "/Library/Frameworks/Python.framework/Versions/3.11/bin/uv",
+    "node": "/usr/local/bin/node"
+  },
+  "commands": [
+    {
+      "command": [
+        "sw_vers"
+      ],
+      "exit_code": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t15.7.9\nBuildVersion:\t\t24G830\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "git version 2.52.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "9.0.6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "Usage: kicad-cli [--version] [--help] {fp,jobset,pcb,sch,sym,version}\n\nOptional arguments:\n  -v, --version  prints version information and exits \n  -h, --help     Shows help message and exits \n\nSubcommands:\n  fp            Footprint and Footprint Libraries\n  jobset        Jobset\n  pcb           PCB\n  sch           Schematics\n  sym           Symbol and Symbol Libraries\n  version       Reports the version info in various formats\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "sch",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "Usage: sch [--help] {erc,export}\n\nSchematics\n\nOptional arguments:\n  -h, --help  Shows help message and exits \n\nSubcommands:\n  erc        Runs the Electrical Rules Check (ERC) on the schematic and creates a report\n  export     Export utilities (netlist, pdf, bom, etc)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "sch",
+        "erc",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "Usage: erc [--help] [--output OUTPUT_FILE] [--define-var KEY=VALUE] [--format VAR] [--units VAR] [--severity-all] [--severity-error] [--severity-warning] [--severity-exclusions] [--exit-code-violations] INPUT_FILE\n\nRuns the Electrical Rules Check (ERC) on the schematic and creates a report\n\nPositional arguments:\n  INPUT_FILE              Input file \n\nOptional arguments:\n  -h, --help              Shows help message and exits \n  -o, --output            Output file [nargs=0..1] [default: \"\"]\n  -D, --define-var        Overrides or adds project variables, can be used multiple times to declare multiple variables.\n                          Use in the format of '--define-var key=value' or '-D key=value' [nargs=0..1] [default: {}]\n  --format                Output file format, options: json, report [nargs=0..1] [default: \"report\"]\n  --units                 Report units; valid options: in, mm, mils [nargs=0..1] [default: \"mm\"]\n  --severity-all          Report all ERC violations, this is equivalent to including all the other severity arguments \n  --severity-error        Report all ERC error level violations, this can be combined with the other severity arguments \n  --severity-warning      Report all ERC warning level violations, this can be combined with the other severity arguments \n  --severity-exclusions   Report all excluded ERC violations, this can be combined with the other severity arguments \n  --exit-code-violations  Return a nonzero exit code if ERC violations exist \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "sch",
+        "export",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "Usage: export [--help] {bom,dxf,hpgl,netlist,pdf,ps,python-bom,svg}\n\nExport utilities (netlist, pdf, bom, etc)\n\nOptional arguments:\n  -h, --help  Shows help message and exits \n\nSubcommands:\n  bom        Generate a Bill of Materials (BOM)\n  dxf        Export DXF\n  hpgl       Export HPGL\n  netlist    Export a netlist\n  pdf        Export PDF\n  ps         Export PS\n  python-bom Export the legacy BOM XML format used in the schematic editor with Python scripts\n  svg        Export SVG\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "Usage: pcb [--help] {drc,export,render}\n\nPCB\n\nOptional arguments:\n  -h, --help  Shows help message and exits \n\nSubcommands:\n  drc        Runs the Design Rules Check (DRC) on the PCB and creates a report\n  export     Export utilities (Gerbers, drill, position files, etc)\n  render     Renders the PCB in 3D view to PNG or JPEG image\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "drc",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "Usage: drc [--help] [--output OUTPUT_FILE] [--define-var KEY=VALUE] [--format FORMAT] [--all-track-errors] [--schematic-parity] [--units UNITS] [--severity-all] [--severity-error] [--severity-warning] [--severity-exclusions] [--exit-code-violations] INPUT_FILE\n\nRuns the Design Rules Check (DRC) on the PCB and creates a report\n\nPositional arguments:\n  INPUT_FILE              Input file \n\nOptional arguments:\n  -h, --help              Shows help message and exits \n  -o, --output            Output file [nargs=0..1] [default: \"\"]\n  -D, --define-var        Overrides or adds project variables, can be used multiple times to declare multiple variables.\n                          Use in the format of '--define-var key=value' or '-D key=value' [nargs=0..1] [default: {}]\n  --format                Output file format, options: json, report [nargs=0..1] [default: \"report\"]\n  --all-track-errors      Report all errors for each track \n  --schematic-parity      Test for parity between PCB and schematic \n  --units                 Report units; valid options: in, mm, mils [nargs=0..1] [default: \"mm\"]\n  --severity-all          Report all DRC violations, this is equivalent to including all the other severity arguments \n  --severity-error        Report all DRC error level violations, this can be combined with the other severity arguments \n  --severity-warning      Report all DRC warning level violations, this can be combined with the other severity arguments \n  --severity-exclusions   Report all excluded DRC violations, this can be combined with the other severity arguments \n  --exit-code-violations  Return a nonzero exit code if DRC violations exist \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "Usage: export [--help] {brep,drill,dxf,gencad,gerber,gerbers,glb,ipc2581,ipcd356,odb,pdf,ply,pos,step,stl,svg,vrml,xao}\n\nExport utilities (Gerbers, drill, position files, etc)\n\nOptional arguments:\n  -h, --help  Shows help message and exits \n\nSubcommands:\n  brep       Export BREP\n  drill      Generate Drill Files\n  dxf        Generate a DXF from a list of layers\n  gencad     Export the PCB in Gencad format\n  gerber     Plot given layers to a single Gerber file\n  gerbers    Plot multiple Gerbers for a PCB, including the ability to use stored board plot settings\n  glb        Export GLB (binary GLTF)\n  ipc2581    Export the PCB in IPC-2581 format\n  ipcd356    Generate IPC-D-356 netlist file\n  odb        Export the PCB in ODB++ format\n  pdf        Generate PDF from a list of layers\n  ply        Export PLY\n  pos        Generate Position File\n  step       Export STEP\n  stl        Export STL\n  svg        Generate SVG outputs of a given layer list\n  vrml       Export VRML\n  xao        Export XAO\n",
+      "stderr": ""
+    }
+  ]
+}

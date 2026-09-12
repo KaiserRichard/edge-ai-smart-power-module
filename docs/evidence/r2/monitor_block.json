@@ -1,0 +1,547 @@
+{
+  "status": "REVIEW DRAFT - RELEASE BLOCKED",
+  "components": [
+    {
+      "ref": "U401",
+      "value": "INA228AIDGSR",
+      "part": "INA228AIDGSR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "A1",
+          "net": "GND",
+          "type": "input"
+        },
+        "2": {
+          "name": "A0",
+          "net": "GND",
+          "type": "input"
+        },
+        "3": {
+          "name": "ALERT",
+          "net": "ALERT_LOCAL",
+          "type": "open_collector"
+        },
+        "4": {
+          "name": "SDA",
+          "net": "SDA_LOCAL",
+          "type": "bidirectional"
+        },
+        "5": {
+          "name": "SCL",
+          "net": "SCL_LOCAL",
+          "type": "input"
+        },
+        "6": {
+          "name": "VS",
+          "net": "3V3_LOCAL",
+          "type": "power_in"
+        },
+        "7": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "8": {
+          "name": "VBUS",
+          "net": "LOAD_5V1",
+          "type": "input"
+        },
+        "9": {
+          "name": "IN-",
+          "net": "INA_IN_MINUS",
+          "type": "input"
+        },
+        "10": {
+          "name": "IN+",
+          "net": "INA_IN_PLUS",
+          "type": "input"
+        }
+      },
+      "footprint": "Package_SO:VSSOP-10_3x3mm_P0.5mm",
+      "rating": "2.7-5.5 V supply;0-85 V bus incl unpowered;address0x40",
+      "source": "TI SLYS021A Fig5-1/Table5-1; SBOU241E Fig6-1",
+      "position": [
+        83.82,
+        86.36
+      ]
+    },
+    {
+      "ref": "U402",
+      "value": "TPS70933DBVR",
+      "part": "TPS70933DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "IN",
+          "net": "VOUT_PROTECTED",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "EN",
+          "net": null,
+          "type": "input"
+        },
+        "4": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "5": {
+          "name": "OUT",
+          "net": "3V3_LOCAL",
+          "type": "power_out"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "rating": "30 V input;3.3 V nominal;EN internally enabled;reverse-current protection",
+      "source": "TI SBVS186H Fig5-1/Table5-1, 8.1.1, 7.3.4",
+      "position": [
+        208.28,
+        76.2
+      ]
+    },
+    {
+      "ref": "U403",
+      "value": "TCA9517DGKR",
+      "part": "TCA9517DGKR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "VCCA",
+          "net": "3V3_HOST",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "SCLA",
+          "net": "SCL_HOST",
+          "type": "bidirectional"
+        },
+        "3": {
+          "name": "SDAA",
+          "net": "SDA_HOST",
+          "type": "bidirectional"
+        },
+        "4": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "EN",
+          "net": "3V3_LOCAL",
+          "type": "input"
+        },
+        "6": {
+          "name": "SDAB",
+          "net": "SDA_LOCAL",
+          "type": "bidirectional"
+        },
+        "7": {
+          "name": "SCLB",
+          "net": "SCL_LOCAL",
+          "type": "bidirectional"
+        },
+        "8": {
+          "name": "VCCB",
+          "net": "3V3_LOCAL",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "rating": "3.3 V on both sides; power-off tolerant I/O; no B-to-B cascade",
+      "source": "TI SCPS242D sections6/9/11",
+      "position": [
+        337.82,
+        86.36
+      ]
+    },
+    {
+      "ref": "R401",
+      "value": "2mOhm KELVIN",
+      "part": "WSL27262L000FEA",
+      "kind": "SHUNT",
+      "pins": {
+        "1": {
+          "name": "I+",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "S+",
+          "net": "SHUNT_KPLUS",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S-",
+          "net": "SHUNT_KMINUS",
+          "type": "passive"
+        },
+        "4": {
+          "name": "I-",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "2 mOhm +/-1%;3 W per terminal thermal conditions;25 ppm/C;project pin convention;footprint OPEN",
+      "source": "Vishay30131 Rev29Jun2026 pp1-2; wide force pads and narrow Kelvin pads",
+      "position": [
+        208.28,
+        124.46
+      ]
+    },
+    {
+      "ref": "R402",
+      "value": "10",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SHUNT_KPLUS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INA_IN_PLUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%,0.1 W; matched filter pair",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R403",
+      "value": "10",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SHUNT_KMINUS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INA_IN_MINUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%,0.1 W; matched filter pair",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "C401",
+      "value": "100nF 50V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INA_IN_PLUS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INA_IN_MINUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "X7R +/-10%;50 V differential filter",
+      "source": "TI SLYS021A Fig8-1"
+    },
+    {
+      "ref": "C402",
+      "value": "100nF 16V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "X7R +/-10%;16 V; at INA228 VS",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "C403",
+      "value": "1uF 50V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "rating": "X7R;50 V; LDO input",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "C404",
+      "value": "22uF 50V",
+      "part": "C5750X7R1H226M250KB",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "X7R +/-20%;effective 1.5-47uF,ESR<=0.2Ohm required incl other bypass caps; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN",
+      "source": "TDK19Mar2019 characterization; TI SBVS186H8.1.1"
+    },
+    {
+      "ref": "C405",
+      "value": "100nF 16V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "X7R +/-10%;16 V;at U403 VCCA",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "C406",
+      "value": "100nF 16V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "X7R +/-10%;16 V;at U403 VCCB",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R404",
+      "value": "10k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SDA_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "1%,0.1 W;100kHz,target<=100pF local bus",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R405",
+      "value": "10k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SCL_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "1%,0.1 W;100kHz,target<=100pF local bus",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R406",
+      "value": "4.7k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SDA_HOST",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "1%,0.1 W;fit only if compatible with host pullups",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R407",
+      "value": "4.7k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SCL_HOST",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "1%,0.1 W;fit only if compatible with host pullups",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R408",
+      "value": "10k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "ALERT_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "1%,0.1 W;local only;no host ALERT crossing",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "TP401",
+      "value": "ALERT_LOCAL",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "ALERT_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP402",
+      "value": "SHUNT_KPLUS",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "SHUNT_KPLUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP403",
+      "value": "SHUNT_KMINUS",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "SHUNT_KMINUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP404",
+      "value": "3V3_LOCAL",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    }
+  ],
+  "schematic_notes": [
+    "SOURCE: TI INA228 SLYS021A/SBOU241E, TPS709 SBVS186H, TCA9517 SCPS242D; Vishay30131.",
+    "FUNCTION: branch current and load-side VBUS; local telemetry supply is upstream of shunt.",
+    "MODIFICATION: 2mOhm Kelvin shunt,10Ohm/100nF differential filter; separate 3.3 V host/local domains.",
+    "RATIONALE: low shunt loss,0x40 address,100kHz initial bus; no direct host/local supply or ALERT tie.",
+    "KELVIN: I+/S+ on source end; I-/S- on load end. S pads carry no load. Project pin numbers need footprint review.",
+    "External LOAD supply can power local telemetry through shunt; negative reading then includes local demand.",
+    "OPEN: output disconnect, shunt footprint, full power-state leakage test and bus VOL/rise-time measurements."
+  ],
+  "passive_start": 162.56
+}

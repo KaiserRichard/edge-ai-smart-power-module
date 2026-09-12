@@ -1,0 +1,480 @@
+{
+  "date": "2026-09-12",
+  "original_branch": "docs/r0-r1-engineering-audit",
+  "head": "a9fe716a65587f98dcb28a2f39665b6860a7b500",
+  "status": " M AGENTS.md\n M README.md\n?? .gitignore\n?? docs/\n?? pcb-r0-r1-review.zip\n?? scripts/\n?? third_party/\n",
+  "files": {
+    ".gitignore": {
+      "bytes": 399,
+      "sha256": "8dbd8607a26db53f58232edd36a1f6c4ac579c20804ec02b2bf8014019e0050b"
+    },
+    "AGENTS.md": {
+      "bytes": 5066,
+      "sha256": "8c912cfc1de8052e20ef1f10e3633e255e91abf6b4eb1476e95a34fd49320eb3"
+    },
+    "README.md": {
+      "bytes": 3031,
+      "sha256": "4e6f56aef5f821f5c144703bcbbd839717d0d8c1e69e7b754201924a4c923985"
+    },
+    "docs/00_REQUIREMENTS.md": {
+      "bytes": 9801,
+      "sha256": "6f368f540006c382a25d11b3039cd72862c062d62b540279423fc4e3d56cdf8a"
+    },
+    "docs/01_REFERENCE_AUDIT.md": {
+      "bytes": 21285,
+      "sha256": "da9af7b305cb4ef2bdeaf8e5c4a8c97d3dd2b2c9971bd19f6ac67fd3029e049e"
+    },
+    "docs/02_ARCHITECTURE.md": {
+      "bytes": 7324,
+      "sha256": "98055802dc8cf2b09a43042699cb97f0c9f22256e02f1c305681c889d31634f6"
+    },
+    "docs/03_COMPONENT_SELECTION.md": {
+      "bytes": 11211,
+      "sha256": "6eee4434692ddcaedf1a958ce166d0f535c82d196004883fe077cf95b568bbb9"
+    },
+    "docs/04_POWER_CALCULATIONS.md": {
+      "bytes": 10752,
+      "sha256": "ac90b07c58835fcdf3b2d2904d8a52ce766a9ecec6cf8dec98956f1350ad68d1"
+    },
+    "docs/CODEX_HANDOFF.md": {
+      "bytes": 16258,
+      "sha256": "e02e1e00117fb204016868fd5a63fd4ac2f73d8aa4bd1a89f668807033fe970f"
+    },
+    "docs/CODEX_HARDWARE_SOURCE_PACK.md": {
+      "bytes": 10244,
+      "sha256": "edca24f080a088ab9e51908fefbc76cc1f5ad675ba48ee78b25c8f843eed6f29"
+    },
+    "docs/FINAL_MANAGER_REPORT.md": {
+      "bytes": 10032,
+      "sha256": "4ab97ea546a807f0b2beb5feac59311aedc0c69ffd44907f89289a579e5334eb"
+    },
+    "docs/WBR_EDGE_SUPERVISOR_HAT_FEASIBILITY.md": {
+      "bytes": 38662,
+      "sha256": "0145cf32a9ec8269eee43288d5241642641e503f4955f72edd334640dac275d8"
+    },
+    "docs/evidence/r0/ENVIRONMENT_REVIEW.md": {
+      "bytes": 3532,
+      "sha256": "1ff5c9d5567734354b502671fa14fa8ec576537556c3a4e053ab3be8d6afa9f3"
+    },
+    "docs/evidence/r0/MONITOR_PROTECTION_SOURCE_REVIEW.md": {
+      "bytes": 19286,
+      "sha256": "c5ffe72323f29adaef274d7d82e48cc61773aa895efa3268c791e291696eadf8"
+    },
+    "docs/evidence/r0/R0_R1_VALIDATION.md": {
+      "bytes": 6314,
+      "sha256": "5a402ab86941c475f0529309348b2b9a3917726991ca6d684b264a2c5e1c93f2"
+    },
+    "docs/evidence/r0/RASPBERRY_PI_SOURCE_REVIEW.md": {
+      "bytes": 4133,
+      "sha256": "a09f2d82a9de31f2dfd437242f09f1caae9512a1ece42ef9f038c171c48730ea"
+    },
+    "docs/evidence/r0/documentation_validation.json": {
+      "bytes": 909,
+      "sha256": "06500483dcaa39d25cca26a271a90bff3c29ba363dc0e4a948e8fd5ce9af286c"
+    },
+    "docs/evidence/r0/environment.json": {
+      "bytes": 8234,
+      "sha256": "199175517220ca93b9221c048d46a06a536f27151fb24affa32ca841d95ef264"
+    },
+    "docs/evidence/r0/raspberry_pi_sources.json": {
+      "bytes": 2243,
+      "sha256": "affc8ab39de69d8d7d83b21f8d04044a002a1f99395fc4d68506544463c2188f"
+    },
+    "docs/evidence/r0/source_manifest.json": {
+      "bytes": 25799,
+      "sha256": "c3dff56df887fdfa4f9a32752708c6b9e2de54b9a07f8ac6905ec375e41a4ce6"
+    },
+    "docs/evidence/r2/buck_block.json": {
+      "bytes": 15655,
+      "sha256": "bebc7815ca18521a83ddedd67512725177ecef22d1365d2c45d535795387bcc9"
+    },
+    "docs/evidence/wbr_hat/PI_POWER_WATCHDOG_REVIEW.md": {
+      "bytes": 16097,
+      "sha256": "15117ae8b68fa59c42dbcdb512e37614bcb155fdbee80612867b987811ce3a88"
+    },
+    "docs/evidence/wbr_hat/power_source_manifest.json": {
+      "bytes": 2683,
+      "sha256": "a2d1ce55cc4dac90e307a378719389fab104a2acb9c9ae162447a8822ca65a0a"
+    },
+    "fabrication/.DS_Store": {
+      "bytes": 6148,
+      "sha256": "8d24978ce1854997a57bd5b22ba4d8653153029126b467a00b81c6405f2539b6"
+    },
+    "hardware/.DS_Store": {
+      "bytes": 6148,
+      "sha256": "d6aca8e1f238214e3e5a2f9fcbea25d0964e8a694302557bbde9cd0a15c99e15"
+    },
+    "pcb-r0-r1-review.zip": {
+      "bytes": 25409,
+      "sha256": "8fb7c91a82b8c42385d8588f6dd5b6027838847bdb2fcfaa91851cf831f59023"
+    },
+    "scripts/build_r2_schematic.py": {
+      "bytes": 13957,
+      "sha256": "97c58dcd8d8311fd3dda2cd6a7dbcd76ad4fdff2ed92735724ca57c09b60af35"
+    },
+    "scripts/check_r0_r1_docs.py": {
+      "bytes": 7236,
+      "sha256": "f995dec95dc9dc567c9dfc307b68d4642d8c8110a46ab31e3f4474be8be7f392"
+    },
+    "third_party/documents/.DS_Store": {
+      "bytes": 8196,
+      "sha256": "03d269187dfc793b2c86c9126df97a0116118616c81f4ea4ceea243e901c7a21"
+    },
+    "third_party/documents/RT6365_DS6365-02.pdf": {
+      "bytes": 705781,
+      "sha256": "2f4c854bd9b625c757705fa4fc390934a6e9207bae9198416caeebce6ce239d6"
+    },
+    "third_party/documents/TI_DIGITAL_POWER_MONITORS_SBOA511A.pdf": {
+      "bytes": 583371,
+      "sha256": "b0e36f2e90d0ad451a1c67ed677e92a76fae21f713f3c8d2514ffaab9098b756"
+    },
+    "third_party/documents/TI_INA226_SBOS547C.pdf": {
+      "bytes": 1516957,
+      "sha256": "c9b67f886d4a5241a5e070723f7b61867409eeb27eed768b9cdd9cb17e03ca2d"
+    },
+    "third_party/documents/TI_INA228_EVM_SBOU241E.pdf": {
+      "bytes": 4805144,
+      "sha256": "05419823933b71973aa76825e70156ee1d8af6ee18322aca6a31243c5bf36040"
+    },
+    "third_party/documents/TI_INA228_SLYS021A.pdf": {
+      "bytes": 2473528,
+      "sha256": "a138d39eeee04f8388426fed204c2f4012e75d36e95b60b0751ef003cd277447"
+    },
+    "third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf": {
+      "bytes": 9773286,
+      "sha256": "38ea1e89cc677020c8a10096649fa7933d2aeff8c0cd97ca9a78c1f8f5b9b500"
+    },
+    "third_party/documents/TI_LMP8646.pdf": {
+      "bytes": 1198932,
+      "sha256": "83c84321496ead0397d613d2613c4b2cce41acd7d4000d3f17efa64ab4cd936d"
+    },
+    "third_party/documents/TI_TPS2663_SLVSE94G.pdf": {
+      "bytes": 5728602,
+      "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2"
+    },
+    "third_party/documents/Vishay_WSL2726_30131_2026-06-29.pdf": {
+      "bytes": 165739,
+      "sha256": "583946079d110ac74dc7987e1f1d2c5a170253b03f123b993c414761c6b89373"
+    },
+    "third_party/documents/r2/Diodes_B260_DS13004.pdf": {
+      "bytes": 399710,
+      "sha256": "19ab27e98e717e7012275062b715964897882f3ce95eab846f71d5f2b485ab5b"
+    },
+    "third_party/documents/r2/TDK_C3225X7R1E106K250AC_characterization.pdf": {
+      "bytes": 502,
+      "sha256": "be3080238e6836ec6214f8f4aeabba161ef900129bb4dd70a35fa0440fec3c4c"
+    },
+    "third_party/documents/r2/TDK_C3225X7R1E106K250AC_dc_bias_model.zip": {
+      "bytes": 534,
+      "sha256": "96c69364790de8f1ff62aba559be7707b9c1d6052124ee97369a02fe34806086"
+    },
+    "third_party/documents/r2/TDK_C3225X7R1E106K250AC_product.html": {
+      "bytes": 431,
+      "sha256": "747979617988968233bf81d50c6dee97cfcee3534cd92b485275da5a82c200be"
+    },
+    "third_party/documents/r2/TDK_C5750X7R1H226M250KB_mirror.pdf": {
+      "bytes": 257509,
+      "sha256": "b32be691c9267eef582ab049657b79aac42bae2fd9a586b9a5ef39bc5527d53e"
+    },
+    "third_party/documents/r2/TI_CSD19537Q3_SLPS549B.pdf": {
+      "bytes": 979540,
+      "sha256": "d74d65b7815d46d642a11c89834ee71245ae6d3541595df2b4fcfa21dfbd4903"
+    },
+    "third_party/documents/r2/TI_LM61460_SNVSBD5D.pdf": {
+      "bytes": 3093699,
+      "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d"
+    },
+    "third_party/documents/r2/TI_TCA9517_SCPS242D.pdf": {
+      "bytes": 722351,
+      "sha256": "fde93fd601168d6f457bbf38377f8ee5eb14ab2589ed52974fdf9c847163f22c"
+    },
+    "third_party/documents/r2/TI_TPS26630-33EVM_SLVUBI8A.pdf": {
+      "bytes": 1146851,
+      "sha256": "b05d9ea2ee56f0b4439f318c4456985c3a11a40566c38b91f32d5ffcde63bb18"
+    },
+    "third_party/documents/r2/TI_TPS709_SBVS186H.pdf": {
+      "bytes": 2271835,
+      "sha256": "f37b072c265ba83cf6e484bf03c81a72b624cdc09680d90e018e6c97c044049c"
+    },
+    "third_party/documents/r2/onsemi_BSS138.pdf": {
+      "bytes": 420992,
+      "sha256": "f315b0eb0ff600a2f3231cf403951bb12cd02c70119c668629b1b2665c2b058d"
+    },
+    "third_party/documents/raspberry-pi-hat-plus.pdf": {
+      "bytes": 1210200,
+      "sha256": "3a0932253767147038383162ac9f4b5aac3adb048c30bd1f9177a462a054ca1e"
+    },
+    "third_party/documents/raspberry-pi-legacy-hat-designguide.md": {
+      "bytes": 8836,
+      "sha256": "3f63eba24fa05e389e50cc31e5e96a614a58da55a3d3bfe5308a79b6c04b6c13"
+    },
+    "third_party/documents/raspberry-pi-power-supplies.adoc": {
+      "bytes": 9271,
+      "sha256": "49f6478c1c0164237ebcf1d28aac4709e843d2b5c06442539bacae05e49eafb1"
+    },
+    "third_party/documents/raspberry-pi-usb-pd-release1.pdf": {
+      "bytes": 434270,
+      "sha256": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e"
+    },
+    "third_party/documents/ti_converters/download_manifest.json": {
+      "bytes": 1877,
+      "sha256": "66d39386fd761775b008e5b51e0bbf43821bd264daf5cb3b1e483c977d398273"
+    },
+    "third_party/documents/ti_converters/lm61460_evm.pdf": {
+      "bytes": 1578905,
+      "sha256": "b11f7b7cd9e336f32824738c3859b9ef836840a4e8b0550018aa05fc178fdfff"
+    },
+    "third_party/documents/ti_converters/tps56528.pdf": {
+      "bytes": 1456511,
+      "sha256": "1107e136b78ea52e6ca72dd165a4cc4a202c00c5b194b4a7b03f7ebd8119b45d"
+    },
+    "third_party/documents/ti_converters/tps56637.pdf": {
+      "bytes": 1798868,
+      "sha256": "18edaff6769b0d5c3d0cdef66df1232538cd357bbaac214df138969f9b0d6745"
+    },
+    "third_party/documents/ti_converters/tps56637_evm.pdf": {
+      "bytes": 1035104,
+      "sha256": "9128f18013449a9dc10398243ce615a477f4972641a9f8cd5c3613b14aacba7c"
+    },
+    "third_party/documents/ti_converters/tps56837.pdf": {
+      "bytes": 1980506,
+      "sha256": "6d47e6df4508ca271bfb67ba72e4d7f84d19e64fda3f89a5fe0fb616e7f4b5a8"
+    },
+    "third_party/documents/ti_converters/tps56837_evm.pdf": {
+      "bytes": 1475814,
+      "sha256": "333f3e215361a6dad88c37697275457f379bef80d192d3b672f4ae3c51b28929"
+    },
+    "third_party/review/r2/CSD19537Q3_SOA.png": {
+      "bytes": 189957,
+      "sha256": "6a5408daaf8538cdae1f3f650573cadce78c52430ec9873002c2c6a837e91301"
+    },
+    "third_party/review/r2/CSD19537Q3_landpattern.png": {
+      "bytes": 103175,
+      "sha256": "76118512d9a1a78cf2598674fbb02de0cca322780aff3e9726356dd8786e4523"
+    },
+    "third_party/review/r2/CSD19537Q3_package.png": {
+      "bytes": 161023,
+      "sha256": "83ccabc41ffd8a2dd42cdf16773fa89dd3b4aba4b41763cc1e554034302c9174"
+    },
+    "third_party/review/r2/LM7480-p15.png": {
+      "bytes": 220756,
+      "sha256": "ce60e3430b106e0dc594523d0c48578418a7a00ee5bbf2f8073ae14811003a9b"
+    },
+    "third_party/review/r2/LM7480-p16.png": {
+      "bytes": 289945,
+      "sha256": "889e7b312663f02914c8ffbb37bdd354e0e6656f57058d9bdbf0e1be9a4a21bd"
+    },
+    "third_party/review/r2/LM7480-p19.png": {
+      "bytes": 330505,
+      "sha256": "1b66e9c2926a701074408802d43310a51590e4eea77b5f318f3298dba49228af"
+    },
+    "third_party/review/r2/LM7480-p20.png": {
+      "bytes": 368731,
+      "sha256": "6c83ca9492d3147c38c32498ea71b024a8189eb46292c8ea4d9c0747dacc6301"
+    },
+    "third_party/review/r2/LM7480.txt": {
+      "bytes": 125936,
+      "sha256": "8e1d2defc977b019d3f81f95a2fd68ccfb140d1cd938ac32d72d0d7bf7306f42"
+    },
+    "third_party/review/r2/TI_CSD19537Q3_SLPS549B.txt": {
+      "bytes": 19212,
+      "sha256": "b6da3071c7766aa4c33267fbe41ed3bfd89e64e29382489a99fc7477502848a5"
+    },
+    "third_party/review/r2/TI_CSD19537Q3_SLPS549B_p1.png": {
+      "bytes": 257947,
+      "sha256": "69f054d5d8092e336f5dff16e002e4b5a9fe8510e6d44d6de3666535c8c4a250"
+    },
+    "third_party/review/r2/TI_INA228_EVM_SBOU241E.txt": {
+      "bytes": 121793,
+      "sha256": "522ccf3a219b827d83ba69cd27a7940e802682bb923f5348cd24479d75980480"
+    },
+    "third_party/review/r2/TI_INA228_SLYS021A.txt": {
+      "bytes": 176382,
+      "sha256": "d05361cbaa77b18e6a63589cc6a0e27cc60b59f499a0f24c4faf463b6e59f4c9"
+    },
+    "third_party/review/r2/TI_TCA9517_SCPS242D-p15.png": {
+      "bytes": 130369,
+      "sha256": "137d75616e86b7014905745412185d97895057f9acf1da75d4b78fb26cac2df2"
+    },
+    "third_party/review/r2/TI_TCA9517_SCPS242D-p4.png": {
+      "bytes": 146849,
+      "sha256": "d85879312fb2dfc47f95b69feb2768ab2bb9d3987920710874d46fde3686ab9b"
+    },
+    "third_party/review/r2/TI_TCA9517_SCPS242D.txt": {
+      "bytes": 85044,
+      "sha256": "ade835b03a469a95dc5c565f4ca837a9552b15ce55c42e21a81f9a3f7efc0f60"
+    },
+    "third_party/review/r2/TI_TPS709_SBVS186H-p14.png": {
+      "bytes": 177640,
+      "sha256": "6ac4cd2727eee6edef7ea5e191478e3ac432ebbdaefe383e0a885fab1f9aac7a"
+    },
+    "third_party/review/r2/TI_TPS709_SBVS186H-p3.png": {
+      "bytes": 97871,
+      "sha256": "70ec0a84ed376f45a9799b7b4dccd4d58413c84fa871dd1174aba86c99c5c5c7"
+    },
+    "third_party/review/r2/TI_TPS709_SBVS186H.txt": {
+      "bytes": 174695,
+      "sha256": "ba2b004e1498967592350badb1b78cd57d6ccc7aba338306e3bcfaa9d61e4cf6"
+    },
+    "third_party/review/r2/TPS2663.txt": {
+      "bytes": 110835,
+      "sha256": "fb1d3f586baf9a14632310f32fa4ff11e40cf6b28aa06bbfd229dd0efefef4fb"
+    },
+    "third_party/review/r2/TPS26630-33EVM.txt": {
+      "bytes": 53710,
+      "sha256": "7d3c454035263e42a987004774a643fb434644cf9a23c7e169b6dc6b558cf04a"
+    },
+    "third_party/review/r2/TPS26630_EVM_schematic.png": {
+      "bytes": 155977,
+      "sha256": "d6a128f0153e46862f183fc5dbe6e11857c86b591ae62ba387ff8e83c0426220"
+    },
+    "third_party/review/r2/TPS26630_package_p52.png": {
+      "bytes": 120135,
+      "sha256": "5b72317846a3df66c5cb2f96f4a8abbb969898f427d536d4a011dfd4c38e56f5"
+    },
+    "third_party/review/r2/TPS26630_package_p53.png": {
+      "bytes": 136236,
+      "sha256": "5ac2befe5e545110ff315e2f28013bd8e9672340981158e068090513aebf9970"
+    },
+    "third_party/review/r2/TPS26630_package_p54.png": {
+      "bytes": 119170,
+      "sha256": "0b53e8d4e2cde8dcc09cf38901f53fb00d8e4b6d19218ee42ab730b82a5d0b7d"
+    },
+    "third_party/review/r2/Vishay_WSL2726_30131_2026-06-29.txt": {
+      "bytes": 25642,
+      "sha256": "3b58c6883667cccf7a35faeabc98ed15126316f8c1156d08658ae041443ffddd"
+    },
+    "third_party/review/r2/ina228-evm-p23.png": {
+      "bytes": 170165,
+      "sha256": "7fbc66979f0664c0b62755bd77fe10c4d95f740171e55ee1c1126ed0f12b19d2"
+    },
+    "third_party/review/r2/lm61460.txt": {
+      "bytes": 120883,
+      "sha256": "728e7eb4fd0a8005721f46c6d273bfc77e19f37c2060c7e3908b5425ce4a34b7"
+    },
+    "third_party/review/r2/lm61460_evm.txt": {
+      "bytes": 34901,
+      "sha256": "da6df432d22c83ce1c3a439710d58df1a020bac03e77f82974124ffbf6be8e82"
+    },
+    "third_party/review/r2/lm61460_evm_p13.png": {
+      "bytes": 226914,
+      "sha256": "03e5275ed9015bba7b27ba9459d0d467cb180d9959b3aefb187665be715452a2"
+    },
+    "third_party/review/r2/lm61460_evm_p17.png": {
+      "bytes": 215478,
+      "sha256": "42f6e47d5bedbb092af87c195010906b07b48f6f56946d195ca06bb9a5dd40d5"
+    },
+    "third_party/review/r2/lm61460_evm_p18.png": {
+      "bytes": 133846,
+      "sha256": "929395d545f7afb6e7c1fc4e757ddd5a3dcbbc1dc5be03f98c4c6ad39240fabe"
+    },
+    "third_party/review/r2/lm61460_evm_p8.png": {
+      "bytes": 163357,
+      "sha256": "289a4bdb157015ef9a906443c24ea8c9da7a123120cf17a49ed3068b125b0fda"
+    },
+    "third_party/review/r2/lm61460_evm_p9.png": {
+      "bytes": 63363,
+      "sha256": "1c3320b500a4fa60b1b8b49665b958f9a53c530877d50f70892ca226ea9effbf"
+    },
+    "third_party/review/r2/lm61460_p2.png": {
+      "bytes": 163854,
+      "sha256": "35fd2eacbb2a843f40760d830c7d334b62bbe1b4028faf9d20e8e61579fcf3ac"
+    },
+    "third_party/review/r2/lm61460_p20.png": {
+      "bytes": 178708,
+      "sha256": "9122819606737da20ab55ae9f7d8618986b3b15ded03a2dd8c0148650c7bb12c"
+    },
+    "third_party/review/r2/lm61460_p29.png": {
+      "bytes": 306858,
+      "sha256": "09b9fa13fa0f27d8882251b191a1cb7283311cee120caa880623989652e9332e"
+    },
+    "third_party/review/r2/lm61460_p3.png": {
+      "bytes": 228737,
+      "sha256": "521c24ae6113b87d1ea292e1fc5c39771e0131902fdeabca95a16f7c22ca0d0c"
+    },
+    "third_party/review/r2/lm61460_p30.png": {
+      "bytes": 267282,
+      "sha256": "43555e4f1eb13e2f8c44d6e85cabc45dc108114951628963b0ab9a280484784e"
+    },
+    "third_party/review/r2/lm61460_p31.png": {
+      "bytes": 252897,
+      "sha256": "48a5ce40495bf31209739dc48a6be358021ad2e459f55e7f9b304cb18110c9d1"
+    },
+    "third_party/review/r2/lm61460_p32.png": {
+      "bytes": 306156,
+      "sha256": "080c58addcac95285569210eb5ba77eecc25ec1946286b082f4eba7a64891c4b"
+    },
+    "third_party/review/r2/lm61460_p33.png": {
+      "bytes": 180439,
+      "sha256": "e6f210bf7e04fbfaff7f14215114e747517ac0df38519db06753c6a876edb710"
+    },
+    "third_party/review/r2/lm61460_p34.png": {
+      "bytes": 180066,
+      "sha256": "40ba35c30ec9c7a6671940293e91af18e9bbbe9ab3451b4b6677379e4856e200"
+    },
+    "third_party/review/r2/lm61460_p35.png": {
+      "bytes": 181989,
+      "sha256": "9b4661380c79d47ecd3247b2567910884d361a3e4674a301241fa7b29e52052b"
+    },
+    "third_party/review/r2/lm61460_p36.png": {
+      "bytes": 156593,
+      "sha256": "3a73d8a5bcce0d7bbea1835f9258942b0ef675088dd3e1602021fa6cb0e8739c"
+    },
+    "third_party/review/r2/lm61460_p43.png": {
+      "bytes": 192498,
+      "sha256": "2e0c47f7cecd786ea4368fb96bab3f0c848bf96aaa3503c25f3d7c9db08a0daf"
+    },
+    "third_party/review/r2/lm61460_p44.png": {
+      "bytes": 127436,
+      "sha256": "7ce5fe783e49a8be02a4e4e099daf7c829fdcbb0108a6c7bc508a5bc8aae2f3c"
+    },
+    "third_party/review/r2/lm61460_p45.png": {
+      "bytes": 79427,
+      "sha256": "e5cfa50c249a25694a0b4b349d1a42306c546d9cf3737ca9517fdf4b530427a0"
+    },
+    "third_party/review/r2/lm61460_p46.png": {
+      "bytes": 195960,
+      "sha256": "884e8eb7420a41a243ba03a1162fa21880587be428b9cc556cab32dcd94ee3d0"
+    },
+    "third_party/review/r2/lm61460_p49.png": {
+      "bytes": 95260,
+      "sha256": "88d01c49c99646f9719e6868054b719536958077341fad5280343c0517d84b38"
+    },
+    "third_party/review/r2/lm61460_p55.png": {
+      "bytes": 151839,
+      "sha256": "68e3d12c2d1cb09822d65c3001513091eb8b15d0776fedfd569741b274a6c4dd"
+    },
+    "third_party/review/r2/lm61460_p56.png": {
+      "bytes": 122961,
+      "sha256": "eb7d7071149d535cd5fd9119684a9a3c69f769084666ae405cd2560eedd193c6"
+    },
+    "third_party/review/r2/lm61460_p7.png": {
+      "bytes": 211070,
+      "sha256": "ae36a126aff53eb8a3a0d88f404b36a144e0299d783e020b3a4afb2ee39b682c"
+    },
+    "third_party/review/r2/onsemi_BSS138.txt": {
+      "bytes": 14696,
+      "sha256": "4488d09a981054cb7ac403e08ef23b4e293ca3621f9e2ab2449d55332e0db097"
+    },
+    "third_party/review/r2/onsemi_BSS138_p1.png": {
+      "bytes": 195059,
+      "sha256": "16f01998f4aee0014132e29bebd28355649ec943598c0d80bc3785085dc8a5ad"
+    },
+    "third_party/review/r2/tdk-cout-characterization.png": {
+      "bytes": 41432,
+      "sha256": "f2f49bbcbc9e21a569e1b9d0af37f3730ee8081f473791e800500a6a56be2eec"
+    },
+    "third_party/review/r2/tdk_22u50v_p1.png": {
+      "bytes": 450100,
+      "sha256": "e34f6e0e78d2a3fee68b28cb596af9f830abef7af28c8f839e7eab2935786901"
+    },
+    "third_party/review/r2/wsl2726-1.png": {
+      "bytes": 375578,
+      "sha256": "d653c40c47598781891ed53a29b23572a7a39620497f7516c99ac3e8d32db7aa"
+    },
+    "third_party/review/r2/wsl2726-2.png": {
+      "bytes": 341053,
+      "sha256": "06c71bf7c7e50426c86d965e3c721ddb7c821ec40305ede085512218ae81d249"
+    }
+  }
+}
