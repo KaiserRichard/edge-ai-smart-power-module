@@ -1,0 +1,74 @@
+{
+  "run_at_utc": "2026-09-12T10:14:37.428590+00:00",
+  "source_commit": "bc2379025a6320dff9186724a03f6e1ab0db7019",
+  "source_schematic_unchanged": true,
+  "checks": [
+    {
+      "check": "erc",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "docs/evidence/r2/takeover_2026-09-12/ERC.json",
+        "hardware/kicad/V1A.kicad_sch"
+      ],
+      "exit_code": 5,
+      "expected_exit": 5,
+      "matched_expectation": true
+    },
+    {
+      "check": "netlist",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "docs/evidence/r2/takeover_2026-09-12/V1A.net.xml",
+        "hardware/kicad/V1A.kicad_sch"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "matched_expectation": true
+    },
+    {
+      "check": "pdf",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "pdf",
+        "--output",
+        "docs/evidence/r2/takeover_2026-09-12/V1A_SCHEMATIC.pdf",
+        "hardware/kicad/V1A.kicad_sch"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "matched_expectation": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/evidence/r2/takeover_2026-09-12/ERC.json",
+      "sha256": "e989399e2b89b4ef8e9c25d73f473deb35d83d036da86dbfa652e81a2e2c919c",
+      "bytes": 1980
+    },
+    {
+      "path": "docs/evidence/r2/takeover_2026-09-12/V1A.net.xml",
+      "sha256": "e6bf536ed588b9101f88c6f48fd9d9f4d71f90961da69a5b3c83f2b2ba95434d",
+      "bytes": 129303
+    },
+    {
+      "path": "docs/evidence/r2/takeover_2026-09-12/V1A_SCHEMATIC.pdf",
+      "sha256": "9e84efd46c08501d3e86a9268a9fb77d81d02515eded0dbb5428f8b2ab5acf27",
+      "bytes": 784563
+    }
+  ]
+}

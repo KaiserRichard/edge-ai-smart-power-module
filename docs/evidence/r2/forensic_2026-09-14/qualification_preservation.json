@@ -1,0 +1,40 @@
+{
+  "net_groups_equal": true,
+  "component_identity_fields_equal": true,
+  "net_count": 47,
+  "physical_entries": 71,
+  "hardware_matches_baseline_after_reversing_only_three_footprint_properties": {
+    "hardware/.DS_Store": true,
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": true,
+    "hardware/kicad/05_IO_TEST.kicad_sch": true,
+    "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": true,
+    "hardware/kicad/02_BUCK_5V.kicad_sch": true,
+    "hardware/kicad/V1A.kicad_prl": true,
+    "hardware/kicad/V1A.kicad_sch": true,
+    "hardware/kicad/04_POWER_MONITOR.kicad_sch": true,
+    "hardware/kicad/sym-lib-table": true,
+    "hardware/kicad/V1A.kicad_sym": true,
+    "hardware/kicad/V1A.kicad_pro": true,
+    "hardware/kicad/V1A-backups/V1A-2026-09-12_203418.zip": true,
+    "hardware/kicad/V1A-backups/V1A-2026-09-13_133250.zip": true
+  },
+  "restore_zip_matches_after_reversing_properties": {
+    "01_INPUT_PROTECTION.kicad_sch": true,
+    "05_IO_TEST.kicad_sch": true,
+    "03_OUTPUT_PROTECTION.kicad_sch": true,
+    "02_BUCK_5V.kicad_sch": true,
+    "V1A.kicad_prl": true,
+    "V1A.kicad_sch": true,
+    "04_POWER_MONITOR.kicad_sch": true,
+    "sym-lib-table": true,
+    "V1A.kicad_sym": true,
+    "V1A.kicad_pro": true
+  },
+  "erc_violation_count": 1,
+  "erc_types": [
+    "power_pin_not_driven"
+  ],
+  "no_authored_pcb": true,
+  "r2_calculations_unchanged": true,
+  "pi_calculations_unchanged": true
+}

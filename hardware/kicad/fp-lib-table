@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "V1A_Qualified")(type "KiCad")(uri "${KIPRJMOD}/V1A_Qualified.pretty")(options "")(descr "Manufacturer-qualified R2 pad geometry; engineering review required"))
+)

@@ -1,3 +1,5 @@
+> Context note (2026-09-26): this dated document preserves earlier requirements/review history. Read [current engineering state](context/03_ENGINEERING_STATE.md) and [current architecture](context/02_V1A_ARCHITECTURE.md) before interpreting selections or release claims. Local cache/scratch paths mentioned below are archived external evidence; see [reference restoration](../third_party/README.md).
+
 # R0 predecessor and manufacturer source audit
 
 Date: 2026-09-11. Project: standalone Project II V1A. Baseline `a9fe716`; branch `docs/r0-r1-engineering-audit`; uncommitted research is part of this review state.

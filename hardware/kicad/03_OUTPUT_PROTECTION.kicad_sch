@@ -1,1 +1,491 @@
-(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "75179989-af4b-5de8-b22b-4510e541985c") (paper "A3") (title_block (title "03 OUTPUT PROTECTION") (date "2026-09-12") (rev "R2-BLOCKED") (company "Edge AI Smart Power Module") (comment 1 "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED") (comment 2 "R3 PCB LAYOUT BLOCKED")) (lib_symbols (symbol "V1A:TP301_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "TP" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "VOUT_5V1" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "TP301__0_1" (circle (center 0 3.175) (radius 0.635) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "TP301__1_1" (pin passive line (at 0 0 90) (length 2.54) (name "TP" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))))) (symbol "V1A:TP302_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "TP" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "VOUT_PROTECTED" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "TP302__0_1" (circle (center 0 3.175) (radius 0.635) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "TP302__1_1" (pin passive line (at 0 0 90) (length 2.54) (name "TP" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))))) (symbol (lib_id "V1A:TP301_") (at 53.34 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2fb1889e-9391-5937-9c23-f3423580a2d5") (property "Reference" "TP301" (at 53.34 66.04 0) (effects (font (size 1.27 1.27)))) (property "Value" "VOUT_5V1" (at 53.34 68.58 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 53.34 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 53.34 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Project test access; local domain only" (at 53.34 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Test only; not a load-current connector" (at 53.34 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "cdb26ceb-85ec-5fbf-acf9-efd625774dad")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/75179989-af4b-5de8-b22b-4510e541985c" (reference "TP301") (unit 1))))) (symbol (lib_id "V1A:TP302_") (at 129.54 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4d28d435-7b3a-53a9-92fe-74a118e7c2c1") (property "Reference" "TP302" (at 129.54 66.04 0) (effects (font (size 1.27 1.27)))) (property "Value" "VOUT_PROTECTED" (at 129.54 68.58 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 129.54 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 129.54 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Project test access; local domain only" (at 129.54 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Test only; not a load-current connector" (at 129.54 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "08c958ec-5476-598b-8f50-cb17fe6b6c21")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/75179989-af4b-5de8-b22b-4510e541985c" (reference "TP302") (unit 1))))) (text "03 OUTPUT PROTECTION" (at 15.24 15.24 0) (effects (font (size 2.032 2.032)) (justify left top)) (uuid "bcbcd6b7-313c-53b3-9c8a-a0d3eab3bfe0")) (hierarchical_label "VOUT_5V1" (shape input) (at 35.56 27.94 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "3761ac70-624e-5b5c-9d2a-334804097fd5")) (wire (pts (xy 35.56 27.94) (xy 27.94 27.94)) (stroke (width 0) (type default)) (uuid "097683b1-df3a-5a11-b430-7792a65d5036")) (label "VOUT_5V1" (at 27.94 27.94 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "4df62e93-c2e6-579c-a2af-60a982ae7e25")) (hierarchical_label "VOUT_PROTECTED" (shape passive) (at 132.08 27.94 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "c7703f27-30f6-58e8-8aa3-f503cf3a59ad")) (wire (pts (xy 132.08 27.94) (xy 124.46 27.94)) (stroke (width 0) (type default)) (uuid "f0872347-1799-5413-8ce5-56cb57d03fa4")) (label "VOUT_PROTECTED" (at 124.46 27.94 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "0e16bac3-0678-5ecf-bafd-209bb88f0ddf")) (wire (pts (xy 53.34 76.2) (xy 58.42 76.2)) (stroke (width 0) (type default)) (uuid "63a50e76-d70c-5943-81fc-1446d06eeff0")) (label "VOUT_5V1" (at 58.42 76.2 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "3f78efc0-f52f-50bb-8f33-15d5c944668e")) (wire (pts (xy 129.54 76.2) (xy 134.62 76.2)) (stroke (width 0) (type default)) (uuid "2bfa6460-14b7-5c0c-a8e0-2fa520588564")) (label "VOUT_PROTECTED" (at 134.62 76.2 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "09054b92-1633-5e8a-b5ad-3f147244a511")) (text "SOURCE: TI LM7480-Q1 SNOSD95C sections 8/9; candidate analysis in OUTPUT_PROTECTION.md.\nFUNCTION REQUIRED: independent OV detection/disconnect and reverse-feed block.\nNO DISCONNECT IS FITTED. VOUT_5V1 and VOUT_PROTECTED ARE ELECTRICALLY SEPARATE.\nMODIFICATION: reference circuit deliberately not captured until its threshold/let-through budget closes.\nRATIONALE: missing load fault-voltage/time and capacitance limits; no unsupported protection promise.\nR2 BLOCKER: detector, FETs, trip/recovery and SOA cannot be released yet. No bypass or jumper.\nWith this draft, VIN cannot power the output. An external LOAD_5V1 supply powers the monitor only." (at 15.24 236.22 0) (effects (font (size 1.016 1.016)) (justify left top)) (uuid "25d33ece-3edd-56f7-a8f5-3cfcc0291955")) )
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "75179989-af4b-5de8-b22b-4510e541985c")
+	(paper "A3")
+	(title_block
+		(title "03 OUTPUT PROTECTION")
+		(date "2026-09-12")
+		(rev "R2-BLOCKED")
+		(company "Edge AI Smart Power Module")
+		(comment 1 "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED")
+		(comment 2 "R3 PCB LAYOUT BLOCKED")
+	)
+	(lib_symbols
+		(symbol "V1A:TP301_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VOUT_5V1"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TP301__0_1"
+				(circle
+					(center 0 3.175)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP301__1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "TP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:TP302_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VOUT_PROTECTED"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TP302__0_1"
+				(circle
+					(center 0 3.175)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP302__1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "TP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "SOURCE: TI LM7480-Q1 SNOSD95C sections 8/9; candidate analysis in OUTPUT_PROTECTION.md.\nFUNCTION REQUIRED: independent OV detection/disconnect and reverse-feed block.\nNO DISCONNECT IS FITTED. VOUT_5V1 and VOUT_PROTECTED ARE ELECTRICALLY SEPARATE.\nMODIFICATION: reference circuit deliberately not captured until its threshold/let-through budget closes.\nRATIONALE: missing load fault-voltage/time and capacitance limits; no unsupported protection promise.\nR2 BLOCKER: detector, FETs, trip/recovery and SOA cannot be released yet. No bypass or jumper.\nWith this draft, VIN cannot power the output. An external LOAD_5V1 supply powers the monitor only."
+		(exclude_from_sim no)
+		(at 15.24 236.22 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left top)
+		)
+		(uuid "25d33ece-3edd-56f7-a8f5-3cfcc0291955")
+	)
+	(text "03 OUTPUT PROTECTION"
+		(exclude_from_sim no)
+		(at 15.24 15.24 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+			(justify left top)
+		)
+		(uuid "bcbcd6b7-313c-53b3-9c8a-a0d3eab3bfe0")
+	)
+	(wire
+		(pts
+			(xy 35.56 27.94) (xy 27.94 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "097683b1-df3a-5a11-b430-7792a65d5036")
+	)
+	(wire
+		(pts
+			(xy 129.54 76.2) (xy 134.62 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bfa6460-14b7-5c0c-a8e0-2fa520588564")
+	)
+	(wire
+		(pts
+			(xy 53.34 76.2) (xy 58.42 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63a50e76-d70c-5943-81fc-1446d06eeff0")
+	)
+	(wire
+		(pts
+			(xy 132.08 27.94) (xy 124.46 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0872347-1799-5413-8ce5-56cb57d03fa4")
+	)
+	(label "VOUT_PROTECTED"
+		(at 134.62 76.2 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "09054b92-1633-5e8a-b5ad-3f147244a511")
+	)
+	(label "VOUT_PROTECTED"
+		(at 124.46 27.94 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "0e16bac3-0678-5ecf-bafd-209bb88f0ddf")
+	)
+	(label "VOUT_5V1"
+		(at 58.42 76.2 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "3f78efc0-f52f-50bb-8f33-15d5c944668e")
+	)
+	(label "VOUT_5V1"
+		(at 27.94 27.94 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "4df62e93-c2e6-579c-a2af-60a982ae7e25")
+	)
+	(hierarchical_label "VOUT_5V1"
+		(shape input)
+		(at 35.56 27.94 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3761ac70-624e-5b5c-9d2a-334804097fd5")
+	)
+	(hierarchical_label "VOUT_PROTECTED"
+		(shape passive)
+		(at 132.08 27.94 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "c7703f27-30f6-58e8-8aa3-f503cf3a59ad")
+	)
+	(symbol
+		(lib_id "V1A:TP301_")
+		(at 53.34 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2fb1889e-9391-5937-9c23-f3423580a2d5")
+		(property "Reference" "TP301"
+			(at 53.34 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VOUT_5V1"
+			(at 53.34 68.58 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Project test access; local domain only"
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Test only; not a load-current connector"
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cdb26ceb-85ec-5fbf-acf9-efd625774dad")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/75179989-af4b-5de8-b22b-4510e541985c"
+					(reference "TP301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:TP302_")
+		(at 129.54 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4d28d435-7b3a-53a9-92fe-74a118e7c2c1")
+		(property "Reference" "TP302"
+			(at 129.54 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VOUT_PROTECTED"
+			(at 129.54 68.58 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 129.54 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Project test access; local domain only"
+			(at 129.54 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Test only; not a load-current connector"
+			(at 129.54 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "08c958ec-5476-598b-8f50-cb17fe6b6c21")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/75179989-af4b-5de8-b22b-4510e541985c"
+					(reference "TP302")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

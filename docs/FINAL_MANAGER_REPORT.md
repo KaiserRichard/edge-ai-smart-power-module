@@ -1,3 +1,55 @@
+# Repository maintenance update — 2026-09-26
+
+**STATUS: R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** archived local research caches/backups before cleanup; retained the current engineering snapshot; added durable AI context, source registry, restoration guidance, and portable validation. This is repository maintenance, not an electrical gate review.
+
+**EVIDENCE:** [cleanup record](REPOSITORY_CLEANUP.md), [hardware preservation hashes](evidence/repository_cleanup_2026-09-26/source_integrity.json), and [current engineering state](context/03_ENGINEERING_STATE.md). Ten existing tests and fresh-netlist capture checks pass. Fresh ERC retains the one legitimate U402.1 error. All 13 current hardware/library files match pre-cleanup bytes.
+
+**DECISIONS:** publish the existing design/evidence snapshot and compact context on the feature branch; keep full external research caches in a sibling local archive. Historical entries and source manifests remain evidence of their dates. No circuit, component, footprint, or gate decision changed.
+
+**OPEN RISKS:** exact historical vendor bytes now require archive restoration; URLs may later serve changed revisions. Electrical blockers remain those in the current context and dated qualification review.
+
+**NEXT GATE:** remain at R2. No Sheet 03 capture, PCB, routing, Gerbers, procurement, or fabrication is authorized by repository cleanup.
+
+---
+
+# Current manager update - R2 evidence reduction, 2026-09-14 continuation
+
+**STATUS: R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** completed seven qualification worksheets; authored/assigned manufacturer-supported U201 RJR0014A, Q101 Q3 and R401 Kelvin footprints. Added exact fuse/interconnect candidates, explicit capacitor evidence limitations, refined Pi loss calculations, input TVS coordination and output-protection timing/requirements preparation. Only those three schematic Footprint properties changed.
+
+**EVIDENCE:** [current blocker table and seven reports](evidence/r2/forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md), [source identities](evidence/r2/forensic_2026-09-14/qualification_source_register.json), [verification](evidence/r2/forensic_2026-09-14/QUALIFICATION_VERIFICATION.md), [current ERC](evidence/r2/forensic_2026-09-14/ERC_qualified.json). All47net groups/71entries preserved; reversing only three properties restores prior hardware and all10restore-ZIP members. Ten tests pass. Capture checker PASS is not R2 release. ERC remains exactly U402.1 undriven power at the intentionally open output boundary.
+
+**DECISIONS:** close three package/land-assignment blockers within R2 review scope. Keep L201 and nine TDK assignments blank. Keep capacitor effective-C minima, F101 and all connector final selections OPEN. Vishay SMBJ26CA's42.1V clamp at14.3A cannot establish LM61460 protection; current direction NOT QUALIFIED. No D101 or circuit change; no output architecture selected. Existing schematic recovery and all historical evidence retained. Third-party PDFs are intentionally in the existing ignored document directory with recorded hashes/URLs.
+
+**OPEN RISKS:** source transient/fault current; Pi/load voltage-time-energy limits; disconnect detection/turnoff/SOA/reverse/recovery; hot loop/dynamic margin; primary L/TDK geometry/bias data; biased/hot inductor and remaining passive ratings; local I2C margin; ambient/board/assembly constraints. New footprint geometry does not validate the assembled device or thermal layout.
+
+**NEXT GATE:** remain at R2. Resolve missing requirements and approve concrete architectural choices before Sheet03 capture. R3 requires separate authorization after R2 release. No authored PCB, routing, Gerbers, commits, pushes, orders or fabrication.
+
+Earlier manager entries below are preserved verbatim as historical evidence; this continuation controls the current status.
+
+---
+
+# Current manager update — V1A R2 forensic review, 2026-09-14
+
+**STATUS: R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** fresh repository/restore-point, schematic connectivity, ERC, package/footprint, protection-candidate and Pi-delivery review. The current user-defined chain remains 9–24 V nominal input -> input protection -> LM61460 -> 5.1 V -> independent output protection -> 2 mΩ Kelvin shunt -> load. INA228 and local/host I²C separation are preserved.
+
+**EVIDENCE:** [R2 -> R3 blocker table and proposed closure plan](evidence/r2/forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md), [repository hashes/ZIP comparison](evidence/r2/forensic_2026-09-14/repository_state.json), fresh [ERC](evidence/r2/forensic_2026-09-14/ERC.json) and [netlist](evidence/r2/forensic_2026-09-14/V1A.net.xml). All ten restore-ZIP members match current project files. ERC has one legitimate U402.1 undriven-power error; sheet 03 is electrically open. No authored PCB exists. Calculations are sensitivity studies, not physical measurements.
+
+**DECISIONS:** preserve the existing dirty KiCad work, historical evidence and backups. No output circuit or new component is selected by this review. Compare LM74800, LTC4368, integrated TPS25947 and a precision-detector/disconnect direction against actual fault requirements before implementation. The old checker's open-protection/no-PCB assertions describe its historical gate and must be updated when the corresponding new design/gate is explicitly approved.
+
+**OPEN RISKS:** load voltage/time/energy limits; protection timing/hot SOA/reverse behavior/recovery; exact critical footprints (including unreadable primary L201 dimensional evidence); biased L/C qualification; fuse/source/TVS coordination; all connector/mate/wire selections; Pi drop/transient budget; thermal constraints and I²C low-level contention margin. The linked review separates pre-layout decisions from R5 measurements.
+
+**NEXT GATE:** stop for review of the proposed R2 closure plan. Resolve acceptance limits and approve the concrete protection/component direction before implementing unresolved circuitry. Complete and review R2 before separately authorizing R3. No schematic edits, PCB, routing, Gerbers, commits, pushes or fabrication authorization occurred.
+
+The report below is retained verbatim as **historical R0/R1 evidence**. Its old branch, authorization, preferred-converter and “no schematic” statements do not describe the current repository; the dated update above controls this review's status.
+
+---
+
 # Final manager report — Project II V1A R0/R1
 
 Date: 2026-09-11. Baseline commit: `a9fe716` (`chore: initialize edge AI smart power module project`). Branch: `docs/r0-r1-engineering-audit`. The reviewed documentation and source records are **uncommitted working-tree additions**, not content contained in that baseline commit.

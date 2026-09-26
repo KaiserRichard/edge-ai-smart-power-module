@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-26",
+  "engineering_status": "R2 BLOCKED; R3 BLOCKED",
+  "hardware_files_preserved": 13,
+  "existing_unit_tests": {
+    "passed": 10,
+    "failed": 0,
+    "runner": "python3 -B -m unittest discover -s tests -v"
+  },
+  "pytest": "Not installed in system Python; standard-library runner used",
+  "kicad_version": "9.0.6",
+  "fresh_netlist_export_exit": 0,
+  "fresh_capture_check_exit": 0,
+  "erc": {
+    "exit": 5,
+    "errors": 1,
+    "warnings": 0,
+    "exclusions": 0,
+    "expected_type": "power_pin_not_driven",
+    "reference": "U402",
+    "pin": "1"
+  },
+  "calculators": {
+    "calculate_r2.py": 0,
+    "calculate_pi_interface.py": 0,
+    "calculate_r2_qualification.py": 0
+  },
+  "historical_audit": {
+    "before_cleanup": "PASS",
+    "restored_archive_snapshot": "PASS",
+    "hashed_records": 122,
+    "repository_pins": 3
+  },
+  "portable_checker_negative_cases": [
+    "missing Markdown target rejected",
+    "modified hardware bytes rejected",
+    "invalid JSON rejected",
+    "unauthorized PCB path rejected in isolated fixture"
+  ],
+  "publication_scan": {
+    "candidate_files_scanned_before_this_summary": 169,
+    "reachable_history_blobs_scanned": 82,
+    "zip_members_scanned": true,
+    "credential_findings": 0,
+    "history_blobs_over_20MiB": 0,
+    "limitations": "Pattern scan plus review of keyword hits; not an exhaustive credential guarantee"
+  },
+  "logs": "Sibling local archive validation/; archive identity in archive_manifest.json",
+  "whitespace": {
+    "new_cleanup_content": "PASS",
+    "full_staged_check": "Pre-existing trailing whitespace retained in original log/SVG evidence",
+    "unchanged_files_with_warnings": [
+      "docs/evidence/r2/forensic_2026-09-14/erc.log",
+      "docs/evidence/r2/forensic_2026-09-14/footprints/TI_Q3_CSD19537Q3.svg",
+      "docs/evidence/r2/forensic_2026-09-14/footprints/TI_RJR0014A_LM61460.svg",
+      "docs/evidence/r2/forensic_2026-09-14/footprints/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.svg",
+      "docs/evidence/r2/forensic_2026-09-14/netlist.log",
+      "docs/evidence/r2/takeover_2026-09-12/erc_export.log",
+      "docs/evidence/r2/takeover_2026-09-12/netlist_export.log",
+      "docs/evidence/r2/takeover_2026-09-12/pdf_export.log"
+    ]
+  }
+}

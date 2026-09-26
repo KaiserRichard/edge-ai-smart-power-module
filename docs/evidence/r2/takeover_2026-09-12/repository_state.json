@@ -1,0 +1,426 @@
+{
+  "captured_at": "2026-09-12T10:11:38.057905+00:00",
+  "scope": "Pre-edit repository snapshot; baseline hashes are historical, not expected current hashes. Ignored caches inventoried separately in STATE.md.",
+  "git": {
+    "pwd": "/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module",
+    "status_short": "",
+    "branch": "feat/r2-schematic-recovery",
+    "head": "bc2379025a6320dff9186724a03f6e1ab0db7019",
+    "log10": "bc23790 chore: initialize edge AI smart power module project\na9fe716 chore: initialize edge AI smart power module project",
+    "untracked": "",
+    "modified": ""
+  },
+  "tracked_count": 82,
+  "tracked_files": [
+    {
+      "path": ".gitignore",
+      "baseline_sha256": "8dbd8607a26db53f58232edd36a1f6c4ac579c20804ec02b2bf8014019e0050b",
+      "bytes_at_takeover": 399
+    },
+    {
+      "path": "AGENTS.md",
+      "baseline_sha256": "8c912cfc1de8052e20ef1f10e3633e255e91abf6b4eb1476e95a34fd49320eb3",
+      "bytes_at_takeover": 5066
+    },
+    {
+      "path": "README.md",
+      "baseline_sha256": "4e6f56aef5f821f5c144703bcbbd839717d0d8c1e69e7b754201924a4c923985",
+      "bytes_at_takeover": 3031
+    },
+    {
+      "path": "docs/00_REQUIREMENTS.md",
+      "baseline_sha256": "6f368f540006c382a25d11b3039cd72862c062d62b540279423fc4e3d56cdf8a",
+      "bytes_at_takeover": 9801
+    },
+    {
+      "path": "docs/01_REFERENCE_AUDIT.md",
+      "baseline_sha256": "da9af7b305cb4ef2bdeaf8e5c4a8c97d3dd2b2c9971bd19f6ac67fd3029e049e",
+      "bytes_at_takeover": 21285
+    },
+    {
+      "path": "docs/02_ARCHITECTURE.md",
+      "baseline_sha256": "98055802dc8cf2b09a43042699cb97f0c9f22256e02f1c305681c889d31634f6",
+      "bytes_at_takeover": 7324
+    },
+    {
+      "path": "docs/03_COMPONENT_SELECTION.md",
+      "baseline_sha256": "6eee4434692ddcaedf1a958ce166d0f535c82d196004883fe077cf95b568bbb9",
+      "bytes_at_takeover": 11211
+    },
+    {
+      "path": "docs/04_POWER_CALCULATIONS.md",
+      "baseline_sha256": "ac90b07c58835fcdf3b2d2904d8a52ce766a9ecec6cf8dec98956f1350ad68d1",
+      "bytes_at_takeover": 10752
+    },
+    {
+      "path": "docs/05_SCHEMATIC_REVIEW.md",
+      "baseline_sha256": "ade669897b1ba8b84d58f9b0d1ecde4c1cf0550c949dded01b030b6f1521e0db",
+      "bytes_at_takeover": 8982
+    },
+    {
+      "path": "docs/CODEX_HANDOFF.md",
+      "baseline_sha256": "e02e1e00117fb204016868fd5a63fd4ac2f73d8aa4bd1a89f668807033fe970f",
+      "bytes_at_takeover": 16258
+    },
+    {
+      "path": "docs/CODEX_HARDWARE_SOURCE_PACK.md",
+      "baseline_sha256": "edca24f080a088ab9e51908fefbc76cc1f5ad675ba48ee78b25c8f843eed6f29",
+      "bytes_at_takeover": 10244
+    },
+    {
+      "path": "docs/FINAL_MANAGER_REPORT.md",
+      "baseline_sha256": "4ab97ea546a807f0b2beb5feac59311aedc0c69ffd44907f89289a579e5334eb",
+      "bytes_at_takeover": 10032
+    },
+    {
+      "path": "docs/R2_MANAGER_PACKET.md",
+      "baseline_sha256": "c34abd3ebe31ad56ac0b8611b6ce9bb3a08f82b4c35f55facf92128c58170769",
+      "bytes_at_takeover": 4593
+    },
+    {
+      "path": "docs/WBR_EDGE_SUPERVISOR_HAT_FEASIBILITY.md",
+      "baseline_sha256": "0145cf32a9ec8269eee43288d5241642641e503f4955f72edd334640dac275d8",
+      "bytes_at_takeover": 38662
+    },
+    {
+      "path": "docs/evidence/r0/ENVIRONMENT_REVIEW.md",
+      "baseline_sha256": "1ff5c9d5567734354b502671fa14fa8ec576537556c3a4e053ab3be8d6afa9f3",
+      "bytes_at_takeover": 3532
+    },
+    {
+      "path": "docs/evidence/r0/MONITOR_PROTECTION_SOURCE_REVIEW.md",
+      "baseline_sha256": "c5ffe72323f29adaef274d7d82e48cc61773aa895efa3268c791e291696eadf8",
+      "bytes_at_takeover": 19286
+    },
+    {
+      "path": "docs/evidence/r0/R0_R1_VALIDATION.md",
+      "baseline_sha256": "5a402ab86941c475f0529309348b2b9a3917726991ca6d684b264a2c5e1c93f2",
+      "bytes_at_takeover": 6314
+    },
+    {
+      "path": "docs/evidence/r0/RASPBERRY_PI_SOURCE_REVIEW.md",
+      "baseline_sha256": "a09f2d82a9de31f2dfd437242f09f1caae9512a1ece42ef9f038c171c48730ea",
+      "bytes_at_takeover": 4133
+    },
+    {
+      "path": "docs/evidence/r0/documentation_validation.json",
+      "baseline_sha256": "06500483dcaa39d25cca26a271a90bff3c29ba363dc0e4a948e8fd5ce9af286c",
+      "bytes_at_takeover": 909
+    },
+    {
+      "path": "docs/evidence/r0/environment.json",
+      "baseline_sha256": "199175517220ca93b9221c048d46a06a536f27151fb24affa32ca841d95ef264",
+      "bytes_at_takeover": 8234
+    },
+    {
+      "path": "docs/evidence/r0/raspberry_pi_sources.json",
+      "baseline_sha256": "affc8ab39de69d8d7d83b21f8d04044a002a1f99395fc4d68506544463c2188f",
+      "bytes_at_takeover": 2243
+    },
+    {
+      "path": "docs/evidence/r0/source_manifest.json",
+      "baseline_sha256": "c3dff56df887fdfa4f9a32752708c6b9e2de54b9a07f8ac6905ec375e41a4ce6",
+      "bytes_at_takeover": 25799
+    },
+    {
+      "path": "docs/evidence/r2/BUCK_DESIGN.md",
+      "baseline_sha256": "97ab82a8a295bf70fdaaba9d2719af5013a37862a2ac2c1273319ceef4aaa7df",
+      "bytes_at_takeover": 8193
+    },
+    {
+      "path": "docs/evidence/r2/ERC.json",
+      "baseline_sha256": "459ae0c9447a1f1d64529f6e322147e516dccf1097ad6f5f785cb82b2cbca4aa",
+      "bytes_at_takeover": 1980
+    },
+    {
+      "path": "docs/evidence/r2/INPUT_PROTECTION.md",
+      "baseline_sha256": "71e345f757f50809602ef1b48d525908dd63a2290def6e7d2e8d7022dc4e94a0",
+      "bytes_at_takeover": 6698
+    },
+    {
+      "path": "docs/evidence/r2/MONITOR_POWER_DOMAINS.md",
+      "baseline_sha256": "25dee349526ff0cebdfd16fc485198c0211794be3092df419d4b75ba526efcc7",
+      "bytes_at_takeover": 7335
+    },
+    {
+      "path": "docs/evidence/r2/OUTPUT_PROTECTION.md",
+      "baseline_sha256": "df223b43eebfbac1a4f9110c1a5e144e5a073cfb0d20f73287d04a6d90674a5b",
+      "bytes_at_takeover": 5456
+    },
+    {
+      "path": "docs/evidence/r2/PIN_AND_FOOTPRINT_REVIEW.md",
+      "baseline_sha256": "52be650824e448b2d79903afdf94fe4601a6447411a0bbc021c4f153f424e8e8",
+      "bytes_at_takeover": 6004
+    },
+    {
+      "path": "docs/evidence/r2/RECOVERY.md",
+      "baseline_sha256": "42c4d12c68c51c892fb88ca64b3d65a9dfe76b33fca7a1c17df2ebb3fbe07b17",
+      "bytes_at_takeover": 4028
+    },
+    {
+      "path": "docs/evidence/r2/V1A.net.xml",
+      "baseline_sha256": "5189a2f6e0a7522279f872b269a00a7c45f2d537ecdfd553abaebe3678488540",
+      "bytes_at_takeover": 129303
+    },
+    {
+      "path": "docs/evidence/r2/V1A_SCHEMATIC.pdf",
+      "baseline_sha256": "d2038ac569c2ba90c8b3cdcf7532c0dceb67eb21efce2e09cdccd2650d464d0b",
+      "bytes_at_takeover": 784563
+    },
+    {
+      "path": "docs/evidence/r2/buck_block.json",
+      "baseline_sha256": "3212f014d5d8a1e81099834327dd9957a1d79193e54945e048741a770299d853",
+      "bytes_at_takeover": 15276
+    },
+    {
+      "path": "docs/evidence/r2/calculations.json",
+      "baseline_sha256": "4309a5fd5afa99ab98938908313dbcc7f6dd370144b683cdeb370a0ef5364254",
+      "bytes_at_takeover": 3226
+    },
+    {
+      "path": "docs/evidence/r2/erc.log",
+      "baseline_sha256": "b86f101255ced16cf99223e5f5174a2f5c583503e17453e90343ba0165c1ff24",
+      "bytes_at_takeover": 4991
+    },
+    {
+      "path": "docs/evidence/r2/input_block.json",
+      "baseline_sha256": "ba7a7122fd6922d0fe83ca4b4e6a9c5d92c7a9ed1327134146f125c223b32c3f",
+      "bytes_at_takeover": 14738
+    },
+    {
+      "path": "docs/evidence/r2/io_block.json",
+      "baseline_sha256": "65e5caf0b2a72f9b978a51a1cb666160abf74d8b02bdad79e06281684ab5305d",
+      "bytes_at_takeover": 5451
+    },
+    {
+      "path": "docs/evidence/r2/monitor_block.json",
+      "baseline_sha256": "e41021100e5eafb22e2690b870e1967034f7070666905a02bae27c3291299573",
+      "bytes_at_takeover": 13626
+    },
+    {
+      "path": "docs/evidence/r2/netlist_export.log",
+      "baseline_sha256": "1c91c31666796fb17540b459e7af1604942df9b7a5821f1acf687b581cf0d753",
+      "bytes_at_takeover": 4926
+    },
+    {
+      "path": "docs/evidence/r2/output_block.json",
+      "baseline_sha256": "1121906cedd5e7a1169a543db1c6a8a20bc6bc86f67f92ecefe9926cc3031244",
+      "bytes_at_takeover": 1572
+    },
+    {
+      "path": "docs/evidence/r2/pdf_export.log",
+      "baseline_sha256": "78e7ce96c5215678baab759da9b12c0d322659a2e3d4e4c2737741e67431a7ed",
+      "bytes_at_takeover": 4981
+    },
+    {
+      "path": "docs/evidence/r2/recovery_manifest.json",
+      "baseline_sha256": "2e6fa8cc2d297d7fcd156a9a53b96c651fcc1090d8ef7a5cc7bdf89d49432879",
+      "bytes_at_takeover": 19561
+    },
+    {
+      "path": "docs/evidence/r2/recovery_originals.json",
+      "baseline_sha256": "0ce9ffc9683f39e64196f5ea3b0b6b7000d795ce070ea0acd38d423bce479385",
+      "bytes_at_takeover": 32785
+    },
+    {
+      "path": "docs/evidence/r2/source_register.json",
+      "baseline_sha256": "7dfc44b6668421bca8d5ab6f55a6dc5ad09fd4eedce9eca41b7114137db76641",
+      "bytes_at_takeover": 9542
+    },
+    {
+      "path": "docs/evidence/wbr_hat/PI_POWER_WATCHDOG_REVIEW.md",
+      "baseline_sha256": "15117ae8b68fa59c42dbcdb512e37614bcb155fdbee80612867b987811ce3a88",
+      "bytes_at_takeover": 16097
+    },
+    {
+      "path": "docs/evidence/wbr_hat/power_source_manifest.json",
+      "baseline_sha256": "a2d1ce55cc4dac90e307a378719389fab104a2acb9c9ae162447a8822ca65a0a",
+      "bytes_at_takeover": 2683
+    },
+    {
+      "path": "hardware/kicad/01_INPUT_PROTECTION.kicad_sch",
+      "baseline_sha256": "b33d67702f8ed8467e36df81f5ec5e995c6fc252e995e3b373a98f1616a7a997",
+      "bytes_at_takeover": 66589
+    },
+    {
+      "path": "hardware/kicad/02_BUCK_5V.kicad_sch",
+      "baseline_sha256": "2c9b03ddb73e5717e03977033e5cbbd65fe396c5bada7b2fb1e5d97a9a9513bd",
+      "bytes_at_takeover": 67100
+    },
+    {
+      "path": "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch",
+      "baseline_sha256": "f73d28e60c284da25cea521686e601a685e9c426b291c1ede7184eef697dd3c3",
+      "bytes_at_takeover": 5903
+    },
+    {
+      "path": "hardware/kicad/04_POWER_MONITOR.kicad_sch",
+      "baseline_sha256": "e75e765f1ab55197b609686a3f2dd52bc830978ae3b1eaeff30e1f9c7ec6e727",
+      "bytes_at_takeover": 64149
+    },
+    {
+      "path": "hardware/kicad/05_IO_TEST.kicad_sch",
+      "baseline_sha256": "0a6f30b63b663cdc78de9a08339e202536545ed5930a9449c75737842ce6d302",
+      "bytes_at_takeover": 26265
+    },
+    {
+      "path": "hardware/kicad/V1A.kicad_pro",
+      "baseline_sha256": "23b8c68b6b7bf72b80c5f6857f45bd0cf6c0579ce77d16b1fdcac543373873c7",
+      "bytes_at_takeover": 842
+    },
+    {
+      "path": "hardware/kicad/V1A.kicad_sch",
+      "baseline_sha256": "a3d734981ccbd65917881623423bfedbe28e6aba6c61ea7ba3ff2fb1a6e58ad5",
+      "bytes_at_takeover": 14077
+    },
+    {
+      "path": "hardware/kicad/V1A.kicad_sym",
+      "baseline_sha256": "2d128816e8f20af46f70eb985eb36157d9990c0d56a4c172f48e24607513b054",
+      "bytes_at_takeover": 77303
+    },
+    {
+      "path": "hardware/kicad/sym-lib-table",
+      "baseline_sha256": "b2a54c11e03449e84dfc1de436dfed2606a538f2deccf22bbae071d38a8ff747",
+      "bytes_at_takeover": 177
+    },
+    {
+      "path": "pcb-r0-r1-review.zip",
+      "baseline_sha256": "8fb7c91a82b8c42385d8588f6dd5b6027838847bdb2fcfaa91851cf831f59023",
+      "bytes_at_takeover": 25409
+    },
+    {
+      "path": "scripts/build_r2_schematic.py",
+      "baseline_sha256": "3f879d77339eb4f9d303b702add053c4f07982e52f510a6e42e440afe9dc00d9",
+      "bytes_at_takeover": 16314
+    },
+    {
+      "path": "scripts/calculate_r2.py",
+      "baseline_sha256": "7f56378658699df3c255893f3fbfba5729745a9b8ffe4ea62e2d0a1c6461cd3a",
+      "bytes_at_takeover": 4143
+    },
+    {
+      "path": "scripts/check_r0_r1_docs.py",
+      "baseline_sha256": "f995dec95dc9dc567c9dfc307b68d4642d8c8110a46ab31e3f4474be8be7f392",
+      "bytes_at_takeover": 7236
+    },
+    {
+      "path": "scripts/check_r2_schematic.py",
+      "baseline_sha256": "3df6213d8b6688a52c58d8962eec824739d1d3062fddca81d4fda40b1c4261bf",
+      "bytes_at_takeover": 4935
+    },
+    {
+      "path": "tests/test_r2_capture.py",
+      "baseline_sha256": "28da58f9dd26f47601f40edd62a3fa5d8f02ffa90b74f0319b8308c060b72c30",
+      "bytes_at_takeover": 2398
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/COPYING",
+      "baseline_sha256": "fb5a425bd3b3cd6071a3a9aff9909a859e7c1158d54d32e07658398cd67eb6a0",
+      "bytes_at_takeover": 496
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/LICENSE.md",
+      "baseline_sha256": "234247fb0cd987c3dd6a1918ca62cf5b9a519e5e9cbbf8007a63a8913206e2df",
+      "bytes_at_takeover": 18771
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/README",
+      "baseline_sha256": "9e0cf69918d6ae167b4971ccf1a605a44fba4e6341621a1f350ba7fc0dc8fed5",
+      "bytes_at_takeover": 287088
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/bcm2712-rpi-5-b.dts",
+      "baseline_sha256": "d4a662bd482e54723c11d53818cb8fe738c09da365a774536d61a641878babbd",
+      "bytes_at_takeover": 14656
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/bcm2712-rpi.dtsi",
+      "baseline_sha256": "874963e6586489a6cad16c148499dc93eb77de5f8ce26e37cda7e5e2f37dd7f7",
+      "bytes_at_takeover": 12153
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/bcm2712.dtsi",
+      "baseline_sha256": "d8b36a2c0efe4a2d23598a07fc10b6268e95f868aa5613676fffb25578eb437e",
+      "bytes_at_takeover": 17708
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/bcm2712_defconfig",
+      "baseline_sha256": "a94ef8abd18e44aab7f87b75ddd9f0f8da7e639f2b5342abe3896cf3dfb53e8c",
+      "bytes_at_takeover": 42962
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/bcm2835_wdt.c",
+      "baseline_sha256": "831802f5df8c102acfaf9bd098669ec9015b2823da7b7f4953ef72340e893088",
+      "bytes_at_takeover": 7003
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/boot.adoc",
+      "baseline_sha256": "983fb124bb2406d81df5449bc9326723ffdf143341833fb1b4c72062a9a8c6ae",
+      "bytes_at_takeover": 22731
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/eeprom-bootloader.adoc",
+      "baseline_sha256": "a2fe847e35f6031b3c955ddb34ba05692b80f55e06174ded7c52dc284d988070",
+      "bytes_at_takeover": 32411
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/gpio-on-raspberry-pi.adoc",
+      "baseline_sha256": "6867ef1baafbb3be2c96b82266ba04c4344e09aad3c6276d588adeec24560b04",
+      "bytes_at_takeover": 6940
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/gpio-poweroff-overlay.dts",
+      "baseline_sha256": "35252c21602a1c1bf04e270e3353dc701bbc1b55644719d617eeb0cb53b291b2",
+      "bytes_at_takeover": 619
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/gpio-poweroff.c",
+      "baseline_sha256": "6b5509a103a79bfb106153a1c0202f2e97e517c2721cc4a59a61154ea505cd4b",
+      "bytes_at_takeover": 3444
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/gpio-shutdown-overlay.dts",
+      "baseline_sha256": "f3954aaf0f21e505f8ab475f1d669eb7e5c56bdb8109aa38c192066b7336f030",
+      "bytes_at_takeover": 3241
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/power-button.adoc",
+      "baseline_sha256": "a27807c75d8b9c81bd4d7a68b12d7a0bb9e9fbc5df3aa69172c2859ebfd95acf",
+      "bytes_at_takeover": 1616
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/reference.adoc",
+      "baseline_sha256": "0b059ca2d57405cc0bf7bb64cae1ccd0a205306d96deb8e61feec111abe245ae",
+      "bytes_at_takeover": 74725
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/rpi-6.18.y/bcm2712-rpi.dtsi",
+      "baseline_sha256": "6d09493a2912d8e616d2dbefe49892591023fb7d47ab08c61cb741da4fc681f0",
+      "bytes_at_takeover": 12567
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/rpi-6.18.y/bcm2712_defconfig",
+      "baseline_sha256": "6cafcf9b94a90d2003b88d95b1ecac4f24a761a8ee8617428f1dd83ac85d8bb1",
+      "bytes_at_takeover": 43010
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/rpi-6.18.y/bcm2835_wdt.c",
+      "baseline_sha256": "7ac54023cad2db14956d86423e089b7cf4b455d35aa035cdb6afea958dde33fe",
+      "bytes_at_takeover": 7002
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/rpi-6.18.y/gpio-poweroff-overlay.dts",
+      "baseline_sha256": "35252c21602a1c1bf04e270e3353dc701bbc1b55644719d617eeb0cb53b291b2",
+      "bytes_at_takeover": 619
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/rpi-6.18.y/gpio-poweroff.c",
+      "baseline_sha256": "b35e2c6035a2c115a1c243e3fa7fb4bd2d45be9b9c2b5d3c10521b23e78ccd89",
+      "bytes_at_takeover": 3696
+    },
+    {
+      "path": "third_party/wbr_hat/raspberry_pi/rpi-6.18.y/gpio-shutdown-overlay.dts",
+      "baseline_sha256": "f3954aaf0f21e505f8ab475f1d669eb7e5c56bdb8109aa38c192066b7336f030",
+      "bytes_at_takeover": 3241
+    }
+  ]
+}

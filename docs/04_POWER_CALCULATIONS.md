@@ -1,3 +1,5 @@
+> Context note (2026-09-26): this dated document preserves earlier requirements/review history. Read [current engineering state](context/03_ENGINEERING_STATE.md) and [current architecture](context/02_V1A_ARCHITECTURE.md) before interpreting selections or release claims. Local cache/scratch paths mentioned below are archived external evidence; see [reference restoration](../third_party/README.md).
+
 # V1A power calculations and measurement plan
 
 Date: 2026-09-11. Baseline: `a9fe716` plus the uncommitted R0/R1 package. All results below are **CALCULATION**, not hardware measurements. Inputs are **PROPOSED/ASSUMPTION**, not approved requirements.

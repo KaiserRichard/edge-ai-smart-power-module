@@ -1,0 +1,57 @@
+{
+  "pre_existing_files_changed": [
+    "docs/FINAL_MANAGER_REPORT.md",
+    "docs/evidence/r2/forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md",
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch",
+    "hardware/kicad/02_BUCK_5V.kicad_sch",
+    "hardware/kicad/04_POWER_MONITOR.kicad_sch"
+  ],
+  "new_project_files": [
+    "docs/evidence/r2/forensic_2026-09-14/BOM_QUALIFIED_REVIEW.md",
+    "docs/evidence/r2/forensic_2026-09-14/CAPACITOR_QUALIFICATION.md",
+    "docs/evidence/r2/forensic_2026-09-14/CONNECTOR_HARNESS_QUALIFICATION.md",
+    "docs/evidence/r2/forensic_2026-09-14/CRITICAL_FOOTPRINT_QUALIFICATION.md",
+    "docs/evidence/r2/forensic_2026-09-14/ERC_qualified.json",
+    "docs/evidence/r2/forensic_2026-09-14/FUSE_REQUIREMENTS_AND_CANDIDATES.md",
+    "docs/evidence/r2/forensic_2026-09-14/INPUT_TRANSIENT_COORDINATION.md",
+    "docs/evidence/r2/forensic_2026-09-14/OUTPUT_PROTECTION_REQUIREMENTS_MATRIX.md",
+    "docs/evidence/r2/forensic_2026-09-14/PI_POWER_DELIVERY_REFINED.md",
+    "docs/evidence/r2/forensic_2026-09-14/QUALIFICATION_VERIFICATION.md",
+    "docs/evidence/r2/forensic_2026-09-14/V1A_qualified.net.xml",
+    "docs/evidence/r2/forensic_2026-09-14/continuation_baseline.json",
+    "docs/evidence/r2/forensic_2026-09-14/continuation_downloads.json",
+    "docs/evidence/r2/forensic_2026-09-14/footprint_assignments.json",
+    "docs/evidence/r2/forensic_2026-09-14/footprints/TI_Q3_CSD19537Q3.svg",
+    "docs/evidence/r2/forensic_2026-09-14/footprints/TI_RJR0014A_LM61460.svg",
+    "docs/evidence/r2/forensic_2026-09-14/footprints/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.svg",
+    "docs/evidence/r2/forensic_2026-09-14/pi_interface_calculations_qualified.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_assumptions.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_calculations.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_change_manifest.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_documentation_check.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_documentation_complete.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_documentation_link_order.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_preservation.json",
+    "docs/evidence/r2/forensic_2026-09-14/qualification_source_register.json",
+    "docs/evidence/r2/forensic_2026-09-14/r2_calculations_qualified.json",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod",
+    "hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod",
+    "hardware/kicad/fp-lib-table",
+    "scripts/build_qualified_footprints.py",
+    "scripts/calculate_r2_qualification.py",
+    "tests/test_qualified_footprints.py"
+  ],
+  "all_other_baseline_files_unchanged": true,
+  "footprint_regeneration_byte_identical": {
+    "TI_Q3_CSD19537Q3.kicad_mod": true,
+    "TI_RJR0014A_LM61460.kicad_mod": true,
+    "Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod": true
+  },
+  "new_primary_downloads": [
+    "third_party/documents/r2_qualification_2026-09-14/Belden_8522.pdf",
+    "third_party/documents/r2_qualification_2026-09-14/Vishay_SMBJ.pdf"
+  ],
+  "unchanged_branch": "feat/r2-schematic-recovery",
+  "unchanged_HEAD": "bc2379025a6320dff9186724a03f6e1ab0db7019"
+}

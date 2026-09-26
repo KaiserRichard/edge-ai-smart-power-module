@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-14",
+  "preexisting_files_checked": 102,
+  "changed_preexisting_files": [
+    "docs/FINAL_MANAGER_REPORT.md"
+  ],
+  "missing_preexisting_files": [],
+  "only_expected_manager_addition": true,
+  "historical_manager_body_retained_byte_for_byte": true,
+  "restore_members_identical": true,
+  "restore_archive_unchanged": true,
+  "authored_pcbs": [],
+  "branch_unchanged": true,
+  "HEAD_unchanged": true
+}

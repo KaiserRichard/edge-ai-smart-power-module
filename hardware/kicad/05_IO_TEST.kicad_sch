@@ -1,1 +1,2483 @@
-(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "8d9c57c5-d3a6-5649-afb2-3a00633471f3") (paper "A3") (title_block (title "05 IO TEST") (date "2026-09-12") (rev "R2-BLOCKED") (company "Edge AI Smart Power Module") (comment 1 "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED") (comment 2 "R3 PCB LAYOUT BLOCKED")) (lib_symbols (symbol "V1A:J501_" (pin_names (offset 0.762)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "J" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "DC INPUT - MPN OPEN" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "J501__0_1" (rectangle (start -20.32 7.62) (end 20.32 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "J501__1_1" (pin passive line (at -22.86 0 0) (length 2.54) (name "+" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))) (pin passive line (at 22.86 0 180) (length 2.54) (name "RETURN" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016))))))) (symbol "V1A:J502_" (pin_names (offset 0.762)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "J" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "LOAD OUTPUT - MPN OPEN" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "J502__0_1" (rectangle (start -20.32 7.62) (end 20.32 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "J502__1_1" (pin passive line (at -22.86 0 0) (length 2.54) (name "+" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))) (pin passive line (at 22.86 0 180) (length 2.54) (name "RETURN" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016))))))) (symbol "V1A:J503_" (pin_names (offset 0.762)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "J" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "HOST I2C - MPN OPEN" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "J503__0_1" (rectangle (start -20.32 7.62) (end 20.32 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "J503__1_1" (pin passive line (at -22.86 2.54 0) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))) (pin passive line (at -22.86 -2.54 0) (length 2.54) (name "VREF" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016))))) (pin passive line (at 22.86 2.54 180) (length 2.54) (name "SDA" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016))))) (pin passive line (at 22.86 -2.54 180) (length 2.54) (name "SCL" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016))))))) (symbol "V1A:TP501_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "TP" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "VIN_RAW" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "TP501__0_1" (circle (center 0 3.175) (radius 0.635) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "TP501__1_1" (pin passive line (at 0 0 90) (length 2.54) (name "TP" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))))) (symbol "V1A:TP502_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "TP" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "VIN_PROTECTED" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "TP502__0_1" (circle (center 0 3.175) (radius 0.635) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "TP502__1_1" (pin passive line (at 0 0 90) (length 2.54) (name "TP" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))))) (symbol "V1A:TP503_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "TP" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "LOAD_5V1" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "TP503__0_1" (circle (center 0 3.175) (radius 0.635) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "TP503__1_1" (pin passive line (at 0 0 90) (length 2.54) (name "TP" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))))) (symbol "V1A:TP504_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "TP" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "GND" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "TP504__0_1" (circle (center 0 3.175) (radius 0.635) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "TP504__1_1" (pin passive line (at 0 0 90) (length 2.54) (name "TP" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))))) (symbol "V1A:#FLG501_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom no) (on_board no) (property "Reference" "#FLG" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "#FLG501__0_1" (polyline (pts (xy -1.27 2.54) (xy 0 3.81)) (stroke (width 0.254) (type default)) (fill (type none))) (polyline (pts (xy 0 3.81) (xy 1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none))) (polyline (pts (xy 1.27 2.54) (xy -1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "#FLG501__1_1" (pin power_out line (at 0 0 90) (length 2.54) (name "PWR" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))))) (symbol "V1A:#FLG502_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom no) (on_board no) (property "Reference" "#FLG" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "#FLG502__0_1" (polyline (pts (xy -1.27 2.54) (xy 0 3.81)) (stroke (width 0.254) (type default)) (fill (type none))) (polyline (pts (xy 0 3.81) (xy 1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none))) (polyline (pts (xy 1.27 2.54) (xy -1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "#FLG502__1_1" (pin power_out line (at 0 0 90) (length 2.54) (name "PWR" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016))))))) (symbol "V1A:#FLG503_" (pin_names (offset 0.762) (hide yes)) (exclude_from_sim no) (in_bom no) (on_board no) (property "Reference" "#FLG" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "#FLG503__0_1" (polyline (pts (xy -1.27 2.54) (xy 0 3.81)) (stroke (width 0.254) (type default)) (fill (type none))) (polyline (pts (xy 0 3.81) (xy 1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none))) (polyline (pts (xy 1.27 2.54) (xy -1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "#FLG503__1_1" (pin power_out line (at 0 0 90) (length 2.54) (name "PWR" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))))) (symbol (lib_id "V1A:J501_") (at 83.82 83.82 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ed382c47-3625-51c9-bf2a-6456edff7a59") (property "Reference" "J501" (at 83.82 69.85 0) (effects (font (size 1.27 1.27)))) (property "Value" "DC INPUT - MPN OPEN" (at 83.82 72.39 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 83.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 83.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Frozen V1A functional input boundary" (at 83.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "9-24 V normal;>=5 A candidate;keying/wire/contact/interrupt coordination OPEN" (at 83.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "6d7b1d0b-2c60-5770-92fc-1eb74b4cb128")) (pin "2" (uuid "d8e7c94a-b9f6-5349-b97c-756c2299f444")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "J501") (unit 1))))) (symbol (lib_id "V1A:J502_") (at 208.28 83.82 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5f688bc6-1287-5946-be33-f20f0749abf1") (property "Reference" "J502" (at 208.28 69.85 0) (effects (font (size 1.27 1.27)))) (property "Value" "LOAD OUTPUT - MPN OPEN" (at 208.28 72.39 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 208.28 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 208.28 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Frozen V1A functional load boundary" (at 208.28 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "5.1 V nominal,5 A;exact connector,mate/wire and fault voltage OPEN" (at 208.28 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "89d175c9-dd0b-5660-b720-d2da92e6f906")) (pin "2" (uuid "ab5d0264-09d3-5e11-85ad-ccd9a785dec5")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "J502") (unit 1))))) (symbol (lib_id "V1A:J503_") (at 337.82 83.82 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "18cc0105-8bd3-5c2c-bc53-428bfbb83a1a") (property "Reference" "J503" (at 337.82 69.85 0) (effects (font (size 1.27 1.27)))) (property "Value" "HOST I2C - MPN OPEN" (at 337.82 72.39 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 337.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 337.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Frozen telemetry requirement; power-domain interface review" (at 337.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "3.3 V host reference input;not a host power supply;100 kHz;pinout review draft" (at 337.82 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "2e2fd1c8-daaf-59fe-9576-a38983198a95")) (pin "2" (uuid "eb26bd91-0cb4-56dd-b753-9693db22ceaa")) (pin "3" (uuid "ea846e72-9269-56fc-b3bf-0ec288667162")) (pin "4" (uuid "4ccd1688-a447-5815-bfb8-1797941b027a")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "J503") (unit 1))))) (symbol (lib_id "V1A:TP501_") (at 53.34 132.08 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cd599412-28b0-584d-97c8-e3acad5493d1") (property "Reference" "TP501" (at 53.34 121.92 0) (effects (font (size 1.27 1.27)))) (property "Value" "VIN_RAW" (at 53.34 124.46 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 53.34 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 53.34 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Project test access; local domain only" (at 53.34 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Test only; not a load-current connector" (at 53.34 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "9fba2b07-7786-51cd-9432-b906bd903b58")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "TP501") (unit 1))))) (symbol (lib_id "V1A:TP502_") (at 129.54 132.08 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "debfa10f-eaed-5ae2-9f5e-b73c544a7e35") (property "Reference" "TP502" (at 129.54 121.92 0) (effects (font (size 1.27 1.27)))) (property "Value" "VIN_PROTECTED" (at 129.54 124.46 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 129.54 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 129.54 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Project test access; local domain only" (at 129.54 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Test only; not a load-current connector" (at 129.54 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "a3959bd1-ce2a-5eab-a416-bc10124c2412")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "TP502") (unit 1))))) (symbol (lib_id "V1A:TP503_") (at 205.74 132.08 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4b73d537-249e-5b60-b4f7-e0560bbd587e") (property "Reference" "TP503" (at 205.74 121.92 0) (effects (font (size 1.27 1.27)))) (property "Value" "LOAD_5V1" (at 205.74 124.46 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 205.74 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 205.74 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Project test access; local domain only" (at 205.74 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Test only; not a load-current connector" (at 205.74 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "5735a411-2c9f-5d38-958f-726f2a068583")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "TP503") (unit 1))))) (symbol (lib_id "V1A:TP504_") (at 281.94 132.08 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "de5c825b-43e6-5903-ab9a-45e6a3aabf13") (property "Reference" "TP504" (at 281.94 121.92 0) (effects (font (size 1.27 1.27)))) (property "Value" "GND" (at 281.94 124.46 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 281.94 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 281.94 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "Project test access; local domain only" (at 281.94 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Test only; not a load-current connector" (at 281.94 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "2cf89f3e-7e49-5229-a85f-4884f52361b6")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "TP504") (unit 1))))) (symbol (lib_id "V1A:#FLG501_") (at 358.14 132.08 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "ba0cb918-245a-5178-b217-f0c63099ff9d") (property "Reference" "#FLG501" (at 358.14 121.92 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 358.14 124.46 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 358.14 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 358.14 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "ERC source declaration at externally supplied/passive-fed boundary" (at 358.14 132.08 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Not a physical component" (at 358.14 132.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "e6531023-6318-5175-aa32-ce33282dd6e6")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "#FLG501") (unit 1))))) (symbol (lib_id "V1A:#FLG502_") (at 53.34 157.48 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "1cb705b9-904b-5ffc-a018-ab8649cf6d23") (property "Reference" "#FLG502" (at 53.34 147.32 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 53.34 149.86 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 53.34 157.48 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 53.34 157.48 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "ERC source declaration at externally supplied/passive-fed boundary" (at 53.34 157.48 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Not a physical component" (at 53.34 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "ec6c7349-6404-5ce9-beec-1522288587fd")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "#FLG502") (unit 1))))) (symbol (lib_id "V1A:#FLG503_") (at 129.54 157.48 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "f6a3445a-b5ce-5243-b954-d815bc2635b2") (property "Reference" "#FLG503" (at 129.54 147.32 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 129.54 149.86 0) (effects (font (size 1.016 1.016)))) (property "Footprint" "" (at 129.54 157.48 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 129.54 157.48 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Source" "ERC source declaration at externally supplied/passive-fed boundary" (at 129.54 157.48 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Rating" "Not a physical component" (at 129.54 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "11d1376a-4716-5251-9e7f-5323fb948478")) (instances (project "V1A" (path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3" (reference "#FLG503") (unit 1))))) (text "05 IO TEST" (at 15.24 15.24 0) (effects (font (size 2.032 2.032)) (justify left top)) (uuid "deef8be2-f16e-5814-8264-8ca27237594c")) (hierarchical_label "VIN_RAW" (shape output) (at 35.56 27.94 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "2ef305e6-bd9b-54f2-b036-8ee119cec755")) (wire (pts (xy 35.56 27.94) (xy 27.94 27.94)) (stroke (width 0) (type default)) (uuid "048f8fa8-6c65-5ed9-a7a9-484ebfed28df")) (label "VIN_RAW" (at 27.94 27.94 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "b3ff4cef-196a-5ca9-916a-715b0b16dc53")) (hierarchical_label "VIN_PROTECTED" (shape input) (at 132.08 27.94 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "0169c05b-ee00-57ad-8c1f-8efb5dbb8c03")) (wire (pts (xy 132.08 27.94) (xy 124.46 27.94)) (stroke (width 0) (type default)) (uuid "c08be555-ae1d-5305-99db-b9e0bcbd1c24")) (label "VIN_PROTECTED" (at 124.46 27.94 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "4977515f-6b1d-5d56-a6ad-bdbcf7e7ba0e")) (hierarchical_label "LOAD_5V1" (shape bidirectional) (at 228.6 27.94 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "60936561-a0ad-55f7-9616-3387507047e5")) (wire (pts (xy 228.6 27.94) (xy 220.98 27.94)) (stroke (width 0) (type default)) (uuid "c0964758-d921-5a00-928e-0a1b34e74cbe")) (label "LOAD_5V1" (at 220.98 27.94 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "69441457-3ad5-5a26-adea-ad53426961e0")) (hierarchical_label "3V3_HOST" (shape output) (at 325.12 27.94 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "ca8fcd73-03bf-5c41-a703-18e941f7ad2f")) (wire (pts (xy 325.12 27.94) (xy 317.5 27.94)) (stroke (width 0) (type default)) (uuid "71ac0231-3503-5ee6-9658-e1b94912be88")) (label "3V3_HOST" (at 317.5 27.94 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "26adeb42-88db-51a9-868c-6b91cf9c648f")) (hierarchical_label "SDA_HOST" (shape bidirectional) (at 35.56 35.56 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "078f3b13-9a3a-5fd6-b8c8-5972092c2a6b")) (wire (pts (xy 35.56 35.56) (xy 27.94 35.56)) (stroke (width 0) (type default)) (uuid "58136e55-1eec-58d3-8f8a-24ff036e4e66")) (label "SDA_HOST" (at 27.94 35.56 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "9ee5e881-3dd4-51b5-bf5b-8338bc356c29")) (hierarchical_label "SCL_HOST" (shape bidirectional) (at 132.08 35.56 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "5bfe5dc0-03b9-55d9-881b-748877abe1d1")) (wire (pts (xy 132.08 35.56) (xy 124.46 35.56)) (stroke (width 0) (type default)) (uuid "4394f3b7-602f-57e3-a391-060e2b2c0d91")) (label "SCL_HOST" (at 124.46 35.56 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "25d9faa8-324d-5bb6-a4c6-a3a879854b1f")) (hierarchical_label "GND" (shape passive) (at 228.6 35.56 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "50b85dab-476c-5987-906e-7c5a28c724fb")) (wire (pts (xy 228.6 35.56) (xy 220.98 35.56)) (stroke (width 0) (type default)) (uuid "42f7f5a1-734f-5e69-866a-bf400b57e445")) (label "GND" (at 220.98 35.56 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "07b2b85c-1a88-5cac-b89c-17e5ef0cb6bd")) (wire (pts (xy 60.96 83.82) (xy 55.88 83.82)) (stroke (width 0) (type default)) (uuid "f3447c73-7794-5138-a851-f994e5369dd6")) (label "VIN_RAW" (at 55.88 83.82 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "3369d0b8-8219-59c9-b670-2d0d464dfbc7")) (wire (pts (xy 106.68 83.82) (xy 111.76 83.82)) (stroke (width 0) (type default)) (uuid "04351fb2-f952-52d0-99cc-1bfc68cac9b9")) (label "GND" (at 111.76 83.82 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "97f19e80-22ff-5343-ae3f-4762186d5eab")) (wire (pts (xy 185.42 83.82) (xy 180.34 83.82)) (stroke (width 0) (type default)) (uuid "eb6c03a4-c212-56a8-b354-f182e8d08ed7")) (label "LOAD_5V1" (at 180.34 83.82 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "b1712c32-3e23-501f-bf29-8f331d88346b")) (wire (pts (xy 231.14 83.82) (xy 236.22 83.82)) (stroke (width 0) (type default)) (uuid "cfb3481c-b191-5673-864d-39badf4f99ce")) (label "GND" (at 236.22 83.82 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f7cf7080-c756-57a1-83a8-7e5f5cd45523")) (wire (pts (xy 314.96 81.28) (xy 309.88 81.28)) (stroke (width 0) (type default)) (uuid "cd119b2a-adcf-599b-8ed5-b561c1ea7f81")) (label "GND" (at 309.88 81.28 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "19b12195-59fe-5715-a3d7-fc4b65536719")) (wire (pts (xy 314.96 86.36) (xy 309.88 86.36)) (stroke (width 0) (type default)) (uuid "fcf0272d-be4f-5c9c-8f1a-63293db49018")) (label "3V3_HOST" (at 309.88 86.36 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "d1a17125-a768-5b60-9d29-7411a040506e")) (wire (pts (xy 360.68 81.28) (xy 365.76 81.28)) (stroke (width 0) (type default)) (uuid "62b052cf-5ccd-558d-8476-19d45016a619")) (label "SDA_HOST" (at 365.76 81.28 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "b159311b-cecb-56cf-9eb9-c194cb1c066e")) (wire (pts (xy 360.68 86.36) (xy 365.76 86.36)) (stroke (width 0) (type default)) (uuid "598dc09a-82e2-5dc9-9f44-c60846dff357")) (label "SCL_HOST" (at 365.76 86.36 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "28aad123-d734-5654-bb12-0adb5f4969ee")) (wire (pts (xy 53.34 132.08) (xy 58.42 132.08)) (stroke (width 0) (type default)) (uuid "a5955069-7784-53cb-b20e-f7ad0c44ef93")) (label "VIN_RAW" (at 58.42 132.08 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ccf3eb6b-51cc-5b90-b7cb-184f19a8b496")) (wire (pts (xy 129.54 132.08) (xy 134.62 132.08)) (stroke (width 0) (type default)) (uuid "71ba1e0f-522a-57df-afee-487395bc3f5a")) (label "VIN_PROTECTED" (at 134.62 132.08 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f9544f6a-fc8c-59e4-a133-19db6d3f5f96")) (wire (pts (xy 205.74 132.08) (xy 210.82 132.08)) (stroke (width 0) (type default)) (uuid "2c60c34d-2a33-5601-9610-0779c5cf2ff4")) (label "LOAD_5V1" (at 210.82 132.08 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "88f789ef-fe95-51e5-b19c-2a16ac90791a")) (wire (pts (xy 281.94 132.08) (xy 287.02 132.08)) (stroke (width 0) (type default)) (uuid "23ebeb05-c3ab-59be-ba78-2734825bd2be")) (label "GND" (at 287.02 132.08 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "26d8bf14-91c8-57c5-9b05-3e9193252f2d")) (wire (pts (xy 358.14 132.08) (xy 363.22 132.08)) (stroke (width 0) (type default)) (uuid "76a4a4f5-28a4-5eda-b89f-c92d4669a220")) (label "VIN_RAW" (at 363.22 132.08 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "83585ee8-70dc-5422-9e5f-b8671e922a79")) (wire (pts (xy 53.34 157.48) (xy 58.42 157.48)) (stroke (width 0) (type default)) (uuid "0ced5f2c-c37f-5471-ba44-2387997aff33")) (label "GND" (at 58.42 157.48 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "e06256e2-22bd-5519-bb88-cbd421c8086b")) (wire (pts (xy 129.54 157.48) (xy 134.62 157.48)) (stroke (width 0) (type default)) (uuid "697ff8c7-fdcb-522c-8136-c61fa71c9f3b")) (label "3V3_HOST" (at 134.62 157.48 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "8bcf22d5-df90-5289-bf99-24f2e7ef47e3")) (text "SOURCE: project frozen requirements and R2 power-domain review; connector MPNs remain OPEN.\nFUNCTION: explicit DC input, load output, host reference/I2C and local bench test access.\nMODIFICATION: reusable connectors; no Pi HAT,USB,MCU,CAN or V1B-specific connector.\nRATIONALE: standalone operation and controlled measurement boundaries; mating/keying review required.\nR2 ONLY: output path is OPEN at sheet03. Do not bridge it to power an SBC.\nFlags declare external inputs and passive-fed power for ERC only; they are not physical supplies.\nHost off: 3V3_HOST=0, host pullups also0; TCA9517 separates local domain. Keep common ground connected." (at 15.24 236.22 0) (effects (font (size 1.016 1.016)) (justify left top)) (uuid "748f971c-bb97-53ab-bb79-162d476bc295")) )
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8d9c57c5-d3a6-5649-afb2-3a00633471f3")
+	(paper "A3")
+	(title_block
+		(title "05 IO TEST")
+		(date "2026-09-12")
+		(rev "R2-BLOCKED")
+		(company "Edge AI Smart Power Module")
+		(comment 1 "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED")
+		(comment 2 "R3 PCB LAYOUT BLOCKED")
+	)
+	(lib_symbols
+		(symbol "V1A:#FLG501_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(property "Reference" "#FLG"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "#FLG501__0_1"
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy 0 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.81) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy -1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "#FLG501__1_1"
+				(pin power_out line
+					(at 0 0 90)
+					(length 2.54)
+					(name "PWR"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:#FLG502_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(property "Reference" "#FLG"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "#FLG502__0_1"
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy 0 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.81) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy -1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "#FLG502__1_1"
+				(pin power_out line
+					(at 0 0 90)
+					(length 2.54)
+					(name "PWR"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:#FLG503_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(property "Reference" "#FLG"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "#FLG503__0_1"
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy 0 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.81) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy -1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "#FLG503__1_1"
+				(pin power_out line
+					(at 0 0 90)
+					(length 2.54)
+					(name "PWR"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:J501_"
+			(pin_names
+				(offset 0.762)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "DC INPUT - MPN OPEN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "J501__0_1"
+				(rectangle
+					(start -20.32 7.62)
+					(end 20.32 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "J501__1_1"
+				(pin passive line
+					(at -22.86 0 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 0 180)
+					(length 2.54)
+					(name "RETURN"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:J502_"
+			(pin_names
+				(offset 0.762)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LOAD OUTPUT - MPN OPEN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "J502__0_1"
+				(rectangle
+					(start -20.32 7.62)
+					(end 20.32 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "J502__1_1"
+				(pin passive line
+					(at -22.86 0 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 0 180)
+					(length 2.54)
+					(name "RETURN"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:J503_"
+			(pin_names
+				(offset 0.762)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "HOST I2C - MPN OPEN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "J503__0_1"
+				(rectangle
+					(start -20.32 7.62)
+					(end 20.32 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "J503__1_1"
+				(pin passive line
+					(at -22.86 2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -22.86 -2.54 0)
+					(length 2.54)
+					(name "VREF"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 2.54 180)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -2.54 180)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:TP501_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VIN_RAW"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TP501__0_1"
+				(circle
+					(center 0 3.175)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP501__1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "TP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:TP502_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VIN_PROTECTED"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TP502__0_1"
+				(circle
+					(center 0 3.175)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP502__1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "TP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:TP503_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LOAD_5V1"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TP503__0_1"
+				(circle
+					(center 0 3.175)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP503__1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "TP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "V1A:TP504_"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TP504__0_1"
+				(circle
+					(center 0 3.175)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP504__1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "TP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "SOURCE: project frozen requirements and R2 power-domain review; connector MPNs remain OPEN.\nFUNCTION: explicit DC input, load output, host reference/I2C and local bench test access.\nMODIFICATION: reusable connectors; no Pi HAT,USB,MCU,CAN or V1B-specific connector.\nRATIONALE: standalone operation and controlled measurement boundaries; mating/keying review required.\nR2 ONLY: output path is OPEN at sheet03. Do not bridge it to power an SBC.\nFlags declare external inputs and passive-fed power for ERC only; they are not physical supplies.\nHost off: 3V3_HOST=0, host pullups also0; TCA9517 separates local domain. Keep common ground connected."
+		(exclude_from_sim no)
+		(at 15.24 236.22 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left top)
+		)
+		(uuid "748f971c-bb97-53ab-bb79-162d476bc295")
+	)
+	(text "05 IO TEST"
+		(exclude_from_sim no)
+		(at 15.24 15.24 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+			(justify left top)
+		)
+		(uuid "deef8be2-f16e-5814-8264-8ca27237594c")
+	)
+	(wire
+		(pts
+			(xy 106.68 83.82) (xy 111.76 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04351fb2-f952-52d0-99cc-1bfc68cac9b9")
+	)
+	(wire
+		(pts
+			(xy 35.56 27.94) (xy 27.94 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "048f8fa8-6c65-5ed9-a7a9-484ebfed28df")
+	)
+	(wire
+		(pts
+			(xy 53.34 157.48) (xy 58.42 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ced5f2c-c37f-5471-ba44-2387997aff33")
+	)
+	(wire
+		(pts
+			(xy 281.94 132.08) (xy 287.02 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23ebeb05-c3ab-59be-ba78-2734825bd2be")
+	)
+	(wire
+		(pts
+			(xy 205.74 132.08) (xy 210.82 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c60c34d-2a33-5601-9610-0779c5cf2ff4")
+	)
+	(wire
+		(pts
+			(xy 228.6 35.56) (xy 220.98 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42f7f5a1-734f-5e69-866a-bf400b57e445")
+	)
+	(wire
+		(pts
+			(xy 132.08 35.56) (xy 124.46 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4394f3b7-602f-57e3-a391-060e2b2c0d91")
+	)
+	(wire
+		(pts
+			(xy 35.56 35.56) (xy 27.94 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58136e55-1eec-58d3-8f8a-24ff036e4e66")
+	)
+	(wire
+		(pts
+			(xy 360.68 86.36) (xy 365.76 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "598dc09a-82e2-5dc9-9f44-c60846dff357")
+	)
+	(wire
+		(pts
+			(xy 360.68 81.28) (xy 365.76 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62b052cf-5ccd-558d-8476-19d45016a619")
+	)
+	(wire
+		(pts
+			(xy 129.54 157.48) (xy 134.62 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "697ff8c7-fdcb-522c-8136-c61fa71c9f3b")
+	)
+	(wire
+		(pts
+			(xy 325.12 27.94) (xy 317.5 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71ac0231-3503-5ee6-9658-e1b94912be88")
+	)
+	(wire
+		(pts
+			(xy 129.54 132.08) (xy 134.62 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71ba1e0f-522a-57df-afee-487395bc3f5a")
+	)
+	(wire
+		(pts
+			(xy 358.14 132.08) (xy 363.22 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76a4a4f5-28a4-5eda-b89f-c92d4669a220")
+	)
+	(wire
+		(pts
+			(xy 53.34 132.08) (xy 58.42 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5955069-7784-53cb-b20e-f7ad0c44ef93")
+	)
+	(wire
+		(pts
+			(xy 132.08 27.94) (xy 124.46 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c08be555-ae1d-5305-99db-b9e0bcbd1c24")
+	)
+	(wire
+		(pts
+			(xy 228.6 27.94) (xy 220.98 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0964758-d921-5a00-928e-0a1b34e74cbe")
+	)
+	(wire
+		(pts
+			(xy 314.96 81.28) (xy 309.88 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd119b2a-adcf-599b-8ed5-b561c1ea7f81")
+	)
+	(wire
+		(pts
+			(xy 231.14 83.82) (xy 236.22 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfb3481c-b191-5673-864d-39badf4f99ce")
+	)
+	(wire
+		(pts
+			(xy 185.42 83.82) (xy 180.34 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb6c03a4-c212-56a8-b354-f182e8d08ed7")
+	)
+	(wire
+		(pts
+			(xy 60.96 83.82) (xy 55.88 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3447c73-7794-5138-a851-f994e5369dd6")
+	)
+	(wire
+		(pts
+			(xy 314.96 86.36) (xy 309.88 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcf0272d-be4f-5c9c-8f1a-63293db49018")
+	)
+	(label "GND"
+		(at 220.98 35.56 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "07b2b85c-1a88-5cac-b89c-17e5ef0cb6bd")
+	)
+	(label "GND"
+		(at 309.88 81.28 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "19b12195-59fe-5715-a3d7-fc4b65536719")
+	)
+	(label "SCL_HOST"
+		(at 124.46 35.56 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "25d9faa8-324d-5bb6-a4c6-a3a879854b1f")
+	)
+	(label "3V3_HOST"
+		(at 317.5 27.94 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "26adeb42-88db-51a9-868c-6b91cf9c648f")
+	)
+	(label "GND"
+		(at 287.02 132.08 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "26d8bf14-91c8-57c5-9b05-3e9193252f2d")
+	)
+	(label "SCL_HOST"
+		(at 365.76 86.36 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "28aad123-d734-5654-bb12-0adb5f4969ee")
+	)
+	(label "VIN_RAW"
+		(at 55.88 83.82 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "3369d0b8-8219-59c9-b670-2d0d464dfbc7")
+	)
+	(label "VIN_PROTECTED"
+		(at 124.46 27.94 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "4977515f-6b1d-5d56-a6ad-bdbcf7e7ba0e")
+	)
+	(label "LOAD_5V1"
+		(at 220.98 27.94 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "69441457-3ad5-5a26-adea-ad53426961e0")
+	)
+	(label "VIN_RAW"
+		(at 363.22 132.08 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "83585ee8-70dc-5422-9e5f-b8671e922a79")
+	)
+	(label "LOAD_5V1"
+		(at 210.82 132.08 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "88f789ef-fe95-51e5-b19c-2a16ac90791a")
+	)
+	(label "3V3_HOST"
+		(at 134.62 157.48 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "8bcf22d5-df90-5289-bf99-24f2e7ef47e3")
+	)
+	(label "GND"
+		(at 111.76 83.82 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "97f19e80-22ff-5343-ae3f-4762186d5eab")
+	)
+	(label "SDA_HOST"
+		(at 27.94 35.56 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "9ee5e881-3dd4-51b5-bf5b-8338bc356c29")
+	)
+	(label "SDA_HOST"
+		(at 365.76 81.28 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "b159311b-cecb-56cf-9eb9-c194cb1c066e")
+	)
+	(label "LOAD_5V1"
+		(at 180.34 83.82 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "b1712c32-3e23-501f-bf29-8f331d88346b")
+	)
+	(label "VIN_RAW"
+		(at 27.94 27.94 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "b3ff4cef-196a-5ca9-916a-715b0b16dc53")
+	)
+	(label "VIN_RAW"
+		(at 58.42 132.08 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "ccf3eb6b-51cc-5b90-b7cb-184f19a8b496")
+	)
+	(label "3V3_HOST"
+		(at 309.88 86.36 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "d1a17125-a768-5b60-9d29-7411a040506e")
+	)
+	(label "GND"
+		(at 58.42 157.48 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "e06256e2-22bd-5519-bb88-cbd421c8086b")
+	)
+	(label "GND"
+		(at 236.22 83.82 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7cf7080-c756-57a1-83a8-7e5f5cd45523")
+	)
+	(label "VIN_PROTECTED"
+		(at 134.62 132.08 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9544f6a-fc8c-59e4-a133-19db6d3f5f96")
+	)
+	(hierarchical_label "VIN_PROTECTED"
+		(shape input)
+		(at 132.08 27.94 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "0169c05b-ee00-57ad-8c1f-8efb5dbb8c03")
+	)
+	(hierarchical_label "SDA_HOST"
+		(shape bidirectional)
+		(at 35.56 35.56 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "078f3b13-9a3a-5fd6-b8c8-5972092c2a6b")
+	)
+	(hierarchical_label "VIN_RAW"
+		(shape output)
+		(at 35.56 27.94 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "2ef305e6-bd9b-54f2-b036-8ee119cec755")
+	)
+	(hierarchical_label "GND"
+		(shape passive)
+		(at 228.6 35.56 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "50b85dab-476c-5987-906e-7c5a28c724fb")
+	)
+	(hierarchical_label "SCL_HOST"
+		(shape bidirectional)
+		(at 132.08 35.56 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "5bfe5dc0-03b9-55d9-881b-748877abe1d1")
+	)
+	(hierarchical_label "LOAD_5V1"
+		(shape bidirectional)
+		(at 228.6 27.94 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "60936561-a0ad-55f7-9616-3387507047e5")
+	)
+	(hierarchical_label "3V3_HOST"
+		(shape output)
+		(at 325.12 27.94 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ca8fcd73-03bf-5c41-a703-18e941f7ad2f")
+	)
+	(symbol
+		(lib_id "V1A:J503_")
+		(at 337.82 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "18cc0105-8bd3-5c2c-bc53-428bfbb83a1a")
+		(property "Reference" "J503"
+			(at 337.82 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "HOST I2C - MPN OPEN"
+			(at 337.82 72.39 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 337.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 337.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 337.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 337.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Frozen telemetry requirement; power-domain interface review"
+			(at 337.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "3.3 V host reference input;not a host power supply;100 kHz;pinout review draft"
+			(at 337.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e2fd1c8-daaf-59fe-9576-a38983198a95")
+		)
+		(pin "2"
+			(uuid "eb26bd91-0cb4-56dd-b753-9693db22ceaa")
+		)
+		(pin "3"
+			(uuid "ea846e72-9269-56fc-b3bf-0ec288667162")
+		)
+		(pin "4"
+			(uuid "4ccd1688-a447-5815-bfb8-1797941b027a")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "J503")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:#FLG502_")
+		(at 53.34 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "1cb705b9-904b-5ffc-a018-ab8649cf6d23")
+		(property "Reference" "#FLG502"
+			(at 53.34 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 53.34 149.86 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 53.34 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "ERC source declaration at externally supplied/passive-fed boundary"
+			(at 53.34 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Not a physical component"
+			(at 53.34 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec6c7349-6404-5ce9-beec-1522288587fd")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "#FLG502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:TP503_")
+		(at 205.74 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4b73d537-249e-5b60-b4f7-e0560bbd587e")
+		(property "Reference" "TP503"
+			(at 205.74 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LOAD_5V1"
+			(at 205.74 124.46 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 205.74 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Project test access; local domain only"
+			(at 205.74 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Test only; not a load-current connector"
+			(at 205.74 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5735a411-2c9f-5d38-958f-726f2a068583")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "TP503")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:J502_")
+		(at 208.28 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5f688bc6-1287-5946-be33-f20f0749abf1")
+		(property "Reference" "J502"
+			(at 208.28 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LOAD OUTPUT - MPN OPEN"
+			(at 208.28 72.39 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 208.28 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 208.28 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Frozen V1A functional load boundary"
+			(at 208.28 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "5.1 V nominal,5 A;exact connector,mate/wire and fault voltage OPEN"
+			(at 208.28 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89d175c9-dd0b-5660-b720-d2da92e6f906")
+		)
+		(pin "2"
+			(uuid "ab5d0264-09d3-5e11-85ad-ccd9a785dec5")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "J502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:#FLG501_")
+		(at 358.14 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "ba0cb918-245a-5178-b217-f0c63099ff9d")
+		(property "Reference" "#FLG501"
+			(at 358.14 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 358.14 124.46 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 358.14 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 358.14 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 358.14 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 358.14 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "ERC source declaration at externally supplied/passive-fed boundary"
+			(at 358.14 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Not a physical component"
+			(at 358.14 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6531023-6318-5175-aa32-ce33282dd6e6")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "#FLG501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:TP501_")
+		(at 53.34 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cd599412-28b0-584d-97c8-e3acad5493d1")
+		(property "Reference" "TP501"
+			(at 53.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VIN_RAW"
+			(at 53.34 124.46 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 53.34 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Project test access; local domain only"
+			(at 53.34 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Test only; not a load-current connector"
+			(at 53.34 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9fba2b07-7786-51cd-9432-b906bd903b58")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "TP501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:TP504_")
+		(at 281.94 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "de5c825b-43e6-5903-ab9a-45e6a3aabf13")
+		(property "Reference" "TP504"
+			(at 281.94 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 281.94 124.46 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 281.94 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Project test access; local domain only"
+			(at 281.94 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Test only; not a load-current connector"
+			(at 281.94 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2cf89f3e-7e49-5229-a85f-4884f52361b6")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "TP504")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:TP502_")
+		(at 129.54 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "debfa10f-eaed-5ae2-9f5e-b73c544a7e35")
+		(property "Reference" "TP502"
+			(at 129.54 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VIN_PROTECTED"
+			(at 129.54 124.46 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 129.54 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Project test access; local domain only"
+			(at 129.54 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Test only; not a load-current connector"
+			(at 129.54 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a3959bd1-ce2a-5eab-a416-bc10124c2412")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "TP502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:J501_")
+		(at 83.82 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed382c47-3625-51c9-bf2a-6456edff7a59")
+		(property "Reference" "J501"
+			(at 83.82 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DC INPUT - MPN OPEN"
+			(at 83.82 72.39 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "Frozen V1A functional input boundary"
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "9-24 V normal;>=5 A candidate;keying/wire/contact/interrupt coordination OPEN"
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d7b1d0b-2c60-5770-92fc-1eb74b4cb128")
+		)
+		(pin "2"
+			(uuid "d8e7c94a-b9f6-5349-b97c-756c2299f444")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "J501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "V1A:#FLG503_")
+		(at 129.54 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "f6a3445a-b5ce-5243-b954-d815bc2635b2")
+		(property "Reference" "#FLG503"
+			(at 129.54 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 129.54 149.86 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "ERC source declaration at externally supplied/passive-fed boundary"
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "Not a physical component"
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "11d1376a-4716-5251-9e7f-5323fb948478")
+		)
+		(instances
+			(project "V1A"
+				(path "/576b2f55-cbc6-5266-8df6-9cffc8340346/8d9c57c5-d3a6-5649-afb2-3a00633471f3"
+					(reference "#FLG503")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
