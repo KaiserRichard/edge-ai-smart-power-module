@@ -38,4 +38,6 @@ Preserve `hardware/kicad/V1A_Qualified.pretty/`, `fp-lib-table`, and `sym-lib-ta
 - Capacitor land and effective-capacitance qualification.
 - Later thermal and bench validation; no physical measurement is established by repository checks.
 
+**2026-09-26 protection analysis (PROPOSAL, not approved):** [output-protection architecture analysis](../evidence/r2/protection_analysis_2026-09-26/PROTECTION_ANALYSIS.md) finds that an LM74800-only Sheet 03 lets 6.1–8.4 V reach the load in a modelled buck high-side short (blocking finding) and recommends bulk capacitance plus a fast precision detector for user approval. See the [proposed requirement envelope](../evidence/r2/protection_analysis_2026-09-26/REQUIREMENT_ENVELOPE_PROPOSED.md). Sheet 03 remains electrically open.
+
 The detailed blocker review owns closure criteria. This list preserves state; it does not resolve or rank new electrical choices. Earlier R0/R1 proposals and earlier blank-footprint statements remain dated history. Current captured choices and later dated evidence take precedence; report any unresolved contradiction instead of guessing.
