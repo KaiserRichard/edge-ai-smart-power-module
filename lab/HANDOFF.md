@@ -20,3 +20,11 @@ R2 and R3 remain BLOCKED. Sheet 03 remains open. Option I remains PROPOSED; the 
 ## User inputs still open
 
 Adapter identity / steady maximum / overvoltage range; Pi GPIO versus USB-C entry; largest realistic load step; brother’s connector review; browser-obtained Coilcraft/TDK/Nexperia sources noted in Brief02. Architecture approval waits for reviewed evidence. No new login request is needed for b/c following successful probes.
+
+## Continued conductor session and complete-schematic handoff request
+
+The user chose to continue in this session and requested a complete schematic set before handoff to their brother (D-29). No desktop-session transfer occurred. Collect source/adapter, Pi entry-point, and load/peripheral facts; retain OPEN labels until supplied. Final connector recommendations need approval before capture; a shortlisted candidate is not selected.
+
+Conductor review of commits 1a08b1a and 7e78c2a in the clean review worktree found three broken Markdown links to ignored vendor PDFs in RAW_SIDE_RATING_SCREEN.md. Unit tests (14) and capture checker passed there; repository integrity failed on those links. The worker has a bounded [review follow-up](briefs/BRIEF_02_REVIEW_FOLLOWUP_1.md) requesting portable manufacturer links and permitting primary-source research for already-listed Task 4 candidates. No checker weakening, hardware change, or component selection is authorized.
+
+The completed handoff should contain the hierarchical schematic PDF, standard KiCad project and needed project libraries, a review BOM with exact selected parts/mates, fresh Electrical Rules Check report, and a short review note listing remaining simulation/bench validation. Sheet 03 must implement an approved circuit, input protection must be coordinated, and connector decisions must be resolved. Follow the R2 acceptance criteria in GATES.md; electrical simulation and physical validation must not be inferred from rule checks. The package remains NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED until explicit fabrication approval. No calendar completion date can be established while architecture and source requirements remain open.
