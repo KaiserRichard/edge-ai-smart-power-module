@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-09-29T11:41:53.579482+00:00",
+  "status": "PASS",
+  "scope": "Repository/model checks only; no electrical qualification; R2/R3 BLOCKED",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_repository.py"
+      ],
+      "exit_code": 0,
+      "duration_s": 0.425,
+      "log": "1.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "duration_s": 1.491,
+      "log": "2.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_r2_schematic.py",
+        "--netlist",
+        "docs/evidence/r2/forensic_2026-09-14/V1A_qualified.net.xml"
+      ],
+      "exit_code": 0,
+      "duration_s": 0.113,
+      "log": "3.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/analyze_output_protection.py"
+      ],
+      "exit_code": 0,
+      "duration_s": 37.777,
+      "log": "4.log"
+    }
+  ]
+}

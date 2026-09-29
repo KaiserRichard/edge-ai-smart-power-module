@@ -1,0 +1,6 @@
+# Simulator runtime output; authored .cir / .inc / manifest inputs are retained.
+*.raw
+*.log
+*.out
+*.dat
+*.op

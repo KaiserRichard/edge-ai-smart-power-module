@@ -1,0 +1,35 @@
+V1A high-side short baseline_A_c12 -- NOT RUN; screening only
+* Authored behavioral netlist; Sheet 03 OPEN; R2/R3 BLOCKED.
+* CALCULATED parameter expressions from labelled inputs below.
+* ASSUMED numerical MAXSTEP, TSTOP and ideal event controls.
+* ASSUMED option trip, delay, bulk and ideal disconnect/crowbar.
+* Initial conditions reproduce Python, not a settled physical operating point.
+* Input labels and exact sources: manifest.json profiles and dated INPUTS.md.
+* ASSUMED sweep corner (Cin,Craw,Iload,Cload,lossy)=(1.5e-05, 0.00013, 5.0, 2e-06, False)
+* ASSUMED architecture configuration={'trip_V': 5.7936, 'action': 'disconnect', 'delay_s': 5.971e-06, 'ideal_diode': True}
+.param VSOURCE=24.72
+.param REFUSE=0.0345
+.param ILIMIT=4.793600000000001
+.param CINPUT=1.5e-05
+.param CRAW=0.00013
+.param CLOAD=2e-06
+.param VINITIAL=5.098360655737705
+.param ILOAD=5
+.param RLOSS=0
+.param LNOM=6.8e-06
+.param ISAT=14
+.param LSAT=0.7
+.param CBULK=0
+.param RBULK=0.02
+.param VTRIP=5.7936
+.param DELAY_US=5.971
+.param REVERSE_US=0.875
+.param RPATH=0.008500000000000001
+.param DISCONNECT=1
+.param RCROWBAR=0.01
+.param LCROWBAR=1e-08
+.param LOAD_FLOOR=1
+.param MAXSTEP=2e-09
+.param TSTOP=0.00012
+.include "model.inc"
+.end

@@ -1,0 +1,12 @@
+{
+  "classification": "KNOWN local tool availability observation; not electrical evidence",
+  "python": "3.11.0rc2 (v3.11.0rc2:ed7c3ff156, Sep 11 2022, 16:22:23) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "ngspice_executable": null,
+  "ngspice_status": "NOT RUN",
+  "pspice_status": "NOT RUN",
+  "pspice_basis": "Continuation states PSpice for TI unavailable on this Mac; no provided runnable vendor project",
+  "other_application_observation": "/Applications/LTspice.app exists; not substituted for requested ngspice or PSpice and not run",
+  "installation": "None; prohibited",
+  "network": "No new network requests during continuation 3"
+}

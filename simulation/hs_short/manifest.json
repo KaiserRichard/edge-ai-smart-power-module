@@ -1,0 +1,6200 @@
+{
+  "classification": "KNOWN: generated run matrix; CALCULATED Python peaks; SPICE NOT RUN",
+  "status": "NOT RUN",
+  "ngspice_version": null,
+  "acceptance": "ASSUMED: abs(SPICE - Python) / abs(Python) <= 0.03 at every corner",
+  "acceptance_fraction": 0.03,
+  "reason": "ngspice unavailable; installation prohibited by continuation overrides",
+  "core_sha256": "5a1fb6ddfe5fa96c15cee243a598eb952020ef3929c5874c6695eaf6a7684a8c",
+  "generator_sha256": "2c0892fc85c1a17699de6760c4ca4b1d79c472646254c6b8aa2ad93f081e8caa",
+  "python_script_sha256": "b517e812b86f463bfdc0e981b5e41b718351f70dcdeacda65735e7bb386fb3b6",
+  "python_result_sha256": {
+    "baseline": "693d130d9d0885651a71bef024f636ed20d9a2b919c5aaef71dc7e9ec62faeb7",
+    "reviewed": "6cb1841acee6c518a702295a8fbf11d4f1830acefe083ce638e8be3c78a8d461"
+  },
+  "profiles": {
+    "baseline": {
+      "vin_source_max_V": {
+        "value": 24.72,
+        "label": "ASSUMED",
+        "source": "GST60A24 24 V x 1.03 tolerance, Mean Well GST60A spec"
+      },
+      "efuse_iol_nom_A": {
+        "value": 4.48,
+        "label": "CALCULATED",
+        "source": "TPS26630 I(OL)=18/R_ILIM(kOhm), R105 4.02 kOhm; SLVSE94G"
+      },
+      "efuse_iol_tol": {
+        "value": 0.07,
+        "label": "KNOWN",
+        "source": "SLVSE94G: +/-7 % current-limit accuracy"
+      },
+      "efuse_ron_ohm": {
+        "value": 0.0345,
+        "label": "KNOWN",
+        "source": "SLVSE94G RON max 34.5 mOhm at 25 C"
+      },
+      "buck_hs_rdson_ohm": {
+        "value": 0.041,
+        "label": "ASSUMED",
+        "source": "LM61460 SNVSBD5D intact HS RDS(on) typ applied to failure; failed-short resistance UNKNOWN"
+      },
+      "L_nom_H": {
+        "value": 6.8e-06,
+        "label": "KNOWN",
+        "source": "XAL8080-682 nominal, +/-20 %"
+      },
+      "L_dcr_max_ohm": {
+        "value": 0.0146,
+        "label": "CALCULATED",
+        "source": "back-calculated from calculate_r2.py max-DCR copper loss"
+      },
+      "L_isat_A": {
+        "value": 14.0,
+        "label": "ASSUMED",
+        "source": "saturation knee not verified (Coilcraft drawing download failed)"
+      },
+      "L_sat_ratio": {
+        "value": 0.7,
+        "label": "ASSUMED",
+        "source": "inductance above knee, soft-saturation screen"
+      },
+      "vraw_static_V": {
+        "value": [
+          5.038271401729418,
+          5.098360655737705,
+          5.158632237795172
+        ],
+        "label": "CALCULATED",
+        "source": "calculate_r2.py"
+      },
+      "cin_eff_F": {
+        "value": [
+          1.5e-05,
+          4e-05
+        ],
+        "label": "ASSUMED",
+        "source": "2x22 uF X7R at 24 V; DC-bias minimum OPEN (CAPACITOR_QUALIFICATION.md)"
+      },
+      "craw_eff_F": {
+        "value": [
+          6e-05,
+          0.00013
+        ],
+        "label": "ASSUMED",
+        "source": "6x22 uF X7R at 5.1 V; nominal 132 uF, bias/aging minimum OPEN"
+      },
+      "fet_rds_hot_ohm": {
+        "value": 0.00325,
+        "label": "ASSUMED",
+        "source": "Historical PSMN1R8-40YLC hot-resistance claim; fresh primary source unavailable"
+      },
+      "shunt_ohm": {
+        "value": 0.002,
+        "label": "KNOWN",
+        "source": "WSL27262L000FEA"
+      },
+      "ideal_diode_off_s": {
+        "value": 8.75e-07,
+        "label": "ASSUMED",
+        "source": "Known LM74800 tDGATE_OFF(dly) max, SNOSD95C, applied to current reversal without actual gate model"
+      },
+      "lm74800_ov_deglitch_s": {
+        "value": 5.4e-06,
+        "label": "UNKNOWN",
+        "source": "Historical AMBIGUOUS classification: SNOSD95C row 3.98/5.4 us; max column then unconfirmed"
+      },
+      "lm74800_en_off_max_s": {
+        "value": 6e-06,
+        "label": "KNOWN",
+        "source": "tEN_OFF(deg)_HGATE 3/4.6/6 us"
+      },
+      "hgate_discharge_s": {
+        "value": 5.71e-07,
+        "label": "CALCULATED",
+        "source": "Qg 96 nC / 168 mA sink, PSMN1R8-40YLC + SNOSD95C"
+      },
+      "lm74800_trip_worst_high_V": {
+        "value": 5.7936,
+        "label": "CALCULATED",
+        "source": "348k/97.6k 0.1 % divider, VOVR 1.267 V max"
+      },
+      "precision_trip_worst_high_V": {
+        "value": 5.5,
+        "label": "ASSUMED",
+        "source": "target for a +/-1.1 % precision detector; parts OPEN"
+      },
+      "precision_trip_with_bulk_worst_high_V": {
+        "value": 5.46,
+        "label": "ASSUMED",
+        "source": "5.40 V nominal +/-1.1 %, usable only with bulk"
+      },
+      "precision_detect_s": {
+        "value": 3e-07,
+        "label": "ASSUMED",
+        "source": "fast comparator + driver; parts OPEN"
+      },
+      "crowbar_ohm": {
+        "value": 0.01,
+        "label": "ASSUMED",
+        "source": "crowbar switch + copper"
+      },
+      "crowbar_loop_H": {
+        "value": 1e-08,
+        "label": "ASSUMED",
+        "source": "crowbar loop inductance incl. MLCC ESL; layout OPEN"
+      },
+      "fast_gate_off_s": {
+        "value": 1e-07,
+        "label": "ASSUMED",
+        "source": "discrete gate pull-down of Q302; circuit OPEN"
+      },
+      "bulk_esr_ohm": {
+        "value": 0.02,
+        "label": "ASSUMED",
+        "source": "hybrid-polymer class bank ESR"
+      },
+      "load_current_corners_A": {
+        "value": [
+          0.3,
+          5.0
+        ],
+        "label": "ASSUMED",
+        "source": "2026-09-26 PROTECTION_ANALYSIS.md section 2; actual load envelope OPEN"
+      },
+      "load_capacitance_corners_F": {
+        "value": [
+          2e-06,
+          0.00022
+        ],
+        "label": "ASSUMED",
+        "source": "2026-09-26 REQUIREMENT_ENVELOPE_PROPOSED.md L6; actual Pi network UNKNOWN"
+      },
+      "bulk_capacitance_corners_F": {
+        "value": [
+          0.0,
+          0.00047,
+          0.001
+        ],
+        "label": "ASSUMED",
+        "source": "Historical comparison values; effective bank minima not qualified; OPTION_I_CANDIDATES.md"
+      },
+      "load_rolloff_voltage_V": {
+        "value": 1.0,
+        "label": "ASSUMED",
+        "source": "Numerical constant-current load becomes conductance below this voltage; not a Pi load model"
+      },
+      "load_screen_levels_V": {
+        "value": [
+          5.5,
+          6.0
+        ],
+        "label": "ASSUMED",
+        "source": "Historical reporting thresholds retained for comparison; current user limit is separately labelled load_fault_limit_V"
+      },
+      "load_fault_limit_V": {
+        "value": 5.5,
+        "label": "KNOWN",
+        "source": "User REQUIREMENT in BRIEF_02_AMENDMENT_1.md (2026-09-29); replaces 6 V screen and requires explicit margin"
+      },
+      "integration_step_s": {
+        "value": 2e-09,
+        "label": "ASSUMED",
+        "source": "Historical Euler integration step; numerical setting, not device timing"
+      },
+      "fault_duration_s": {
+        "value": 0.00012,
+        "label": "ASSUMED",
+        "source": "Historical fault observation interval; cannot establish indefinite fault hold"
+      },
+      "release_inductance_scales": {
+        "value": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "label": "ASSUMED",
+        "source": "Inherited +/-20% screen; Coilcraft primary download blocked"
+      },
+      "release_peak_currents_A": {
+        "value": [
+          5.0,
+          6.139
+        ],
+        "label": "ASSUMED",
+        "source": "Historical release envelope; 6.139 A inherited ripple estimate, not measured peak"
+      },
+      "startup_soft_start_s": {
+        "value": [
+          0.0035,
+          0.007
+        ],
+        "label": "ASSUMED",
+        "source": "Uses LM61460 tSS limits as a linear full-output ramp; actual endpoint is 90% reference"
+      },
+      "startup_input_V": {
+        "value": 9.0,
+        "label": "ASSUMED",
+        "source": "Proposed minimum operating corner; REQUIREMENT_ENVELOPE_PROPOSED.md S1b"
+      },
+      "startup_load_A": {
+        "value": 5.0,
+        "label": "ASSUMED",
+        "source": "Proposed continuous load; REQUIREMENT_ENVELOPE_PROPOSED.md L2"
+      },
+      "startup_efficiency": {
+        "value": 0.88,
+        "label": "ASSUMED",
+        "source": "Historical efficiency estimate at startup; no converter control/efficiency model"
+      },
+      "startup_current_limit_fraction": {
+        "value": 0.9,
+        "label": "ASSUMED",
+        "source": "Brief criterion 5 proposed input-current margin"
+      },
+      "q302_gate_charge_C": {
+        "value": 9.6e-08,
+        "label": "ASSUMED",
+        "source": "Nexperia primary download HTTP 403; inherited charge, maximum and test conditions UNKNOWN"
+      },
+      "hgate_sink_min_A": {
+        "value": 0.168,
+        "label": "KNOWN",
+        "source": "TI LM7480-Q1 SNOSD95C p6 minimum sink under specified conditions; not a constant waveform"
+      },
+      "hgate_source_max_A": {
+        "value": 7.5e-05,
+        "label": "KNOWN",
+        "source": "TI LM7480-Q1 SNOSD95C p6 maximum; Task 1 visual primary-source review"
+      },
+      "precision_isolation_sensitivity_s": {
+        "value": 2e-06,
+        "label": "ASSUMED",
+        "source": "Brief criterion 3 proposed worst-case allocation, not demonstrated circuit delay"
+      },
+      "efuse_iol_max_A": {
+        "value": 4.7936000000000005,
+        "label": "CALCULATED",
+        "source": "Historical equation-based rounded 4.48 A times 1.07; no resistor scaling"
+      },
+      "efuse_iol_min_A": {
+        "value": 4.1664,
+        "label": "CALCULATED",
+        "source": "Historical equation-based rounded 4.48 A times 0.93; no resistor scaling"
+      }
+    },
+    "reviewed": {
+      "vin_source_max_V": {
+        "value": 24.72,
+        "label": "ASSUMED",
+        "source": "GST60A24 24 V x 1.03 tolerance, Mean Well GST60A spec"
+      },
+      "efuse_iol_nom_A": {
+        "value": 4.5,
+        "label": "KNOWN",
+        "source": "TI TPS2663 SLVSE94G p7 typical at RILIM=4.02 kOhm; direct table basis"
+      },
+      "efuse_iol_tol": {
+        "value": 0.07,
+        "label": "KNOWN",
+        "source": "TI TPS2663 SLVSE94G p7: 4.185/4.5/4.815 A MIN/TYP/MAX; excludes external resistor tolerance"
+      },
+      "efuse_ron_ohm": {
+        "value": 0.053,
+        "label": "KNOWN",
+        "source": "TI TPS2663 SLVSE94G p7 maximum -40 to +125 C at 0.6 to 6 A; 34.5 mOhm is 25 C only"
+      },
+      "buck_hs_rdson_ohm": {
+        "value": 0.041,
+        "label": "ASSUMED",
+        "source": "Intact LM61460 SNVSBD5D p6 typical is 41 mOhm; failed-short resistance UNKNOWN; retained comparison value"
+      },
+      "L_nom_H": {
+        "value": 6.8e-06,
+        "label": "KNOWN",
+        "source": "Inherited XAL8080-682 nominal from captured BOM; no fresh Coilcraft tolerance/saturation verification"
+      },
+      "L_dcr_max_ohm": {
+        "value": 0.0146,
+        "label": "CALCULATED",
+        "source": "back-calculated from calculate_r2.py max-DCR copper loss"
+      },
+      "L_isat_A": {
+        "value": 14.0,
+        "label": "ASSUMED",
+        "source": "saturation knee not verified (Coilcraft drawing download failed)"
+      },
+      "L_sat_ratio": {
+        "value": 0.7,
+        "label": "ASSUMED",
+        "source": "inductance above knee, soft-saturation screen"
+      },
+      "vraw_static_V": {
+        "value": [
+          5.038271401729418,
+          5.098360655737705,
+          5.158632237795172
+        ],
+        "label": "CALCULATED",
+        "source": "calculate_r2.py"
+      },
+      "cin_eff_F": {
+        "value": [
+          1.5e-05,
+          4e-05
+        ],
+        "label": "ASSUMED",
+        "source": "2x22 uF X7R at 24 V; DC-bias minimum OPEN (CAPACITOR_QUALIFICATION.md)"
+      },
+      "craw_eff_F": {
+        "value": [
+          6e-05,
+          0.00013
+        ],
+        "label": "ASSUMED",
+        "source": "6x22 uF X7R at 5.1 V; nominal 132 uF, bias/aging minimum OPEN"
+      },
+      "fet_rds_hot_ohm": {
+        "value": 0.00325,
+        "label": "ASSUMED",
+        "source": "Inherited PSMN1R8-40YLC hot resistance; Nexperia primary download HTTP 403, condition/maxima unverified"
+      },
+      "shunt_ohm": {
+        "value": 0.002,
+        "label": "KNOWN",
+        "source": "WSL27262L000FEA"
+      },
+      "ideal_diode_off_s": {
+        "value": 8.75e-07,
+        "label": "ASSUMED",
+        "source": "Known SNOSD95C p6 tDGATE_OFF max uses 10 nF and +30 to -100 mV step; applying to path current is ASSUMED"
+      },
+      "lm74800_ov_deglitch_s": {
+        "value": 5.4e-06,
+        "label": "KNOWN",
+        "source": "TI SNOSD95C p7 visually confirmed MAX; ends at HGATE falling, not full isolation"
+      },
+      "lm74800_en_off_max_s": {
+        "value": 6e-06,
+        "label": "KNOWN",
+        "source": "TI SNOSD95C p7 MAX HGATE deglitch; ends at HGATE falling, not full isolation"
+      },
+      "hgate_discharge_s": {
+        "value": 5.714285714285714e-07,
+        "label": "CALCULATED",
+        "source": "ASSUMED Qg=96 nC / KNOWN sink minimum 168 mA; charge quotient only, not worst-case isolation"
+      },
+      "lm74800_trip_worst_high_V": {
+        "value": 5.7936,
+        "label": "CALCULATED",
+        "source": "348k/97.6k 0.1 % divider, VOVR 1.267 V max"
+      },
+      "precision_trip_worst_high_V": {
+        "value": 5.5,
+        "label": "ASSUMED",
+        "source": "target for a +/-1.1 % precision detector; parts OPEN"
+      },
+      "precision_trip_with_bulk_worst_high_V": {
+        "value": 5.46,
+        "label": "ASSUMED",
+        "source": "5.40 V nominal +/-1.1 %, usable only with bulk"
+      },
+      "precision_detect_s": {
+        "value": 3e-07,
+        "label": "ASSUMED",
+        "source": "fast comparator + driver; parts OPEN"
+      },
+      "crowbar_ohm": {
+        "value": 0.01,
+        "label": "ASSUMED",
+        "source": "crowbar switch + copper"
+      },
+      "crowbar_loop_H": {
+        "value": 1e-08,
+        "label": "ASSUMED",
+        "source": "crowbar loop inductance incl. MLCC ESL; layout OPEN"
+      },
+      "fast_gate_off_s": {
+        "value": 1e-07,
+        "label": "ASSUMED",
+        "source": "discrete gate pull-down of Q302; circuit OPEN"
+      },
+      "bulk_esr_ohm": {
+        "value": 0.02,
+        "label": "ASSUMED",
+        "source": "hybrid-polymer class bank ESR"
+      },
+      "load_current_corners_A": {
+        "value": [
+          0.3,
+          5.0
+        ],
+        "label": "ASSUMED",
+        "source": "2026-09-26 PROTECTION_ANALYSIS.md section 2; actual load envelope OPEN"
+      },
+      "load_capacitance_corners_F": {
+        "value": [
+          2e-06,
+          0.00022
+        ],
+        "label": "ASSUMED",
+        "source": "2026-09-26 REQUIREMENT_ENVELOPE_PROPOSED.md L6; actual Pi network UNKNOWN"
+      },
+      "bulk_capacitance_corners_F": {
+        "value": [
+          0.0,
+          0.00047,
+          0.001
+        ],
+        "label": "ASSUMED",
+        "source": "Historical comparison values; effective bank minima not qualified; OPTION_I_CANDIDATES.md"
+      },
+      "load_rolloff_voltage_V": {
+        "value": 1.0,
+        "label": "ASSUMED",
+        "source": "Numerical constant-current load becomes conductance below this voltage; not a Pi load model"
+      },
+      "load_screen_levels_V": {
+        "value": [
+          5.5,
+          6.0
+        ],
+        "label": "ASSUMED",
+        "source": "Historical reporting thresholds retained for comparison; current user limit is separately labelled load_fault_limit_V"
+      },
+      "load_fault_limit_V": {
+        "value": 5.5,
+        "label": "KNOWN",
+        "source": "User REQUIREMENT in BRIEF_02_AMENDMENT_1.md (2026-09-29); replaces 6 V screen and requires explicit margin"
+      },
+      "integration_step_s": {
+        "value": 2e-09,
+        "label": "ASSUMED",
+        "source": "Historical Euler integration step; numerical setting, not device timing"
+      },
+      "fault_duration_s": {
+        "value": 0.00012,
+        "label": "ASSUMED",
+        "source": "Historical fault observation interval; cannot establish indefinite fault hold"
+      },
+      "release_inductance_scales": {
+        "value": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "label": "ASSUMED",
+        "source": "Inherited +/-20% screen; Coilcraft primary download blocked"
+      },
+      "release_peak_currents_A": {
+        "value": [
+          5.0,
+          6.139
+        ],
+        "label": "ASSUMED",
+        "source": "Historical release envelope; 6.139 A inherited ripple estimate, not measured peak"
+      },
+      "startup_soft_start_s": {
+        "value": [
+          0.0035,
+          0.007
+        ],
+        "label": "ASSUMED",
+        "source": "Uses LM61460 tSS limits as a linear full-output ramp; actual endpoint is 90% reference"
+      },
+      "startup_input_V": {
+        "value": 9.0,
+        "label": "ASSUMED",
+        "source": "Proposed minimum operating corner; REQUIREMENT_ENVELOPE_PROPOSED.md S1b"
+      },
+      "startup_load_A": {
+        "value": 5.0,
+        "label": "ASSUMED",
+        "source": "Proposed continuous load; REQUIREMENT_ENVELOPE_PROPOSED.md L2"
+      },
+      "startup_efficiency": {
+        "value": 0.88,
+        "label": "ASSUMED",
+        "source": "Historical efficiency estimate at startup; no converter control/efficiency model"
+      },
+      "startup_current_limit_fraction": {
+        "value": 0.9,
+        "label": "ASSUMED",
+        "source": "Brief criterion 5 proposed input-current margin"
+      },
+      "q302_gate_charge_C": {
+        "value": 9.6e-08,
+        "label": "ASSUMED",
+        "source": "Nexperia primary download HTTP 403; inherited charge, maximum and test conditions UNKNOWN"
+      },
+      "hgate_sink_min_A": {
+        "value": 0.168,
+        "label": "KNOWN",
+        "source": "TI LM7480-Q1 SNOSD95C p6 minimum sink under specified conditions; not a constant waveform"
+      },
+      "hgate_source_max_A": {
+        "value": 7.5e-05,
+        "label": "KNOWN",
+        "source": "TI LM7480-Q1 SNOSD95C p6 maximum; Task 1 visual primary-source review"
+      },
+      "precision_isolation_sensitivity_s": {
+        "value": 2e-06,
+        "label": "ASSUMED",
+        "source": "Brief criterion 3 proposed worst-case allocation, not demonstrated circuit delay"
+      },
+      "efuse_ilim_resistor_tol": {
+        "value": 0.001,
+        "label": "KNOWN",
+        "source": "Captured R105 specified +/-0.1%; TPS2663_SOURCE_REVIEW.md tolerance screen"
+      },
+      "efuse_iol_max_A": {
+        "value": 4.81981981981982,
+        "label": "CALCULATED",
+        "source": "SLVSE94G p7 4.815 A / (1 - 0.001), conditional inverse-resistance scaling; not a new guaranteed row"
+      },
+      "efuse_iol_min_A": {
+        "value": 4.180819180819181,
+        "label": "CALCULATED",
+        "source": "SLVSE94G p7 4.185 A / (1 + 0.001), conditional inverse-resistance scaling; not a new guaranteed row"
+      }
+    }
+  },
+  "maxstep_s": {
+    "value": 2e-09,
+    "label": "ASSUMED"
+  },
+  "cases": [
+    {
+      "id": "baseline_A_c00",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c00.cir",
+      "sha256": "8320977ac292d87e8e992c397878ff2e0cca833e4b74e72289bff811e54fdd3e",
+      "python_peak_load_V": {
+        "value": 8.197506014960664,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c01",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c01.cir",
+      "sha256": "6c0075ca820e7eaff69a77a038780049e182d394a278c0c387b1335efc522068",
+      "python_peak_load_V": {
+        "value": 8.09961949761139,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c02",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c02.cir",
+      "sha256": "a845a26f30d2e65a2721a1240a07a6d3c10e6a98b30ccc46b87ca9c5e56f04a4",
+      "python_peak_load_V": {
+        "value": 6.332135438138899,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c03",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c03.cir",
+      "sha256": "9de92dafdb68e5ab2210c594d7fff4949837a870f43ef278d907984daaa83c4e",
+      "python_peak_load_V": {
+        "value": 6.296773835529717,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c04",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c04.cir",
+      "sha256": "2a3aab297ae39d7de1f375fa4295025d0499ed72288e2de8407b03804f2eb780",
+      "python_peak_load_V": {
+        "value": 8.115693006101957,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c05",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c05.cir",
+      "sha256": "70cb9dc6465d34aba952fa6f1f11eb9259e8d6612239774ccdc99672b3bb4688",
+      "python_peak_load_V": {
+        "value": 7.991071724250049,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c06",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c06.cir",
+      "sha256": "d2032733da5808a806f6b2fb467f421222b4e72d9a7fc635ad20c741e38cb761",
+      "python_peak_load_V": {
+        "value": 6.235503197710731,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c07",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c07.cir",
+      "sha256": "9d042839ed204d51e0147c2a74d78a9ec48c8d5e2ceddb1b9b14a758f44e5b4c",
+      "python_peak_load_V": {
+        "value": 6.193946916917592,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c08",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c08.cir",
+      "sha256": "78d933c65056d081114c1ce1e76f9fe04eff1dfe6d4526538d431e78fa1bba88",
+      "python_peak_load_V": {
+        "value": 7.205225651752064,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c09",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c09.cir",
+      "sha256": "88eb0fbe4136f3d619ef58ee0ead6442aac854bfe0d47a514c1fc5754fb905c6",
+      "python_peak_load_V": {
+        "value": 7.135090437286974,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c10",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c10.cir",
+      "sha256": "7f11957526aea0e6cd1bce92dc211adb2ef7dd9a40a4ed051b847da22b98df46",
+      "python_peak_load_V": {
+        "value": 6.232480450196499,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c11",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c11.cir",
+      "sha256": "edd7e971e0890a668818891be6e8f80438ce64eaae4201e965270c0b157b6009",
+      "python_peak_load_V": {
+        "value": 6.199384305420682,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c12",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c12.cir",
+      "sha256": "3436a0586cf0585f6e106193396432c6f15e516d7df7073da7e9a3406b9d0436",
+      "python_peak_load_V": {
+        "value": 7.08218343282273,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c13",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c13.cir",
+      "sha256": "0eb55a99de004b2f04814740a3e4aee00e15f3a6cf1352023ae870cec1cba1c2",
+      "python_peak_load_V": {
+        "value": 6.995966461944684,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c14",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c14.cir",
+      "sha256": "e1080100d34839e37b06939be69bb81e652376381a0ab19a207fa51253c5d73b",
+      "python_peak_load_V": {
+        "value": 6.13658730554874,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c15",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c15.cir",
+      "sha256": "ce0c4f80ab2c4e6a2e0ba50d6194dc5ded72e134800e3edf2cc9fd4b6682ce70",
+      "python_peak_load_V": {
+        "value": 6.097484216184719,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c16",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c16.cir",
+      "sha256": "797160ef92d741bc2dc5a5370d44812a77803ac79c07d8f1adc4dd9eb4676b47",
+      "python_peak_load_V": {
+        "value": 8.353420462178091,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c17",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c17.cir",
+      "sha256": "fec75c9d6566b064f553fd6947405065cfc00191069ae27d22b909ef958a9e8c",
+      "python_peak_load_V": {
+        "value": 8.247882876111104,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c18",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c18.cir",
+      "sha256": "8500451f1f41084cb71a3ce4e132f32a536627571468ae500ea5278308b67dc1",
+      "python_peak_load_V": {
+        "value": 6.438576999587167,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c19",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c19.cir",
+      "sha256": "8613ca4b2cb58b3b2bca7520ba552217905686bddce288b79557701f4daa9cf5",
+      "python_peak_load_V": {
+        "value": 6.400314027689713,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c20",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c20.cir",
+      "sha256": "66801d0fdd3a367f9032312337d1e18de7801b8d3b4d294b696db827c9030212",
+      "python_peak_load_V": {
+        "value": 8.375538098202663,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c21",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c21.cir",
+      "sha256": "a5255524a997ef762399134157a6a0dbaa507e1e33906aba06f1dfe0a9f0df77",
+      "python_peak_load_V": {
+        "value": 8.241000292152924,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c22",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c22.cir",
+      "sha256": "b8dd68776c2f8aee25a510fd2253eaed4245b5594078ddb032a99c35e62dffab",
+      "python_peak_load_V": {
+        "value": 6.375547061466834,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c23",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c23.cir",
+      "sha256": "f3cb65fe477a467c803e8fbf6c1bbc4923c57caab150791d5129596f687b4340",
+      "python_peak_load_V": {
+        "value": 6.331918439172269,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c24",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c24.cir",
+      "sha256": "7db05506c9ce8305a29ace652751afa7a03ebaf7efb729ae47a19f95e98ae1fe",
+      "python_peak_load_V": {
+        "value": 7.366591755458882,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c25",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c25.cir",
+      "sha256": "8c605ece6378c830d52ef4599cb613fc814fd3aa6bc9de15ba15cf0ccf806de7",
+      "python_peak_load_V": {
+        "value": 7.2895651371692525,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c26",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c26.cir",
+      "sha256": "cc041190b246aa332765ef17ccc74fe8f67aef6abccbd6a658a901dbbc534fc5",
+      "python_peak_load_V": {
+        "value": 6.347181931409534,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c27",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c27.cir",
+      "sha256": "f1f98c349e7c186413ee3299135925a265343295b639b50a84cc975133632223",
+      "python_peak_load_V": {
+        "value": 6.3110054642293125,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c28",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c28.cir",
+      "sha256": "56e8bf746544064483e5a5c9782f6bb305d8be89f9250bd301950174f378667e",
+      "python_peak_load_V": {
+        "value": 7.3200720720643995,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c29",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c29.cir",
+      "sha256": "36621c9d46478a79276be75f9b7790681d811fc2b3b62f011e680237a45b5975",
+      "python_peak_load_V": {
+        "value": 7.226098046662796,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c30",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_A_c30.cir",
+      "sha256": "7d9e6705f924ef8fe5027b67cd8a56852258dc6b183d8b1802bb002be9c930b4",
+      "python_peak_load_V": {
+        "value": 6.28611218271194,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_A_c31",
+      "profile": "baseline",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_A_c31.cir",
+      "sha256": "9b3b947dc2359fae225b92a164ff378f0501c1f815fe742ac969b8848237c1b4",
+      "python_peak_load_V": {
+        "value": 6.2450750261545185,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c00",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c00.cir",
+      "sha256": "e01a32ac37a256924d8e853575b8ea03843d3b61bb69a9cf8199b005d2b19ca7",
+      "python_peak_load_V": {
+        "value": 6.12454502616216,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c01",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c01.cir",
+      "sha256": "feab5737ca1f469cf2513ae8a8f042e4c5def695f1fedebc12cc53e78092fd36",
+      "python_peak_load_V": {
+        "value": 6.0672863568921604,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c02",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c02.cir",
+      "sha256": "be1b5f6902442c24e5aedec58ee191c808efcd247ed836838397f093515befc2",
+      "python_peak_load_V": {
+        "value": 5.900195929947257,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c03",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c03.cir",
+      "sha256": "dce908897782b0c16c1aedf06b96047928bb2f4e3f0b84edcb0179b0c8f31e13",
+      "python_peak_load_V": {
+        "value": 5.855897276349879,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c04",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c04.cir",
+      "sha256": "38ad5ae5c66ce4560543f68e17fcca65d41797b4766f16bd285395d59a4cc0ee",
+      "python_peak_load_V": {
+        "value": 5.975837671412562,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c05",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c05.cir",
+      "sha256": "1b86f7f19ceaf923a91faf15579f67cef3ad4e308b1c7c3e0741ae7358ee451b",
+      "python_peak_load_V": {
+        "value": 5.9009802907251,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c06",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c06.cir",
+      "sha256": "a6423e5129493178b8037a35b92fe756c3f61e4e1c90361c0632bed94118de3b",
+      "python_peak_load_V": {
+        "value": 5.755311293246156,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c07",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c07.cir",
+      "sha256": "5e666794d15b06ea1d3777c64f03635fa4489a6e126b4786a67ed57d7f29a48e",
+      "python_peak_load_V": {
+        "value": 5.694328718053275,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c08",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c08.cir",
+      "sha256": "5e51c9da4f829ee527e252d6f834bbc1349b471a30e5dd4040e1b04bdac9524f",
+      "python_peak_load_V": {
+        "value": 6.068985633777178,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c09",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c09.cir",
+      "sha256": "e971a3edff72bcdab401ec3685bd54960f48a8d178f6417696d7217f2c9f6623",
+      "python_peak_load_V": {
+        "value": 6.0120431222636554,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c10",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c10.cir",
+      "sha256": "5f205e04b86383bf1eb3d4ee7a0905fae23ff020846c4b942da1cfd4ef78277e",
+      "python_peak_load_V": {
+        "value": 5.861407909734995,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c11",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c11.cir",
+      "sha256": "b742c07c745d13429d4fc9a38c0e0d210c9c409bd274bf950cbad7b2a38f7dff",
+      "python_peak_load_V": {
+        "value": 5.808758563509047,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c12",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c12.cir",
+      "sha256": "a9001b3ddc7d71e318f7e250aa4dbe116539bd220a5f4c8b0895dfe2b688089b",
+      "python_peak_load_V": {
+        "value": 5.912921900365318,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c13",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c13.cir",
+      "sha256": "adcde0fabce6cd03153600dc33672302aa804aeadedb44b0ffbd00002e53365c",
+      "python_peak_load_V": {
+        "value": 5.837297287794814,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c14",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c14.cir",
+      "sha256": "c1b751e918a54a6d41884afc5851854a032616311e07ca2ea0d5d762f07ba185",
+      "python_peak_load_V": {
+        "value": 5.70765568127111,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c15",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c15.cir",
+      "sha256": "555fb4aeb79d0b26fefc8b252a8ad3f2fbd2aa3abf3aa94c571ed1accc37c533",
+      "python_peak_load_V": {
+        "value": 5.650874971578763,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c16",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c16.cir",
+      "sha256": "7bd4c10c9ac1ab9a3756855ee743658242de9f26298953607f73f25c79078b34",
+      "python_peak_load_V": {
+        "value": 6.339094597952395,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c17",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c17.cir",
+      "sha256": "44c3d6028995d1fe8b95276e89ed388343501dbea62a37e113bf5870f90e68a1",
+      "python_peak_load_V": {
+        "value": 6.2795984510044685,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c18",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c18.cir",
+      "sha256": "ea36423cc8aa9765510cdf38fd3e1697c8accbabe66dcee5ebf4617c03acfa00",
+      "python_peak_load_V": {
+        "value": 6.079330083632572,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c19",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c19.cir",
+      "sha256": "90ad1151d02333ee5a8126ddc32be2c49721b702e12e7ad17cbaa564dac876e4",
+      "python_peak_load_V": {
+        "value": 6.04410373539888,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c20",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c20.cir",
+      "sha256": "e8e2b33ae2077b81e312cab1cd67117f8337c8d4df37f54386ebc071b26d5619",
+      "python_peak_load_V": {
+        "value": 6.26600317006059,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c21",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c21.cir",
+      "sha256": "dd55cdf8845a1be85918c7a748545f69d41a8fad096228915215477cebf2f904",
+      "python_peak_load_V": {
+        "value": 6.1983382736809824,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c22",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c22.cir",
+      "sha256": "8f39251c39a3d8cfffb206223b38311548a94f7db939268e9843eb5bb7d7e13b",
+      "python_peak_load_V": {
+        "value": 6.0185571199214625,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c23",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c23.cir",
+      "sha256": "42fcadb4ead491d907428978a27bd40c8b891f7c157ed40c3b9da99c84ff6a27",
+      "python_peak_load_V": {
+        "value": 5.978435487232392,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c24",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c24.cir",
+      "sha256": "9c473b490808760457028e121b5c2e5443cf089dd1315efe5acdeed265b3a0e3",
+      "python_peak_load_V": {
+        "value": 6.298645761565653,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c25",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c25.cir",
+      "sha256": "4a01e0930d46c838066b2a7f61542bfcafdf90488c88fbe3df8efcc67685de11",
+      "python_peak_load_V": {
+        "value": 6.241028061577876,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c26",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c26.cir",
+      "sha256": "9aa1dd8d5c2aef14d823be7cbeccb8c2a0010e8a73327af16b4e3ff57f1923ed",
+      "python_peak_load_V": {
+        "value": 6.058853524083057,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c27",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c27.cir",
+      "sha256": "056e635d27bc58d3d96849dcbc32c4f3d9d657710fbeb7dde337b67f2fe55b7e",
+      "python_peak_load_V": {
+        "value": 6.024147566955546,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c28",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c28.cir",
+      "sha256": "810c7cd8185dd19b4b529f5e39c0f8239bf3d164acec4522440af2f5ba2ae03f",
+      "python_peak_load_V": {
+        "value": 6.2263644303185615,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c29",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c29.cir",
+      "sha256": "c5c5a79642b2510e0d94e2cbe551723a2adc88c31ee7aa53e5b130c850b1965c",
+      "python_peak_load_V": {
+        "value": 6.160664936176387,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c30",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_B2_c30.cir",
+      "sha256": "2dfe5a2816198ebd4806c86e2214e09573ad39f5a024324918e0a0a743dedb35",
+      "python_peak_load_V": {
+        "value": 5.998130116284287,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_B2_c31",
+      "profile": "baseline",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_B2_c31.cir",
+      "sha256": "0787403a9d9b1939fb392fc6c08f5aa7e255d648c1c7d7d04cf183ab53d3d898",
+      "python_peak_load_V": {
+        "value": 5.958489452302091,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c00",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c00.cir",
+      "sha256": "57a16f4f534d1df1116bc261379ddec433eb35b7ef2aa634c90dfc2516042539",
+      "python_peak_load_V": {
+        "value": 5.4928318137074825,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c01",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c01.cir",
+      "sha256": "9d8e003e64f89e96bf286f0f4b49a63202ba3e7be3e175ec6c392b4febb938ea",
+      "python_peak_load_V": {
+        "value": 5.4913733937411235,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c02",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c02.cir",
+      "sha256": "93497f71aecf1c4b1716eccd579023c157cf394bb196872e7ee02803fdfbf015",
+      "python_peak_load_V": {
+        "value": 5.377609007107992,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c03",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c03.cir",
+      "sha256": "ebe7db550e5e7b309167a6145c1bbb81f366a01e4e8aa4eaaabc164d38d0f46b",
+      "python_peak_load_V": {
+        "value": 5.380433041538664,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c04",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c04.cir",
+      "sha256": "36781be287908b582ef6bcd9404b3e569a3c892e3464096542d368f63f528041",
+      "python_peak_load_V": {
+        "value": 5.452221871791893,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c05",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c05.cir",
+      "sha256": "48928475e7a6089d7b02a136f00dd5d18f0d318cbc09399986e1d4f186edb2e4",
+      "python_peak_load_V": {
+        "value": 5.450200417448938,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c06",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c06.cir",
+      "sha256": "59a5ad5fb98ef2c67b56a842eaae182ccee75d1fe17e209409567a55d7e91f87",
+      "python_peak_load_V": {
+        "value": 5.34217174726279,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c07",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c07.cir",
+      "sha256": "d7582eccc650df67f18fbd157cd7aa76474cf24e43483362ccbc403dd7d9a92f",
+      "python_peak_load_V": {
+        "value": 5.345790598629972,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c08",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c08.cir",
+      "sha256": "c45b32cd10c84b53e3bd4fc03460c34ac3e0be7e71568ca199980e8d519d4b35",
+      "python_peak_load_V": {
+        "value": 5.488609003206463,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c09",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c09.cir",
+      "sha256": "99314d1f8935da2cc17411f516ba7f092036dcb1f552f4b808c979384c0ab63f",
+      "python_peak_load_V": {
+        "value": 5.487301804563439,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c10",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c10.cir",
+      "sha256": "856a00ab03fe44c862dcc4ad7a7f85d77512d7060d4304e25900e475b7322e83",
+      "python_peak_load_V": {
+        "value": 5.382620685089745,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c11",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c11.cir",
+      "sha256": "218dbb4663fc0eb4ed01705fe350d1950748c5bd4a3f346a23356679a332231c",
+      "python_peak_load_V": {
+        "value": 5.385533568369001,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c12",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c12.cir",
+      "sha256": "3652613e1762e3ac3f86ed078adaf879e969d00a63c4690fbf345db2bb228dd3",
+      "python_peak_load_V": {
+        "value": 5.447591905196075,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c13",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c13.cir",
+      "sha256": "958173cae56a3378774d121b61f341d10b53982eacea2e0a2fb25e1b9b51bedd",
+      "python_peak_load_V": {
+        "value": 5.445724972409471,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c14",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c14.cir",
+      "sha256": "b893d5c368b906ee2af078fd6f5adef286347418fd27c50b5bdf50ce910f958e",
+      "python_peak_load_V": {
+        "value": 5.347253211831078,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c15",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c15.cir",
+      "sha256": "ee1e5b53e2d8ea373a7f8d3455442f395b178f808a7fdec460fbdab38de882a5",
+      "python_peak_load_V": {
+        "value": 5.351117183935374,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c16",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c16.cir",
+      "sha256": "14776bbd25dd5531eb3330cdbe33ca1b2da77efdc77eb28eb4f3e8b7d846388a",
+      "python_peak_load_V": {
+        "value": 5.494243077746546,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c17",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c17.cir",
+      "sha256": "b942f24cc04eff5969027457e804e5e887fefbc608ffe4d406f20a9b3f9d1af9",
+      "python_peak_load_V": {
+        "value": 5.4928588069736755,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c18",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c18.cir",
+      "sha256": "ae5e9f61ea9e1e7daa56b269c51870ff9331bd2013d5746682e2f0fd82988fe1",
+      "python_peak_load_V": {
+        "value": 5.373643656225498,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c19",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c19.cir",
+      "sha256": "010d7305bcfb9bf2c690c8709ba100ea2ebc45ecf1f2ed43147abf7b0efd501c",
+      "python_peak_load_V": {
+        "value": 5.37621978522333,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c20",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c20.cir",
+      "sha256": "aacb440188f002d15c8c4cf33a5eee9637ddf5f0eb1622c045ac477283c3deca",
+      "python_peak_load_V": {
+        "value": 5.4551069664478895,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c21",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c21.cir",
+      "sha256": "761a1c327d5a87086fd536c645eac7220fe8efb11d2aa85991b92f125dcf2848",
+      "python_peak_load_V": {
+        "value": 5.453141402663398,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c22",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c22.cir",
+      "sha256": "347c7f819a2dbd86ced4b36bfe126b98171d275dbc87cd4f699b33f68496bcc2",
+      "python_peak_load_V": {
+        "value": 5.33587528997409,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c23",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c23.cir",
+      "sha256": "cff9e3bbe8bd8eec7ab1b8b77d540284cca2435aa812bc3bb686d431ded8ddf1",
+      "python_peak_load_V": {
+        "value": 5.339004975375573,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c24",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c24.cir",
+      "sha256": "176c2b1e74dcbf8d5e4a38fc189ab825e894a32a3da8911ff24b6a769b9eeed8",
+      "python_peak_load_V": {
+        "value": 5.49043154766881,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c25",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c25.cir",
+      "sha256": "911da717bc9927d1453831c7e3cd291fc6e8767dffde73faaaf0390d90a6b7eb",
+      "python_peak_load_V": {
+        "value": 5.489186959000186,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c26",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c26.cir",
+      "sha256": "a70e11a4abd77b05616de3f81623f5d4d8d9ebfa172ad5db0a1b87a407cc358b",
+      "python_peak_load_V": {
+        "value": 5.377936373981929,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c27",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c27.cir",
+      "sha256": "1e0ee7b8a4dda5a1e0ba7f6f6ea344b5ecd5594a67bd20919e4f44fe9c188490",
+      "python_peak_load_V": {
+        "value": 5.380574218669133,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c28",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c28.cir",
+      "sha256": "21392faf96b91756786ab8601fede1ebc8eec9d8bde6654e90a538a0a0e47f8f",
+      "python_peak_load_V": {
+        "value": 5.450751226318395,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c29",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c29.cir",
+      "sha256": "757d1db1ba8fe5d2b4bebf1a321d00eb1663390012411fa4b75468cb91b45a90",
+      "python_peak_load_V": {
+        "value": 5.449066585784562,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c30",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_I_c30.cir",
+      "sha256": "62646f6eaa3530a71892d13798c02b1dd84c296dc830a9ce201b66bca5d7a179",
+      "python_peak_load_V": {
+        "value": 5.340006976607404,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_I_c31",
+      "profile": "baseline",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_I_c31.cir",
+      "sha256": "a7759f990d3f9988c6d325c7f0bd92843f79c048fefd02a4afc6d4e6c4cb3832",
+      "python_peak_load_V": {
+        "value": 5.343152271385108,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c00",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c00.cir",
+      "sha256": "2c2e607ba23639c4fe188f14415be93d14e28e2d44c726788b7fdb884dce6acf",
+      "python_peak_load_V": {
+        "value": 5.484847417450711,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c01",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c01.cir",
+      "sha256": "1b5356f4a62df36d71028f5e46ed1dadd7028ca9f3b8d3c13a751509b86e8eba",
+      "python_peak_load_V": {
+        "value": 5.483688616069905,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c02",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c02.cir",
+      "sha256": "a9f4d806d64ef23148de548f35c6f799a17df67784ea2165d0f7ed09f5ffad6b",
+      "python_peak_load_V": {
+        "value": 5.3782016792717435,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c03",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c03.cir",
+      "sha256": "450e569f7bfac7d416806f1cf13d997d928b15e6e9bf167f51b2ef774e22596f",
+      "python_peak_load_V": {
+        "value": 5.3808701154944,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c04",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c04.cir",
+      "sha256": "a4d7da55a135c0bd2c9b736e92141d22b018900dc63ccc8768dc305db090bcac",
+      "python_peak_load_V": {
+        "value": 5.444413686476286,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c05",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c05.cir",
+      "sha256": "7f9c1ac04c87b8616e2da0cebe136f5d1175a6a191170d1573d77a83ed8f8487",
+      "python_peak_load_V": {
+        "value": 5.4427996964667305,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c06",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c06.cir",
+      "sha256": "59e215c8d8ac3bdd66ba2ae0823cf95567d5afe4f0a7e6e1bca108de5a398e70",
+      "python_peak_load_V": {
+        "value": 5.342524703239984,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c07",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c07.cir",
+      "sha256": "1b22a6f3036d06f6c430adab86befc59e1aef588c7c7870de932609ff088b8eb",
+      "python_peak_load_V": {
+        "value": 5.345964248909391,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c08",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c08.cir",
+      "sha256": "38031cc452da2d1180b41ba3b34998813d7c9b0bf7f7f356baf22cd1db27da8f",
+      "python_peak_load_V": {
+        "value": 5.482160198150065,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c09",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c09.cir",
+      "sha256": "4554bde9af087e36f127471a0ced3ce2fa03140ebd1723fd91820cd0645ae7a3",
+      "python_peak_load_V": {
+        "value": 5.481097033669707,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c10",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c10.cir",
+      "sha256": "ba55c4c04adacfd088b67071f2f1638ff9cc4460729c3ce729fe2cec007585d8",
+      "python_peak_load_V": {
+        "value": 5.385577655491306,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c11",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c11.cir",
+      "sha256": "17c22f795cf174444b3d87bf085fdc1048cc1130c0725aff1b0b8958ea9b4cb4",
+      "python_peak_load_V": {
+        "value": 5.388164819102695,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c12",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c12.cir",
+      "sha256": "9fd978daa6a3549664b5cd009524316d37d7cb45c8c7221f744c5ee88b030d50",
+      "python_peak_load_V": {
+        "value": 5.441358810219185,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c13",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c13.cir",
+      "sha256": "6efc2d42fd7fab7cf223b5211342e21b328adfb8f6517f1263c9be8dcea056f2",
+      "python_peak_load_V": {
+        "value": 5.43982427338598,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c14",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c14.cir",
+      "sha256": "e8c9731d8e5de675e8ee2c2a16d92c37f0372d1b95ab4a66d034d55fc1133788",
+      "python_peak_load_V": {
+        "value": 5.349715740051689,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c15",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c15.cir",
+      "sha256": "4d03a0176564f96f71556e6c37a1b745edcf4b51fc0f91f2a558075635a0e477",
+      "python_peak_load_V": {
+        "value": 5.353193565038823,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c16",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c16.cir",
+      "sha256": "a6339a60447145b7c61188d0838a786cf8b5e77a309ad5eddaa45c25672a93a8",
+      "python_peak_load_V": {
+        "value": 5.48591824208555,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c17",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c17.cir",
+      "sha256": "57b9e2e1b71408e5ae212a0c14d26f6d7077a3ced4fcacea1d3edc7a2ed192cc",
+      "python_peak_load_V": {
+        "value": 5.484827702242275,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c18",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c18.cir",
+      "sha256": "681467b89696ff1d2a373103933ffa96cb1d3e427a9cfd666413c844fab52a07",
+      "python_peak_load_V": {
+        "value": 5.374504093275085,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c19",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c19.cir",
+      "sha256": "7dcbfb3a21ae95157a0b357b4e2e77a09eacabd06f5e322cac23eed199957d76",
+      "python_peak_load_V": {
+        "value": 5.376921635841266,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c20",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c20.cir",
+      "sha256": "5c1b515a4e73e59e3f3ed4161bf7a83746904d9f7c99dc6b442e658a23a0f26d",
+      "python_peak_load_V": {
+        "value": 5.446677764492599,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c21",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c21.cir",
+      "sha256": "cc078e5e8eb30402930108956987d02e0104b6b52eeb4cfb51a73b53dff9e655",
+      "python_peak_load_V": {
+        "value": 5.445099367298409,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c22",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c22.cir",
+      "sha256": "a1aee7e387afe4bc6233e8306bab922d118eef42d2f2292323f8363362c86ab5",
+      "python_peak_load_V": {
+        "value": 5.336609295172489,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c23",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c23.cir",
+      "sha256": "36ad0651646ca73855d14b45cc7d2971e0906181d526474351a887e660cc423c",
+      "python_peak_load_V": {
+        "value": 5.339557892464578,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c24",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c24.cir",
+      "sha256": "fe4e6450f12dc4bd34b2e4281ccc857c7495ab194aa103045ae860531fce6676",
+      "python_peak_load_V": {
+        "value": 5.483639230946514,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c25",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c25.cir",
+      "sha256": "673cdaa91b55c7d4a2280a91bb47d1b9a9f3f69bd5a08aa4f368b2240d22b4ae",
+      "python_peak_load_V": {
+        "value": 5.482631000400165,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c26",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c26.cir",
+      "sha256": "75ff2c67d06b3696ef5b93d142c1a26541c84508304c59e4b38f74cc76428ef4",
+      "python_peak_load_V": {
+        "value": 5.381513071699612,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c27",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c27.cir",
+      "sha256": "39d232f4daa74bcbc6a1b0553437c3a803fcfdf434ac26a11395e022ed331063",
+      "python_peak_load_V": {
+        "value": 5.383825900803274,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c28",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c28.cir",
+      "sha256": "bdba7c8067b9c09f4aef70fbf4d8431064d925d87d596104c6168a5d790c88bf",
+      "python_peak_load_V": {
+        "value": 5.44376116787617,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c29",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c29.cir",
+      "sha256": "8f5cb434ecd6f24821e2108d32b4512576be09e080fb3d07242ae3e6f1d932bf",
+      "python_peak_load_V": {
+        "value": 5.442554134221391,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c30",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "baseline_H_c30.cir",
+      "sha256": "5516af5d9833052e473c3dd97e21653d2ccedc6f7bf9594f71c8a02f9e8c6900",
+      "python_peak_load_V": {
+        "value": 5.343350795251395,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "baseline_H_c31",
+      "profile": "baseline",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "baseline_H_c31.cir",
+      "sha256": "f42383c93b517dc2c8d91ed3671bea455ff59caae835593845bed4e5c57455fc",
+      "python_peak_load_V": {
+        "value": 5.34612076005968,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c00",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c00.cir",
+      "sha256": "8c02ac4c2c44d69da220078a2f66f74e611966ba4ae5ee735c6793fff68ba372",
+      "python_peak_load_V": {
+        "value": 8.19270063344989,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c01",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c01.cir",
+      "sha256": "41179ca04b37e1b9f0fa3f954a88842839f8fc0700c50420e552e0bbd537d8ae",
+      "python_peak_load_V": {
+        "value": 8.095118587779371,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c02",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c02.cir",
+      "sha256": "124e3a59e90c103a0b92c818eaafa3efebd7227c5a6b98c501867e85e14ef78e",
+      "python_peak_load_V": {
+        "value": 6.331039159971098,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c03",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c03.cir",
+      "sha256": "798751a92f15e314a0f378dd6bdac8c67604b217f5e3feb2346a4d5ff6c773bc",
+      "python_peak_load_V": {
+        "value": 6.295577578716116,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c04",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c04.cir",
+      "sha256": "eead056f48078a6c06f295aa299b7987096d40dd353d13afe3decfed15427ef6",
+      "python_peak_load_V": {
+        "value": 8.112469795230934,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c05",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c05.cir",
+      "sha256": "c28e91d3a4035e97e360b220d207977270307bc205bbd36535db674c817e6ffd",
+      "python_peak_load_V": {
+        "value": 7.986944534139455,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c06",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c06.cir",
+      "sha256": "da0bbd13bd4f82ec3d9ff2eac25ae0faec9c5096b14733623ed313410ae8dc42",
+      "python_peak_load_V": {
+        "value": 6.234778961108204,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c07",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c07.cir",
+      "sha256": "8823e4891200ec316b98b1fa4ec4cf344fe87a9d3e0fb9bab945e45bf587d45f",
+      "python_peak_load_V": {
+        "value": 6.19335940912918,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c08",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c08.cir",
+      "sha256": "a34d09ae1ddeb2195db5f79278eae4fdff53b88e724b585f8215d6d2db6727a9",
+      "python_peak_load_V": {
+        "value": 7.202660000679488,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c09",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c09.cir",
+      "sha256": "dfb906d7a737ccd724b11e955005e2db7919d385f02b7286f9b31c704191a8a9",
+      "python_peak_load_V": {
+        "value": 7.132038688730223,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c10",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c10.cir",
+      "sha256": "39ce108d596f8ef1cb4fd7cb998ef3722402097bc4aedccae349f608f7ea3e62",
+      "python_peak_load_V": {
+        "value": 6.231511137571354,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c11",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c11.cir",
+      "sha256": "7732b45d965715e603d3b2e0dced8e6478ece860dd418f32bd2711df09591ff6",
+      "python_peak_load_V": {
+        "value": 6.198509068815492,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c12",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c12.cir",
+      "sha256": "7abb05c79a3165057d9dd922a7d89e3cdc0df059e0cc524a2b1740526dd7866b",
+      "python_peak_load_V": {
+        "value": 7.080275755632501,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c13",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c13.cir",
+      "sha256": "07efe83f5784d4b7deb6041c59bf5e14c9dd0ef9a322a3926df38c703f8275eb",
+      "python_peak_load_V": {
+        "value": 6.994026717830792,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c14",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c14.cir",
+      "sha256": "9c3b2135f79cda73e7caf7cddfc2a360bcc31a41fdeec8b679c3c7321fc3efe7",
+      "python_peak_load_V": {
+        "value": 6.135965400773707,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c15",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c15.cir",
+      "sha256": "efdd675d2c3852db800b5aaf78f6ccf753a711a60882fed808f7f04a6675a46c",
+      "python_peak_load_V": {
+        "value": 6.0967857073435985,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c16",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c16.cir",
+      "sha256": "13fa8fd61d3b2b2b92e429e428fb680fd808ace99e3a7a964a6bfe6cef14868b",
+      "python_peak_load_V": {
+        "value": 8.349378443429913,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c17",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c17.cir",
+      "sha256": "c3ce4a8d2a1faef39de9bede583114ffbea57228b089f442b746c46a8079885d",
+      "python_peak_load_V": {
+        "value": 8.245031325060525,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c18",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c18.cir",
+      "sha256": "f5f897fe0e2d0491d8b4bc6afab63101d7c80b60559d9ae0d7841b5b8479038f",
+      "python_peak_load_V": {
+        "value": 6.437796777554014,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c19",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c19.cir",
+      "sha256": "7a86dbbba80336ccc3056904dcd8a7f9e64e14de14097fc9151025d1c6262378",
+      "python_peak_load_V": {
+        "value": 6.399414541836705,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c20",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c20.cir",
+      "sha256": "4ddfb900d935844df83849799af3944412b68209b6c28683f532a2f52fe7c8d3",
+      "python_peak_load_V": {
+        "value": 8.37175868995685,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c21",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c21.cir",
+      "sha256": "083204c05fc231d68ff265eb9e4971f98c81f1d0375840c42a566ff31cd0fc48",
+      "python_peak_load_V": {
+        "value": 8.23834682866514,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c22",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c22.cir",
+      "sha256": "447cafcce76b8ccd8528bd5ee9b1eea6ffcedf18727281ad763cd4d5fe192c2c",
+      "python_peak_load_V": {
+        "value": 6.3749629025241905,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c23",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c23.cir",
+      "sha256": "eb8e32ba168c9219ca8841e76d0b5d984ee349787406458d0d7ca1a3666d6bf5",
+      "python_peak_load_V": {
+        "value": 6.3312634973477175,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c24",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c24.cir",
+      "sha256": "89d0fddc47ec087199b4dff4e81ea99ec762aebac525f2917b32da5d75024dc6",
+      "python_peak_load_V": {
+        "value": 7.364824077032214,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c25",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c25.cir",
+      "sha256": "0ede760bf6c0fc436d5b3a86bfe181c0ed38086f36118a90874261e3ca627494",
+      "python_peak_load_V": {
+        "value": 7.287172391036706,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c26",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c26.cir",
+      "sha256": "b24b4cd2eec103b6101e4217a36b0dbd3e4214ac17ae062a87c730cd1220e5f0",
+      "python_peak_load_V": {
+        "value": 6.34654767742427,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c27",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c27.cir",
+      "sha256": "201935876e54eebe15956b3c94a205d55295c6686140acf68a0375932c3df6d8",
+      "python_peak_load_V": {
+        "value": 6.310314894039553,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c28",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c28.cir",
+      "sha256": "85c951e619faddaa71f1bb99a8bab28bfcffe70238cbe0e4038072f838bd2d18",
+      "python_peak_load_V": {
+        "value": 7.318009747908267,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c29",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c29.cir",
+      "sha256": "ec22c12df194bbd40a07b3bebc3b21372a48afbac97f8266685fb93e3c93d771",
+      "python_peak_load_V": {
+        "value": 7.224616613615343,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c30",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_A_c30.cir",
+      "sha256": "6b5ff4b7a043b170f794465c2773a4cf0c109de4158a8174ca9cacb159993905",
+      "python_peak_load_V": {
+        "value": 6.285534213842749,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_A_c31",
+      "profile": "reviewed",
+      "option": "A_lm74800_ov_only",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_A_c31.cir",
+      "sha256": "4e8c391339bb5a83fa7d90858afab032178a46d90a865f1f904cbc394cc128de",
+      "python_peak_load_V": {
+        "value": 6.244426626602273,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c00",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c00.cir",
+      "sha256": "24ba24ec5be1a972c7d95b42e62b67a39e4611016e5e89dfaff1df2e910707bb",
+      "python_peak_load_V": {
+        "value": 6.123133568041563,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c01",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c01.cir",
+      "sha256": "c2414c47f48ada5f0262e214723f5cfe905f8a5d4eac37ae36db114ee95d711e",
+      "python_peak_load_V": {
+        "value": 6.065877180556443,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c02",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c02.cir",
+      "sha256": "cb19108e5c8e0803b2f5308721ed6ee9de0ce69735f763fef32c90a62bdb8614",
+      "python_peak_load_V": {
+        "value": 5.899260351319797,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c03",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c03.cir",
+      "sha256": "6967e4efb7527ba66d18a66c789131f2409af4622d4b8be7987d315764b14316",
+      "python_peak_load_V": {
+        "value": 5.8548525289106035,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c04",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c04.cir",
+      "sha256": "f51a495d66dbe9268d94326417f7c8c9d5e4ff2a1453b2020dc68add5301827b",
+      "python_peak_load_V": {
+        "value": 5.974754748939912,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c05",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c05.cir",
+      "sha256": "9fd0a8d90451f7d325716717067422c9c1ca2ce55c8c4c7d0fa4b198d46d014b",
+      "python_peak_load_V": {
+        "value": 5.899830350008168,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c06",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c06.cir",
+      "sha256": "c014a3a4d17c190e7a4b276cc7bf5d2affcb07410fa10565f2ea70724dd2d177",
+      "python_peak_load_V": {
+        "value": 5.754444526282795,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c07",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c07.cir",
+      "sha256": "4440195b881bdd0ca4b4ba13bbbed9ec221d05563c16fe29889c58a13231b5ec",
+      "python_peak_load_V": {
+        "value": 5.6935227326024,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c08",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c08.cir",
+      "sha256": "311171393ba49ea558e94f2ef9f5e073322dee3416eee90495c374d377561d8a",
+      "python_peak_load_V": {
+        "value": 6.067672364140898,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c09",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c09.cir",
+      "sha256": "0fb1d372c5694b37aa349c4d4995a96711cf1d146a267d2af2dad5fe1976802f",
+      "python_peak_load_V": {
+        "value": 6.010677976997844,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c10",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c10.cir",
+      "sha256": "8625096df0cc512f400c6be825bbde96348e96c80af628c9347305e16f6a0488",
+      "python_peak_load_V": {
+        "value": 5.860386931993263,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c11",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c11.cir",
+      "sha256": "fdc2e8d1757d87f80a088ace516cfd7bfaa9bc124112c5319bd31f22caf5d6e0",
+      "python_peak_load_V": {
+        "value": 5.807585880964934,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c12",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c12.cir",
+      "sha256": "4fabf7e39a7d0b90158bec602c253662edddbf0d8f1ab63474eaf00d7d7a5c9b",
+      "python_peak_load_V": {
+        "value": 5.91182779513471,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c13",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c13.cir",
+      "sha256": "af92a5d88b546c75acbc08922c90384c60af1d944d047fa09d8281acdccb6c41",
+      "python_peak_load_V": {
+        "value": 5.836238516749747,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c14",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c14.cir",
+      "sha256": "2e02424fcc09604e146a6c1f777821b55583aa03f38fced75d2f581e835f8307",
+      "python_peak_load_V": {
+        "value": 5.706856446753099,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c15",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c15.cir",
+      "sha256": "8ef0a17c61864f7883c27dc6d9b767b9d925957f93c2c3f7c4278ac356ffb9f1",
+      "python_peak_load_V": {
+        "value": 5.6501322914439704,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c16",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c16.cir",
+      "sha256": "5953d4bbfa77af7dffa91c01187a419b820b6a8dfdaaf9751bb48d013ea8a1e2",
+      "python_peak_load_V": {
+        "value": 6.338083134691648,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c17",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c17.cir",
+      "sha256": "2b150819b73fed36ef392ca7ccb64144e6d31a8e5bba3d6fc9649017d912056c",
+      "python_peak_load_V": {
+        "value": 6.2786392649400105,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c18",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c18.cir",
+      "sha256": "cd43c2d107bc22e19cecc2f277ee5da8dc307b2e6f1aaba6ef5de36e8241b11a",
+      "python_peak_load_V": {
+        "value": 6.078915471760347,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c19",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c19.cir",
+      "sha256": "efcd18a21ea9601257ebc5aa25f4204880f24f006dfd401fcab9942287197e1a",
+      "python_peak_load_V": {
+        "value": 6.04357836366326,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c20",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c20.cir",
+      "sha256": "33a57edaf8d3be2c46d14648c296cd546ed26def010f0ac6b00157e570e974ba",
+      "python_peak_load_V": {
+        "value": 6.265288346962798,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c21",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c21.cir",
+      "sha256": "39ac4c45bda488cad7ac61148e306da4fd669da9c81184708f1621c15819f68e",
+      "python_peak_load_V": {
+        "value": 6.1974934064554335,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c22",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c22.cir",
+      "sha256": "0dba87477cbde9f99b86a45bf1ad1b3dc0969793147874edf081fec5d73e002a",
+      "python_peak_load_V": {
+        "value": 6.01812755448354,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c23",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c23.cir",
+      "sha256": "3715362f727fffa0146df6b50d47b6df61e6231a5c3399aac46e3dd5ddd9a9fd",
+      "python_peak_load_V": {
+        "value": 5.978002057239016,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c24",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c24.cir",
+      "sha256": "20f4cdc51436e476c6525b2ac0b8bc136b4d279cd3f915135d9beb76147a7fb7",
+      "python_peak_load_V": {
+        "value": 6.2976337857027636,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c25",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c25.cir",
+      "sha256": "43a2cdf9bb37e447393ca946fbd61a24b3257b730e2416cfc1bbd21965022c3c",
+      "python_peak_load_V": {
+        "value": 6.240062816839383,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c26",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c26.cir",
+      "sha256": "84cf14c1556e99d6169189161ace60ebd0e4ccea6ce30b5743de03112f337adf",
+      "python_peak_load_V": {
+        "value": 6.058391688006299,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c27",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c27.cir",
+      "sha256": "41d3cfd3411bdffb6999be1458a210ec9a6db321bea9124ad740ee0c0a2a2228",
+      "python_peak_load_V": {
+        "value": 6.02368732209898,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c28",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c28.cir",
+      "sha256": "997ae07280ed42153cc08a1b7bc78ad6d3ddffb632c24a0dd0cd48f662531c7a",
+      "python_peak_load_V": {
+        "value": 6.225739250112733,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c29",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c29.cir",
+      "sha256": "81460ebdb5accebc2c1fbde48a455d2c9954af5f93b946c69494a14a5786ec4d",
+      "python_peak_load_V": {
+        "value": 6.159939261379823,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c30",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_B2_c30.cir",
+      "sha256": "5b6b710dec54c14afcbcc343b0f6c7f6a68a8640ca1b0f2e5d984e4c574cba8e",
+      "python_peak_load_V": {
+        "value": 5.997745769113662,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_B2_c31",
+      "profile": "reviewed",
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_B2_c31.cir",
+      "sha256": "39a91dd5cabfa3956d253af72d0335191e414312ac394fd7aadf25583773820d",
+      "python_peak_load_V": {
+        "value": 5.958175512328899,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c00",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c00.cir",
+      "sha256": "a874466426801da96208c377ad8c2807a51edadceec2ac36b3b8dab95494bc33",
+      "python_peak_load_V": {
+        "value": 5.492750523434496,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c01",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c01.cir",
+      "sha256": "790d5139b3fc12d4d539f36d91881536ef4e34690492992c78c50b10408c3259",
+      "python_peak_load_V": {
+        "value": 5.491222064330267,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c02",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c02.cir",
+      "sha256": "c7ea0ed4f6531956499af7b90727bcba658d4a03e2167367fb42d30d2973eaa3",
+      "python_peak_load_V": {
+        "value": 5.377692884942674,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c03",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c03.cir",
+      "sha256": "3ba027604907a7374898d14b926249e11dd78848cd063ec0f96099858bdb8066",
+      "python_peak_load_V": {
+        "value": 5.380566338842578,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c04",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c04.cir",
+      "sha256": "bb63e0146415de950f1ba8f216c69da004506967f112d24afd3b925c4abbe400",
+      "python_peak_load_V": {
+        "value": 5.4520870130884385,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c05",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c05.cir",
+      "sha256": "ad13a4503eb3adf16be063779ee0017b5018ca9e07e7db34f4b1987fa3d5b1d1",
+      "python_peak_load_V": {
+        "value": 5.450192944513926,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c06",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c06.cir",
+      "sha256": "e54ea886c3a36ee7d624bfd8e1257c6fe208f6aa3772ce052164970ba611cf7d",
+      "python_peak_load_V": {
+        "value": 5.342240312215637,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c07",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c07.cir",
+      "sha256": "c1964e4a64316dde7fb2dda5f52421308ab5530c804a2a2f577e67497fd934b9",
+      "python_peak_load_V": {
+        "value": 5.345913670832555,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c08",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c08.cir",
+      "sha256": "67f66e09246e08157da578a392b2641bc98773482bce4e8d6e0784a441b2f54c",
+      "python_peak_load_V": {
+        "value": 5.488586219355565,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c09",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c09.cir",
+      "sha256": "89000c98f7d8575f168f625dd0d15c7d84fbafca87ba46142017a55f105bbe9c",
+      "python_peak_load_V": {
+        "value": 5.487239079952129,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c10",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c10.cir",
+      "sha256": "a498995eeb316d60a18a4c92352eee2761405d9d9dc73f40702452433fd0166d",
+      "python_peak_load_V": {
+        "value": 5.382719109522553,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c11",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c11.cir",
+      "sha256": "1c082e3e3e6aa8619d157843b4a60b2fbe568e2f290b97c97ecaaebd4d65b190",
+      "python_peak_load_V": {
+        "value": 5.385710578035558,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c12",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c12.cir",
+      "sha256": "3eea180fdc76b05af4e912ecbaf770924d4fe6063e430dc884a59f0ce7aa5e6e",
+      "python_peak_load_V": {
+        "value": 5.447545345715372,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c13",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c13.cir",
+      "sha256": "2af8f1038450fdb9d2a0090d51a61ad861e1cea2c1a38d01232c81605036b244",
+      "python_peak_load_V": {
+        "value": 5.445627934969003,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c14",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c14.cir",
+      "sha256": "f6adb558b27e0d32d202664d5575656001a020e9343e6c396383635ea5a150f0",
+      "python_peak_load_V": {
+        "value": 5.3473670080203455,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c15",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c15.cir",
+      "sha256": "f051aca17b34da8f6e55cb8edc9cdbdf137e4bedf48e1a230d0be85ca3fdd84d",
+      "python_peak_load_V": {
+        "value": 5.351179067799518,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c16",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c16.cir",
+      "sha256": "bc832ac6537a7fcf5139b581766a4f4e5a8e14083007f076151f4f196e117e46",
+      "python_peak_load_V": {
+        "value": 5.494227903768387,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c17",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c17.cir",
+      "sha256": "57ba3acb077c1ba4a016d1a76ca582a86d205d05f2cea1dafdbb8231084582be",
+      "python_peak_load_V": {
+        "value": 5.4928195526988555,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c18",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c18.cir",
+      "sha256": "bdb0fdd0b82089b1bfed15c21ed9ff2425edcb78f291bede41e4300c95fbd095",
+      "python_peak_load_V": {
+        "value": 5.373695733454086,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c19",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c19.cir",
+      "sha256": "72dcb02b194afa8c00ac4b6cbe6369e950bd533f6cc596e9e43bb990f3ba40de",
+      "python_peak_load_V": {
+        "value": 5.376248178941352,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c20",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c20.cir",
+      "sha256": "b289e0128540218bca301298273c98cd937b94e40c656761ad3a1187631f0e3a",
+      "python_peak_load_V": {
+        "value": 5.455096295974118,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c21",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c21.cir",
+      "sha256": "d266be6690694aa6046b642200c7b4e550e6f01ab0cbdc2a66e452b9045a352e",
+      "python_peak_load_V": {
+        "value": 5.453094303371449,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c22",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c22.cir",
+      "sha256": "f346ca3ed92ad97a7a7d18a5e69178834dc209f06503f202b20ab7f7190fad6d",
+      "python_peak_load_V": {
+        "value": 5.3359732040993535,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c23",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c23.cir",
+      "sha256": "9e538f19f8a7a538048197068384393f38b780b7949ee176f2ae113f5738c193",
+      "python_peak_load_V": {
+        "value": 5.339044415752055,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c24",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c24.cir",
+      "sha256": "875d4b855d6f9a6e12ee02cdfe0624bbaaf4d766958c63cefc00138c4c83db47",
+      "python_peak_load_V": {
+        "value": 5.49051397516811,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c25",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c25.cir",
+      "sha256": "787323e2b15a362dbab1457d0ed86ad14c52da781acf5cf8d6dc2d69ce3d6094",
+      "python_peak_load_V": {
+        "value": 5.48907241782362,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c26",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c26.cir",
+      "sha256": "eafc3d29eb72e8e507c5344db3a91f221a70dc33c4f5b340fcfd0b5a3a778f40",
+      "python_peak_load_V": {
+        "value": 5.378058941949828,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c27",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c27.cir",
+      "sha256": "d540185799d561eb40ae071f5f2afbd80f8f4690df436c7276b2b8c4312b0666",
+      "python_peak_load_V": {
+        "value": 5.380668322645552,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c28",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c28.cir",
+      "sha256": "069be4e89db0befe301a5bad2e2e2b4ee0dec53e076c2fb948e1840a4e9388a5",
+      "python_peak_load_V": {
+        "value": 5.450679084902762,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c29",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c29.cir",
+      "sha256": "e48363f5da29c267155a843be80959ecd346768541c2b628dd300d2798c86cc2",
+      "python_peak_load_V": {
+        "value": 5.448959879366063,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c30",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_I_c30.cir",
+      "sha256": "4f6b48ed80deb13a812e3364479797682a38779fa5f07a61e45ee09f839432e9",
+      "python_peak_load_V": {
+        "value": 5.340042378627772,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_I_c31",
+      "profile": "reviewed",
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_I_c31.cir",
+      "sha256": "1f527f2e2c627ace185c874b8a4ad53d193b07b72a8ed465cf932d9db7819305",
+      "python_peak_load_V": {
+        "value": 5.343260823482897,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c00",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c00.cir",
+      "sha256": "21244990cd3cd8406549630768cf56660e9873b0ab37877baa9734093305722c",
+      "python_peak_load_V": {
+        "value": 5.484782786792444,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c01",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c01.cir",
+      "sha256": "c3d22200dccbfb7f9463f8d46e7f55dee4d3d84d29e86e6fe2f013a7fa0adfd0",
+      "python_peak_load_V": {
+        "value": 5.483554548167922,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c02",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c02.cir",
+      "sha256": "2327df24cf114aba575b6a055d2b050c23381430e6f8adb5dd941bf41840a7fe",
+      "python_peak_load_V": {
+        "value": 5.378278495030615,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c03",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c03.cir",
+      "sha256": "81fc5484c619af07f98c65989d484ce5fbecb0a7b1f918a24dfc54b48c4fe5e0",
+      "python_peak_load_V": {
+        "value": 5.3809966993897005,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c04",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c04.cir",
+      "sha256": "4fff67b66c22dc87d554acec0eb18fb0ca36e336b8d5b31a6abf51513b2db484",
+      "python_peak_load_V": {
+        "value": 5.444291093353365,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c05",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c05.cir",
+      "sha256": "6d346247061a503303db2d8704392e5ad0d848736b20db198a7fa34b31fdedaf",
+      "python_peak_load_V": {
+        "value": 5.442804200774903,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c06",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c06.cir",
+      "sha256": "288ab46d10962f21a686f3790cd4b25b7ef774a856a5ebde35e90d551021a1f9",
+      "python_peak_load_V": {
+        "value": 5.3425887186309735,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c07",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c07.cir",
+      "sha256": "77e5b9deca2c1e43fcc8d811d0de776d5e4af03806fb8de7afdbf05407bf1c86",
+      "python_peak_load_V": {
+        "value": 5.346083152679471,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c08",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c08.cir",
+      "sha256": "2982144072624339258fa2e438557ddcac45a147cec786b14bc2e081ac633cdf",
+      "python_peak_load_V": {
+        "value": 5.482148835458108,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c09",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c09.cir",
+      "sha256": "d38d40298f76e50e4b2b870082f810b3fcdb1f18887a28f5810c9cca502ac9f3",
+      "python_peak_load_V": {
+        "value": 5.481046119560149,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c10",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c10.cir",
+      "sha256": "1160b280ef55514984dd5c4c7d9613435cab2afc8472a31126c3e652315cac34",
+      "python_peak_load_V": {
+        "value": 5.385662739793294,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c11",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c11.cir",
+      "sha256": "f41f3c66765166349b794f93ec123a707fb8f862ede36017823a1303ce68ab00",
+      "python_peak_load_V": {
+        "value": 5.38832950051783,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c12",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c12.cir",
+      "sha256": "e530ddef693f53a127bbab37df78d4268e9c8b742b585c634d2592655c11a145",
+      "python_peak_load_V": {
+        "value": 5.441320917080126,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c13",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c13.cir",
+      "sha256": "dbf7756c32cad54bb9d8a427b0a04e338031b7aaf04ace0adffaecd499c2f7fe",
+      "python_peak_load_V": {
+        "value": 5.439735962551746,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c14",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c14.cir",
+      "sha256": "80733f1e44cf5c0b3f14176c020eea5854f767808d39c319ab1249e2713ca420",
+      "python_peak_load_V": {
+        "value": 5.349820953120118,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c15",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 1.5e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c15.cir",
+      "sha256": "08142b60d809bf419ccd67d2ee0a0ec6b03694f2eac823a5e4116f32e2bed06c",
+      "python_peak_load_V": {
+        "value": 5.353246938894403,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c16",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c16.cir",
+      "sha256": "899e51c43b85fdde3d73f81b362a8df3731ac20c4d66caf43f239c2bb0a33611",
+      "python_peak_load_V": {
+        "value": 5.485914076571757,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c17",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c17.cir",
+      "sha256": "d7adce366cfa24444a93a876d59524f28a176a18f771ac57564c25a48c996e5a",
+      "python_peak_load_V": {
+        "value": 5.484799835905866,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c18",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c18.cir",
+      "sha256": "3f867bcedb0fa944ed154042ada1b4b54551bd016b7013d5dafa1c48e824a0e1",
+      "python_peak_load_V": {
+        "value": 5.374551026807081,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c19",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c19.cir",
+      "sha256": "2d54d9ed08aaf8f71044ab0a5a0a1686ce913d2f1d4410a67a4a53e175fe21ff",
+      "python_peak_load_V": {
+        "value": 5.376944966012285,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c20",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c20.cir",
+      "sha256": "0cd8ff9f5ba86adff73b258688f128ade35671c53cc708c517e86583a03d80a5",
+      "python_peak_load_V": {
+        "value": 5.446676081149379,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c21",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c21.cir",
+      "sha256": "b613084517e6ee5393bfc016d2a6d0f8b67ed56bc46f9fd5ce960436122b6972",
+      "python_peak_load_V": {
+        "value": 5.445061662216758,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c22",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c22.cir",
+      "sha256": "ff072c00a7e1be33e561f5980c4b801f283047059ac35271e5ae81c857210cbb",
+      "python_peak_load_V": {
+        "value": 5.33670383945383,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c23",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 6e-05,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c23.cir",
+      "sha256": "871abdf8734d576b9739c34767ac01552c1f37202bbd4d1f76f8f8417fa8ed33",
+      "python_peak_load_V": {
+        "value": 5.339593644137964,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c24",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c24.cir",
+      "sha256": "a9fcccac6e7b6e9aecacb514a07f8ea7cbc81dd6005370a3e8a8c0080399c67d",
+      "python_peak_load_V": {
+        "value": 5.483728765956241,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c25",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c25.cir",
+      "sha256": "28536829ddbdc12effd79fdfa72a290ce298ff5e17f185265a7b69ae42862a29",
+      "python_peak_load_V": {
+        "value": 5.482524772045844,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c26",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c26.cir",
+      "sha256": "565792a8d939a6bb221478fa63c573584fd6e7cd004788f9405bd578bd80364e",
+      "python_peak_load_V": {
+        "value": 5.381626888742622,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c27",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 0.3,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c27.cir",
+      "sha256": "35600940a51059274f26407d593413a478282c3514dc2938322615c361d1cd68",
+      "python_peak_load_V": {
+        "value": 5.383911103677141,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c28",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c28.cir",
+      "sha256": "9246e4c5664e91cd3a435eadd0e814a2eb50b17621c3575629d3e5378c37bab3",
+      "python_peak_load_V": {
+        "value": 5.443695708878938,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c29",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 2e-06,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c29.cir",
+      "sha256": "9d7a70a1ee5a4420e731cb15d15e8ddad4dc9032fe62a0f81a5764e6513863e2",
+      "python_peak_load_V": {
+        "value": 5.442454226421452,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c30",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": false
+      },
+      "netlist": "reviewed_H_c30.cir",
+      "sha256": "1caa3f0a5e74c984c2a920ebf8f270ae60ce5b4a229189fcc85a6b1d5d13374d",
+      "python_peak_load_V": {
+        "value": 5.34337881693502,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    },
+    {
+      "id": "reviewed_H_c31",
+      "profile": "reviewed",
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": {
+        "cin_F": 4e-05,
+        "craw_F": 0.00013,
+        "i_load_A": 5.0,
+        "c_load_F": 0.00022,
+        "lossy": true
+      },
+      "netlist": "reviewed_H_c31.cir",
+      "sha256": "d519063de7a79a4e6ccab7de59eb44c45a6c75c9f1e9b62ac58337d4310501d9",
+      "python_peak_load_V": {
+        "value": 5.346222809029135,
+        "label": "CALCULATED"
+      },
+      "spice_status": "NOT RUN",
+      "spice_peak_load_V": null,
+      "relative_error": null,
+      "acceptance": "NOT RUN"
+    }
+  ]
+}

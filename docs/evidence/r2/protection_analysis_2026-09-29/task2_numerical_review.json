@@ -1,0 +1,92 @@
+{
+  "classification": "CALCULATED numerical checks; not SPICE agreement or electrical acceptance",
+  "baseline_identical_historical_rows": 320,
+  "reviewed_step_sensitivity_at_each_option_worst_corner": [
+    {
+      "option": "A_lm74800_ov_only",
+      "corner": [
+        3.9999999999999996e-05,
+        5.9999999999999995e-05,
+        5.0,
+        2e-06,
+        false
+      ],
+      "steps_s": [
+        2e-09,
+        1e-09,
+        5e-10
+      ],
+      "peaks_V": [
+        8.37175868995685,
+        8.372048810843754,
+        8.371687304270338
+      ],
+      "span_mV": 0.3615065734159373
+    },
+    {
+      "option": "B2_A_plus_1000uF_bulk",
+      "corner": [
+        3.9999999999999996e-05,
+        5.9999999999999995e-05,
+        0.3,
+        2e-06,
+        false
+      ],
+      "steps_s": [
+        2e-09,
+        1e-09,
+        5e-10
+      ],
+      "peaks_V": [
+        6.338083134691648,
+        6.338020632270315,
+        6.33794576573873
+      ],
+      "span_mV": 0.13736895291849294
+    },
+    {
+      "option": "I_470uF_bulk_plus_precision_fast_gate_off",
+      "corner": [
+        3.9999999999999996e-05,
+        5.9999999999999995e-05,
+        0.3,
+        2e-06,
+        false
+      ],
+      "steps_s": [
+        2e-09,
+        1e-09,
+        5e-10
+      ],
+      "peaks_V": [
+        5.494227903768387,
+        5.494368785162823,
+        5.494195086775049
+      ],
+      "span_mV": 0.1736983877744791
+    },
+    {
+      "option": "H_470uF_bulk_plus_precision_crowbar",
+      "corner": [
+        3.9999999999999996e-05,
+        5.9999999999999995e-05,
+        0.3,
+        2e-06,
+        false
+      ],
+      "steps_s": [
+        2e-09,
+        1e-09,
+        5e-10
+      ],
+      "peaks_V": [
+        5.485914076571757,
+        5.486070948015998,
+        5.4859074217400075
+      ],
+      "span_mV": 0.16352627599047764
+    }
+  ],
+  "spice_status": "NOT RUN",
+  "limitations": "No exhaustive timestep convergence or physical-parameter corner proof"
+}

@@ -1,0 +1,15 @@
+Profile reviewed; CALCULATED screening only; SPICE NOT RUN
+A_lm74800_ov_only                        worst load peak 8.372 V, margin to 5.5 V -2871.759 mV, max crowbar 0.0 A
+B1_A_plus_470uF_bulk                     worst load peak 6.525 V, margin to 5.5 V -1025.140 mV, max crowbar 0.0 A
+B2_A_plus_1000uF_bulk                    worst load peak 6.338 V, margin to 5.5 V -838.083 mV, max crowbar 0.0 A
+C_precision_crowbar_plus_ideal_diode     worst load peak 5.558 V, margin to 5.5 V -58.385 mV, max crowbar 350.3 A
+D_precision_detector_to_lm74800_en       worst load peak 8.197 V, margin to 5.5 V -2696.850 mV, max crowbar 0.0 A
+E_D_plus_470uF_bulk                      worst load peak 6.290 V, margin to 5.5 V -790.498 mV, max crowbar 0.0 A
+G_precision_detector_fast_gate_pulldown  worst load peak 5.574 V, margin to 5.5 V -74.351 mV, max crowbar 0.0 A
+H_470uF_bulk_plus_precision_crowbar      worst load peak 5.486 V, margin to 5.5 V 14.086 mV, max crowbar 355.1 A
+I_470uF_bulk_plus_precision_fast_gate_off worst load peak 5.494 V, margin to 5.5 V 5.772 mV, max crowbar 0.0 A
+F_precision_crowbar_no_ideal_diode       worst load peak 5.558 V, margin to 5.5 V -58.385 mV, max crowbar 355.6 A
+I_2us_total_isolation worst load peak 5.660 V
+load release bulk_0uF: worst raw peak 5.6336 V; startup {'tss_3.5ms': {'charge_A': 0.192, 'input_A_at_9V': 3.382, 'efuse_min_limit_A': 4.181}, 'tss_7ms': {'charge_A': 0.096, 'input_A_at_9V': 3.319, 'efuse_min_limit_A': 4.181}}
+load release bulk_470uF: worst raw peak 5.2146 V; startup {'tss_3.5ms': {'charge_A': 0.884, 'input_A_at_9V': 3.833, 'efuse_min_limit_A': 4.181}, 'tss_7ms': {'charge_A': 0.442, 'input_A_at_9V': 3.545, 'efuse_min_limit_A': 4.181}}
+load release bulk_1000uF: worst raw peak 5.1867 V; startup {'tss_3.5ms': {'charge_A': 1.666, 'input_A_at_9V': 4.342, 'efuse_min_limit_A': 4.181}, 'tss_7ms': {'charge_A': 0.833, 'input_A_at_9V': 3.799, 'efuse_min_limit_A': 4.181}}
