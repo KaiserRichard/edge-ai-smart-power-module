@@ -1539,5 +1539,796 @@
         "passes_fault_inequality": false
       }
     }
+  },
+  "gate_1c": {
+    "verdict": "BLOCKED",
+    "blocker_id": "B1C_UNCOORDINATED_FAULT_ENERGY_PATH",
+    "blocker": "Design a rated source-to-shunt energy-limiting/commutation path: direct low-Qg shunt exceeds pulse rating; ballast and source isolation must jointly meet the Pi window.",
+    "readiness_scope": "Preliminary schematic review; bench tests are later qualification, not this gate's blocker",
+    "worst_case_pi_peak_V": null,
+    "classification": "Manufacturer limits plus explicitly conditional design screens, not a validated transient simulation",
+    "source_envelope": {
+      "single_buck_short_normal_input_max_V": 24,
+      "single_fault_classification": "REQUIREMENT 9-24 V at input; excludes coincident source overvoltage, not local ringing",
+      "ovp_initial_tolerance_V": {
+        "min": 26.973872559387452,
+        "max": 28.289211488402323
+      },
+      "OVP_timing_max_s": 1.4e-05,
+      "OVP_timing_endpoint": "OVP 20 mV above threshold to FLT low, NOT a guaranteed output-voltage clamp",
+      "voltage_for_timing_test_high_corner_V": 28.75059971206903,
+      "30V_screen_required_ramp_limit_V_per_us": 0.08924287770935509,
+      "30V_status": "SENSITIVITY ONLY; slew, ringing and source amplitude not bounded by TPS26630 cutoff",
+      "source": "G1C-TPS2663 pp6-9,20; divider capture R103/R104"
+    },
+    "inductor": {
+      "part": "XAL8080-682MED",
+      "L0_min_H": 5.4400000000000004e-06,
+      "curve_readings_A_uH": [
+        [
+          0,
+          6.5
+        ],
+        [
+          5,
+          6.0
+        ],
+        [
+          10,
+          5.3
+        ],
+        [
+          14,
+          4.6
+        ],
+        [
+          16.5,
+          4.2
+        ]
+      ],
+      "curve_classification": "Approximate visual readings, typical 25 C; tolerance is specified at zero bias only",
+      "30percent_point_A": 14,
+      "30percent_tolerance_screen_H": 3.8080000000000002e-06,
+      "positive_L_floor_beyond_curve_H": null,
+      "old_0p5uH_status": "Rejected as datasheet bound; retained sensitivity only",
+      "source": "G1C-XAL8080 pp1-2, footnotes2,5,8 and 6.8uH L-vs-current panel"
+    },
+    "capacitance": {
+      "captured_output_parts": "C209-C214: 6 x C5750X7R1H226M250KB; zero raw bulk capacitors",
+      "captured_nominal_F": 0.000132,
+      "captured_bulk_F": 0,
+      "ceramic_screen_F": 7.27056e-05,
+      "ceramic_screen_factors": {
+        "initial": 0.8,
+        "temperature": 0.85,
+        "bias": 0.9,
+        "aging_allocation": 0.9
+      },
+      "ceramic_status": "Conservative design estimate at <=5.5V; not a guaranteed combined minimum. TDK p1 bias approximately 0 percent at 5V; curves reference data.",
+      "proposed_bulk_part": "8 x PCH1V471MCL1GS (not captured)",
+      "proposed_bulk_min_F": 0.0024064000000000004,
+      "proposed_bulk_max_F": 0.005414399999999999,
+      "bulk_limit_conditions": "Initial +/-20 percent, endurance +/-20 percent relative to initial at restored20C; not an all-temperature C guarantee",
+      "bulk_bank_ESR_max_screen_ohm": 0.0035,
+      "bulk_bank_ESR_min_ohm": null,
+      "input_C_max_screen_F": 6.071999999999999e-05,
+      "input_C_max_status": "Nominal x1.2x1.15 design screen; bias decreases are ignored; not combined manufacturer guarantee",
+      "source": "G1C-TDK p1; G1C-PCH pp1-2"
+    },
+    "threshold_tolerance": {
+      "nominal_V": 5.324999999999999,
+      "min_V": 5.293568153160679,
+      "max_V": 5.356562531846693,
+      "divider_gain_max": 2.1345290581162324,
+      "reference_fraction_bound": 0.0012125,
+      "resistor_fraction_bound": 0.002,
+      "comparator_offset_plus_hysteresis_V": 0.006,
+      "clamp_plus_input_bias_A": 8.5e-08,
+      "corner_count": 32
+    },
+    "normal_with_proposed_bulk": {
+      "C_bulk_min_F": 0.0024064000000000004,
+      "ESR_bulk_ohm": 0.0035,
+      "excess_charge_C": 0.0001491528558683009,
+      "decay_time_s": 9.717618622766962e-06,
+      "release_bound_V": 0.08298173864207982,
+      "normal_max_V": 5.261613976437252,
+      "false_trip_margin_mV": 21.954176723427704
+    },
+    "normal_captured_MLCC_only": {
+      "peak_screen_V": 7.242095341989358,
+      "false_trip_margin_mV": -1958.5271888286784,
+      "classification": "Same assumed6A/20us release stimulus as Gate1b; shows bulk cannot be silently credited to capture"
+    },
+    "fault_screens": [
+      {
+        "bulk_count": 8,
+        "source_V": 24.0,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 24.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 4.5794999999998195e-06,
+        "current_at_detect_A": 99.60690008513515,
+        "current_at_isolate_A": 107.04063474758354,
+        "detect_voltage_V": 5.399270107954009,
+        "raw_peak_at_isolation_V": 5.432152084203149,
+        "let_through_including_overdrive_and_local_V": 0.09558955235645517,
+        "pi_peak_screen_V": 5.452152084203148,
+        "fault_margin_mV": 47.84791579685166,
+        "passes_fault_inequality": true,
+        "state_at_action": {
+          "inductor_A": 107.04063474758354,
+          "ceramic_V": 5.408342339625445,
+          "bulk_V": 5.09917691559759,
+          "input_V": 24.0
+        }
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 24.0,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 24.0,
+        "piecewise_L": true,
+        "delay_s": 2e-06,
+        "time_to_detect_s": 4.5794999999998195e-06,
+        "current_at_detect_A": 99.60690008513515,
+        "current_at_isolate_A": 173.32048382912043,
+        "detect_voltage_V": 5.399270107954009,
+        "raw_peak_at_isolation_V": 5.753133428488052,
+        "let_through_including_overdrive_and_local_V": 0.4165708966413586,
+        "pi_peak_screen_V": 5.773133428488052,
+        "fault_margin_mV": -273.1334284880518,
+        "passes_fault_inequality": false,
+        "state_at_action": {
+          "inductor_A": 173.32048382912043,
+          "ceramic_V": 5.725702292608302,
+          "bulk_V": 5.194516222875697,
+          "input_V": 24.0
+        }
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 28.289211488402323,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 28.289211488402323,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 3.824499999999443e-06,
+        "current_at_detect_A": 103.94218752109722,
+        "current_at_isolate_A": 113.09037648720039,
+        "detect_voltage_V": 5.399345605620821,
+        "raw_peak_at_isolation_V": 5.438254729721806,
+        "let_through_including_overdrive_and_local_V": 0.10169219787511263,
+        "pi_peak_screen_V": 5.458254729721806,
+        "fault_margin_mV": 41.74527027819419,
+        "passes_fault_inequality": true,
+        "state_at_action": {
+          "inductor_A": 113.09037648720039,
+          "ceramic_V": 5.4100938387922195,
+          "bulk_V": 5.091719971143382,
+          "input_V": 28.289211488402323
+        }
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 28.289211488402323,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 28.289211488402323,
+        "piecewise_L": true,
+        "delay_s": 2e-06,
+        "time_to_detect_s": 3.824499999999443e-06,
+        "current_at_detect_A": 103.94218752109722,
+        "current_at_isolate_A": 194.68373604618807,
+        "detect_voltage_V": 5.399345605620821,
+        "raw_peak_at_isolation_V": 5.81973396120159,
+        "let_through_including_overdrive_and_local_V": 0.4831714293548961,
+        "pi_peak_screen_V": 5.839733961201589,
+        "fault_margin_mV": -339.7339612015893,
+        "passes_fault_inequality": false,
+        "state_at_action": {
+          "inductor_A": 194.68373604618807,
+          "ceramic_V": 5.787057576846591,
+          "bulk_V": 5.195524557661182,
+          "input_V": 28.289211488402323
+        }
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 30.0,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 30.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 3.5914999999995158e-06,
+        "current_at_detect_A": 105.4552841628586,
+        "current_at_isolate_A": 115.31189986402518,
+        "detect_voltage_V": 5.399284609087481,
+        "raw_peak_at_isolation_V": 5.440671916382009,
+        "let_through_including_overdrive_and_local_V": 0.10410938453531582,
+        "pi_peak_screen_V": 5.460671916382009,
+        "fault_margin_mV": 39.328083617991005,
+        "passes_fault_inequality": true,
+        "state_at_action": {
+          "inductor_A": 115.31189986402518,
+          "ceramic_V": 5.4107979146472145,
+          "bulk_V": 5.089359769893813,
+          "input_V": 30.0
+        }
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 30.0,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 30.0,
+        "piecewise_L": true,
+        "delay_s": 2e-06,
+        "time_to_detect_s": 3.5914999999995158e-06,
+        "current_at_detect_A": 105.4552841628586,
+        "current_at_isolate_A": 202.98939196913483,
+        "detect_voltage_V": 5.399284609087481,
+        "raw_peak_at_isolation_V": 5.846004043115152,
+        "let_through_including_overdrive_and_local_V": 0.5094415112684585,
+        "pi_peak_screen_V": 5.866004043115152,
+        "fault_margin_mV": -366.00404311515166,
+        "passes_fault_inequality": false,
+        "state_at_action": {
+          "inductor_A": 202.98939196913483,
+          "ceramic_V": 5.811248036766475,
+          "bulk_V": 5.196364182333367,
+          "input_V": 30.0
+        }
+      }
+    ],
+    "L_sensitivity": [
+      {
+        "bulk_count": 8,
+        "source_V": 24.0,
+        "L_floor_H": 1e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 24.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 2.9549999999997375e-06,
+        "current_at_detect_A": 137.13620614300257,
+        "current_at_isolate_A": 174.30632843241986,
+        "detect_voltage_V": 5.399395753014829,
+        "raw_peak_at_isolation_V": 5.52449211510729,
+        "let_through_including_overdrive_and_local_V": 0.18792958326059672,
+        "pi_peak_screen_V": 5.54449211510729,
+        "fault_margin_mV": -44.4921151072899,
+        "passes_fault_inequality": false
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 24.0,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 24.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 4.5794999999998195e-06,
+        "current_at_detect_A": 99.60690008513515,
+        "current_at_isolate_A": 107.04063474758354,
+        "detect_voltage_V": 5.399270107954009,
+        "raw_peak_at_isolation_V": 5.432152084203149,
+        "let_through_including_overdrive_and_local_V": 0.09558955235645517,
+        "pi_peak_screen_V": 5.452152084203148,
+        "fault_margin_mV": 47.84791579685166,
+        "passes_fault_inequality": true
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 24.0,
+        "L_floor_H": 3.28e-06,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 24.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 1.1198999999997073e-05,
+        "current_at_detect_A": 64.93212964089882,
+        "current_at_isolate_A": 66.06888079225415,
+        "detect_voltage_V": 5.399254105257378,
+        "raw_peak_at_isolation_V": 5.408304293866603,
+        "let_through_including_overdrive_and_local_V": 0.07174176201990967,
+        "pi_peak_screen_V": 5.428304293866603,
+        "fault_margin_mV": 71.69570613339715,
+        "passes_fault_inequality": true
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 28.289211488402323,
+        "L_floor_H": 1e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 28.289211488402323,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 2.4379999999999176e-06,
+        "current_at_detect_A": 143.98227191342247,
+        "current_at_isolate_A": 189.7296729742993,
+        "detect_voltage_V": 5.399350380134294,
+        "raw_peak_at_isolation_V": 5.547687916063236,
+        "let_through_including_overdrive_and_local_V": 0.21112538421654214,
+        "pi_peak_screen_V": 5.567687916063235,
+        "fault_margin_mV": -67.68791606323532,
+        "passes_fault_inequality": false
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 28.289211488402323,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 28.289211488402323,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 3.824499999999443e-06,
+        "current_at_detect_A": 103.94218752109722,
+        "current_at_isolate_A": 113.09037648720039,
+        "detect_voltage_V": 5.399345605620821,
+        "raw_peak_at_isolation_V": 5.438254729721806,
+        "let_through_including_overdrive_and_local_V": 0.10169219787511263,
+        "pi_peak_screen_V": 5.458254729721806,
+        "fault_margin_mV": 41.74527027819419,
+        "passes_fault_inequality": true
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 28.289211488402323,
+        "L_floor_H": 3.28e-06,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 28.289211488402323,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 9.699499999998866e-06,
+        "current_at_detect_A": 69.01604585720919,
+        "current_at_isolate_A": 70.41495061666134,
+        "detect_voltage_V": 5.399266596336018,
+        "raw_peak_at_isolation_V": 5.409522916359966,
+        "let_through_including_overdrive_and_local_V": 0.07296038451327203,
+        "pi_peak_screen_V": 5.429522916359965,
+        "fault_margin_mV": 70.4770836400348,
+        "passes_fault_inequality": true
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 30.0,
+        "L_floor_H": 1e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 30.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 2.2804999999999725e-06,
+        "current_at_detect_A": 146.52225090506502,
+        "current_at_isolate_A": 195.69048027098572,
+        "detect_voltage_V": 5.399611017432197,
+        "raw_peak_at_isolation_V": 5.556972424282759,
+        "let_through_including_overdrive_and_local_V": 0.22040989243606557,
+        "pi_peak_screen_V": 5.576972424282759,
+        "fault_margin_mV": -76.97242428275874,
+        "passes_fault_inequality": false
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 30.0,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 30.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 3.5914999999995158e-06,
+        "current_at_detect_A": 105.4552841628586,
+        "current_at_isolate_A": 115.31189986402518,
+        "detect_voltage_V": 5.399284609087481,
+        "raw_peak_at_isolation_V": 5.440671916382009,
+        "let_through_including_overdrive_and_local_V": 0.10410938453531582,
+        "pi_peak_screen_V": 5.460671916382009,
+        "fault_margin_mV": 39.328083617991005,
+        "passes_fault_inequality": true
+      },
+      {
+        "bulk_count": 8,
+        "source_V": 30.0,
+        "L_floor_H": 3.28e-06,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 30.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 9.218499999999441e-06,
+        "current_at_detect_A": 70.43745080051578,
+        "current_at_isolate_A": 71.94091935852363,
+        "detect_voltage_V": 5.3992537857131975,
+        "raw_peak_at_isolation_V": 5.409974401087132,
+        "let_through_including_overdrive_and_local_V": 0.07341186924043797,
+        "pi_peak_screen_V": 5.429974401087131,
+        "fault_margin_mV": 70.02559891286886,
+        "passes_fault_inequality": true
+      }
+    ],
+    "conditional_shunt_delay_ceiling_s": 3.874999284744264e-07,
+    "crowbar": {
+      "part": "CSD17308Q3",
+      "driver": "UCC27511DBVR, independent5V supply",
+      "conditional_effective_on_s": 2e-07,
+      "timing_components_s": {
+        "TLV3201_max_at_20mV": 5.5e-08,
+        "latch_max_5V_125C": 6.1e-09,
+        "driver_max_4p5V_1p8nF": 2.6e-08,
+        "driver_rise_max_same_test": 2.2e-08
+      },
+      "timing_sum_test_conditions_only_s": 1.091e-07,
+      "timing_gap": "Divider RC, actual high-current gate charge, validity gating and commutation are not covered by adding disparate test times",
+      "Qg_max_4p5V_10A_C": 5.1e-09,
+      "pulse_limit_25C_A": 167,
+      "pulse_limit_conditions": "<=100us, duty<=1 percent; also comply with Fig10 SOA and temperature",
+      "manufacturer_I2t_rating_A2s": null,
+      "rectangular_167A_100us_integral_NOT_rating_A2s": 2.7889,
+      "pulse_screens": [
+        {
+          "ballast_ohm": 0.0,
+          "assumed_mosfet_ohm": 0.0118,
+          "terminal_after_ideal_on_V": 4.910982021880284,
+          "total_crowbar_A": 416.18491710849867,
+          "inductor_contribution_A": 115.31189986402518,
+          "ceramic_discharge_A": 249.90794638346526,
+          "bulk_discharge_A": 50.96507086100819,
+          "headroom_to_167A_pulse_A": -249.18491710849867,
+          "bulk_only_zero_ESR_I2t_A2s": 5.942437723615431,
+          "bulk_only_RQ_energy_J": 0.07012076513866208,
+          "bulk_only_ballast_energy_J": 0.0,
+          "bulk_only_time_constant_s": 6.388991999999998e-05,
+          "finite_shunt_until_series_off": {
+            "duration_s": 1.8e-06,
+            "raw_peak_after_on_V": 4.910982021880284,
+            "crowbar_peak_A": 416.18491710849867,
+            "crowbar_interval_I2t_A2s": 0.25367919986423104,
+            "inductor_at_series_off_A": 207.37170301757064,
+            "pi_peak_through_series_off_V": 5.460671916382009,
+            "conditional_pi_margin_mV": 39.328083617991005
+          },
+          "disposition": "DIRECT SHUNT REJECTED"
+        },
+        {
+          "ballast_ohm": 0.033,
+          "assumed_mosfet_ohm": 0.0118,
+          "terminal_after_ideal_on_V": 5.290377112062066,
+          "total_crowbar_A": 118.08877482281397,
+          "inductor_contribution_A": 115.31189986402518,
+          "ceramic_discharge_A": 60.210401292574375,
+          "bulk_discharge_A": -57.43352633378659,
+          "headroom_to_167A_pulse_A": 48.911225177186026,
+          "bulk_only_zero_ESR_I2t_A2s": 1.5651956504165643,
+          "bulk_only_RQ_energy_J": 0.018469308674915457,
+          "bulk_only_ballast_energy_J": 0.05165145646374662,
+          "bulk_only_time_constant_s": 0.00024256511999999996,
+          "finite_shunt_until_series_off": {
+            "duration_s": 1.8e-06,
+            "raw_peak_after_on_V": 5.374249997229824,
+            "crowbar_peak_A": 119.96093743816571,
+            "crowbar_interval_I2t_A2s": 0.024829905089528984,
+            "inductor_at_series_off_A": 204.37049324831872,
+            "pi_peak_through_series_off_V": 5.460671916382009,
+            "conditional_pi_margin_mV": 39.328083617991005
+          },
+          "disposition": "BALLAST SENSITIVITY ONLY: current commutation, pulse resistor and SOA not designed"
+        },
+        {
+          "ballast_ohm": 0.05,
+          "assumed_mosfet_ohm": 0.0118,
+          "terminal_after_ideal_on_V": 5.330886089300217,
+          "total_crowbar_A": 86.26029270712324,
+          "inductor_contribution_A": 115.31189986402518,
+          "ceramic_discharge_A": 39.95591267349896,
+          "bulk_discharge_A": -69.00751983040111,
+          "headroom_to_167A_pulse_A": 80.73970729287676,
+          "bulk_only_zero_ESR_I2t_A2s": 1.1346402125997102,
+          "bulk_only_RQ_energy_J": 0.01338875450867658,
+          "bulk_only_ballast_energy_J": 0.05673201062998551,
+          "bulk_only_time_constant_s": 0.00033460991999999994,
+          "finite_shunt_until_series_off": {
+            "duration_s": 1.8e-06,
+            "raw_peak_after_on_V": 5.496679958638647,
+            "crowbar_peak_A": 88.94304140191986,
+            "crowbar_interval_I2t_A2s": 0.013543274250657291,
+            "inductor_at_series_off_A": 204.01507277042865,
+            "pi_peak_through_series_off_V": 5.516679958638647,
+            "conditional_pi_margin_mV": -16.679958638646575
+          },
+          "disposition": "BALLAST SENSITIVITY ONLY: current commutation, pulse resistor and SOA not designed"
+        }
+      ],
+      "stored_energy_screens_J": {
+        "raw_bulk": 0.07012076513866208,
+        "raw_ceramic": 0.0026665249393825604,
+        "buck_input_caps_24V": 0.017487359999999997
+      },
+      "additional_energy": "Inductor, source before/after current limiting, and downstream back-discharge must be added; local capacitor energies are not total fault energy",
+      "source": "G1C-CSD17308 pp1,3,7 Fig10; G1C-UCC27511 pp9-10; TLV3201p5; SN74LVC1G74p7"
+    },
+    "efuse": {
+      "part": "TPS26630RGER",
+      "captured_MODE": "pin11 NC => latch after limiting/thermal timeout",
+      "R105_ohm": 4020,
+      "resistor_tolerance_fraction": 0.001,
+      "current_limit": {
+        "min_A": 4.180819180819181,
+        "max_A": 4.81981981981982
+      },
+      "normal_overload_timer_max_s": 0.202,
+      "startup_thermal_regulation_timeout_max_s": 2.9,
+      "thermal_shutdown_typ_C": 165,
+      "overload_near_short_power_24V_W": 115.67567567567568,
+      "hypothetical_202ms_energy_without_thermal_shutdown_J": 23.366486486486487,
+      "settled_limit_202ms_I2t_A2s": 4.6925939452966485,
+      "SHDN_entry_max_s": 1.5e-06,
+      "proposed_end_fault": "FAULT latch also pulls U101 pin12 SHDN low; hold until manual reset. Upstream detector supply must remain alive after OUT removal.",
+      "SOA_disposition": "Integrated thermal protection described by vendor; no external-FET-style SOA plot or licence to dissipate24V*4.82A for202ms. Stored output/input energy is downstream of it.",
+      "source": "G1C-TPS2663 pp7-9,22-25,27-28"
+    },
+    "harness": {
+      "PR6_commit": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+      "original_terms_mOhm": {
+        "shunt": 2.0237875,
+        "pcb_positive": 2.5,
+        "pcb_return": 2.5,
+        "j502_positive": 5,
+        "j502_return": 5,
+        "trunk_positive": 4.0718405511811016,
+        "trunk_return": 4.0718405511811016,
+        "positive_branch_wires": 1.6913799212598426,
+        "ground_branch_wires": 0.8456899606299213,
+        "positive_gpio_contacts": 19.5,
+        "ground_gpio_contacts": 9.75,
+        "other_joints_equivalent_loop": 5
+      },
+      "original_downstream_ohm": 0.06195453848425197,
+      "original_drop_5A_mV": 309.7726924212598,
+      "PR6_10mOhm_series_pi_static_V": 4.678496709308158,
+      "gate1b_13p6mOhm_series_pi_static_V": 4.660496709308158,
+      "reduced_terms_mOhm": {
+        "shunt": 2.0237875,
+        "pcb_positive": 1,
+        "pcb_return": 1,
+        "j502_positive": 3.12,
+        "j502_return": 3.12,
+        "trunk_positive": 2.0359202755905508,
+        "trunk_return": 2.0359202755905508,
+        "positive_branch_wires": 0.8456899606299213,
+        "ground_branch_wires": 0.21142249015748033,
+        "positive_gpio_contacts": 19.5,
+        "ground_gpio_contacts": 4.875,
+        "other_joints_equivalent_loop": 2
+      },
+      "series_hot_screen_ohm": 0.0136,
+      "selected_direction": "a: cut path resistance, retain local regulation and raw-node OVP. No remote feedback or feedback-resistor edit selected.",
+      "required_total_R_with_100mV_reserve_ohm": 0.037653880345883656,
+      "options": [
+        {
+          "option": "a: retain setpoint, reduce path resistance (chosen direction)",
+          "total_raw_to_pi_ohm": 0.05536774050196851,
+          "pi_static_5A_V": 4.761430699219575,
+          "pi_static_5A_margin_mV": 11.430699219575402,
+          "pi_5A_with_100mV_reserve_V": 4.661430699219576,
+          "pi_5A_with_reserve_margin_mV": -88.56930078042424,
+          "pi_normal_max_0A_screen_V": 5.261613976437251,
+          "normal_margin_mV": 21.954176723428482,
+          "trip": {
+            "nominal_V": 5.324999999999999,
+            "min_V": 5.293568153160679,
+            "max_V": 5.356562531846693,
+            "divider_gain_max": 2.1345290581162324,
+            "reference_fraction_bound": 0.0012125,
+            "resistor_fraction_bound": 0.002,
+            "comparator_offset_plus_hysteresis_V": 0.006,
+            "clamp_plus_input_bias_A": 8.5e-08,
+            "corner_count": 32
+          },
+          "pi_fault_margin_mV": null,
+          "reason_null": "No datasheet-bounded complete energy/interruption path; see B1C",
+          "current_sweep": [
+            {
+              "load_A": 0,
+              "pi_static_min_V": 5.038269401729418,
+              "pi_static_max_V": 5.158632237795171
+            },
+            {
+              "load_A": 1,
+              "pi_static_min_V": 4.98290166122745,
+              "pi_static_max_V": 5.103264497293202
+            },
+            {
+              "load_A": 2,
+              "pi_static_min_V": 4.927533920725481,
+              "pi_static_max_V": 5.047896756791234
+            },
+            {
+              "load_A": 3,
+              "pi_static_min_V": 4.8721661802235126,
+              "pi_static_max_V": 4.992529016289265
+            },
+            {
+              "load_A": 4,
+              "pi_static_min_V": 4.816798439721544,
+              "pi_static_max_V": 4.937161275787297
+            },
+            {
+              "load_A": 5,
+              "pi_static_min_V": 4.761430699219575,
+              "pi_static_max_V": 4.881793535285328
+            }
+          ],
+          "conditional_ideal_shunt_fault_margin_mV": 39.328083617991005,
+          "conditional_series_fault_margin_mV": -366.00404311515166
+        },
+        {
+          "option": "b: 5.2 V local setpoint, existing path, existing trip",
+          "total_raw_to_pi_ohm": 0.07555453848425196,
+          "pi_static_5A_V": 4.7609186152710485,
+          "pi_static_5A_margin_mV": 10.918615271048537,
+          "pi_5A_with_100mV_reserve_V": 4.660918615271049,
+          "pi_5A_with_reserve_margin_mV": -89.08138472895111,
+          "pi_normal_max_0A_screen_V": 5.3644752311345725,
+          "normal_margin_mV": -80.90707797389328,
+          "trip": {
+            "nominal_V": 5.324999999999999,
+            "min_V": 5.293568153160679,
+            "max_V": 5.356562531846693,
+            "divider_gain_max": 2.1345290581162324,
+            "reference_fraction_bound": 0.0012125,
+            "resistor_fraction_bound": 0.002,
+            "comparator_offset_plus_hysteresis_V": 0.006,
+            "clamp_plus_input_bias_A": 8.5e-08,
+            "corner_count": 32
+          },
+          "pi_fault_margin_mV": null,
+          "reason_null": "No datasheet-bounded complete energy/interruption path; see B1C",
+          "current_sweep": [
+            {
+              "load_A": 0,
+              "pi_static_min_V": 5.138691307692309,
+              "pi_static_max_V": 5.261493492492493
+            },
+            {
+              "load_A": 1,
+              "pi_static_min_V": 5.063136769208056,
+              "pi_static_max_V": 5.185938954008241
+            },
+            {
+              "load_A": 2,
+              "pi_static_min_V": 4.987582230723805,
+              "pi_static_max_V": 5.110384415523989
+            },
+            {
+              "load_A": 3,
+              "pi_static_min_V": 4.912027692239553,
+              "pi_static_max_V": 5.034829877039737
+            },
+            {
+              "load_A": 4,
+              "pi_static_min_V": 4.836473153755301,
+              "pi_static_max_V": 4.959275338555485
+            },
+            {
+              "load_A": 5,
+              "pi_static_min_V": 4.7609186152710485,
+              "pi_static_max_V": 4.883720800071233
+            }
+          ],
+          "retuned_trip": {
+            "nominal_V": 5.425,
+            "min_V": 5.392775211679642,
+            "max_V": 5.457360099345692,
+            "divider_gain_max": 2.174689378757515,
+            "reference_fraction_bound": 0.0012125,
+            "resistor_fraction_bound": 0.002,
+            "comparator_offset_plus_hysteresis_V": 0.006,
+            "clamp_plus_input_bias_A": 8.5e-08,
+            "corner_count": 32
+          },
+          "retuned_normal_margin_mV": 18.299980545069545,
+          "retuned_fault_zero_delay_margin_mV": -20.853886920842335
+        },
+        {
+          "option": "c: ideal differential remote regulation at original Pi setpoint",
+          "total_raw_to_pi_ohm": 0,
+          "pi_static_5A_V": 5.038269401729418,
+          "pi_static_5A_margin_mV": 288.2694017294183,
+          "pi_5A_with_100mV_reserve_V": 4.938269401729419,
+          "pi_5A_with_reserve_margin_mV": 188.26940172941863,
+          "pi_normal_max_0A_screen_V": 5.639386668858511,
+          "normal_margin_mV": -355.81851569783134,
+          "trip": {
+            "nominal_V": 5.324999999999999,
+            "min_V": 5.293568153160679,
+            "max_V": 5.356562531846693,
+            "divider_gain_max": 2.1345290581162324,
+            "reference_fraction_bound": 0.0012125,
+            "resistor_fraction_bound": 0.002,
+            "comparator_offset_plus_hysteresis_V": 0.006,
+            "clamp_plus_input_bias_A": 8.5e-08,
+            "corner_count": 32
+          },
+          "pi_fault_margin_mV": null,
+          "reason_null": "No datasheet-bounded complete energy/interruption path; see B1C",
+          "current_sweep": [
+            {
+              "load_A": 0,
+              "pi_static_min_V": 5.038269401729418,
+              "pi_static_max_V": 5.158632237795171
+            },
+            {
+              "load_A": 1,
+              "pi_static_min_V": 5.038269401729418,
+              "pi_static_max_V": 5.158632237795171
+            },
+            {
+              "load_A": 2,
+              "pi_static_min_V": 5.038269401729418,
+              "pi_static_max_V": 5.158632237795171
+            },
+            {
+              "load_A": 3,
+              "pi_static_min_V": 5.038269401729418,
+              "pi_static_max_V": 5.158632237795171
+            },
+            {
+              "load_A": 4,
+              "pi_static_min_V": 5.038269401729418,
+              "pi_static_max_V": 5.158632237795171
+            },
+            {
+              "load_A": 5,
+              "pi_static_min_V": 5.038269401729418,
+              "pi_static_max_V": 5.158632237795171
+            }
+          ],
+          "raw_high_at_5A_V": 5.536404930216431,
+          "local_detector_normal_5A_margin_mV": -252.8367770557518,
+          "load_release_assumption": "Full I*R compensation remains during response; no harness-drop credit at 0 A",
+          "fault_zero_delay_margin_mV": 80.74688699098216
+        }
+      ]
+    },
+    "numerical_check": {
+      "half_step": {
+        "bulk_count": 8,
+        "source_V": 30,
+        "L_floor_H": 5e-07,
+        "input_cap_F": null,
+        "input_feed_A": 0.0,
+        "vin_at_isolation_V": 30.0,
+        "piecewise_L": true,
+        "delay_s": 2e-07,
+        "time_to_detect_s": 3.591500000000559e-06,
+        "current_at_detect_A": 105.45714685640488,
+        "current_at_isolate_A": 115.2892001382219,
+        "detect_voltage_V": 5.399292129537587,
+        "raw_peak_at_isolation_V": 5.440575382865125,
+        "let_through_including_overdrive_and_local_V": 0.10401285101843172,
+        "pi_peak_screen_V": 5.460575382865125,
+        "fault_margin_mV": 39.424617134875106,
+        "passes_fault_inequality": true
+      }
+    }
   }
 }

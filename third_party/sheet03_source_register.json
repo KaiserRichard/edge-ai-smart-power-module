@@ -389,6 +389,176 @@
       "required_attribution": "Manufacturer and product URL",
       "observation": "Product/order page",
       "limitation": "No local stock, price or delivery guarantee"
+    },
+    {
+      "id": "G1C-TPS2663",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "revision": "SLVSE94G, June 2024",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "/Users/quockaiser/Desktop/Research/v1a-wt-brief02/third_party/documents/r2_protection/tps2663.pdf"
+      ],
+      "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+      "relevant_sections": "pp6-9 threshold/current/timing tables; pp20,22-25,27-28 cutoff, limiting, short circuit, thermal and reset",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "Existing local original reused read-only and official web document checked"
+    },
+    {
+      "id": "G1C-XAL8080",
+      "manufacturer": "Coilcraft",
+      "url": "https://www.coilcraft.com/getmedia/345e50d6-a804-4ecb-9a92-5185221faf3e/xal8080.pdf",
+      "revision": "Documents 839-1/839-2, revised 05/01/26",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "/Users/quockaiser/Desktop/Research/v1a-wt-footprints/third_party/documents/r2/footprints/Coilcraft_XAL8080_839.pdf"
+      ],
+      "sha256": "8a4abee472a7f7b1e48c49b20cc5eaf3718fda3c248e156fe314563247349218",
+      "relevant_sections": "p1 682 row and footnotes2,5,8; p2 6.8uH L-versus-current panel; visual review",
+      "license": "Coilcraft copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Coilcraft, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "Existing local original reused read-only and official web document checked"
+    },
+    {
+      "id": "G1C-TDK",
+      "manufacturer": "TDK",
+      "url": "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/charasheet/c5750x7r1h226m250kb.pdf",
+      "revision": "Characterization sheet, March19,2019",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module-local-archive-20260926-152745/snapshot/third_party/documents/r2/TDK_C5750X7R1H226M250KB_mirror.pdf"
+      ],
+      "sha256": "b32be691c9267eef582ab049657b79aac42bae2fd9a586b9a5ef39bc5527d53e",
+      "relevant_sections": "p1 specifications, DC bias, temperature/bias and ESR graphs; archived mirror visually reviewed; current official PDF text matches identity but official binary unavailable",
+      "license": "TDK copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "TDK, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "Existing local original reused read-only and official web document checked"
+    },
+    {
+      "id": "G1C-PCH",
+      "manufacturer": "Nichicon",
+      "url": "https://www.nichicon.co.jp/english/_assets/images/products/catalog/corporate/digital/PCH_e.pdf",
+      "revision": "PCH two-page catalog, no formal revision; May2024 product markings; pinned SHA256",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "/Users/quockaiser/Desktop/Research/v1a-wt-brief02/third_party/documents/r2_protection_candidates/PCH_e.pdf"
+      ],
+      "sha256": "418b2838c3d9044b26e9b396a8f94fa24dddfd728cc3ef076c640205f5612bf4",
+      "relevant_sections": "p1 tolerance/endurance/test temperatures; p2 PCH1V471MCL1GS row",
+      "license": "Nichicon copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Nichicon, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "Existing local original reused read-only and official web document checked"
+    },
+    {
+      "id": "G1C-CSD17308",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/csd17308q3.pdf",
+      "revision": "SLPS262C, December2019",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1c_2026-09-29/csd17308q3.pdf"
+      ],
+      "sha256": "8be74e36edc0d28d609e68790860d91d8b66eb3f4052763edd2e6efef8dcb10e",
+      "relevant_sections": "pp1,3 pinout/pulse/Qg/RDS limits; p7 Fig10 SOA visually reviewed",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "New download in ignored third_party cache"
+    },
+    {
+      "id": "G1C-UCC27511",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/ucc27511.pdf",
+      "revision": "SLUSAW9F, November2014",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1c_2026-09-29/ucc27511.pdf"
+      ],
+      "sha256": "781cc451dbb371a4137337a4bdecbe11a9f1ff8979a11e238e97d8a80a287b31",
+      "relevant_sections": "p6 pins; pp9-10 driver electrical/timing test conditions",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "New download in ignored third_party cache"
+    },
+    {
+      "id": "G1C-TLV3201",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv3201.pdf",
+      "revision": "SBOS561C, May2024",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1c_2026-09-29/tlv3201.pdf"
+      ],
+      "sha256": "1777bba814c74772bb54c6f1f56702985039043ce2fb2affaf996a83eaf1076e",
+      "relevant_sections": "pp3-5 pin/input/offset/hysteresis/propagation limits",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "New download in ignored third_party cache"
+    },
+    {
+      "id": "G1C-SN74LVC1G74",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf",
+      "revision": "SCES794G, September2021",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "/Users/quockaiser/Desktop/Research/v1a-wt-brief02/third_party/documents/r2_protection_candidates/sn74lvc1g74.pdf"
+      ],
+      "sha256": "e46a5a867fec742290000dca5ed3b291535f3c4418ef2ae267acc4ab51b26d8a",
+      "relevant_sections": "p4 pinout; p7 CLR/PRE propagation; function table p10",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "Existing local original reused read-only and official web document checked"
+    },
+    {
+      "id": "G1C-LM61460",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "revision": "SNVSBD5D, July2022",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "/Users/quockaiser/Desktop/Research/v1a-wt-brief02/third_party/documents/r2_protection/lm61460.pdf"
+      ],
+      "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d",
+      "relevant_sections": "pp5-7 FB accuracy/typical current; pp40-41 load transients; p46 input resonance/back-discharge warning",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "Existing local original reused read-only and official web document checked"
+    },
+    {
+      "id": "G1C-LTC7001",
+      "manufacturer": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf",
+      "revision": "RevG, November2021",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf"
+      ],
+      "sha256": null,
+      "relevant_sections": "pp3-4 timing and pinout; p14 Fig7 back-to-back pair; web text only",
+      "license": "Analog Devices copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Analog Devices, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "Official web PDF; direct binary retrieval failed"
     }
   ],
   "project_evidence": [
@@ -595,6 +765,41 @@
       "commit_contains_these_bytes": true,
       "access": "Read-only; not merged or edited",
       "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/ea6bf16cd2095b66c49c11b7806c8f6df096877c/docs/evidence/r2/connectors_2026-09-29/CONNECTOR_SHORTLIST.md"
+    },
+    {
+      "worktree": "PR6 harness",
+      "repository_url": "https://github.com/KaiserRichard/edge-ai-smart-power-module",
+      "head": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+      "relevant_source_file": "docs/evidence/r2/j502_harness/HARNESS_DECISION.md",
+      "sha256": "4ec56cc6855f693e2f152aa56d5fb8acb63127f6e11d56261181dfbab19de097",
+      "commit_contains_these_bytes": true,
+      "access": "git show, read-only; no merge or edit",
+      "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/54d3bc67fd64f4bd947440518d90e76673faf5db/docs/evidence/r2/j502_harness/HARNESS_DECISION.md"
+    },
+    {
+      "worktree": "PR6 harness",
+      "repository_url": "https://github.com/KaiserRichard/edge-ai-smart-power-module",
+      "head": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+      "relevant_source_file": "docs/evidence/r2/j502_harness/budget.json",
+      "sha256": "3fafea467f0dfbc8d0222a2aa0bcc73e983062f1df840be9b5fa01e89ff8a283",
+      "commit_contains_these_bytes": true,
+      "access": "git show, read-only; no merge or edit",
+      "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/54d3bc67fd64f4bd947440518d90e76673faf5db/docs/evidence/r2/j502_harness/budget.json"
+    },
+    {
+      "worktree": "PR6 harness",
+      "repository_url": "https://github.com/KaiserRichard/edge-ai-smart-power-module",
+      "head": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+      "relevant_source_file": "docs/evidence/r2/j502_harness/source_register.json",
+      "sha256": "39285a2388f0dbc1723ac620fb0f715dd1cc9e3a10aa8d83f6a28dcb1406ab15",
+      "commit_contains_these_bytes": true,
+      "access": "git show, read-only; no merge or edit",
+      "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/54d3bc67fd64f4bd947440518d90e76673faf5db/docs/evidence/r2/j502_harness/source_register.json"
     }
+  ],
+  "gate_1c_access_notes": [
+    "Official TDK characterization URL located; web PDF readable. Direct Coilcraft and TDK PDF downloads returned403. Local archived bytes reviewed; not mislabelled as fresh official downloads.",
+    "Coilcraft plot, TDK archived-mirror plot and CSD17308 SOA visually reviewed using temporary PDF tooling; no system configuration changed.",
+    "Gate1c references are appended; earlier gate provenance and files preserved."
   ]
 }
