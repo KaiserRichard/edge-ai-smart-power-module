@@ -1,5 +1,55 @@
 # Sheet 03 preliminary architecture decision
 
+## Gate 1c — bounded fault envelope and crowbar-assisted Candidate C (2026-09-29)
+
+**VERDICT: BLOCKED — PRELIMINARY READY FOR SCHEMATIC REVIEW was not reached.** Crowbar-assisted Candidate C is the selected preliminary development direction, with one remaining design blocker: `B1C_UNCOORDINATED_FAULT_ENERGY_PATH`. The 33 mΩ ballast screen has positive modeled Pi margin, but neither the ballast pulse rating nor a production MOSFET/SOA commutation path is established. This is a design problem; bench measurement is later qualification and is not the blocker.
+
+### Datasheet-bounded envelope
+
+| Quantity | Bound used | Evidence and limitation |
+|---|---:|---|
+| LM61460 VIN during a normal-input high-side short | **24.000 V maximum** | Frozen V1A input requirement; TPS26630 is not credited with reducing a valid 24 V source. |
+| TPS26630 OVP threshold, worst divider/reference/leakage corner | **26.974–28.289 V**; 27.630 V nominal | TPS2663 Rev G, §§6.5 and 8.3; 1.2 V reference, 1.176–1.224 V threshold, 348 kΩ/15.8 kΩ ±0.1%, ±150 nA. |
+| TPS26630 OVP response | **14 µs maximum** from the specified 20 mV overdrive condition to FLT low | TPS2663 Rev G, pp. 6–9, 20. This is a fault indication/response endpoint, not a voltage clamp or guaranteed LM61460 VIN removal time. An abnormal 28.289 V screen therefore remains conditional until the source transient contract is defined. |
+| XAL8080-682MED effective inductance | **5.44 µH zero-current minimum screen**; approximately **3.808 µH at the 14 A/30%-drop typical curve point**; approximately **3.36 µH at the 16.5 A curve reading with the 0.8 tolerance screen** | Coilcraft Documents 839-1/839-2 Rev 05/01/26, pp. 1–2 and 6.8 µH L-versus-current plot. Curve readings are typical; no guaranteed lower inductance exists beyond the plotted current range. The old 0.5 µH value is sensitivity-only, not a datasheet bound. |
+| Captured output capacitance | **132 µF nominal**: six C5750X7R1H226M250KB MLCCs; **72.7056 µF conservative screen** after explicit initial/temperature/bias/aging factors; no bulk capacitor is captured | TDK characterization sheet p. 1 and current product record; the combined value is a design screen, not a guaranteed lot/temperature/DC-bias minimum. |
+| Candidate bulk used for the conditional screen | **8 × PCH1V471MCL1GS**, 470 µF each; 2.4064 mF minimum screen, 5.4144 mF maximum screen, 3.5 mΩ bank ESR screen | PCH catalog pp. 1–2, ±20% initial and sequential ±20% endurance factors. These parts are not captured and remain an implementation/open-inrush decision. |
+
+The reproducible values are written by `scripts/calculate_sheet03_gate1b.py --gate 1c --write` into `CALCULATIONS.json`. The 30 V and 0.5 µH cases remain sensitivity screens so that the unknown source and beyond-curve saturation cannot be hidden as a false guarantee.
+
+### Crowbar-assisted Candidate C
+
+The specified review parts are `REF5025IDGKR`, `TLV3201AIDBVR`, `SN74LVC1G74DCTR`, `LTC7001IMSE#PBF`, two `BSC034N06NSATMA1` common-source series MOSFETs, `CSD17308Q3` crowbar MOSFET, `UCC27511DBVR` crowbar driver on an independent 5 V rail, and a **33 mΩ pulse ballast screen** in the crowbar path. The detector senses the raw buck node upstream of the series pair. The crowbar candidate connects CSD17308 drain to `VOUT_PROTECTED`, source through the 33 mΩ ballast to the detector ground return, gate through a provisional 2.2 Ω gate resistor to UCC27511 OUT, and a provisional 10 kΩ gate-source pulldown; UCC27511 IN is `CROWBAR_ON`, VDD is the independent 5 V rail, and its ground is the detector ground. The 33 mΩ, 2.2 Ω, and 10 kΩ values are review values, not frozen procurement values. An overvoltage clears the latch, turns the crowbar on, and turns the series pair off; the crowbar is faster because it commutates the local capacitor/inductor current immediately while the high-side series gates are still discharging.
+
+Under the stated 30 V / 0.5 µH sensitivity case, the detector-to-driver datasheet test-time sum is 109.1 ns and the conditional effective crowbar-on screen is 0.2 µs. With the 33 mΩ ballast, the calculated `VOUT_PROTECTED` peak is **5.37425 V**, the Pi peak including the 20 mV local allocation is **5.46067 V**, and the conditional margin to 5.5 V is **+39.33 mV**. Crowbar peak current is **119.96 A**, leaving **47.04 A** below the CSD17308 167 A / 100 µs headline pulse current. The modeled interval I²t is **0.02483 A²s**; this is a model result, not a manufacturer I²t rating. The CSD17308 Fig. 10 SOA and the ballast pulse rating still must be checked against the actual commutation waveform. Direct zero-ballast shunting is rejected: **416.18 A** exceeds the 167 A headline by 249.18 A.
+
+The TPS26630 first enters its R105-programmed current limit. With pin 11 NC in the captured configuration it proceeds to the vendor’s latch-after-overload/thermal behavior; the overload timer is screened at 202 ms maximum and startup thermal regulation at 2.9 s maximum. The detector fault latch also asserts SHDN and remains latched until deliberate reset. The TPS26630 integrated thermal protection is not an external MOSFET SOA rating and does not authorize 24 V × 4.82 A for 202 ms; final input removal depends on the TPS26630 latch/thermal path and upstream source disconnect.
+
+Startup is fail-off: detector supply-valid, reference-valid, comparator-good, and BUCK_PGOOD must all qualify before the series pair or crowbar can turn on. An overvoltage clears the latch; there is no automatic retry. The proposed bulk screen gives **+21.95 mV** normal-release margin after the 10 mV allocation. The captured MLCC-only model gives **−1,958.53 mV**, so the un-captured bulk bank cannot be silently treated as present. The exact reset interlock, startup current limit, ballast pulse rating, and crowbar SOA are OPEN within the single blocker.
+
+### Candidate comparison
+
+| Architecture | Worst modeled Pi result | Speed needed / parts | Stress and failure mode | Disposition |
+|---|---:|---|---|---|
+| Candidate C series-only | 5.86600 V, **−366.00 mV** margin at 30 V / 0.5 µH / 2 µs | Series isolation must complete inside the approximately 0.385 µs ceiling; detector, latch, LTC7001, and two BSC034N06 devices | Inductor and capacitor energy arrives at the Pi before isolation; no local commutation path | Rejected as sole fault-energy solution |
+| Candidate C + crowbar | 5.46067 V, **+39.33 mV** conditional margin with 33 mΩ ballast; 119.96 A, 0.02483 A²s modeled crowbar interval | Crowbar effective-on screen 0.2 µs; CSD17308 + UCC27511 + pulse ballast plus the same series pair | Crowbar MOSFET/ballast absorb the first energy; SOA, pulse rating, source feed, and series turn-off remain unclosed | Selected preliminary development direction; **BLOCKED** by `B1C_UNCOORDINATED_FAULT_ENERGY_PATH` |
+
+### Harness co-design at the Pi pins
+
+The PR #6 cut-path estimate is 309.77 mV at 5 A. The terms are 2.024 mΩ shunt, 5.000 mΩ PCB positive, 5.000 mΩ PCB return, 10.000 mΩ J502 contacts, 8.144 mΩ trunk wire, 2.537 mΩ branch wire, 29.250 mΩ GPIO contacts, and 5.000 mΩ other joints: **61.955 mΩ total**. The three options are evaluated at the Pi pins over 0–5 A in `CALCULATIONS.json`.
+
+| Option | Pi 5 A minimum / margin | Normal maximum and detector node | Decision |
+|---|---:|---|---|
+| Reduce cut-path resistance, retain local regulation | 4.76143 V / **+11.43 mV** static; −88.57 mV with the separate 100 mV reserve screen | 5.26161 V; detector senses raw `VOUT_5V1` upstream of Sheet 03 | **Selected direction**; retain the buck setpoint and reduce harness/connector/copper resistance. The 100 mV reserve remains a design target, not credited as achieved. |
+| Raise LM61460 setpoint to 5.2 V | 4.76092 V / **+10.92 mV** static; −89.08 mV with reserve | Retuned detector margin **+18.30 mV**, but zero-delay fault screen **−20.85 mV**; detector still senses raw node | Rejected: trades normal headroom for fault-window loss. |
+| Ideal remote sense at load | 5.03827 V / **+288.27 mV** static; +188.27 mV with reserve | Detector must sense the load node to protect the Pi, but compensated raw high at 5 A is 5.53640 V and normal detector margin is **−252.84 mV** | Rejected: normal regulation and OVP reference planes conflict without a complete remote-sense/OVP architecture. |
+
+The selected direction is therefore resistance reduction with local regulation and raw-node detection. It does not close the single fault-energy blocker.
+
+### Gate 1c owner statement
+
+The Sheet 03 owner is responsible for keeping the detector powered independently of the failed output, clearing the latch on overvoltage, driving the crowbar quickly, and then allowing the TPS26630 to limit and latch the upstream source. The crowbar is an energy-commutation aid, not a claim that the Pi is immune to faults. The next owner action is to choose a pulse-rated ballast and verify the CSD17308 SOA and the complete source-to-crowbar-to-series-off trajectory against the stated 5.5 V limit. Until that design evidence exists, no KiCad capture is authorized.
+
 ## Gate 1b — Candidate C close attempt (2026-09-29)
 
 **VERDICT: BLOCKED. Candidate C is fully specified as a review concept, but it is not `PRELIMINARY — READY FOR SCHEMATIC REVIEW`. Exactly one blocker remains: `B1_FAULT_INTERRUPTION_ENVELOPE` — an accepted source/inductor transient bound and a production-supported effective isolation time below 0.385 µs have not been established.** This is a quantitative evidence blocker, not a KiCad blocker. No schematic or PCB work is authorized.

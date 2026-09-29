@@ -4,7 +4,11 @@ Consolidated 2026-09-26 from the 2026-09-14 continuation in [FINAL_MANAGER_REPOR
 
 **R2 schematic release: BLOCKED. R3 PCB release: BLOCKED. No printed circuit board (PCB) creation or routing authorized. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
-## Sheet 03 architecture gate — 2026-09-29
+## Sheet 03 architecture gate — Gate 1c, 2026-09-29
+
+**BLOCKED — crowbar-assisted Candidate C is the preliminary development direction, but not ready for schematic review.** The bounded screen uses 24 V maximum normal-input fault VIN, TPS26630 OVP of 26.974–28.289 V with a 14 µs FLT-response endpoint, XAL8080 effective-inductance screens of 5.44 µH at zero current and approximately 3.36–3.808 µH through the documented curve, and the captured six 22 µF MLCCs (132 µF nominal, 72.7056 µF conservative screen). A conditional 33 mΩ crowbar screen gives 5.46067 V at the Pi (+39.33 mV), 119.96 A and 0.02483 A²s, while series-only gives 5.86600 V (−366.00 mV).
+
+The single blocker is `B1C_UNCOORDINATED_FAULT_ENERGY_PATH`: the crowbar ballast pulse rating, MOSFET SOA, and complete source-to-crowbar-to-series-off commutation path are not established. This is a design blocker; bench work is later qualification. The harness co-design selects resistance reduction with local regulation and raw-node detection: 4.76143 V at 5 A (+11.43 mV static margin), with the separate 100 mV reserve screen still unmet. No KiCad capture or PCB work is authorized.
 
 **BLOCKED — Candidate C close attempt did not reach preliminary capture readiness.** The authoritative [Sheet 03 architecture decision](../evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md) now records a complete review concept and bounded calculation. The sole named blocker is `B1_FAULT_INTERRUPTION_ENVELOPE`: the accepted source/inductance transient and a production-supported or measured effective isolation time below approximately 0.385 µs are missing. The calculated normal false-trip margin is +22 mV; the 30 V/0.5 µH/2 µs fault screen is −368 mV. KiCad remains unchanged.
 

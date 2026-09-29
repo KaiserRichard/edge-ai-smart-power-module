@@ -23,6 +23,10 @@ Authoritative record: [SHEET03_ARCHITECTURE_DECISION.md](../evidence/r2/sheet03/
 | Require `V_Pi_peak < 5.5 V` including transients | Current user instruction, tightening the earlier ≤5.5 V wording | Supersedes 6 V screening; detector threshold must leave tolerance and let-through margin |
 | Do not select/capture Sheet 03 yet | Native LM74800 window fails the retained 50 mV margin screen; LTC4368 dynamic evidence is inadequate; precision direction lacks a complete bounded circuit/state proof | Architecture gate BLOCKED; conditional capture/commit/push continuation not entered; R2/R3 remain BLOCKED |
 
+## 2026-09-29 — Candidate C Gate 1c
+
+Gate 1c retains Candidate C and adds a low-side crowbar: CSD17308Q3, UCC27511DBVR, and a 33 mΩ ballast screen driven by the same detector/latch. The crowbar is the selected preliminary development direction because its conditional 5.46067 V Pi peak leaves +39.33 mV at 119.96 A and 0.02483 A²s modeled I²t, whereas series-only is 5.86600 V and −366.00 mV. The eFuse remains the upstream current-limit/latch path; SHDN and the fault latch prevent automatic retry. The remaining single design blocker is `B1C_UNCOORDINATED_FAULT_ENERGY_PATH`: pulse-rated ballast, MOSFET SOA, and complete source-to-commutation bounds are not closed. Harness co-design selects reduced cut-path resistance with raw-node detection; remote sense and setpoint increase fail one of the required windows. No KiCad capture is authorized.
+
 ## 2026-09-29 — Candidate C Gate 1b
 
 Candidate C is retained as the only review concept: REF5025 + TLV3201 threshold detector, SN74LVC1G74 latch, LTC7001 independent high-side driver, and common-source BSC034N06NS pair. With explicit assumptions and a reproducible script, `V_trip` is 5.325 V nominal / 5.294–5.357 V corner and the normal-release screen leaves +22 mV. The 30 V, 0.5 µH, 2 µs fault screen reaches 5.868 V, failing the Pi limit by 368 mV. The single remaining blocker is `B1_FAULT_INTERRUPTION_ENVELOPE`: authoritative source/inductance bounds and an effective isolation time below 0.385 µs are not evidenced. No KiCad capture is authorized.

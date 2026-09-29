@@ -1,5 +1,5 @@
 {
-  "classification": "CALCULATED SCREENS ONLY; no circuit selected, SPICE run or physical validation",
+  "classification": "CALCULATED SCREENS ONLY; crowbar-assisted Candidate C is a preliminary development direction, not a captured or validated circuit",
   "date": "2026-09-29",
   "status": "BLOCKED",
   "formulas": {
@@ -1545,11 +1545,15 @@
     "blocker_id": "B1C_UNCOORDINATED_FAULT_ENERGY_PATH",
     "blocker": "Design a rated source-to-shunt energy-limiting/commutation path: direct low-Qg shunt exceeds pulse rating; ballast and source isolation must jointly meet the Pi window.",
     "readiness_scope": "Preliminary schematic review; bench tests are later qualification, not this gate's blocker",
-    "worst_case_pi_peak_V": null,
+    "worst_case_pi_peak_V": 5.866004043115152,
+    "worst_case_pi_margin_mV": -366.00404311515166,
     "classification": "Manufacturer limits plus explicitly conditional design screens, not a validated transient simulation",
     "source_envelope": {
       "single_buck_short_normal_input_max_V": 24,
-      "single_fault_classification": "REQUIREMENT 9-24 V at input; excludes coincident source overvoltage, not local ringing",
+      "single_fault_classification": "REQUIREMENT 9-24 V at input; the high-side-short normal-input bound is 24 V at LM61460 VIN",
+      "max_vin_reaching_lm61460_normal_short_V": 24.0,
+      "max_vin_reaching_lm61460_abnormal_screen_V": 28.289211488402323,
+      "abnormal_screen_status": "TPS26630 OVP is a threshold/FLT response, not a voltage clamp; values above the 24 V normal-input requirement need a source/transient contract",
       "ovp_initial_tolerance_V": {
         "min": 26.973872559387452,
         "max": 28.289211488402323
@@ -1589,9 +1593,11 @@
       "curve_classification": "Approximate visual readings, typical 25 C; tolerance is specified at zero bias only",
       "30percent_point_A": 14,
       "30percent_tolerance_screen_H": 3.8080000000000002e-06,
+      "effective_L_screen_at_16p5A_H": 3.36e-06,
+      "effective_L_guaranteed_beyond_curve_H": null,
       "positive_L_floor_beyond_curve_H": null,
       "old_0p5uH_status": "Rejected as datasheet bound; retained sensitivity only",
-      "source": "G1C-XAL8080 pp1-2, footnotes2,5,8 and 6.8uH L-vs-current panel"
+      "source": "G1C-XAL8080 pp1-2, footnotes2,5,8 and 6.8uH L-vs-current panel; curve readings are typical, not a guaranteed saturation bound"
     },
     "capacitance": {
       "captured_output_parts": "C209-C214: 6 x C5750X7R1H226M250KB; zero raw bulk capacitors",
@@ -1965,10 +1971,54 @@
         "passes_fault_inequality": true
       }
     ],
+    "comparison": {
+      "series_only": {
+        "architecture": "Candidate C series-only common-source pair",
+        "parts": [
+          "REF5025IDGKR",
+          "TLV3201AIDBVR",
+          "SN74LVC1G74DCTR",
+          "LTC7001IMSE#PBF",
+          "2 x BSC034N06NSATMA1"
+        ],
+        "effective_fault_delay_s": 2e-06,
+        "pi_peak_V": 5.866004043115152,
+        "pi_margin_mV": -366.00404311515166,
+        "failure_mode": "series pair alone does not absorb the pre-isolation inductor/capacitor energy"
+      },
+      "crowbar_assisted": {
+        "architecture": "Candidate C plus latched low-side crowbar",
+        "parts": [
+          "CSD17308Q3",
+          "UCC27511DBVR",
+          "33 mOhm pulse ballast (value screen only)",
+          "same detector/latch and series pair as Candidate C"
+        ],
+        "detector_to_crowbar_test_sum_s": 1.091e-07,
+        "conditional_effective_crowbar_on_s": 2e-07,
+        "conditional_series_off_s": 1.8e-06,
+        "vout_protected_peak_V": 5.374249997229824,
+        "pi_peak_V": 5.460671916382009,
+        "pi_margin_mV": 39.328083617991005,
+        "crowbar_peak_A": 119.96093743816571,
+        "crowbar_I2t_A2s_screen": 0.024829905089528984,
+        "device_pulse_headroom_A": 48.911225177186026,
+        "failure_mode": "conditional screen passes Pi/current headline but pulse SOA and ballast pulse rating are unqualified"
+      },
+      "selection": "Crowbar-assisted Candidate C is the preliminary development direction; it is not capture-ready because the pulse-rated commutation/SOA path is not closed."
+    },
     "conditional_shunt_delay_ceiling_s": 3.874999284744264e-07,
     "crowbar": {
       "part": "CSD17308Q3",
       "driver": "UCC27511DBVR, independent5V supply",
+      "pin_level_candidate": {
+        "drain": "VOUT_PROTECTED",
+        "source": "33 mOhm ballast to detector ground",
+        "gate": "UCC27511 OUT through 2.2 ohm provisional resistor; 10 kohm provisional gate-source pulldown",
+        "driver_IN": "CROWBAR_ON",
+        "driver_VDD": "independent 5 V detector rail",
+        "driver_GND": "detector ground"
+      },
       "conditional_effective_on_s": 2e-07,
       "timing_components_s": {
         "TLV3201_max_at_20mV": 5.5e-08,
@@ -2063,7 +2113,27 @@
         "buck_input_caps_24V": 0.017487359999999997
       },
       "additional_energy": "Inductor, source before/after current limiting, and downstream back-discharge must be added; local capacitor energies are not total fault energy",
-      "source": "G1C-CSD17308 pp1,3,7 Fig10; G1C-UCC27511 pp9-10; TLV3201p5; SN74LVC1G74p7"
+      "selected_ballast_ohm": 0.033,
+      "selected_screen": {
+        "architecture": "Candidate C plus latched low-side crowbar",
+        "parts": [
+          "CSD17308Q3",
+          "UCC27511DBVR",
+          "33 mOhm pulse ballast (value screen only)",
+          "same detector/latch and series pair as Candidate C"
+        ],
+        "detector_to_crowbar_test_sum_s": 1.091e-07,
+        "conditional_effective_crowbar_on_s": 2e-07,
+        "conditional_series_off_s": 1.8e-06,
+        "vout_protected_peak_V": 5.374249997229824,
+        "pi_peak_V": 5.460671916382009,
+        "pi_margin_mV": 39.328083617991005,
+        "crowbar_peak_A": 119.96093743816571,
+        "crowbar_I2t_A2s_screen": 0.024829905089528984,
+        "device_pulse_headroom_A": 48.911225177186026,
+        "failure_mode": "conditional screen passes Pi/current headline but pulse SOA and ballast pulse rating are unqualified"
+      },
+      "source": "G1C-CSD17308 pp1,3,7 Fig10; G1C-UCC27511 pp9-10; G1C-TLV3201 pp3-5; G1C-SN74LVC1G74 p7"
     },
     "efuse": {
       "part": "TPS26630RGER",
@@ -2083,7 +2153,16 @@
       "SHDN_entry_max_s": 1.5e-06,
       "proposed_end_fault": "FAULT latch also pulls U101 pin12 SHDN low; hold until manual reset. Upstream detector supply must remain alive after OUT removal.",
       "SOA_disposition": "Integrated thermal protection described by vendor; no external-FET-style SOA plot or licence to dissipate24V*4.82A for202ms. Stored output/input energy is downstream of it.",
-      "source": "G1C-TPS2663 pp7-9,22-25,27-28"
+      "source": "G1C-TPS2663 pp7-9,22-25,27-28",
+      "next_fault_sequence": "TPS26630 first limits at the R105-programmed current; pin 11 NC selects latch-off after the overload timer/thermal action. The crowbar fault latch also asserts U101 SHDN; source removal is therefore the TPS26630 latch/thermal path and upstream source disconnect, not the crowbar alone."
+    },
+    "reset_startup": {
+      "startup_state": "crowbar and series pair OFF until detector supply-valid, reference-valid, comparator-good and BUCK_PGOOD are true",
+      "fault_state": "OV clears the latch; no automatic retry; manual ARM/reset is required after raw voltage is valid",
+      "load_release_screen_margin_mV": 21.954176723427704,
+      "captured_MLCC_only_release_margin_mV": -1958.5271888286784,
+      "false_crowbar_controls": "BUCK_PGOOD qualification, detector-valid gating, comparator hysteresis allocation and latch clear dominance; exact reset interlock remains OPEN",
+      "source": "G1C-TLV3201 pp3-5; G1C-SN74LVC1G74 p7/function table; G1C-LM61460 pp40-41"
     },
     "harness": {
       "PR6_commit": "54d3bc67fd64f4bd947440518d90e76673faf5db",
