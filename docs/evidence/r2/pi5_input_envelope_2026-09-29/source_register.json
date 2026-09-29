@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-29",
+  "task": "BRIEF-03 Raspberry Pi 5 5 V input fault envelope; USB-C and GPIO header",
+  "baseline": {
+    "branch": "codex/pi5-input-envelope",
+    "commit": "de1d35c07a0c0a9b368527522aa01ed11c762869",
+    "initial_git_status": "clean"
+  },
+  "scope": "R2 evidence research only; P4 OPEN; R2/R3 release BLOCKED; NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED",
+  "source_policy": "Official Raspberry Pi and component-vendor sites only. No third-party repair maps used as rating evidence. No software installed. Sources cached under third_party/documents/pi5_input; original bytes unchanged.",
+  "date_policy": "document_date is publication/build/post date, not retrieval time. Null means UNKNOWN or not published. Displayed forum times preserved; timezone asserted only where checked.",
+  "hash_policy": "SHA-256 is of original successful download bytes only, never of snippets or error responses. Null means no downloaded source. HTML hashes freeze response bytes, not a vendor revision.",
+  "retrieval_note": "Initial Python urllib attempts failed local certificate-chain validation. Existing system curl with TLS verification succeeded for seven files. No certificate checks disabled or system configuration changed. HTTP 403 failures were recorded and not retried after direct download rejection.",
+  "cache_policy": "Existing .gitignore and third_party/README.md keep downloaded vendor sources out of Git. Seven original files remain locally; URLs, metadata and SHA-256 are committed here. Web-only forum evidence has lower reproducibility than hashed PDFs.",
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://pip-assets.raspberrypi.com/categories/892-raspberry-pi-5/documents/RP-008348-DS-3-raspberry-pi-5-product-brief.pdf",
+      "retrieved_at_utc": "2026-09-29T11:12:19.858107+00:00",
+      "http_status": 200,
+      "local_path": "third_party/documents/pi5_input/product_brief.pdf",
+      "sha256": "10583c80f867e05af185742bb0f80448458c606a32dd3dbefbbcfca480b59ead",
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:24.123817+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:19.858107+00:00",
+          "status": "downloaded",
+          "error": null,
+          "http_status": 200,
+          "final_url": "https://pip-assets.raspberrypi.com/categories/892-raspberry-pi-5/documents/RP-008348-DS-6-raspberry-pi-5-product-brief.pdf"
+        }
+      ],
+      "final_url": "https://pip-assets.raspberrypi.com/categories/892-raspberry-pi-5/documents/RP-008348-DS-6-raspberry-pi-5-product-brief.pdf",
+      "content_type": "application/pdf",
+      "bytes": 1095537,
+      "title": "Raspberry Pi 5 product brief",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "Published April 2026; final vendor URL identifier RP-008348-DS-6 (requested RP-008348-DS-3 URL redirected); no RP identifier printed in PDF text",
+      "document_date": "2026-04",
+      "locator": "PDF p. 3 Specification; all 6 pages inspected for input limits",
+      "evidence": "5 V / 5 A DC via USB-C with Power Delivery; no absolute input maximum or voltage-duration survival curve.",
+      "web_access": "PDF readable",
+      "license": "Raspberry Pi copyright; no redistribution licence identified in product brief",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Ignored local source cache; manifest tracked",
+      "download_status": "downloaded"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+      "retrieved_at_utc": "2026-09-29T11:12:20.995324+00:00",
+      "http_status": 403,
+      "local_path": null,
+      "sha256": null,
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:24.711571+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:20.995324+00:00",
+          "status": "blocked",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "http_status": 403,
+          "final_url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html"
+        }
+      ],
+      "final_url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+      "content_type": "text/html; charset=UTF-8",
+      "error": "curl: (22) The requested URL returned error: 403",
+      "title": "Raspberry Pi computer hardware documentation",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "Live HTML, no frozen revision established",
+      "document_date": null,
+      "locator": "Power supply; Power supply warnings; Schematics and mechanical drawings / Raspberry Pi 5; GPIO",
+      "evidence": "Normal supply guidance; Pi 5 drawing index lists mechanical/STEP documents without a circuit schematic. General back-powering text is not Pi 5-specific topology evidence.",
+      "web_access": "Indexed/rendered official documentation inspected; direct download HTTP 403",
+      "license": "Documentation licence not established from downloaded bytes; no local copy",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Remote evidence or failed retrieval only; no local source file",
+      "download_status": "blocked"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+      "retrieved_at_utc": "2026-09-29T11:12:21.115410+00:00",
+      "http_status": 200,
+      "local_path": "third_party/documents/pi5_input/introducing_pi5.html",
+      "sha256": "590aa4cdb7e5fd10f8b1d07cfdf6962f74c5ce6c1ddbc264b4463e03fd781a7b",
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:24.943821+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:21.115410+00:00",
+          "status": "downloaded",
+          "error": null,
+          "http_status": 200,
+          "final_url": "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        }
+      ],
+      "final_url": "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 1443451,
+      "title": "Introducing: Raspberry Pi 5!",
+      "publisher": "Raspberry Pi Ltd; Eben Upton",
+      "revision": "Dated news article, no numbered revision",
+      "document_date": "2023-09-28",
+      "locator": "DA9091 section",
+      "evidence": "Identifies Renesas DA9091 Gilmour as the Pi 5 PMIC, with eight switch-mode supplies; no VIN stress rating.",
+      "web_access": "Article readable",
+      "license": "Raspberry Pi website copyright; no article-specific reuse licence established",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Ignored local source cache; manifest tracked",
+      "download_status": "downloaded"
+    },
+    {
+      "id": "S04",
+      "url": "https://forums.raspberrypi.com/viewtopic.php?p=2157077",
+      "retrieved_at_utc": "2026-09-29T11:12:22.973165+00:00",
+      "http_status": 403,
+      "local_path": null,
+      "sha256": null,
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:25.111489+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:22.973165+00:00",
+          "status": "blocked",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "http_status": 403,
+          "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2157077"
+        }
+      ],
+      "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2157077",
+      "content_type": "text/html; charset=UTF-8",
+      "error": "curl: (22) The requested URL returned error: 403",
+      "title": "vSafe5V - What is max input voltage",
+      "publisher": "Raspberry Pi Forums; dp11 (Raspberry Pi Engineer & Forum Moderator)",
+      "revision": "Post p=2157077, displayed 2023-11-14 19:32; no edit revision established",
+      "document_date": "2023-11-14",
+      "locator": "dp11 post, 19:32; thread t=359581",
+      "evidence": "Engineer says Pi 5 is fine with 4.75–5.5 V, including a requirement that noise/transients not exceed 5.5 V. USB power discussion, not a fault-duration qualification.",
+      "web_access": "Official-domain search index exposed full relevant post; direct download HTTP 403",
+      "license": "Forum author/site rights; no redistribution licence established",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Remote evidence or failed retrieval only; no local source file",
+      "download_status": "blocked"
+    },
+    {
+      "id": "S05",
+      "url": "https://forums.raspberrypi.com/viewtopic.php?p=2194239",
+      "retrieved_at_utc": "2026-09-29T11:12:23.122708+00:00",
+      "http_status": 403,
+      "local_path": null,
+      "sha256": null,
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:25.246230+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:23.122708+00:00",
+          "status": "blocked",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "http_status": 403,
+          "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2194239"
+        }
+      ],
+      "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2194239",
+      "content_type": "text/html; charset=UTF-8",
+      "error": "curl: (22) The requested URL returned error: 403",
+      "title": "Raspberrypi 5 not booting directly when powered over GPiO - Page 3",
+      "publisher": "Raspberry Pi Forums; jdb (Raspberry Pi Engineer & Forum Moderator)",
+      "revision": "Page addressed by p=2194239; jdb posts 2024-02-16 10:27 and 11:51 UTC; no edit revision established",
+      "document_date": "2024-02-16",
+      "locator": "jdb posts 10:27 and 11:51 UTC in thread t=364720 (p=2194239 is page locator)",
+      "evidence": "Inline USB-C OVP FET initially blocks input; OVP applies only to USB-C and addresses incorrect 9/15/20 V PD supplies. GPIO bypasses this OVP. No maximum OV response time or let-through rating.",
+      "web_access": "Full relevant original posts readable via web tool before direct download HTTP 403",
+      "license": "Forum author/site rights; no redistribution licence established",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Remote evidence or failed retrieval only; no local source file",
+      "download_status": "blocked"
+    },
+    {
+      "id": "S06",
+      "url": "https://forums.raspberrypi.com/viewtopic.php?p=2364493",
+      "retrieved_at_utc": "2026-09-29T11:12:23.308468+00:00",
+      "http_status": 403,
+      "local_path": null,
+      "sha256": null,
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:25.340861+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:23.308468+00:00",
+          "status": "blocked",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "http_status": 403,
+          "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2364493"
+        }
+      ],
+      "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2364493",
+      "content_type": "text/html; charset=UTF-8",
+      "error": "curl: (22) The requested URL returned error: 403",
+      "title": "Pi5 internal power over USB-C broken. How might I repair it?",
+      "publisher": "Raspberry Pi Forums; RGJ-PI (Raspberry Pi Engineer & Forum Moderator)",
+      "revision": "Post/page p=2364493; engineer posts 2026-02-19 13:06 and 16:08; no edit revision established",
+      "document_date": "2026-02-19",
+      "locator": "RGJ-PI 16:08 part identification; 13:06 protection MOSFET / PMIC control description",
+      "evidence": "Names DMG7430LFG-7 as USB-C input protection MOSFET. Board reference designator, all-revision applicability and exact control circuit not established.",
+      "web_access": "Official forum search index exposed engineer identification; direct web open cache miss and direct download HTTP 403",
+      "license": "Forum author/site rights; no redistribution licence established",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Remote evidence or failed retrieval only; no local source file",
+      "download_status": "blocked"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.diodes.com/datasheet/download/DMG7430LFG.pdf",
+      "retrieved_at_utc": "2026-09-29T11:12:23.540785+00:00",
+      "http_status": 200,
+      "local_path": "third_party/documents/pi5_input/DMG7430LFG.pdf",
+      "sha256": "d86f2d2585d5bc3a367d5bbf865da45281f7fe4c430b9ac1f732b0c8d85e9dfe",
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:25.417629+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:23.540785+00:00",
+          "status": "downloaded",
+          "error": null,
+          "http_status": 200,
+          "final_url": "https://www.diodes.com/datasheet/download/DMG7430LFG.pdf"
+        }
+      ],
+      "final_url": "https://www.diodes.com/datasheet/download/DMG7430LFG.pdf",
+      "content_type": "application/pdf",
+      "bytes": 799686,
+      "title": "DMG7430LFG N-channel enhancement mode MOSFET",
+      "publisher": "Diodes Incorporated",
+      "revision": "DS35497 Rev. 9 - 2",
+      "document_date": "2023-11",
+      "locator": "PDF p. 2 Maximum Ratings / notes 5–7; p. 3 safe operating area; p. 4 electrical characteristics",
+      "evidence": "VDS 30 V, VGS ±20 V. No Pi input voltage-duration rating; avalanche and pulsed-current data are device-specific stress conditions.",
+      "web_access": "Official vendor search index readable; first PDF web open internal error; official PDF downloaded successfully",
+      "license": "Copyright 2023 Diodes Incorporated. All Rights Reserved.",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Ignored local source cache; manifest tracked",
+      "download_status": "downloaded"
+    },
+    {
+      "id": "S08",
+      "url": "https://forums.raspberrypi.com/viewtopic.php?t=397399",
+      "retrieved_at_utc": "2026-09-29T11:12:24.295702+00:00",
+      "http_status": 403,
+      "local_path": null,
+      "sha256": null,
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:25.911707+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:24.295702+00:00",
+          "status": "blocked",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "http_status": 403,
+          "final_url": "https://forums.raspberrypi.com/viewtopic.php?t=397399"
+        }
+      ],
+      "final_url": "https://forums.raspberrypi.com/viewtopic.php?t=397399",
+      "content_type": "text/html; charset=UTF-8",
+      "error": "curl: (22) The requested URL returned error: 403",
+      "title": "PI 5 burnt IC FK4YA",
+      "publisher": "Raspberry Pi Forums; RGJ-PI (Raspberry Pi Engineer & Forum Moderator)",
+      "revision": "Thread t=397399, post p=2370772; 2026-04-07 13:11; no edit revision established",
+      "document_date": "2026-04-07",
+      "locator": "RGJ-PI 13:11 post",
+      "evidence": "Identifies AP22652W6-7 load switch; describes loss of USB after removal. Peripheral USB branch role, not the series USB-C input OVP.",
+      "web_access": "Official-domain search result exposed full relevant engineer post; direct download HTTP 403",
+      "license": "Forum author/site rights; no redistribution licence established",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Remote evidence or failed retrieval only; no local source file",
+      "download_status": "blocked"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.diodes.com/datasheet/download/AP22652_AP22653_AP22652A_AP22653A.pdf",
+      "retrieved_at_utc": "2026-09-29T11:12:24.544246+00:00",
+      "http_status": 200,
+      "local_path": "third_party/documents/pi5_input/AP22652_AP22653_AP22652A_AP22653A.pdf",
+      "sha256": "972b6c1b8673f7a154e721162c5f1c5bf5d562e6f369341bf73c53565e017b40",
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:25.991553+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:24.544246+00:00",
+          "status": "downloaded",
+          "error": null,
+          "http_status": 200,
+          "final_url": "https://www.diodes.com/datasheet/download/AP22652_AP22653_AP22652A_AP22653A.pdf"
+        }
+      ],
+      "final_url": "https://www.diodes.com/datasheet/download/AP22652_AP22653_AP22652A_AP22653A.pdf",
+      "content_type": "application/pdf",
+      "bytes": 1048470,
+      "title": "AP22652/AP22653/AP22652A/AP22653A",
+      "publisher": "Diodes Incorporated",
+      "revision": "DS41186 Rev. 5 - 2",
+      "document_date": "2026-03",
+      "locator": "PDF p. 4 Absolute Maximum Ratings and Recommended Operating Conditions; pp. 5–6 timing; pp. 10–11 operating protection",
+      "evidence": "IN/OUT and listed control pins −0.3 to +6.0 V absolute maximum; VIN operation 3.0–5.5 V. No above-6 V rail transient allowance. ESD test and short-circuit response do not define VIN fault survival.",
+      "web_access": "Full official PDF readable and downloaded",
+      "license": "Copyright 2026 Diodes Incorporated. All Rights Reserved.",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Ignored local source cache; manifest tracked",
+      "download_status": "downloaded"
+    },
+    {
+      "id": "S10",
+      "url": "https://forums.raspberrypi.com/viewtopic.php?p=2241067",
+      "retrieved_at_utc": "2026-09-29T11:12:27.621319+00:00",
+      "http_status": 403,
+      "local_path": null,
+      "sha256": null,
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:26.073554+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:27.621319+00:00",
+          "status": "blocked",
+          "error": "curl: (22) The requested URL returned error: 403",
+          "http_status": 403,
+          "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2241067"
+        }
+      ],
+      "final_url": "https://forums.raspberrypi.com/viewtopic.php?p=2241067",
+      "content_type": "text/html; charset=UTF-8",
+      "error": "curl: (22) The requested URL returned error: 403",
+      "title": "Two RPi 5 dead - Page 2",
+      "publisher": "Raspberry Pi Forums; jamesh (Raspberry Pi Engineer & Forum Moderator)",
+      "revision": "Page addressed by p=2241067; posts 2024-07-30 13:24 and 16:11; no edit revision established",
+      "document_date": "2024-07-30",
+      "locator": "jamesh 16:11 unpublished DA9091 datasheet; 13:24 and 16:11 Pi 4 anecdote",
+      "evidence": "Engineer states Raspberry Pi cannot publish a DA9091 datasheet. Described 9 V nanosecond PMIC failure is explicitly Pi 4, not a Pi 5 rating; another user’s 5.7 V inference is unqualified.",
+      "web_access": "Relevant original posts readable via web tool; direct download HTTP 403",
+      "license": "Forum author/site rights; no redistribution licence established",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Remote evidence or failed retrieval only; no local source file",
+      "download_status": "blocked"
+    },
+    {
+      "id": "S11",
+      "url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf",
+      "retrieved_at_utc": "2026-09-29T11:12:27.816290+00:00",
+      "http_status": 200,
+      "local_path": "third_party/documents/pi5_input/usb_pd_whitepaper.pdf",
+      "sha256": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e",
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:26.181814+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:27.816290+00:00",
+          "status": "downloaded",
+          "error": null,
+          "http_status": 200,
+          "final_url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf"
+        }
+      ],
+      "final_url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf",
+      "content_type": "application/pdf",
+      "bytes": 434270,
+      "title": "USB Power Delivery on Raspberry Pi 5",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-009856-WP-1; Release 1; build 1026f0c6e305",
+      "document_date": "2026-03-05",
+      "build_date": "2026-03-17",
+      "locator": "Printed pp. 5, 7–8 (PDF pp. 6, 8–9); colophon PDF p. 2 and version history PDF p. 3",
+      "evidence": "Pi 5 requests only 5 V PDOs and ignores higher voltages; GPIO or non-PD 5 V supply is documented. No fault-voltage survival table.",
+      "web_access": "Full official PDF readable and downloaded",
+      "license": "Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Ignored local source cache; manifest tracked",
+      "download_status": "downloaded"
+    },
+    {
+      "id": "S12",
+      "url": "https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf",
+      "retrieved_at_utc": "2026-09-29T11:12:28.330584+00:00",
+      "http_status": 200,
+      "local_path": "third_party/documents/pi5_input/hat_plus_specification.pdf",
+      "sha256": "3a0932253767147038383162ac9f4b5aac3adb048c30bd1f9177a462a054ca1e",
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:26.261069+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:28.330584+00:00",
+          "status": "downloaded",
+          "error": null,
+          "http_status": 200,
+          "final_url": "https://pip-assets.raspberrypi.com/categories/1215-raspberry-pi-hat/documents/RP-008281-DS-1-hat-plus-specification.pdf"
+        }
+      ],
+      "final_url": "https://pip-assets.raspberrypi.com/categories/1215-raspberry-pi-hat/documents/RP-008281-DS-1-hat-plus-specification.pdf",
+      "content_type": "application/pdf",
+      "bytes": 1210200,
+      "title": "Raspberry Pi HAT+ Specification",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "Build version 6df06cc-clean",
+      "document_date": "2024-12-05",
+      "locator": "Printed pp. 4, 9, 12 (PDF pp. 5, 10, 13); colophon PDF p. 2",
+      "evidence": "5 V remains applied to PMIC in standby; Power HAT+ supplies GPIO 5 V pins; minimum 3 A at 5.1 V, recommended 5 A at 5.1 V. No GPIO fault survival rating.",
+      "web_access": "Full official PDF readable and downloaded",
+      "license": "Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Ignored local source cache; manifest tracked",
+      "download_status": "downloaded"
+    },
+    {
+      "id": "S13",
+      "url": "https://pip.raspberrypi.com/categories/892-raspberry-pi-5",
+      "retrieved_at_utc": "2026-09-29T11:12:30.980955+00:00",
+      "http_status": 200,
+      "local_path": "third_party/documents/pi5_input/pi5_product_portal.html",
+      "sha256": "82d780cdecf288878eac97667c4204d3b0edf53a2e6295da3e37fb74f4818f58",
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:27.250394+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:30.980955+00:00",
+          "status": "downloaded",
+          "error": null,
+          "http_status": 200,
+          "final_url": "https://pip.raspberrypi.com/categories/892-raspberry-pi-5"
+        }
+      ],
+      "final_url": "https://pip.raspberrypi.com/categories/892-raspberry-pi-5",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 48804,
+      "title": "Raspberry Pi 5 Product Information Portal",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "Live HTML, no numbered revision; product brief listing updated 2026-04-01",
+      "document_date": null,
+      "locator": "Documents and product brief entry",
+      "evidence": "Official document discovery index. Listing update date is distinct from document publication/revision.",
+      "web_access": "Official HTML readable and downloaded",
+      "license": "Raspberry Pi website copyright; no page-specific reuse licence established",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Ignored local source cache; manifest tracked",
+      "download_status": "downloaded"
+    },
+    {
+      "id": "X01",
+      "url": "https://www.renesas.com/en/document/dst/da9091-datasheet",
+      "retrieved_at_utc": "2026-09-29T11:12:32.625573+00:00",
+      "http_status": 404,
+      "local_path": null,
+      "sha256": null,
+      "attempts": [
+        {
+          "retrieved_at_utc": "2026-09-29T11:11:27.922278+00:00",
+          "status": "retrieval_error",
+          "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+          "http_status": null
+        },
+        {
+          "retrieved_at_utc": "2026-09-29T11:12:32.625573+00:00",
+          "status": "retrieval_error",
+          "error": "curl: (56) The requested URL returned error: 404",
+          "http_status": 404,
+          "final_url": "https://www.renesas.com/en/document/dst/da9091-datasheet"
+        }
+      ],
+      "final_url": "https://www.renesas.com/en/document/dst/da9091-datasheet",
+      "content_type": "text/html; charset=UTF-8",
+      "error": "curl: (56) The requested URL returned error: 404",
+      "title": "DA9091 datasheet: unconfirmed vendor endpoint probe",
+      "publisher": "Renesas Electronics",
+      "revision": null,
+      "document_date": null,
+      "locator": null,
+      "evidence": "A guessed conventional Renesas document URL returned 404; this is not proof that a document does not exist. No DA9091 VIN or transient rating was retrieved.",
+      "web_access": "Web open internal error; direct HTTP 404",
+      "license": "UNKNOWN; no document obtained",
+      "reuse": "REFERENCED only; no circuit copied or adapted",
+      "modifications": "None to upstream bytes",
+      "required_attribution": "Retain named author/publisher, title, URL, revision/date and any licence/copyright notices; no new redistribution rights inferred.",
+      "git_disposition": "Remote evidence or failed retrieval only; no local source file",
+      "download_status": "retrieval_error"
+    }
+  ],
+  "additional_access_failures": [
+    {
+      "url": "https://forums.raspberrypi.com/viewtopic.php?t=364720&start=50",
+      "method": "web open",
+      "http_status": 403,
+      "status": "blocked; moved on",
+      "note": "A separately discovered p=2194239 page was readable by web tool before the direct-download attempt; no access-control bypass used."
+    },
+    {
+      "url": "https://forums.raspberrypi.com/viewtopic.php?t=372663&start=25",
+      "method": "web open",
+      "http_status": 403,
+      "status": "blocked; moved on"
+    },
+    {
+      "url": "https://www.diodes.com/assets/Datasheets/AP22652_AP22653_AP22652A_AP22653A.pdf",
+      "method": "web open",
+      "http_status": null,
+      "status": "internal error; no HTTP code supplied",
+      "note": "Official current /datasheet/download/ URL later succeeded."
+    }
+  ],
+  "additional_reviewed_sources": [
+    {
+      "url": "https://forums.raspberrypi.com/viewtopic.php?t=372663",
+      "title": "RPi 5 USB-C overvoltage protection",
+      "revision": "Posts 2024-06-23 through 2024-06-28; no edit revision established",
+      "document_date": "2024-06",
+      "access": "First page readable via web tool; no local download",
+      "local_path": null,
+      "sha256": null,
+      "license": "Forum author/site rights; no redistribution licence established",
+      "reuse": "REFERENCED to reject unsupported claims",
+      "modifications": "None",
+      "required_attribution": "Forum authors and Raspberry Pi Forums, linked by title/URL",
+      "locator": "hippy 2024-06-27 17:23 and preceding Pi 4 comparisons",
+      "finding": "6 V Pi 5 value is explicitly guessed from Pi 4; TVS identity also speculative. Neither adopted."
+    }
+  ],
+  "search_scope": [
+    {
+      "area": "Official Raspberry Pi first",
+      "queries": [
+        "site:raspberrypi.com Raspberry Pi 5 product brief power schematics DA9091",
+        "site:forums.raspberrypi.com Pi 5 5.5V",
+        "site:forums.raspberrypi.com Pi 5 TVS",
+        "site:forums.raspberrypi.com DMG7430LFG-7"
+      ],
+      "result": "Normal supply documentation, engineer statements, no numeric Pi 5 fault voltage-duration table found."
+    },
+    {
+      "area": "Then input-component vendors",
+      "queries": [
+        "site:renesas.com DA9091",
+        "site:renesas.com DA9091 datasheet maximum",
+        "site:diodes.com DMG7430LFG Maximum",
+        "site:diodes.com AP22652 AP22653 datasheet"
+      ],
+      "result": "MOSFET and USB switch datasheets obtained. No public DA9091 datasheet found. Similar DA9061/DA9090/DA9141 ratings not transferred."
+    }
+  ],
+  "unresolved_sources": [
+    "Official Pi 5 circuit/reduced schematic and complete 5 V rail BOM for exact board revisions: not found in inspected indexes.",
+    "Renesas DA9091 VIN absolute maximum and transient specification: not found publicly; Raspberry Pi engineer says datasheet cannot be published.",
+    "Pi 5 input OVP controller circuit, thresholds/tolerances, response time and guaranteed let-through: not retrieved.",
+    "Confirmed Pi 5 5 V rail TVS identity, topology and vendor datasheet: not established; presence and absence both unproven.",
+    "Official Pi 5 voltage-duration, energy, repetition and damage/functional criteria for either input: not found."
+  ],
+  "validation": {
+    "date": "2026-09-29",
+    "repository_check": "PASS; 13 hardware files verified; no errors",
+    "unittest": "PASS; 10 tests",
+    "hash_audit": "PASS; all 7 cached originals matched SHA-256 and byte counts; no unregistered cache file",
+    "visual_review": "DMG7430LFG PDF p. 2 and AP22652 family PDF p. 4 reviewed from local PDF renders",
+    "scope": "Repository/document integrity, not electrical validation. Required checks rerun before each commit."
+  }
+}
