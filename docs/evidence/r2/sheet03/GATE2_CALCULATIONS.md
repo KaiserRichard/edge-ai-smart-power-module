@@ -20,12 +20,12 @@ and the values actually used, and appends `gate_2` to
 The raw-bulk load-release screen leaves **21.954mV** false-trip margin after
 the existing10mV allocation. The selected fault screen yields
 **5.481612V at the Pi,18.388mV below5.5V**. The reduced-resistance harness
-screen yields **4.761431V at5A,11.431mV above4.75V**; it still misses the
-separate100mV dynamic reserve by88.569mV. Both narrow margins remain **OPEN**.
+screen yields **4.761431V at 5 A,11.431mV above4.75V**; it still misses the
+separate 100 mV dynamic reserve by88.569mV. Both narrow margins remain **OPEN**.
 
-The fault margin fell from39.328mV because Gate1d changed the assumed crowbar
-action time from0.20µs to0.30µs to accommodate the larger selected MOSFET's
-gate-charge screen. That extra0.10µs raises the calculated peak by20.940mV.
+The fault margin fell from 39.328 mV because Gate1d changed the assumed crowbar
+action time from 0.20 µs to 0.30 µs to accommodate the larger selected MOSFET's
+gate-charge screen. That extra 0.10 µs raises the calculated peak by 20.940 mV.
 The threshold divider did not change. No measured action time or peak is claimed.
 
 The reused partial detector/latch/driver/charge estimate is207.361ns using
