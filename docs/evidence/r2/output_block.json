@@ -1937,18 +1937,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },
@@ -1959,18 +1959,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },
@@ -1981,18 +1981,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },
@@ -2003,18 +2003,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },
@@ -2025,18 +2025,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },
@@ -2047,18 +2047,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },
@@ -2069,18 +2069,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },
@@ -2091,18 +2091,18 @@
       "kind": "C",
       "pins": {
         "1": {
-          "name": "+ / 1",
+          "name": "+",
           "net": "VOUT_5V1",
           "type": "passive"
         },
         "2": {
-          "name": "- / 2",
+          "name": "-",
           "net": "GND",
           "type": "passive"
         }
       },
       "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
-      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "source": "Nichicon PCH May2024 catalog pp1-2; 10x16mm case",
       "rating": "DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN",
       "polarized": true
     },

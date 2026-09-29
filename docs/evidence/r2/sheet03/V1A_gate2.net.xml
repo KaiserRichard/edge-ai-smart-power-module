@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/hardware/kicad/V1A.kicad_sch</source>
-    <date>2026-09-29T23:29:07+0700</date>
+    <date>2026-09-29T23:34:08+0700</date>
     <tool>Eeschema 9.0.6</tool>
     <textvar name="RELEASE_STATUS">NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -1428,7 +1428,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1436,7 +1436,7 @@
       </fields>
       <libsource lib="V1A" part="C330_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -1448,7 +1448,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1456,7 +1456,7 @@
       </fields>
       <libsource lib="V1A" part="C331_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -1468,7 +1468,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1476,7 +1476,7 @@
       </fields>
       <libsource lib="V1A" part="C332_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -1488,7 +1488,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1496,7 +1496,7 @@
       </fields>
       <libsource lib="V1A" part="C333_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -1508,7 +1508,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1516,7 +1516,7 @@
       </fields>
       <libsource lib="V1A" part="C334_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -1528,7 +1528,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1536,7 +1536,7 @@
       </fields>
       <libsource lib="V1A" part="C335_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -1548,7 +1548,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1556,7 +1556,7 @@
       </fields>
       <libsource lib="V1A" part="C336_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -1568,7 +1568,7 @@
       <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
-        <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
+        <field name="Source">Nichicon PCH catalog pp1-2; 10x16mm case</field>
         <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
         <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
@@ -1576,7 +1576,7 @@
       </fields>
       <libsource lib="V1A" part="C337_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
-      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
+      <property name="Source" value="Nichicon PCH catalog pp1-2; 10x16mm case"/>
       <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -3390,8 +3390,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C302_Capacitor_specification">
@@ -3403,8 +3403,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C303_Capacitor_specification">
@@ -3416,8 +3416,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C304_Capacitor_specification">
@@ -3429,8 +3429,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C305_Capacitor_specification">
@@ -3442,8 +3442,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C306_Capacitor_specification">
@@ -3455,8 +3455,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C307_Capacitor_specification">
@@ -3468,8 +3468,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C308_Capacitor_specification">
@@ -3481,8 +3481,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C309_Capacitor_specification">
@@ -3494,8 +3494,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C310_Capacitor_specification">
@@ -3507,8 +3507,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C311_Capacitor_specification">
@@ -3520,8 +3520,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C312_Capacitor_specification">
@@ -3533,8 +3533,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C313_Capacitor_specification">
@@ -3546,8 +3546,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C314_Capacitor_specification">
@@ -3559,8 +3559,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C315_Capacitor_specification">
@@ -3572,8 +3572,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C316_Capacitor_specification">
@@ -3585,8 +3585,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C317_Capacitor_specification">
@@ -3598,8 +3598,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C318_Capacitor_specification">
@@ -3611,8 +3611,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C319_Capacitor_specification">
@@ -3624,8 +3624,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C320_Capacitor_specification">
@@ -3637,8 +3637,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C321_Capacitor_specification">
@@ -3650,8 +3650,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C322_Capacitor_specification">
@@ -3663,8 +3663,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C323_Capacitor_specification">
@@ -3676,8 +3676,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C324_Capacitor_specification">
@@ -3689,8 +3689,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C325_Capacitor_specification">
@@ -3702,8 +3702,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C330_PCH1V471MCL1GS">
@@ -3715,8 +3715,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C331_PCH1V471MCL1GS">
@@ -3728,8 +3728,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C332_PCH1V471MCL1GS">
@@ -3741,8 +3741,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C333_PCH1V471MCL1GS">
@@ -3754,8 +3754,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C334_PCH1V471MCL1GS">
@@ -3767,8 +3767,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C335_PCH1V471MCL1GS">
@@ -3780,8 +3780,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C336_PCH1V471MCL1GS">
@@ -3793,8 +3793,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C337_PCH1V471MCL1GS">
@@ -3806,8 +3806,8 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="+_/_1" type="passive"/>
-        <pin num="2" name="-_/_2" type="passive"/>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="C401_">
@@ -5433,13 +5433,13 @@
       <node ref="U311" pin="3" pinfunction="B" pintype="input"/>
     </net>
     <net code="23" name="/03_OUTPUT_PROTECTION/ARM_N" class="Default">
-      <node ref="C316" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C316" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="J301" pin="1" pinfunction="BUTTON" pintype="passive"/>
       <node ref="R319" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U313" pin="2" pinfunction="A" pintype="input"/>
     </net>
     <net code="24" name="/03_OUTPUT_PROTECTION/ARM_RC" class="Default">
-      <node ref="C317" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C317" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="R320" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U314" pin="2" pinfunction="A" pintype="input"/>
     </net>
@@ -5482,18 +5482,18 @@
       <node ref="U312" pin="4" pinfunction="Y" pintype="output"/>
     </net>
     <net code="32" name="/03_OUTPUT_PROTECTION/DET_5V" class="Default">
-      <node ref="C303" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C304" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C305" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C315" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C318" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C319" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C320" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C321" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C322" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C323" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C324" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C325" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C303" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C304" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C305" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C315" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C318" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C319" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C320" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C321" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C322" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C323" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C324" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C325" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="R312" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R316" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R317" pin="1" pinfunction="1" pintype="passive"/>
@@ -5516,7 +5516,7 @@
       <node ref="U314" pin="5" pinfunction="VCC" pintype="power_in"/>
     </net>
     <net code="33" name="/03_OUTPUT_PROTECTION/DET_DELAY" class="Default">
-      <node ref="C312" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C312" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="U306" pin="7" pinfunction="DELAY" pintype="passive"/>
     </net>
     <net code="34" name="/03_OUTPUT_PROTECTION/DET_FB" class="Default">
@@ -5525,11 +5525,11 @@
       <node ref="U306" pin="2" pinfunction="FB" pintype="input"/>
     </net>
     <net code="35" name="/03_OUTPUT_PROTECTION/DRV_7V5" class="Default">
-      <node ref="C306" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C308" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C309" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C310" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C311" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C306" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C308" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C309" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C310" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C311" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="D302" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="R314" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U301" pin="1" pinfunction="VCC" pintype="power_in"/>
@@ -5537,7 +5537,7 @@
       <node ref="U315" pin="1" pinfunction="VDD" pintype="power_in"/>
     </net>
     <net code="36" name="/03_OUTPUT_PROTECTION/DRV_DELAY" class="Default">
-      <node ref="C313" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C313" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="U307" pin="7" pinfunction="DELAY" pintype="passive"/>
     </net>
     <net code="37" name="/03_OUTPUT_PROTECTION/DRV_FB" class="Default">
@@ -5560,7 +5560,7 @@
       <node ref="U303" pin="4" pinfunction="IN-" pintype="input"/>
     </net>
     <net code="41" name="/03_OUTPUT_PROTECTION/PROT_BST" class="Default">
-      <node ref="C301" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C301" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="D302" pin="3" pinfunction="K" pintype="passive"/>
       <node ref="U301" pin="9" pinfunction="BST" pintype="passive"/>
     </net>
@@ -5573,7 +5573,7 @@
       <node ref="U301" pin="6" pinfunction="TGDN" pintype="output"/>
     </net>
     <net code="43" name="/03_OUTPUT_PROTECTION/PROT_MID" class="Default">
-      <node ref="C301" pin="2" pinfunction="-_/_2" pintype="passive"/>
+      <node ref="C301" pin="2" pinfunction="-" pintype="passive"/>
       <node ref="Q301" pin="1" pinfunction="S" pintype="passive"/>
       <node ref="Q301" pin="2" pinfunction="S" pintype="passive"/>
       <node ref="Q301" pin="3" pinfunction="S" pintype="passive"/>
@@ -5590,7 +5590,7 @@
       <node ref="U310" pin="4" pinfunction="Y" pintype="output"/>
     </net>
     <net code="45" name="/03_OUTPUT_PROTECTION/REF_2V5" class="Default">
-      <node ref="C302" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C302" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="D301" pin="3" pinfunction="K" pintype="passive"/>
       <node ref="TP303" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U302" pin="6" pinfunction="VOUT" pintype="power_out"/>
@@ -5598,7 +5598,7 @@
       <node ref="U308" pin="5" pinfunction="SENSE" pintype="input"/>
     </net>
     <net code="46" name="/03_OUTPUT_PROTECTION/REF_DELAY" class="Default">
-      <node ref="C314" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C314" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="U308" pin="4" pinfunction="CT" pintype="passive"/>
     </net>
     <net code="47" name="/03_OUTPUT_PROTECTION/RESET_N" class="Default">
@@ -5624,7 +5624,7 @@
       <node ref="U301" pin="7" pinfunction="TGUP" pintype="output"/>
     </net>
     <net code="51" name="/03_OUTPUT_PROTECTION/VIN_AUX" class="Default">
-      <node ref="C307" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C307" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="D303" pin="2" pinfunction="K" pintype="passive"/>
       <node ref="R323" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U306" pin="5" pinfunction="EN" pintype="input"/>
@@ -5706,38 +5706,38 @@
       <node ref="C212" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C213" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C214" pin="2" pinfunction="2" pintype="passive"/>
-      <node ref="C302" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C303" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C304" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C305" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C306" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C307" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C308" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C309" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C310" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C311" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C312" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C313" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C314" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C315" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C316" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C317" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C318" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C319" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C320" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C321" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C322" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C323" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C324" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C325" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C330" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C331" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C332" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C333" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C334" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C335" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C336" pin="2" pinfunction="-_/_2" pintype="passive"/>
-      <node ref="C337" pin="2" pinfunction="-_/_2" pintype="passive"/>
+      <node ref="C302" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C303" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C304" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C305" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C306" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C307" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C308" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C309" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C310" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C311" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C312" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C313" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C314" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C315" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C316" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C317" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C318" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C319" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C320" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C321" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C322" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C323" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C324" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C325" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C330" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C331" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C332" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C333" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C334" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C335" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C336" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C337" pin="2" pinfunction="-" pintype="passive"/>
       <node ref="C402" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C403" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C404" pin="2" pinfunction="2" pintype="passive"/>
@@ -5864,14 +5864,14 @@
       <node ref="C212" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C213" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C214" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="C330" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C331" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C332" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C333" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C334" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C335" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C336" pin="1" pinfunction="+_/_1" pintype="passive"/>
-      <node ref="C337" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="C330" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C331" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C332" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C333" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C334" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C335" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C336" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C337" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="L201" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="Q301" pin="5" pinfunction="D" pintype="passive"/>
       <node ref="Q301" pin="6" pinfunction="D" pintype="passive"/>

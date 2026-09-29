@@ -18,7 +18,7 @@ Pin numbers below are physical package numbers, viewed as specified by each manu
 | U306/U307 TPS7A1601DGNR | 1 OUT, 2 FB, 3 open-collector PG, 4 GND, 5 EN, 6 NC, 7 DELAY, 8 IN, 9 GND thermal pad. TI SBVS171F, Oct2015, p4; DGN0008C drawing4218838/A, Nov2017, appended pp34–36. |
 | U308 TPS3808G25DBVR | 1 open-drain RESET, 2 GND, 3 active-low MR, 4 CT, 5 SENSE, 6 VDD. TI SBVS050N, Aug2026, pp3–4. G25 monitors the 2.5V reference with nominal 2.33V threshold; it is a startup supervisor, not the precision OVP detector. |
 | U312 SN74LVC1G08DBVR | 1 A, 2 B, 3 GND, 4 Y, 5 VCC. TI SCES217AA, Aug2026, p3. |
-| U313 SN74LVC1G14DBVR | 1 NC, 2 A, 3 GND, 4 Y, 5 VCC. TI SCES212, revision/date pinned in register, p3. Schmitt inverter for the active-low ARM button. |
+| U313 SN74LVC1G14DBVR | 1 NC, 2 A, 3 GND, 4 Y, 5 VCC. TI SCES218AA, Oct2025, p3. Schmitt inverter for the active-low ARM button. |
 | U314 SN74LVC1G17DBVR | 1 NC, 2 A, 3 GND, 4 Y, 5 VCC. TI SCES351Y, Oct2025, p3. Schmitt buffer for the delayed history clock. |
 | U315 UCC27511DBVR | **1 VDD, 2 OUTH, 3 OUTL, 4 GND, 5 IN−, 6 IN+.** TI SLUSAW9F, Nov2014, p6. Corrected the wrong mapping in `13e4c2d`. Pin2 feeds R306=1Ω; pin3 goes directly to Q303 gate; pin5 is GND; pin6 receives CROWBAR_ON. |
 | Q301/Q302 BSC034N06NSATMA1 | 1–3 source, 4 gate, 5–8 drain. Infineon final Rev2.3, 06-May-2020, p1; pp10–11 package drawings. Both sources share PROT_MID; Q301 drain is raw, Q302 drain is protected. Opposed body diodes block through-conduction when off. |
@@ -53,3 +53,5 @@ Reset clears history and holds output off. After supply/reference settling and b
 **ERC modeling:** two nonphysical source declarations now accompany real fitted paths: VIN_AUX is fed through D303, and VOUT_PROTECTED through Q301/Q302 when enabled. The flags add no wire or bypass. This supersedes the old prohibition on hiding an *empty* Sheet03 with a flag; the physical paths and driver/control pins must pass independent connectivity checks. ERC cannot represent MOSFET on/off states or establish that either rail is safe.
 
 **OPEN:** preserve the Gate1d 18.39mV fault margin, 11.43mV harness margin, unmet100mV dynamic reserve, timing/source/L/C/thermal assumptions, reference-valid and reset behavior, series SOA, inrush, input protection and final connectors. Pin verification is capture evidence only.
+
+**Resumed verification:** U315 mapping and all series-FET pad numbers pass the fresh KiCad netlist check. Polarized capacitor symbols use unambiguous `+`/`-` names (KiCad replaces spaces in pin names on export). The ledger and exact source register now resolve every selected active part; unspecified passive/button MPNs remain OPEN. Fifteen regression tests include independent corruption checks; these test capture integrity only.

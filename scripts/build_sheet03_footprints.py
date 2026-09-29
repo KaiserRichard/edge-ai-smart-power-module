@@ -64,5 +64,5 @@ def build():
   if t.startswith('(model '):text=text[:a]+text[b:]
  text=text.replace('CP_Elec_10x12.5','Nichicon_PCH_10x16')
  text=re.sub(r'\(descr "[^"]*"\)','(descr "Nichicon PCH May2024 pp1-2;PCH1V471MCL1GS10x16mm;10.3base;4.6terminal gap;adapted KiCad10mm land;assembly review OPEN")',text,count=1)
- (OUT/'Nichicon_PCH_10x16.kicad_mod').write_text(text)
+ (OUT/'Nichicon_PCH_10x16.kicad_mod').write_text('\n'.join(line.rstrip() for line in text.splitlines())+'\n')
 if __name__=='__main__':build()

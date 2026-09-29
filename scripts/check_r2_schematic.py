@@ -123,7 +123,10 @@ def validate(tree, specs):
     }
     for ref, assignments in logic.items():
         for n, wanted in enumerate(assignments,1):
-            if wanted is not None: sheet03[(ref,str(n))] = wanted
+            if wanted is not None:
+                sheet03[(ref,str(n))] = wanted
+            elif nets.get((ref,str(n)), '').startswith('unconnected-') is False:
+                errors.append(f'Sheet03 independent NC violation: {ref}.{n}')
     for ref, a, b in [('R308','VOUT_PROTECTED','CB_R_A'),('R309','CB_R_A','CB_DRAIN'),
                       ('R310','VOUT_PROTECTED','CB_R_B'),('R311','CB_R_B','CB_DRAIN')]:
         sheet03[(ref,'1')], sheet03[(ref,'2')] = a, b
@@ -180,8 +183,13 @@ def validate_sheet03_packages(tree, specs, footprints=None):
         if c.find('sheetpath').get('names') != '/03_OUTPUT_PROTECTION/': continue
         ref=c.get('ref'); spec=specs[ref]
         lib=c.find('libsource'); symbol=libraries.get((lib.get('lib'),lib.get('part')))
+        if symbol is None:
+            errors.append(f'{ref}: exported library symbol missing')
+            continue
         actual={p.get('num'): p.get('name') for p in symbol.findall('./pins/pin')}
         expected=ledger['parts'].get(spec['part'])
+        if expected is None and spec['kind'] in ('IC', 'MOSFET', 'D', 'TVS'):
+            errors.append(f'{ref}: missing independent manufacturer pin ledger')
         if expected and actual != expected['pins']:
             errors.append(f'{ref}: symbol pin identity differs from manufacturer ledger')
         if set(actual) != set(spec['pins']):
@@ -196,7 +204,16 @@ def validate_sheet03_packages(tree, specs, footprints=None):
                   else footprints/(library+'.pretty'))/(name+'.kicad_mod')
             if not path.is_file():
                 errors.append(f'{ref}: footprint file missing: {fp}'); continue
-            pads=set(re.findall(r'\(pad "([^\"]+)"[^\n]*',path.read_text()))
+            # Parse complete pad forms: stock KiCad footprints span lines.
+            from build_sheet03_preliminary import children
+            pads = set()
+            for _, _, form in children(path.read_text()):
+                if not form.startswith('(pad '):
+                    continue
+                number = re.match(r'\(pad "([^"]*)"', form)[1]
+                layers = re.search(r'\(layers ([^)]+)\)', form)[1]
+                if number and any(layer in layers for layer in ('F.Cu', 'B.Cu', '*.Cu')):
+                    pads.add(number)
             # Empty numbers belong to paste-only apertures, never electrical pins.
             if pads != set(actual):
                 errors.append(f'{ref}: footprint pads {sorted(pads)} != symbol pins {sorted(actual)}')

@@ -680,6 +680,281 @@
       "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
       "access_note": "New download in ignored third_party cache",
       "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
+    },
+    {
+      "id": "G2-LTC7001",
+      "manufacturer": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf",
+      "revision": "Rev G, November2021",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf"
+      ],
+      "sha256": null,
+      "relevant_sections": "pp2,7,16",
+      "license": "Analog Devices copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Analog Devices, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Official web PDF reviewed; direct binary retrieval unavailable. Empty failed-download files are not evidence."
+    },
+    {
+      "id": "G2-REF50",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/ref50.pdf",
+      "revision": "SBOS410O, October2025",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/ref50.pdf"
+      ],
+      "sha256": "d2da9488194dba11732c85c498b563c12e0bb6b3e2d21631022dde9bff51a13d",
+      "relevant_sections": "p4 DGK8 pin table",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-TLV3201",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv3201.pdf",
+      "revision": "SBOS561C, May2024",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/tlv3201.pdf"
+      ],
+      "sha256": "1777bba814c74772bb54c6f1f56702985039043ce2fb2affaf996a83eaf1076e",
+      "relevant_sections": "p3 DBV pin table",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-SN74LVC1G74",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf",
+      "revision": "SCES794G, September2021; DCT drawing4220784/D October2025",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/sn74lvc1g74.pdf"
+      ],
+      "sha256": "e46a5a867fec742290000dca5ed3b291535f3c4418ef2ae267acc4ab51b26d8a",
+      "relevant_sections": "p4; pp19-21",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-SN74LVC1G11",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g11.pdf",
+      "revision": "SCES487I, November2024",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/sn74lvc1g11.pdf"
+      ],
+      "sha256": "ffd953703273b43844eae23cfbf31cfc801a3b9443f2c863d49dde62f5a9232b",
+      "relevant_sections": "p3",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-TPS7A16",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tps7a16.pdf",
+      "revision": "SBVS171F, October2015; DGN drawing4218838/A November2017",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/tps7a16.pdf"
+      ],
+      "sha256": "4e05cfdef8f64684f9f24b7d1f86e83badb7784c09c96f2ddbcbdbc0a3b48f80",
+      "relevant_sections": "p4 pins, p6 electrical limits, pp34-36 package",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-TPS3808",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+      "revision": "SBVS050N, August2026",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/tps3808.pdf"
+      ],
+      "sha256": "74d889c0f68af88032f1633c26381817cc03e10d9fd3b4c177a044ad3ed86eed",
+      "relevant_sections": "pp3-4 DBV pins",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-SN74LVC1G08",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf",
+      "revision": "SCES217AA, August2026",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/sn74lvc1g08.pdf"
+      ],
+      "sha256": "30b963cc44233cf3ca35c891ff987c8323a2244ecc765e23296ec96ca4b42666",
+      "relevant_sections": "p3 DBV",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-SN74LVC1G14",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf",
+      "revision": "SCES218AA, October2025",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/sn74lvc1g14.pdf"
+      ],
+      "sha256": "d64e41f0a267e8c5f73873058561642c57e093a2b7ecb4715d7ab62f0ef31a4f",
+      "relevant_sections": "p3 DBV",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-SN74LVC1G17",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+      "revision": "SCES351Y, October2025",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/sn74lvc1g17.pdf"
+      ],
+      "sha256": "c76fa723fac4502423967a1aa087dd669106b52b8de620c024b26e56f5d59309",
+      "relevant_sections": "p3 DBV",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Texas Instruments, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-BSC034N06NS",
+      "manufacturer": "Infineon",
+      "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-bsc034n06ns-datasheet-en.pdf",
+      "revision": "Final Rev2.3, 06-May-2020",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "https://www.infineon.com/assets/row/public/documents/24/49/infineon-bsc034n06ns-datasheet-en.pdf"
+      ],
+      "sha256": null,
+      "relevant_sections": "p1 pins; pp10-11 package",
+      "license": "Infineon copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Infineon, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Official web PDF reviewed; direct binary retrieval unavailable. Empty failed-download files are not evidence."
+    },
+    {
+      "id": "G2-2N7002",
+      "manufacturer": "Nexperia",
+      "url": "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+      "revision": "Rev7, 08-Sep-2011; served copyright2017",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf"
+      ],
+      "sha256": null,
+      "relevant_sections": "p1 Table2, p5 4.5V test",
+      "license": "Nexperia copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Nexperia, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Official web PDF reviewed; direct binary retrieval unavailable. Empty failed-download files are not evidence."
+    },
+    {
+      "id": "G2-BAS116",
+      "manufacturer": "Nexperia",
+      "url": "https://assets.nexperia.com/documents/data-sheet/BAS116.pdf",
+      "revision": "05-Aug-2020",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "https://assets.nexperia.com/documents/data-sheet/BAS116.pdf"
+      ],
+      "sha256": null,
+      "relevant_sections": "p1 Table2",
+      "license": "Nexperia copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Nexperia, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Official web PDF reviewed; direct binary retrieval unavailable. Empty failed-download files are not evidence."
+    },
+    {
+      "id": "G2-BAT46W",
+      "manufacturer": "Vishay",
+      "url": "https://www.vishay.com/docs/86406/bat46w.pdf",
+      "revision": "86406 Rev1.1, 20-Nov-2025",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate2_2026-09-29/bat46w.pdf"
+      ],
+      "sha256": "4913578755adb8c128c72614222a1dc19a4a39c296962234bfe44d4e7f2ffd84",
+      "relevant_sections": "p1 pins, p4 package",
+      "license": "Vishay copyright; no open redistribution license inferred",
+      "use": "REFERENCED for physical pin, package and rating review; project-authored schematic symbols",
+      "modifications": "None to original documents",
+      "required_attribution": "Vishay, document revision/pages/URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "Existing local PDF reused; exact bytes hashed"
+    },
+    {
+      "id": "G2-KICAD-FOOTPRINTS",
+      "manufacturer": "KiCad library contributors",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints",
+      "revision": "9.0.6",
+      "commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "relevant_source_files": [
+        "Package_SON.pretty/Infineon_PG-TDSON-8_6.15x5.15mm.kicad_mod",
+        "Capacitor_SMD.pretty/CP_Elec_10x12.5.kicad_mod",
+        "LICENSE.md"
+      ],
+      "local_files": {
+        "third_party/kicad_gate2/Infineon_PG-TDSON-8_6.15x5.15mm.kicad_mod": "bb2dc6803cbd98bb6f2b10f66e6b7304fbae1d15f617200e0b3e7f48e512e1cd",
+        "third_party/kicad_gate2/CP_Elec_10x12.5.kicad_mod": "38a06e4dea1c800fabc08b8a0a1e8f945f7f4f88a9e2c7b50fba385f2b0f1e4f",
+        "third_party/kicad_gate2/LICENSE.md": "45d2bce75e5a4208f5afb01b8fb2c406e700371c4fe2b5f5cd5c443d46db4d8f"
+      },
+      "license": "CC-BY-SA-4.0 with KiCad electronic-design exception; see third_party/kicad_gate2/LICENSE.md",
+      "use": "COPIED unmodified isolated source extracts; ADAPTED two footprints in project library",
+      "modifications": "Infineon drain fingers numbered8,7,6,5, common drain land retains5; Nichicon value/description set to10x16 and incorrect-height3D model removed; geometry retained. Original source extracts unchanged.",
+      "required_attribution": "KiCad library contributors, repository, exact commit and license retained here and in third_party/kicad_gate2/README.md. Adapted collection retains CC-BY-SA-4.0 with exception.",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md",
+      "access_note": "All three isolated files compared byte-for-byte with GitLab raw API at pinned commit; matches."
     }
   ],
   "project_evidence": [
@@ -922,5 +1197,6 @@
     "Official TDK characterization URL located; web PDF readable. Direct Coilcraft and TDK PDF downloads returned403. Local archived bytes reviewed; not mislabelled as fresh official downloads.",
     "Coilcraft plot, TDK archived-mirror plot and CSD17308 SOA visually reviewed using temporary PDF tooling; no system configuration changed.",
     "Gate1c references are appended; earlier gate provenance and files preserved."
-  ]
+  ],
+  "gate_2_scope": "Pin/package verification and selected project-authored capture; component qualification and electrical release remain OPEN."
 }

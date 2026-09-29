@@ -222,8 +222,8 @@
     },
     "PCH1V471MCL1GS": {
       "pins": {
-        "1": "+ / 1",
-        "2": "- / 2"
+        "1": "+",
+        "2": "-"
       },
       "source_id": "G1C-PCH",
       "reviewed_pages": "pp1-2 positive/negative terminals and 10x16mm case",
