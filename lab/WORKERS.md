@@ -11,9 +11,9 @@ Check with `CODEX_HOME=~/.codex-<x> codex login status`. Never read or print aut
 | codex-a | `~/.codex-a` | Logged in; usage limit hit 2026-09-29 ~10:40 UTC, resets 22:03 local | Repo trusted in this home |
 | codex-b | `~/.codex-b` | Refresh token revoked 11:00 UTC 2026-09-29; user must log in again | Repo trusted in this home |
 | codex-c | `~/.codex-c` | Refresh token revoked 11:08 UTC 2026-09-29; user must log in again | Reserved for the reviewer role after the first round has results; not launched |
-| codex-d | `~/.codex-d` | Logged in, answers, 2026-09-29 | Spare for independent jobs (footprints, 3D models) |
+| codex-d | `~/.codex-d` | Usage limit hit 11:18 UTC 2026-09-29, resets 22:55 local | Spare for independent jobs (footprints, 3D models) |
 | codex-e | `~/.codex-e` | Logged in again, answers, 2026-09-29 | Re-added by the user after the earlier removal |
-| codex-f | `~/.codex-f` | Logged in, answers, 2026-09-29 | Spare; candidate acting conductor (see [CONDUCTOR.md](CONDUCTOR.md)) |
+| codex-f | `~/.codex-f` | Running brief 02 since 11:20 UTC | Also the candidate acting conductor (see [CONDUCTOR.md](CONDUCTOR.md)) |
 | default | `~/.codex` | Not logged in, 2026-09-29 | Not used |
 
 New account: `mkdir -p ~/.codex-c && CODEX_HOME="$HOME/.codex-c" codex login --device-auth`, run by the user.
@@ -48,7 +48,8 @@ Rules: one worker per worktree; only one worker edits KiCad files at a time (DEC
 | Worker | Account | Worktree / branch | Base | Task | State |
 | --- | --- | --- | --- | --- | --- |
 | (user-started) Brief02 | codex-a | `v1a-wt-brief02` / `codex/brief02-protection` | `a2e3cd7` (PR #1) | Codex brief 02 | Started by the user 10:29 UTC; Task 1 written but uncommitted; stopped 10:39 at codex-a's usage limit. Replaced by codex-d |
-| V1A Brief02 codex-d | codex-d | `v1a-wt-brief02` / `codex/brief02-protection` | `a2e3cd7` (PR #1) | [BRIEF_02_CONTINUE](briefs/BRIEF_02_CONTINUE.md) | Running since 11:05 UTC |
+| V1A Brief02 codex-d | codex-d | `v1a-wt-brief02` / `codex/brief02-protection` | `a2e3cd7` (PR #1) | [BRIEF_02_CONTINUE](briefs/BRIEF_02_CONTINUE.md) | Committed Task 1 (1a08b1a); Task 4 partly written; stopped 11:18 UTC at usage limit (resets 22:55 local). Replaced by codex-f |
+| V1A Brief02 codex-f | codex-f | `v1a-wt-brief02` / `codex/brief02-protection` | `a2e3cd7` (PR #1) | [BRIEF_02_CONTINUE_2](briefs/BRIEF_02_CONTINUE_2.md) | Running since 11:20 UTC |
 | V1A Pi5Envelope codex-e | codex-e | `v1a-wt-pi5-envelope` / `codex/pi5-input-envelope` | `de1d35c` | [BRIEF_03](briefs/BRIEF_03_PI_FAULT_ENVELOPE.md) | Running since 11:09 UTC |
 | (not started) | – | `v1a-wt-connectors` / `codex/connector-shortlist` | `de1d35c` | [BRIEF_04](briefs/BRIEF_04_CONNECTORS.md) | Worktree ready; not launched (codex-c login revoked) |
 | V1A Smoke codex-a | codex-a | `v1a-wt-smoke-codex-a` / `lab/smoke-codex-a` | `de1d35c` | Read-only: list sheets, read ERC report | Done 2026-09-29, stopped. Answer correct (6 sheets; 1 ERC error, U402 pin 1) |
