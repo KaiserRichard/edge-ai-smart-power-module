@@ -1,0 +1,705 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-29",
+  "branch": "codex/connector-shortlist",
+  "takeover_head": "de1d35c07a0c0a9b368527522aa01ed11c762869",
+  "status": "RECOMMENDATION FOR REVIEW; all connector selections OPEN; R2/R3 BLOCKED",
+  "scope": "Two candidates per connector using the two existing power systems and XH/PH signal systems; no hardware change, source selection, gate completion, purchasing, push or PR. Recommendation context incorporates D-30 only; GPIO power entry and intended Pi 5/D435i load are settled, normal input 9-24 V is a known requirement, and no selection or KiCad change is authorized.",
+  "cache_policy": "Original manufacturer downloads and retrieval records are ignored under third_party/documents/connectors_2026-09-29/. Only this authored register and CONNECTOR_SHORTLIST.md are intended for Git. Missing caches do not affect repository tests; exact snapshot reproduction needs the recorded hashes.",
+  "context": [
+    {
+      "path": "CLAUDE.md",
+      "sha256": "a979aeb3a3a49e3ad0aa2b452b7b8766d1fe1f4b69b1bba37c682b88d2ba72eb",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "8c912cfc1de8052e20ef1f10e3633e255e91abf6b4eb1476e95a34fd49320eb3",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "docs/context/01_PROJECT_OVERVIEW.md",
+      "sha256": "6bf98145b7b6a6c137b753872117ded9376828699cf3fdeb8a0b1d567fbee1be",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "docs/context/03_ENGINEERING_STATE.md",
+      "sha256": "00070f70b4c2d76bd604a06a733a6c7690c442e614d0efe3b3bcfcd2e4ed27a6",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "docs/evidence/r2/forensic_2026-09-14/CONNECTOR_HARNESS_QUALIFICATION.md",
+      "sha256": "62040bafbc3e28d7b747fea42d5184bba16bb6baa7b8ff3ac8c4570d2b3605e5",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "docs/evidence/r2/forensic_2026-09-14/PI_POWER_DELIVERY_REFINED.md",
+      "sha256": "8ad403e6dc9afb967c54759168cc0d57b11e44b3afa69ae929871125e61e1371",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/BRIEF_04_CONNECTORS.md",
+      "sha256": "ae336bf1d51343debb35b474168ae6ca92a06163d9879730d1b4e6ac445442d0",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/BRIEF_04_CONTINUE_1.md",
+      "sha256": "dad9d50ccf325ce9d821771f33b58933d10456d895e1dbe4d435f7e62d8566f9",
+      "use": "Read-only project/task context; external worktrees were not changed"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.claude/worktrees/bridge-cse_01C6ZxJVyMr16AWfNQjxeYhR/lab/REQUIREMENTS.md",
+      "sha256": "6ac1902901355c29d3657f558f09aee0dfec2333e38eac89e9e971bc3906f163",
+      "use": "Read-only project/task context; external worktrees were not changed",
+      "status": "Updated D-30 requirements read in full; controlling context"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "J.S.T. Mfg. Co., Ltd.",
+      "title": "VH connector catalog",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eVH.pdf",
+      "revision": "No printed revision identified; six-page snapshot pinned by SHA-256",
+      "accessed_date": "2026-09-29",
+      "relevant_sections": [
+        "PDF p1 specifications",
+        "p2 SVH-21T-P1.1 and VHR-2N",
+        "p4 B2P-VH-FB-B and mounting-side PCB pattern",
+        "p5 ordering notation"
+      ],
+      "function_studied": "J501/J502 shrouded VH pair, ratings, contact/wire fit, geometry and latch",
+      "use": "REFERENCED",
+      "modifications": "None; no upstream document or hardware edited. Authored factual summary and conditional calculations only.",
+      "license": "Manufacturer copyright; no open redistribution license established.",
+      "required_attribution": "Retain manufacturer, title, URL, revision or retrieval date, and hash where available. Do not redistribute source documents without establishing permission.",
+      "limitations": [
+        "7 A at AWG18 for shrouded header; 10 A/AWG16 standard-header figure does not apply.",
+        "Ambient-specific current curve, numeric mating-cycle qualification, hot resistance and pulse rating not given in this catalog.",
+        "VHRR-2N retainer-compatible housing cannot mate to the two-position shrouded header."
+      ],
+      "status": "HTTP 200; original bytes in ignored manufacturer cache",
+      "local_path": "third_party/documents/connectors_2026-09-29/JST_VH.pdf",
+      "bytes": 122881,
+      "sha256": "d51e669c597988b20c0963daf5bef7356cbd2104c1f867e9107c6fa6cd2b899c"
+    },
+    {
+      "id": "S2",
+      "publisher": "J.S.T. Mfg. Co., Ltd.",
+      "title": "XH connector catalog",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "revision": "No printed revision identified; nine-page snapshot pinned by SHA-256",
+      "accessed_date": "2026-09-29",
+      "relevant_sections": [
+        "PDF p1 specifications",
+        "p2 mounting-side PCB and assembly pattern",
+        "p3 SXH-001T-P0.6",
+        "p4 XHP-4",
+        "p5 B4B-XH-A",
+        "p8 contact ordering notation"
+      ],
+      "function_studied": "J503 XH pair and wire/geometry limits",
+      "use": "REFERENCED",
+      "modifications": "None; no upstream document or hardware edited. Authored factual summary and conditional calculations only.",
+      "license": "Manufacturer copyright; no open redistribution license established.",
+      "required_attribution": "Retain manufacturer, title, URL, revision or retrieval date, and hash where available. Do not redistribute source documents without establishing permission.",
+      "limitations": [
+        "3 A uses AWG22; catalog ambient range includes self-heating.",
+        "No numeric mating-cycle qualification or ambient-specific current curve identified.",
+        "SXH-001T-P0.6 is the normal contact, not the low-insertion-force N suffix."
+      ],
+      "status": "HTTP 200; original bytes in ignored manufacturer cache",
+      "local_path": "third_party/documents/connectors_2026-09-29/JST_XH.pdf",
+      "bytes": 175724,
+      "sha256": "9426b136902f11900825077535e5c65032b7fbc31ffb59c5e9e1f463bb20fb90"
+    },
+    {
+      "id": "S3",
+      "publisher": "J.S.T. Mfg. Co., Ltd.",
+      "title": "PH connector catalog",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf",
+      "revision": "No printed revision identified; five-page snapshot pinned by SHA-256",
+      "accessed_date": "2026-09-29",
+      "relevant_sections": [
+        "PDF p1 specifications and PCB pattern",
+        "p2 SPH-002T-P0.5S",
+        "p3 PHR-4 and B4B-PH-K-S"
+      ],
+      "function_studied": "J503 compact PH pair and wire/geometry limits",
+      "use": "REFERENCED",
+      "modifications": "None; no upstream document or hardware edited. Authored factual summary and conditional calculations only.",
+      "license": "Manufacturer copyright; no open redistribution license established.",
+      "required_attribution": "Retain manufacturer, title, URL, revision or retrieval date, and hash where available. Do not redistribute source documents without establishing permission.",
+      "limitations": [
+        "2 A uses AWG24; temperature range includes self-heating.",
+        "No numeric mating-cycle qualification or ambient-specific current curve identified.",
+        "Standard contact S retained; low-insertion-force L is not proposed."
+      ],
+      "status": "HTTP 200; original bytes in ignored manufacturer cache",
+      "local_path": "third_party/documents/connectors_2026-09-29/JST_PH.pdf",
+      "bytes": 103369,
+      "sha256": "447624f4f2f7d37c58c1eaa7ee314ad757fe7aff48f6186491ef6f69fbc00b96"
+    },
+    {
+      "id": "S4",
+      "publisher": "Phoenix Contact",
+      "title": "MSTBA 2,5/ 2-G-5,08 PCB header, item 1757242",
+      "url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstba-25-2-g-508-1757242",
+      "revision": "Live unversioned manufacturer product record, accessed 2026-09-29; raw-byte pin unavailable",
+      "accessed_date": "2026-09-29",
+      "relevant_sections": [
+        "Electrical properties",
+        "Environmental and real-life conditions / Durability test",
+        "Ambient conditions",
+        "Compatible products"
+      ],
+      "function_studied": "J501/J502 Phoenix header ratings and mating system",
+      "use": "REFERENCED",
+      "modifications": "None; no upstream document or hardware edited. Authored factual summary and conditional calculations only.",
+      "license": "Manufacturer copyright; no open redistribution license established.",
+      "required_attribution": "Retain manufacturer, title, URL, revision or retrieval date, and hash where available. Do not redistribute source documents without establishing permission.",
+      "limitations": [
+        "12 A nominal does not establish 12 A at 100 C or with AWG18. Exact pair/wire derating curve not recovered.",
+        "Contact resistance 1.4 mOhm; durability R1/R2 1.4/1.4 mOhm, 25 cycles. These are catalogue test data, not a guaranteed decomposed hot path.",
+        "Direct download returned HTTP 403; no retry or generated PDF obtained."
+      ],
+      "status": "Manufacturer technical data read through web tool; direct curl HTTP 403; stopped direct retrieval",
+      "local_path": null,
+      "sha256": null
+    },
+    {
+      "id": "S5",
+      "publisher": "Phoenix Contact",
+      "title": "MSTB 2,5/ 2-ST-5,08 PCB connector, item 1757019",
+      "url": "https://www.phoenixcontact.com/en-de/products/pcb-connector-mstb-25-2-st-508-1757019",
+      "revision": "Live unversioned manufacturer product record, accessed 2026-09-29; raw-byte pin unavailable",
+      "accessed_date": "2026-09-29",
+      "relevant_sections": [
+        "Electrical properties",
+        "Connection data",
+        "Dimensions",
+        "Notes on operation",
+        "Mechanical tests",
+        "Environmental and real-life conditions",
+        "Compatible products / mating parts explicitly lists 1757242"
+      ],
+      "function_studied": "Phoenix screw plug, wire range, torque, retention, mating cycles and no-switching limitation",
+      "use": "REFERENCED",
+      "modifications": "None; no upstream document or hardware edited. Authored factual summary and conditional calculations only.",
+      "license": "Manufacturer copyright; no open redistribution license established.",
+      "required_attribution": "Retain manufacturer, title, URL, revision or retrieval date, and hash where available. Do not redistribute source documents without establishing permission.",
+      "limitations": [
+        "Contact resistance 1.3 mOhm; durability R1/R2 1.3/1.4 mOhm at 25 insertion/withdrawal cycles. R1/R2 are not two extra series resistors.",
+        "No positive locking; energized mating/unmating prohibited by manufacturer.",
+        "Exact pair/wire derating curve and downloadable PDF not recovered; direct HTTP 403, stopped."
+      ],
+      "status": "Manufacturer technical data read through web tool; direct curl HTTP 403; stopped direct retrieval",
+      "local_path": null,
+      "sha256": null
+    },
+    {
+      "id": "S6",
+      "publisher": "Belden",
+      "title": "8522 Technical Data Sheet",
+      "url": "https://catalog.belden.com/techdata/EN/8522_techdata.pdf",
+      "revision": "Revision 0.482, 2026-02-20",
+      "accessed_date": "2026-09-29",
+      "relevant_sections": [
+        "PDF p1 conductor, insulation, nominal DCR, current and temperature",
+        "p2 revision and red/black item numbers"
+      ],
+      "function_studied": "AWG18 harness example for both power connector systems",
+      "use": "REFERENCED",
+      "modifications": "None; no upstream document or hardware edited. Authored factual summary and conditional calculations only.",
+      "license": "Manufacturer copyright; no open redistribution license established.",
+      "required_attribution": "Retain manufacturer, title, URL, revision or retrieval date, and hash where available. Do not redistribute source documents without establishing permission.",
+      "limitations": [
+        "6.5 Ohm/1000 ft is nominal, not guaranteed maximum; 20 C reference used in calculations is an assumption.",
+        "16 A figure applies to a single conductor in free air at 30 C, not an installed pair or bundle.",
+        "8522 002100 and 8522 010100 are wire-stock examples; no procurement or harness qualification."
+      ],
+      "status": "HTTP 200; original bytes in ignored manufacturer cache",
+      "local_path": "third_party/documents/connectors_2026-09-29/Belden_8522.pdf",
+      "bytes": 205887,
+      "sha256": "0faec99e9a846456d7bc3e4485599b8e5195cc461c3c4b56b931daf3bd5f8471"
+    },
+    {
+      "id": "S7",
+      "publisher": "J.S.T. Mfg. Co., Ltd.",
+      "title": "Handling Precaution for Terminal and Connector",
+      "url": "https://www.jst-mfg.com/precaution/eP-Handling.pdf",
+      "revision": "No printed revision identified; four-page snapshot, printed pages 959-962",
+      "accessed_date": "2026-09-29",
+      "relevant_sections": [
+        "PDF p4 / printed p962, section 2"
+      ],
+      "function_studied": "JST live-disconnection restriction, current sharing and fretting/strain-relief cautions",
+      "use": "REFERENCED",
+      "modifications": "None; no upstream document or hardware edited. Authored factual summary and conditional calculations only.",
+      "license": "Manufacturer copyright; no open redistribution license established.",
+      "required_attribution": "Retain manufacturer, title, URL, revision or retrieval date, and hash where available. Do not redistribute source documents without establishing permission.",
+      "limitations": [
+        "General handling guidance does not establish live-mating, ground-first sequencing or pulse qualification for these specific parts."
+      ],
+      "status": "HTTP 200; original bytes in ignored manufacturer cache",
+      "local_path": "third_party/documents/connectors_2026-09-29/JST_Handling.pdf",
+      "bytes": 181156,
+      "sha256": "b4319c3cf6cf0cd253cb9bdad3645fa56b26fdabdf637dba630757bc6aa86679"
+    },
+    {
+      "id": "S8",
+      "publisher": "KiCad",
+      "title": "Libraries License",
+      "url": "https://www.kicad.org/libraries/license/",
+      "revision": "Unversioned official publisher policy accessed 2026-09-29",
+      "accessed_date": "2026-09-29",
+      "status": "Read through web tool; no library download or copy",
+      "local_path": null,
+      "sha256": null,
+      "relevant_sections": [
+        "Libraries License",
+        "What does this mean?"
+      ],
+      "function_studied": "License basis for installed standard footprints/models",
+      "use": "REFERENCED",
+      "modifications": "None",
+      "license": "CC-BY-SA 4.0 with KiCad electronic-design exception; official policy states a separate website-content license",
+      "required_attribution": "Retain attribution and license for redistribution of library collections; the stated exception removes design attribution/share-alike requirements merely from using library data in electronic designs. No library collection redistributed here.",
+      "limitations": [
+        "Per-file notices and exact installed upstream Git revision were not recovered; preserve any additional applicable notices when later reusing assets."
+      ]
+    }
+  ],
+  "library_evidence": [
+    {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Connector_JST.pretty/JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical.kicad_mod",
+      "sha256": "cb2962ec26458e225bdf7b6d5d257a407fbee4d44618ad231ccbee0e58727d40",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical.step"
+      ],
+      "model_files": [],
+      "id": "K1",
+      "library_name": "Connector_JST:JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical",
+      "relative_installed_path": "footprints/Connector_JST.pretty/JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical.kicad_mod",
+      "courtyard_mm": [
+        10.82,
+        10.7
+      ],
+      "fabrication_outline_mm": [
+        9.8,
+        9.7
+      ],
+      "plated_drill_mm": 1.7,
+      "model_status": "REFERENCED STEP MISSING; no matching STEP/WRL installed",
+      "use": "REFERENCED; footprint text and file existence/hash inspected; no library asset copied or assigned",
+      "modifications": "None",
+      "revision": "Installed with KiCad 9.0.6; library Git commit not available; individual bytes pinned by SHA-256",
+      "upstream_url": "https://gitlab.com/kicad/libraries/kicad-footprints",
+      "model_upstream_url": "https://gitlab.com/kicad/libraries/kicad-packages3D",
+      "license": "CC-BY-SA 4.0 with KiCad electronic-design exception per official policy S8; inspect per-file notices on future reuse",
+      "required_attribution": "Official exception permits use in electronic designs without mandatory library attribution; redistributed library collections must retain attribution/license and share-alike terms. No asset redistributed here.",
+      "unplated_boss_hole": {
+        "xy_mm": [
+          -1.5,
+          -3.4
+        ],
+        "drill_mm": 1.45,
+        "note": "Compare to JST p4 reference boss hole diameter 1.4 +0.1/0; mounting-side view."
+      }
+    },
+    {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Connector_Phoenix_MSTB.pretty/PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal.kicad_mod",
+      "sha256": "25434f045013e9598baaf25c4002211f385e009171dd66900180443cf400c1a7",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Connector_Phoenix_MSTB.3dshapes/PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal.step"
+      ],
+      "model_files": [
+        {
+          "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Phoenix_MSTB.3dshapes/PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal.wrl",
+          "sha256": "8741198f83f9632a4b230a354fdc087a66c508331308e531d76bbf62434b0063"
+        },
+        {
+          "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Phoenix_MSTB.3dshapes/PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal.step",
+          "sha256": "9504778074e79ac1b4abfc34cd2815dc5c108995e50d5d7c6a6e3f00620b7f9a"
+        }
+      ],
+      "id": "K2",
+      "library_name": "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal",
+      "relative_installed_path": "footprints/Connector_Phoenix_MSTB.pretty/PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal.kicad_mod",
+      "courtyard_mm": [
+        13.17,
+        13.0
+      ],
+      "fabrication_outline_mm": [
+        12.16,
+        12.0
+      ],
+      "plated_drill_mm": 1.4,
+      "model_status": "Referenced STEP plus matching WRL exist locally; geometry not qualified",
+      "use": "REFERENCED; footprint text and file existence/hash inspected; no library asset copied or assigned",
+      "modifications": "None",
+      "revision": "Installed with KiCad 9.0.6; library Git commit not available; individual bytes pinned by SHA-256",
+      "upstream_url": "https://gitlab.com/kicad/libraries/kicad-footprints",
+      "model_upstream_url": "https://gitlab.com/kicad/libraries/kicad-packages3D",
+      "license": "CC-BY-SA 4.0 with KiCad electronic-design exception per official policy S8; inspect per-file notices on future reuse",
+      "required_attribution": "Official exception permits use in electronic designs without mandatory library attribution; redistributed library collections must retain attribution/license and share-alike terms. No asset redistributed here."
+    },
+    {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Connector_JST.pretty/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.kicad_mod",
+      "sha256": "922cdd864c148b07849fb579839c7904dea7b4f897ade781303851f8ce68a23c",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step"
+      ],
+      "model_files": [
+        {
+          "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.wrl",
+          "sha256": "621ff1ac43360bfb5f39fb7bce1d38bf186d7c09643cce509a64f5c03d0adc49"
+        },
+        {
+          "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step",
+          "sha256": "7eb17ded8ec4a3216753a234254e22a2d8e07826f0816045bfb803a19cac75ea"
+        }
+      ],
+      "id": "K3",
+      "library_name": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "relative_installed_path": "footprints/Connector_JST.pretty/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.kicad_mod",
+      "courtyard_mm": [
+        13.4,
+        6.75
+      ],
+      "fabrication_outline_mm": [
+        12.4,
+        5.75
+      ],
+      "plated_drill_mm": 0.95,
+      "model_status": "Referenced STEP plus matching WRL exist locally; geometry not qualified",
+      "use": "REFERENCED; footprint text and file existence/hash inspected; no library asset copied or assigned",
+      "modifications": "None",
+      "revision": "Installed with KiCad 9.0.6; library Git commit not available; individual bytes pinned by SHA-256",
+      "upstream_url": "https://gitlab.com/kicad/libraries/kicad-footprints",
+      "model_upstream_url": "https://gitlab.com/kicad/libraries/kicad-packages3D",
+      "license": "CC-BY-SA 4.0 with KiCad electronic-design exception per official policy S8; inspect per-file notices on future reuse",
+      "required_attribution": "Official exception permits use in electronic designs without mandatory library attribution; redistributed library collections must retain attribution/license and share-alike terms. No asset redistributed here."
+    },
+    {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Connector_JST.pretty/JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical.kicad_mod",
+      "sha256": "409c59b67768268c9c7ff0134d3e1eaa1bd3862d8b3349c9b1abdee234b2c5aa",
+      "model_references": [
+        "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical.step"
+      ],
+      "model_files": [
+        {
+          "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_JST.3dshapes/JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical.step",
+          "sha256": "0703774983dd0bf32b5175315a63ebb9c9439b35cb491768770aaa13ded27934"
+        },
+        {
+          "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_JST.3dshapes/JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical.wrl",
+          "sha256": "99abfdb91750a226aa94d77c276ae51c7cc322dbd7e6d3db584e2ea683cca51d"
+        }
+      ],
+      "id": "K4",
+      "library_name": "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical",
+      "relative_installed_path": "footprints/Connector_JST.pretty/JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical.kicad_mod",
+      "courtyard_mm": [
+        10.9,
+        5.5
+      ],
+      "fabrication_outline_mm": [
+        9.9,
+        4.5
+      ],
+      "plated_drill_mm": 0.75,
+      "model_status": "Referenced STEP plus matching WRL exist locally; geometry not qualified",
+      "use": "REFERENCED; footprint text and file existence/hash inspected; no library asset copied or assigned",
+      "modifications": "None",
+      "revision": "Installed with KiCad 9.0.6; library Git commit not available; individual bytes pinned by SHA-256",
+      "upstream_url": "https://gitlab.com/kicad/libraries/kicad-footprints",
+      "model_upstream_url": "https://gitlab.com/kicad/libraries/kicad-packages3D",
+      "license": "CC-BY-SA 4.0 with KiCad electronic-design exception per official policy S8; inspect per-file notices on future reuse",
+      "required_attribution": "Official exception permits use in electronic designs without mandatory library attribution; redistributed library collections must retain attribution/license and share-alike terms. No asset redistributed here.",
+      "suffix_note": "Library name omits -S; p3 catalog geometry is B4B-PH-K-S. Geometric starting point only; verify exact ordered variant before assignment."
+    }
+  ],
+  "candidate_mapping": {
+    "J501": [
+      "VH (S1/K1)",
+      "Phoenix (S4/S5/K2)"
+    ],
+    "J502": [
+      "Phoenix (S4/S5/K2)",
+      "VH (S1/K1)"
+    ],
+    "J503": [
+      "XH (S2/K3)",
+      "PH (S3/K4)"
+    ]
+  },
+  "calculations": {
+    "classification": "CALCULATION from explicit ASSUMPTIONS and catalogue data; no measurements",
+    "requirements_context": {
+      "peak_A_assumed": 6,
+      "peak_duration_ms_assumed": 100,
+      "ambient_C_assumed": [
+        0,
+        40
+      ],
+      "final_Pi_interface": "CONFIRMED D-30: direct 5 V through GPIO power pins and multiple GND pins; exact socket/branch wiring remains OPEN",
+      "Pi_fault_limit_V_confirmed_in_lab": 5.5,
+      "Pi_fault_limit_note": "Ceiling with margin, not an operating target or connector qualification.",
+      "normal_input_V_known_requirement": [
+        9,
+        24
+      ],
+      "historical_source_max_V_assumed": 24.72,
+      "source_context": "Future auxiliary converter; no required final wall adapter. Converter model, abnormal voltage/time bounds, prospective current, startup, stored energy and wiring impedance OPEN.",
+      "output_A_known_design_target": 5,
+      "output_capability": "Unvalidated; includes all intended loads drawing through V1A",
+      "peak_status": "Historical ASSUMED screening point; not a user-confirmed guarantee",
+      "required_runtime_scope": [
+        "Pi 5 idle",
+        "Pi 5 sustained CPU-heavy load",
+        "Pi 5 plus D435i operating",
+        "Representative steps up to the designed 5 A envelope"
+      ],
+      "runtime_limits": "Arbitrary peripheral hot-plug not guaranteed; additional peripherals excluded unless characterized; D435i mode, power route, inrush and step slew OPEN",
+      "J502_harness_status": "OPEN pending resistance, current, retention and mechanical qualification"
+    },
+    "wire": {
+      "source": "S6",
+      "one_way_m_assumed": 0.2,
+      "loop_m": 0.4,
+      "nominal_DCR_Ohm_per_1000ft": 6.5,
+      "reference_C_assumed": 20,
+      "hot_C_assumed": 60,
+      "copper_coefficient_per_C_assumed": 0.00393,
+      "cold_loop_Ohm": 0.00853018372703412,
+      "hot_loop_Ohm": 0.009871128608923885
+    },
+    "fixed_loop_allocations_Ohm": {
+      "output_disconnect_assumed": 0.01,
+      "PCB_positive_and_return_assumed": 0.005,
+      "shunt_nominal": 0.002,
+      "unaccounted_termination_and_adapter_joints_assumed": 0.005,
+      "Pi_contacts_and_unresolved_interface_assumed": 0.01
+    },
+    "fixed_allocation_note": "Retains historical 32 mOhm subtotal for comparison. New lab conditional disconnect allocation 6.5 mOhm would reduce loss by 17.5 mV at 5 A / 21 mV at 6 A if achieved; it is not selected here. Shunt tolerance/TCR are not included in nominal table.",
+    "contact_hot_multiplier_assumed": 1.3,
+    "Phoenix_reference_plane_warning": "2*(1.4+1.4) mOhm is an additive screening assumption, not a manufacturer maximum for the pair; possible overlap. Do not add R1 to R2 or count the JST mated datum twice.",
+    "source_voltage_low_screen_V": 5.03827,
+    "extra_droop_V_assumed": 0.1,
+    "formulas": [
+      "Rwire = 6.5 / 304.8 * (2 * 0.2)",
+      "Rwire_hot = Rwire * (1 + 0.00393 * (60 - 20))",
+      "Rtotal = 0.032 + Rwire_hot + Rconnector_loop",
+      "Vdrop = I * R; Ploss = I**2 * R; Epulse = I**2 * R * 0.100",
+      "Vload = 5.03827 - I * Rtotal; optional sensitivity subtracts 0.100 V"
+    ],
+    "scenarios": [
+      {
+        "id": "VH_initial_room_resistance",
+        "connector_loop_Ohm": 0.02,
+        "total_loop_Ohm": 0.06187112860892388,
+        "class": "CALCULATED sensitivity; not qualified",
+        "loads": [
+          {
+            "current_A": 5,
+            "connector_drop_V": 0.1,
+            "connector_loss_W": 0.5,
+            "total_drop_V": 0.3093556430446194,
+            "total_loss_W": 1.546778215223097,
+            "load_voltage_from_5p03827_V": 4.72891435695538,
+            "load_voltage_with_assumed_100mV_droop_V": 4.628914356955381,
+            "connector_energy_for_100ms_J": 0.05
+          },
+          {
+            "current_A": 6,
+            "connector_drop_V": 0.12,
+            "connector_loss_W": 0.72,
+            "total_drop_V": 0.3712267716535433,
+            "total_loss_W": 2.2273606299212596,
+            "load_voltage_from_5p03827_V": 4.667043228346457,
+            "load_voltage_with_assumed_100mV_droop_V": 4.567043228346457,
+            "connector_energy_for_100ms_J": 0.072
+          }
+        ]
+      },
+      {
+        "id": "VH_after_test_room_resistance",
+        "connector_loop_Ohm": 0.04,
+        "total_loop_Ohm": 0.08187112860892388,
+        "class": "CALCULATED sensitivity; not qualified",
+        "loads": [
+          {
+            "current_A": 5,
+            "connector_drop_V": 0.2,
+            "connector_loss_W": 1.0,
+            "total_drop_V": 0.4093556430446194,
+            "total_loss_W": 2.0467782152230973,
+            "load_voltage_from_5p03827_V": 4.628914356955381,
+            "load_voltage_with_assumed_100mV_droop_V": 4.528914356955381,
+            "connector_energy_for_100ms_J": 0.1
+          },
+          {
+            "current_A": 6,
+            "connector_drop_V": 0.24,
+            "connector_loss_W": 1.44,
+            "total_drop_V": 0.49122677165354334,
+            "total_loss_W": 2.94736062992126,
+            "load_voltage_from_5p03827_V": 4.547043228346457,
+            "load_voltage_with_assumed_100mV_droop_V": 4.447043228346457,
+            "connector_energy_for_100ms_J": 0.144
+          }
+        ]
+      },
+      {
+        "id": "VH_after_test_hot_sensitivity",
+        "connector_loop_Ohm": 0.052,
+        "total_loop_Ohm": 0.09387112860892388,
+        "class": "CALCULATED sensitivity; not qualified",
+        "loads": [
+          {
+            "current_A": 5,
+            "connector_drop_V": 0.26,
+            "connector_loss_W": 1.3,
+            "total_drop_V": 0.4693556430446194,
+            "total_loss_W": 2.346778215223097,
+            "load_voltage_from_5p03827_V": 4.56891435695538,
+            "load_voltage_with_assumed_100mV_droop_V": 4.468914356955381,
+            "connector_energy_for_100ms_J": 0.13
+          },
+          {
+            "current_A": 6,
+            "connector_drop_V": 0.312,
+            "connector_loss_W": 1.8719999999999999,
+            "total_drop_V": 0.5632267716535433,
+            "total_loss_W": 3.3793606299212597,
+            "load_voltage_from_5p03827_V": 4.475043228346457,
+            "load_voltage_with_assumed_100mV_droop_V": 4.375043228346457,
+            "connector_energy_for_100ms_J": 0.1872
+          }
+        ]
+      },
+      {
+        "id": "Phoenix_additive_after_test_screen",
+        "connector_loop_Ohm": 0.0056,
+        "total_loop_Ohm": 0.047471128608923885,
+        "class": "CALCULATED sensitivity; not qualified",
+        "loads": [
+          {
+            "current_A": 5,
+            "connector_drop_V": 0.028,
+            "connector_loss_W": 0.13999999999999999,
+            "total_drop_V": 0.23735564304461942,
+            "total_loss_W": 1.186778215223097,
+            "load_voltage_from_5p03827_V": 4.8009143569553805,
+            "load_voltage_with_assumed_100mV_droop_V": 4.700914356955381,
+            "connector_energy_for_100ms_J": 0.013999999999999999
+          },
+          {
+            "current_A": 6,
+            "connector_drop_V": 0.0336,
+            "connector_loss_W": 0.2016,
+            "total_drop_V": 0.2848267716535433,
+            "total_loss_W": 1.7089606299212599,
+            "load_voltage_from_5p03827_V": 4.753443228346456,
+            "load_voltage_with_assumed_100mV_droop_V": 4.653443228346457,
+            "connector_energy_for_100ms_J": 0.02016
+          }
+        ]
+      },
+      {
+        "id": "Phoenix_additive_hot_sensitivity",
+        "connector_loop_Ohm": 0.00728,
+        "total_loop_Ohm": 0.049151128608923886,
+        "class": "CALCULATED sensitivity; not qualified",
+        "loads": [
+          {
+            "current_A": 5,
+            "connector_drop_V": 0.0364,
+            "connector_loss_W": 0.182,
+            "total_drop_V": 0.24575564304461944,
+            "total_loss_W": 1.228778215223097,
+            "load_voltage_from_5p03827_V": 4.7925143569553805,
+            "load_voltage_with_assumed_100mV_droop_V": 4.692514356955381,
+            "connector_energy_for_100ms_J": 0.0182
+          },
+          {
+            "current_A": 6,
+            "connector_drop_V": 0.04368,
+            "connector_loss_W": 0.26208,
+            "total_drop_V": 0.2949067716535433,
+            "total_loss_W": 1.76944062992126,
+            "load_voltage_from_5p03827_V": 4.743363228346457,
+            "load_voltage_with_assumed_100mV_droop_V": 4.643363228346457,
+            "connector_energy_for_100ms_J": 0.026208
+          }
+        ]
+      }
+    ]
+  },
+  "access_gaps": [
+    {
+      "source": "S4/S5",
+      "attempt": "Direct curl retrieval of each exact manufacturer product URL",
+      "result": "HTTP 403; stopped, no retries or alternate-country direct downloads after 403",
+      "usable_evidence": "Manufacturer web-tool technical data obtained before the blocked direct download",
+      "still_open": "Immutable manufacturer PDF, exact pair/AWG18 derating curve and resistance test reference planes"
+    },
+    {
+      "source": "JST VH manual",
+      "url": "https://www.jst-mfg.com/product/index.php?doc=11&filename=CHM-1-T113.pdf%7CCHM-1-2564.pdf%7CCHM-1-2107.pdf%7CCHM-1-T095.pdf%7CCHM-1-2780.pdf&series=262&type=10",
+      "result": "Manufacturer email-delivery form/license gate; no personal details submitted or message sent",
+      "still_open": "Specific assembly manual/test conditions and service-cycle evidence"
+    },
+    {
+      "source": "JST VH exact 2D drawing",
+      "url": "https://www.jst-mfg.com/product/index.php?doc=4&filename=B2P-VH-FB-B.pdf&series=262&type=10",
+      "result": "Web tool timeout (400); no drawing recovered; public catalog used",
+      "still_open": "Exact controlled part drawing"
+    },
+    {
+      "source": "JST VH/XH/PH public catalogs",
+      "result": "Numeric mating-cycle and ambient-current curves not identified; no number invented",
+      "still_open": "Manufacturer part-specific specification or qualification evidence"
+    },
+    {
+      "source": "K1",
+      "result": "Installed shrouded VH STEP reference unresolved; no matching STEP or WRL",
+      "still_open": "Obtain permitted exact vendor/library model or create reviewed envelope model in a future authorized CAD task"
+    }
+  ],
+  "retrieval_notes": [
+    "Initial Python urllib retrieval failed local certificate verification for six URLs; no TLS checks disabled or system settings changed. Normal curl succeeded for JST catalogs and Belden; Phoenix curl returned 403.",
+    "US Phoenix plug URL returned web-tool Internal Error; the established German manufacturer page was successfully read before direct-download 403.",
+    "KiCad GitLab URLs identify installed library provenance only; no third-party repository downloaded.",
+    "No electrical tests or ERC/DRC were run: this task adds documentation only and preserves hardware.",
+    "Updated D-30 lab requirements were read in full after user steering; historical voltage/6 A screens retained without relabeling them as requirements or validated ratings."
+  ],
+  "validation": {
+    "scope": "Repository evidence only; no electrical qualification or gate release",
+    "commands": [
+      {
+        "command": "python3 -B scripts/check_repository.py",
+        "result": "PASS",
+        "exit_code": 0,
+        "hardware_files_verified": 13,
+        "errors": []
+      },
+      {
+        "command": "python3 -B -m unittest discover -s tests -v",
+        "result": "PASS",
+        "exit_code": 0,
+        "tests_passed": 10
+      }
+    ],
+    "note": "Both commands run during review and rerun before each focused local commit. No schematic/PCB changes; no ERC/DRC needed for this document-only task."
+  },
+  "context_read_history": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.claude/worktrees/bridge-cse_01C6ZxJVyMr16AWfNQjxeYhR/lab/REQUIREMENTS.md",
+      "sha256": "9c6fcb4f16ee08505ee13625314bd3e400e033461a31383708641a18b7089255",
+      "use": "Read-only project/task context; external worktrees were not changed",
+      "status": "Read before user D-30 steering; superseded requirement context, preserved as read history"
+    }
+  ]
+}
