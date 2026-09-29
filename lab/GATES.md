@@ -38,7 +38,7 @@ Status of the R0–R5 release gates and what closes each. Gate definitions: [wor
 
 **Closes when all of these hold:**
 1. **User facts:** adapter, Pi connection, largest load step, connector review (REQUIREMENTS.md).
-2. **Sheet 03 architecture approved by the user.** Option I is PROPOSED ([DECISIONS.md](DECISIONS.md) D-20). The high-side-short finding stays blocking until these close: LM61460 load-step overshoot (PSpice, then bench), let-through with vendor models, LM61460 stability with the chosen bulk, detector and gate-stage timing across tolerance, and the Pi fault envelope.
+2. **Sheet 03 architecture approved by the user.** Option I is PROPOSED ([DECISIONS.md](DECISIONS.md) D-20). The high-side-short finding stays blocking until these close: LM61460 load-step overshoot (PSpice, then bench), let-through with vendor models, LM61460 stability with the chosen bulk, detector and gate-stage timing across tolerance, and the Pi fault envelope. Since D-27 the load must stay ≤ 5.5 V with margin; option I at 5.49 V (model) does not yet meet that.
 3. **Codex brief 02 evidence** meets its 8 explicit engineering acceptance criteria (PR #1). ERC-clean plus tests passing is not acceptance (D-11).
 4. **Sheet 03 captured** by one Codex agent to the approved architecture. ERC then has no U402 error because the rail is really driven, not bypassed.
 5. **Input coordination:** D101 selected so it never conducts at the source's worst OVP and the hot clamp plus overshoot stays below 67 V at U101 IN; F101 selected and coordinated.

@@ -9,7 +9,7 @@ Seeded 2026-09-29 only from repository evidence, draft [PR #1](https://github.co
 
 | Date | ID | Decision | Status | Who | Reason and evidence |
 | --- | --- | --- | --- | --- | --- |
-| 2026-09-29 | D-27 | Adopt 5.5 V at the Pi board rail as the interim fault ceiling, replacing the 6.0 V screen | PROPOSED | CLAUDE | PR #4: Raspberry Pi engineer guidance says transients must not exceed 5.5 V, and GPIO feeding bypasses the Pi's USB-C OVP. Needs the user's decision; it tightens option I's margin (model peak ≤ 5.49 V) |
+| 2026-09-29 | D-27 | 5.5 V at the Pi 5 board rail is the fault limit, replacing the 6.0 V screen; design as conservatively as possible | KEEP | USER | PR #4: Raspberry Pi engineer guidance says transients must not exceed 5.5 V, and GPIO feeding bypasses the Pi's USB-C OVP. User approved 11:25 UTC ("just as safe as possible, I don't want to gamble"). Option I's model peak of 5.49 V now has no margin; brief 02 amendment 1 asks for a margin study |
 | 2026-09-29 | D-26 | Build a smaller agent lab: a durable state folder (`lab/`), then a probe of Codex dispatch through agent-deck with separate accounts | KEEP | USER | User approved steps 1 and 2 of the coordinator's proposal. Reason: the board is blocked on decisions and one set of KiCad files, not on parallel hypotheses |
 | 2026-09-29 | D-25 | At most 3 Codex agents on independent tasks (KiCad capture, footprints and 3D models, fault simulation); AGY audits later | PROPOSED | CLAUDE | Step 3 of the lab proposal. Not approved yet; depends on the D-26 probe result |
 | 2026-09-29 | D-24 | Skip the Discord front desk, the VM and the failover timers for now | KEEP | CLAUDE | Setup cost with little payoff at this stage. User approved the smaller lab (D-26) |
