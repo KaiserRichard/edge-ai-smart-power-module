@@ -4,17 +4,13 @@ Consolidated 2026-09-26 from the 2026-09-14 continuation in [FINAL_MANAGER_REPOR
 
 **R2 schematic release: BLOCKED. R3 PCB release: BLOCKED. No printed circuit board (PCB) creation or routing authorized. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
-## Sheet 03 architecture gate — Gate 1c, 2026-09-29
+## Sheet 03 architecture gate — Gate1d, 2026-09-29
 
-**BLOCKED — crowbar-assisted Candidate C is the preliminary development direction, but not ready for schematic review.** The bounded screen uses 24 V maximum normal-input fault VIN, TPS26630 OVP of 26.974–28.289 V with a 14 µs FLT-response endpoint, XAL8080 effective-inductance screens of 5.44 µH at zero current and approximately 3.36–3.808 µH through the documented curve, and the captured six 22 µF MLCCs (132 µF nominal, 72.7056 µF conservative screen). A conditional 33 mΩ crowbar screen gives 5.46067 V at the Pi (+39.33 mV), 119.96 A and 0.02483 A²s, while series-only gives 5.86600 V (−366.00 mV).
+**PRELIMINARY — READY FOR SCHEMATIC REVIEW; Gate1d CONDITIONAL PASS.** User-approved Candidate C + crowbar now uses grounded-source CSD18540Q5B, drain-side four-part WFMB2512R0330FEA bank (33 mΩ total), and independently powered7.5V UCC27511. [Pulse evidence](../evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md) compares SOA, load line, temperature and full discharge pulse. Source-ballast wiring is rejected.
 
-The single blocker is `B1C_UNCOORDINATED_FAULT_ENERGY_PATH`: the crowbar ballast pulse rating, MOSFET SOA, and complete source-to-crowbar-to-series-off commutation path are not established. This is a design blocker; bench work is later qualification. The harness co-design selects resistance reduction with local regulation and raw-node detection: 4.76143 V at 5 A (+11.43 mV static margin), with the separate 100 mV reserve screen still unmet. No KiCad capture or PCB work is authorized.
+**OPEN margins:** selected0.30µs screen gives5.481612V / +18.388mV (historical0.20µs +39.328mV); reduced harness gives4.761431V / +11.431mV at5A, without the unmet100mV dynamic reserve. No physical validation is claimed. Source/L/C, thermal/pulse-tail assumptions, startup/independent supply/reset, series SOA and remaining R2 qualifications remain OPEN.
 
-**BLOCKED — Candidate C close attempt did not reach preliminary capture readiness.** The authoritative [Sheet 03 architecture decision](../evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md) now records a complete review concept and bounded calculation. The sole named blocker is `B1_FAULT_INTERRUPTION_ENVELOPE`: the accepted source/inductance transient and a production-supported or measured effective isolation time below approximately 0.385 µs are missing. The calculated normal false-trip margin is +22 mV; the 30 V/0.5 µH/2 µs fault screen is −368 mV. KiCad remains unchanged.
-
-**Current user requirements:** normal input 9–24 V; final source 13S battery → PDB → future HV-to-approximately-12-V auxiliary converter → V1A. Direct 54.6 V pass-through containment is allocated upstream, not to V1A. Pi 5 receives power through GPIO 5 V pins and multiple GND pins. Total output envelope is 5 A; qualification includes idle, sustained CPU-heavy Pi 5, Pi 5 + D435i, and representative load steps. **Pi rail peak must remain strictly below 5.5 V; 5.5 V is not the detector threshold.** Exact converter dynamics and J502/harness remain OPEN. The fixed peak criterion supersedes older 6 V screens; no undocumented permitted overvoltage pulse is assumed.
-
-**Next gate:** bounded Candidate-C circuit/transient-contract review and architecture selection; only a successful readiness decision permits single-agent Sheet 03 capture with ERC/netlist/diff validation. No PCB authorization follows.
+**Next gate:** Gate2 preliminary Sheet03 capture and review is authorized. R2 release and R3 remain BLOCKED. The current verdict in the [decision document](../evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md) supersedes earlier no-capture decisions only for this scope. The boundary below describes the pre-capture state and will be updated after Gate2.
 
 ## Open protection boundary
 

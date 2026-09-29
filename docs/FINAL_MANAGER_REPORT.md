@@ -1,3 +1,19 @@
+# Gate1d manager update — 2026-09-29
+
+**STATUS: CONDITIONAL PASS for preliminary schematic review. R2/R3 release BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** corrected the source-ballast gate-drive contradiction; compared three MOSFETs and three driver families/supply choices; selected CSD18540Q5B,7.5V UCC27511 and a four-element33mΩ drain-ballast bank. Compared load line, datasheet SOA/thermal impedance and resistor full-pulse envelope, including assumed downstream discharge. Removed the stale Gate1b verdict while preserving analysis and Git history.
+
+**EVIDENCE:** [pulse review](evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md), [single current decision](evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md), `gate_1d` calculations and manufacturer source register. At125°C initial conditions, the100µs screen gives40.69°C FET thermal margin and1.934× resistor pulse margin. No bench result is claimed.
+
+**DECISIONS:** pulse selection closes for the user-accepted preliminary envelope. Gate2 capture is authorized. Select0.30µs timing screen with5.481612V peak, not the former0.20µs result. R2/R3 release stays blocked.
+
+**OPEN RISKS:** revised18.388mV fault margin (historical39.328mV),11.431mV harness margin, unmet100mV dynamic reserve; source/L/C/timing/thermal/tail assumptions, inrush/reset/reference validity, series SOA, layout, fuse/TVS/connectors and bench qualification.
+
+**NEXT GATE:** scoped preliminary Sheet03 capture, pin/footprint review, ERC/netlist/checkers, threshold recalc and full marked PDF. Earlier manager entries below remain dated history.
+
+---
+
 # Sheet 03 preliminary architecture gate — 2026-09-29
 
 **STATUS: BLOCKED. R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**

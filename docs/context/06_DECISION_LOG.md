@@ -12,6 +12,10 @@ Consolidated 2026-09-26; this is an index into existing decisions, not a replace
 | R2 must close before PCB work | [Manager report](../FINAL_MANAGER_REPORT.md); [gate workflow](05_WORKFLOW_AND_GATES.md) | R2/R3 BLOCKED; R3 requires separate authorization |
 | Never fabricate qualification state | [AGENTS.md](../../AGENTS.md); [engineering state](03_ENGINEERING_STATE.md) | Permanent evidence discipline |
 
+## 2026-09-29 — Gate1d preliminary pulse selection
+
+User acceptance of Candidate C + crowbar supersedes earlier architecture/no-capture decisions for preliminary Sheet03 capture. Gate1d CONDITIONAL PASS selects CSD18540Q5B, four WFMB2512R0330FEA drain-ballast elements (33mΩ equivalent), UCC27511 at7.5V. Moving the ballast off the source fixes the demonstrated VGS contradiction. Revised fault margin18.388mV and static harness margin11.431mV remain OPEN. See the [pulse review](../evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md) for temperature/duration/SOA evidence. Gate2 authorized; R2/R3 release BLOCKED. Earlier entries below are historical, not competing current verdicts.
+
 ## 2026-09-29 — requirements consolidation and Sheet 03 no-go
 
 Authoritative record: [SHEET03_ARCHITECTURE_DECISION.md](../evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md). Today's conductor D-27/D-30 and protection/Pi/connector branch identities are recorded there; they were inspected, not merged or rewritten.

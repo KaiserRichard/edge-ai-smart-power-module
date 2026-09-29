@@ -1,8 +1,36 @@
 # Sheet 03 preliminary architecture decision
 
-## Gate 1c — bounded fault envelope and crowbar-assisted Candidate C (2026-09-29)
+## Gate 1d — current decision, 2026-09-29
 
-**VERDICT: BLOCKED — PRELIMINARY READY FOR SCHEMATIC REVIEW was not reached.** Crowbar-assisted Candidate C is the selected preliminary development direction, with one remaining design blocker: `B1C_UNCOORDINATED_FAULT_ENERGY_PATH`. The 33 mΩ ballast screen has positive modeled Pi margin, but neither the ballast pulse rating nor a production MOSFET/SOA commutation path is established. This is a design problem; bench measurement is later qualification and is not the blocker.
+**VERDICT: PRELIMINARY — READY FOR SCHEMATIC REVIEW.**
+
+**Gate status: CONDITIONAL PASS. R2 release BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+The user accepted Candidate C + crowbar and the Gate1c preliminary envelope, then authorized routine part/value/connection corrections, scoped commits/pushes to PR5 and Gate2 only after pulse selection passed. This is the one current decision; earlier no-capture decisions are superseded for preliminary capture only. Historical evidence remains in Git and the analysis appendices below.
+
+**DECISION:** select CSD18540Q5B with UCC27511DBVR on an independent 7.5 V rail and a drain-side 33 mΩ ballast made from four WFMB2512R0330FEA parts, `(R+R)||(R+R)`. Source and driver return are grounded. The former source ballast reduced VGS to 1.04 V at the modeled current and is rejected. Keep REF5025 + TLV3201 + SN74LVC1G74 and LTC7001 with two BSC034N06NSATMA1 series devices. Resolve the earlier contradictory common-source/common-drain prose during pin-verified capture; both series sources must share the LTC7001 TS reference. No raw-to-protected bypass is permitted.
+
+**EVIDENCE:** [pulse review](GATE1D_PULSE_REVIEW.md), [calculator](../../../../scripts/calculate_sheet03_gate1b.py) and `gate_1d` in [CALCULATIONS.json](CALCULATIONS.json), with manufacturer revisions/figures and hashes in the [source register](../../../../third_party/sheet03_source_register.json). The full 100 µs envelope includes the accepted initial pulse and an explicitly assumed ≤220 µF downstream RC tail. At 125°C initial temperature, FET load-line/thermal screen leaves 40.69°C to 175°C; each ballast element has 1.934× derated pulse power/energy margin. These are preliminary analytical comparisons, not physical validation.
+
+### Windows and explicit OPEN review items
+
+- **OPEN — fault voltage margin:** selected conservative 0.30 µs effective-on screen gives **5.481612 V / +18.388 mV**. The inherited 0.20 µs result, **5.460672 V / +39.328 mV**, remains a comparison rather than the new selected timing. Real gate charge, comparator/filter/logic propagation, commutation and ringing require R2/bench qualification. A 0.40 µs sensitivity fails by 2.639 mV.
+- **OPEN — harness margin:** **4.761431 V / +11.431 mV** at 5 A requires the reduced-resistance harness allocations. The separate 100 mV dynamic reserve remains unmet by 88.569 mV. No connector/copper/wire values are validated by this calculation.
+- **OPEN — normal window:** +21.954 mV detector false-trip screen relies on 8×470 µF raw bulk, effective ceramic C, ESR and assumed load-release response; capture must include the bulk if it credits this result.
+- **OPEN — pulse scope:** ≤220 µF downstream C, no external source, 125°C initial device/terminal temperature, single fault with cooling, thermal interfaces, resistor pulse-temperature derating and parasitic inductance remain review assumptions. Larger stores or repeat faults require recalculation.
+- **OPEN — inherited qualification:** source transients, saturated inductance, independent supplies/reference-valid/reset interlock, inrush, series-FET SOA, input TVS/fuse, final connectors, thermal/layout and bench gates. These are not closed by preliminary capture or ERC.
+
+### Plain-English owner statement
+
+The protection circuit watches the raw buck voltage independently. On overvoltage it latches the fault, shunts the protected rail through a pulse-rated resistor bank, and opens the series MOSFET pair. Moving the resistor bank away from the MOSFET source preserves gate drive. The larger MOSFET and resistor bank can carry the reviewed pulse with stated margins. The owner must now check the captured connections and startup/reset behavior, then qualify the narrow voltage margins and pulse assumptions before release. Gate2 is authorized; this is not approval to fabricate, route a PCB, or connect an expensive SBC.
+
+### Next gate
+
+Capture Sheet03, verify datasheet pins/footprints, run ERC/netlist/repository checks, recalculate captured thresholds, confirm scoped hierarchy changes and export the marked full schematic PDF. Record the results here and in the manager report. No R2 or R3 release follows automatically.
+
+## Retained Gate1c source/load analysis
+
+The following bounds and harness comparisons are retained evidence. New selected parts, timing and disposition above take precedence.
 
 ### Datasheet-bounded envelope
 
@@ -17,23 +45,6 @@
 
 The reproducible values are written by `scripts/calculate_sheet03_gate1b.py --gate 1c --write` into `CALCULATIONS.json`. The 30 V and 0.5 µH cases remain sensitivity screens so that the unknown source and beyond-curve saturation cannot be hidden as a false guarantee.
 
-### Crowbar-assisted Candidate C
-
-The specified review parts are `REF5025IDGKR`, `TLV3201AIDBVR`, `SN74LVC1G74DCTR`, `LTC7001IMSE#PBF`, two `BSC034N06NSATMA1` common-source series MOSFETs, `CSD17308Q3` crowbar MOSFET, `UCC27511DBVR` crowbar driver on an independent 5 V rail, and a **33 mΩ pulse ballast screen** in the crowbar path. The detector senses the raw buck node upstream of the series pair. The crowbar candidate connects CSD17308 drain to `VOUT_PROTECTED`, source through the 33 mΩ ballast to the detector ground return, gate through a provisional 2.2 Ω gate resistor to UCC27511 OUT, and a provisional 10 kΩ gate-source pulldown; UCC27511 IN is `CROWBAR_ON`, VDD is the independent 5 V rail, and its ground is the detector ground. The 33 mΩ, 2.2 Ω, and 10 kΩ values are review values, not frozen procurement values. An overvoltage clears the latch, turns the crowbar on, and turns the series pair off; the crowbar is faster because it commutates the local capacitor/inductor current immediately while the high-side series gates are still discharging.
-
-Under the stated 30 V / 0.5 µH sensitivity case, the detector-to-driver datasheet test-time sum is 109.1 ns and the conditional effective crowbar-on screen is 0.2 µs. With the 33 mΩ ballast, the calculated `VOUT_PROTECTED` peak is **5.37425 V**, the Pi peak including the 20 mV local allocation is **5.46067 V**, and the conditional margin to 5.5 V is **+39.33 mV**. Crowbar peak current is **119.96 A**, leaving **47.04 A** below the CSD17308 167 A / 100 µs headline pulse current. The modeled interval I²t is **0.02483 A²s**; this is a model result, not a manufacturer I²t rating. The CSD17308 Fig. 10 SOA and the ballast pulse rating still must be checked against the actual commutation waveform. Direct zero-ballast shunting is rejected: **416.18 A** exceeds the 167 A headline by 249.18 A.
-
-The TPS26630 first enters its R105-programmed current limit. With pin 11 NC in the captured configuration it proceeds to the vendor’s latch-after-overload/thermal behavior; the overload timer is screened at 202 ms maximum and startup thermal regulation at 2.9 s maximum. The detector fault latch also asserts SHDN and remains latched until deliberate reset. The TPS26630 integrated thermal protection is not an external MOSFET SOA rating and does not authorize 24 V × 4.82 A for 202 ms; final input removal depends on the TPS26630 latch/thermal path and upstream source disconnect.
-
-Startup is fail-off: detector supply-valid, reference-valid, comparator-good, and BUCK_PGOOD must all qualify before the series pair or crowbar can turn on. An overvoltage clears the latch; there is no automatic retry. The proposed bulk screen gives **+21.95 mV** normal-release margin after the 10 mV allocation. The captured MLCC-only model gives **−1,958.53 mV**, so the un-captured bulk bank cannot be silently treated as present. The exact reset interlock, startup current limit, ballast pulse rating, and crowbar SOA are OPEN within the single blocker.
-
-### Candidate comparison
-
-| Architecture | Worst modeled Pi result | Speed needed / parts | Stress and failure mode | Disposition |
-|---|---:|---|---|---|
-| Candidate C series-only | 5.86600 V, **−366.00 mV** margin at 30 V / 0.5 µH / 2 µs | Series isolation must complete inside the approximately 0.385 µs ceiling; detector, latch, LTC7001, and two BSC034N06 devices | Inductor and capacitor energy arrives at the Pi before isolation; no local commutation path | Rejected as sole fault-energy solution |
-| Candidate C + crowbar | 5.46067 V, **+39.33 mV** conditional margin with 33 mΩ ballast; 119.96 A, 0.02483 A²s modeled crowbar interval | Crowbar effective-on screen 0.2 µs; CSD17308 + UCC27511 + pulse ballast plus the same series pair | Crowbar MOSFET/ballast absorb the first energy; SOA, pulse rating, source feed, and series turn-off remain unclosed | Selected preliminary development direction; **BLOCKED** by `B1C_UNCOORDINATED_FAULT_ENERGY_PATH` |
-
 ### Harness co-design at the Pi pins
 
 The PR #6 cut-path estimate is 309.77 mV at 5 A. The terms are 2.024 mΩ shunt, 5.000 mΩ PCB positive, 5.000 mΩ PCB return, 10.000 mΩ J502 contacts, 8.144 mΩ trunk wire, 2.537 mΩ branch wire, 29.250 mΩ GPIO contacts, and 5.000 mΩ other joints: **61.955 mΩ total**. The three options are evaluated at the Pi pins over 0–5 A in `CALCULATIONS.json`.
@@ -44,15 +55,12 @@ The PR #6 cut-path estimate is 309.77 mV at 5 A. The terms are 2.024 mΩ shunt, 
 | Raise LM61460 setpoint to 5.2 V | 4.76092 V / **+10.92 mV** static; −89.08 mV with reserve | Retuned detector margin **+18.30 mV**, but zero-delay fault screen **−20.85 mV**; detector still senses raw node | Rejected: trades normal headroom for fault-window loss. |
 | Ideal remote sense at load | 5.03827 V / **+288.27 mV** static; +188.27 mV with reserve | Detector must sense the load node to protect the Pi, but compensated raw high at 5 A is 5.53640 V and normal detector margin is **−252.84 mV** | Rejected: normal regulation and OVP reference planes conflict without a complete remote-sense/OVP architecture. |
 
-The selected direction is therefore resistance reduction with local regulation and raw-node detection. It does not close the single fault-energy blocker.
+The selected direction remains resistance reduction with local regulation and raw-node detection; Gate1d pulse closure is recorded above.
 
-### Gate 1c owner statement
 
-The Sheet 03 owner is responsible for keeping the detector powered independently of the failed output, clearing the latch on overvoltage, driving the crowbar quickly, and then allowing the TPS26630 to limit and latch the upstream source. The crowbar is an energy-commutation aid, not a claim that the Pi is immune to faults. The next owner action is to choose a pulse-rated ballast and verify the CSD17308 SOA and the complete source-to-crowbar-to-series-off trajectory against the stated 5.5 V limit. Until that design evidence exists, no KiCad capture is authorized.
+## Historical Gate1b calculation and concept provenance
 
-## Gate 1b — Candidate C close attempt (2026-09-29)
-
-**VERDICT: BLOCKED. Candidate C is fully specified as a review concept, but it is not `PRELIMINARY — READY FOR SCHEMATIC REVIEW`. Exactly one blocker remains: `B1_FAULT_INTERRUPTION_ENVELOPE` — an accepted source/inductor transient bound and a production-supported effective isolation time below 0.385 µs have not been established.** This is a quantitative evidence blocker, not a KiCad blocker. No schematic or PCB work is authorized.
+Superseded analysis, not current capture instructions. In particular, the old bullet calling a common-drain connection common-source is not a wiring contract; use the new reviewed pin table. Original outcomes remain in Git at `352a115`.
 
 ### Consolidated bounded contract
 
@@ -104,19 +112,10 @@ The tested levers are recorded in `CALCULATIONS.json`: tighter reference alone s
 
 During normal operation, the buck rail is divided and compared with a precision 2.5 V reference. The latch is armed only after the detector supply and buck power-good are valid, so the high-side gate driver turns on the two opposed MOSFETs. Their low resistance carries the 5 A rail with an ideal-screen loss of about 0.17 W at 25°C (two 3.4 mΩ devices); the real hot loss and SOA still require qualification. If the divided rail exceeds the trip point, the comparator clears the latch. The independent driver then sinks both gates, opening the common-source pair and blocking both directions. The latch stays off until a deliberate reset after the source has returned to a valid range. This topology is preferred because its sensing supply and memory do not depend on the failed buck output, and because body diodes do not form a direct raw-to-protected path. The design remains blocked because the energy that can arrive before the gates are demonstrably off is not yet bounded tightly enough for the Pi’s strict 5.5 V limit.
 
-### Gate 1b result and next action
 
-`PRELIMINARY — READY FOR SCHEMATIC REVIEW` was **not** reached. The minimum next action is one source-and-switch transient qualification: agree an authoritative abnormal source ceiling and minimum effective buck inductance/capacitance, then obtain a production-supported or measured maximum from detector crossing to both MOSFETs below their isolation voltage. The acceptance target is `t_isolate < 0.385 µs` at the stated corners; until that evidence exists, do not capture Sheet 03. KiCad remains unchanged.
+## Historical predecessor/source comparison
 
-2026-09-29. **AUTHORITATIVE for this architecture gate.** Earlier dated reviews and the separate conductor/worker branches remain evidence, not competing selections.
-
-**STATUS: BLOCKED — NO DEFENSIBLE ARCHITECTURE SELECTED FOR CAPTURE.**
-
-The analysis gate is complete with a no-go decision. The condition **PRELIMINARY — READY FOR SCHEMATIC REVIEW** has **not** been reached. The user's conditional continuation therefore stops before KiCad capture, implementation commit, or push. **R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
-
-**DECISION:** Retain the open Sheet 03 boundary. A precision, latched detector with independent forward isolation and reverse blocking is the most promising development direction, but its complete circuit and governing transient bounds are not established. A component shortlist or an assumed sub-microsecond switch is insufficient to select that architecture for capture.
-
-**Exact capture blockers:** (1) no supported maximum normal raw-rail excursion and maximum fault let-through for the same L/C/source/load corners; (2) no complete precision-detector/gate/supply/reset circuit with a defensible isolation time and fail-off startup/brownout behavior. These prevent verifying both threshold inequalities and drawing an unambiguous circuit. Final converter identity and a Pi destructive voltage-time curve are **not** prerequisites if an accepted interface bound and the strict 5.5 V peak ceiling can be met.
+The following pre-Gate1b/1c candidate dispositions and assumptions are dated provenance only; the single current decision above controls.
 
 ## 1. Work already present today
 
@@ -270,22 +269,3 @@ For example, C's nominal 11.2 kΩ/10 kΩ divider produces **11.321 V** at its se
 
 `BUCK_INPUT_PGOOD` in the captured project is U101→U201 enable; U201's own PGOOD is currently NC. Neither is independent proof of safety after U201 fails. Any future buck-PGOOD connection is only sequencing assistance, must use a bounded pull-up domain, and must not override the independent detector. No hierarchy/sheet changes are made here.
 
-## 6. Decision and minimum next gate
-
-**DECISION:** no selected architecture, selected resistor network, approved timing chain, or guaranteed worst-case Pi peak. Candidate A is rejected as sole OVP; B remains unsuitable without new timing/reverse/recovery evidence; C is retained only as the focused development direction. Do not mislabel unresolved architecture as later fabrication qualification.
-
-**Minimum next action:** one bounded R2 follow-up must close a **complete Candidate-C circuit and its input/output transient contract**, using today's evidence rather than restarting the audit:
-
-1. Establish a conservative analytical/model envelope for maximum normal raw excursion and fault charge/slew through isolation, with stated source impedance/current/capacitor bounds, minimum L at relevant current, effective raw/downstream C and load-step slew. The final auxiliary-converter MPN may stay OPEN if its acceptance limits are explicit. Do not assume the eFuse's nominal limit is instantaneous. Meet the strict Pi peak ceiling without relying on an undocumented damage-time allowance.
-2. Finish the detector supply/input clamp, rising-threshold budget, floating driver supply/gate network, fail-off validity logic and deliberate reset circuit. Verify an actual maximum threshold-to-isolation endpoint (including overdrive/Miller/current commutation), and startup/fault SOA against that envelope. The new LTC7001 direction is a source-backed lead, not a pre-approved replacement.
-3. Review the two inequalities and all power states together. Only a successful decision update to **PRELIMINARY — READY FOR SCHEMATIC REVIEW**, with no critical unresolved requirement, enables the user's next gate: **single-agent KiCad capture of Sheet 03 + ERC/netlist/diff validation**.
-
-J502 exact selection, final converter procurement and physical R5 waveform/thermal measurements can remain later OPEN items once their design acceptance bounds are established. Physical bring-up remains visual/short checks → current-limited supply → no-load rail → dummy-load steps → thermal/ripple/transient/fault → telemetry → SBC integration. No expensive Pi is used as the first load.
-
-## 7. Evidence, provenance and validation
-
-Manufacturer documents were referenced, not copied into a circuit. Source URLs, exact revisions, relevant sections, copyright/license limits, cache identities, required attribution and modifications (none) are in [third_party/sheet03_source_register.json](../../../../third_party/sheet03_source_register.json). New primary PDFs were readable through the official web PDF service; direct Python acquisition failed certificate verification, so no downloaded original/hash is claimed for those documents. Attempts are recorded in ignored `third_party/documents/sheet03_2026-09-29/`. Existing originals in the protection worktree were reused in place. No upstream reference source or system trust configuration was modified.
-
-Supporting arithmetic and snapshot identities are in [CALCULATIONS.json](CALCULATIONS.json). **Validation:** repository integrity PASS; 10 existing tests PASS; retained-netlist capture checker PASS with R2 RELEASE BLOCKED; existing R2 calculator executes successfully; independent decimal corner enumeration encloses the A/B threshold intervals; nine reused original-document hashes and 17 project-evidence snapshots verified. All 13 hardware/library files match the preservation hashes. The retained netlist has 71 entries / 47 nets, with raw/protected on separate nets 35/36. No PCB exists; `git diff --check` passes.
-
-Fresh ERC/netlist/PDF exports were not run because the capture continuation was not entered. The retained ERC has one legitimate U402.1 undriven-power error; no fresh ERC PASS is claimed. This gate changes documentation only. No KiCad edit, Gerber, component purchase, commit or push is performed. Repository/capture checks establish preservation, not electrical qualification.
