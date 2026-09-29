@@ -1,5 +1,63 @@
 # Sheet 03 preliminary architecture decision
 
+## Gate 1b — Candidate C close attempt (2026-09-29)
+
+**VERDICT: BLOCKED. Candidate C is fully specified as a review concept, but it is not `PRELIMINARY — READY FOR SCHEMATIC REVIEW`. Exactly one blocker remains: `B1_FAULT_INTERRUPTION_ENVELOPE` — an accepted source/inductor transient bound and a production-supported effective isolation time below 0.385 µs have not been established.** This is a quantitative evidence blocker, not a KiCad blocker. No schematic or PCB work is authorized.
+
+### Consolidated bounded contract
+
+The following replaces the earlier unbounded placeholders for this gate.
+
+| Quantity | Bound | Evidence class and source |
+|---|---:|---|
+| Normal V1A input | 9–24 V | REQUIREMENT, frozen interface |
+| Upstream abnormal source | 30 V for this screen | ASSUMED interface acceptance ceiling; not credited to TPS26630 OVP |
+| TPS26630 OVP divider | 26.974–28.289 V, 27.630 V nominal | CALCULATED from 1.2 V nominal, 1.176–1.224 V threshold, 348 kΩ/15.8 kΩ ±0.1%, ±150 nA leakage; TPS2663 Rev G §§6.5, 8.3 |
+| Buck static raw output | 5.0383–5.1586 V | CALCULATED from captured LM61460 feedback values |
+| Normal release stimulus | 6 A initial current, 5→0 A release | ASSUMED conservative 5 A envelope plus 1 A analysis allowance; test stimulus, not measured load |
+| Buck loop response | 20 µs charge window (eight 400-kHz periods) | ASSUMED conservative screen; LM61460 datasheet only gives representative 3/6 µs load-step waveforms (§9.2.2.4, Fig. 9-48/49), so this must be measured |
+| Raw capacitance | 60 µF ceramic minimum plus 8×470 µF bulk for this screen; bulk minimum 2.4064 mF after ±20% initial and ±20% endurance factors | ASSUMED/evidence-qualified. LM61460 Table 9-4 permits 470/560 µF electrolytic examples; capacitor PCH data gives ±20% and ±20% change. The existing six 22 µF bank is not a 60 µF guaranteed effective value |
+| Raw bulk ESR | 3.5 mΩ for eight units, with each unit 28 mΩ at the cited cold/after-endurance point | DATASHEET-derived screen from PCH table; layout/parasitics remain OPEN |
+| Fault inductance | 3.808 µH down to 0.5 µH sensitivity floor; 14 A is the XAL8080-682 typical 30%-drop current, not a guaranteed saturation knee | DATASHEET plus ASSUMED sensitivity floor. Coilcraft XAL8080-682 product page; LM61460 §9.2.2.3 warns saturation causes rapid current rise |
+| Protected-node extra energy | 20 mV | ASSUMED allocation for harness/ESL/local ringing; no Pi damage-time credit |
+
+The 30 V source and 0.5 µH fault corner are deliberately explicit design acceptance assumptions. They are not claimed properties of the future auxiliary converter, TPS26630, or XAL8080. If the system owner adopts different limits, this calculation must be rerun.
+
+### Complete Candidate C review circuit
+
+The review concept is a normally-off, latched, common-source disconnect:
+
+* Q1/Q2 are Infineon BSC034N06NSATMA1, 60 V SuperSO8 N-channel MOSFETs, common drain at `PROT_MID`; Q1 source=`VOUT_5V1`, Q2 source=`VOUT_PROTECTED`; each body diode points toward `PROT_MID`, so neither diode provides a raw-to-load bypass. Pins 1–3 are source, pin 4 gate, pins 5–8 drain (Infineon Rev 2.3, p.1). Qg max is 41 nC (defined-by-design, not production tested), Qgd max 9.2 nC; RDS(on) max is 3.4 mΩ at 10 V/50 A.
+* U301 is LTC7001IMSE#PBF. Pin 1 VCC is an independent 10 V gate-drive supply, pin 2 VCCUV is tied to GND for the 3.5 V minimum gate-driver UVLO, pin 3 and exposed pad 11 are GND, pin 4 INP is `RUN_GATE`, pin 5 OVLO is tied low, pin 6 TGDN is the direct gate-sink output, pin 7 TGUP is the turn-on output through 100 Ω, pin 8 TS is `VOUT_PROTECTED`, pin 9 BST is connected to TS by 100 nF, and pin 10 is NC. A 22 kΩ external gate-source resistor is fitted; the driver’s own 1 MΩ pulldown is not relied upon. LTC7001 Rev G §§6, 7.2.
+* U302 is REF5025IDGKR high-grade 2.5 V reference, powered from the independent detector supply ahead of the buck fault path, with 1 µF output capacitance. U303 is TLV3201AIDBVR at 5 V. The raw divider is R301=11.3 kΩ and R302=10.0 kΩ, both 0.1%, giving 5.325 V nominal. R303=1.00 kΩ and BAS116 D301 (anode at the divider, cathode at comparator supply) current-limit positive input clamp; the divider is never allowed to rely on a comparator absolute maximum.
+* U304 is SN74LVC1G74DCTR. D=1, PRE=VDD, CLR=`FAULT_CLEAR`, Q=`ARM_LATCH`; Q and `BUCK_PGOOD` are combined with the comparator-good signal in U305 SN74LVC1G11DBVR (A=`ARM_LATCH`, B=`BUCK_PGOOD`, C=`OV_OK`, Y=`RUN_GATE`). A momentary manual ARM input clocks U304; an overvoltage or detector-supply-invalid condition clears it. There is no automatic retry. U306 TPS7A1601 supplies the detector/logic rail from `VIN_FUSED`; its PG is included in `FAULT_CLEAR`. Exact U306 resistor values and the manual ARM connector remain OPEN until capture review.
+* Default states are off: LTC7001 VCCUV/UVLO or loss of its independent supply removes gate drive; U304 CLR is held low until its supply-valid delay; comparator and BUCK_PGOOD must both be good; a fault clears the latch and requires deliberate re-arm. An externally powered Pi is not permitted to be connected simultaneously through another source during qualification. The common-source MOSFET pair blocks reverse load-to-raw current when off; leakage and capacitive feed-through require bench measurement. Startup is therefore intentionally disconnected until `BUCK_PGOOD`, detector reference, and supply-valid are true.
+
+### Threshold and timing calculation
+
+The reproducible calculation is [scripts/calculate_sheet03_gate1b.py](../../../../scripts/calculate_sheet03_gate1b.py); it writes the `gate_1b` member of [CALCULATIONS.json](CALCULATIONS.json). The worst-corner tolerance table is:
+
+| Item | Bound used |
+|---|---:|
+| REF5025 high-grade initial | ±0.050% (datasheet) |
+| Reference temperature drift | 3 ppm/°C × 165°C (datasheet) |
+| Reference line/load plus review allocation | 5 ppm/V × 2.5 V + 50 ppm/mA × 0.1 mA + 0.020% (datasheet + ASSUMED) |
+| Divider resistors | ±0.1% each + 10 ppm/°C × 100°C (ASSUMED resistor acceptance) |
+| Comparator offset + hysteresis reserve | ±6 mV (TLV3201 full-temperature offset plus ASSUMED bounded hysteresis) |
+| Comparator input bias and clamp leakage | 85 nA (DATASHEET/ASSUMED combined) |
+
+These corners give `V_trip,nom=5.325 V`, `V_trip,min=5.294 V`, and `V_trip,max=5.357 V`. The normal release bound is 5.262 V, so the false-trip margin after the 10 mV review allocation is **+22.0 mV**. At the 30 V / 0.5 µH / 2 µs effective-isolation fault corner, the calculation gives 5.868 V at the Pi, a **−368.2 mV** worst-case margin. The same model gives a strict delay ceiling of approximately **0.385 µs**. The Infineon 41 nC gate-charge figure and LTC7001 gate driver do not provide a production-tested maximum for this complete high-side isolation chain at the required voltage and temperature; therefore the timing inequality is not closed.
+
+The tested levers are recorded in `CALCULATIONS.json`: tighter reference alone still fails (5.836 V); lowering the nominal trip to approximately 5.25 V fails the normal inequality; adding bulk improves the fault margin but 16×470 µF is needed before the 2 µs case becomes positive and it changes startup, ESR, thermal, and buck compensation qualification. A faster comparator does not overcome the source-current/inductance corner. An ideal crowbar screen is positive only below roughly 0.5 µs; a real SCR plus fuse is not selectable because SCR trigger/on-state timing, sustained 4.8 A source current, fuse clearing, and eFuse hiccup interaction are not bounded. It cannot replace the named blocker.
+
+### How the output protection works and why this design
+
+During normal operation, the buck rail is divided and compared with a precision 2.5 V reference. The latch is armed only after the detector supply and buck power-good are valid, so the high-side gate driver turns on the two opposed MOSFETs. Their low resistance carries the 5 A rail with an ideal-screen loss of about 0.17 W at 25°C (two 3.4 mΩ devices); the real hot loss and SOA still require qualification. If the divided rail exceeds the trip point, the comparator clears the latch. The independent driver then sinks both gates, opening the common-source pair and blocking both directions. The latch stays off until a deliberate reset after the source has returned to a valid range. This topology is preferred because its sensing supply and memory do not depend on the failed buck output, and because body diodes do not form a direct raw-to-protected path. The design remains blocked because the energy that can arrive before the gates are demonstrably off is not yet bounded tightly enough for the Pi’s strict 5.5 V limit.
+
+### Gate 1b result and next action
+
+`PRELIMINARY — READY FOR SCHEMATIC REVIEW` was **not** reached. The minimum next action is one source-and-switch transient qualification: agree an authoritative abnormal source ceiling and minimum effective buck inductance/capacitance, then obtain a production-supported or measured maximum from detector crossing to both MOSFETs below their isolation voltage. The acceptance target is `t_isolate < 0.385 µs` at the stated corners; until that evidence exists, do not capture Sheet 03. KiCad remains unchanged.
+
 2026-09-29. **AUTHORITATIVE for this architecture gate.** Earlier dated reviews and the separate conductor/worker branches remain evidence, not competing selections.
 
 **STATUS: BLOCKED — NO DEFENSIBLE ARCHITECTURE SELECTED FOR CAPTURE.**

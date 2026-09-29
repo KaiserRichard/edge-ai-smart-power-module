@@ -2,6 +2,16 @@
 
 **STATUS: BLOCKED. R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
+## Candidate C Gate 1b update — 2026-09-29
+
+**WHAT WAS DONE:** bounded the normal 5→0 A release and a 30 V high-side-short screen, completed a pin-level Candidate C review circuit, added tolerance and timing calculations, and tested bulk-capacitance, reference, threshold, comparator, and ideal-crowbar levers. KiCad was not edited.
+
+**EVIDENCE:** [authoritative decision](evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md), [reproducible calculator](../scripts/calculate_sheet03_gate1b.py), and its `gate_1b` result in [CALCULATIONS.json](evidence/r2/sheet03/CALCULATIONS.json). Normal false-trip margin is +22 mV. The conservative fault screen is 5.868 V (−368 mV margin) at 2 µs; the strict modeled effective-isolation ceiling is about 0.385 µs.
+
+**DECISION:** Candidate C remains a review concept, not capture-ready. Exactly one blocker remains: `B1_FAULT_INTERRUPTION_ENVELOPE` (authoritative source/inductance bound and production-supported or measured effective isolation time are missing). R2/R3 remain BLOCKED.
+
+**NEXT GATE:** close `B1_FAULT_INTERRUPTION_ENVELOPE` with an agreed interface limit and measured/vendor-supported source-to-isolation timing. Only then reconsider single-agent Sheet 03 capture with ERC/netlist/diff validation.
+
 **WHAT WAS DONE:** inspected the active branch and today's separate conductor/protection/Pi/connector worktrees; consolidated current user source/load boundaries; compared three real output-protection candidates; recalculated threshold, loss and fault-rise screens; reviewed supply independence, body diodes, startup and reset behavior. No KiCad edits or circuit selection.
 
 **EVIDENCE:** authoritative [Sheet 03 architecture decision](evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md), [arithmetic and validation record](evidence/r2/sheet03/CALCULATIONS.json), [source/worktree provenance](../third_party/sheet03_source_register.json). Today's existing Option I model gives approximately 5.494 V with an assumed 0.4 µs isolation, but 5.660 V at 2 µs. Those models are not electrical validation. No new SPICE or physical test was performed.
