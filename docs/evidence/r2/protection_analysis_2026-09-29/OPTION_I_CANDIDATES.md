@@ -3,6 +3,15 @@
 2026-09-29. **Candidates only; no selection or schematic capture. R2/R3 BLOCKED.
 NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
+## Follow-up status
+
+The conductor subsequently authorized research for these same candidates. See
+[CANDIDATE_SOURCE_COMPARISON.md](CANDIDATE_SOURCE_COMPARISON.md) for verified
+variants, specifications, package/land comparisons and revised budget gaps.
+The original worksheet below is preserved as the earlier evidence state; its
+network restriction and unknown-source entries are superseded where that review
+supplies primary evidence. No part or architecture is selected.
+
 ## Evidence boundary
 
 The continuation permits network access only for the Task 1 manufacturer sources.
