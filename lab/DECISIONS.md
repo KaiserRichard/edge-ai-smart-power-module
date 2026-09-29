@@ -9,6 +9,7 @@ Seeded 2026-09-29 only from repository evidence, draft [PR #1](https://github.co
 
 | Date | ID | Decision | Status | Who | Reason and evidence |
 | --- | --- | --- | --- | --- | --- |
+| 2026-09-29 | D-28 | Current Codex session acts as V1A conductor under CONDUCTOR.md | KEEP | USER | User explicitly requested reading the external CONDUCTOR.md and acting as conductor. Operational takeover only; engineering approvals and gate blockers unchanged |
 | 2026-09-29 | D-27 | 5.5 V at the Pi 5 board rail is the fault limit, replacing the 6.0 V screen; design as conservatively as possible | KEEP | USER | PR #4: Raspberry Pi engineer guidance says transients must not exceed 5.5 V, and GPIO feeding bypasses the Pi's USB-C OVP. User approved 11:25 UTC ("just as safe as possible, I don't want to gamble"). Option I's model peak of 5.49 V now has no margin; brief 02 amendment 1 asks for a margin study |
 | 2026-09-29 | D-26 | Build a smaller agent lab: a durable state folder (`lab/`), then a probe of Codex dispatch through agent-deck with separate accounts | KEEP | USER | User approved steps 1 and 2 of the coordinator's proposal. Reason: the board is blocked on decisions and one set of KiCad files, not on parallel hypotheses |
 | 2026-09-29 | D-25 | At most 3 Codex agents on independent tasks (KiCad capture, footprints and 3D models, fault simulation); AGY audits later | PROPOSED | CLAUDE | Step 3 of the lab proposal. Not approved yet; depends on the D-26 probe result |
