@@ -32,6 +32,20 @@ Earlier manager entries below are preserved verbatim as historical evidence; thi
 
 ---
 
+# Current manager update — preliminary footprint assignment, 2026-09-29
+
+**STATUS: CONDITIONAL PASS for footprint assignment; R2 remains BLOCKED and NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** assigned ten bare-copper test-point footprints on Sheets 01, 04, and 05; retained existing standard-library and three project-qualified critical footprints; verified symbol-to-pad number sets for all assigned parts; added the complete four-sheet footprint table and OPEN dispositions.
+
+**EVIDENCE:** [FOOTPRINT_AUDIT](evidence/r2/footprints/FOOTPRINT_AUDIT.md), [scope and pad check](evidence/r2/footprints/scope_and_pad_check.json), [KiCad library source register](evidence/r2/footprints/kicad_library_sources.json), and [critical qualification record](evidence/r2/forensic_2026-09-14/CRITICAL_FOOTPRINT_QUALIFICATION.md). Ten regression tests pass. ERC reports exactly one pre-existing `U402.1 power_pin_not_driven` violation at the intentionally open output boundary; exit code 5. The capture checker passes its retained netlist contract. Sheet 03 base and working blobs are identical.
+
+**DECISIONS:** leave F101, TDK C5750 capacitors, L201, and J501–J503 OPEN where the MPN or authoritative land pattern is unresolved. Do not invent connector or fuse selections. Keep generic passive footprints as provisional geometry when their MPN fields are blank.
+
+**OPEN RISKS:** unresolved MPN/package choices, TDK land-pattern orientation, Coilcraft mechanical drawing, connector mating/current requirements, solder-process validation for the TPS26630 library footprint, and all electrical/thermal/layout validation. Repository integrity checker failure is expected after schematic edits because its preservation hashes intentionally describe the pre-gate snapshot; the historical R0/R1 checker also lacks archived predecessor repositories in this worktree.
+
+**NEXT GATE:** resolve the remaining MPN and land-pattern OPEN items, then perform fabrication-readiness review. No PCB, DRC, fabrication export, purchase, or physical validation was performed.
+
 # Current manager update — V1A R2 forensic review, 2026-09-14
 
 **STATUS: R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
