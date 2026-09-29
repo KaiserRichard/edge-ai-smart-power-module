@@ -8,12 +8,12 @@ Check with `CODEX_HOME=~/.codex-<x> codex login status`. Never read or print aut
 
 | Account | Codex home | State (last checked) | Notes |
 | --- | --- | --- | --- |
-| codex-a | `~/.codex-a` | Logged in, 2026-09-29 | Repo trusted in this home |
-| codex-b | `~/.codex-b` | Logged in, 2026-09-29 | Repo trusted in this home |
-| codex-c | `~/.codex-c` | Logged in, 2026-09-29 | Reserved for the reviewer role after the first round has results; not launched |
-| codex-d | `~/.codex-d` | Logged in, 2026-09-29 | Spare for independent jobs (footprints, 3D models) |
-| codex-e | – | Removed 2026-09-29 | Out of quota; logged out and home deleted at the user's request |
-| codex-f | `~/.codex-f` | Not logged in, 2026-09-29 | Login pending |
+| codex-a | `~/.codex-a` | Logged in; usage limit hit 2026-09-29 ~10:40 UTC, resets 22:03 local | Repo trusted in this home |
+| codex-b | `~/.codex-b` | Logged in; 1 % of 5-hour and 32 % of weekly limit used, 2026-09-29 | Repo trusted in this home |
+| codex-c | `~/.codex-c` | Logged in; 0 % of 5-hour and 29 % of weekly limit used, 2026-09-29 | Reserved for the reviewer role after the first round has results; not launched |
+| codex-d | `~/.codex-d` | Logged in, answers, 2026-09-29 | Spare for independent jobs (footprints, 3D models) |
+| codex-e | `~/.codex-e` | Logged in again, answers, 2026-09-29 | Re-added by the user after the earlier removal |
+| codex-f | `~/.codex-f` | Logged in, answers, 2026-09-29 | Spare |
 | default | `~/.codex` | Not logged in, 2026-09-29 | Not used |
 
 New account: `mkdir -p ~/.codex-c && CODEX_HOME="$HOME/.codex-c" codex login --device-auth`, run by the user.
