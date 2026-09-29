@@ -1,0 +1,241 @@
+{
+  "status": "PRELIMINARY CONDITIONAL CALCULATION; NOT measured or guaranteed hardware worst case",
+  "inputs": {
+    "load_A": {
+      "value": 5,
+      "classification": "ASSUMED",
+      "source": "U1 frozen requirement, not a measured rating",
+      "unit": "A"
+    },
+    "pi_floor_V": {
+      "value": 4.75,
+      "classification": "ASSUMED",
+      "source": "S1 engineer USB guidance extended to GPIO",
+      "unit": "V"
+    },
+    "pi_peak_limit_V": {
+      "value": 5.5,
+      "classification": "ASSUMED",
+      "source": "U1 strict peak REQUIREMENT: peak must be LESS than this value",
+      "unit": "V"
+    },
+    "trunk_length_m": {
+      "value": 0.15,
+      "classification": "ASSUMED",
+      "source": "A1 proposed maximum length per polarity",
+      "unit": "m"
+    },
+    "branch_length_m": {
+      "value": 0.05,
+      "classification": "ASSUMED",
+      "source": "A1 proposed maximum length per branch",
+      "unit": "m"
+    },
+    "wire_temperature_C": {
+      "value": 60,
+      "classification": "ASSUMED",
+      "source": "A1",
+      "unit": "degC"
+    },
+    "wire_reference_C": {
+      "value": 20,
+      "classification": "ASSUMED",
+      "source": "A1 nominal DCR reference",
+      "unit": "degC"
+    },
+    "wire_alpha_per_C": {
+      "value": 0.00393,
+      "classification": "ASSUMED",
+      "source": "A1 linear copper model inherited from P3",
+      "unit": "1/degC"
+    },
+    "wire_DCR_factor": {
+      "value": 1.1,
+      "classification": "ASSUMED",
+      "source": "A1 allowance; not guaranteed vendor DCR maximum"
+    },
+    "trunk_DCR_ohm_per_1000ft": {
+      "value": 6.5,
+      "classification": "DATASHEET",
+      "source": "S9 Belden8522 nominal",
+      "unit": "ohm/1000ft"
+    },
+    "branch_DCR_ohm_per_1000ft": {
+      "value": 16.2,
+      "classification": "DATASHEET",
+      "source": "S9 Belden8503 nominal",
+      "unit": "ohm/1000ft"
+    },
+    "positive_branch_count": {
+      "value": 2,
+      "classification": "ASSUMED",
+      "source": "U1/A1 pins2,4"
+    },
+    "ground_branch_count": {
+      "value": 4,
+      "classification": "ASSUMED",
+      "source": "A1 pins6,9,14,20"
+    },
+    "gpio_conditioned_mOhm_per_contact": {
+      "value": 30,
+      "classification": "DATASHEET",
+      "source": "S7 Harwin C00120; exact Pi male pairing OPEN",
+      "unit": "mOhm"
+    },
+    "contact_hot_factor": {
+      "value": 1.3,
+      "classification": "ASSUMED",
+      "source": "A1 sensitivity, not manufacturer model"
+    },
+    "shunt_nominal_mOhm": {
+      "value": 2,
+      "classification": "DATASHEET",
+      "source": "S13 WSL27262L000FEA",
+      "unit": "mOhm"
+    },
+    "shunt_tolerance_fraction": {
+      "value": 0.01,
+      "classification": "DATASHEET",
+      "source": "S13"
+    },
+    "shunt_TCR_per_C": {
+      "value": 2.5e-05,
+      "classification": "DATASHEET",
+      "source": "S13 component TCR upper magnitude",
+      "unit": "1/degC"
+    },
+    "shunt_temperature_C": {
+      "value": 100,
+      "classification": "ASSUMED",
+      "source": "A1",
+      "unit": "degC"
+    },
+    "shunt_reference_C": {
+      "value": 25,
+      "classification": "ASSUMED",
+      "source": "A1",
+      "unit": "degC"
+    },
+    "pcb_loop_mOhm": {
+      "value": 5,
+      "classification": "ASSUMED",
+      "source": "A2 hot copper/via allocation",
+      "unit": "mOhm"
+    },
+    "j502_loop_mOhm": {
+      "value": 10,
+      "classification": "ASSUMED",
+      "source": "A2 hot entire mated loop INCLUDING screw clamps, excludes PCB solder",
+      "unit": "mOhm"
+    },
+    "other_joints_loop_mOhm": {
+      "value": 5,
+      "classification": "ASSUMED",
+      "source": "A2 equivalent aggregate: board/header solder, splices, GPIO crimps; excludes J502 clamps",
+      "unit": "mOhm"
+    },
+    "disconnect_mOhm": {
+      "value": 10,
+      "classification": "ASSUMED",
+      "source": "A3/P3 historical hot allowance UPSTREAM of VOUT_PROTECTED",
+      "unit": "mOhm"
+    },
+    "droop_reserve_V": {
+      "value": 0.1,
+      "classification": "ASSUMED",
+      "source": "A3/P3 dynamic reserve; not measured",
+      "unit": "V"
+    },
+    "Rtop_ohm": {
+      "value": 100000,
+      "classification": "ASSUMED",
+      "source": "P3 captured design value",
+      "unit": "ohm"
+    },
+    "Rbottom_ohm": {
+      "value": 24400,
+      "classification": "ASSUMED",
+      "source": "P3 captured design value",
+      "unit": "ohm"
+    },
+    "divider_tolerance_fraction": {
+      "value": 0.001,
+      "classification": "ASSUMED",
+      "source": "P3 captured tolerance"
+    },
+    "reference_nominal_V": {
+      "value": 1,
+      "classification": "DATASHEET",
+      "source": "S14",
+      "unit": "V"
+    },
+    "reference_tolerance_fraction": {
+      "value": 0.01,
+      "classification": "DATASHEET",
+      "source": "S14 stated reference-accuracy conditions"
+    },
+    "FB_current_magnitude_A": {
+      "value": 1e-08,
+      "classification": "ASSUMED",
+      "source": "S14 typical10nA used as signed allowance, NOT guaranteed limit",
+      "unit": "A"
+    },
+    "raised_nominal_screen_V": {
+      "value": 5.3,
+      "classification": "ASSUMED",
+      "source": "sensitivity only, NOT selected",
+      "unit": "V"
+    }
+  },
+  "terms_mOhm": {
+    "shunt": 2.0237875,
+    "pcb_positive": 2.5,
+    "pcb_return": 2.5,
+    "j502_positive": 5,
+    "j502_return": 5,
+    "trunk_positive": 4.0718405511811016,
+    "trunk_return": 4.0718405511811016,
+    "positive_branch_wires": 1.6913799212598428,
+    "ground_branch_wires": 0.8456899606299214,
+    "positive_gpio_contacts": 19.5,
+    "ground_gpio_contacts": 9.75,
+    "other_joints_equivalent_loop": 5
+  },
+  "terms_classification": "CALCULATED from labelled inputs; PCB, J502 and other-joint terms are ASSUMED allocations as identified above",
+  "formulas": {
+    "wire_mOhm": "DCR_ohm_per_1000ft /304.8 *length_m *(1+alpha*(T-Tref))*wire_DCR_factor*1000",
+    "parallel": "R_each/n",
+    "drop_V": "I_A*sum(terms_mOhm)/1000",
+    "raw_low": "(1-ref_tol)*(1+(Vnom-1)*(1-divider_tol)/(1+divider_tol))-FB_current*Rtop*(1+divider_tol)",
+    "raw_high": "(1+ref_tol)*(1+(Vnom-1)*(1+divider_tol)/(1-divider_tol))+FB_current*Rtop*(1+divider_tol)",
+    "pi_static_low": "raw_low-I*disconnect_mOhm/1000-drop_V",
+    "pi_with_droop": "pi_static_low-droop_reserve_V",
+    "nominal_required_for_given_low": "1+((required_raw_low+FB_current*Rtop*(1+divider_tol))/(1-ref_tol)-1)*(1+divider_tol)/(1-divider_tol)"
+  },
+  "results_classification": "CALCULATED; round only for display",
+  "results": {
+    "loop_mOhm": 61.95453848425197,
+    "drop_V": 0.3097726924212599,
+    "loop_loss_W": 1.5488634621062993,
+    "wire_branch_mOhm": 3.3827598425196856,
+    "nominal_raw_V": 5.098360655737705,
+    "raw_low_V": 5.038269401729418,
+    "raw_high_V": 5.158632237795171,
+    "protected_low_V": 4.9882694017294185,
+    "pi_static_low_V": 4.678496709308159,
+    "pi_with_droop_V": 4.578496709308159,
+    "minimum_protected_static_V": 5.05977269242126,
+    "minimum_protected_with_droop_V": 5.159772692421259,
+    "minimum_nominal_raw_static_V": 5.170730797579074,
+    "minimum_nominal_raw_with_droop_V": 5.271943121013619,
+    "allowed_downstream_static_mOhm": 47.65388034588369,
+    "allowed_downstream_with_droop_mOhm": 27.653880345883692,
+    "raised_nominal_screen_raw_low_V": 5.237493505494506,
+    "raised_nominal_screen_raw_high_V": 5.362695694694694,
+    "raised_nominal_screen_pi_with_droop_V": 4.777720813073247,
+    "raised_nominal_screen_high_plus_100mV_V": 5.462695694694694,
+    "positive_gpio_power_W_each": 0.24375,
+    "ground_gpio_power_W_each": 0.0609375,
+    "shunt_power_W": 0.0505946875
+  }
+}

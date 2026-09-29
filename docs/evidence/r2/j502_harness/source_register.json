@@ -1,0 +1,371 @@
+{
+  "review_date": "2026-09-29",
+  "base_commit": "de1d35c07a0c0a9b368527522aa01ed11c762869",
+  "scope": "Authored documents only. Upstream assets isolated in ignored third_party/documents/j502_harness; not committed. No upstream modifications.",
+  "assumptions": {
+    "A1": "Proposed harness construction and thermal/nominal-DCR/contact multipliers, explicitly not vendor guarantees.",
+    "A2": "Proposed hot loop acceptance allocations for PCB,J502,joints; measurements/reference planes OPEN.",
+    "A3": "Historical source/disconnect/droop screen, not guaranteed hardware bounds."
+  },
+  "sources": [
+    {
+      "use": "REQUIREMENT input",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "User project instructions",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "U1",
+      "title": "User gate instruction",
+      "url": "conversation: GATE — J502 + RASPBERRY PI 5 GPIO POWER HARNESS (PRELIMINARY)",
+      "revision": "2026-09-29 user instruction",
+      "relevant_source_files_or_sections": "CONTEXT/OBJECTIVE/CONSTRAINTS",
+      "function_studied": "Frozen GPIO pins, load envelope and strict peak ceiling",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Same project evidence; no repository-wide licence file identified",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "P1",
+      "title": "Prior connector shortlist",
+      "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/ea6bf16cd2095b66c49c11b7806c8f6df096877c/docs/evidence/r2/connectors_2026-09-29/CONNECTOR_SHORTLIST.md",
+      "revision": "ea6bf16cd2095b66c49c11b7806c8f6df096877c",
+      "relevant_source_files_or_sections": [
+        "docs/evidence/r2/connectors_2026-09-29/CONNECTOR_SHORTLIST.md",
+        "docs/evidence/r2/connectors_2026-09-29/source_register.json"
+      ],
+      "function_studied": "Reuse prior analysis without merging its branch",
+      "accessed": "2026-09-29",
+      "cache_status": "Read from existing local worktree/commit",
+      "inspected_worktree": "/Users/quockaiser/Desktop/Research/v1a-wt-connectors"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Same project evidence; no repository-wide licence file identified",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "P2",
+      "title": "Prior Pi envelope",
+      "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/a4155dd14f9bd5a75fa5adc580874f5e431ccb01/docs/evidence/r2/pi5_input_envelope_2026-09-29/PI5_INPUT_FAULT_ENVELOPE.md",
+      "revision": "a4155dd14f9bd5a75fa5adc580874f5e431ccb01",
+      "relevant_source_files_or_sections": [
+        "docs/evidence/r2/pi5_input_envelope_2026-09-29/PI5_INPUT_FAULT_ENVELOPE.md",
+        "docs/evidence/r2/pi5_input_envelope_2026-09-29/source_register.json"
+      ],
+      "function_studied": "Reuse prior analysis without merging its branch",
+      "accessed": "2026-09-29",
+      "cache_status": "Read from existing local worktree/commit",
+      "inspected_worktree": "/Users/quockaiser/Desktop/Research/v1a-wt-pi5-envelope"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Same project evidence; no repository-wide licence file identified",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "P4",
+      "title": "Parallel output protection review",
+      "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/700a6acb0596f2fe07789b2c4071719974dc1b39/docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md",
+      "revision": "700a6acb0596f2fe07789b2c4071719974dc1b39",
+      "relevant_source_files_or_sections": [
+        "docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md",
+        "Allocated detector window section"
+      ],
+      "function_studied": "Reuse prior analysis without merging its branch",
+      "accessed": "2026-09-29",
+      "cache_status": "Read from existing local worktree/commit",
+      "inspected_worktree": "/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "P3",
+      "title": "Baseline captured design and historical drop model",
+      "url": "https://github.com/KaiserRichard/edge-ai-smart-power-module/tree/de1d35c07a0c0a9b368527522aa01ed11c762869",
+      "revision": "de1d35c07a0c0a9b368527522aa01ed11c762869",
+      "relevant_source_files_or_sections": [
+        "docs/evidence/r2/BUCK_DESIGN.md",
+        "docs/evidence/r2/forensic_2026-09-14/PI_POWER_DELIVERY_REFINED.md",
+        "docs/evidence/r2/forensic_2026-09-14/CONNECTOR_HARNESS_QUALIFICATION.md"
+      ],
+      "function_studied": "Setpoint, shunt, connector pinout and historical allocations",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S1",
+      "title": "Pi5 PSU Requirement, Raspberry Pi engineer dp11",
+      "url": "https://forums.raspberrypi.com/viewtopic.php?p=2157077#p2157077",
+      "revision": "post 2023-11-14 19:32",
+      "relevant_source_files_or_sections": "dp11 operating-range post",
+      "function_studied": "Documented minimum guidance; not formal GPIO datasheet",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed",
+      "limitations": "Official engineer testimony; direct403, indexed post body verified. GPIO extension ASSUMED."
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S2",
+      "title": "Raspberry Pi HAT+ specification",
+      "url": "https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf",
+      "revision": "build6df06cc-clean,2024-12-05",
+      "relevant_source_files_or_sections": "chapter6, printed p12",
+      "function_studied": "Power HAT+ supply recommendation",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S3",
+      "title": "Phoenix1776508 header",
+      "url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "revision": "Live product snapshot2026-09-29; generated PDF seen2026-09-20 17:19",
+      "relevant_source_files_or_sections": "Electrical properties,Mounting,Durability,Mating parts; PDF pp2–3,5–6",
+      "function_studied": "Current/resistance/screw retention/mating identity",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed",
+      "limitations": "No controlled revision. PDF ?type=pdf direct403; later web timeout. No downloaded PDF hash."
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S4",
+      "title": "Phoenix1777989 plug",
+      "url": "https://www.phoenixcontact.com/en-us/products/pcb-plug-mstb-25-2-stf-508-1777989",
+      "revision": "Unversioned live snapshot2026-09-29",
+      "relevant_source_files_or_sections": "Electrical properties,Connection data,Mounting,Durability,Mating parts",
+      "function_studied": "Wire range,clamps,current,resistance,retention",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed",
+      "limitations": "No controlled revision; PDF direct403 and web timeout. Exact hot mated resistance and reference planes OPEN."
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S5",
+      "title": "Previous Phoenix pair",
+      "url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstba-25-2-g-508-1757242",
+      "revision": "Prior live snapshots2026-09-29 pinned in P1 source_register.json",
+      "relevant_source_files_or_sections": [
+        "1757242 product record",
+        "https://www.phoenixcontact.com/en-de/products/pcb-connector-mstb-25-2-st-508-1757019"
+      ],
+      "function_studied": "Compare retained shortlist, not requalify",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S6",
+      "title": "JST VH catalogue",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eVH.pdf",
+      "revision": "No printed revision; P1 cache SHA256 d51e669c597988b20c0963daf5bef7356cbd2104c1f867e9107c6fa6cd2b899c",
+      "relevant_source_files_or_sections": "pp1–4 shrouded header, housing,contact and ratings",
+      "function_studied": "Compare retained shortlist",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S7",
+      "title": "Harwin M20 component specification",
+      "url": "https://content.harwin.com/asset/92486137-0a45-4017-9b78-1edaa8709008/C001-C001XX-Component-Specification-M20-Series-2-54mm-pitch-PCB-connectors.pdf",
+      "revision": "C00120 issue20,2022-11-28",
+      "relevant_source_files_or_sections": "Electrical/mechanical/environmental characteristics",
+      "function_studied": "Female contact rating/conditioned resistance and absence of cable shock/vibration qualification",
+      "accessed": "2026-09-29",
+      "cache_path": "third_party/documents/j502_harness/Harwin_C00120.pdf",
+      "sha256": "886a13d7e7e8d0b1546a685b321fdaeeca5a596eafe4769e2911d8af88fab403",
+      "bytes": 219467
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S8",
+      "title": "Harwin housing and crimp drawings",
+      "url": "https://content.harwin.com/asset/b4f1d83e-6b34-4617-ba41-3cc2c2450892/DRG-00377-Technical-Drawing-Datasheet-M20-107-pdf.pdf",
+      "revision": "M20-107XX00 issue8,2021-02-15,sheet2/2 supplied as single-page PDF",
+      "relevant_source_files_or_sections": [
+        "housing drawing",
+        "https://www.harwin.com/products/M20-1071000",
+        "https://www.harwin.com/products/M20-1180042"
+      ],
+      "function_studied": "Housing size,nonpolarization,pin engagement",
+      "accessed": "2026-09-29",
+      "cache_path": "third_party/documents/j502_harness/Harwin_M20-107.pdf",
+      "sha256": "7513566cebc528557216c6ae7c62ef6b3fa0aed6053fee02690e33d4172b0731",
+      "bytes": 38414
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S8b",
+      "title": "Harwin crimp drawing",
+      "url": "https://content.harwin.com/asset/d742d022-1905-41c8-b996-8feb2ed262c8/DRG-00379-Technical-Drawing-Datasheet-M20-118-pdf.pdf",
+      "revision": "M20-11800XX issue13,2012-07-30,sheet2/2",
+      "relevant_source_files_or_sections": "wire/insulation/strip/crimp-height/tool table",
+      "function_studied": "Crimp/wire compatibility",
+      "accessed": "2026-09-29",
+      "cache_path": "third_party/documents/j502_harness/Harwin_M20-118.pdf",
+      "sha256": "979e855cdbbca9692c5eaff306cb775658cefeb24303ba21f640e210f1021ca9",
+      "bytes": 69630
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S9",
+      "title": "Belden8522 and8503 wire datasheets",
+      "url": "https://catalog.belden.com/techdata/EN/8522_techdata.pdf",
+      "revision": "8522 rev0.482 and8503 rev0.487,both2026-02-20",
+      "relevant_source_files_or_sections": [
+        "8522 pp1–2",
+        "https://catalog.belden.com/techdata/EN/8503_techdata.pdf",
+        "https://www.belden.com/products/cable/electronic-wire-cable/lead-wire-hook-up-wire/8503"
+      ],
+      "function_studied": "Nominal DCR,gauge,diameter,length/thermal model",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed",
+      "limitations": "Web PDF and official product page read; direct curl returned non-PDF HTML, not accepted as source bytes. DCR is nominal, not maximum."
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S10",
+      "title": "Raspberry Pi hardware and power documentation",
+      "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+      "revision": "Live documentation snapshot2026-09-29",
+      "relevant_source_files_or_sections": [
+        "GPIO pinout",
+        "power-supply-warnings"
+      ],
+      "function_studied": "Power/GND pin map; generic undervoltage indication",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed",
+      "limitations": "Pin numbers are physical header positions. Warning tolerance not separately confirmed for this Pi revision."
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S11",
+      "title": "Raspberry Pi engineer jdb GPIO OVP statement",
+      "url": "https://forums.raspberrypi.com/viewtopic.php?p=2194239",
+      "revision": "2024-02-16 official engineer posts, retained in P2",
+      "relevant_source_files_or_sections": "USB-C versus GPIO protection discussion",
+      "function_studied": "GPIO bypass of USB-C OVP",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed",
+      "limitations": "Testimony, not a guaranteed OVP threshold/timing datasheet; prior index evidence reused."
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S12",
+      "title": "USB Power delivery on Raspberry Pi5",
+      "url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf",
+      "revision": "Release1,2026-03-05;build2026-03-17/1026f0c6e305",
+      "relevant_source_files_or_sections": "printed pp5,7–8; GPIO/non-PD supply",
+      "function_studied": "External current declaration and peripheral policy; reused P2",
+      "accessed": "2026-09-29",
+      "cache_status": "remote/indexed evidence only; no local hash claimed"
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S13",
+      "title": "Vishay WSL2726",
+      "url": "https://www.vishay.com/docs/30131/wsl2726.pdf",
+      "revision": "30131 revision2026-06-29",
+      "relevant_source_files_or_sections": "pp1–2",
+      "function_studied": "Shunt tolerance and component TCR",
+      "accessed": "2026-09-29",
+      "cache_path": "third_party/documents/j502_harness/vishay_wsl2726.pdf",
+      "sha256": "583946079d110ac74dc7987e1f1d2c5a170253b03f123b993c414761c6b89373",
+      "bytes": 165739
+    },
+    {
+      "use": "REFERENCED only; no PCB/circuit copied",
+      "modifications": "None to upstream; report makes independently labelled engineering calculations",
+      "license": "Manufacturer/author copyright; no open redistribution licence inferred",
+      "required_attribution": "Retain author/manufacturer, title, exact URL and revision/date; source bytes are not committed",
+      "id": "S14",
+      "title": "TI LM61460",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "revision": "SNVSBD5D,July2022;current served package appendix2026",
+      "relevant_source_files_or_sections": "electrical characteristics p6;feedback section",
+      "function_studied": "Reference accuracy and typical FB input current",
+      "accessed": "2026-09-29",
+      "cache_path": "third_party/documents/j502_harness/ti_lm61460.pdf",
+      "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d",
+      "bytes": 3093699
+    }
+  ],
+  "download_attempts": [
+    {
+      "url": "https://www.vishay.com/docs/30131/wsl2726.pdf",
+      "outcome": "downloaded unchanged via system curl TLS verification",
+      "initial_attempt": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+      "cache_path": "third_party/documents/j502_harness/vishay_wsl2726.pdf",
+      "sha256": "583946079d110ac74dc7987e1f1d2c5a170253b03f123b993c414761c6b89373",
+      "bytes": 165739
+    },
+    {
+      "url": "https://catalog.belden.com/techdata/EN/8522_techdata.pdf",
+      "outcome": "not PDF",
+      "initial_attempt": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+    },
+    {
+      "url": "https://catalog.belden.com/techdata/EN/8503_techdata.pdf",
+      "outcome": "not PDF",
+      "initial_attempt": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+    },
+    {
+      "url": "https://cdn.harwin.com/pdfs/C001XX_M20_Series_Connectors.pdf",
+      "outcome": "curl: (56) The requested URL returned error: 404",
+      "initial_attempt": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "outcome": "downloaded unchanged via system curl TLS verification",
+      "initial_attempt": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>",
+      "cache_path": "third_party/documents/j502_harness/ti_lm61460.pdf",
+      "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d",
+      "bytes": 3093699
+    }
+  ]
+}
