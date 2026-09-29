@@ -95,6 +95,9 @@ def library_symbol(c):
         if c["kind"] == "C":
             geometry += [line(-0.635, -2.54, -0.635, 2.54), line(0.635, -2.54, 0.635, 2.54)]
             geometry += [line(-2.54, 0, -0.635, 0), line(0.635, 0, 2.54, 0)]
+            if c.get("polarized"):
+                geometry += [line(-3.175, 2.54, -1.905, 2.54),
+                             line(-2.54, 1.905, -2.54, 3.175)]
         elif c["kind"] in ("D", "TVS"):
             geometry += [line(-2.54, -2.54, -2.54, 2.54), line(-2.54, 0, 2.54, 2.54),
                          line(2.54, 2.54, 2.54, -2.54), line(2.54, -2.54, -2.54, 0)]

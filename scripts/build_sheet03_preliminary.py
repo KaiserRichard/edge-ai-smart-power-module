@@ -78,7 +78,8 @@ def add_hierarchy():
             py=round(y+12.7+index*7.62,4)
             pins.append(f'(pin {q(net)} {direction} (at {x:g} {py:g} 180) {fx(1.016,"left")} (uuid {q(uid(name+":"+net))}))')
             helper.wire(x,py,x-7.62,py);helper.label(net,x-7.62,py,True)
-        replacements.append((a,b,t[:-1]+'\n'+'\n'.join(pins)+'\n)'))
+        if pins:
+            replacements.append((a,b,t[:-1]+'\n'+'\n'.join(pins)+'\n)'))
     for a,b,t in reversed(replacements):s=s[:a]+t+s[b:]
     s=s.replace('OPEN CIRCUIT - NO BYPASS FITTED','PRELIMINARY DISCONNECT + CROWBAR').replace('-> OPEN disconnect','-> preliminary protection')
     top.write_text(s)
@@ -104,12 +105,13 @@ def build():
     s=path.read_text().replace('(paper "A3")','(paper "A1")').replace('(date "2026-09-12")','(date "2026-09-29")')
     path.write_text(s)
     lib=HW/'V1A.kicad_sym';old=lib.read_text().rstrip();new=[]
+    # Replace all Sheet03-owned definitions, including stale names from the
+    # interrupted alternative capture. Preserve every other symbol verbatim.
+    for a,b,t in reversed(list(children(old))):
+        if re.match(r'\(symbol\s+"(?:[UQRCDJ]3\d\d|TP3\d\d|#FLG3\d\d)_',t):
+            old=old[:a]+old[b:]
     for c in parts:
         sym=library_symbol(c)
-        # New symbols can be rebuilt safely; do not touch historical symbols.
-        name=q(c['symbol_name'])
-        matches=[(a,b) for a,b,t in children(old) if t.startswith('(symbol '+name+' ')]
-        for a,b in reversed(matches):old=old[:a]+old[b:]
         new.append(sym)
     lib.write_text(old[:-1]+'\n'+'\n'.join(new)+'\n)\n')
     add_hierarchy()

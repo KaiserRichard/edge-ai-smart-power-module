@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/hardware/kicad/V1A.kicad_sch</source>
-    <date>2026-09-29T23:09:34+0700</date>
+    <date>2026-09-29T23:29:07+0700</date>
     <tool>Eeschema 9.0.6</tool>
     <textvar name="RELEASE_STATUS">NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -1425,19 +1425,19 @@
     </comp>
     <comp ref="C330">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C330_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1445,19 +1445,19 @@
     </comp>
     <comp ref="C331">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C331_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1465,19 +1465,19 @@
     </comp>
     <comp ref="C332">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C332_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1485,19 +1485,19 @@
     </comp>
     <comp ref="C333">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C333_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1505,19 +1505,19 @@
     </comp>
     <comp ref="C334">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C334_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1525,19 +1525,19 @@
     </comp>
     <comp ref="C335">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C335_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1545,19 +1545,19 @@
     </comp>
     <comp ref="C336">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C336_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1565,19 +1565,19 @@
     </comp>
     <comp ref="C337">
       <value>470uF 35V</value>
-      <footprint>Capacitor_SMD:C_Elec_10x10.2</footprint>
+      <footprint>V1A_Qualified:Nichicon_PCH_10x16</footprint>
       <fields>
         <field name="MPN">PCH1V471MCL1GS</field>
         <field name="Source">Nichicon PCH catalog pp1-2; 10x10mm case</field>
-        <field name="Rating">DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Rating">DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="V1A" part="C337_PCH1V471MCL1GS" description=""/>
       <property name="MPN" value="PCH1V471MCL1GS"/>
       <property name="Source" value="Nichicon PCH catalog pp1-2; 10x10mm case"/>
-      <property name="Rating" value="DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"/>
+      <property name="Rating" value="DATASHEET: 470uF +/-20%,35V,10x16mm;35V is not an input-surge rating; raw-bank inrush/stability OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -1623,6 +1623,26 @@
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>8844cce1-54fc-540e-826e-faefa30ea471</tstamps>
     </comp>
+    <comp ref="D303">
+      <value>BAT46W-E3-08</value>
+      <footprint>V1A_Qualified:Vishay_BAT46W_A1_K2</footprint>
+      <fields>
+        <field name="MPN">BAT46W-E3-08</field>
+        <field name="Source">DATASHEET: Vishay86406 Rev1.1 20-Nov-2025 pp1,4; pin1A pin2K (opposite generic diode numbering)</field>
+        <field name="Rating">DATASHEET:100V,200mA; ASSUMED aux current&lt;=20mA; reverse-input/recovery and thermal qualification OPEN</field>
+        <field name="Footprint">V1A_Qualified:Vishay_BAT46W_A1_K2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="D303_BAT46W_E3_08" description=""/>
+      <property name="MPN" value="BAT46W-E3-08"/>
+      <property name="Source" value="DATASHEET: Vishay86406 Rev1.1 20-Nov-2025 pp1,4; pin1A pin2K (opposite generic diode numbering)"/>
+      <property name="Rating" value="DATASHEET:100V,200mA; ASSUMED aux current&lt;=20mA; reverse-input/recovery and thermal qualification OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>b076c3d1-87de-554f-ab78-6ccf1b926cbc</tstamps>
+    </comp>
     <comp ref="J301">
       <value>ARM button</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
@@ -1665,12 +1685,12 @@
     </comp>
     <comp ref="Q301">
       <value>BSC034N06NSATMA1</value>
-      <footprint>Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm</footprint>
+      <footprint>V1A_Qualified:Infineon_BSC034N06NS_8pin</footprint>
       <fields>
         <field name="MPN">BSC034N06NSATMA1</field>
         <field name="Source">Infineon BSC034N06NS Rev2.3 p1 pin diagram,pp10-11 package; common SOURCE correction</field>
         <field name="Rating">DATASHEET60V; ASSUMED hot pair13.6mOhm; series SOA OPEN</field>
-        <field name="Footprint">Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm</field>
+        <field name="Footprint">V1A_Qualified:Infineon_BSC034N06NS_8pin</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -1685,12 +1705,12 @@
     </comp>
     <comp ref="Q302">
       <value>BSC034N06NSATMA1</value>
-      <footprint>Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm</footprint>
+      <footprint>V1A_Qualified:Infineon_BSC034N06NS_8pin</footprint>
       <fields>
         <field name="MPN">BSC034N06NSATMA1</field>
         <field name="Source">Infineon BSC034N06NS Rev2.3 p1 pin diagram,pp10-11 package; common SOURCE correction</field>
         <field name="Rating">DATASHEET60V; ASSUMED hot pair13.6mOhm; series SOA OPEN</field>
-        <field name="Footprint">Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm</field>
+        <field name="Footprint">V1A_Qualified:Infineon_BSC034N06NS_8pin</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -1724,20 +1744,20 @@
       <tstamps>495b61e2-afc7-5d21-bf69-c3f975dfa2da</tstamps>
     </comp>
     <comp ref="Q304">
-      <value>BSS138</value>
+      <value>2N7002,215</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <fields>
-        <field name="MPN">BSS138</field>
-        <field name="Source">onsemi BSS138/D Rev7 p1 SOT23 G1 S2 D3</field>
-        <field name="Rating">DATASHEET rating; preliminary review only</field>
+        <field name="MPN">2N7002,215</field>
+        <field name="Source">DATASHEET: Nexperia 2N7002 Rev7 (2011-09-08), p1 Table2:1G2S3D; p5 RDS at4.5V; low-current SHDN pull-down only</field>
+        <field name="Rating">DATASHEET:60V,5.3ohm max at4.5V/25C test; SHDN low level/hot operation OPEN</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="V1A" part="Q304_BSS138" description=""/>
-      <property name="MPN" value="BSS138"/>
-      <property name="Source" value="onsemi BSS138/D Rev7 p1 SOT23 G1 S2 D3"/>
-      <property name="Rating" value="DATASHEET rating; preliminary review only"/>
+      <libsource lib="V1A" part="Q304_2N7002_215" description=""/>
+      <property name="MPN" value="2N7002,215"/>
+      <property name="Source" value="DATASHEET: Nexperia 2N7002 Rev7 (2011-09-08), p1 Table2:1G2S3D; p5 RDS at4.5V; low-current SHDN pull-down only"/>
+      <property name="Rating" value="DATASHEET:60V,5.3ohm max at4.5V/25C test; SHDN low level/hot operation OPEN"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -2004,12 +2024,12 @@
       <tstamps>141e12c2-8f66-516e-b999-fc61a50bf9bb</tstamps>
     </comp>
     <comp ref="R314">
-      <value>52.8k</value>
+      <value>53.9k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="MPN">Resistor_specification</field>
         <field name="Source">Project selection; see Gate2 pin/value review</field>
-        <field name="Rating">ASSUMED0.1%;CALCULATED LDO setpoint</field>
+        <field name="Rating">ASSUMED procurement 0.1%,&lt;=10ppm/K; CALCULATED 7.62327V nominal; preserves7.35V drive screen at regulated corners</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -2017,7 +2037,7 @@
       <libsource lib="V1A" part="R314_Resistor_specification" description=""/>
       <property name="MPN" value="Resistor_specification"/>
       <property name="Source" value="Project selection; see Gate2 pin/value review"/>
-      <property name="Rating" value="ASSUMED0.1%;CALCULATED LDO setpoint"/>
+      <property name="Rating" value="ASSUMED procurement 0.1%,&lt;=10ppm/K; CALCULATED 7.62327V nominal; preserves7.35V drive screen at regulated corners"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
@@ -2183,6 +2203,26 @@
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>9f6e9ac9-9926-5a42-9ac4-c912186c989e</tstamps>
     </comp>
+    <comp ref="R323">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">Resistor_specification</field>
+        <field name="Source">Project auxiliary-rail bleed, upstream LDO isolation</field>
+        <field name="Rating">ASSUMED:1%,0.25W,75V; select1206 body before procurement; reverse leakage at125C OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R323_Resistor_specification" description=""/>
+      <property name="MPN" value="Resistor_specification"/>
+      <property name="Source" value="Project auxiliary-rail bleed, upstream LDO isolation"/>
+      <property name="Rating" value="ASSUMED:1%,0.25W,75V; select1206 body before procurement; reverse leakage at125C OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>b16b8634-6e24-5623-9179-763b14b594eb</tstamps>
+    </comp>
     <comp ref="TP301">
       <value>VOUT_5V1</value>
       <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
@@ -2345,12 +2385,12 @@
     </comp>
     <comp ref="U304">
       <value>SN74LVC1G74DCTR</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23-8</footprint>
+      <footprint>V1A_Qualified:TI_DCT0008A_SN74LVC1G74</footprint>
       <fields>
         <field name="MPN">SN74LVC1G74DCTR</field>
         <field name="Source">TI SCES794G p4 DCT pin table; function table; DCT0008A drawing</field>
         <field name="Rating">DATASHEET rating; preliminary review only</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-8</field>
+        <field name="Footprint">V1A_Qualified:TI_DCT0008A_SN74LVC1G74</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -2445,12 +2485,12 @@
     </comp>
     <comp ref="U309">
       <value>SN74LVC1G74DCTR</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23-8</footprint>
+      <footprint>V1A_Qualified:TI_DCT0008A_SN74LVC1G74</footprint>
       <fields>
         <field name="MPN">SN74LVC1G74DCTR</field>
         <field name="Source">TI SCES794G p4 DCT pin table; function table; DCT0008A drawing</field>
         <field name="Rating">DATASHEET rating; preliminary review only</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-8</field>
+        <field name="Footprint">V1A_Qualified:TI_DCT0008A_SN74LVC1G74</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -2568,7 +2608,7 @@
       <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
       <fields>
         <field name="MPN">UCC27511DBVR</field>
-        <field name="Source">TI SLUSAW9F p6 DBV pin table; pp9-10 output ratings</field>
+        <field name="Source">DATASHEET: TI SLUSAW9F (Nov2014), p6 UCC27511 pin functions; NOT UCC27512 pinout</field>
         <field name="Rating">DATASHEET rating; preliminary review only</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
         <field name="Datasheet"/>
@@ -2576,7 +2616,7 @@
       </fields>
       <libsource lib="V1A" part="U315_UCC27511DBVR" description=""/>
       <property name="MPN" value="UCC27511DBVR"/>
-      <property name="Source" value="TI SLUSAW9F p6 DBV pin table; pp9-10 output ratings"/>
+      <property name="Source" value="DATASHEET: TI SLUSAW9F (Nov2014), p6 UCC27511 pin functions; NOT UCC27512 pinout"/>
       <property name="Rating" value="DATASHEET rating; preliminary review only"/>
       <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
@@ -3670,7 +3710,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3683,7 +3723,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3696,7 +3736,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3709,7 +3749,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3722,7 +3762,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3735,7 +3775,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3748,7 +3788,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3761,7 +3801,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">470uF 35V</field>
-        <field name="Footprint">Capacitor_SMD:C_Elec_10x10.2</field>
+        <field name="Footprint">V1A_Qualified:Nichicon_PCH_10x16</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -3902,6 +3942,19 @@
         <pin num="3" name="K" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="V1A" part="D303_BAT46W_E3_08">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAT46W-E3-08</field>
+        <field name="Footprint">V1A_Qualified:Vishay_BAT46W_A1_K2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="V1A" part="F101_">
       <fields>
         <field name="Reference">F</field>
@@ -4032,7 +4085,7 @@
       <fields>
         <field name="Reference">Q</field>
         <field name="Value">BSC034N06NSATMA1</field>
-        <field name="Footprint">Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm</field>
+        <field name="Footprint">V1A_Qualified:Infineon_BSC034N06NS_8pin</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -4051,7 +4104,7 @@
       <fields>
         <field name="Reference">Q</field>
         <field name="Value">BSC034N06NSATMA1</field>
-        <field name="Footprint">Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm</field>
+        <field name="Footprint">V1A_Qualified:Infineon_BSC034N06NS_8pin</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -4085,10 +4138,10 @@
         <pin num="8" name="D" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="V1A" part="Q304_BSS138">
+    <libpart lib="V1A" part="Q304_2N7002_215">
       <fields>
         <field name="Reference">Q</field>
-        <field name="Value">BSS138</field>
+        <field name="Value">2N7002,215</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -4466,7 +4519,7 @@
     <libpart lib="V1A" part="R314_Resistor_specification">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">52.8k</field>
+        <field name="Value">53.9k</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -4572,6 +4625,19 @@
         <field name="Reference">R</field>
         <field name="Value">100k</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="R323_Resistor_specification">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -4988,7 +5054,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">SN74LVC1G74DCTR</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-8</field>
+        <field name="Footprint">V1A_Qualified:TI_DCT0008A_SN74LVC1G74</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -5081,7 +5147,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">SN74LVC1G74DCTR</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-8</field>
+        <field name="Footprint">V1A_Qualified:TI_DCT0008A_SN74LVC1G74</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -5187,12 +5253,12 @@
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="IN+" type="input"/>
-        <pin num="2" name="GND" type="power_in"/>
-        <pin num="3" name="IN-" type="input"/>
-        <pin num="4" name="OUTL" type="output"/>
-        <pin num="5" name="VDD" type="power_in"/>
-        <pin num="6" name="OUTH" type="output"/>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="OUTH" type="output"/>
+        <pin num="3" name="OUTL" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="IN-" type="input"/>
+        <pin num="6" name="IN+" type="input"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="U401_INA228AIDGSR">
@@ -5389,11 +5455,11 @@
       <node ref="Q303" pin="4" pinfunction="G" pintype="input"/>
       <node ref="R306" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R307" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U315" pin="4" pinfunction="OUTL" pintype="output"/>
+      <node ref="U315" pin="3" pinfunction="OUTL" pintype="output"/>
     </net>
     <net code="27" name="/03_OUTPUT_PROTECTION/CB_GATE_UP" class="Default">
       <node ref="R306" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="U315" pin="6" pinfunction="OUTH" pintype="output"/>
+      <node ref="U315" pin="2" pinfunction="OUTH" pintype="output"/>
     </net>
     <net code="28" name="/03_OUTPUT_PROTECTION/CB_R_A" class="Default">
       <node ref="R308" pin="2" pinfunction="2" pintype="passive"/>
@@ -5407,7 +5473,7 @@
       <node ref="Q304" pin="1" pinfunction="G" pintype="input"/>
       <node ref="R322" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U311" pin="4" pinfunction="Y" pintype="output"/>
-      <node ref="U315" pin="1" pinfunction="IN+" pintype="input"/>
+      <node ref="U315" pin="6" pinfunction="IN+" pintype="input"/>
     </net>
     <net code="31" name="/03_OUTPUT_PROTECTION/CTRL_ENABLE" class="Default">
       <node ref="U309" pin="6" pinfunction="nCLR" pintype="input"/>
@@ -5468,7 +5534,7 @@
       <node ref="R314" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U301" pin="1" pinfunction="VCC" pintype="power_in"/>
       <node ref="U307" pin="1" pinfunction="OUT" pintype="power_out"/>
-      <node ref="U315" pin="5" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U315" pin="1" pinfunction="VDD" pintype="power_in"/>
     </net>
     <net code="36" name="/03_OUTPUT_PROTECTION/DRV_DELAY" class="Default">
       <node ref="C313" pin="1" pinfunction="+_/_1" pintype="passive"/>
@@ -5557,7 +5623,16 @@
       <node ref="R304" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U301" pin="7" pinfunction="TGUP" pintype="output"/>
     </net>
-    <net code="51" name="/04_POWER_MONITOR/3V3_LOCAL" class="Default">
+    <net code="51" name="/03_OUTPUT_PROTECTION/VIN_AUX" class="Default">
+      <node ref="C307" pin="1" pinfunction="+_/_1" pintype="passive"/>
+      <node ref="D303" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="R323" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U306" pin="5" pinfunction="EN" pintype="input"/>
+      <node ref="U306" pin="8" pinfunction="IN" pintype="power_in"/>
+      <node ref="U307" pin="5" pinfunction="EN" pintype="input"/>
+      <node ref="U307" pin="8" pinfunction="IN" pintype="power_in"/>
+    </net>
+    <net code="52" name="/04_POWER_MONITOR/3V3_LOCAL" class="Default">
       <node ref="C402" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C404" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C406" pin="1" pinfunction="1" pintype="passive"/>
@@ -5570,53 +5645,53 @@
       <node ref="U403" pin="5" pinfunction="EN" pintype="input"/>
       <node ref="U403" pin="8" pinfunction="VCCB" pintype="power_in"/>
     </net>
-    <net code="52" name="/04_POWER_MONITOR/ALERT_LOCAL" class="Default">
+    <net code="53" name="/04_POWER_MONITOR/ALERT_LOCAL" class="Default">
       <node ref="R408" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP401" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U401" pin="3" pinfunction="ALERT" pintype="open_collector"/>
     </net>
-    <net code="53" name="/04_POWER_MONITOR/INA_IN_MINUS" class="Default">
+    <net code="54" name="/04_POWER_MONITOR/INA_IN_MINUS" class="Default">
       <node ref="C401" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R403" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="9" pinfunction="IN-" pintype="input"/>
     </net>
-    <net code="54" name="/04_POWER_MONITOR/INA_IN_PLUS" class="Default">
+    <net code="55" name="/04_POWER_MONITOR/INA_IN_PLUS" class="Default">
       <node ref="C401" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R402" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="10" pinfunction="IN+" pintype="input"/>
     </net>
-    <net code="55" name="/04_POWER_MONITOR/SCL_LOCAL" class="Default">
+    <net code="56" name="/04_POWER_MONITOR/SCL_LOCAL" class="Default">
       <node ref="R405" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="5" pinfunction="SCL" pintype="input"/>
       <node ref="U403" pin="7" pinfunction="SCLB" pintype="bidirectional"/>
     </net>
-    <net code="56" name="/04_POWER_MONITOR/SDA_LOCAL" class="Default">
+    <net code="57" name="/04_POWER_MONITOR/SDA_LOCAL" class="Default">
       <node ref="R404" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="4" pinfunction="SDA" pintype="bidirectional"/>
       <node ref="U403" pin="6" pinfunction="SDAB" pintype="bidirectional"/>
     </net>
-    <net code="57" name="/04_POWER_MONITOR/SHUNT_KMINUS" class="Default">
+    <net code="58" name="/04_POWER_MONITOR/SHUNT_KMINUS" class="Default">
       <node ref="R401" pin="3" pinfunction="S-" pintype="passive"/>
       <node ref="R403" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP403" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="58" name="/04_POWER_MONITOR/SHUNT_KPLUS" class="Default">
+    <net code="59" name="/04_POWER_MONITOR/SHUNT_KPLUS" class="Default">
       <node ref="R401" pin="2" pinfunction="S+" pintype="passive"/>
       <node ref="R402" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP402" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="59" name="/BUCK_INPUT_PGOOD" class="Default">
+    <net code="60" name="/BUCK_INPUT_PGOOD" class="Default">
       <node ref="R206" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R207" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="16" pinfunction="PGOOD" pintype="open_collector"/>
       <node ref="U201" pin="7" pinfunction="EN/SYNC" pintype="input"/>
     </net>
-    <net code="60" name="/BUCK_PGOOD" class="Default">
+    <net code="61" name="/BUCK_PGOOD" class="Default">
       <node ref="R317" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U201" pin="5" pinfunction="PGOOD" pintype="open_collector"/>
       <node ref="U310" pin="6" pinfunction="C" pintype="input"/>
     </net>
-    <net code="61" name="/GND" class="Default">
+    <net code="62" name="/GND" class="Default">
       <node ref="C101" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C102" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C103" pin="2" pinfunction="2" pintype="passive"/>
@@ -5692,6 +5767,7 @@
       <node ref="R315" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R321" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R322" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R323" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP504" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U101" pin="25" pinfunction="EP" pintype="power_in"/>
       <node ref="U101" pin="8" pinfunction="GND" pintype="power_in"/>
@@ -5718,39 +5794,39 @@
       <node ref="U312" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U313" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U314" pin="3" pinfunction="GND" pintype="power_in"/>
-      <node ref="U315" pin="2" pinfunction="GND" pintype="power_in"/>
-      <node ref="U315" pin="3" pinfunction="IN-" pintype="input"/>
+      <node ref="U315" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U315" pin="5" pinfunction="IN-" pintype="input"/>
       <node ref="U401" pin="1" pinfunction="A1" pintype="input"/>
       <node ref="U401" pin="2" pinfunction="A0" pintype="input"/>
       <node ref="U401" pin="7" pinfunction="GND" pintype="power_in"/>
       <node ref="U402" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U403" pin="4" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="62" name="/INPUT_SHDN" class="Default">
+    <net code="63" name="/INPUT_SHDN" class="Default">
       <node ref="Q304" pin="3" pinfunction="D" pintype="open_collector"/>
       <node ref="TP101" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U101" pin="12" pinfunction="SHDN" pintype="input"/>
     </net>
-    <net code="63" name="/LOAD_5V1" class="Default">
+    <net code="64" name="/LOAD_5V1" class="Default">
       <node ref="J502" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="R401" pin="4" pinfunction="I-" pintype="passive"/>
       <node ref="TP503" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U401" pin="8" pinfunction="VBUS" pintype="input"/>
     </net>
-    <net code="64" name="/SCL_HOST" class="Default">
+    <net code="65" name="/SCL_HOST" class="Default">
       <node ref="J503" pin="4" pinfunction="SCL" pintype="passive"/>
       <node ref="R407" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U403" pin="2" pinfunction="SCLA" pintype="bidirectional"/>
     </net>
-    <net code="65" name="/SDA_HOST" class="Default">
+    <net code="66" name="/SDA_HOST" class="Default">
       <node ref="J503" pin="3" pinfunction="SDA" pintype="passive"/>
       <node ref="R406" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U403" pin="3" pinfunction="SDAA" pintype="bidirectional"/>
     </net>
-    <net code="66" name="/VIN_FUSED" class="Default">
+    <net code="67" name="/VIN_FUSED" class="Default">
       <node ref="C101" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="C307" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="D101" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="D303" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="F101" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="Q101" pin="1" pinfunction="S" pintype="passive"/>
       <node ref="Q101" pin="2" pinfunction="S" pintype="passive"/>
@@ -5759,12 +5835,8 @@
       <node ref="R101" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="5" pinfunction="IN_SYS" pintype="power_in"/>
-      <node ref="U306" pin="5" pinfunction="EN" pintype="input"/>
-      <node ref="U306" pin="8" pinfunction="IN" pintype="power_in"/>
-      <node ref="U307" pin="5" pinfunction="EN" pintype="input"/>
-      <node ref="U307" pin="8" pinfunction="IN" pintype="power_in"/>
     </net>
-    <net code="67" name="/VIN_PROTECTED" class="Default">
+    <net code="68" name="/VIN_PROTECTED" class="Default">
       <node ref="C201" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C202" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C203" pin="1" pinfunction="1" pintype="passive"/>
@@ -5779,12 +5851,12 @@
       <node ref="U201" pin="12" pinfunction="VIN2" pintype="power_in"/>
       <node ref="U201" pin="8" pinfunction="VIN1" pintype="power_in"/>
     </net>
-    <net code="68" name="/VIN_RAW" class="Default">
+    <net code="69" name="/VIN_RAW" class="Default">
       <node ref="F101" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J501" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="TP501" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="69" name="/VOUT_5V1" class="Default">
+    <net code="70" name="/VOUT_5V1" class="Default">
       <node ref="C207" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C209" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C210" pin="1" pinfunction="1" pintype="passive"/>
@@ -5809,7 +5881,7 @@
       <node ref="R301" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP301" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="70" name="/VOUT_PROTECTED" class="Default">
+    <net code="71" name="/VOUT_PROTECTED" class="Default">
       <node ref="C403" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="Q302" pin="5" pinfunction="D" pintype="passive"/>
       <node ref="Q302" pin="6" pinfunction="D" pintype="passive"/>
@@ -5821,73 +5893,73 @@
       <node ref="TP302" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U402" pin="1" pinfunction="IN" pintype="power_in"/>
     </net>
-    <net code="71" name="unconnected-(D301-NC-Pad2)" class="Default">
+    <net code="72" name="unconnected-(D301-NC-Pad2)" class="Default">
       <node ref="D301" pin="2" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="72" name="unconnected-(D302-NC-Pad2)" class="Default">
+    <net code="73" name="unconnected-(D302-NC-Pad2)" class="Default">
       <node ref="D302" pin="2" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="73" name="unconnected-(U101-IMON-Pad13)" class="Default">
+    <net code="74" name="unconnected-(U101-IMON-Pad13)" class="Default">
       <node ref="U101" pin="13" pinfunction="IMON" pintype="output+no_connect"/>
     </net>
-    <net code="74" name="unconnected-(U101-MODE-Pad11)" class="Default">
+    <net code="75" name="unconnected-(U101-MODE-Pad11)" class="Default">
       <node ref="U101" pin="11" pinfunction="MODE" pintype="input+no_connect"/>
     </net>
-    <net code="75" name="unconnected-(U101-NC-Pad19)" class="Default">
+    <net code="76" name="unconnected-(U101-NC-Pad19)" class="Default">
       <node ref="U101" pin="19" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="76" name="unconnected-(U101-NC-Pad20)" class="Default">
+    <net code="77" name="unconnected-(U101-NC-Pad20)" class="Default">
       <node ref="U101" pin="20" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="77" name="unconnected-(U101-NC-Pad21)" class="Default">
+    <net code="78" name="unconnected-(U101-NC-Pad21)" class="Default">
       <node ref="U101" pin="21" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="78" name="unconnected-(U101-NC-Pad22)" class="Default">
+    <net code="79" name="unconnected-(U101-NC-Pad22)" class="Default">
       <node ref="U101" pin="22" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="79" name="unconnected-(U101-NC-Pad23)" class="Default">
+    <net code="80" name="unconnected-(U101-NC-Pad23)" class="Default">
       <node ref="U101" pin="23" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="80" name="unconnected-(U101-NC-Pad24)" class="Default">
+    <net code="81" name="unconnected-(U101-NC-Pad24)" class="Default">
       <node ref="U101" pin="24" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="81" name="unconnected-(U301-NC-Pad10)" class="Default">
+    <net code="82" name="unconnected-(U301-NC-Pad10)" class="Default">
       <node ref="U301" pin="10" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="82" name="unconnected-(U302-DNC-Pad1)" class="Default">
+    <net code="83" name="unconnected-(U302-DNC-Pad1)" class="Default">
       <node ref="U302" pin="1" pinfunction="DNC" pintype="no_connect"/>
     </net>
-    <net code="83" name="unconnected-(U302-DNC-Pad8)" class="Default">
+    <net code="84" name="unconnected-(U302-DNC-Pad8)" class="Default">
       <node ref="U302" pin="8" pinfunction="DNC" pintype="no_connect"/>
     </net>
-    <net code="84" name="unconnected-(U302-NC-Pad7)" class="Default">
+    <net code="85" name="unconnected-(U302-NC-Pad7)" class="Default">
       <node ref="U302" pin="7" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="85" name="unconnected-(U302-TEMP-Pad3)" class="Default">
+    <net code="86" name="unconnected-(U302-TEMP-Pad3)" class="Default">
       <node ref="U302" pin="3" pinfunction="TEMP" pintype="output+no_connect"/>
     </net>
-    <net code="86" name="unconnected-(U302-TRIM_NR-Pad5)" class="Default">
+    <net code="87" name="unconnected-(U302-TRIM_NR-Pad5)" class="Default">
       <node ref="U302" pin="5" pinfunction="TRIM_NR" pintype="passive+no_connect"/>
     </net>
-    <net code="87" name="unconnected-(U306-NC-Pad6)" class="Default">
+    <net code="88" name="unconnected-(U306-NC-Pad6)" class="Default">
       <node ref="U306" pin="6" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="88" name="unconnected-(U307-NC-Pad6)" class="Default">
+    <net code="89" name="unconnected-(U307-NC-Pad6)" class="Default">
       <node ref="U307" pin="6" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="89" name="unconnected-(U309-nQ-Pad3)" class="Default">
+    <net code="90" name="unconnected-(U309-nQ-Pad3)" class="Default">
       <node ref="U309" pin="3" pinfunction="nQ" pintype="output+no_connect"/>
     </net>
-    <net code="90" name="unconnected-(U313-NC-Pad1)" class="Default">
+    <net code="91" name="unconnected-(U313-NC-Pad1)" class="Default">
       <node ref="U313" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="91" name="unconnected-(U314-NC-Pad1)" class="Default">
+    <net code="92" name="unconnected-(U314-NC-Pad1)" class="Default">
       <node ref="U314" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="92" name="unconnected-(U402-EN-Pad3)" class="Default">
+    <net code="93" name="unconnected-(U402-EN-Pad3)" class="Default">
       <node ref="U402" pin="3" pinfunction="EN" pintype="input+no_connect"/>
     </net>
-    <net code="93" name="unconnected-(U402-NC-Pad4)" class="Default">
+    <net code="94" name="unconnected-(U402-NC-Pad4)" class="Default">
       <node ref="U402" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>

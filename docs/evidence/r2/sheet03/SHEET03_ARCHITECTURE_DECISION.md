@@ -268,4 +268,3 @@ At an illustrative 5.4 V trip, effective C=560 µF and 2 µs isolation, this giv
 For example, C's nominal 11.2 kΩ/10 kΩ divider produces **11.321 V** at its sense node with a 24 V raw rail. A 3.3 V comparator cannot tolerate that unprotected. Adding a clamp changes leakage, propagation, power injection and reset behavior and therefore must appear in both the threshold budget and the state review. A high-voltage LDO alone does not solve sense-pin survival.
 
 `BUCK_INPUT_PGOOD` in the captured project is U101→U201 enable; U201's own PGOOD is currently NC. Neither is independent proof of safety after U201 fails. Any future buck-PGOOD connection is only sequencing assistance, must use a bounded pull-up domain, and must not override the independent detector. No hierarchy/sheet changes are made here.
-
