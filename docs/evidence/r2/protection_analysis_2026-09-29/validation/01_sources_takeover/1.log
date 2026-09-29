@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Repository integrity only; R2/R3 BLOCKED",
+  "hardware_files_verified": 13,
+  "markdown_files_checked": 59,
+  "json_files_checked": 54,
+  "archived_external_links": [
+    "third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf",
+    "third_party/documents/Vishay_WSL2726_30131_2026-06-29.pdf",
+    "third_party/documents/r2/TI_CSD19537Q3_SLPS549B.pdf",
+    "third_party/documents/r2/TI_LM61460_SNVSBD5D.pdf"
+  ],
+  "errors": []
+}

@@ -1,0 +1,19 @@
+test_bulk_reduces_load_release_estimate (test_output_protection_model.ProtectionModelTests.test_bulk_reduces_load_release_estimate) ... ok
+test_every_input_is_labelled_and_sourced (test_output_protection_model.ProtectionModelTests.test_every_input_is_labelled_and_sourced) ... ok
+test_lm74800_only_finding_is_reproduced (test_output_protection_model.ProtectionModelTests.test_lm74800_only_finding_is_reproduced) ... ok
+test_recommended_option_stays_below_screen_at_worst_corner (test_output_protection_model.ProtectionModelTests.test_recommended_option_stays_below_screen_at_worst_corner) ... ok
+test_q3_every_source_gate_drain_number_and_clearance (test_qualified_footprints.FootprintTests.test_q3_every_source_gate_drain_number_and_clearance) ... ok
+test_q3_stencil_is_not_full_drain_copper (test_qualified_footprints.FootprintTests.test_q3_stencil_is_not_full_drain_copper) ... ok
+test_rjr_all_fourteen_labelled_land_extents (test_qualified_footprints.FootprintTests.test_rjr_all_fourteen_labelled_land_extents) ... ok
+test_rjr_stencil_keeps_split_sw_apertures (test_qualified_footprints.FootprintTests.test_rjr_stencil_keeps_split_sw_apertures) ... ok
+test_vishay_kelvin_wide_force_narrow_sense_contract (test_qualified_footprints.FootprintTests.test_vishay_kelvin_wide_force_narrow_sense_contract) ... ok
+test_host_pullup_to_live_local_rail_is_rejected (test_r2_capture.CaptureTests.test_host_pullup_to_live_local_rail_is_rejected) ... ok
+test_output_boundary_cannot_be_shortened_even_in_both_contracts (test_r2_capture.CaptureTests.test_output_boundary_cannot_be_shortened_even_in_both_contracts) ... ok
+test_q102_source_must_follow_input_not_ground (test_r2_capture.CaptureTests.test_q102_source_must_follow_input_not_ground) ... ok
+test_reversed_kelvin_sense_is_rejected (test_r2_capture.CaptureTests.test_reversed_kelvin_sense_is_rejected) ... ok
+test_review_capture_matches_contracts (test_r2_capture.CaptureTests.test_review_capture_matches_contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.269s
+
+OK

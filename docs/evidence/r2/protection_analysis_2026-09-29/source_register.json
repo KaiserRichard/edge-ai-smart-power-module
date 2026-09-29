@@ -1,0 +1,458 @@
+{
+  "date": {
+    "label": "KNOWN",
+    "value": "2026-09-29"
+  },
+  "scope": "Codex brief 02 Task 1 primary-source provenance; engineering evidence only. Sheet 03 OPEN; R2 and R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.",
+  "evidence_labels": [
+    "KNOWN",
+    "CALCULATED",
+    "SIMULATED",
+    "INFERRED",
+    "ASSUMED",
+    "UNKNOWN"
+  ],
+  "metadata_label": "KNOWN: download dates, HTTP statuses, curl exit codes, hashes, byte counts and document identifiers are source or local filesystem observations; they are not electrical validation.",
+  "archive_policy": "Successful upstream PDF bytes are retained unchanged under third_party/documents/r2_protection/ as ignored local vendor caches. This authored register is tracked. Reproduce caches from the listed manufacturer URLs and verify SHA-256; if the manufacturer changes a served PDF, keep the new hash/revision distinct.",
+  "network_scope": "Only the seven Task 1 manufacturer documents were requested. No alternate mirrors, candidate-part datasheets, vendor models or package downloads were requested.",
+  "blocked_source_policy": "A failed download is not evidence of the requested electrical parameters. Local historical mirror evidence is not silently promoted to a newly retrieved primary source.",
+  "sources": [
+    {
+      "id": "LM7480",
+      "manufacturer": "Texas Instruments",
+      "title": "LM7480-Q1 Ideal Diode Controller with Load Dump Protection",
+      "url": "https://www.ti.com/lit/ds/symlink/lm7480-q1.pdf",
+      "requested_document_identifier": "SNOSD95C",
+      "revision": {
+        "label": "KNOWN",
+        "value": "SNOSD95C; April 2020, revised December 2020"
+      },
+      "retrieval": {
+        "label": "KNOWN",
+        "date": "2026-09-29",
+        "status": "DOWNLOADED",
+        "http_status": 200,
+        "curl_exit_code": 0,
+        "error": null,
+        "earlier_attempt": {
+          "label": "KNOWN",
+          "curl_exit_code": 6,
+          "error": "Sandbox DNS resolution failed; authorized escalated download succeeded."
+        }
+      },
+      "archive_path": "third_party/documents/r2_protection/lm7480.pdf",
+      "intended_archive_path": "third_party/documents/r2_protection/lm7480.pdf",
+      "sha256": {
+        "label": "KNOWN",
+        "value": "38ea1e89cc677020c8a10096649fa7933d2aeff8c0cd97ca9a78c1f8f5b9b500"
+      },
+      "file_bytes": {
+        "label": "KNOWN",
+        "value": 9773286
+      },
+      "relevant_source_files": [
+        "third_party/documents/r2_protection/lm7480.pdf"
+      ],
+      "function_studied": "Common-drain output disconnect; overvoltage and enable delays; gate-drive source/sink and low-supply behavior",
+      "relevant_sections": [
+        "7.5 Electrical Characteristics",
+        "7.6 Switching Characteristics",
+        "7.7 Typical Characteristics",
+        "HGATE relative to OUT absolute limit"
+      ],
+      "use": "REFERENCED only; no circuit or layout adapted or copied in this brief",
+      "modifications": {
+        "label": "KNOWN",
+        "description": "None; downloaded upstream bytes are preserved"
+      },
+      "license": {
+        "label": "KNOWN",
+        "description": "Texas Instruments copyright. Source legal notice permits use for developing applications using the TI products described; other reproduction/display is restricted. No open license or general redistribution permission inferred. Retain the complete unmodified local PDF and its notices."
+      },
+      "required_attribution": {
+        "label": "KNOWN",
+        "description": "Project provenance requires citation to Texas Instruments, document title, exact verified revision and manufacturer URL. Preserve source notices in any retained copy. No additional redistribution rights are asserted."
+      },
+      "review_evidence": "PRIMARY_SOURCE_REVIEW.md",
+      "next_action": null,
+      "visually_reviewed_pdf_pages": {
+        "label": "KNOWN",
+        "value": [
+          4,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "id": "TPS2663",
+      "manufacturer": "Texas Instruments",
+      "title": "TPS2663x 60V, 6A Power Limiting, Surge Protection Industrial eFuse",
+      "url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "requested_document_identifier": "SLVSE94G",
+      "revision": {
+        "label": "KNOWN",
+        "value": "SLVSE94G; September 2018, revised June 2024"
+      },
+      "retrieval": {
+        "label": "KNOWN",
+        "date": "2026-09-29",
+        "status": "DOWNLOADED",
+        "http_status": 200,
+        "curl_exit_code": 0,
+        "error": null
+      },
+      "archive_path": "third_party/documents/r2_protection/tps2663.pdf",
+      "intended_archive_path": "third_party/documents/r2_protection/tps2663.pdf",
+      "sha256": {
+        "label": "KNOWN",
+        "value": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2"
+      },
+      "file_bytes": {
+        "label": "KNOWN",
+        "value": 5728602
+      },
+      "relevant_source_files": [
+        "third_party/documents/r2_protection/tps2663.pdf"
+      ],
+      "function_studied": "Fast trip versus current limit; power limiting and timer; overvoltage and shutdown behavior; output-short safe operating area",
+      "relevant_sections": [
+        "Electrical Characteristics",
+        "Detailed Description: current limiting, power limiting, fast trip, overvoltage protection and shutdown",
+        "Application Information: safe operating area"
+      ],
+      "use": "REFERENCED only; no circuit or layout adapted or copied in this brief",
+      "modifications": {
+        "label": "KNOWN",
+        "description": "None; downloaded upstream bytes are preserved"
+      },
+      "license": {
+        "label": "KNOWN",
+        "description": "Texas Instruments copyright. Source legal notice permits use for developing applications using the TI products described; other reproduction/display is restricted. No open license or general redistribution permission inferred. Retain the complete unmodified local PDF and its notices."
+      },
+      "required_attribution": {
+        "label": "KNOWN",
+        "description": "Project provenance requires citation to Texas Instruments, document title, exact verified revision and manufacturer URL. Preserve source notices in any retained copy. No additional redistribution rights are asserted."
+      },
+      "review_evidence": "TPS2663_SOURCE_REVIEW.md",
+      "next_action": null,
+      "visually_reviewed_pdf_pages": {
+        "label": "KNOWN",
+        "value": [
+          1,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          14,
+          18,
+          22,
+          23,
+          24,
+          25,
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": "LM61460",
+      "manufacturer": "Texas Instruments",
+      "title": "LM61460 3-V to 36-V, 6-A, Low EMI Synchronous Step-Down Converter",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "requested_document_identifier": "SNVSBD5D",
+      "revision": {
+        "label": "KNOWN",
+        "value": "SNVSBD5D; May 2019, revised July 2022"
+      },
+      "retrieval": {
+        "label": "KNOWN",
+        "date": "2026-09-29",
+        "status": "DOWNLOADED",
+        "http_status": 200,
+        "curl_exit_code": 0,
+        "error": null
+      },
+      "archive_path": "third_party/documents/r2_protection/lm61460.pdf",
+      "intended_archive_path": "third_party/documents/r2_protection/lm61460.pdf",
+      "sha256": {
+        "label": "KNOWN",
+        "value": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d"
+      },
+      "file_bytes": {
+        "label": "KNOWN",
+        "value": 3093699
+      },
+      "relevant_source_files": [
+        "third_party/documents/r2_protection/lm61460.pdf"
+      ],
+      "function_studied": "Output capacitance and bulk capacitor guidance; soft start; high-side and low-side switch behavior under faults",
+      "relevant_sections": [
+        "Output Capacitor Selection",
+        "Soft Start",
+        "Current Limit and Short Circuit"
+      ],
+      "use": "REFERENCED only; no circuit or layout adapted or copied in this brief",
+      "modifications": {
+        "label": "KNOWN",
+        "description": "None; downloaded upstream bytes are preserved"
+      },
+      "license": {
+        "label": "KNOWN",
+        "description": "Texas Instruments copyright. Source legal notice permits use for developing applications using the TI products described; other reproduction/display is restricted. No open license or general redistribution permission inferred. Retain the complete unmodified local PDF and its notices."
+      },
+      "required_attribution": {
+        "label": "KNOWN",
+        "description": "Project provenance requires citation to Texas Instruments, document title, exact verified revision and manufacturer URL. Preserve source notices in any retained copy. No additional redistribution rights are asserted."
+      },
+      "review_evidence": "BUCK_TVS_SOURCE_REVIEW.md",
+      "next_action": null,
+      "visually_reviewed_pdf_pages": {
+        "label": "KNOWN",
+        "value": [
+          4,
+          6,
+          7,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          25,
+          31,
+          32,
+          33,
+          40,
+          41
+        ]
+      }
+    },
+    {
+      "id": "XAL8080",
+      "manufacturer": "Coilcraft",
+      "title": "XAL8080-682 power inductor",
+      "url": "https://www.coilcraft.com/getmedia/345e50d6-a804-4ecb-9a92-5185221faf3e/xal8080.pdf",
+      "requested_document_identifier": null,
+      "revision": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "retrieval": {
+        "label": "KNOWN",
+        "date": "2026-09-29",
+        "status": "BLOCKED",
+        "http_status": 403,
+        "curl_exit_code": 56,
+        "error": "HTTP 403; curl exit 56. No PDF body archived and no retry at another source."
+      },
+      "archive_path": null,
+      "intended_archive_path": "third_party/documents/r2_protection/xal8080.pdf",
+      "sha256": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "file_bytes": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "relevant_source_files": [],
+      "function_studied": "Inductance tolerance; maximum direct-current resistance; saturation current at stated inductance drops",
+      "relevant_sections": [
+        "UNKNOWN: PDF unavailable; table and curve references not verified"
+      ],
+      "use": "NOT INSPECTED; intended reference only",
+      "modifications": {
+        "label": "KNOWN",
+        "description": "None; download unavailable"
+      },
+      "license": {
+        "label": "UNKNOWN",
+        "description": "Manufacturer copyright expected, but exact license and notices UNKNOWN because the document was not obtained."
+      },
+      "required_attribution": {
+        "label": "KNOWN",
+        "description": "Project provenance requires citation to Coilcraft, document title, exact verified revision and manufacturer URL. Preserve source notices in any retained copy. No additional redistribution rights are asserted."
+      },
+      "review_evidence": null,
+      "next_action": "User must download this exact primary source in a browser and provide the unmodified PDF; record its revision and SHA-256 before extracting values.",
+      "unresolved_electrical_inputs": {
+        "label": "UNKNOWN",
+        "description": "No values extracted, inferred or substituted from failed retrieval. Earlier assumptions remain assumptions."
+      }
+    },
+    {
+      "id": "TDK_C5750",
+      "manufacturer": "TDK",
+      "title": "C5750X7R1H226M250KB characteristic sheet",
+      "url": "https://product.tdk.com/info/en/documents/chara_sheet/C5750X7R1H226M250KB.pdf",
+      "requested_document_identifier": null,
+      "revision": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "retrieval": {
+        "label": "KNOWN",
+        "date": "2026-09-29",
+        "status": "BLOCKED",
+        "http_status": 403,
+        "curl_exit_code": 56,
+        "error": "HTTP 403; curl exit 56. No PDF body archived and no retry at another source."
+      },
+      "archive_path": null,
+      "intended_archive_path": "third_party/documents/r2_protection/C5750X7R1H226M250KB.pdf",
+      "sha256": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "file_bytes": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "relevant_source_files": [],
+      "function_studied": "Effective capacitance under raw output and input direct-current bias",
+      "relevant_sections": [
+        "UNKNOWN: official PDF unavailable; bias graph not reviewed"
+      ],
+      "use": "NOT INSPECTED; intended reference only",
+      "modifications": {
+        "label": "KNOWN",
+        "description": "None; download unavailable"
+      },
+      "license": {
+        "label": "UNKNOWN",
+        "description": "Manufacturer copyright expected, but exact license and notices UNKNOWN because the document was not obtained."
+      },
+      "required_attribution": {
+        "label": "KNOWN",
+        "description": "Project provenance requires citation to TDK, document title, exact verified revision and manufacturer URL. Preserve source notices in any retained copy. No additional redistribution rights are asserted."
+      },
+      "review_evidence": null,
+      "next_action": "User must download this exact primary source in a browser and provide the unmodified PDF; record its revision and SHA-256 before extracting values.",
+      "unresolved_electrical_inputs": {
+        "label": "UNKNOWN",
+        "description": "No values extracted, inferred or substituted from failed retrieval. Earlier assumptions remain assumptions."
+      }
+    },
+    {
+      "id": "VISHAY_SMBJ",
+      "manufacturer": "Vishay General Semiconductor",
+      "title": "SMBJ5.0A thru SMBJ188A — Surface-Mount TRANSZORB® Transient Voltage Suppressors",
+      "url": "https://www.vishay.com/docs/88392/smbj.pdf",
+      "requested_document_identifier": "88392",
+      "revision": {
+        "label": "KNOWN",
+        "value": "Document 88392; revision 09-Jan-2024"
+      },
+      "retrieval": {
+        "label": "KNOWN",
+        "date": "2026-09-29",
+        "status": "DOWNLOADED",
+        "http_status": 200,
+        "curl_exit_code": 0,
+        "error": null
+      },
+      "archive_path": "third_party/documents/r2_protection/smbj.pdf",
+      "intended_archive_path": "third_party/documents/r2_protection/smbj.pdf",
+      "sha256": {
+        "label": "KNOWN",
+        "value": "1b65b57a4311128068c1dec747bbb99f6846ae932d77fcfd39904cb2d7a5cd50"
+      },
+      "file_bytes": {
+        "label": "KNOWN",
+        "value": 129599
+      },
+      "relevant_source_files": [
+        "third_party/documents/r2_protection/smbj.pdf"
+      ],
+      "function_studied": "SMBJ26CA and SMBJ30CA breakdown, clamping, leakage, pulse and thermal derating",
+      "relevant_sections": [
+        "Electrical Characteristics",
+        "Ratings and Characteristics Curves"
+      ],
+      "use": "REFERENCED only; no circuit or layout adapted or copied in this brief",
+      "modifications": {
+        "label": "KNOWN",
+        "description": "None; downloaded upstream bytes are preserved"
+      },
+      "license": {
+        "label": "KNOWN",
+        "description": "Manufacturer copyright; no open-hardware license inferred. Preserve document copyright and legal notices."
+      },
+      "required_attribution": {
+        "label": "KNOWN",
+        "description": "Project provenance requires citation to Vishay General Semiconductor, document title, exact verified revision and manufacturer URL. Preserve source notices in any retained copy. No additional redistribution rights are asserted."
+      },
+      "review_evidence": "BUCK_TVS_SOURCE_REVIEW.md",
+      "next_action": null,
+      "appended_legal_notice": {
+        "label": "KNOWN",
+        "value": "Document 91000; revision 01-Jan-2026; identified in PDF text"
+      },
+      "visually_reviewed_pdf_pages": {
+        "label": "KNOWN",
+        "value": [
+          1,
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "id": "PSMN1R8",
+      "manufacturer": "Nexperia",
+      "title": "PSMN1R8-40YLC N-channel MOSFET",
+      "url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R8-40YLC.pdf",
+      "requested_document_identifier": null,
+      "revision": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "retrieval": {
+        "label": "KNOWN",
+        "date": "2026-09-29",
+        "status": "BLOCKED",
+        "http_status": 403,
+        "curl_exit_code": 56,
+        "error": "HTTP 403; curl exit 56. No PDF body archived and no retry at another source."
+      },
+      "archive_path": null,
+      "intended_archive_path": "third_party/documents/r2_protection/PSMN1R8-40YLC.pdf",
+      "sha256": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "file_bytes": {
+        "label": "UNKNOWN",
+        "value": null
+      },
+      "relevant_source_files": [],
+      "function_studied": "Gate-voltage and junction-temperature dependence of on-resistance; gate-charge curve; safe operating area",
+      "relevant_sections": [
+        "UNKNOWN: PDF unavailable; figures and test conditions not verified"
+      ],
+      "use": "NOT INSPECTED; intended reference only",
+      "modifications": {
+        "label": "KNOWN",
+        "description": "None; download unavailable"
+      },
+      "license": {
+        "label": "UNKNOWN",
+        "description": "Manufacturer copyright expected, but exact license and notices UNKNOWN because the document was not obtained."
+      },
+      "required_attribution": {
+        "label": "KNOWN",
+        "description": "Project provenance requires citation to Nexperia, document title, exact verified revision and manufacturer URL. Preserve source notices in any retained copy. No additional redistribution rights are asserted."
+      },
+      "review_evidence": null,
+      "next_action": "User must download this exact primary source in a browser and provide the unmodified PDF; record its revision and SHA-256 before extracting values.",
+      "unresolved_electrical_inputs": {
+        "label": "UNKNOWN",
+        "description": "No values extracted, inferred or substituted from failed retrieval. Earlier assumptions remain assumptions."
+      }
+    }
+  ]
+}
