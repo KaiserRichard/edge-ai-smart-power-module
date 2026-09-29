@@ -108,8 +108,8 @@ def build():
     # Replace all Sheet03-owned definitions, including stale names from the
     # interrupted alternative capture. Preserve every other symbol verbatim.
     for a,b,t in reversed(list(children(old))):
-        if re.match(r'\(symbol\s+"(?:[UQRCDJ]3\d\d|TP3\d\d|#FLG3\d\d)_',t):
-            old=old[:a]+old[b:]
+        if re.match(r'\(symbol\s+"(?:[UQRCDJ]3\d\d|TP3\d\d|SW3\d\d|#FLG3\d\d)_',t):
+            old=old[:a].rstrip()+old[b:]
     for c in parts:
         sym=library_symbol(c)
         new.append(sym)

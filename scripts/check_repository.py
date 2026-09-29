@@ -16,10 +16,27 @@ def check(root):
     evidence = root / 'docs/evidence/repository_cleanup_2026-09-26'
     archive = json.loads((evidence / 'archive_manifest.json').read_text())
     integrity = json.loads((evidence / 'source_integrity.json').read_text())
+    # Gate2 is an explicitly authorized schematic change, with its historical
+    # baseline and exact ancillary diffs independently reviewed and retained.
+    gate2 = root / 'docs/evidence/r2/sheet03/GATE2_SCOPE.json'
+    if gate2.is_file():
+        reviewed = json.loads(gate2.read_text())
+        permitted = set(reviewed['allowed_ancillary_changes']) | {
+            'hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch',
+            'hardware/kicad/V1A.kicad_sym'}
+        for name, old_hash in integrity['files'].items():
+            if name not in permitted and reviewed['files'].get(name) != old_hash:
+                errors.append(f'Unapproved change to historical preservation record: {name}')
+        integrity = reviewed
     for name, expected in integrity['files'].items():
         path = root / name
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
-            errors.append(f'Hardware differs from cleanup baseline or is missing: {name}')
+            errors.append(f'Hardware differs from reviewed preservation record or is missing: {name}')
+    authored = {p.relative_to(root).as_posix() for p in (root/'hardware/kicad').rglob('*')
+                if p.is_file() and (p.suffix in ('.kicad_sch','.kicad_sym','.kicad_mod','.kicad_pro')
+                                    or p.name in ('sym-lib-table','fp-lib-table'))}
+    if authored != set(integrity['files']):
+        errors.append(f'Unreviewed hardware file set: {sorted(authored ^ set(integrity["files"]))}')
     if list((root / 'hardware').rglob('*.kicad_pcb')):
         errors.append('R3 boundary violation: project PCB exists')
 
