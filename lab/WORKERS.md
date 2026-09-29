@@ -50,8 +50,8 @@ Rules: one worker per worktree; only one worker edits KiCad files at a time (DEC
 | (user-started) Brief02 | codex-a | `v1a-wt-brief02` / `codex/brief02-protection` | `a2e3cd7` (PR #1) | Codex brief 02 | Started by the user 10:29 UTC; Task 1 written but uncommitted; stopped 10:39 at codex-a's usage limit. Replaced by codex-d |
 | V1A Brief02 codex-d | codex-d | `v1a-wt-brief02` / `codex/brief02-protection` | `a2e3cd7` (PR #1) | [BRIEF_02_CONTINUE](briefs/BRIEF_02_CONTINUE.md) | Committed Task 1 (1a08b1a); Task 4 partly written; stopped 11:18 UTC at usage limit (resets 22:55 local). Replaced by codex-f |
 | V1A Brief02 codex-f | codex-f | `v1a-wt-brief02` / `codex/brief02-protection` | `a2e3cd7` (PR #1) | [BRIEF_02_CONTINUE_2](briefs/BRIEF_02_CONTINUE_2.md) | Running since 11:20 UTC |
-| V1A Pi5Envelope codex-e | codex-e | `v1a-wt-pi5-envelope` / `codex/pi5-input-envelope` | `de1d35c` | [BRIEF_03](briefs/BRIEF_03_PI_FAULT_ENVELOPE.md) | Running since 11:09 UTC |
-| (not started) | – | `v1a-wt-connectors` / `codex/connector-shortlist` | `de1d35c` | [BRIEF_04](briefs/BRIEF_04_CONNECTORS.md) | Worktree ready; not launched (codex-c login revoked) |
+| V1A Pi5Envelope codex-e | codex-e | `v1a-wt-pi5-envelope` / `codex/pi5-input-envelope` | `de1d35c` | [BRIEF_03](briefs/BRIEF_03_PI_FAULT_ENVELOPE.md) | Done 11:21 UTC; reviewed by Claude, pushed as draft PR #4 |
+| V1A Connectors codex-e | codex-e | `v1a-wt-connectors` / `codex/connector-shortlist` | `de1d35c` | [BRIEF_04](briefs/BRIEF_04_CONNECTORS.md) | Running since 11:23 UTC |
 | V1A Smoke codex-a | codex-a | `v1a-wt-smoke-codex-a` / `lab/smoke-codex-a` | `de1d35c` | Read-only: list sheets, read ERC report | Done 2026-09-29, stopped. Answer correct (6 sheets; 1 ERC error, U402 pin 1) |
 | V1A Smoke codex-b | codex-b | `v1a-wt-smoke-codex-b` / `lab/smoke-codex-b` | `de1d35c` | Read-only: HEAD, Sheet 03 symbols | Done 2026-09-29, stopped. Answer correct (TP301, TP302) |
 
