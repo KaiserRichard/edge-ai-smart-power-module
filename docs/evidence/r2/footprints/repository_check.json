@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "scope": "Repository integrity only; R2/R3 BLOCKED",
+  "hardware_files_verified": 13,
+  "markdown_files_checked": 55,
+  "json_files_checked": 56,
+  "archived_external_links": [
+    "third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf",
+    "third_party/documents/Vishay_WSL2726_30131_2026-06-29.pdf",
+    "third_party/documents/r2/TI_CSD19537Q3_SLPS549B.pdf",
+    "third_party/documents/r2/TI_LM61460_SNVSBD5D.pdf"
+  ],
+  "errors": [
+    "Hardware differs from cleanup baseline or is missing: hardware/kicad/01_INPUT_PROTECTION.kicad_sch",
+    "Hardware differs from cleanup baseline or is missing: hardware/kicad/05_IO_TEST.kicad_sch",
+    "Hardware differs from cleanup baseline or is missing: hardware/kicad/04_POWER_MONITOR.kicad_sch",
+    "Invalid/missing JSON: docs/evidence/r2/footprints/repository_check.json: Expecting value: line 1 column 1 (char 0)"
+  ]
+}
