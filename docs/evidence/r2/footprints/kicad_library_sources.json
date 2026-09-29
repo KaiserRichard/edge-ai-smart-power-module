@@ -1,0 +1,140 @@
+{
+  "repository": "https://gitlab.com/kicad/libraries/kicad-footprints",
+  "tag": "9.0.6",
+  "commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+  "license_source": "https://www.kicad.org/libraries/license/",
+  "records": [
+    {
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+      "installed_sha256": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88",
+      "upstream_sha256": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "installed_sha256": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419",
+      "upstream_sha256": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Diode_SMD:D_SMB",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Diode_SMD.pretty/D_SMB.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Diode_SMD.pretty/D_SMB.kicad_mod",
+      "installed_sha256": "fcfd409e5167499f325224f41c3e556c23e3de23eeeea48137ea55075e4630d8",
+      "upstream_sha256": "fcfd409e5167499f325224f41c3e556c23e3de23eeeea48137ea55075e4630d8",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod",
+      "installed_sha256": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d",
+      "upstream_sha256": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "installed_sha256": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4",
+      "upstream_sha256": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_DFN_QFN.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Package_DFN_QFN.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod",
+      "installed_sha256": "a99b712ecc5976476fd117aca0e789096f71dfb9cf1a9983ba2a996d3a19b0e5",
+      "upstream_sha256": "a99b712ecc5976476fd117aca0e789096f71dfb9cf1a9983ba2a996d3a19b0e5",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+      "installed_sha256": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc",
+      "upstream_sha256": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Package_SO:VSSOP-10_3x3mm_P0.5mm",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/VSSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Package_SO.pretty/VSSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "installed_sha256": "930d7346a8b6e8833ddaf4846df842051074ca166e1a5bdb577134730bf7dd8d",
+      "upstream_sha256": "930d7346a8b6e8833ddaf4846df842051074ca166e1a5bdb577134730bf7dd8d",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
+      "installed_sha256": "7dd62023ad614b9337b62dc6332bdd83c04e6c471118b102709dddae0241abed",
+      "upstream_sha256": "7dd62023ad614b9337b62dc6332bdd83c04e6c471118b102709dddae0241abed",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/VSSOP-8_3x3mm_P0.65mm.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "Package_SO.pretty/VSSOP-8_3x3mm_P0.65mm.kicad_mod",
+      "installed_sha256": "158512ca5921f79f03ab2171af707bdfdcc39ffcba866c675a21addce0234cec",
+      "upstream_sha256": "158512ca5921f79f03ab2171af707bdfdcc39ffcba866c675a21addce0234cec",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    },
+    {
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "upstream_commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+      "source_file": "TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "installed_sha256": "b863253216b04db5519fae21af9390e330c8fc62dee105cab1cf015166eeb2fd",
+      "upstream_sha256": "b863253216b04db5519fae21af9390e330c8fc62dee105cab1cf015166eeb2fd",
+      "installed_matches_upstream": true,
+      "use": "Referenced unmodified by library identifier; no vendor library copied into project",
+      "license": "CC-BY-SA-4.0 with KiCad design exception",
+      "attribution": "KiCad Library Team; retain library license/attribution if redistributing a library collection"
+    }
+  ]
+}

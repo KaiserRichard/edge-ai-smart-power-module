@@ -1,0 +1,1192 @@
+{
+  "base_commit": "de1d35c07a0c0a9b368527522aa01ed11c762869",
+  "sheets": {
+    "01_INPUT_PROTECTION.kicad_sch": {
+      "component_count": 19,
+      "missing_before": [
+        "F101",
+        "TP101",
+        "TP102"
+      ],
+      "missing_after": [
+        "F101"
+      ],
+      "non_footprint_bytes_unchanged": true,
+      "components": [
+        {
+          "ref": "C101",
+          "mpn": "",
+          "value": "1uF 100V",
+          "footprint": "Capacitor_SMD:C_1210_3225Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C102",
+          "mpn": "",
+          "value": "1uF 100V",
+          "footprint": "Capacitor_SMD:C_1210_3225Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C103",
+          "mpn": "",
+          "value": "100nF 16V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "D101",
+          "mpn": "SMBJ26CA",
+          "value": "SMBJ26CA",
+          "footprint": "Diode_SMD:D_SMB",
+          "source": "Littelfuse SMBJ family manufacturer search evidence; exact document revision/coordination OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "D102",
+          "mpn": "B260-13-F",
+          "value": "B260",
+          "footprint": "Diode_SMD:D_SMB",
+          "source": "Diodes DS13004 Rev22-2 July2015; TI eFuse output clamp concept",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "F101",
+          "mpn": "",
+          "value": "FUSE - OPEN",
+          "footprint": "",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "Q101",
+          "mpn": "CSD19537Q3",
+          "value": "CSD19537Q3",
+          "footprint": "V1A_Qualified:TI_Q3_CSD19537Q3",
+          "source": "TI SLPS549B Fig 3-1 TOP VIEW; SLVSE94G Fig 8-7",
+          "pins": {
+            "1": "S",
+            "2": "S",
+            "3": "S",
+            "4": "G",
+            "5": "D",
+            "6": "D",
+            "7": "D",
+            "8": "D"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "Q102",
+          "mpn": "BSS138",
+          "value": "BSS138",
+          "footprint": "Package_TO_SOT_SMD:SOT-23",
+          "source": "onsemi BSS138/D Rev7 Apr2024 p1; TI SLVSE94G Fig 8-7",
+          "pins": {
+            "1": "G",
+            "2": "S",
+            "3": "D"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R101",
+          "mpn": "",
+          "value": "332k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R102",
+          "mpn": "",
+          "value": "54.9k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R103",
+          "mpn": "",
+          "value": "348k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R104",
+          "mpn": "",
+          "value": "15.8k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R105",
+          "mpn": "",
+          "value": "4.02k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R106",
+          "mpn": "",
+          "value": "56.2k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R107",
+          "mpn": "",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R108",
+          "mpn": "",
+          "value": "100k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP101",
+          "mpn": "",
+          "value": "INPUT_SHDN",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP102",
+          "mpn": "",
+          "value": "INPUT_FLT",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "U101",
+          "mpn": "TPS26630RGER",
+          "value": "TPS26630RGER",
+          "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+          "source": "TI SLVSE94G Table 5-1/Fig 8-7; RGE0024H drawing 4219016/A",
+          "pins": {
+            "1": "IN",
+            "2": "IN",
+            "3": "B_GATE",
+            "4": "DRV",
+            "5": "IN_SYS",
+            "6": "UVLO",
+            "7": "OVP",
+            "8": "GND",
+            "9": "dVdT",
+            "10": "ILIM",
+            "11": "MODE",
+            "12": "SHDN",
+            "13": "IMON",
+            "14": "FLT",
+            "15": "PGTH",
+            "16": "PGOOD",
+            "17": "OUT",
+            "18": "OUT",
+            "19": "NC",
+            "20": "NC",
+            "21": "NC",
+            "22": "NC",
+            "23": "NC",
+            "24": "NC",
+            "25": "EP"
+          },
+          "number_set_matches": true
+        }
+      ]
+    },
+    "02_BUCK_5V.kicad_sch": {
+      "component_count": 22,
+      "missing_before": [
+        "C201",
+        "C202",
+        "C209",
+        "C210",
+        "C211",
+        "C212",
+        "C213",
+        "C214",
+        "L201"
+      ],
+      "missing_after": [
+        "C201",
+        "C202",
+        "C209",
+        "C210",
+        "C211",
+        "C212",
+        "C213",
+        "C214",
+        "L201"
+      ],
+      "non_footprint_bytes_unchanged": true,
+      "components": [
+        {
+          "ref": "C201",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI inputcaprequirementsSNVSBD5D9.2.2.5",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C202",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI inputcaprequirementsSNVSBD5D9.2.2.5",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C203",
+          "mpn": "",
+          "value": "100nF 50V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C204",
+          "mpn": "",
+          "value": "100nF 50V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C205",
+          "mpn": "",
+          "value": "100nF 16V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C206",
+          "mpn": "",
+          "value": "1uF 16V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C207",
+          "mpn": "CGA3E2C0G1H220J080AA",
+          "value": "22pF 50V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "TI EVM Table7-1anddatasheetTable9-2",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C209",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C210",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C211",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C212",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C213",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C214",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "L201",
+          "mpn": "XAL8080-682MED",
+          "value": "6.8uH",
+          "footprint": "",
+          "source": "Coilcraft XAL8080 Doc839 revised05/01/26 and manufacturer productpage",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "R201",
+          "mpn": "",
+          "value": "33.2k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R202",
+          "mpn": "",
+          "value": "100k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R203",
+          "mpn": "",
+          "value": "24.4k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R204",
+          "mpn": "",
+          "value": "0",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R205",
+          "mpn": "",
+          "value": "1k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R206",
+          "mpn": "",
+          "value": "100k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R207",
+          "mpn": "",
+          "value": "24.9k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "U201",
+          "mpn": "LM61460AANRJRR",
+          "value": "LM61460AANRJRR",
+          "footprint": "V1A_Qualified:TI_RJR0014A_LM61460",
+          "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1; package4223976/H06/2026 PDFpp55-57",
+          "pins": {
+            "1": "BIAS",
+            "2": "VCC",
+            "3": "AGND",
+            "4": "FB",
+            "5": "PGOOD",
+            "6": "RT",
+            "7": "EN/SYNC",
+            "8": "VIN1",
+            "9": "PGND1",
+            "10": "SW",
+            "11": "PGND2",
+            "12": "VIN2",
+            "13": "RBOOT",
+            "14": "CBOOT"
+          },
+          "number_set_matches": true
+        }
+      ]
+    },
+    "04_POWER_MONITOR.kicad_sch": {
+      "component_count": 21,
+      "missing_before": [
+        "C404",
+        "TP401",
+        "TP402",
+        "TP403",
+        "TP404"
+      ],
+      "missing_after": [
+        "C404"
+      ],
+      "non_footprint_bytes_unchanged": true,
+      "components": [
+        {
+          "ref": "C401",
+          "mpn": "",
+          "value": "100nF 50V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "TI SLYS021A Fig8-1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C402",
+          "mpn": "",
+          "value": "100nF 16V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C403",
+          "mpn": "",
+          "value": "1uF 50V",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C404",
+          "mpn": "C5750X7R1H226M250KB",
+          "value": "22uF 50V",
+          "footprint": "",
+          "source": "TDK19Mar2019 characterization; TI SBVS186H8.1.1",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          }
+        },
+        {
+          "ref": "C405",
+          "mpn": "",
+          "value": "100nF 16V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "C406",
+          "mpn": "",
+          "value": "100nF 16V",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R401",
+          "mpn": "WSL27262L000FEA",
+          "value": "2mOhm KELVIN",
+          "footprint": "V1A_Qualified:Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus",
+          "source": "Vishay30131 Rev29Jun2026 pp1-2; wide force pads and narrow Kelvin pads",
+          "pins": {
+            "1": "I+",
+            "2": "S+",
+            "4": "I-",
+            "3": "S-"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R402",
+          "mpn": "",
+          "value": "10",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R403",
+          "mpn": "",
+          "value": "10",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R404",
+          "mpn": "",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R405",
+          "mpn": "",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R406",
+          "mpn": "",
+          "value": "4.7k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R407",
+          "mpn": "",
+          "value": "4.7k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "R408",
+          "mpn": "",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "source": "R2 component specification; exact passive MPN OPEN",
+          "pins": {
+            "1": "1",
+            "2": "2"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP401",
+          "mpn": "",
+          "value": "ALERT_LOCAL",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP402",
+          "mpn": "",
+          "value": "SHUNT_KPLUS",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP403",
+          "mpn": "",
+          "value": "SHUNT_KMINUS",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP404",
+          "mpn": "",
+          "value": "3V3_LOCAL",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "U401",
+          "mpn": "INA228AIDGSR",
+          "value": "INA228AIDGSR",
+          "footprint": "Package_SO:VSSOP-10_3x3mm_P0.5mm",
+          "source": "TI SLYS021A Fig5-1/Table5-1; SBOU241E Fig6-1",
+          "pins": {
+            "1": "A1",
+            "2": "A0",
+            "3": "ALERT",
+            "4": "SDA",
+            "5": "SCL",
+            "6": "VS",
+            "7": "GND",
+            "8": "VBUS",
+            "9": "IN-",
+            "10": "IN+"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "U402",
+          "mpn": "TPS70933DBVR",
+          "value": "TPS70933DBVR",
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "source": "TI SBVS186H Fig5-1/Table5-1, 8.1.1, 7.3.4",
+          "pins": {
+            "1": "IN",
+            "2": "GND",
+            "3": "EN",
+            "4": "NC",
+            "5": "OUT"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "U403",
+          "mpn": "TCA9517DGKR",
+          "value": "TCA9517DGKR",
+          "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+          "source": "TI SCPS242D sections6/9/11",
+          "pins": {
+            "1": "VCCA",
+            "2": "SCLA",
+            "3": "SDAA",
+            "4": "GND",
+            "5": "EN",
+            "6": "SDAB",
+            "7": "SCLB",
+            "8": "VCCB"
+          },
+          "number_set_matches": true
+        }
+      ]
+    },
+    "05_IO_TEST.kicad_sch": {
+      "component_count": 7,
+      "missing_before": [
+        "J501",
+        "J502",
+        "J503",
+        "TP501",
+        "TP502",
+        "TP503",
+        "TP504"
+      ],
+      "missing_after": [
+        "J501",
+        "J502",
+        "J503"
+      ],
+      "non_footprint_bytes_unchanged": true,
+      "components": [
+        {
+          "ref": "J501",
+          "mpn": "",
+          "value": "DC INPUT - MPN OPEN",
+          "footprint": "",
+          "source": "Frozen V1A functional input boundary",
+          "pins": {
+            "1": "+",
+            "2": "RETURN"
+          }
+        },
+        {
+          "ref": "J502",
+          "mpn": "",
+          "value": "LOAD OUTPUT - MPN OPEN",
+          "footprint": "",
+          "source": "Frozen V1A functional load boundary",
+          "pins": {
+            "1": "+",
+            "2": "RETURN"
+          }
+        },
+        {
+          "ref": "J503",
+          "mpn": "",
+          "value": "HOST I2C - MPN OPEN",
+          "footprint": "",
+          "source": "Frozen telemetry requirement; power-domain interface review",
+          "pins": {
+            "1": "GND",
+            "2": "VREF",
+            "3": "SDA",
+            "4": "SCL"
+          }
+        },
+        {
+          "ref": "TP501",
+          "mpn": "",
+          "value": "VIN_RAW",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP502",
+          "mpn": "",
+          "value": "VIN_PROTECTED",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP503",
+          "mpn": "",
+          "value": "LOAD_5V1",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        },
+        {
+          "ref": "TP504",
+          "mpn": "",
+          "value": "GND",
+          "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "source": "Project test access; local domain only",
+          "pins": {
+            "1": "TP"
+          },
+          "number_set_matches": true
+        }
+      ]
+    }
+  },
+  "footprint_files": {
+    "Capacitor_SMD:C_1210_3225Metric": {
+      "sha256": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88",
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "library_relative_file": "Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod"
+    },
+    "Capacitor_SMD:C_0603_1608Metric": {
+      "sha256": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419",
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "library_relative_file": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod"
+    },
+    "Diode_SMD:D_SMB": {
+      "sha256": "fcfd409e5167499f325224f41c3e556c23e3de23eeeea48137ea55075e4630d8",
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "library_relative_file": "Diode_SMD.pretty/D_SMB.kicad_mod"
+    },
+    "V1A_Qualified:TI_Q3_CSD19537Q3": {
+      "sha256": "49490fa2d41fb553eb0c84297dcff799dedee0d560431f61b1962606ce16838e",
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "library_relative_file": "V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod"
+    },
+    "Package_TO_SOT_SMD:SOT-23": {
+      "sha256": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d",
+      "pad_numbers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "library_relative_file": "Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod"
+    },
+    "Resistor_SMD:R_0603_1608Metric": {
+      "sha256": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4",
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "library_relative_file": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod"
+    },
+    "TestPoint:TestPoint_Pad_D1.5mm": {
+      "sha256": "b863253216b04db5519fae21af9390e330c8fc62dee105cab1cf015166eeb2fd",
+      "pad_numbers": [
+        "1"
+      ],
+      "library_relative_file": "TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod"
+    },
+    "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm": {
+      "sha256": "a99b712ecc5976476fd117aca0e789096f71dfb9cf1a9983ba2a996d3a19b0e5",
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "library_relative_file": "Package_DFN_QFN.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod"
+    },
+    "V1A_Qualified:TI_RJR0014A_LM61460": {
+      "sha256": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c",
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "library_relative_file": "V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod"
+    },
+    "Capacitor_SMD:C_0805_2012Metric": {
+      "sha256": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc",
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "library_relative_file": "Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod"
+    },
+    "V1A_Qualified:Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus": {
+      "sha256": "5bf77b7075ce4232ced05e86c9e6c4aa9e88e61d52b3a9e6e10ee1819cc5e991",
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "library_relative_file": "V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod"
+    },
+    "Package_SO:VSSOP-10_3x3mm_P0.5mm": {
+      "sha256": "930d7346a8b6e8833ddaf4846df842051074ca166e1a5bdb577134730bf7dd8d",
+      "pad_numbers": [
+        "1",
+        "10",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "library_relative_file": "Package_SO.pretty/VSSOP-10_3x3mm_P0.5mm.kicad_mod"
+    },
+    "Package_TO_SOT_SMD:SOT-23-5": {
+      "sha256": "7dd62023ad614b9337b62dc6332bdd83c04e6c471118b102709dddae0241abed",
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "library_relative_file": "Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod"
+    },
+    "Package_SO:VSSOP-8_3x3mm_P0.65mm": {
+      "sha256": "158512ca5921f79f03ab2171af707bdfdcc39ffcba866c675a21addce0234cec",
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "library_relative_file": "Package_SO.pretty/VSSOP-8_3x3mm_P0.65mm.kicad_mod"
+    }
+  },
+  "changed_fields": [
+    {
+      "sheet": "01_INPUT_PROTECTION.kicad_sch",
+      "ref": "TP101",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "01_INPUT_PROTECTION.kicad_sch",
+      "ref": "TP102",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "04_POWER_MONITOR.kicad_sch",
+      "ref": "TP401",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "04_POWER_MONITOR.kicad_sch",
+      "ref": "TP402",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "04_POWER_MONITOR.kicad_sch",
+      "ref": "TP403",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "04_POWER_MONITOR.kicad_sch",
+      "ref": "TP404",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "05_IO_TEST.kicad_sch",
+      "ref": "TP501",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "05_IO_TEST.kicad_sch",
+      "ref": "TP502",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "05_IO_TEST.kicad_sch",
+      "ref": "TP503",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "sheet": "05_IO_TEST.kicad_sch",
+      "ref": "TP504",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    }
+  ],
+  "sheet03": {
+    "base_blob": "0345dad83e2612def7553d4eca2630908511bcaf",
+    "working_blob": "0345dad83e2612def7553d4eca2630908511bcaf",
+    "byte_identical": true,
+    "method": "git rev-parse base:path compared to git hash-object path; contents never opened for inspection"
+  }
+}
