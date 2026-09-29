@@ -30,7 +30,7 @@ The repository is `~/Desktop/Research/edge-ai-smart-power-module` (GitHub `Kaise
 - **ERC or tests passing is never acceptance.** Use the explicit engineering acceptance criteria in Codex brief 02.
 - **No architecture change without the user's approval.** Option I is PROPOSED, not approved. Do not capture Sheet 03, change components, values or connectivity, or add a bypass, jumper or fake `PWR_FLAG`. The U402 ERC error must stay visible while Sheet 03 is open.
 - **R2 and R3 are BLOCKED.** No PCB layout, routing, Gerbers, procurement or fabrication.
-- **The 6.0 V Pi limit is an ASSUMED screening criterion,** not a Raspberry Pi rating. The adapter (Mean Well GST60A24) is ASSUMED, not confirmed.
+- **The Pi 5 fault limit is 5.5 V at the board rail, with margin** (user decision D-27, 2026-09-29; the user wants the design "as safe as possible"). 6.0 V is withdrawn. The full voltage-versus-time envelope is still unknown. The adapter (Mean Well GST60A24) is ASSUMED, not confirmed.
 
 ## Git and workspace rules
 
@@ -69,15 +69,24 @@ For each worker hand-back:
 4. Record the outcome: a DECISIONS row if something was decided, a REQUIREMENTS label change only with evidence, and the worker's state in WORKERS.md.
 5. Push the reviewed branch and open a draft PR, or report why not.
 
-## Current state (2026-09-29, 11:10 UTC)
+## Current state (2026-09-29, 11:30 UTC, handed over from Claude)
 
-| Worker | Account | Worktree | Task | State |
+| Worker | Account | Worktree / branch | Task | State |
 | --- | --- | --- | --- | --- |
-| V1A Brief02 codex-d | codex-d | `v1a-wt-brief02` / `codex/brief02-protection` | Codex brief 02 (protection evidence), continuing codex-a's uncommitted Task 1 | Running |
-| V1A Pi5Envelope codex-e | codex-e | `v1a-wt-pi5-envelope` / `codex/pi5-input-envelope` | Brief 03: Pi 5 input fault envelope (requirement P4) | Running |
-| (not started) | – | `v1a-wt-connectors` / `codex/connector-shortlist` | Brief 04: J501–J503 connector shortlist for the brother's review | Waiting for a working account |
+| V1A Brief02 codex-f | codex-f | `v1a-wt-brief02` / `codex/brief02-protection` | Brief 02 via `BRIEF_02_CONTINUE_2.md` plus `BRIEF_02_AMENDMENT_1.md` (5.5 V limit, margin study) | Running. Commits so far: 1a08b1a (Task 1, sources), 7e78c2a (Task 4, option I candidates). Tasks 2 and 5 remain |
+| V1A Connectors codex-e | codex-e | `v1a-wt-connectors` / `codex/connector-shortlist` | Brief 04: J501–J503 shortlist for the brother's review | Running since 11:23 UTC |
 
-Accounts: codex-a usage limit until 22:03 local; codex-b and codex-c refresh tokens revoked (the user must log in again); codex-d, codex-e and codex-f worked at 10:50 UTC.
+When a worker prints its hand-back line (BRIEF-02-HANDBACK / BRIEF-04-HANDBACK): review it as below, push the branch, and open a draft PR. Brief 02's branch pushes to `codex/brief02-protection`; open its PR against `feat/r2-sheet03-output-protection` (PR #1's branch), not into it directly.
+
+Accounts: codex-a usage limit until 22:03 local; codex-d usage limit until 22:55 local; codex-b and codex-c logins revoked (the user must log in again); codex-e and codex-f in use. At "ultra" effort each account lasts roughly 10–20 minutes of work, so plan hand-overs: when a worker hits its limit, check its uncommitted files, write a short continuation note in `~/Desktop/Research/v1a-lab/briefs/`, and start the next free account in the same worktree.
+
+Open PRs (all draft except #3; never merge without the user):
+- #1 `feat/r2-sheet03-output-protection`: output-protection analysis and fault model.
+- #2 `lab/state-files`: these lab files.
+- #3 `feat/r2-schematic-recovery`: the R2 schematic and documentation (opened by the user; not a draft).
+- #4 `codex/pi5-input-envelope`: Pi 5 input fault envelope (reviewed by Claude; basis for D-27).
+
+Lesson from review so far: workers' results were sound but need checking. Claude verified the AP22652 6.0 V absolute maximum against its datasheet (DS41186 p. 4) before pushing PR #4. Do the same spot-check for every number a decision depends on.
 
 ## What needs the user
 
@@ -85,7 +94,8 @@ Accounts: codex-a usage limit until 22:03 local; codex-b and codex-c refresh tok
 2. Whether the Pi is powered through GPIO pins or USB-C (L4).
 3. The largest realistic load step (L5).
 4. The brother's connector review (E1).
-5. Approval, or rejection, of option I once brief 02's evidence is in.
+5. Approval of an output-protection architecture once brief 02's evidence and margin study are in. Option I as sized (5.49 V model peak) has no margin against the 5.5 V limit.
+7. New logins for codex-b and codex-c.
 6. Browser downloads of the Coilcraft XAL8080-682, TDK C5750X7R1H226M250KB and Nexperia PSMN1R8-40YLC datasheets (the sites return HTTP 403 to scripts).
 
 ## Reporting to the user
