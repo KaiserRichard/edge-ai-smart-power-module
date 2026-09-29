@@ -1,0 +1,30 @@
+{
+  "classification": "KNOWN: local command outcomes only; not electrical qualification",
+  "date_utc": "2026-09-29T11:14:34.058996+00:00",
+  "commands": [
+    {
+      "command": "python3 -B scripts/check_repository.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "1.log"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "2.log"
+    },
+    {
+      "command": "python3 -B scripts/check_r2_schematic.py --netlist docs/evidence/r2/forensic_2026-09-14/V1A_qualified.net.xml",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "3.log"
+    },
+    {
+      "command": "python3 -B scripts/analyze_output_protection.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "4.log"
+    }
+  ]
+}
