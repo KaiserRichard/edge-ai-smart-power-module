@@ -1,3 +1,21 @@
+# J502 / Pi GPIO harness preliminary gate — 2026-09-29
+
+**STATUS: CONDITIONAL PASS for preliminary documentation/selection; R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** reused the connector shortlist and Pi input-envelope work; selected preliminary J502 Phoenix `1776508` + `1777989` screw-lock system, with integral clamp/socket contacts. Specified Belden trunk/fan-out wire, Harwin `M20-1071000` + `M20-1180042` Pi termination, pin map, indexed hold-down concept and complete positive/return drop budget. No KiCad or PCB edits.
+
+**EVIDENCE:** [harness decision](evidence/r2/j502_harness/HARNESS_DECISION.md), [labelled calculation inputs/results](evidence/r2/j502_harness/budget.json), [source revisions/provenance](evidence/r2/j502_harness/source_register.json), and [verification](evidence/r2/j502_harness/VALIDATION.md). **CALCULATED:** protected-node-to-Pi drop **309.773 mV** at the **ASSUMED analysis load of 5 A from the user requirement**. Current source/protection screens give **4.6785 V static**, **4.5785 V with ASSUMED 100 mV droop**; these miss the **ASSUMED 4.75 V GPIO floor** based on official engineer guidance. Values are conditional, not measured or guaranteed minima.
+
+**DECISIONS:** recommend screw retention at J502 and a mechanically indexed Pi socket. **ASSUMED proposed construction:** AWG18 trunk ≤150 mm per polarity plus AWG22 fan-out ≤50 mm per branch, using both positive pins and four grounds. **CALCULATED equal sharing:** 2.5 A per positive and 1.25 A per ground. The **DATASHEET 3 A/contact** applies to the selected socket, not an unidentified Pi male header. Do not automatically raise the setpoint or move feedback after protection; the conservative budget requires resistance/source/protection review together.
+
+**OPEN RISKS:** actual Pi header rating/mating qualification, GPIO-specific floor and peripheral/warning requirements, hot/aged loop resistance and branch sharing, splice and carrier release, retention/vibration criteria, source dynamics and protection window. The preliminary selection does not qualify continuous delivery or release fabrication.
+
+**NEXT GATE:** continue R2 engineering closure with measured/guaranteed interface bounds and review the failed voltage screen. Later physical qualification follows the prescribed dummy-load bring-up progression before Pi integration. Documentation commit/push and draft PR are authorized by this task; no merge or later-gate work is authorized.
+
+Historical manager entries below remain unchanged.
+
+---
+
 # Repository maintenance update — 2026-09-26
 
 **STATUS: R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
