@@ -1,5 +1,5 @@
 {
-  "classification": "CALCULATED SCREENS ONLY; crowbar-assisted Candidate C is a preliminary development direction, not a captured or validated circuit",
+  "classification": "CALCULATED SCREENS ONLY; preliminary Sheet03 captured, R2/R3 release BLOCKED; no bench validation. Earlier gate members are preserved historical records.",
   "date": "2026-09-29",
   "status": "BLOCKED",
   "formulas": {
@@ -3635,6 +3635,220 @@
       "crowbar turn-on and full discharge tail; parasitic inductance and terminal temperature",
       "series common-source/common-drain inconsistency in prior prose",
       "remaining R2 fuse/TVS/connector/thermal qualifications"
+    ]
+  },
+  "gate_2": {
+    "classification": "CALCULATED from KiCad-exported values using DATASHEET limits and explicit ASSUMED envelopes; not physical validation",
+    "netlist": "docs/evidence/r2/sheet03/V1A_gate2.net.xml",
+    "netlist_sha256": "8e7e4fd0ab4e3f6541d030f37904412a38eace9c075c9f732dbd34a13e5591ad",
+    "captured_values": {
+      "R301": {
+        "captured_text": "11.3k",
+        "SI_value": 11300.0
+      },
+      "R302": {
+        "captured_text": "10.0k",
+        "SI_value": 10000.0
+      },
+      "R202": {
+        "captured_text": "100k",
+        "SI_value": 100000.0
+      },
+      "R203": {
+        "captured_text": "24.4k",
+        "SI_value": 24400.0
+      },
+      "C330": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "C331": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "C332": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "C333": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "C334": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "C335": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "C336": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "C337": {
+        "captured_text": "470uF 35V",
+        "SI_value": 0.00047
+      },
+      "R308": {
+        "captured_text": "0.033",
+        "SI_value": 0.033
+      },
+      "R309": {
+        "captured_text": "0.033",
+        "SI_value": 0.033
+      },
+      "R310": {
+        "captured_text": "0.033",
+        "SI_value": 0.033
+      },
+      "R311": {
+        "captured_text": "0.033",
+        "SI_value": 0.033
+      },
+      "R312": {
+        "captured_text": "31.9k",
+        "SI_value": 31900.0
+      },
+      "R313": {
+        "captured_text": "10.0k",
+        "SI_value": 10000.0
+      },
+      "R314": {
+        "captured_text": "53.9k",
+        "SI_value": 53900.0
+      },
+      "R315": {
+        "captured_text": "10.0k",
+        "SI_value": 10000.0
+      },
+      "R306": {
+        "captured_text": "1.00",
+        "SI_value": 1.0
+      },
+      "R103": {
+        "captured_text": "348k",
+        "SI_value": 348000.0
+      },
+      "R104": {
+        "captured_text": "15.8k",
+        "SI_value": 15800.0
+      }
+    },
+    "threshold": {
+      "nominal_V": 5.324999999999999,
+      "min_V": 5.293568153160679,
+      "max_V": 5.356562531846693,
+      "divider_gain_max": 2.1345290581162324,
+      "reference_fraction_bound": 0.0012125,
+      "resistor_fraction_bound": 0.002,
+      "comparator_offset_plus_hysteresis_V": 0.006,
+      "clamp_plus_input_bias_A": 8.5e-08,
+      "corner_count": 32
+    },
+    "raw_buck": {
+      "nominal_V": 5.098360655737705,
+      "min_V": 5.038269401729418,
+      "max_V": 5.158632237795171
+    },
+    "normal": {
+      "C_bulk_min_F": 0.0024064000000000004,
+      "ESR_bulk_ohm": 0.0035,
+      "excess_charge_C": 0.0001491528558683009,
+      "decay_time_s": 9.717618622766962e-06,
+      "release_bound_V": 0.08298173864207982,
+      "normal_max_V": 5.261613976437252,
+      "false_trip_margin_mV": 21.954176723427704
+    },
+    "input_ovp": {
+      "nominal_V": 27.63037974683544,
+      "min_V": 26.973872559387452,
+      "max_V": 28.289211488402323
+    },
+    "rails": {
+      "detector": {
+        "nominal_V": 4.99867,
+        "min_V": 4.880624530499002,
+        "max_V": 5.1173980301002,
+        "DATASHEET_overall_fraction": 0.02,
+        "DATASHEET_FB_current_A": 1e-07,
+        "ASSUMED_resistor_fraction": 0.002,
+        "condition": "Regulation only, VIN >= nominal output +0.5V; dropout, supply collapse and thermal limits OPEN"
+      },
+      "driver": {
+        "nominal_V": 7.62327,
+        "min_V": 7.4402690342914175,
+        "max_V": 7.807424257755512,
+        "DATASHEET_overall_fraction": 0.02,
+        "DATASHEET_FB_current_A": 1e-07,
+        "ASSUMED_resistor_fraction": 0.002,
+        "condition": "Regulation only, VIN >= nominal output +0.5V; dropout, supply collapse and thermal limits OPEN"
+      }
+    },
+    "raw_bulk_nominal_F": 0.00376,
+    "raw_bulk_min_screen_F": 0.0024064000000000004,
+    "ballast_equivalent_ohm": 0.033,
+    "fault_corners": [
+      {
+        "ASSUMED_RDS_ohm": 0,
+        "ballast_ohm": 0.032505,
+        "pi_peak_V": 5.481611838060756,
+        "pi_margin_mV": 18.388161939244085
+      },
+      {
+        "ASSUMED_RDS_ohm": 0,
+        "ballast_ohm": 0.033495,
+        "pi_peak_V": 5.481611838060756,
+        "pi_margin_mV": 18.388161939244085
+      },
+      {
+        "ASSUMED_RDS_ohm": 0.0033,
+        "ballast_ohm": 0.032505,
+        "pi_peak_V": 5.481611838060756,
+        "pi_margin_mV": 18.388161939244085
+      },
+      {
+        "ASSUMED_RDS_ohm": 0.0033,
+        "ballast_ohm": 0.033495,
+        "pi_peak_V": 5.481611838060756,
+        "pi_margin_mV": 18.388161939244085
+      },
+      {
+        "ASSUMED_RDS_ohm": 0.0066,
+        "ballast_ohm": 0.032505,
+        "pi_peak_V": 5.481611838060756,
+        "pi_margin_mV": 18.388161939244085
+      },
+      {
+        "ASSUMED_RDS_ohm": 0.0066,
+        "ballast_ohm": 0.033495,
+        "pi_peak_V": 5.481611838060756,
+        "pi_margin_mV": 18.388161939244085
+      }
+    ],
+    "pi_peak_V": 5.481611838060756,
+    "fault_margin_mV": 18.388161939244085,
+    "harness": {
+      "ASSUMED_total_path_ohm": 0.05536774050196851,
+      "pi_5A_min_V": 4.761430699219575,
+      "static_margin_mV": 11.430699219575402,
+      "with_100mV_reserve_margin_mV": -88.56930078042424
+    },
+    "gate_drive": {
+      "ASSUMED_required_rail_min_V": 7.35,
+      "regulated_rail_headroom_V": 0.09026903429141786,
+      "charge_to_4p5V_screen_s": 1.202611039588814e-07,
+      "old_partial_detector_latch_driver_charge_sum_s": 2.073611039588814e-07,
+      "ASSUMED_effective_crowbar_on_s": 3e-07,
+      "ASSUMED_effective_series_off_s": 2e-06,
+      "OPEN": "The captured multi-gate latch chain, filter, actual nonlinear gate charge, falling-rail validity and commutation need complete timing qualification; this partial sum is not an end-to-end bound."
+    },
+    "margin_change": "Gate1c used0.20us crowbar action; Gate1d/2 use0.30us for the larger selected FET charge screen, increasing modeled peak by20.940mV and reducing margin39.328mV to18.388mV. No measured timing is claimed.",
+    "OPEN": [
+      "18.388mV fault margin and inherited timing/source/L/C assumptions",
+      "11.431mV harness margin; 100mV reserve unmet",
+      "startup/reset, auxiliary dropout/reverse/transient behavior, thermal and SOA",
+      "remaining R2/R3 release criteria"
     ]
   }
 }

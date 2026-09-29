@@ -12,6 +12,9 @@ import argparse
 import itertools
 import json
 import math
+import hashlib
+import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -727,15 +730,104 @@ def calculate_gate1d():
     }
 
 
+def calculate_gate2(netlist):
+    """Read actual exported values; retain earlier gate records as history."""
+    tree = ET.parse(netlist).getroot()
+    components = {c.get('ref'): c for c in tree.findall('./components/comp')}
+    used = {}
+
+    def value(ref):
+        text = components[ref].findtext('value')
+        match = re.fullmatch(r'([\d.]+)([kMmun]?)(?:F(?: .*)?)?', text)
+        if not match:
+            raise ValueError(f'Unsupported captured value {ref}: {text}')
+        result = float(match[1])*{'':1,'k':1e3,'M':1e6,'m':1e-3,'u':1e-6,'n':1e-9}[match[2]]
+        used[ref] = {'captured_text': text, 'SI_value': result}
+        return result
+
+    previous = json.loads(TARGET.read_text())
+    tr = threshold(value('R301'), value('R302'))
+    # Preserve the accepted fault model only when its other captured inputs
+    # still match. A changed model input must not inherit the previous margins.
+    if (value('R202'), value('R203')) != (100000,24400):
+        raise ValueError('Buck divider changed; revise inherited fault initial conditions')
+    raw = raw_corners(1+value('R202')/value('R203'))
+    caps = [value(f'C{n}') for n in range(330,338)]
+    if any(not math.isclose(c,470e-6) for c in caps):
+        raise ValueError('Bulk bank changed; revise fault model')
+    for ref, part in [('U302','REF5025IDGKR'),('U303','TLV3201AIDBVR'),
+                      ('U315','UCC27511DBVR'),('Q303','CSD18540Q5B')]:
+        if part not in ET.tostring(components[ref],encoding='unicode'):
+            raise ValueError(f'{ref}: selected device changed; review model assumptions')
+    r = [value(f'R{n}') for n in range(308,312)]
+    ballast = (r[0]+r[1])*(r[2]+r[3])/sum(r)
+    if not math.isclose(ballast,.033):
+        raise ValueError('Ballast changed; redo Gate1d full pulse selection')
+    cc = previous['gate_1c']['capacitance']['ceramic_screen_F']
+    before = fault(8,tr,.3e-6,ceramic_C=cc,include_state=True)
+    corners=[]
+    for rq,rr in itertools.product((0,.0033,.0066),(ballast*.985,ballast*1.015)):
+        after=shunt_interval(before['state_at_action'],rq+rr,cc,duration=1.7e-6)
+        peak=max(before['pi_peak_screen_V'],after['raw_peak_after_on_V']+.020)
+        corners.append({'ASSUMED_RDS_ohm':rq,'ballast_ohm':rr,'pi_peak_V':peak,
+                        'pi_margin_mV':1000*(5.5-peak)})
+    normal=normal_bound(8)
+    normal['false_trip_margin_mV']=1000*(tr['min_V']-normal['normal_max_V']-.010)
+
+    def ldo(top,bottom):
+        rt,rb=value(top),value(bottom)
+        # SBVS171F p6: overall +/-2%, IFB +/-0.1uA. Resistors:
+        # ASSUMED 0.1% plus 10ppm/K*100K, pending exact MPNs.
+        values=[1.193*(1+a*.02)*(1+rt*(1+b*.002)/(rb*(1+c*.002)))
+                +d*.1e-6*rt*(1+b*.002)
+                for a,b,c,d in itertools.product((-1,1),repeat=4)]
+        return {'nominal_V':1.193*(1+rt/rb),'min_V':min(values),'max_V':max(values),
+                'DATASHEET_overall_fraction':.02,'DATASHEET_FB_current_A':.1e-6,
+                'ASSUMED_resistor_fraction':.002,
+                'condition':'Regulation only, VIN >= nominal output +0.5V; dropout, supply collapse and thermal limits OPEN'}
+
+    rails={'detector':ldo('R312','R313'),'driver':ldo('R314','R315')}
+    resistance=previous['gate_1c']['harness']['options'][0]['total_raw_to_pi_ohm']
+    harness_min=raw['min_V']-5*resistance
+    charge=26e-9*(11+value('R306')+1.6)/(rails['driver']['min_V']-4.5)
+    # This estimates the inherited charge term only; new combinational stages,
+    # filtering and nonlinear current/charge are explicitly not bounded here.
+    ovp=[]
+    rt,rb=value('R103'),value('R104')
+    for a,b,c,d in itertools.product((-1,1),repeat=4):
+        top,bottom=rt*(1+a*.001),rb*(1+b*.001)
+        ovp.append(1.2*(1+c*.02)*(1+top/bottom)+d*150e-9*top)
+    return {'classification':'CALCULATED from KiCad-exported values using DATASHEET limits and explicit ASSUMED envelopes; not physical validation',
+            'netlist':str(netlist.relative_to(ROOT)),'netlist_sha256':hashlib.sha256(netlist.read_bytes()).hexdigest(),
+            'captured_values':used,'threshold':tr,'raw_buck':raw,'normal':normal,
+            'input_ovp':{'nominal_V':1.2*(1+rt/rb),'min_V':min(ovp),'max_V':max(ovp)},
+            'rails':rails,'raw_bulk_nominal_F':sum(caps),'raw_bulk_min_screen_F':sum(caps)*.8*.8,
+            'ballast_equivalent_ohm':ballast,'fault_corners':corners,
+            'pi_peak_V':max(c['pi_peak_V'] for c in corners),
+            'fault_margin_mV':min(c['pi_margin_mV'] for c in corners),
+            'harness':{'ASSUMED_total_path_ohm':resistance,'pi_5A_min_V':harness_min,
+                       'static_margin_mV':1000*(harness_min-4.75),'with_100mV_reserve_margin_mV':1000*(harness_min-4.85)},
+            'gate_drive':{'ASSUMED_required_rail_min_V':7.35,'regulated_rail_headroom_V':rails['driver']['min_V']-7.35,
+                          'charge_to_4p5V_screen_s':charge,'old_partial_detector_latch_driver_charge_sum_s':(55+6.1+26)*1e-9+charge,
+                          'ASSUMED_effective_crowbar_on_s':.3e-6,'ASSUMED_effective_series_off_s':2e-6,
+                          'OPEN':'The captured multi-gate latch chain, filter, actual nonlinear gate charge, falling-rail validity and commutation need complete timing qualification; this partial sum is not an end-to-end bound.'},
+            'margin_change':'Gate1c used0.20us crowbar action; Gate1d/2 use0.30us for the larger selected FET charge screen, increasing modeled peak by20.940mV and reducing margin39.328mV to18.388mV. No measured timing is claimed.',
+            'OPEN':['18.388mV fault margin and inherited timing/source/L/C assumptions','11.431mV harness margin; 100mV reserve unmet','startup/reset, auxiliary dropout/reverse/transient behavior, thermal and SOA','remaining R2/R3 release criteria']}
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
-    parser.add_argument("--gate", choices=("1b", "1c", "1d"), default="1b")
+    parser.add_argument("--gate", choices=("1b", "1c", "1d", "2"), default="1b")
+    parser.add_argument('--netlist', type=Path, default=ROOT/'docs/evidence/r2/sheet03/V1A_gate2.net.xml')
     args=parser.parse_args()
-    result={"1b": calculate, "1c": calculate_gate1c, "1d": calculate_gate1d}[args.gate]()
+    result=(calculate_gate2(args.netlist.resolve()) if args.gate == '2' else
+            {"1b": calculate, "1c": calculate_gate1c, "1d": calculate_gate1d}[args.gate]())
     if args.write:
         data=json.loads(TARGET.read_text())
         data["gate_"+args.gate]=result
+        if args.gate == '2':
+            data['classification']='CALCULATED SCREENS ONLY; preliminary Sheet03 captured, R2/R3 release BLOCKED; no bench validation. Earlier gate members are preserved historical records.'
         TARGET.write_text(json.dumps(data,indent=2)+"\n")
     print(json.dumps(result,indent=2))
 
