@@ -4,19 +4,21 @@ Consolidated 2026-09-26 from the 2026-09-14 continuation in [FINAL_MANAGER_REPOR
 
 **R2 schematic release: BLOCKED. R3 PCB release: BLOCKED. No printed circuit board (PCB) creation or routing authorized. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
-## Sheet 03 architecture gate — Gate1d, 2026-09-29
+## Sheet 03 — Gates1d + 2, completed 2026-09-30
 
-**PRELIMINARY — READY FOR SCHEMATIC REVIEW; Gate1d CONDITIONAL PASS.** User-approved Candidate C + crowbar now uses grounded-source CSD18540Q5B, drain-side four-part WFMB2512R0330FEA bank (33 mΩ total), and independently powered7.5V UCC27511. [Pulse evidence](../evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md) compares SOA, load line, temperature and full discharge pulse. Source-ballast wiring is rejected.
+**PRELIMINARY — READY FOR SCHEMATIC REVIEW; Gate1d/Gate2 CONDITIONAL PASS.** Candidate C + crowbar is captured using the two-latch circuit from `13e4c2d`, CSD18540Q5B, four WFMB2512R0330FEA drain-ballast elements (33mΩ equivalent), UCC27511 and a common-source BSC034N06NS pair driven by LTC7001. The independent driver rail is 7.62327 V nominal, with the existing `DRV_7V5` net name retained.
 
-**OPEN margins:** selected0.30µs screen gives5.481612V / +18.388mV (historical0.20µs +39.328mV); reduced harness gives4.761431V / +11.431mV at5A, without the unmet100mV dynamic reserve. No physical validation is claimed. Source/L/C, thermal/pulse-tail assumptions, startup/independent supply/reset, series SOA and remaining R2 qualifications remain OPEN.
+**EVIDENCE:** [pin review](../evidence/r2/sheet03/GATE2_PIN_REVIEW.md), [captured-value calculation](../evidence/r2/sheet03/GATE2_CALCULATIONS.md), [scope/check report](../evidence/r2/sheet03/GATE2_VALIDATION.md) and [full marked PDF](../evidence/r2/sheet03/V1A_GATE2_PRELIMINARY.pdf). ERC has 0 violations; 15 capture/footprint tests and the current repository checker pass. The strict historical cache audit still fails for archived sources/predecessor checkouts; it is not reported as PASS.
 
-**Next gate:** Gate2 preliminary Sheet03 capture and review is authorized. R2 release and R3 remain BLOCKED. The current verdict in the [decision document](../evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md) supersedes earlier no-capture decisions only for this scope. The boundary below describes the pre-capture state and will be updated after Gate2.
+**OPEN margins:** the assumed 0.30 µs crowbar timing gives 5.481612 V / +18.388mV. Gate1c's0.20µs screen gave +39.328mV; the larger selected FET's charge screen required the longer preliminary delay. Reduced harness assumptions give 4.761431 V / +11.431mV at 5 A. The 100 mV dynamic reserve remains unmet. No measured timing or peak is claimed. Source/L/C, temperature, pulse tail, startup/reset, auxiliary supplies, series SOA and remaining component qualifications remain OPEN.
 
-## Open protection boundary
+## Captured protection boundary
 
-Sheet 03 — OUTPUT PROTECTION is OPEN. `VOUT_5V1` and `VOUT_PROTECTED` must remain separate. Never short them, create a temporary bypass, add a fake `PWR_FLAG`, or capture placeholder protection to obtain a clean Electrical Rules Check (ERC).
+`VOUT_5V1` reaches `VOUT_PROTECTED` only through the fitted opposed MOSFETs; no bypass is present. Sheet03's source declarations describe the real diode-fed auxiliary rail and transistor-switched protected rail for ERC. They do not validate those paths or permit an unfitted source. The independent checker verifies the physical pin/net and package paths.
 
-U402/TPS70933 pin 1 is legitimately undriven because `VOUT_PROTECTED` has no supply through Sheet 03. The [dated ERC report](../evidence/r2/forensic_2026-09-14/ERC_qualified.json) records that one error. It is not ERC PASS. Passing capture tests does not release R2.
+The historical U402.1 undriven error belonged to the empty Sheet03 stub. Its disappearance is now supported by the captured power path and documented declarations, not by shorting the two rails. The earlier ERC report remains dated evidence.
+
+**Next gate:** remaining R2 engineering review of the actual capture and OPEN limits. R2 release and R3 remain BLOCKED; no PCB work is authorized.
 
 ## Accepted current footprint assignments
 
@@ -37,7 +39,7 @@ Preserve `hardware/kicad/V1A_Qualified.pretty/`, `fp-lib-table`, and `sym-lib-ta
 
 ## Remaining engineering blockers and validation work
 
-- Complete output-protection circuit, normal/fault transient bounds, and proof of the frozen Pi peak limit; no Pi damage-versus-time allowance is required or credited.
+- Qualify the captured output-protection circuit, startup/reset, normal/fault transient bounds, and proof of the frozen Pi peak limit; no Pi damage-versus-time allowance is credited.
 - SMBJ26CA coordination and final source fault envelope.
 - Final F101 selection.
 - J501/J502/J503 final selection and harness qualification.

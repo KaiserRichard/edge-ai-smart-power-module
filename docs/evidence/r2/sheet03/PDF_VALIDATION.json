@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "classification": "Export/page/mark verification only; R2/R3 BLOCKED",
+  "page_count": 6,
+  "pages": [
+    {
+      "page": 1,
+      "sheet": "V1A",
+      "mark_verified": true,
+      "width_pt": 1190.52001953125,
+      "height_pt": 885.89599609375
+    },
+    {
+      "page": 2,
+      "sheet": "01_INPUT_PROTECTION",
+      "mark_verified": true,
+      "width_pt": 1190.52001953125,
+      "height_pt": 885.89599609375
+    },
+    {
+      "page": 3,
+      "sheet": "02_BUCK_5V",
+      "mark_verified": true,
+      "width_pt": 1190.52001953125,
+      "height_pt": 885.89599609375
+    },
+    {
+      "page": 4,
+      "sheet": "03_OUTPUT_PROTECTION",
+      "mark_verified": true,
+      "width_pt": 2383.919921875,
+      "height_pt": 1727.7900390625
+    },
+    {
+      "page": 5,
+      "sheet": "04_POWER_MONITOR",
+      "mark_verified": true,
+      "width_pt": 1190.52001953125,
+      "height_pt": 885.89599609375
+    },
+    {
+      "page": 6,
+      "sheet": "05_IO_TEST",
+      "mark_verified": true,
+      "width_pt": 1190.52001953125,
+      "height_pt": 885.89599609375
+    }
+  ],
+  "pdf": "docs/evidence/r2/sheet03/V1A_GATE2_PRELIMINARY.pdf",
+  "review_copy": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_GATE2_PRELIMINARY.pdf",
+  "sha256": "8f0ae862c713cfe9c80ac276d1829bd489ff320ed533f419eb6ff1ebe870c92f",
+  "copies_identical": true,
+  "method": "Original vector pages retained unchanged below new44pt marking margin; no schematic edit",
+  "visual_review": "See GATE2_VALIDATION.md; automatic marking checks do not imply visual review"
+}

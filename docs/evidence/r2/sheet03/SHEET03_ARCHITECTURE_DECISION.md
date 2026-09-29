@@ -1,14 +1,14 @@
 # Sheet 03 preliminary architecture decision
 
-## Gate 1d — current decision, 2026-09-29
+## Gates 1d + 2 — current decision, completed 2026-09-30
 
 **VERDICT: PRELIMINARY — READY FOR SCHEMATIC REVIEW.**
 
-**Gate status: CONDITIONAL PASS. R2 release BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+**Gate1d pulse selection and Gate2 preliminary capture: CONDITIONAL PASS. R2 release BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 The user accepted Candidate C + crowbar and the Gate1c preliminary envelope, then authorized routine part/value/connection corrections, scoped commits/pushes to PR5 and Gate2 only after pulse selection passed. This is the one current decision; earlier no-capture decisions are superseded for preliminary capture only. Historical evidence remains in Git and the analysis appendices below.
 
-**DECISION:** select CSD18540Q5B with UCC27511DBVR on an independent 7.5 V rail and a drain-side 33 mΩ ballast made from four WFMB2512R0330FEA parts, `(R+R)||(R+R)`. Source and driver return are grounded. The former source ballast reduced VGS to 1.04 V at the modeled current and is rejected. Keep REF5025 + TLV3201 + SN74LVC1G74 and LTC7001 with two BSC034N06NSATMA1 series devices. Resolve the earlier contradictory common-source/common-drain prose during pin-verified capture; both series sources must share the LTC7001 TS reference. No raw-to-protected bypass is permitted.
+**DECISION:** select CSD18540Q5B with UCC27511DBVR on the independent `DRV_7V5` rail (captured setpoint 7.62327 V) and a drain-side 33 mΩ ballast made from four WFMB2512R0330FEA parts, `(R+R)||(R+R)`. Source and driver return are grounded. The former source ballast reduced VGS to 1.04 V at the modeled current and is rejected. Keep REF5025 + TLV3201 + SN74LVC1G74 and LTC7001 with two BSC034N06NSATMA1 series devices. The captured pair is common-source: both series sources and LTC7001 TS share `PROT_MID`. The raw and protected rails attach to opposite drains. No raw-to-protected bypass is permitted.
 
 **EVIDENCE:** [pulse review](GATE1D_PULSE_REVIEW.md), [calculator](../../../../scripts/calculate_sheet03_gate1b.py) and `gate_1d` in [CALCULATIONS.json](CALCULATIONS.json), with manufacturer revisions/figures and hashes in the [source register](../../../../third_party/sheet03_source_register.json). The full 100 µs envelope includes the accepted initial pulse and an explicitly assumed ≤220 µF downstream RC tail. At 125°C initial temperature, FET load-line/thermal screen leaves 40.69°C to 175°C; each ballast element has 1.934× derated pulse power/energy margin. These are preliminary analytical comparisons, not physical validation.
 
@@ -16,17 +16,25 @@ The user accepted Candidate C + crowbar and the Gate1c preliminary envelope, the
 
 - **OPEN — fault voltage margin:** selected conservative 0.30 µs effective-on screen gives **5.481612 V / +18.388 mV**. The inherited 0.20 µs result, **5.460672 V / +39.328 mV**, remains a comparison rather than the new selected timing. Real gate charge, comparator/filter/logic propagation, commutation and ringing require R2/bench qualification. A 0.40 µs sensitivity fails by 2.639 mV.
 - **OPEN — harness margin:** **4.761431 V / +11.431 mV** at 5 A requires the reduced-resistance harness allocations. The separate 100 mV dynamic reserve remains unmet by 88.569 mV. No connector/copper/wire values are validated by this calculation.
-- **OPEN — normal window:** +21.954 mV detector false-trip screen relies on 8×470 µF raw bulk, effective ceramic C, ESR and assumed load-release response; capture must include the bulk if it credits this result.
+- **OPEN — normal window:** +21.954 mV detector false-trip screen relies on 8×470 µF raw bulk, effective ceramic C, ESR and assumed load-release response; C330–C337 now capture this bulk; actual effective C, inrush and stability remain OPEN.
 - **OPEN — pulse scope:** ≤220 µF downstream C, no external source, 125°C initial device/terminal temperature, single fault with cooling, thermal interfaces, resistor pulse-temperature derating and parasitic inductance remain review assumptions. Larger stores or repeat faults require recalculation.
 - **OPEN — inherited qualification:** source transients, saturated inductance, independent supplies/reference-valid/reset interlock, inrush, series-FET SOA, input TVS/fuse, final connectors, thermal/layout and bench gates. These are not closed by preliminary capture or ERC.
 
 ### Plain-English owner statement
 
-The protection circuit watches the raw buck voltage independently. On overvoltage it latches the fault, shunts the protected rail through a pulse-rated resistor bank, and opens the series MOSFET pair. Moving the resistor bank away from the MOSFET source preserves gate drive. The larger MOSFET and resistor bank can carry the reviewed pulse with stated margins. The owner must now check the captured connections and startup/reset behavior, then qualify the narrow voltage margins and pulse assumptions before release. Gate2 is authorized; this is not approval to fabricate, route a PCB, or connect an expensive SBC.
+The preliminary circuit is now captured and checked. It is intended to watch the buck voltage with an independent reference, keep the load off until the supplies settle and the owner presses ARM, and latch a subsequent fault. The fault command turns on the resistor-limited crowbar, opens the opposed series MOSFETs and requests input shutdown. RESET clears the history so a fresh deliberate ARM can be attempted. These are the intended states; startup, reset and fault performance still need electrical testing.
 
-### Next gate
+The selected larger crowbar MOSFET and four-resistor bank pass the **conditional pulse calculation**. Its gate-charge screen required increasing the assumed crowbar delay from 0.20 µs to 0.30 µs. During that extra 0.10 µs, the model's peak rises by 20.940 mV, so the earlier 39.328 mV margin falls to **18.388 mV**. The measured timing is unknown. The **11.431 mV** static harness margin also remains narrow, and the separate 100 mV reserve is unmet. Both margins stay **OPEN review items**.
 
-Capture Sheet03, verify datasheet pins/footprints, run ERC/netlist/repository checks, recalculate captured thresholds, confirm scoped hierarchy changes and export the marked full schematic PDF. Record the results here and in the manager report. No R2 or R3 release follows automatically.
+KiCad ERC reports zero violations, the pin/pad and no-bypass checks pass, and 15 regression tests pass. That establishes capture consistency only. The owner can review the complete [six-page marked schematic](V1A_GATE2_PRELIMINARY.pdf), [pin review](GATE2_PIN_REVIEW.md), [captured-value calculation](GATE2_CALCULATIONS.md) and [validation/scope record](GATE2_VALIDATION.md). No electrical release, PCB work, fabrication or expensive-SBC first load is authorized.
+
+### Gate2 evidence and next gate
+
+**Part A steps 1–3 and Part B steps 1–5 are complete for the authorized preliminary review scope.** The retained 83-component capture from `13e4c2d` was reconciled, preserving its two-latch circuit. Corrections include U315's manufacturer pin mapping, all eight series-FET footprint terminals, auxiliary supply isolation, the driver divider, package dimensions and capacitor polarity. See the pin review for exact changes and remaining MPN/assembly limits.
+
+The raw/protected nets remain separate with no bypass. Sheet01 exports VIN_FUSED/INPUT_SHDN; Sheet02 exports U201.5 BUCK_PGOOD; the root connects these and carries the existing preliminary wording. Those files are unchanged from `13e4c2d`. Sheets04/05, project settings, tables, existing qualified footprints and 74 unrelated library symbols are unchanged from the pre-capture baseline. Full hashes and reviewed exceptions are in [GATE2_SCOPE.json](GATE2_SCOPE.json).
+
+Next is the remaining R2 engineering review: complete the timing, startup/reset, source, SOA, thermal, effective-C, input protection and connector/harness evidence. R2 release and R3 remain BLOCKED. The rule-check result does not close any voltage margin or bench gate.
 
 ## Retained Gate1c source/load analysis
 

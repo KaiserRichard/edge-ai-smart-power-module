@@ -1,3 +1,21 @@
+# Gate2 manager update — 2026-09-30
+
+**STATUS: CONDITIONAL PASS for the authorized preliminary schematic capture/review package. VERDICT: PRELIMINARY — READY FOR SCHEMATIC REVIEW. R2 release and R3 remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** completed Part B steps 1–5 on `feat/sheet03-output-protection`, retaining the two-latch circuit from `13e4c2d` and all valid partial work. The requested resumed checkpoint is `911762b`; pin/package reconciliation is `7e38726`, preservation checks are `c45feca`, and captured-value recalculation is `f1d7ec3`. Corrected UCC27511 pins, complete series-FET pad mapping, package assignments and capacitor polarity; retained auxiliary-diode and driver-divider corrections. Updated checker/tests, reviewed exact preservation, exported both marked full-hierarchy PDFs and updated the owner explanation. Part A's completed pulse selection was reused.
+
+**EVIDENCE:** [Gate2 completion/check record](evidence/r2/sheet03/GATE2_VALIDATION.md), [pin review](evidence/r2/sheet03/GATE2_PIN_REVIEW.md), [calculations](evidence/r2/sheet03/GATE2_CALCULATIONS.md), [preservation hashes](evidence/r2/sheet03/GATE2_SCOPE.json). Fresh ERC: 0 violations. Fifteen regression tests and current capture/repository checks PASS. The historical cache audit remains FAIL with 130 archived/missing-source/predecessor issues; no electrical conclusion follows from those checks. Sheets04/05 and 74 unrelated library definitions are unchanged; Sheets01/02/root match13e4c2d with the listed hierarchy/overview exceptions relative to pre-capture.
+
+**PDF DELIVERY:** [V1A_GATE2_PRELIMINARY.pdf](evidence/r2/sheet03/V1A_GATE2_PRELIMINARY.pdf), plus `/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_GATE2_PRELIMINARY.pdf`. Both are identical, **six pages** (root plus all five functional sheets), visibly marked on every page. Export/page/mark/hash evidence is in [PDF_VALIDATION.json](evidence/r2/sheet03/PDF_VALIDATION.json); no unrelated sheet was edited to add the mark.
+
+**DECISIONS:** preserve the accepted CandidateC + crowbar architecture and no-bypass boundary. Captured 11.3 kΩ/10kΩ gives 5.325 V nominal trip,5.293568–5.356563V corners. The7.62327V nominal auxiliary driver rail retains its `DRV_7V5` net name. Gate2 closes the preliminary capture task only; no PCB, merge, fabrication, procurement or physical validation was performed.
+
+**OPEN RISKS:** **18.388 mV fault margin** at 5.481612 V and **11.431 mV harness margin** at 4.761431 V/5A; the 100 mV dynamic reserve remains unmet. The fault margin fell from 39.328 mV because the assumed crowbar action time increased from 0.20 µs to 0.30 µs for the larger selected MOSFET's gate-charge screen, raising the modeled peak20.940mV. Timing remains assumed. Source/L/C, pulse-tail/thermal assumptions, startup/reset and multi-gate timing, auxiliary dropout/reverse/transient behavior, inrush, series-FET SOA, input fuse/TVS, exact passive/button MPNs and final connectors remain OPEN.
+
+**NEXT GATE:** remaining R2 engineering review and qualification of the captured design. No automatic R2 or R3 release. Prior reports below remain dated history.
+
+---
+
 # Gate1d manager update — 2026-09-29
 
 **STATUS: CONDITIONAL PASS for preliminary schematic review. R2/R3 release BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**

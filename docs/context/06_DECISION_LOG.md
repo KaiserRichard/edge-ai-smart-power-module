@@ -8,9 +8,15 @@ Consolidated 2026-09-26; this is an index into existing decisions, not a replace
 | LM61460 buck architecture selected | Captured U201; [buck review](../evidence/r2/BUCK_DESIGN.md) | KNOWN captured choice; electrical release BLOCKED |
 | TPS26630 input electronic-fuse architecture selected | Captured U101; [input review](../evidence/r2/INPUT_PROTECTION.md) | KNOWN captured choice; source/fuse/transient qualification OPEN |
 | INA228 + 2 mΩ Kelvin shunt selected | Captured U401/R401; [monitor review](../evidence/r2/MONITOR_POWER_DOMAINS.md) | KNOWN captured choice; measurement accuracy not bench validated |
-| Sheet 03 must not be bypassed | [Output review](../evidence/r2/OUTPUT_PROTECTION.md); explicit user constraint | OPEN architectural boundary; preserve legitimate ERC error |
+| Sheet 03 must not be bypassed | [Output review](../evidence/r2/OUTPUT_PROTECTION.md); explicit user constraint | Captured opposed-FET path; preserve separate raw/protected nets and independent no-bypass checks |
 | R2 must close before PCB work | [Manager report](../FINAL_MANAGER_REPORT.md); [gate workflow](05_WORKFLOW_AND_GATES.md) | R2/R3 BLOCKED; R3 requires separate authorization |
 | Never fabricate qualification state | [AGENTS.md](../../AGENTS.md); [engineering state](03_ENGINEERING_STATE.md) | Permanent evidence discipline |
+
+## 2026-09-30 — Gate2 preliminary capture completed
+
+Retain and reconcile `13e4c2d`; do not replace its two-latch startup/fault implementation with the overlapping alternative. Manufacturer pin review corrects UCC27511 to 1 VDD / 2 OUTH / 3 OUTL / 4 GND / 5 IN− / 6 IN+; the series-FET footprint retains pads 1–8. The auxiliary diode, driver divider 53.9 kΩ/10kΩ and reviewed package/polarity corrections are captured. Unrelated sheets are preserved with the explicitly listed hierarchy exceptions. See [Gate2 validation](../evidence/r2/sheet03/GATE2_VALIDATION.md).
+
+Gate2 is CONDITIONAL PASS for preliminary review: ERC 0 violations,15 tests and current repository checks pass, captured thresholds are recalculated, and the marked six-page PDF exists in both requested locations. The 18.388 mV fault and 11.431 mV harness margins remain OPEN; the former uses0.30µs rather than Gate1c's0.20µs assumed crowbar action time. R2/R3 release stays BLOCKED. This dated result supersedes the old empty-Sheet03/expected-ERC-error state, without changing historical evidence.
 
 ## 2026-09-29 — Gate1d preliminary pulse selection
 

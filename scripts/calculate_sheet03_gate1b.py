@@ -3,6 +3,8 @@
 
 All units are SI. --write updates only the selected gate member of the existing
 CALCULATIONS.json; --gate 1d preserves historical gate_1b/gate_1c results.
+--gate 2 reads the exported capture and adds its result without changing those
+earlier gate records; it also refreshes the top-level classification.
 Source identifiers and limitations are in the decision file. A sensitivity
 calculation is never promoted to a datasheet guarantee by this program.
 Uses RK4 for a stiff-voltage-source fault feeding L and two C/ESR branches.
