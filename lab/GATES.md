@@ -26,7 +26,7 @@ Status of the R0–R5 release gates and what closes each. Gate definitions: [wor
 **Status:** CONDITIONAL PASS as a documentary review package. This is not a freeze of the requirements or the architecture.
 **Closes when:**
 - The user approves the requirement table in [REQUIREMENTS.md](REQUIREMENTS.md), with every row that shapes topology or ratings CONFIRMED or explicitly accepted as ASSUMED.
-- The four user facts at the end of REQUIREMENTS.md are answered.
+- Remaining interface bounds and decisions in REQUIREMENTS.md are resolved or explicitly accepted as assumptions. D-30 closes GPIO entry, normal input range, and intended load scope; no final wall adapter is required.
 
 ## R2: schematic release
 
@@ -37,7 +37,7 @@ Status of the R0–R5 release gates and what closes each. Gate definitions: [wor
 - 26 of 71 parts have no footprint. J501, J502 and J503 read "MPN OPEN".
 
 **Closes when all of these hold:**
-1. **User facts:** adapter, Pi connection, largest load step, connector review (REQUIREMENTS.md).
+1. **Interface definition:** D-30 confirms normal 9–24 V input, GPIO power, and Pi 5 + D435i load scope. Source fault/energy limits, load-dynamics test bounds, and connector/harness qualification remain OPEN (REQUIREMENTS.md). A wall adapter is not required; an unselected converter must eventually demonstrate compliance with the approved interface bounds.
 2. **Sheet 03 architecture approved by the user.** Option I is PROPOSED ([DECISIONS.md](DECISIONS.md) D-20). The high-side-short finding stays blocking until these close: LM61460 load-step overshoot (PSpice, then bench), let-through with vendor models, LM61460 stability with the chosen bulk, detector and gate-stage timing across tolerance, and the Pi fault envelope. Since D-27 the load must stay ≤ 5.5 V with margin; option I at 5.49 V (model) does not yet meet that.
 3. **Codex brief 02 evidence** meets its 8 explicit engineering acceptance criteria (PR #1). ERC-clean plus tests passing is not acceptance (D-11).
 4. **Sheet 03 captured** by one Codex agent to the approved architecture. ERC then has no U402 error because the rail is really driven, not bypassed.

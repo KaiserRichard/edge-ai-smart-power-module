@@ -1,6 +1,6 @@
 # Requirements (Step 0 table)
 
-Current working requirement table for V1A. **Not frozen.** It merges the confirmed scope in [docs/00_REQUIREMENTS.md](../docs/00_REQUIREMENTS.md) with the proposed revision 2 envelope in draft [PR #1](https://github.com/KaiserRichard/edge-ai-smart-power-module/pull/1) (`REQUIREMENT_ENVELOPE_PROPOSED.md`), which answers the user's 2026-09-26 review of revision 1. Seeded 2026-09-29.
+Current working requirement table for V1A. **Partially frozen:** the user fixed the normal input range, GPIO power interface, and intended load scope on 2026-09-29 (D-30); fault bounds and component choices remain OPEN. It merges the confirmed scope in [docs/00_REQUIREMENTS.md](../docs/00_REQUIREMENTS.md) with the proposed revision 2 envelope in draft [PR #1](https://github.com/KaiserRichard/edge-ai-smart-power-module/pull/1) (`REQUIREMENT_ENVELOPE_PROPOSED.md`), which answers the user's 2026-09-26 review of revision 1. Seeded 2026-09-29.
 
 **Labels**
 - **CONFIRMED**: the user explicitly required it, or it is a directly established source or repository fact.
@@ -22,29 +22,34 @@ A row moves to CONFIRMED only with the user's word or a cited source. Changing a
 | C06 | Sequential R0–R5 gates | – | CONFIRMED | User; see [GATES.md](GATES.md) |
 | C07 | Test access and staged bench bring-up before any SBC load | – | CONFIRMED | User; 00_REQUIREMENTS |
 
-## B. Source envelope (S1, revised on user review)
+## B. Source envelope (updated by user D-30)
 
-The analysis source is the Mean Well GST60A24-P1J. **It is ASSUMED, not the confirmed adapter** (DECISIONS D-14).
+**CONFIRMED / KNOWN requirement:** intended final robot chain is a 13S Li-ion battery (approximately 48 V nominal, 54.6 V maximum) → Main Protection / power distribution board → future HV-to-approximately-12-V auxiliary converter → V1A. These are user-specified system intentions, not validated equipment ratings. V1A remains a standalone module; direct battery connection is not authorized. There is no required wall adapter in the final architecture. A programmable DC supply may emulate the auxiliary rail during bench work.
 
-| ID | Parameter | Value | Label | Depends on the final adapter? |
+The earlier Mean Well GST60A24-P1J source and its numerical envelope remain **historical ASSUMED analysis cases only**. They do not specify the future converter. Preserve the old analysis; do not silently relabel its outputs as qualified for the robot source.
+
+| ID | Parameter | Value | Label | Closure / consequence |
 | --- | --- | --- | --- | --- |
-| S1 | Actual adapter | not chosen | OPEN | Closed by the user naming the adapter or its datasheet |
-| S1a | Steady maximum at J501 | 24.72 V (24 V + 3 %) | ASSUMED | Yes: TVS standoff and high-side-short source voltage |
-| S1b | Steady minimum | 9.0 V | ASSUMED (P01 proposal) | Yes, if a 12 V or 19 V adapter is chosen |
-| S1c | Source OVP range | 25.2–32.4 V | ASSUMED | Yes: sets the TVS breakdown floor |
-| S1d | Overload behaviour / available current | hiccup at 105–150 % of 2.5 A | ASSUMED | Yes: F101 coordination |
-| S1e | Output capacitance and cable | 2 m cable, hot-plug only; adapter capacitance unknown | ASSUMED / OPEN | Yes: hot-plug ringing |
-| S1f | Surge class | none (bench module) | ASSUMED | No |
+| S0 | V1A normal input operating requirement | 9–24 V at V1A input | CONFIRMED (KNOWN requirement) | User D-30; not a demonstrated operating rating or a fault-withstand limit |
+| S1 | Final upstream HV-to-approximately-12-V converter model / MPN | not selected | OPEN | Future selection must satisfy an agreed input-interface envelope; wall adapter selection is not required |
+| S1a | Source voltage tolerance and maximum abnormal voltage / duration at J501 | not bounded | OPEN | Historical 24.72 V case remains ASSUMED; derive and approve allowable limits before source compatibility is claimed |
+| S1b | Minimum normal input | 9.0 V | CONFIRMED (KNOWN requirement) | User D-30; verify startup and full-load performance at this corner |
+| S1c | Upstream overvoltage protection and HV pass-through containment | not specified | OPEN | Define fault responsibility and voltage-versus-time bound; normal 9–24 V does not establish battery-fault protection |
+| S1d | Prospective short current, current-limit response, foldback / restart | unknown | OPEN | Bound for input protection and persistent buck-short analysis; no Mean Well hiccup behavior is assumed for the new source |
+| S1e | Output capacitance, wiring impedance, startup and transient behavior | unknown | OPEN | Bound stored energy and transient impedance; a generic bench supply is not automatically equivalent |
+| S1f | Robot/bench surge environment | not defined for final robot | OPEN | Historical no-surge bench assumption remains limited to that analysis |
 
 ## C. Load envelope
 
 | ID | Parameter | Value | Label | Source / what closes it |
 | --- | --- | --- | --- | --- |
 | L1 | Buck output setpoint | 5.098 V | CALCULATED | Feedback divider, rechecked 2026-09-29 on the Mac |
-| L2 | Load current | 5 A continuous; 6 A for ≤ 100 ms | ASSUMED | P03 proposal; peak is a screening point only |
+| L2 | Output load envelope | designed 5 A envelope | CONFIRMED target; capability unvalidated | User D-30; includes intended loads drawing through V1A, not an extra peripheral allowance |
+| L2a | Historical overload screening point | 6 A for ≤ 100 ms | ASSUMED | P03 proposal retained; not promoted to a guaranteed mode by D-30 |
 | L3 | Raw static regulation | 5.04–5.16 V | CALCULATED | PR #1 envelope |
-| L4 | Pi connection (GPIO 5 V pins or USB-C) | – | OPEN | User answer |
-| L5 | Largest realistic load step and slew | analysis uses 5 A → 0 A | OPEN | User answer (which USB devices hot-plug) |
+| L4 | Pi power interface | Direct 5 V through GPIO header power pins with multiple grounds; no USB-C PD redesign | CONFIRMED | User D-30. Raw rail → Sheet 03 → protected rail → 2 mΩ Kelvin shunt / INA228 → LOAD_5V1 → J502/harness → Pi. Harness implementation remains OPEN |
+| L5 | Required load / qualification scope | Pi 5 idle; sustained CPU-heavy load; Pi 5 + D435i operating; representative steps up to designed 5 A envelope | CONFIRMED | User D-30; D435i may remain connected and operating during runtime. Arbitrary USB peripheral hot-plug is not guaranteed in R2; additional peripherals excluded unless characterized |
+| L5a | Load-step amplitudes/slew, inrush, camera mode and power route | exact test bounds not yet established | OPEN | Bound analytically and with electronic loads, then characterize intended system. Historical 5 A → 0 A remains a conservative analysis case, not a measured runtime waveform |
 | L6 | Load capacitance | 2–220 µF analysed; Pi 5 value unknown | ASSUMED | Raspberry Pi data or measurement |
 | L7 | Pi voltage at 5 A, static hot-wire case | 4.7997 V (4.6997 V with 100 mV assumed droop) | CALCULATED | 2026-09-14 blocker review; no qualified harness |
 
@@ -71,16 +76,18 @@ The analysis source is the Mean Well GST60A24-P1J. **It is ASSUMED, not the conf
 
 | ID | Requirement | Value | Label | Source / what closes it |
 | --- | --- | --- | --- | --- |
-| E1 | J501 input, J502 5.1 V / 5 A output, J503 I²C connectors | pinouts captured; parts, mates and footprints not chosen | OPEN | User's brother's connector review, then selection |
+| E1 | J501 input, J502 5.1 V / 5 A output, J503 I²C connectors | pinouts captured; parts, mates and footprints not chosen | OPEN | D-30: J502/harness remains OPEN pending resistance, current, retention and mechanical qualification. Candidate review and approval before capture; complete schematic set before brother handoff (D-29) |
 | E2 | Ambient | 0–40 °C, natural convection, open bench | ASSUMED | User |
 | E3 | Junction temperature | ≤ 125 °C and ≥ 20 °C below each part's rating | ASSUMED | Engineering proposal |
 | E4 | Stack-up | 4 layers, 2/1/1/2 oz | ASSUMED | R3 |
 | E5 | Board size | ≤ 65 × 55 mm; option I adds area | ASSUMED | R3 floorplan |
 
-## Facts only the user can supply
+## Remaining decisions and evidence
 
-In priority order, because they change the architecture decision:
-1. The real adapter, or at least its maximum steady voltage and OVP range (S1, S1a, S1c).
-2. How the Pi is powered, GPIO pins or USB-C, and any Raspberry Pi statement on input fault tolerance (L4, P4).
-3. The largest realistic load step (L5).
-4. The brother's connector review (E1).
+GPIO entry and intended load scope are resolved (D-30). Do not request a final wall adapter or re-open USB-C versus GPIO.
+
+- Propose and approve a bounded upstream source/fault interface, including responsibility for an auxiliary-converter HV pass-through fault. Final converter identity can remain OPEN while its acceptance limits are developed.
+- Bound load dynamics, acceptable Pi-terminal voltage drop, effective capacitance, and startup behavior through calculations, models and staged experiments. D435i operating configuration and its intended power route still require characterization.
+- Approve Sheet 03 architecture, recovery/reset behavior, and external backfeed/dual-source policy. The existing 5.5 V board-rail limit with margin remains in force; no allowed overvoltage pulse has been established.
+- Select and qualify connectors and harness; select/coordinate F101 and D101 against the approved source envelope.
+- No KiCad change is authorized by D-30. R2 and R3 stay BLOCKED.
