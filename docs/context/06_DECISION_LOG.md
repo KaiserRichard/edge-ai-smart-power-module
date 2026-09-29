@@ -12,4 +12,15 @@ Consolidated 2026-09-26; this is an index into existing decisions, not a replace
 | R2 must close before PCB work | [Manager report](../FINAL_MANAGER_REPORT.md); [gate workflow](05_WORKFLOW_AND_GATES.md) | R2/R3 BLOCKED; R3 requires separate authorization |
 | Never fabricate qualification state | [AGENTS.md](../../AGENTS.md); [engineering state](03_ENGINEERING_STATE.md) | Permanent evidence discipline |
 
+## 2026-09-29 — requirements consolidation and Sheet 03 no-go
+
+Authoritative record: [SHEET03_ARCHITECTURE_DECISION.md](../evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md). Today's conductor D-27/D-30 and protection/Pi/connector branch identities are recorded there; they were inspected, not merged or rewritten.
+
+| Decision / requirement | Rationale and evidence state | Result |
+| --- | --- | --- |
+| Freeze GPIO 5 V + multiple GND power, normal 9–24 V input, 5 A total envelope and specified Pi/D435i qualification loads | User instruction; D-30 consolidation | REQUIREMENT, not measured capability; supersedes older interface/adapter questions |
+| Allocate direct 54.6 V converter pass-through containment upstream | Current user instruction: 13S → PDB → future auxiliary converter → V1A | Responsibility resolved; residual source voltage/current/time/energy bounds and converter MPN remain OPEN |
+| Require `V_Pi_peak < 5.5 V` including transients | Current user instruction, tightening the earlier ≤5.5 V wording | Supersedes 6 V screening; detector threshold must leave tolerance and let-through margin |
+| Do not select/capture Sheet 03 yet | Native LM74800 window fails the retained 50 mV margin screen; LTC4368 dynamic evidence is inadequate; precision direction lacks a complete bounded circuit/state proof | Architecture gate BLOCKED; conditional capture/commit/push continuation not entered; R2/R3 remain BLOCKED |
+
 Future entries should link to the authoritative dated decision record, include rationale and evidence state, and identify superseded decisions explicitly. Do not copy whole reviews here.

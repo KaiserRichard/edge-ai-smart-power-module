@@ -4,6 +4,14 @@ Consolidated 2026-09-26 from the 2026-09-14 continuation in [FINAL_MANAGER_REPOR
 
 **R2 schematic release: BLOCKED. R3 PCB release: BLOCKED. No printed circuit board (PCB) creation or routing authorized. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
+## Sheet 03 architecture gate — 2026-09-29
+
+**BLOCKED — no architecture selected for preliminary capture.** The authoritative [Sheet 03 architecture decision](../evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md) consolidates today's separate conductor/protection/Pi/connector worktrees and checks three candidates. Native LM74800 OVP is rejected for this gate; LTC4368 timing/reverse/recovery compliance is unproven; a precision latched detector with a dedicated forward driver remains a development direction. A bounded normal/fault transient envelope and a complete detector/gate/startup/reset circuit are required before capture. The user's conditional capture continuation did not activate. KiCad remains unchanged.
+
+**Current user requirements:** normal input 9–24 V; final source 13S battery → PDB → future HV-to-approximately-12-V auxiliary converter → V1A. Direct 54.6 V pass-through containment is allocated upstream, not to V1A. Pi 5 receives power through GPIO 5 V pins and multiple GND pins. Total output envelope is 5 A; qualification includes idle, sustained CPU-heavy Pi 5, Pi 5 + D435i, and representative load steps. **Pi rail peak must remain strictly below 5.5 V; 5.5 V is not the detector threshold.** Exact converter dynamics and J502/harness remain OPEN. The fixed peak criterion supersedes older 6 V screens; no undocumented permitted overvoltage pulse is assumed.
+
+**Next gate:** bounded Candidate-C circuit/transient-contract review and architecture selection; only a successful readiness decision permits single-agent Sheet 03 capture with ERC/netlist/diff validation. No PCB authorization follows.
+
 ## Open protection boundary
 
 Sheet 03 — OUTPUT PROTECTION is OPEN. `VOUT_5V1` and `VOUT_PROTECTED` must remain separate. Never short them, create a temporary bypass, add a fake `PWR_FLAG`, or capture placeholder protection to obtain a clean Electrical Rules Check (ERC).
@@ -29,7 +37,7 @@ Preserve `hardware/kicad/V1A_Qualified.pretty/`, `fp-lib-table`, and `sym-lib-ta
 
 ## Remaining engineering blockers and validation work
 
-- Output-protection architecture and Raspberry Pi/load voltage-time envelope.
+- Complete output-protection circuit, normal/fault transient bounds, and proof of the frozen Pi peak limit; no Pi damage-versus-time allowance is required or credited.
 - SMBJ26CA coordination and final source fault envelope.
 - Final F101 selection.
 - J501/J502/J503 final selection and harness qualification.

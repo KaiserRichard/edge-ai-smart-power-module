@@ -1,0 +1,380 @@
+{
+  "classification": "CALCULATED SCREENS ONLY; no circuit selected, SPICE run or physical validation",
+  "date": "2026-09-29",
+  "status": "BLOCKED",
+  "formulas": {
+    "trip_nom": "Vref_nom*(1+Rt/Rb)",
+    "trip_min": "Vref_min*(1+Rt*(1-e)/(Rb*(1+e)))-Ierr*Rt*(1+e)",
+    "trip_max": "Vref_max*(1+Rt*(1+e)/(Rb*(1-e)))+Ierr*Rt*(1+e)",
+    "loop": "(Vraw_min-Vpi_floor-droop)/5",
+    "LC": "a=(Vin-V0)/(2*L*C); ttrip=sqrt((Vtrip-V0)/a); delta=a*((ttrip+tiso)**2-ttrip**2)",
+    "linear_rise_contract": "Vtrip_high+overdrive_raw+S*tiso+local_kick+Mpeak<5.5"
+  },
+  "raw_static_screen_V": [
+    5.038271401729418,
+    5.098360655737705,
+    5.158632237795172
+  ],
+  "threshold_screens": {
+    "A": {
+      "inputs": {
+        "detector_min_nom_max_V": [
+          1.195,
+          1.231,
+          1.267
+        ],
+        "Rt_ohm": 33700,
+        "Rb_ohm": 10000,
+        "resistor_initial_fraction": 0.001,
+        "abs_leakage_A": 2e-07
+      },
+      "nom_V": 5.37947,
+      "min_V": 5.207357006253748,
+      "max_V": 5.552084868128127,
+      "margin_above_static_high_V": 0.04872476845857587,
+      "ceiling_headroom_V": -0.052084868128127404,
+      "limitation": "No resistor drift, noise or dynamic effect included; candidate values not selected"
+    },
+    "B": {
+      "inputs": {
+        "detector_min_nom_max_V": [
+          0.4925,
+          0.5,
+          0.5075
+        ],
+        "Rt_ohm": 96500,
+        "Rb_ohm": 10000,
+        "resistor_initial_fraction": 0.001,
+        "abs_leakage_A": 1e-08
+      },
+      "nom_V": 5.325,
+      "min_V": 5.234663280754246,
+      "max_V": 5.415645519554553,
+      "margin_above_static_high_V": 0.07603104295907404,
+      "ceiling_headroom_V": 0.08435448044544724,
+      "limitation": "No resistor drift, noise or dynamic effect included; candidate values not selected"
+    },
+    "C": {
+      "inputs": {
+        "nominal_V": 5.3,
+        "total_fraction": 0.00671,
+        "classification": "ASSUMED old total allocation, not new part budget",
+        "sense_overdrive_V": 0.02,
+        "local_kick_V": 0.02,
+        "normal_margin_V": 0.05
+      },
+      "min_V": 5.264437,
+      "max_V": 5.335563,
+      "effective_high_V": 5.377962999999999,
+      "normal_max_constraint_V": 5.214437,
+      "remaining_rise_before_peak_reserve_V": 0.10203700000000039,
+      "slew_limit_V_per_us_at_2us": 0.051018500000000196,
+      "slew_limit_V_per_us_at_0p4us": 0.25509250000000094,
+      "charge_limit_uC_at_assumed_2uF": 0.20407400000000078,
+      "peak_if_slew_0p1V_per_us_for_2us_V": 5.597962999999999
+    }
+  },
+  "A_ideal_lowest_high_trip_V": {
+    "zero_normal_margin": 5.469445226181157,
+    "assumed_50mV_margin": 5.522457778482412
+  },
+  "loop_budget_ohm": {
+    "assumed_4p75V_floor_static": 0.05765428034588353,
+    "assumed_4p75V_floor_0p1V_droop": 0.037654280345883535
+  },
+  "fet_pair_screens": {
+    "10V_25C": {
+      "pair_drop_V": 0.018,
+      "pair_loss_W": 0.09,
+      "limitation": "Conditional resistance-row screen, not guaranteed implemented gate drive/thermal or SOA"
+    },
+    "10V_150C": {
+      "pair_drop_V": 0.0325,
+      "pair_loss_W": 0.1625,
+      "limitation": "Conditional resistance-row screen, not guaranteed implemented gate drive/thermal or SOA"
+    },
+    "4p5V_25C": {
+      "pair_drop_V": 0.020999999999999998,
+      "pair_loss_W": 0.105,
+      "limitation": "Conditional resistance-row screen, not guaranteed implemented gate drive/thermal or SOA"
+    },
+    "4p5V_150C": {
+      "pair_drop_V": 0.036,
+      "pair_loss_W": 0.18,
+      "limitation": "Conditional resistance-row screen, not guaranteed implemented gate drive/thermal or SOA"
+    }
+  },
+  "B_added_shunt": {
+    "assumed_R_ohm": 0.0082,
+    "loss_W_at5A": 0.20500000000000002,
+    "drop_V_at5A": 0.041,
+    "nominal_forward_trip_A": 6.097560975609756,
+    "nominal_reverse_trip_A": -0.36585365853658536,
+    "combined_pair_4p5V_hot_and_shunt_W": 0.385
+  },
+  "LC_illustrations": [
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 8.5272e-05,
+        "Vtrip_V": 5.4,
+        "tiso_s": 4e-07,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 3.85439391900616e-06,
+      "extra_rise_V": 0.0526966488419356,
+      "peak_V": 5.452696648841936,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 8.5272e-05,
+        "Vtrip_V": 5.4,
+        "tiso_s": 2e-06,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 3.85439391900616e-06,
+      "extra_rise_V": 0.3154729125987354,
+      "peak_V": 5.715472912598735,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 8.5272e-05,
+        "Vtrip_V": 5.4,
+        "tiso_s": 5.4e-06,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 3.85439391900616e-06,
+      "extra_rise_V": 1.1500675863988037,
+      "peak_V": 6.550067586398804,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 0.00056,
+        "Vtrip_V": 5.4,
+        "tiso_s": 4e-07,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 9.877496543558483e-06,
+      "extra_rise_V": 0.01994472883398458,
+      "peak_V": 5.419944728833985,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 0.00056,
+        "Vtrip_V": 5.4,
+        "tiso_s": 2e-06,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 9.877496543558483e-06,
+      "extra_rise_V": 0.10764018524647959,
+      "peak_V": 5.50764018524648,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 0.00056,
+        "Vtrip_V": 5.4,
+        "tiso_s": 5.4e-06,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 9.877496543558483e-06,
+      "extra_rise_V": 0.33604965459223896,
+      "peak_V": 5.7360496545922395,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 0.00106,
+        "Vtrip_V": 5.4,
+        "tiso_s": 4e-07,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 1.3589572830856803e-05,
+      "extra_rise_V": 0.014418113928406232,
+      "peak_V": 5.414418113928407,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 0.00106,
+        "Vtrip_V": 5.4,
+        "tiso_s": 2e-06,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 1.3589572830856803e-05,
+      "extra_rise_V": 0.0762728932296462,
+      "peak_V": 5.4762728932296465,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    },
+    {
+      "assumptions": {
+        "Vin_V": 24,
+        "V0_V": 5.158632237795172,
+        "L_H": 6.8e-06,
+        "C_F": 0.00106,
+        "Vtrip_V": 5.4,
+        "tiso_s": 5.4e-06,
+        "initial_excess_current_A": 0
+      },
+      "trip_time_s": 1.3589572830856803e-05,
+      "extra_rise_V": 0.22993289330398475,
+      "peak_V": 5.629932893303985,
+      "limitation": "Constant L/C, no ESR/ESL, initial load balance, no control/source dynamics; not a bound"
+    }
+  ],
+  "model_observations_not_rerun": {
+    "committed_model_sha256": "6cb1841acee6c518a702295a8fbf11d4f1830acefe083ce638e8be3c78a8d461",
+    "uncommitted_margin_study_sha256": "b0b1b7423715b46d6259ff87ebc78cf8efde68b9f82a5d900b0bf876243695df",
+    "committed_I_2us_peak_V": 5.660135613845121,
+    "committed_I_0p4us_peak_V": 5.494228,
+    "source_case_V": 24.72,
+    "source_case_classification": "Historical ASSUMED adapter case, not current converter bound",
+    "spice_status": "NOT RUN",
+    "vendor_model_status": "NOT RUN"
+  },
+  "other_screens": {
+    "typical_gate_charge_nC": 96,
+    "typical_charge_over_168mA_us": 0.5714285714285714,
+    "C_raw_sense_V_at_24V": 11.320754716981131,
+    "two_470uF_initial_min_uF": 752.0,
+    "two_470uF_sequential_endurance_screen_uF": 601.6
+  },
+  "validation": {
+    "date": "2026-09-29",
+    "status": "PASS \u2014 DOCUMENT/ARITHMETIC/PRESERVATION ONLY; ARCHITECTURE BLOCKED",
+    "commands": [
+      {
+        "command": "python3 -B scripts/check_repository.py",
+        "result": "PASS; 13 hardware files verified; no errors"
+      },
+      {
+        "command": "python3 -B -m unittest discover -s tests -v",
+        "result": "PASS; 10 tests"
+      },
+      {
+        "command": "python3 -B scripts/check_r2_schematic.py --netlist docs/evidence/r2/forensic_2026-09-14/V1A_qualified.net.xml",
+        "result": "PASS capture invariants and open boundary; R2 RELEASE BLOCKED"
+      },
+      {
+        "command": "python3 -B scripts/calculate_r2.py",
+        "result": "PASS execution; conditional results only"
+      },
+      {
+        "command": "git diff --check",
+        "result": "PASS"
+      }
+    ],
+    "independent_corner_checks": {
+      "A": {
+        "enumerated_initial_tolerance_leakage_corners": 16,
+        "corner_min_V": "5.207370486253746253746253746",
+        "corner_max_V": "5.552084868128128128128128128",
+        "reported_interval_conservatively_encloses_corners": true
+      },
+      "B": {
+        "enumerated_initial_tolerance_leakage_corners": 16,
+        "corner_min_V": "5.234665210754245754245754245",
+        "corner_max_V": "5.415645519554554554554554555",
+        "reported_interval_conservatively_encloses_corners": true
+      },
+      "C_and_loop": "PASS independent numerical assertions",
+      "existing_calculate_r2": "PASS: existing script completed and returned valid JSON; output is conditional engineering arithmetic"
+    },
+    "source_original_hash_checks": [
+      {
+        "id": "tlv3501",
+        "hash_matches": true
+      },
+      {
+        "id": "tlv3601",
+        "hash_matches": true
+      },
+      {
+        "id": "tps7a16",
+        "hash_matches": true
+      },
+      {
+        "id": "sn74lvc1g74",
+        "hash_matches": true
+      },
+      {
+        "id": "PCH_e",
+        "hash_matches": true
+      },
+      {
+        "id": "ref50",
+        "hash_matches": true
+      },
+      {
+        "id": "lm7480",
+        "hash_matches": true
+      },
+      {
+        "id": "lm61460",
+        "hash_matches": true
+      },
+      {
+        "id": "tps2663",
+        "hash_matches": true
+      }
+    ],
+    "project_evidence_hash_checks": "17 unchanged snapshots verified",
+    "hardware_sha256_unchanged": {
+      "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "3e3ee8a5fe74d4710c8f4c20ab99f9e1f6fcdb8c86982a4233a6624687e40bf8",
+      "hardware/kicad/05_IO_TEST.kicad_sch": "e287c4cbb4960f6443a5047879d9bd236278c05d1fb39a44136d370a3f115ebf",
+      "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "bc63f87dea051eddabe303f0c28e9bb2462eafd7d032ba102340c8cca8a3cdcd",
+      "hardware/kicad/02_BUCK_5V.kicad_sch": "70d21ca969958b6c6b79f0355f871f6a4c8983e7b07f34d2359aa8d860662a9a",
+      "hardware/kicad/fp-lib-table": "703cfb0fd3f91b457a3766c56b14be8d218a74ffe252644f578791762c5dc02a",
+      "hardware/kicad/V1A.kicad_sch": "009bf6a0838f7d19995d314f51a32316339132864d0d700658b362ac21215c1c",
+      "hardware/kicad/04_POWER_MONITOR.kicad_sch": "98b43392054547ed04a4ba2bb9b109c123b10a537581aa23258622103db78856",
+      "hardware/kicad/sym-lib-table": "b2a54c11e03449e84dfc1de436dfed2606a538f2deccf22bbae071d38a8ff747",
+      "hardware/kicad/V1A.kicad_sym": "2d128816e8f20af46f70eb985eb36157d9990c0d56a4c172f48e24607513b054",
+      "hardware/kicad/V1A.kicad_pro": "2f3f1d74c5c1c75bbfb7daa1cc8822c177a31f2dea212aa09cc127ca813c62c5",
+      "hardware/kicad/V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod": "49490fa2d41fb553eb0c84297dcff799dedee0d560431f61b1962606ce16838e",
+      "hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c",
+      "hardware/kicad/V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod": "5bf77b7075ce4232ced05e86c9e6c4aa9e88e61d52b3a9e6e10ee1819cc5e991"
+    },
+    "retained_netlist": {
+      "path": "docs/evidence/r2/forensic_2026-09-14/V1A_qualified.net.xml",
+      "sha256": "ac549516d06bc45e69eb2e7894463ef29b352b10959c2a43d73594f8afa30038",
+      "component_entries": 71,
+      "net_count": 47,
+      "separate_rail_net_codes": {
+        "/VOUT_5V1": "35",
+        "/VOUT_PROTECTED": "36"
+      }
+    },
+    "fresh_ERC": "NOT RUN; no schematic edits. Retained qualified ERC: one U402 pin1 power_pin_not_driven; no claim of fresh ERC PASS",
+    "new_KiCad_exports": "NONE; capture continuation not entered",
+    "PCB_count": 0,
+    "commit": "NONE",
+    "push": "NOT ATTEMPTED"
+  }
+}

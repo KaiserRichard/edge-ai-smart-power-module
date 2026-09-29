@@ -1,3 +1,21 @@
+# Sheet 03 preliminary architecture gate — 2026-09-29
+
+**STATUS: BLOCKED. R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** inspected the active branch and today's separate conductor/protection/Pi/connector worktrees; consolidated current user source/load boundaries; compared three real output-protection candidates; recalculated threshold, loss and fault-rise screens; reviewed supply independence, body diodes, startup and reset behavior. No KiCad edits or circuit selection.
+
+**EVIDENCE:** authoritative [Sheet 03 architecture decision](evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md), [arithmetic and validation record](evidence/r2/sheet03/CALCULATIONS.json), [source/worktree provenance](../third_party/sheet03_source_register.json). Today's existing Option I model gives approximately 5.494 V with an assumed 0.4 µs isolation, but 5.660 V at 2 µs. Those models are not electrical validation. No new SPICE or physical test was performed.
+
+**DECISIONS:** current requirements are GPIO-fed Pi 5, normal 9–24 V input, 5 A total envelope, and strict Pi peak <5.5 V. Direct 54.6 V pass-through containment belongs upstream. No candidate meets capture-readiness evidence: reject native LM74800 as sole OVP for this gate; retain precision latched detection with a dedicated source-referenced forward driver only as a development direction. The user's conditional capture/implementation commit/push continuation does not activate.
+
+**OPEN RISKS:** maximum normal excursion and fault let-through; effective C and saturated/hot L; complete threshold/clamp/driver/supply-valid/reset circuit; startup/interruption SOA; residual upstream source bounds; J502/harness and remaining R2 component qualification. A final converter MPN and undocumented Pi damage-time curve are not substitutes for an accepted bounded interface.
+
+**NEXT GATE:** focused R2 Candidate-C circuit and transient-contract review, then architecture selection. Only after **PRELIMINARY — READY FOR SCHEMATIC REVIEW** with critical requirements resolved: **single-agent KiCad capture of Sheet 03 + ERC/netlist/diff validation**. PCB work remains unauthorized. No commit, push, purchase or fabrication output in this gate.
+
+Earlier dated reports below remain historical evidence.
+
+---
+
 # Repository maintenance update — 2026-09-26
 
 **STATUS: R2 BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
