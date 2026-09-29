@@ -6260,4 +6260,11 @@
 			)
 		)
 	)
+
+(hierarchical_label "VIN_FUSED" (shape output) (at 35.56 40.64 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "cb20ab52-92e1-58e3-b336-eb95e4de5af2"))
+(wire (pts (xy 35.56 40.64) (xy 27.94 40.64)) (stroke (width 0) (type default)) (uuid "c4991187-14c2-5753-ac24-c7950f2fdd84"))
+(label "VIN_FUSED" (at 27.94 40.64 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "98a80e17-c3a2-50cf-bb9d-e1362ccff7df"))
+(hierarchical_label "INPUT_SHDN" (shape input) (at 132.08 40.64 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "fb36d39e-f3c3-5138-91d0-6e58cd93a932"))
+(wire (pts (xy 132.08 40.64) (xy 124.46 40.64)) (stroke (width 0) (type default)) (uuid "1dc9fd17-a5ff-53b6-b823-512625dd69ba"))
+(label "INPUT_SHDN" (at 124.46 40.64 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "cbb84564-0893-5738-a19f-e4d945dfd4de"))
 )

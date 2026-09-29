@@ -3057,10 +3057,7 @@
 		)
 		(uuid "e5c2103b-78f5-545c-acd0-3551ce64ecef")
 	)
-	(no_connect
-		(at 83.82 91.44)
-		(uuid "8064dd4a-c5f4-5510-a815-3429635399b1")
-	)
+	
 	(wire
 		(pts
 			(xy 287.02 177.8) (xy 292.1 177.8)
@@ -6345,4 +6342,10 @@
 			)
 		)
 	)
+
+(wire (pts (xy 83.82 91.44) (xy 76.2 91.44)) (stroke (width 0) (type default)) (uuid "e9d44ee6-d1fd-5aa4-9295-99a42517d781"))
+(label "BUCK_PGOOD" (at 76.2 91.44 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "0253d89c-5b19-5766-823d-3cf885c2806c"))
+(hierarchical_label "BUCK_PGOOD" (shape output) (at 35.56 40.64 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "3a6cc211-267b-5b4f-a44a-1627331873fc"))
+(wire (pts (xy 35.56 40.64) (xy 27.94 40.64)) (stroke (width 0) (type default)) (uuid "993f434e-c511-5c95-8098-e919e9dd3dbb"))
+(label "BUCK_PGOOD" (at 27.94 40.64 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "9fee91d1-7182-58af-b1e6-1ed26a42584c"))
 )

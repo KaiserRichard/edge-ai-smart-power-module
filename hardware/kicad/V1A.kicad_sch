@@ -46,7 +46,7 @@
 		)
 		(uuid "52f44437-fd06-56a6-b70f-764d522a8e6c")
 	)
-	(text "OPEN CIRCUIT - NO BYPASS FITTED"
+	(text "PRELIMINARY DISCONNECT + CROWBAR"
 		(exclude_from_sim no)
 		(at 312.42 121.92 0)
 		(effects
@@ -90,7 +90,7 @@
 		)
 		(uuid "92c29067-1ea9-57e1-9694-21bba280191c")
 	)
-	(text "POWER PATH\nInput protection -> buck\n-> OPEN disconnect\n-> Kelvin shunt -> load\n\nSheet 03 has no bypass.\nR2 RELEASE: BLOCKED\n\nI2C: 3.3 V, 100 kHz\nNo MCU; V1B separate."
+	(text "POWER PATH\nInput protection -> buck\n-> preliminary protection\n-> Kelvin shunt -> load\n\nSheet 03 has no bypass.\nR2 RELEASE: BLOCKED\n\nI2C: 3.3 V, 100 kHz\nNo MCU; V1B separate."
 		(exclude_from_sim no)
 		(at 20.32 157.48 0)
 		(effects
@@ -650,7 +650,10 @@
 				)
 			)
 		)
-	)
+	
+(pin "VIN_FUSED" output (at 45.72 106.68 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "e19c3cb4-3de5-5ba0-afa3-2546dea78f01"))
+(pin "INPUT_SHDN" input (at 45.72 114.3 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "a75c6db2-4fd2-53e3-b30e-c5f8c635e667"))
+)
 	(sheet
 		(at 172.72 63.5)
 		(size 101.6 66.04)
@@ -729,7 +732,9 @@
 				)
 			)
 		)
-	)
+	
+(pin "BUCK_PGOOD" output (at 172.72 106.68 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "3d6a1750-f0f3-54b4-beac-c4b5d0e7551d"))
+)
 	(sheet
 		(at 172.72 152.4)
 		(size 101.6 66.04)
@@ -887,7 +892,12 @@
 				)
 			)
 		)
-	)
+	
+(pin "VIN_FUSED" input (at 299.72 91.44 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "dab967b5-4657-57df-ad4f-e9d57dc3dc45"))
+(pin "GND" passive (at 299.72 99.06 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "f307bcba-0fa7-521b-9c3a-fe8148747375"))
+(pin "BUCK_PGOOD" input (at 299.72 106.68 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "8d4c0339-3c58-5416-b5e6-be99fd7709c2"))
+(pin "INPUT_SHDN" output (at 299.72 114.3 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "72b62d6f-3d53-5d96-904d-a2c4f20cbc70"))
+)
 	(sheet
 		(at 299.72 152.4)
 		(size 101.6 66.04)
@@ -1003,4 +1013,19 @@
 		)
 	)
 	(embedded_fonts no)
+
+(wire (pts (xy 45.72 106.68) (xy 38.1 106.68)) (stroke (width 0) (type default)) (uuid "1b789ebe-0b47-5d3e-b08c-13b5fa07c3b8"))
+(label "VIN_FUSED" (at 38.1 106.68 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "c0835a31-1ba9-5a96-ad8b-f37e94ccf1d5"))
+(wire (pts (xy 45.72 114.3) (xy 38.1 114.3)) (stroke (width 0) (type default)) (uuid "268fbb1f-65d8-5f92-ac6a-b41dec135df0"))
+(label "INPUT_SHDN" (at 38.1 114.3 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "3d419ec6-832b-5641-b382-fe9776cb5de2"))
+(wire (pts (xy 172.72 106.68) (xy 165.1 106.68)) (stroke (width 0) (type default)) (uuid "1d0da57d-4a54-5de9-afe3-84414a4a881a"))
+(label "BUCK_PGOOD" (at 165.1 106.68 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "d78dd871-848c-54c7-9b64-fb692788b5e3"))
+(wire (pts (xy 299.72 91.44) (xy 292.1 91.44)) (stroke (width 0) (type default)) (uuid "be716653-4447-53a8-b44c-166678b16e09"))
+(label "VIN_FUSED" (at 292.1 91.44 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "d132eb51-3463-5c3f-afcc-1ee024deea86"))
+(wire (pts (xy 299.72 99.06) (xy 292.1 99.06)) (stroke (width 0) (type default)) (uuid "2eed743d-38b5-559c-ad10-12928eb3c48d"))
+(label "GND" (at 292.1 99.06 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "ecaf29b1-eb39-5d4f-8ba3-261d73f2478a"))
+(wire (pts (xy 299.72 106.68) (xy 292.1 106.68)) (stroke (width 0) (type default)) (uuid "33febe09-cb88-5940-97a3-a4c96c2fa0cf"))
+(label "BUCK_PGOOD" (at 292.1 106.68 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "b1869194-5c55-5bea-a07b-d04ec6fc1f5f"))
+(wire (pts (xy 299.72 114.3) (xy 292.1 114.3)) (stroke (width 0) (type default)) (uuid "c7f05717-9f2a-50bc-b7f2-3813d9c3e720"))
+(label "INPUT_SHDN" (at 292.1 114.3 180) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "52eefa5a-d337-57df-b512-2093ca479733"))
 )

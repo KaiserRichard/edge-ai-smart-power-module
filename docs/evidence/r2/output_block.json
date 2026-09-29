@@ -1,10 +1,2149 @@
 {
-  "status": "REVIEW DRAFT - RELEASE BLOCKED",
+  "status": "PRELIMINARY - R2 BLOCKED - NOT FOR FABRICATION",
+  "gate": "Gate1d CONDITIONAL PASS; Gate2 capture",
+  "ports": {
+    "VOUT_5V1": "input",
+    "VOUT_PROTECTED": "passive",
+    "VIN_FUSED": "input",
+    "GND": "passive",
+    "BUCK_PGOOD": "input",
+    "INPUT_SHDN": "output"
+  },
   "components": [
     {
+      "ref": "U301",
+      "part": "LTC7001IMSE#PBF",
+      "value": "LTC7001IMSE#PBF",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "VCC",
+          "net": "DRV_7V5",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "VCCUV",
+          "net": "GND",
+          "type": "input"
+        },
+        "3": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "4": {
+          "name": "INP",
+          "net": "RUN_GATE",
+          "type": "input"
+        },
+        "5": {
+          "name": "OVLO",
+          "net": "GND",
+          "type": "input"
+        },
+        "6": {
+          "name": "TGDN",
+          "net": "PROT_GATE",
+          "type": "output"
+        },
+        "7": {
+          "name": "TGUP",
+          "net": "TGUP_SLOW",
+          "type": "output"
+        },
+        "8": {
+          "name": "TS",
+          "net": "PROT_MID",
+          "type": "passive"
+        },
+        "9": {
+          "name": "BST",
+          "net": "PROT_BST",
+          "type": "passive"
+        },
+        "10": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "11": {
+          "name": "EP",
+          "net": "GND",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm",
+      "source": "ADI LTC7001 RevG pp2,7,11-13,16; EP11 ground",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U302",
+      "part": "REF5025IDGKR",
+      "value": "REF5025 2.5V DATASHEET",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "DNC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "2": {
+          "name": "VIN",
+          "net": "DET_5V",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "TEMP",
+          "net": null,
+          "type": "output"
+        },
+        "4": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "TRIM_NR",
+          "net": null,
+          "type": "passive"
+        },
+        "6": {
+          "name": "VOUT",
+          "net": "REF_2V5",
+          "type": "power_out"
+        },
+        "7": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "8": {
+          "name": "DNC",
+          "net": null,
+          "type": "no_connect"
+        }
+      },
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "source": "TI SBOS410O p4 table5-1; DGK8 drawing",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U303",
+      "part": "TLV3201AIDBVR",
+      "value": "TLV3201AIDBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "OUT",
+          "net": "OV_OK",
+          "type": "output"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "IN+",
+          "net": "REF_2V5",
+          "type": "input"
+        },
+        "4": {
+          "name": "IN-",
+          "net": "OV_SENSE",
+          "type": "input"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "source": "TI SBOS561C p3 pin table; pp4-6 input ratings",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U304",
+      "part": "SN74LVC1G74DCTR",
+      "value": "SN74LVC1G74DCTR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "CLK",
+          "net": "ARM_CLOCK",
+          "type": "input"
+        },
+        "2": {
+          "name": "D",
+          "net": "DET_5V",
+          "type": "input"
+        },
+        "3": {
+          "name": "nQ",
+          "net": "ARM_LATCH_N",
+          "type": "output"
+        },
+        "4": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "Q",
+          "net": "ARM_LATCH",
+          "type": "output"
+        },
+        "6": {
+          "name": "nCLR",
+          "net": "QUALIFIED",
+          "type": "input"
+        },
+        "7": {
+          "name": "nPRE",
+          "net": "DET_5V",
+          "type": "input"
+        },
+        "8": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-8",
+      "source": "TI SCES794G p4 DCT pin table; function table; DCT0008A drawing",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U305",
+      "part": "SN74LVC1G11DBVR",
+      "value": "SN74LVC1G11DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "ARM_LATCH",
+          "type": "input"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "B",
+          "net": "ARM_HISTORY",
+          "type": "input"
+        },
+        "4": {
+          "name": "Y",
+          "net": "RUN_GATE",
+          "type": "output"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "C",
+          "net": "QUALIFIED",
+          "type": "input"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "source": "TI SCES487I p3 table4-1 DBV",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U306",
+      "part": "TPS7A1601DGNR",
+      "value": "TPS7A1601DGNR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "OUT",
+          "net": "DET_5V",
+          "type": "power_out"
+        },
+        "2": {
+          "name": "FB",
+          "net": "DET_FB",
+          "type": "input"
+        },
+        "3": {
+          "name": "PG",
+          "net": "SUPPLY_OK",
+          "type": "open_collector"
+        },
+        "4": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "EN",
+          "net": "VIN_FUSED",
+          "type": "input"
+        },
+        "6": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "7": {
+          "name": "DELAY",
+          "net": "DET_DELAY",
+          "type": "passive"
+        },
+        "8": {
+          "name": "IN",
+          "net": "VIN_FUSED",
+          "type": "power_in"
+        },
+        "9": {
+          "name": "EP",
+          "net": "GND",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm",
+      "source": "TI SBVS171F p4 pin table; DGN package and ground pad",
+      "rating": "DATASHEET 60V input,100mA; ASSUMED outputC effective>=2.2uF"
+    },
+    {
+      "ref": "U307",
+      "part": "TPS7A1601DGNR",
+      "value": "TPS7A1601DGNR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "OUT",
+          "net": "DRV_7V5",
+          "type": "power_out"
+        },
+        "2": {
+          "name": "FB",
+          "net": "DRV_FB",
+          "type": "input"
+        },
+        "3": {
+          "name": "PG",
+          "net": "SUPPLY_OK",
+          "type": "open_collector"
+        },
+        "4": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "EN",
+          "net": "VIN_FUSED",
+          "type": "input"
+        },
+        "6": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "7": {
+          "name": "DELAY",
+          "net": "DRV_DELAY",
+          "type": "passive"
+        },
+        "8": {
+          "name": "IN",
+          "net": "VIN_FUSED",
+          "type": "power_in"
+        },
+        "9": {
+          "name": "EP",
+          "net": "GND",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm",
+      "source": "TI SBVS171F p4 pin table; DGN package and ground pad",
+      "rating": "DATASHEET 60V input,100mA; ASSUMED outputC effective>=2.2uF"
+    },
+    {
+      "ref": "U308",
+      "part": "TPS3808G25DBVR",
+      "value": "TPS3808G25DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "nRESET",
+          "net": "SUPPLY_OK",
+          "type": "open_collector"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "nMR",
+          "net": "RESET_N",
+          "type": "input"
+        },
+        "4": {
+          "name": "CT",
+          "net": "REF_DELAY",
+          "type": "passive"
+        },
+        "5": {
+          "name": "SENSE",
+          "net": "REF_2V5",
+          "type": "input"
+        },
+        "6": {
+          "name": "VDD",
+          "net": "DET_5V",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "source": "TI SBVS050N pp3-4 G25=2.33V, DBV table5-1; p11 delay equation",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U309",
+      "part": "SN74LVC1G74DCTR",
+      "value": "SN74LVC1G74DCTR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "CLK",
+          "net": "ARM_DELAYED",
+          "type": "input"
+        },
+        "2": {
+          "name": "D",
+          "net": "ARM_LATCH",
+          "type": "input"
+        },
+        "3": {
+          "name": "nQ",
+          "net": null,
+          "type": "output"
+        },
+        "4": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "Q",
+          "net": "ARM_HISTORY",
+          "type": "output"
+        },
+        "6": {
+          "name": "nCLR",
+          "net": "CTRL_ENABLE",
+          "type": "input"
+        },
+        "7": {
+          "name": "nPRE",
+          "net": "DET_5V",
+          "type": "input"
+        },
+        "8": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-8",
+      "source": "TI SCES794G p4 DCT pin table; function table; DCT0008A drawing",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U310",
+      "part": "SN74LVC1G11DBVR",
+      "value": "SN74LVC1G11DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "CTRL_ENABLE",
+          "type": "input"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "B",
+          "net": "OV_OK",
+          "type": "input"
+        },
+        "4": {
+          "name": "Y",
+          "net": "QUALIFIED",
+          "type": "output"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "C",
+          "net": "BUCK_PGOOD",
+          "type": "input"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "source": "TI SCES487I p3 table4-1 DBV",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U311",
+      "part": "SN74LVC1G11DBVR",
+      "value": "SN74LVC1G11DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "ARM_HISTORY",
+          "type": "input"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "B",
+          "net": "ARM_LATCH_N",
+          "type": "input"
+        },
+        "4": {
+          "name": "Y",
+          "net": "CROWBAR_ON",
+          "type": "output"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "C",
+          "net": "CTRL_ENABLE",
+          "type": "input"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "source": "TI SCES487I p3 table4-1 DBV",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U312",
+      "part": "SN74LVC1G08DBVR",
+      "value": "SN74LVC1G08DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "SUPPLY_OK",
+          "type": "input"
+        },
+        "2": {
+          "name": "B",
+          "net": "RESET_N",
+          "type": "input"
+        },
+        "3": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "4": {
+          "name": "Y",
+          "net": "CTRL_ENABLE",
+          "type": "output"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "source": "TI SCES217AA p3 pin functions DBV",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U313",
+      "part": "SN74LVC1G14DBVR",
+      "value": "SN74LVC1G14DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "2": {
+          "name": "A",
+          "net": "ARM_N",
+          "type": "input"
+        },
+        "3": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "4": {
+          "name": "Y",
+          "net": "ARM_CLOCK",
+          "type": "output"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "source": "TI SCES218AA p4 / SCES351Y p3 DBV pin tables; Schmitt input",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U314",
+      "part": "SN74LVC1G17DBVR",
+      "value": "SN74LVC1G17DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "2": {
+          "name": "A",
+          "net": "ARM_RC",
+          "type": "input"
+        },
+        "3": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "4": {
+          "name": "Y",
+          "net": "ARM_DELAYED",
+          "type": "output"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "DET_5V",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "source": "TI SCES218AA p4 / SCES351Y p3 DBV pin tables; Schmitt input",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U315",
+      "part": "UCC27511DBVR",
+      "value": "UCC27511DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "IN+",
+          "net": "CROWBAR_ON",
+          "type": "input"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "IN-",
+          "net": "GND",
+          "type": "input"
+        },
+        "4": {
+          "name": "OUTL",
+          "net": "CB_GATE",
+          "type": "output"
+        },
+        "5": {
+          "name": "VDD",
+          "net": "DRV_7V5",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "OUTH",
+          "net": "CB_GATE_UP",
+          "type": "output"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "source": "TI SLUSAW9F p6 DBV pin table; pp9-10 output ratings",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "Q301",
+      "part": "BSC034N06NSATMA1",
+      "value": "BSC034N06NSATMA1",
+      "kind": "MOSFET",
+      "pins": {
+        "1": {
+          "name": "S",
+          "net": "PROT_MID",
+          "type": "passive"
+        },
+        "2": {
+          "name": "S",
+          "net": "PROT_MID",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S",
+          "net": "PROT_MID",
+          "type": "passive"
+        },
+        "4": {
+          "name": "G",
+          "net": "PROT_GATE",
+          "type": "input"
+        },
+        "5": {
+          "name": "D",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "6": {
+          "name": "D",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "7": {
+          "name": "D",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "8": {
+          "name": "D",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "source": "Infineon BSC034N06NS Rev2.3 p1 pin diagram,pp10-11 package; common SOURCE correction",
+      "rating": "DATASHEET60V; ASSUMED hot pair13.6mOhm; series SOA OPEN"
+    },
+    {
+      "ref": "Q302",
+      "part": "BSC034N06NSATMA1",
+      "value": "BSC034N06NSATMA1",
+      "kind": "MOSFET",
+      "pins": {
+        "1": {
+          "name": "S",
+          "net": "PROT_MID",
+          "type": "passive"
+        },
+        "2": {
+          "name": "S",
+          "net": "PROT_MID",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S",
+          "net": "PROT_MID",
+          "type": "passive"
+        },
+        "4": {
+          "name": "G",
+          "net": "PROT_GATE",
+          "type": "input"
+        },
+        "5": {
+          "name": "D",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "6": {
+          "name": "D",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "7": {
+          "name": "D",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "8": {
+          "name": "D",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "source": "Infineon BSC034N06NS Rev2.3 p1 pin diagram,pp10-11 package; common SOURCE correction",
+      "rating": "DATASHEET60V; ASSUMED hot pair13.6mOhm; series SOA OPEN"
+    },
+    {
+      "ref": "Q303",
+      "part": "CSD18540Q5B",
+      "value": "CSD18540Q5B",
+      "kind": "MOSFET",
+      "pins": {
+        "1": {
+          "name": "S",
+          "net": "GND",
+          "type": "passive"
+        },
+        "2": {
+          "name": "S",
+          "net": "GND",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S",
+          "net": "GND",
+          "type": "passive"
+        },
+        "4": {
+          "name": "G",
+          "net": "CB_GATE",
+          "type": "input"
+        },
+        "5": {
+          "name": "D",
+          "net": "CB_DRAIN",
+          "type": "passive"
+        },
+        "6": {
+          "name": "D",
+          "net": "CB_DRAIN",
+          "type": "passive"
+        },
+        "7": {
+          "name": "D",
+          "net": "CB_DRAIN",
+          "type": "passive"
+        },
+        "8": {
+          "name": "D",
+          "net": "CB_DRAIN",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TI_Q5B_CSD18540Q5B",
+      "source": "TI SLPS488B pp1,8-9; GATE1D_PULSE_REVIEW.md",
+      "rating": "DATASHEET60V/400A single pulse; conditional Gate1d SOA envelope"
+    },
+    {
+      "ref": "Q304",
+      "part": "BSS138",
+      "value": "BSS138",
+      "kind": "MOSFET",
+      "pins": {
+        "1": {
+          "name": "G",
+          "net": "CROWBAR_ON",
+          "type": "input"
+        },
+        "2": {
+          "name": "S",
+          "net": "GND",
+          "type": "passive"
+        },
+        "3": {
+          "name": "D",
+          "net": "INPUT_SHDN",
+          "type": "open_collector"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source": "onsemi BSS138/D Rev7 p1 SOT23 G1 S2 D3",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "D301",
+      "part": "BAS116,215",
+      "value": "BAS116,215",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "OV_DIV",
+          "type": "passive"
+        },
+        "2": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "3": {
+          "name": "K",
+          "net": "REF_2V5",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source": "Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "D302",
+      "part": "BAS116,215",
+      "value": "BAS116,215",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "DRV_7V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "3": {
+          "name": "K",
+          "net": "PROT_BST",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source": "Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "R301",
+      "part": "Resistor_specification",
+      "value": "11.3k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "OV_DIV",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED procurement0.1%,<=10ppm/K,0.1W;CALCULATED threshold",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R302",
+      "part": "Resistor_specification",
+      "value": "10.0k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "OV_DIV",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED procurement0.1%,<=10ppm/K,0.1W;CALCULATED threshold",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R303",
+      "part": "Resistor_specification",
+      "value": "1.00k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "OV_DIV",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "OV_SENSE",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R304",
+      "part": "Resistor_specification",
+      "value": "100",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "TGUP_SLOW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "PROT_GATE",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R305",
+      "part": "Resistor_specification",
+      "value": "2.2M",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "PROT_GATE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "PROT_MID",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R306",
+      "part": "Resistor_specification",
+      "value": "1.00",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "CB_GATE_UP",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "CB_GATE",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R307",
+      "part": "Resistor_specification",
+      "value": "10k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "CB_GATE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R308",
+      "part": "WFMB2512R0330FEA",
+      "value": "0.033",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "CB_R_A",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "DATASHEET33mOhm1%;50ppm/K component;Gate1d pulse review",
+      "value_class": "DATASHEET"
+    },
+    {
+      "ref": "R309",
+      "part": "WFMB2512R0330FEA",
+      "value": "0.033",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "CB_R_A",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "CB_DRAIN",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "DATASHEET33mOhm1%;50ppm/K component;Gate1d pulse review",
+      "value_class": "DATASHEET"
+    },
+    {
+      "ref": "R310",
+      "part": "WFMB2512R0330FEA",
+      "value": "0.033",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "CB_R_B",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "DATASHEET33mOhm1%;50ppm/K component;Gate1d pulse review",
+      "value_class": "DATASHEET"
+    },
+    {
+      "ref": "R311",
+      "part": "WFMB2512R0330FEA",
+      "value": "0.033",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "CB_R_B",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "CB_DRAIN",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "DATASHEET33mOhm1%;50ppm/K component;Gate1d pulse review",
+      "value_class": "DATASHEET"
+    },
+    {
+      "ref": "R312",
+      "part": "Resistor_specification",
+      "value": "31.9k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "DET_FB",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED0.1%;CALCULATED LDO setpoint",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R313",
+      "part": "Resistor_specification",
+      "value": "10.0k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DET_FB",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED0.1%;CALCULATED LDO setpoint",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R314",
+      "part": "Resistor_specification",
+      "value": "52.8k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DRV_7V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "DRV_FB",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED0.1%;CALCULATED LDO setpoint",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R315",
+      "part": "Resistor_specification",
+      "value": "10.0k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DRV_FB",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED0.1%;CALCULATED LDO setpoint",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R316",
+      "part": "Resistor_specification",
+      "value": "10k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SUPPLY_OK",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R317",
+      "part": "Resistor_specification",
+      "value": "10k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_PGOOD",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R318",
+      "part": "Resistor_specification",
+      "value": "47k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "RESET_N",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R319",
+      "part": "Resistor_specification",
+      "value": "100k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "ARM_N",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R320",
+      "part": "Resistor_specification",
+      "value": "10k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "ARM_CLOCK",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "ARM_RC",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R321",
+      "part": "Resistor_specification",
+      "value": "100k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "RUN_GATE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "R322",
+      "part": "Resistor_specification",
+      "value": "100k",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "CROWBAR_ON",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Project selection; see Gate2 pin/value review",
+      "rating": "ASSUMED review value;1%;0.1W;exact MPN OPEN",
+      "value_class": "ASSUMED"
+    },
+    {
+      "ref": "C301",
+      "part": "Capacitor_specification",
+      "value": "220nF 50V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "PROT_BST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "PROT_MID",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;50V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C302",
+      "part": "Capacitor_specification",
+      "value": "1uF 16V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "REF_2V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;16V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C303",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C304",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C305",
+      "part": "Capacitor_specification",
+      "value": "10uF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C306",
+      "part": "Capacitor_specification",
+      "value": "10uF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DRV_7V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C307",
+      "part": "Capacitor_specification",
+      "value": "1uF 50V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;50V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C308",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DRV_7V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C309",
+      "part": "Capacitor_specification",
+      "value": "1uF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DRV_7V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C310",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DRV_7V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C311",
+      "part": "Capacitor_specification",
+      "value": "1uF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DRV_7V5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C312",
+      "part": "Capacitor_specification",
+      "value": "10nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_DELAY",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C313",
+      "part": "Capacitor_specification",
+      "value": "10nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DRV_DELAY",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C314",
+      "part": "Capacitor_specification",
+      "value": "220nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "REF_DELAY",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C315",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C316",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "ARM_N",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C317",
+      "part": "Capacitor_specification",
+      "value": "10nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "ARM_RC",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C318",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C319",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C320",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C321",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C322",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C323",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C324",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C325",
+      "part": "Capacitor_specification",
+      "value": "100nF 25V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "DET_5V",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Project selection; capacitance/bias qualification OPEN",
+      "rating": "ASSUMED X7R +/-10%;25V; effective-C qualification OPEN"
+    },
+    {
+      "ref": "C330",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "C331",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "C332",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "C333",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "C334",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "C335",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "C336",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "C337",
+      "part": "PCH1V471MCL1GS",
+      "value": "470uF 35V",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "+ / 1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "- / 2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_Elec_10x10.2",
+      "source": "Nichicon PCH catalog pp1-2; 10x10mm case",
+      "rating": "DATASHEET470uF35V20%;CALCULATED8-part raw bank;stability/inrush/effectiveC OPEN"
+    },
+    {
+      "ref": "J301",
+      "part": "PinHeader_1x02",
+      "value": "ARM button",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "BUTTON",
+          "net": "ARM_N",
+          "type": "passive"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "source": "ASSUMED external momentary button to GND; signal only",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "J302",
+      "part": "PinHeader_1x02",
+      "value": "RESET button",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "BUTTON",
+          "net": "RESET_N",
+          "type": "passive"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "source": "ASSUMED external momentary button to GND; signal only",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
       "ref": "TP301",
+      "part": "TestPoint",
       "value": "VOUT_5V1",
-      "part": "",
       "kind": "TP",
       "pins": {
         "1": {
@@ -13,14 +2152,14 @@
           "type": "passive"
         }
       },
-      "footprint": "",
-      "rating": "Test only; not a load-current connector",
-      "source": "Project test access; local domain only"
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source": "Project test access",
+      "rating": "DATASHEET rating; preliminary review only"
     },
     {
       "ref": "TP302",
+      "part": "TestPoint",
       "value": "VOUT_PROTECTED",
-      "part": "",
       "kind": "TP",
       "pins": {
         "1": {
@@ -29,19 +2168,67 @@
           "type": "passive"
         }
       },
-      "footprint": "",
-      "rating": "Test only; not a load-current connector",
-      "source": "Project test access; local domain only"
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source": "Project test access",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "TP303",
+      "part": "TestPoint",
+      "value": "REF_2V5",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "REF_2V5",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source": "Project test access",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "TP304",
+      "part": "TestPoint",
+      "value": "PROT_MID",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "PROT_MID",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source": "Project test access",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "TP305",
+      "part": "TestPoint",
+      "value": "PROT_GATE",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "PROT_GATE",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source": "Project test access",
+      "rating": "DATASHEET rating; preliminary review only"
     }
   ],
   "schematic_notes": [
-    "SOURCE: TI LM7480-Q1 SNOSD95C sections 8/9; candidate analysis in OUTPUT_PROTECTION.md.",
-    "FUNCTION REQUIRED: independent OV detection/disconnect and reverse-feed block.",
-    "NO DISCONNECT IS FITTED. VOUT_5V1 and VOUT_PROTECTED ARE ELECTRICALLY SEPARATE.",
-    "MODIFICATION: reference circuit deliberately not captured until its threshold/let-through budget closes.",
-    "RATIONALE: missing load fault-voltage/time and capacitance limits; no unsupported protection promise.",
-    "R2 BLOCKER: detector, FETs, trip/recovery and SOA cannot be released yet. No bypass or jumper.",
-    "With this draft, VIN cannot power the output. An external LOAD_5V1 supply powers the monitor only."
-  ],
-  "passive_start": 76.2
+    "PRELIMINARY - R2 BLOCKED - NOT FOR FABRICATION. Values marked DATASHEET / ASSUMED in properties; calculations in Gate1d/Gate2 evidence.",
+    "POWER: Q301 drain=raw; Q302 drain=protected; common sources=PROT_MID=LTC7001 TS. No bypass. Eight raw bulk capacitors are UPSTREAM.",
+    "CROWBAR: protected -> (R308+R309)||(R310+R311) -> Q303 drain; source=GND. Four33mOhm elements give33mOhm. Gate1d pulse conditions apply.",
+    "ARM: reset first; wait SUPPLY_OK/reference delay; press ARM. Delayed history latch prevents startup crowbar pulse; RUN requires both latches.",
+    "FAULT: OV or loss of BUCK_PGOOD clears run latch; history holds; crowbar and input SHDN assert until RESET. No automatic retry.",
+    "OPEN: timing/ringing,125C pulse thermal screen,<=220uF downstream sensitivity,series-FET SOA,inrush/bulk stability,actual harness resistance.",
+    "CALCULATED: nominal trip5.325V; fault screen5.4816V (+18.39mV); Pi static5A4.7614V (+11.43mV). Neither margin is physically validated.",
+    "CORRECTIONS: drain ballast; common-source pair;2.2Meg gate bleed preserves LTC charge pump;7.5V independent drive; clamp to sinking2.5V reference."
+  ]
 }

@@ -36,7 +36,7 @@
         },
         "5": {
           "name": "PGOOD",
-          "net": null,
+          "net": "BUCK_PGOOD",
           "type": "open_collector"
         },
         "6": {
