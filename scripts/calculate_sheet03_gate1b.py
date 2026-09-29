@@ -2,7 +2,7 @@
 """Candidate-C feasibility screen, NOT a validated buck/device simulation.
 
 All units are SI. --write updates only the selected gate member of the existing
-CALCULATIONS.json; --gate 1c preserves historical gate_1b results.
+CALCULATIONS.json; --gate 1d preserves historical gate_1b/gate_1c results.
 Source identifiers and limitations are in the decision file. A sensitivity
 calculation is never promoted to a datasheet guarantee by this program.
 Uses RK4 for a stiff-voltage-source fault feeding L and two C/ESR branches.
@@ -515,12 +515,224 @@ def delay_ceiling(tr, ceramic_C, source):
     return lo
 
 
+def calculate_gate1d():
+    """Audit applicability of the pulse model before selecting production parts.
+
+    This is a consistency check, not a nonlinear MOSFET simulation. In
+    particular, calculating VGS from the old current does NOT predict the real
+    current when the old RDS(on) assumption is invalid.
+    """
+    prior = calculate_gate1c()
+    screen = prior["crowbar"]["selected_screen"]
+    peak = screen["crowbar_peak_A"]
+    i2t = screen["crowbar_I2t_A2s_screen"]
+    ballast = .033
+    # DATASHEET: WFMB2512 +/-1%, component TCR +/-50ppm/K, -55..150C.
+    # ASSUMED review initial temperature 25C and hot screen 125C, not a
+    # replacement for the project's OPEN thermal operating contract.
+    r_error = .01 + 50e-6 * 100
+    rmin, rmax = ballast*(1-r_error), ballast*(1+r_error)
+    state = prior["fault_screens"][-2]["state_at_action"]
+    cc = prior["capacitance"]["ceramic_screen_F"]
+    sweep = []
+    for r in (0.0, .0033, .010, rmin, ballast, rmax, .050):
+        row = shunt_interval(state, r+.0118, cc)
+        pi = max(screen["pi_peak_V"], row["raw_peak_after_on_V"]+.020)
+        sweep.append({"ballast_ohm": r, "classification": "INVALID-DRIVE MODEL SENSITIVITY ONLY",
+                      "peak_A": row["crowbar_peak_A"],
+                      "ideal_5V_gate_VGS_at_peak_V": 5-r*row["crowbar_peak_A"],
+                      "pi_peak_screen_V": pi, "pi_margin_screen_mV": 1000*(5.5-pi),
+                      "below_167A_headline": row["crowbar_peak_A"] < 167,
+                      "supports_4p5V_RDS_test_condition": 5-r*row["crowbar_peak_A"] >= 4.5})
+    # Conservative visually-read point BELOW the published 2512 curve at
+    # 100us (approximately 2000W). Extend the actual pulse in time, rather
+    # than extrapolating a curve below its shortest plotted duration.
+    resistor_envelope_W, resistor_envelope_s = 1000.0, 100e-6
+    peak_power = peak**2*rmax
+    # Permitted correction: put ballast between protected node and drain,
+    # source AND driver GND at detector GND. Test parts and hot-resistance
+    # screens instead of treating the original wiring failure as dispositive.
+    alternatives = []
+    for part, r25, pulse, qg in (("CSD17308Q3", .0118, 167, 5.1e-9),
+                                ("CSD17577Q5A", .0058, 280, 17e-9),
+                                ("CSD18540Q5B", .0033, 400, 26e-9)):
+        corners = []
+        for delay, rq, rr in itertools.product((.2e-6, .3e-6, .4e-6, .5e-6),
+                                               (0.0, r25, 2*r25), (rmin, rmax)):
+            before = fault(8, prior["threshold_tolerance"], delay,
+                           ceramic_C=cc, include_state=True)
+            after = shunt_interval(before["state_at_action"], rq+rr, cc,
+                                   duration=P["isolation_requirement_s"]-delay)
+            pi = max(before["pi_peak_screen_V"], after["raw_peak_after_on_V"]+.020)
+            corners.append({"assumed_effective_on_s": delay, "assumed_RDS_ohm": rq,
+                            "ballast_ohm": rr, "peak_A": after["crowbar_peak_A"],
+                            "I2t_A2s": after["crowbar_interval_I2t_A2s"],
+                            "ballast_energy_J": rr*after["crowbar_interval_I2t_A2s"],
+                            "pi_peak_V": pi, "pi_margin_mV": 1000*(5.5-pi),
+                            "normal_false_trip_margin_mV": prior["normal_with_proposed_bulk"]["false_trip_margin_mV"],
+                            "harness_5A_V": prior["harness"]["options"][0]["pi_static_5A_V"],
+                            "harness_margin_mV": prior["harness"]["options"][0]["pi_static_5A_margin_mV"]})
+        alternatives.append({"part": part, "connection": "drain-side ballast; grounded source",
+                             "DATASHEET_RDS_4p5V_25C_ohm": r25,
+                             "DATASHEET_ID_pulse_A": pulse, "DATASHEET_Qg_4p5V_max_C": qg,
+                             "ASSUMED_hot_R_multiplier": 2,
+                             "zero_RDS_case": "current upper sensitivity; not a manufacturer minimum",
+                             "corners": corners,
+                             "disposition": "Grounded-source correction restores drive. CSD18540 selected below; other parts retained as comparisons. Timing qualification remains OPEN."})
+    # Upper current/power from the drain-ballast load line at an ASSUMED 5.5V
+    # node ceiling. Do NOT use this ceiling to prove the ceiling itself.
+    ceiling = 5.5
+    load_line = {"ASSUMED_node_ceiling_V": ceiling,
+                 "current_upper_A": ceiling/rmin,
+                 "MOSFET_power_upper_W": ceiling**2/(4*rmin),
+                 "ballast_power_upper_W": ceiling**2/rmin,
+                 "limitation": "Useful for SOA comparison only AFTER timing/voltage ceiling is established; circular as proof of Pi protection"}
+    # Gate1c timing is accepted for PRELIMINARY review, not newly qualified.
+    # Four33mOhm parts (R+R)||(R+R) retain33mOhm with lower element stress.
+    powers = []
+    for a,b,c,d in itertools.product((rmin,rmax), repeat=4):
+        powers.extend((ceiling**2*a/(a+b)**2, ceiling**2*b/(a+b)**2,
+                       ceiling**2*c/(c+d)**2, ceiling**2*d/(c+d)**2))
+    per_res_peak = max(powers)
+    resistor_hot_factor = (170-125)/(170-70)
+    downstream = 220e-6  # inherited ASSUMED downstream sensitivity, OPEN
+    tau_max = (rmax+.0066)*downstream
+    tail_at_100us_A = ceiling/rmin*math.exp(-98e-6/tau_max)
+    soa_power = load_line["MOSFET_power_upper_W"]
+    ztheta_screen = .05*.8  # Fig1 normalized100us curve BELOW0.05
+    accepted_rows = [x for x in alternatives[-1]["corners"] if x["assumed_effective_on_s"] == .3e-6]
+    return {
+        "verdict": "PRELIMINARY — READY FOR SCHEMATIC REVIEW",
+        "gate_status": "CONDITIONAL PASS",
+        "closed_blocker_id": "B1C_UNCOORDINATED_FAULT_ENERGY_PATH",
+        "closure_scope": "Pulse part selection within user-accepted Gate1c preliminary envelope; R2/R3 release remains BLOCKED",
+        "architecture_authorization": "Candidate C plus crowbar accepted for preliminary development by GATE_1D_2.md; Gate 2 only if Gate 1d passes",
+        "gate_2_authorized": True,
+        "classification": "DATASHEET pulse/SOA comparison plus CALCULATED load-line bounds and ASSUMED timing/temperature/tail screens; not bench validation",
+        "threshold": prior["threshold_tolerance"],
+        "legacy_conditional_screen": {
+            "pi_peak_V": screen["pi_peak_V"], "pi_margin_mV": screen["pi_margin_mV"],
+            "harness_5A_V": prior["harness"]["options"][0]["pi_static_5A_V"],
+            "harness_margin_mV": prior["harness"]["options"][0]["pi_static_5A_margin_mV"],
+            "normal_false_trip_margin_mV": prior["normal_with_proposed_bulk"]["false_trip_margin_mV"],
+            "status": "OPEN review items; positive arithmetic is not an achieved circuit window",
+        },
+        "drive_consistency": {
+            "mosfet": "CSD17308Q3", "driver": "UCC27511DBVR",
+            "connection": "Drain at protected; source through ballast to GND; driver GND at detector GND",
+            "assumed_supply_V": 5.0, "ballast_ohm": ballast,
+            "legacy_peak_A": peak, "legacy_source_at_peak_V": peak*ballast,
+            "ideal_gate_VGS_upper_at_legacy_peak_V": 5-peak*ballast,
+            "RDS_model_ohm": .0118, "RDS_datasheet_test_VGS_V": 4.5,
+            "RDS_datasheet_test_ID_A": 10, "RDS_datasheet_test_TA_C": 25,
+            "lowest_RDS_specified_VGS_V": 3.0,
+            "threshold_max_at_250uA_V": 1.6,
+            "max_I_for_4p5V_VGS_with_ideal_5V_driver_A": (5-4.5)/ballast,
+            "max_I_for_3V_VGS_with_ideal_5V_driver_A": (5-3)/ballast,
+            "applicable": False,
+            "source": "G1D-CSD17308 pp1,3; G1D-UCC27511 pp6,9,18-19",
+        },
+        "mosfet_pulse_review": {
+            "selected_for_capture": False, "candidate": "CSD17308Q3",
+            "headline_A": 167, "headline_duration_s": 100e-6,
+            "legacy_peak_headroom_A": 167-peak,
+            "legacy_model_duration_s": 1.8e-6,
+            "legacy_I2t_A2s": i2t, "manufacturer_I2t_A2s": None,
+            "legacy_ohmic_VDS_at_peak_V": peak*.0118,
+            "legacy_ohmic_energy_J": i2t*.0118,
+            "SOA": "SLPS262C p7 Fig10, single pulse, TA=25C unless stated, max RthetaJC=4.5C/W; shortest plotted curve 10us. Need actual ID/VDS/temperature trajectory, not a 167A-only comparison.",
+            "limitation": "No SOA pass: gate drive is inconsistent; turn-on trajectory and downstream discharge tail are not in the 1.8us ideal-resistor interval.",
+        },
+        "ballast_pulse_review": {
+            "candidate": "WFMB2512R0330FEA", "selection": "Provisional pulse candidate for the old interval only; no capture release",
+            "source": "G1D-WFM, document30387 Rev04-Aug-2022 pp1-3, p3 Single Pulse chart (unnumbered)",
+            "nominal_ohm": ballast, "initial_tolerance_fraction": .01,
+            "component_TCR_ppm_per_K": 50, "assumed_temperature_delta_K": 100,
+            "R_screen_min_ohm": rmin, "R_screen_max_ohm": rmax,
+            "legacy_interval_energy_J": ballast*i2t,
+            "fixed_legacy_waveform_hot_energy_J": rmax*i2t,
+            "fixed_legacy_waveform_hot_peak_W": peak_power,
+            "conservative_100us_envelope_W": resistor_envelope_W,
+            "conservative_100us_envelope_J": resistor_envelope_W*resistor_envelope_s,
+            "derived_envelope_I2t_A2s_not_vendor_rating": resistor_envelope_W*resistor_envelope_s/rmax,
+            "peak_power_margin_factor": resistor_envelope_W/peak_power,
+            "interval_energy_margin_factor": resistor_envelope_W*resistor_envelope_s/(rmax*i2t),
+            "assessment": "Old interval fits inside a conservative 100us rectangular pulse screen. Not a sub-100us curve extrapolation or total-fault qualification; terminal-temperature pulse derating, inductance, real waveform and post-isolation tail remain OPEN.",
+        },
+        "ballast_sensitivity": sweep,
+        "corrected_connection_candidates": alternatives,
+        "corrected_load_line": load_line,
+        "selected_implementation": {
+            "mosfet": "CSD18540Q5B", "driver": "UCC27511DBVR on independent7.5V rail",
+            "ballast": "4 x WFMB2512R0330FEA, (R+R)||(R+R), effective33mOhm",
+            "connection_correction": "VOUT_PROTECTED -> ballast bank -> MOSFET drain; source and driver GND to detector ground",
+            "gate_network": "OUTH through1ohm, OUTL direct,10kohm gate-source;1uF+100nF driver decoupling",
+            "accepted_effective_on_s": .3e-6, "accepted_series_off_from_detection_s": 2e-6,
+            "worst_pi_peak_V": max(x["pi_peak_V"] for x in accepted_rows),
+            "worst_pi_margin_mV": min(x["pi_margin_mV"] for x in accepted_rows),
+            "worst_model_peak_A": max(x["peak_A"] for x in accepted_rows),
+            "worst_model_I2t_A2s": max(x["I2t_A2s"] for x in accepted_rows),
+            "harness_margin_mV": prior["harness"]["options"][0]["pi_static_5A_margin_mV"],
+            "normal_false_trip_margin_mV": prior["normal_with_proposed_bulk"]["false_trip_margin_mV"],
+            "timing_estimate": {
+                "ASSUMED_rail_min_V": 7.35, "DATASHEET_Qg_max_test_C": 26e-9,
+                "ASSUMED_total_pullup_ohm": 11+1+1.6,
+                "CALCULATED_charge_to4p5V_s": 26e-9*(11+1+1.6)/(7.35-4.5),
+                "CALCULATED_detector_latch_driver_charge_sum_s": (55+6.1+26)*1e-9+26e-9*(11+1+1.6)/(7.35-4.5),
+                "scope": "Conservative constant-current screen using4.5V DC driver resistance and actual maxQg test value; selected0.3us screen exceeds this charge estimate; inherited0.2us result retained for comparison. Actual nonlinearQg/rail/filter/logic/commutation remains OPEN, not a new prerequisite for preliminary capture."},
+        },
+        "selected_full_pulse_review": {
+            "ASSUMED_initial_FET_T_C": 125, "ASSUMED_initial_resistor_terminal_T_C": 125,
+            "ASSUMED_downstream_C_max_F": downstream,
+            "ASSUMED_no_external_power_source": True,
+            "initial_interval_s": 2e-6, "rectangular_envelope_s": 100e-6,
+            "load_line_current_upper_A": ceiling/rmin,
+            "pulse_ID_margin_A": 400-ceiling/rmin,
+            "MOSFET_power_upper_W": soa_power,
+            "DATASHEET_Fig1_normalized_Z_upper_reading": .05,
+            "DATASHEET_RthetaJC_max_C_per_W": .8,
+            "CALCULATED_delta_T_upper_C": soa_power*ztheta_screen,
+            "CALCULATED_Tj_upper_C": 125+soa_power*ztheta_screen,
+            "CALCULATED_margin_to175C_C": 175-125-soa_power*ztheta_screen,
+            "SOA_comparison": "SLPS488B p6 Fig10:100us curve approximately400A at2..5.5V; thermal derating(175-125)/(175-25)=1/3 gives133A. Load line atVDS>=2V hasID<=107.7A. Lower-VDS ohmic branch checked with power/thermal envelope and400A pulse limit; do not derate the RDS boundary as a thermal power limit.",
+            "resistor_per_element_peak_W": per_res_peak,
+            "resistor_conservative_25C_100us_W": 1000,
+            "ASSUMED_pulse_derating_factor": resistor_hot_factor,
+            "resistor_hot_100us_W": 1000*resistor_hot_factor,
+            "resistor_power_margin_factor": 1000*resistor_hot_factor/per_res_peak,
+            "resistor_hot_100us_energy_J_each": .1*resistor_hot_factor,
+            "resistor_envelope_energy_J_each": per_res_peak*100e-6,
+            "CALCULATED_RC_tail_tau_max_s": tau_max,
+            "CALCULATED_current_after100us_A": tail_at_100us_A,
+            "CALCULATED_remaining_tail_energy_J": .5*downstream*ceiling**2*math.exp(-2*98e-6/tau_max),
+            "tail_note": "First100us envelope includes turn-on and full meaningful downstream discharge; beyond100us residual power is below DC ratings. Raw bulk is upstream after2us; initial interval already includes its feed. Larger/external downstream stores require recalculation; accepted sensitivity is not a measured Pi capacitance.",
+            "OPEN": "thermal-interface realization, pulse derating confirmation, parasitic inductance, actual downstream C and inherited timing/source assumptions remain release/bench-review items",
+        },
+        "driver_alternatives": [
+            {"part": "UCC27511DBVR", "supply_screens_V": [5.0, 7.5],
+             "assessment": "Grounded source fixes VGS; 7.5V independent rail improves headroom and is within4.5..18V operation. 26ns propagation/22ns rise maxima are for1.8nF at4.5V; 23ns/12ns at12V. Actual nonlinear140..160A FET charge/commutation is not bounded by those tests. Rail implementation/validity remains OPEN."},
+            {"part": "LMG1020YFFR", "supply_screens_V": [5.0],
+             "assessment": "4.1ns maximum rising propagation uses100pF. 7A peak source and375ps rise are typical, not a guaranteed high-current gate-charge completion time; need actual device/load trajectory. No7.5V use: recommended4.75..5.4V."},
+            {"part": "UCC27614DBVR", "supply_screens_V": [5.0, 7.5, 12.0],
+             "assessment": "27ns propagation/6ns rise maxima use12V and1.8nF; 4.5ohm PMOS DC max uses12V/-50mA. Peak10A is typical and not a minimum gate current. 12V needs boost or another independent source at9V input; 5/7.5V tests cannot inherit12V timing maxima."},
+        ],
+        "effective_on_ceiling_s": prior["conditional_shunt_delay_ceiling_s"],
+        "actual_pi_peak_V": None,
+        "actual_pi_peak_reason": "No measured peak; selected corrected implementation has a conditional calculated peak above. Original source-ballast wiring is rejected.",
+        "open_items": ["39.33mV conditional fault margin", "11.43mV static harness margin and unmet100mV reserve",
+                       "source transient and saturated-inductor bounds", "effective capacitance and proposed8x470uF bank",
+                       "reset/reference/supply-valid interlock and independent rails", "startup/inrush and series-FET SOA",
+                       "crowbar turn-on and full discharge tail; parasitic inductance and terminal temperature",
+                       "series common-source/common-drain inconsistency in prior prose", "remaining R2 fuse/TVS/connector/thermal qualifications"],
+    }
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
-    parser.add_argument("--gate", choices=("1b", "1c"), default="1b")
+    parser.add_argument("--gate", choices=("1b", "1c", "1d"), default="1b")
     args=parser.parse_args()
-    result=calculate() if args.gate == "1b" else calculate_gate1c()
+    result={"1b": calculate, "1c": calculate_gate1c, "1d": calculate_gate1d}[args.gate]()
     if args.write:
         data=json.loads(TARGET.read_text())
         data["gate_"+args.gate]=result

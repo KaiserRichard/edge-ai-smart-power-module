@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "scope": "Sheet03 preliminary architecture no-go decision; independent source and reuse provenance",
+  "scope": "Sheet03 preliminary architecture and Gate1d pulse-selection evidence; R2/R3 release BLOCKED",
   "upstream_changes": "None",
   "design_reuse": "Referenced only; no manufacturer circuit or CAD copied/adapted",
   "third_party_policy": "New vendor originals isolated in ignored third_party/documents/sheet03_2026-09-29; prior originals reused in existing worktree third_party; source paths may not exist in a fresh clone",
@@ -559,6 +559,127 @@
       "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
       "required_attribution": "Analog Devices, document title/revision/pages and original URL; preserve copyright notices",
       "access_note": "Official web PDF; direct binary retrieval failed"
+    },
+    {
+      "id": "G1D-CSD18540",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf",
+      "revision": "SLPS488B, April2017",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1d_2026-09-29/csd18540q5b.pdf"
+      ],
+      "sha256": "2e43c4a2ac82af8a089be0a9e413282326f8d7857254ac07390b458deca854e0",
+      "relevant_sections": "pp1,3 pulse/current/Qg; p4 Fig1 thermal impedance; p6 Fig10 SOA; pp8-9 pin/package",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED; project-authored analytical calculation, no circuit or CAD copied",
+      "modifications": "None to original PDFs; local visual-review renders in ignored cache",
+      "required_attribution": "Texas Instruments, title/revision/pages/manufacturer URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
+    },
+    {
+      "id": "G1D-CSD17577",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/csd17577q5a.pdf",
+      "revision": "SLPS516, August2014",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1d_2026-09-29/csd17577q5a.pdf"
+      ],
+      "sha256": "c8595fa806a99074f64592d5e36826f7b9c4b007b950344bc013316e7212348d",
+      "relevant_sections": "pp1,3 current/Qg; p6 Fig10 SOA",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED; project-authored analytical calculation, no circuit or CAD copied",
+      "modifications": "None to original PDFs; local visual-review renders in ignored cache",
+      "required_attribution": "Texas Instruments, title/revision/pages/manufacturer URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
+    },
+    {
+      "id": "G1D-WFM",
+      "manufacturer": "Vishay",
+      "url": "https://www.vishay.com/docs/30387/wfm.pdf",
+      "revision": "30387,04-Aug-2022",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1d_2026-09-29/wfm.pdf"
+      ],
+      "sha256": "a045b66d5ba1ba6f0c254e4c2fe60460fb25c4af01910416b38b30858ca5cc99",
+      "relevant_sections": "pp1-2 order code/TCR; p3 unnumbered Single Pulse and Derating charts",
+      "license": "Vishay copyright; no open redistribution license inferred",
+      "use": "REFERENCED; project-authored analytical calculation, no circuit or CAD copied",
+      "modifications": "None to original PDFs; local visual-review renders in ignored cache",
+      "required_attribution": "Vishay, title/revision/pages/manufacturer URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
+    },
+    {
+      "id": "G1D-LMG1020",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/lmg1020.pdf",
+      "revision": "SNOSD45B,October2018",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1d_2026-09-29/lmg1020.pdf"
+      ],
+      "sha256": "4a25e40c21b910a8008e3e8b77a97fd16b42cc743cfbc0cacec37b2c5585c13d",
+      "relevant_sections": "pp4-6 supplies/drive/timing; alternative only",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED; project-authored analytical calculation, no circuit or CAD copied",
+      "modifications": "None to original PDFs; local visual-review renders in ignored cache",
+      "required_attribution": "Texas Instruments, title/revision/pages/manufacturer URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
+    },
+    {
+      "id": "G1D-UCC27614",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/ucc27614.pdf",
+      "revision": "SLUSE26C,January2022",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1d_2026-09-29/ucc27614.pdf"
+      ],
+      "sha256": "7a79f2c30f85b692494a6360884de2d708a81939ec7ed9bb2d78314649cd138c",
+      "relevant_sections": "pp5-6 drive/timing; p15 hybrid output; alternative only",
+      "license": "Texas Instruments copyright; no open redistribution license inferred",
+      "use": "REFERENCED; project-authored analytical calculation, no circuit or CAD copied",
+      "modifications": "None to original PDFs; local visual-review renders in ignored cache",
+      "required_attribution": "Texas Instruments, title/revision/pages/manufacturer URL; preserve notices",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
+    },
+    {
+      "id": "G1D-CSD17308",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/csd17308q3.pdf",
+      "revision": "SLPS262C, December2019",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1c_2026-09-29/csd17308q3.pdf"
+      ],
+      "sha256": "8be74e36edc0d28d609e68790860d91d8b66eb3f4052763edd2e6efef8dcb10e",
+      "relevant_sections": "pp1,3 pinout/pulse/Qg/RDS limits; p7 Fig10 SOA visually reviewed",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "New download in ignored third_party cache",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
+    },
+    {
+      "id": "G1D-UCC27511",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/ucc27511.pdf",
+      "revision": "SLUSAW9F, November2014",
+      "retrieval_date": "2026-09-29",
+      "relevant_source_files": [
+        "third_party/documents/sheet03_gate1c_2026-09-29/ucc27511.pdf"
+      ],
+      "sha256": "781cc451dbb371a4137337a4bdecbe11a9f1ff8979a11e238e97d8a80a287b31",
+      "relevant_sections": "p6 pins; pp9-10 driver electrical/timing test conditions",
+      "license": "Texas Instruments copyright; no open licence or redistribution permission inferred",
+      "use": "REFERENCED; hand analysis and original project model, no third-party circuit/CAD copied",
+      "modifications": "None to originals; local PDF renders are review derivatives in ignored third_party cache",
+      "required_attribution": "Texas Instruments, document title/revision/pages and original URL; preserve copyright notices",
+      "access_note": "New download in ignored third_party cache",
+      "review_evidence": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md"
     }
   ],
   "project_evidence": [
