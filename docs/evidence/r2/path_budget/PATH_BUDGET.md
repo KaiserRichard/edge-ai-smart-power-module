@@ -80,7 +80,7 @@ The table below reconstructs the inherited reduced case and adds the disclosed b
 | Fan-out splice | RETURN | OPEN /OPEN /0.385 | OPEN /OPEN /0.500 | A: hot acceptance target |
 | Module solder joints | RETURN | OPEN /OPEN /0.077 | OPEN /OPEN /0.100 | A: hot acceptance target |
 
-**CALCULATED hot subtotals:** SEND 43.865398 mΩ /219.327 mV; RETURN 12.502343 mΩ /62.512 mV at 5 A. 
+**CALCULATED hot subtotals:** SEND 43.865398 mΩ /219.327 mV; RETURN 12.502343 mΩ /62.512 mV at 5 A.
 
 **CALCULATED totals:** inherited downstream41.767741 mΩ +series pair 13.6 mΩ =**55.367741 mΩ**. Add unsensed buck-copper allocation1 mΩ →**56.367741 mΩ**. The joint split is a new **ASSUMED allocation** totaling the inherited2 mΩ; the historical source did not prove those individual values. Separate J502 crimps are **not applicable**: the chosen Phoenix plug uses integral screw clamps, included in its complete-pole target.
 
@@ -188,7 +188,7 @@ With the expanded hot screen, only about **CALCULATED +4.78 mV nominal** remains
 | Fan-out splice | RETURN | OPEN /OPEN /0.385 | OPEN /OPEN /0.500 | 2.500 |
 | Module solder joints | RETURN | OPEN /OPEN /0.077 | OPEN /OPEN /0.100 | 0.500 |
 
-**CALCULATED recommended D hot subtotals:** SEND 25.644075 mΩ /128.220 mV; RETURN 9.428866 mΩ /47.144 mV at 5 A. 
+**CALCULATED recommended D hot subtotals:** SEND 25.644075 mΩ /128.220 mV; RETURN 9.428866 mΩ /47.144 mV at 5 A.
 
 All recommended cold upper entries are calculated allocation screens, not supplier maxima. The reproducible full-precision cold/hot min/typ/max record is in [PATH_CALCULATIONS.json](PATH_CALCULATIONS.json); as above, unknown minima/typical values remain `null`. Calculated D25°C upper loop **26.326195 mΩ**; its actual cold/hot sum is **OPEN** until qualified.
 

@@ -9,7 +9,7 @@
 - **Input identities — PASS:** all eight pinned project documents reproduce the SHA-256 values in INPUT_PROVENANCE.json via their exact git commits. Only `.md`/`.json` inputs were read.
 - **Documentation — PASS:** relative Markdown links resolve; resistance table columns are consistent; the OWNER EXPLANATION is427 words (one-page-length briefing); required current-pin list, alternatives, decisions and explicit verdict are present. No hardware measurement or PDF layout is claimed.
 - **Scope — PASS:** diff against base contains only new files under `docs/evidence/r2/path_budget/`; no pre-existing design/source document is modified. Native `.kicad_sch`/`.kicad_pcb`/`.kicad_sym` files were never opened, read or saved by root or the read-only reviewers. Git metadata/name inspection is not a CAD-content check.
-- **Whitespace — PASS:** `git diff --check`. No external source assets or secrets are committed; primary-document provenance and redistribution boundaries are in SOURCES.md.
+- **Whitespace — PASS:** `git diff --check 65a86982fc4a48502d3a6da1cd710e796b3d8734` checks the complete branch diff, including the new report. Two trailing spaces caught by the staged check were corrected before PR creation. No external source assets or secrets are committed; primary-document provenance and redistribution boundaries are in SOURCES.md.
 
 These checks validate an analysis artifact, not the hardware. ERC/DRC, circuit simulation, full repository electrical tests and bench tests were not run: this task forbids native CAD access and makes no electrical changes. Ordinary CAD/export tests are outside this analysis scope. No SBC, dummy load or supply was energized. No component purchase, fabrication or deployment was performed.
 
