@@ -1,6 +1,6 @@
 {
   "baseline_commit": "c47409fb2637c94ccaa685c3ac4cbbd10681d5a2",
-  "baseline_xml_sha256": "b002e412e06fcb9b645e4a6100c52a94aa740169e9403abd868cb48d1527cf4b",
+  "baseline_xml_sha256": "e3b8a9a4abe68f9380925907908bf6c9710cd9aaededade032153bb67cbe3b64",
   "canonical_diff_bytes": 0,
   "canonical_sha256": "2257bd9f080e02365bf209175b83235a7975dce2e30cef671fc9d480279f09fc",
   "comparison": "Complete component/libpart XML, full net names and all node attributes; ordering normalized; only design export metadata, library URIs and numeric net codes excluded.",
@@ -24,8 +24,8 @@
       "sheet": "02_BUCK_5V"
     },
     {
-      "paper": "A2",
-      "reference_value_minimum_mm": 1.524,
+      "paper": "A3",
+      "reference_value_minimum_mm": 1.27,
       "sheet": "03_OUTPUT_PROTECTION"
     },
     {
@@ -39,7 +39,7 @@
       "sheet": "05_IO_TEST"
     }
   ],
-  "readable_xml_sha256": "c71c7e060482cbe5c6ae0f34e3e63eae74a7de5894eabfe1c39eda040fd00b28",
+  "readable_xml_sha256": "9b111fb00643733639d936b48f9700f0441d51cc59856930548e4499160f2f8f",
   "source_inventory_identical": true,
   "source_symbols_including_power_flags": 161,
   "status": "PASS"

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/Users/quockaiser/Desktop/Research/wt-readable/hardware/kicad/V1A.kicad_sch</source>
-    <date>2026-09-30T08:23:30+0700</date>
+    <source>/private/tmp/gate2b-baseline-c47409f/hardware/kicad/V1A.kicad_sch</source>
+    <date>2026-09-30T08:50:55+0700</date>
     <tool>Eeschema 9.0.6</tool>
     <textvar name="RELEASE_STATUS">NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -5320,7 +5320,7 @@
   </libparts>
   <libraries>
     <library logical="V1A">
-      <uri>/Users/quockaiser/Desktop/Research/wt-readable/hardware/kicad/V1A.kicad_sym</uri>
+      <uri>/private/tmp/gate2b-baseline-c47409f/hardware/kicad/V1A.kicad_sym</uri>
     </library>
   </libraries>
   <nets>

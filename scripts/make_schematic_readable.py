@@ -328,8 +328,8 @@ class Drawing:
                 self.add(['wire',['pts',['xy',xy(p[0]),xy(p[1])],['xy',xy(end[0]),xy(end[1])]],['stroke',['width','0'],['type','default']],self.ident()])
         self.doc.append(['lib_symbols',*self.libout.values()])
         if self.name=='03_OUTPUT_PROTECTION':
-            # A3 landscape, with a 70-mil drawing grid; every endpoint and glyph
-            # transforms together. Visible text remains at least 1.27 mm.
+            # Fit A3, then quantize global connection endpoints onto the existing
+            # 50-mil grid. Visible text remains at least 1.27 mm.
             def compact(tree):
                 for item in tree:
                     if not isinstance(item,list):continue
@@ -342,6 +342,35 @@ class Drawing:
                         item[1:]=[str(max(1.27,float(v)*0.7)) for v in item[1:]]
                     else:compact(item)
             compact(self.doc)
+            # Page margin translation applies to placed objects, not local glyphs.
+            def margin(tree):
+                for item in tree:
+                    if not isinstance(item,list):continue
+                    if item[0] in ('at','xy','start','end','center'):
+                        item[1:3]=[str(round(float(v)+2.54,6)) for v in item[1:3]]
+                    else:margin(item)
+            for obj in self.doc:
+                if isinstance(obj,list) and obj[0] in ('symbol','wire','label','hierarchical_label','no_connect','junction','text','rectangle'):
+                    margin(obj)
+            def snap(v):return round(float(v)/1.27)*1.27
+            # Library IDs are per-reference. Offset each pin to the snapped
+            # world position before snapping its placed instance.
+            for inst in nodes(self.doc,'symbol'):
+                loc=one(inst,'at');ix,iy=map(float,loc[1:3])
+                lib=self.libout[val(one(inst,'lib_id')[1])]
+                for pin in allpins(lib):
+                    pinat=one(pin,'at');px,py=map(float,pinat[1:3])
+                    pinat[1]=str(round(snap(ix+px)-snap(ix),6))
+                    pinat[2]=str(round(snap(iy)-snap(iy-py),6))
+            def snap_connections(tree):
+                for item in tree:
+                    if not isinstance(item,list):continue
+                    if item[0] in ('at','xy'):
+                        item[1:3]=[str(round(snap(v),6)) for v in item[1:3]]
+                    elif item[0]!='property':snap_connections(item)
+            for obj in self.doc:
+                if isinstance(obj,list) and obj[0] in ('symbol','wire','label','hierarchical_label','no_connect','junction'):
+                    snap_connections(obj)
             replace(self.doc,'paper',['paper',q('A3')])
         (HW/(self.name+'.kicad_sch')).write_text(dump(self.doc)+'\n')
         return self.libout

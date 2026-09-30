@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export native A3/A2 review pages and 96-dpi images for 100% inspection.
+"""Export native A3 review pages and 96-dpi images for 100% inspection.
 
 Requires KiCad 9 CLI and PyMuPDF. Unlike the historical exporter, no margin,
 scale or postprocessing is added: warning marks are part of the source sheets.
@@ -28,8 +28,8 @@ def main():
     assert len(document)==6
     pages=[]
     for i,(page,name) in enumerate(zip(document,NAMES)):
-        paper='A2' if name.startswith('03') else 'A3'
-        expected=(594,420) if paper=='A2' else (420,297)
+        paper='A3'
+        expected=(420,297)
         dimensions=(page.rect.width*25.4/72,page.rect.height*25.4/72)
         assert all(abs(a-b)<0.1 for a,b in zip(dimensions,expected)),(name,dimensions)
         text=' '.join(page.get_text().split())
@@ -42,9 +42,9 @@ def main():
                       'warning_verified':True,'image':image.relative_to(ROOT).as_posix(),'image_pixels':[pix.width,pix.height],
                       'image_dpi':96,'image_sha256':hashlib.sha256(image.read_bytes()).hexdigest()})
     result={'status':'PASS','pdf':pdf.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),
-            'page_count':6,'pages':pages,'method':'Native KiCad vector export; exact landscape A3/A2; no scaling or added margin.',
+            'page_count':6,'pages':pages,'method':'Native KiCad vector export; exact landscape A3; no scaling or added margin.',
             'image_method':'96 pixels per physical inch: 100% CSS/display scaling reference. Readability also depends on display DPI and viewer settings.',
-            'visual_review':'Human-agent inspection recorded separately in GATE2B_VALIDATION.md; image generation alone is not visual review.'}
+            'visual_review':'Human-agent inspection recorded separately in GATE2B_READABILITY.md; image generation alone is not visual review.'}
     (OUT/'readability/PDF_VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 
