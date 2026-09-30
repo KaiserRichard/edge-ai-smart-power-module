@@ -1,4 +1,20 @@
-# Gate4a-FIX final resume — 2026-09-30 (current)
+# Gate4a-FIX final resume — 2026-10-01 (current)
+
+**STATUS: BLOCKED for test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Round-2 continuation reviewed the prior partial commits and independent check. No KiCad edits, physical tests, ERC/DRC or fabrication release occurred.
+
+**WHAT WAS DONE:** retained the completed J502 candidate handoff and controlled auxiliary charger/interlock selection; corrected the R367 active 0603 power calculation to 62.656642 µW and synchronized the protected-bank current screens to 25.539141 A / 13.485161 A; added the required interchannel-skew term to the energy uncertainty plan using measured trace shifts or a total-variation bound; updated the freeze report to identify J502 and U327/C350 as selected candidates with their remaining assembly and bench gates.
+
+**EVIDENCE:** [Gate4a freeze report](evidence/r2/gate4a/GATE4A_FREEZE.md), [round-2 decisions](evidence/r2/gate4a/FIX2_RESOLUTIONS.md), [test plan](evidence/r2/gate4a/TEST_PLAN.md), [freeze table](evidence/r2/gate4a/FREEZE_TABLE.md), and [J502 selection](evidence/r2/J502_SELECTION.md). These are paper decisions and acceptance criteria; no measured result is claimed. The optional BOM-branch Sheet 03 qualification file was absent.
+
+**DECISIONS:** R4A-04/06/07/09/10 remain selected candidates with named measurements; R4A-08 remains dependent on complete physical timing; R4A-01 autonomous source discrimination, R4A-12 rated fixture abort/energy/discharge construction, and R4A-15 reset/POR/ARM/rail-loss ownership remain construction blockers. The independent-check N1 skew defect is explicitly carried into T13. R367 and protected-bank prose now agree with the generated calculations.
+
+**OPEN RISKS:** autonomous 10 µs/100 µC source isolation; complete reset/fault priority and persistent-short lockout; rated fixture/source/instrument handoffs; hot pulse/negative commutation; protected-bank/harness peak and normal delivery; exact lands, approvals and assembly evidence. No Pi or fabrication release follows.
+
+**NEXT GATE:** complete the remaining net-level circuits and rated fixture, reconcile the captured assembly, then execute the named coupon and sequential ERC/DRC/fabrication/bring-up gates. Local commit attempts remain blocked by the worktree index-lock permission failure.
+
+**GIT:** local commit was attempted after the first correction and rejected because Git could not create `/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.git/worktrees/wt-gate4a/index.lock`; changes remain in the worktree for the authorized conductor. No push was attempted.
+
+# Gate4a-FIX final resume — 2026-09-30 (historical)
 
 **STATUS: BLOCKED for test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** This update supersedes the status descriptions below, which remain historical evidence.
 

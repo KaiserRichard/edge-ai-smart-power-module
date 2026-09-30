@@ -4,14 +4,14 @@
 
 ## OWNER EXPLANATION — one page
 
-**The test board remains BLOCKED for capture.** Architecture D, 9–26 V normal input, D101 SMCJ36CA, F101 Schurter3403.0285.23, the BSC034 series pair and the isolated48→24 V upstream route remain fixed. **J502 is PENDING** in `feat/v1a-j502-connector`. No Pi is permitted before the fault, normal and interface gates pass.
+**The test board remains BLOCKED for capture.** Architecture D, 9–26 V normal input, D101 SMCJ36CA, F101 Schurter3403.0285.23, the BSC034 series pair and the isolated48→24 V upstream route remain fixed. **J502 selection is complete for the candidate assembly:** Phoenix 1776508/1777989, TE 3-87456-6 with ten 87309-9 sockets, Belden 8521 trunks and 8502 fan-outs; hot contact, splice, mating and derating evidence remain T11/T16. No Pi is permitted before the fault, normal and interface gates pass.
 
 Both partial commits were retained and checked. Their valid resistor, buffer, bootstrap, harness and detector corrections remain. This resume adds four corrections:
 
 - **Comparator:** R3731k limits current from the charged reference capacitor into IN+ when DET5 disappears. C302 becomes4.7µF, with1…50µF effective required; the previous1µF nominal part could fall below the reference’s minimum. Conditional detector trip is5.219922…5.314622V; the upper20mV-overdrive point is5.356874V. Actual normal margin and rail decay still need T06.
 - **Raw dump:** twelve33mΩ resistors form two six-part strings,99mΩ total. Vishay’s pulse curves apply to33mΩ, while the prior100mΩ elements required separate testing. The conditional99.865mJ pool gives at most8.607mJ per resistor in the tolerance/TCR model. Hot pulse/SOA and negative commutation remain unproved.
-- **Auxiliary startup:** including supervisor hysteresis exposed a5.132V release corner on a5V rail. R364100k lowers that upper screen to4.704V. The528µF hold bank with a typical9ms ramp can demand1.24A at9V near the ramp’s end. The proposed limiter/timer cannot be frozen from the existing evidence.
-- **Measurement:** the10mA source-off endpoint now has a separate≤2mA additive-error target. Charge acceptance covers the complete discharge event; maintained-input shutdown leakage has its own sustained test.
+- **Auxiliary startup:** U327 `TPS259470LRPWR` now follows D304 with R374=100 Ω and C374=1 µF for controlled DRV_HOLD charging; U316 ENOUT gates U317 RUN. C350 is the identified 10 nF timer candidate. Startup current, pass-FET SOA and fast rail-loss ownership remain T07/T14/T15 evidence gates.
+- **Measurement:** the10mA source-off endpoint now has a separate≤2mA additive-error target, and T13 separately bounds interchannel voltage/current skew in the integrated energy. Charge acceptance covers the complete discharge event; maintained-input shutdown leakage has its own sustained test.
 
 The **10µs/100µC source contract still lacks an autonomous discriminator**. Revised output-OV latency exceeds10µs in the illustrative cases. A blind SW timeout also fails a dropout example before accounting for all delays. Reset/ARM/POR and fast rail-loss ownership remain incomplete. Those are missing circuits, so assigning test names cannot close them.
 
@@ -31,16 +31,16 @@ All17 review findings and original freeze gaps have decisions, equations, eviden
 | R4A-04 bootstrap load | **Selection corrected; bench required:** R3052MΩ; max screened bleed5.013 µA at10 V. Actual TS≈5 V pump equilibrium remains unqualified. | S03-07; CALCULATIONS bootstrap; T04/T07 |
 | R4A-05 C301/C302 | **Paper corrected:** C301 BST–TS and separate C302 REF–GND, C3011µF25 V; C3024.7µF25 V with1…50µF effective required. | S03-17; pinned exported netlist; T05/T04 |
 | R4A-06 detector | **Arithmetic/selection corrected; bench required:**9.88k/10k/1k/100k,68.1k shunt bias, separate positive/negative clamps, DET5-powered switch and R3731k reference-input protection. Conditional overdrive5.356874 V; partial-power/normal margin still OPEN. | S03-02/03; independent Thevenin check; T06 |
-| R4A-07 aux | **Construction blocked:** 249k/100k monitor tops with rising hysteresis included; controlled charge/timer/fast rail-loss construction and hot SOA missing. | S03-11…15; AUX_BRANCH_FIX; T07A/B/C |
+| R4A-07 aux | **Candidate construction selected; bench and rail-loss construction required:** U327 slow charger, U316 ENOUT/RUN interlock, 10 nF C350 timer and 249k/100k monitor tops are specified. Startup current, pass-FET SOA and fast loss of AUX3V3/DRV_HOLD remain open. | S03-11…15/18; AUX_BRANCH_FIX; FIX2_RESOLUTIONS F2-02; T07A/B/C/D |
 | R4A-08 B02 timing | **Bench required with blocked prerequisites:** parallel physical endpoints and test-conditioned partial sums distinguished; complete guaranteed min/max remain OPEN/OPEN. | TIMING_AND_LOGIC; T08 plus T01/T04/T06/T07/T12/T13/T15 |
 | R4A-09 energy/returns | **Bench required; hot-rating prerequisite blocked:** raw99mΩ dump from twelve33mΩ parts and STPS60H100CT returns selected as candidates; each pulse/negative waveform must fit rated construction. | S01-04/S03-09; RAW_NODE_ENERGY; T09A/B |
 | R4A-10 bank/harness peak | **Bench required:** retain four PCH as test candidate, withdraw inherited C/ESR margin; keep adverse historical trajectory. | S03-10; CALCULATIONS protected_node; T10 |
-| R4A-11 wire | **Paper corrected; handoff/bench required:**8503 AWG22 fanouts,8521 trunks, current sharing/crimps/mates; J502 PENDING. | S04-04/05; T11; path expression excludes assumed J502 allocation |
+| R4A-11 wire | **Selection/handoff corrected; assembly bench required:**8521 AWG16 trunks and8502 AWG20 fan-outs are tied to the selected Phoenix/TE J502 solution; current sharing, crimps, mates and hot derating remain T11/T16. | J502_SELECTION; FIX2_RESOLUTIONS F2-01; T11/T16 |
 | R4A-12 fixture | **Construction blocked:** QF2/QF3 break-before-make isolation proposal prevents direct injection into connected native low-side; abort/source-limit/discharge/force connections and numerical ratings still missing. | TEST_HOOKS; FIX_RESOLUTIONS R4A-12; T12 |
 | R4A-13 uncertainty | **Paper budget corrected; inventory/calibration blocked:**15 mV/25 ns targets; full-event UQ, corrected energy errors and a separate2mA endpoint-error target. | CALCULATIONS measurement; TEST_PLAN T13; no actual calibrations |
 | R4A-14 aux surge | **Development test defined; external evidence/fixture blocked:** separate58.1 V bounded aux pulse; no main-buck exposure; real upstream surge/fuse/TVS coordination OPEN. | T14A/B; FIX_RESOLUTIONS R4A-14 |
 | R4A-15 pins/thermal | **Partial paper correction; construction blocked:** named new-IC pins/bypass and component-local limits recorded; POR/fault/reset/freshARM/rail-loss ownership and persistent-short diagnosis unresolved. | S03-03/04/05/14/15; TIMING_AND_LOGIC; T15L/T15T |
-| R4A-16 assembly | **Selection work retained; assembly blocked:** identified C350 and41 remaining generic passives; timer value, new lands/approval sheets, added circuits and fixture/J502 handoffs unresolved. | PASSIVE_COMPLETION; FREEZE_MANIFEST; T16 |
+| R4A-16 assembly | **Partly resolved; assembly blocked:** C350, generic passives and the J502 handoff are identified; new lands/approval sheets, complete fixture assembly and actual mate remain unresolved. | PASSIVE_COMPLETION; J502_SELECTION; FIX2_RESOLUTIONS F2-01/F2-02; T16 |
 | R4A-17 TPS7A16 | **Paper corrected:** IN60 V, EN40 V recommended; both new inputs DRV_HOLD. Original EN/cap/resistor rejection remains. | SOURCES; AUX_BRANCH_FIX; T17 |
 
 ## Original freeze blockers retained
@@ -53,7 +53,7 @@ All17 review findings and original freeze gaps have decisions, equations, eviden
 | M03 powered-off detector | R4A-06; explicit current-limited ground-return clamp candidate, T06 all rail orders and normal peak margin. |
 | M05 raw/protected hot pulse/negative energy | R4A-09/15;99mΩ raw vs33mΩ protected ballast kept distinct; documented hot limits and T09/T15T. |
 | Protected bank, actual arrival, historical far-end peak | R4A-10/11; T10/T11 real-harness/dummy matrix; no inherited0.5mΩ or80 A protected-arrival guarantee. |
-| Normal path/hot RDS/regulation/connector | R4A-04/11/16; conditional42.673mΩ includes historical6.24mΩ J502 allocation; final choice PENDING.100mV trough screen remains4.712779 V, below4.75 V. |
+| Normal path/hot RDS/regulation/connector | R4A-04/11/16; selected J502 path screen is41.855546mΩ with4.796866V at a20mV trough, while hot contact, splice, regulation and100mV-trough evidence remain open. |
 | Main58.1 V let-through, new pins/lands, rated assembly | R4A-12/14/16; main-source coordination and component review precede capture release. |
 
 ## Evidence, next work and Git handback
