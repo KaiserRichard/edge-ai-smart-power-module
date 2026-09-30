@@ -309,6 +309,14 @@ def fix_03():
             fonts(x)
     (HW/'V1A.kicad_sym').write_text('\n'.join(line.rstrip() for line in dump(lib).splitlines())+'\n')
 
+
+def fix_04():
+    name='04_POWER_MONITOR';d=reviewed(name)
+    for net,y in [('SCL_LOCAL',124.46),('SDA_LOCAL',129.54)]:
+        move_label(d,net,(177.8,y),(190.5,y))
+        d.append(['wire',['pts',['xy','177.8',str(y)],['xy','190.5',str(y)]],['stroke',['width','0'],['type','default']],uid(name+net+'clearance')])
+    write(d,name)
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sheet',required=True,choices=['01','02','03'])
-    a=p.parse_args();{'01':fix_01,'02':fix_02,'03':fix_03}[a.sheet]()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sheet',required=True,choices=['01','02','03','04'])
+    a=p.parse_args();{'01':fix_01,'02':fix_02,'03':fix_03,'04':fix_04}[a.sheet]()

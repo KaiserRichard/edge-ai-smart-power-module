@@ -1615,14 +1615,14 @@
       (justify right bottom))
     (uuid "4c092e24-a2d6-5877-8658-59b2a622e5f2"))
   (label "SCL_LOCAL"
-    (at 177.8 124.46 0)
+    (at 190.5 124.46 0)
     (effects
       (font
         (size 1.524 1.524))
       (justify left bottom))
     (uuid "03b18a2a-7612-5533-a453-cd3d3bcbf48b"))
   (label "SDA_LOCAL"
-    (at 177.8 129.54 0)
+    (at 190.5 129.54 0)
     (effects
       (font
         (size 1.524 1.524))
@@ -5045,4 +5045,20 @@
             (effects
               (font
                 (size 1.524 1.524))))))
-      (embedded_fonts no))))
+      (embedded_fonts no)))
+  (wire
+    (pts
+      (xy 177.8 124.46)
+      (xy 190.5 124.46))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "0a191fde-7921-52a8-952c-8f07942b7f97"))
+  (wire
+    (pts
+      (xy 177.8 129.54)
+      (xy 190.5 129.54))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "c18c0963-8e1f-5f9f-8462-23025f4c276b")))
