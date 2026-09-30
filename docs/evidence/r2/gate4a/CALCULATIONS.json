@@ -255,378 +255,59 @@
   "selected_path": {
     "itemised_rows": [
       {
-        "element": "Buck output copper",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.4060894499980087
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.5
-        ],
-        "classification": "ASSUMED acceptance allocation; unsensed segment only, PCB 85 C",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "unsensed_buck_copper",
+        "send_mohm": 0.5,
+        "return_mohm": 0.5
       },
       {
-        "element": "Buck return copper",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.4060894499980087
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.5
-        ],
-        "classification": "ASSUMED acceptance allocation; unsensed segment only, PCB 85 C",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "module_FET_pair_proposed",
+        "send_mohm": 13.6,
+        "return_mohm": 0.0
       },
       {
-        "element": "Module series FET pair",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          5.6,
-          6.8
-        ],
-        "hot_min_typ_max": [
-          null,
-          11.2,
-          13.6
-        ],
-        "classification": "BSC034N06 pair: published25C10V RDS2x2.8typ/2x3.4max; ASSUMED2x150C screen, hot actual OPEN",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "shunt_2mohm_1pct_25ppm_100C",
+        "send_mohm": 2.0237875,
+        "return_mohm": 0.0
       },
       {
-        "element": "2 mOhm current shunt",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          1.98,
-          2,
-          2.02
-        ],
-        "hot_min_typ_max": [
-          1.9762875,
-          2,
-          2.0237875
-        ],
-        "classification": "CALCULATED from +/-1%, +/-25 ppm/K, shunt 100 C; WSL2726 terminal/reference-plane coverage OPEN",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "module_PCB",
+        "send_mohm": 1.0,
+        "return_mohm": 1.0
       },
       {
-        "element": "Module PCB traces / vias",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.8121788999960174
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          1
-        ],
-        "classification": "ASSUMED acceptance allocation; PCB 85 C; geometry not measured",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "J502_complete_pole_including_termination",
+        "send_mohm": 3.12,
+        "return_mohm": 3.12
       },
       {
-        "element": "J502 complete mated pole and clamp",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          2.4
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          3.12
-        ],
-        "classification": "ASSUMED acceptance allocation; contact 60 C; manufacturer application maximum OPEN",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "AWG16_trunk_75mm",
+        "send_mohm": 1.2528740157480316,
+        "return_mohm": 1.2528740157480316
       },
       {
-        "element": "Trunk wire AWG16 75 mm",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          0.9032332677165353,
-          1.0035925196850393,
-          1.1039517716535432
-        ],
-        "hot_min_typ_max": [
-          1.0250787401574804,
-          1.138976377952756,
-          1.2528740157480316
-        ],
-        "classification": "CALCULATED from nominal DCR with ASSUMED 20 C reference, +/-10%; wire 60 C",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "AWG20_fanout_15mm_35mm",
+        "send_mohm": 0.30695413385826775,
+        "return_mohm": 0.17905657808398953
       },
       {
-        "element": "Module PCB traces / vias",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.8121788999960174
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          1
-        ],
-        "classification": "ASSUMED acceptance allocation; PCB 85 C; geometry not measured",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "Pi_mate_and_female_crimp_combined",
+        "send_mohm": 10.0,
+        "return_mohm": 2.5
       },
       {
-        "element": "J502 complete mated pole and clamp",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          2.4
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          3.12
-        ],
-        "classification": "ASSUMED acceptance allocation; contact 60 C; manufacturer application maximum OPEN",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "Pi_male_attachment",
+        "send_mohm": 0.24,
+        "return_mohm": 0.06
       },
       {
-        "element": "Trunk wire AWG16 75 mm",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          0.9032332677165353,
-          1.0035925196850393,
-          1.1039517716535432
-        ],
-        "hot_min_typ_max": [
-          1.0250787401574804,
-          1.138976377952756,
-          1.2528740157480316
-        ],
-        "classification": "CALCULATED from nominal DCR with ASSUMED 20 C reference, +/-10%; wire 60 C",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "fanout_splices",
+        "send_mohm": 0.5,
+        "return_mohm": 0.5
       },
       {
-        "element": "AWG22 fan-out 15 mm, 2 parallel",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          0.3658094734251968,
-          0.4064549704724409,
-          0.447100467519685
-        ],
-        "hot_min_typ_max": [
-          0.4151568897637795,
-          0.4612854330708661,
-          0.5074139763779527
-        ],
-        "classification": "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Pi mated contacts, 2 parallel",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          7.692307692307692
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          10.0
-        ],
-        "classification": "ASSUMED acceptance allocation; new hot/conditioned <=20 mOhm/contact procurement target; no qualified mate yet",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Pi female crimps, 2 parallel",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.3076923076923077
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.4
-        ],
-        "classification": "ASSUMED acceptance allocation; per-termination <=0.8 mOhm target, separate from mating interface",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Pi male pin / solder attachment, 2 parallel",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.1846153846153846
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.24
-        ],
-        "classification": "ASSUMED acceptance allocation; per-termination <=0.48 mOhm target; actual Pi pin attachment OPEN",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "AWG22 fan-out 35 mm, 8 parallel",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          0.2133888594980315,
-          0.23709873277559054,
-          0.2608086060531496
-        ],
-        "hot_min_typ_max": [
-          0.24217485236220473,
-          0.2690831692913386,
-          0.29599148622047244
-        ],
-        "classification": "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Pi mated contacts, 8 parallel",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          1.923076923076923
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          2.5
-        ],
-        "classification": "ASSUMED acceptance allocation; new hot/conditioned <=20 mOhm/contact procurement target; no qualified mate yet",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Pi female crimps, 8 parallel",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.07692307692307693
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.1
-        ],
-        "classification": "ASSUMED acceptance allocation; per-termination <=0.8 mOhm target, separate from mating interface",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Pi male pin / solder attachment, 8 parallel",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.04615384615384615
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.06
-        ],
-        "classification": "ASSUMED acceptance allocation; per-termination <=0.48 mOhm target; actual Pi pin attachment OPEN",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Fan-out splice",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.3846153846153846
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.5
-        ],
-        "classification": "ASSUMED acceptance allocation; hot termination target",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Module solder joints",
-        "leg": "SEND",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.07692307692307693
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.1
-        ],
-        "classification": "ASSUMED acceptance allocation; hot termination target",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Fan-out splice",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.3846153846153846
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.5
-        ],
-        "classification": "ASSUMED acceptance allocation; hot termination target",
-        "applicable_guaranteed_hot_max_mOhm": null
-      },
-      {
-        "element": "Module solder joints",
-        "leg": "RETURN",
-        "units": "mOhm",
-        "cold_25C_min_typ_max": [
-          null,
-          null,
-          0.07692307692307693
-        ],
-        "hot_min_typ_max": [
-          null,
-          null,
-          0.1
-        ],
-        "classification": "ASSUMED acceptance allocation; hot termination target",
-        "applicable_guaranteed_hot_max_mOhm": null
+        "element": "module_solder_joints",
+        "send_mohm": 0.1,
+        "return_mohm": 0.1
       }
     ],
     "BSC034_pair_Qg_at_published_test_max_C": 8.2e-08,
@@ -637,42 +318,44 @@
     "results": {
       "0": {
         "ASSUMED_total_negative_excursion_V": 0,
-        "loop_mOhm": 42.672940994094496,
-        "loss_5A_V": 0.21336470497047247,
-        "dissipation_5A_W": 1.0668235248523623,
-        "Vfar_end_CALCULATED_V": 4.812778549700228,
-        "margin_to4p75_V": 0.06277854970022823,
+        "loop_mOhm": 41.85554624343832,
+        "loss_5A_V": 0.2092777312171916,
+        "dissipation_5A_W": 1.046388656085958,
+        "Vfar_end_CALCULATED_V": 4.816865523453509,
+        "margin_to4p75_V": 0.06686552345350893,
         "conditional_meets": true,
         "actual_min_V": null
       },
       "0.02": {
         "ASSUMED_total_negative_excursion_V": 0.02,
-        "loop_mOhm": 42.672940994094496,
-        "loss_5A_V": 0.21336470497047247,
-        "dissipation_5A_W": 1.0668235248523623,
-        "Vfar_end_CALCULATED_V": 4.792778549700229,
-        "margin_to4p75_V": 0.04277854970022865,
+        "loop_mOhm": 41.85554624343832,
+        "loss_5A_V": 0.2092777312171916,
+        "dissipation_5A_W": 1.046388656085958,
+        "Vfar_end_CALCULATED_V": 4.796865523453509,
+        "margin_to4p75_V": 0.04686552345350936,
         "conditional_meets": true,
         "actual_min_V": null
       },
       "0.1": {
         "ASSUMED_total_negative_excursion_V": 0.1,
-        "loop_mOhm": 42.672940994094496,
-        "loss_5A_V": 0.21336470497047247,
-        "dissipation_5A_W": 1.0668235248523623,
-        "Vfar_end_CALCULATED_V": 4.712778549700229,
-        "margin_to4p75_V": -0.03722145029977142,
+        "loop_mOhm": 41.85554624343832,
+        "loss_5A_V": 0.2092777312171916,
+        "dissipation_5A_W": 1.046388656085958,
+        "Vfar_end_CALCULATED_V": 4.716865523453509,
+        "margin_to4p75_V": -0.03313447654649071,
         "conditional_meets": false,
         "actual_min_V": null
       }
     },
     "at6Vgate_and_ASSUMED2x_hot": {
       "pair_ohm": 0.0204,
-      "loop_mOhm": 49.47294099409449,
-      "Vfar_end_after20mV_V": 4.758778549700229,
+      "loop_mOhm": 48.655546243438316,
+      "Vfar_end_after20mV_V": 4.7628655234535096,
       "actual_V": null
     },
-    "J502_status": "PENDING;6.24mOhm is historical loop allocation only"
+    "connector_commit": "41cb9e889418d50d2f5f24467e66ac7f15a90476",
+    "connector_calculations_sha256": "109ddd96518cb71ad3070ac59fb8c1aeb4eec15740c5944a05c9c20f9651668c",
+    "J502_status": "SELECTED solution A; hot assembly qualification T11/T16 NOT RUN"
   },
   "source_contract": {
     "ASSUMED": {
@@ -1140,15 +823,6 @@
       "actual_arriving_current_bound_A": null,
       "actual_far_peak_V": null
     },
-    "harness": {
-      "wire": "Belden8503",
-      "DCR_nominal_ohm_per_m": 0.053149606299212594,
-      "fanout_send_hot_assumed_ohm": 0.0005074139763779527,
-      "fanout_return_hot_assumed_ohm": 0.00029599148622047253,
-      "loop_without_J502_allocation_ohm": 0.03643294099409449,
-      "J502": "PENDING feat/v1a-j502-connector",
-      "actual_hot_loop_ohm": null
-    },
     "fixture": {
       "illustrative_handover_s": 5e-06,
       "raw_drop_at5A_V": 0.010388962765957448,
@@ -1186,6 +860,484 @@
       "extra_source_cap_target_F": 1e-06,
       "source_work_screen_J": 0.013540205000000003,
       "actual_fixture_bound_J": null
+    },
+    "historical_round1_harness": {
+      "wire": "Belden8503",
+      "DCR_nominal_ohm_per_m": 0.053149606299212594,
+      "fanout_send_hot_assumed_ohm": 0.0005074139763779527,
+      "fanout_return_hot_assumed_ohm": 0.00029599148622047253,
+      "loop_without_J502_allocation_ohm": 0.03643294099409449,
+      "J502": "PENDING feat/v1a-j502-connector",
+      "actual_hot_loop_ohm": null
+    }
+  },
+  "historical_round1_selected_path": {
+    "itemised_rows": [
+      {
+        "element": "Buck output copper",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.4060894499980087
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; unsensed segment only, PCB 85 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Buck return copper",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.4060894499980087
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; unsensed segment only, PCB 85 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module series FET pair",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          5.6,
+          6.8
+        ],
+        "hot_min_typ_max": [
+          null,
+          11.2,
+          13.6
+        ],
+        "classification": "BSC034N06 pair: published25C10V RDS2x2.8typ/2x3.4max; ASSUMED2x150C screen, hot actual OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "2 mOhm current shunt",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          1.98,
+          2,
+          2.02
+        ],
+        "hot_min_typ_max": [
+          1.9762875,
+          2,
+          2.0237875
+        ],
+        "classification": "CALCULATED from +/-1%, +/-25 ppm/K, shunt 100 C; WSL2726 terminal/reference-plane coverage OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module PCB traces / vias",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.8121788999960174
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          1
+        ],
+        "classification": "ASSUMED acceptance allocation; PCB 85 C; geometry not measured",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "J502 complete mated pole and clamp",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          2.4
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          3.12
+        ],
+        "classification": "ASSUMED acceptance allocation; contact 60 C; manufacturer application maximum OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Trunk wire AWG16 75 mm",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.9032332677165353,
+          1.0035925196850393,
+          1.1039517716535432
+        ],
+        "hot_min_typ_max": [
+          1.0250787401574804,
+          1.138976377952756,
+          1.2528740157480316
+        ],
+        "classification": "CALCULATED from nominal DCR with ASSUMED 20 C reference, +/-10%; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module PCB traces / vias",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.8121788999960174
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          1
+        ],
+        "classification": "ASSUMED acceptance allocation; PCB 85 C; geometry not measured",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "J502 complete mated pole and clamp",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          2.4
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          3.12
+        ],
+        "classification": "ASSUMED acceptance allocation; contact 60 C; manufacturer application maximum OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Trunk wire AWG16 75 mm",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.9032332677165353,
+          1.0035925196850393,
+          1.1039517716535432
+        ],
+        "hot_min_typ_max": [
+          1.0250787401574804,
+          1.138976377952756,
+          1.2528740157480316
+        ],
+        "classification": "CALCULATED from nominal DCR with ASSUMED 20 C reference, +/-10%; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "AWG22 fan-out 15 mm, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.3658094734251968,
+          0.4064549704724409,
+          0.447100467519685
+        ],
+        "hot_min_typ_max": [
+          0.4151568897637795,
+          0.4612854330708661,
+          0.5074139763779527
+        ],
+        "classification": "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi mated contacts, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          7.692307692307692
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          10.0
+        ],
+        "classification": "ASSUMED acceptance allocation; new hot/conditioned <=20 mOhm/contact procurement target; no qualified mate yet",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi female crimps, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.3076923076923077
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.4
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.8 mOhm target, separate from mating interface",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi male pin / solder attachment, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.1846153846153846
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.24
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.48 mOhm target; actual Pi pin attachment OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "AWG22 fan-out 35 mm, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.2133888594980315,
+          0.23709873277559054,
+          0.2608086060531496
+        ],
+        "hot_min_typ_max": [
+          0.24217485236220473,
+          0.2690831692913386,
+          0.29599148622047244
+        ],
+        "classification": "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi mated contacts, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          1.923076923076923
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          2.5
+        ],
+        "classification": "ASSUMED acceptance allocation; new hot/conditioned <=20 mOhm/contact procurement target; no qualified mate yet",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi female crimps, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.07692307692307693
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.1
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.8 mOhm target, separate from mating interface",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi male pin / solder attachment, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.04615384615384615
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.06
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.48 mOhm target; actual Pi pin attachment OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Fan-out splice",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.3846153846153846
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module solder joints",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.07692307692307693
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.1
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Fan-out splice",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.3846153846153846
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module solder joints",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.07692307692307693
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.1
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      }
+    ],
+    "BSC034_pair_Qg_at_published_test_max_C": 8.2e-08,
+    "hot_Rpair_assumed_ohm": 0.0136,
+    "hot_Rpair_actual_ohm": null,
+    "source_min_assumed_V": 5.026143254670701,
+    "source_actual_min_V": null,
+    "results": {
+      "0": {
+        "ASSUMED_total_negative_excursion_V": 0,
+        "loop_mOhm": 42.672940994094496,
+        "loss_5A_V": 0.21336470497047247,
+        "dissipation_5A_W": 1.0668235248523623,
+        "Vfar_end_CALCULATED_V": 4.812778549700228,
+        "margin_to4p75_V": 0.06277854970022823,
+        "conditional_meets": true,
+        "actual_min_V": null
+      },
+      "0.02": {
+        "ASSUMED_total_negative_excursion_V": 0.02,
+        "loop_mOhm": 42.672940994094496,
+        "loss_5A_V": 0.21336470497047247,
+        "dissipation_5A_W": 1.0668235248523623,
+        "Vfar_end_CALCULATED_V": 4.792778549700229,
+        "margin_to4p75_V": 0.04277854970022865,
+        "conditional_meets": true,
+        "actual_min_V": null
+      },
+      "0.1": {
+        "ASSUMED_total_negative_excursion_V": 0.1,
+        "loop_mOhm": 42.672940994094496,
+        "loss_5A_V": 0.21336470497047247,
+        "dissipation_5A_W": 1.0668235248523623,
+        "Vfar_end_CALCULATED_V": 4.712778549700229,
+        "margin_to4p75_V": -0.03722145029977142,
+        "conditional_meets": false,
+        "actual_min_V": null
+      }
+    },
+    "at6Vgate_and_ASSUMED2x_hot": {
+      "pair_ohm": 0.0204,
+      "loop_mOhm": 49.47294099409449,
+      "Vfar_end_after20mV_V": 4.758778549700229,
+      "actual_V": null
+    }
+  },
+  "gate4a_fix2": {
+    "classification": "CALCULATED design screens; actual electrical bounds remain OPEN",
+    "harness": {
+      "wire": "Belden8502 AWG20 branches; Belden8521 AWG16 trunks",
+      "J502": "Phoenix1776508/1777989; TE3-87456-6/87309-9 at dummy/Pi end",
+      "current_loop_assumed_ohm": 0.04185554624343832,
+      "max_positive_current_at_ratio1p05_A": 2.5609756097560976,
+      "reserve_after20mV_and15mV_uncertainty_V": 0.03186552345350936,
+      "actual_hot_loop_ohm": null
+    },
+    "auxiliary": {
+      "charger_MPN": "TPS259470LRPWR",
+      "Cdvd_nominal_F": 1e-06,
+      "Cdvd_effective_floor_target_F": 5e-07,
+      "nominal_slew_from_TI_equation_V_per_s": 2.0,
+      "conditional_current_over_C_slew_V_per_s": 7.64,
+      "qualified_slew_ceiling_target_V_per_s": 10.0,
+      "total_charged_C_ceiling_target_F": 0.0006,
+      "control_current_ceiling_target_A": 0.04,
+      "capacitor_charge_current_ceiling_A": 0.005999999999999999,
+      "total_output_current_screen_A": 0.046,
+      "input_screen_assumptions": {
+        "Vaux_floor_V": 7.5,
+        "efficiency_floor": 0.75,
+        "converter_and_branch_overhead_A": 0.005,
+        "charger_IQ_max_at_test_condition_A": 0.00061
+      },
+      "auxiliary_input_current_screen_A": 0.1070143748,
+      "stopper_test_condition_min_current_A": 0.13501350135013498,
+      "charger_EN_rising_screen_V": [
+        9.968614273153102,
+        10.471758989677738
+      ],
+      "charger_OV_rising_screen_V": [
+        14.087415044504702,
+        14.772620434406802
+      ],
+      "charger_power_conservative_screen_W": 0.56632095,
+      "TJ_if_TA85_and_74p5CperW_screen_C": 127.19091077499999,
+      "timer_nominal_OC_310uA_from0p5_s": 2.8225806451612905e-05,
+      "timer_testpoint_min_with_start0p5_s": 2.558870967741935e-05,
+      "timer_initial_voltage_actual_V": null,
+      "startup_actual_s": null,
+      "slew_actual_V_per_s": null,
+      "hold_actual_s": null,
+      "Q316_hot_SOA_qualification": null
     }
   }
 }

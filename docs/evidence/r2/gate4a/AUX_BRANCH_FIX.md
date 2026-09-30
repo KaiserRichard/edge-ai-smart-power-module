@@ -1,6 +1,6 @@
 # TASK 2 — independent surge-limited control supply
 
-**VERDICT: retain the architecture; component-level capture BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Existing source exposure and proposed supply independence have been analyzed; startup, dynamic limiting, usable-rail thresholds and hold duration remain OPEN.
+**ROUND-1 ANALYSIS — current charging circuit is F2-02 in [FIX2_RESOLUTIONS.md](FIX2_RESOLUTIONS.md). Retained findings below are historical where superseded. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Existing source exposure and proposed supply independence have been analyzed; startup, dynamic limiting, usable-rail thresholds and hold duration remain OPEN.
 
 **OBSERVATION:** pinned PR15 exported netlist has D303 anode on VIN_FUSED, cathode on VIN_AUX; VIN_AUX feeds both U306/U307 IN and EN, C307 and 10 kΩ R323. It is upstream of U101. A SMCJ36CA 58.1 V pulse clamp therefore reaches this branch despite main-eFuse shutdown. The TVS's 36 V standoff is not a 36 V regulated supply. See [pinned identities](INPUT_PROVENANCE.json) and [primary register](SOURCES.md).
 
@@ -49,3 +49,7 @@ Candidate connection/order details, including exact MPNs, are S03-11…15/17 in 
 **DECISION:** C350 stays an identified **unfrozen**10nF candidate. Neither a bigger timer nor an input gate capacitor is accepted as a complete correction: a gate capacitor slows the stopper output, but U317 can still start its own fixed soft-start after RUN; increasing current limit also requires replacing/requalifying D303 and Q316 hot SOA. A controlled held-bank charger with separately defined control enable, or a differently rated auxiliary supply, requires a full new circuit review. T07C characterizes startup current first on an independently bounded converter coupon; T07A remains blocked pending that circuit. No missing guaranteed startup time/efficiency/SOA is supplied by assumption.
 
 **Rising threshold correction:** TPS3808 hysteresis was missing from the partial freeze. R364 now100k (`TNPW0603100KBEEA`) with R36510k; falling4.343598…4.567313V and conservative rising maximum4.704333V. The superseded110k network could require5.132216V to release and reject a5V rail. Held249k/10k rising maximum11.079803V leaves only41.540mV against the conditional initial rail. CT-open release12…28ms is test-conditioned. Neither monitor is credited with fast loss-of-rail protection. See T07/T15.
+
+## Round-2 active delta
+
+S03-18 selects U327 slew-controlled charging between D304 and DRV_HOLD, with exact pins/parts and a 107.014 mA conditional input screen. U316 ENOUT now qualifies converter RUN. C350 10 nF is selected for the isolated candidate; T07D verifies slew, current, startup and thermal behavior. The 43.065 µs zero-initial-TMR example above is historical; correct OC timing uses the measured initial timer voltage. No prolonged surge ride-through is inferred. U327 initial local ambient≤70°C; the 85°C flat-power thermal sensitivity fails. [F2-02](FIX2_RESOLUTIONS.md) is authoritative for these deltas.

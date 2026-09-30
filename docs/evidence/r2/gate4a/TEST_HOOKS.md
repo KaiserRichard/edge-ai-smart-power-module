@@ -2,7 +2,7 @@
 
 **PROPOSED ONLY. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** No fixture is built or qualified. Every new reference is a reservation to check at capture. Fixture engineering is required before fault energization; this document does not authorize PCB fabrication.
 
-**DECISION:** use the real selected harness terminating in a passive Pi-header emulator with a dummy load. The Pi/SBC, USB and host I2C are physically absent. J502 connector selection and its final pin map are **PENDING** in `feat/v1a-j502-connector`; do not treat the inherited Phoenix pair as selected. Remove the JST host plug for initial faults. Small 2.54 mm signal jumpers are not rated substitutes for a 5 A/fault force connection. Preserve both positive pins 2/4 and GND6/9/14/20/25/30/34/39 at the far end. Its mating male contact construction remains an ASSUMED emulator, not qualification of an actual Pi header.
+**DECISION:** use the real selected harness terminating in a passive Pi-header emulator with a dummy load. The Pi/SBC, USB and host I2C are physically absent. J502 solution A is selected from `41cb9e8`: Phoenix 1776508/1777989, pin 1 LOAD_5V1 / pin 2 GND; TE 3-87456-6 housing and 87309-9 sockets with Belden 8502 AWG20 fanouts and 8521 AWG16 trunks. See [F2-01](FIX2_RESOLUTIONS.md). Remove the JST host plug for initial faults. Small 2.54 mm signal jumpers are not rated substitutes for a 5 A/fault force connection. Preserve both positive pins 2/4 and GND6/9/14/20/25/30/34/39 at the far end. Its mating male contact construction remains an ASSUMED emulator, not qualification of an actual Pi header.
 
 ```mermaid
 flowchart LR

@@ -15,3 +15,5 @@
 **DECISION:** negative paper margins remain OPEN for bounded dummy-load measurement; they are not, by themselves, grounds to undo the owner's developmental test-board choice. A missing circuit connection, supply path, timing endpoint or required bound must still be declared. Pi integration, electrical release, PCB work and fabrication remain blocked until their gates pass.
 
 Worktree `wt-gate4a`, branch `feat/r2-testboard-freeze`, draft PR destination `feat/sheet03-output-protection`. No native CAD files opened/read/saved; no bench activity, orders or merges. Current verdict and detailed closure actions will be in [GATE4A_FREEZE.md](GATE4A_FREEZE.md).
+
+**Round-2 handoff:** connector solution A (`41cb9e8`) is selected. With the retained 13.6 mΩ pair, its current loop screen is 41.855546 mΩ; far-end at 5 A/20 mV trough is 4.796866 V. The 42.672941 mΩ value above is historical. T11/T16 still govern hot assembly and later Pi integration.

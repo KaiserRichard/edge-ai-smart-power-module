@@ -419,14 +419,15 @@
         "R331",
         "R332",
         "R333",
-        "C350"
+        "C350",
+        "C378"
       ],
       "old": "D303: BAT46W-E3-08 / BAT46W-E3-08; U316: NEW; Q316: NEW; R330: NEW; R331: NEW; R332: NEW; R333: NEW; C350: NEW",
-      "new_mpn": "BAT46W-E3-08; LT4363HMS-1#PBF; FDB33N25TM; TNPW0603100KBEEA; TNPW06034K32BEEA; WSL2512R3300FEA; CRCW060310R0FKEA; C1608C0G1H103J080AA",
-      "new_value_or_connection": "raw independent AUX surge stopper: D303->Q316->0.33ohm sense->AUX_LIMITED;100k/4.32k FB;10ohm gate;10nF timer",
+      "new_mpn": "BAT46W-E3-08; LT4363HMS-1#PBF; FDB33N25TM; TNPW0603100KBEEA; TNPW06034K32BEEA; WSL2512R3300FEA; CRCW060310R0FKEA; C1608C0G1H103J080AA; C378 GRM32ER72A105KA01L",
+      "new_value_or_connection": "VIN_FUSED -> D303 -> AUX_RAW -> Q316 drain/source AUX_SNS -> R332 0.33ohm -> AUX_LIMITED. U316 MS12:1 FB=R330/R331,2 OUT=AUX_LIMITED,3 SNS=AUX_SNS,4 GATE->R33310ohm->Q316G,5 VCC=AUX_RAW,6 SHDN=AUX_RAW,7/9 GND,8 UV=AUX_RAW,10 FLT NC,11 ENOUT=AUX_RUN,12 TMR=C35010nF toGND. R330100k AUX_LIMITED-to-FB;R3314.32k FB-toGND. C3781uF100V AUX_RAW-toGND.",
       "reason": "Bound AUX <=35V before its existing LDO EN and cap; branch remains upstream of U101",
-      "governing_equation": "Vclamp=VFB*(1+100k/4.32k)+IFB*100k; Ilim~50mV/0.33",
-      "status": "R4A-16 timer part identity repaired; 10nF value NOT FROZEN pending T07 startup/SOA",
+      "governing_equation": "Vclamp=VFB*(1+100k/4.32k)+IFB*100k; current-limit nominal151.515mA; tOC=C350*(Voff-Vstart)/ITMR, NOT C350*Voff/ITMR",
+      "status": "10nF SELECTED for isolated test coupon with U327 slow hold charging; T07A startup/SOA and T14A surge are pre-energization acceptance; no whole-board release",
       "source": "LT4363/ON"
     },
     {
@@ -465,14 +466,19 @@
         "C354",
         "C355",
         "C356",
-        "C357"
+        "C357",
+        "C377",
+        "C379",
+        "C380",
+        "R345",
+        "R346"
       ],
       "old": "U317: NEW; L301: NEW; R340: NEW; R341: NEW; R342: NEW; R343: NEW; R344: NEW; C351: NEW; C352: NEW; C353: NEW; C354: NEW; C355: NEW; C356: NEW",
-      "new_mpn": "LTC3115IFE-1#PBF; Wurth7447789004; TNPW08051M00BEEA; TNPW060390K9BEEA; TNPW060323K7BEEA; TNPW060315K0BEEA x2; C3216X7R1H475K160AB; GRM32ER71H106KA12L; GRM21BR71E475KA73L; GRM188R71H104KA93D x2; C1608C0G1H102J080AA; GRM1885C1H330JA01D",
-      "new_value_or_connection": "adapt manufacturer p38 6-40V->12V example:4.7uH,1M/90.9k FB,23.7k RT,15k/15k compensation,1nF CFB; 33pF feedforward C357; RUN enable must work below8V",
+      "new_mpn": "LTC3115IFE-1#PBF; Wurth7447789004; TNPW08051M00BEEA; TNPW060390K9BEEA; TNPW060323K7BEEA; TNPW060315K0BEEA x2; C3216X7R1H475K160AB; GRM32ER71H106KA12L; GRM21BR71E475KA73L; GRM188R71H104KA93D x2; C1608C0G1H102J080AA; GRM1885C1H330JA01D; C377 GRM32ER71H106KA12L; C379 GRM21BR71E475KA73L; C380 GRM188R71H104KA93D; R345 TNPW0805464KBEEA; R346 TNPW0603100KBEEA",
+      "new_value_or_connection": "U317 FE20:1/10/11/20/EP21PGND,2RUN=AUX_RUN (R345464k from AUX_LIMITED, R346100k toGND, U316.11 ENOUT directly to AUX_RUN),3SW2=L301B,4PVOUT=AUX_12V,5/6signalGND,7VC,8FB,9RT viaR34223.7k toGND,12VCC=14PVCC,13VIN=17PVIN=AUX_LIMITED,15BST2 viaC355100nF toSW2,16BST1 viaC354100nF toSW1,18SW1=L301A,19PWM/SYNC=GND. C3514.7uF input; C352/C377 each10uF output; C353/C379 each4.7uF internalVCC-toGND; C380100nF VIN-toGND. R3401M AUX_12V-to-FB/R34190.9k FB-toGND. Compensation connection requires p38 audit before acceptance; no claim of a closed compensation net.",
       "reason": "Buck-boost avoids failed9V cascaded LDO dropout; upstream eFuse independence",
       "governing_equation": "V12=VFB*(1+Rt/Rb)+IFB*Rt; input9V minus diode/drop must remain>=6V",
-      "status": "CONDITIONAL block proposal; loop/startup/input-filter/MPN lands OPEN; TMR10nF not frozen",
+      "status": "Explicit FE pins, RUN and local-C identities selected; p38 compensation wiring under review; effective Cout>=10uF/CVCC>=4.7uF and startup/stability T07",
       "source": "LTC3115"
     },
     {
@@ -488,10 +494,10 @@
       ],
       "old": "D304: NEW; C358: NEW; C359: NEW; U318: NEW",
       "new_mpn": "B260-13-F; Panasonic EEUFR1E221 x2; TPS70933DBVR; GRM21BR71E105KA99L; GRM21BR71E475KA73L",
-      "new_value_or_connection": "12V output->D304->DRV_HOLD;2x220uF25V electrolytic; independent3V3_AUX from held rail; U318DBV5:1IN=DRV_HOLD,2GND,3EN=NC(default enabled),4NC,5OUT=3V3_AUX; C3651uF input and C3664.7uF output toGND, effectiveCout>=2.2uF",
+      "new_value_or_connection": "AUX_12V -> D304 A/K -> AUX_PREHOLD -> U327 IN/OUT -> DRV_HOLD; C358/C3592x220uF25V at DRV_HOLD. U318 DBV5:1IN=DRV_HOLD,2GND,3EN NC,4NC,5OUT=3V3_AUX; C3651uF input/C3664.7uF output. D304 is retained reverse-blocking, never bypassed.",
       "reason": "Driver/detector survive input removal and main eFuse OFF; block reverse draining",
       "governing_equation": "thold=(Ceff*(Vstart-Vfloor)-Qgate)/Icontrol; TARGET Ceff>=300uF,I<=40mA,>=1ms",
-      "status": "CONDITIONAL; effective C/leakage/total load/startV OPEN",
+      "status": "Slew-controlled hold charger selected in S03-18; T07 hold/loaded rails and T15 interlock required",
       "source": "HOLD"
     },
     {
@@ -705,6 +711,29 @@
       "governing_equation": "Ceff and rated differential voltage; P=V^2/R; RC delays and regulator stability must retain intended function",
       "status": "R4A-16 identity selections completed; full assembly approval/lands/fixture still OPEN",
       "source": "PASSIVE_COMPLETION.csv / FIX_RESOLUTIONS R4A-16"
+    },
+    {
+      "id": "S03-18",
+      "sheet": "03",
+      "refdes": [
+        "U327",
+        "C374",
+        "C375",
+        "C376",
+        "R374",
+        "R375",
+        "R376",
+        "R377",
+        "R378",
+        "R379"
+      ],
+      "old": "NEW controlled hold-bank charging stage",
+      "new_mpn": "TPS259470LRPWR; C374/C375 GRM21BR71E105KA99L; C376 GRM188R71H104KA93D; R374 CRCW0603100RFKEA; R375 TNPW06036K49BEEA; R376/R378 TNPW0805365KBEEA; R377 TNPW060348K7BEEA; R379 TNPW060333K2BEEA",
+      "new_value_or_connection": "U327 RPW10:1EN dividerR376365k AUX_PREHOLD-to-EN/R37748.7k EN-toGND;2OVLO dividerR378365k AUX_PREHOLD-to-OVLO/R37933.2k OVLO-toGND;3AUXOFF NC testpad;4FLT NC testpad;5IN=AUX_PREHOLD;6OUT=DRV_HOLD;7DVDT->R374100ohm->C3741uF->GND;8GND;9ILM->R3756.49k->GND;10ITIMER NC. C3751uF IN-toGND,C376100nF OUT-toGND. C374 effective>=0.5uF at up to17.312V; no fast bypass fitted.",
+      "reason": "Decouple440uF held bank from U317 fixed soft-start; retain latch-off thermal variant and independent main-eFuse-off controls",
+      "governing_equation": "SRnom=2000/Cdvd[pF] V/ms=2V/s; qualified SR<=10V/s and Ccharged<=600uF -> Icap<=6mA; Icontrols<=40mA; Iaux_screen=(12.311325*(.046+.00061))/(.75*7.5)+.005=107.014375mA",
+      "status": "SELECTED test candidate; T07D measured slew/thermal/startup/hold qualification required; circuit values do not establish a hardware PASS",
+      "source": "TPS25947 SLVSFC9C May2026 pp5-12,29-30,37; F2-02"
     }
   ]
 }
