@@ -1,0 +1,101 @@
+{
+  "analysis_complete": true,
+  "authored_evidence_sha256": {
+    "docs/FINAL_MANAGER_REPORT.md": "f6d515184d190467b567a64c0e111540ec8c5fd28cdfd9850a7c95ffe907e349",
+    "docs/context/06_DECISION_LOG.md": "47a690667e5ec05471873f196d1dc22afcfac5612b8992ab24f23ef18af48b3e",
+    "docs/evidence/r2/sheet03/GATE3_ARCHITECTURE_OPTIONS.md": "5fd1a7c8768e413cd53a55baf64c3cd5930690ed6917cbc9435e87dc1b684d08",
+    "docs/evidence/r2/sheet03/gate3/OPTIONS_CALCULATIONS.json": "13e8fc8cf45f0372a49e19aab2d2cc52f71015ecef976fcf874c75ee7b5ddfb0",
+    "scripts/calculate_sheet03_gate3_options.py": "8eabb997a1c6e11224250cf96f94ff0aa0dfbeddf3110cd762d390edd1d6a843",
+    "tests/test_sheet03_gate3_options.py": "6ed8281adcbdef0d309bc219f9a02fff9012bd79a90afdea1cb3ffdbd886908e",
+    "third_party/sheet03_gate3_source_register.json": "45b612ba2dca936c215b53c507553a5f536b2d384e6d0a9474a0b2ec8563d438"
+  },
+  "baseline_commit": "0677fea0a32fc87b740949d589abe1588e55934c",
+  "branch": "feat/sheet03-gate3-options",
+  "checkpoint_HEAD_before_closure_commit": "05b33390d2307aed3eb1a2005643ccc1b5f15fa7",
+  "checks": {
+    "calculation_reproduction": {
+      "command": "python3 -B scripts/calculate_sheet03_gate3_options.py",
+      "comparison_ignores_CLI_trailing_blank_line": true,
+      "identical_to_stored_calculation_evidence": true
+    },
+    "hardware_metadata_diff": {
+      "changed_files": [],
+      "command": "git diff 0677fea0a32fc87b740949d589abe1588e55934c --name-only -- hardware"
+    },
+    "json_parse": {
+      "files": [
+        "docs/evidence/r2/sheet03/gate3/OPTIONS_CALCULATIONS.json",
+        "third_party/sheet03_gate3_source_register.json"
+      ],
+      "pass": true
+    },
+    "preserved_historical_evidence": {
+      "changed_files": [],
+      "files": [
+        "docs/evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md",
+        "docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md",
+        "docs/evidence/r2/sheet03/GATE2_CALCULATIONS.md",
+        "docs/evidence/r2/sheet03/CALCULATIONS.json"
+      ]
+    },
+    "report_local_links": {
+      "count": 12,
+      "missing": []
+    },
+    "source_archives": [
+      {
+        "id": "lm61460",
+        "match": true,
+        "path": "third_party/documents/sheet03_gate3/lm61460.pdf",
+        "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d"
+      },
+      {
+        "id": "mersen_dc",
+        "match": true,
+        "path": "third_party/documents/sheet03_gate3/mersen_dc.pdf",
+        "sha256": "bf906829201ab4eb1eeeb6667e07879610d119968b7e4b20ca8373b1604ff67d"
+      },
+      {
+        "id": "lto50",
+        "match": true,
+        "path": "third_party/documents/sheet03_gate3/lto50.pdf",
+        "sha256": "f71e259909d8ad2bdf778592a46cbc45a966ae97437aacb75b0b584623071a15"
+      }
+    ],
+    "targeted_tests": {
+      "command": "python3 -B -m unittest discover -s tests -p test_sheet03_gate3_options.py -v",
+      "count": 12,
+      "output": "test_A_bound_conserves_worst_initial_and_input_energy (test_sheet03_gate3_options.ArchitectureBounds.test_A_bound_conserves_worst_initial_and_input_energy) ... ok\ntest_A_longer_action_is_blocking (test_sheet03_gate3_options.ArchitectureBounds.test_A_longer_action_is_blocking) ... ok\ntest_A_longer_normal_response_is_blocking (test_sheet03_gate3_options.ArchitectureBounds.test_A_longer_normal_response_is_blocking) ... ok\ntest_C_DC_and_low_intermediate_window_fail (test_sheet03_gate3_options.ArchitectureBounds.test_C_DC_and_low_intermediate_window_fail) ... ok\ntest_D_module_pass_does_not_close_Pi_harness (test_sheet03_gate3_options.ArchitectureBounds.test_D_module_pass_does_not_close_Pi_harness) ... ok\ntest_D_remaining_module_cap_is_an_additional_energy_source (test_sheet03_gate3_options.ArchitectureBounds.test_D_remaining_module_cap_is_an_additional_energy_source) ... ok\ntest_D_store_subtotal_does_not_bound_unknown_separate_Pi_C (test_sheet03_gate3_options.ArchitectureBounds.test_D_store_subtotal_does_not_bound_unknown_separate_Pi_C) ... ok\ntest_E_smaller_C_and_unlimited_overshoot_are_blocking (test_sheet03_gate3_options.ArchitectureBounds.test_E_smaller_C_and_unlimited_overshoot_are_blocking) ... ok\ntest_ballast_energy_cannot_assume_quarter_at_independent_corners (test_sheet03_gate3_options.ArchitectureBounds.test_ballast_energy_cannot_assume_quarter_at_independent_corners) ... ok\ntest_no_current_bound_without_positive_inductance (test_sheet03_gate3_options.ArchitectureBounds.test_no_current_bound_without_positive_inductance) ... ok\ntest_supply_charge_budget_covers_only_its_assumed_load_and_duration (test_sheet03_gate3_options.ArchitectureBounds.test_supply_charge_budget_covers_only_its_assumed_load_and_duration) ... ok\ntest_unknown_application_maxima_are_not_zero (test_sheet03_gate3_options.ArchitectureBounds.test_unknown_application_maxima_are_not_zero) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.003s\n\nOK",
+      "returncode": 0
+    }
+  },
+  "date": "2026-09-30",
+  "electrical_release_status": "BLOCKED",
+  "limitations": [
+    "All five application VPi maxima remain null/OPEN.",
+    "Finite results are conditional ASSUMED-target calculations, not datasheet-qualified application maxima.",
+    "Positive numerical screens do not close missing source/current/timing/supply/hot-SOA bounds.",
+    "Negative voltage/timing/normal-margin screens remain BLOCKING.",
+    "D source/raw/module energy subtotal excludes unknown separate Pi C; complete all-store maximum is null."
+  ],
+  "not_performed": [
+    "native KiCad file inspection/edit",
+    "ERC",
+    "DRC",
+    "schematic/PCB export",
+    "SPICE simulation",
+    "bench electrical/fault test",
+    "component purchase",
+    "PR merge"
+  ],
+  "option_checkpoints_pushed": [
+    "03e82e8",
+    "ce71adb",
+    "adf6dd6",
+    "6ffbe69",
+    "05b3339"
+  ],
+  "recommendation": "E; owner approval required before schematic change",
+  "runner_up": "D; full harness/capacitor/current contract required",
+  "scope": "Analysis/documentary validation only; no electrical qualification"
+}
