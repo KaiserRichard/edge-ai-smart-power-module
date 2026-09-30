@@ -31,6 +31,7 @@ Reply only with the image.
 |---|---|---|---|
 | F0.1 | 00 System overview | `f0-01-power-journey-robot.png` | Battery-to-Pi journey inside the robot |
 | F0.2 | 00 | `f0-02-v1a-board-exploded.png` | V1A as five functional zones |
+| F0.4 | 00 | `f0-04-circuit-boundary.png` | Actual shunt, local-supply branch and output pins |
 | F0.3 | 00 | `f0-03-five-jobs-analogy.png` | Distribute / convert / protect / measure analogy |
 | F1.1 | 01 Input protection | `f1-01-input-guards-analogy.png` | Four guards at a gate |
 | F1.2 | 01 | `f1-02-tvs-vs-fuse-timescale.png` | Fast spike vs slow overload |
@@ -488,3 +489,22 @@ Draw two conceptual side-by-side system views with the same buck, module, harnes
 MUST NOT show: D as lossless, E as selected by the owner, either alternative as qualified, or the computer connected during fault tests.
 
 Reject if: the two protection locations are indistinguishable or the harness return is missing.
+
+
+---
+
+## Schematic companions added after the owner's PDF feedback
+
+These prompts complement the existing analogies. Attach the named **review PDF page** and the matching **v2 circuit PNG** as references when generating them. Preserve connectivity, refdes and pins; leave out omitted circuitry rather than inventing it. The code excerpts are permitted by the owner's final request for exact simple circuits. They are teaching excerpts, not new design files.
+
+### F0.4 — Where the branch measurement ends
+
+Target filename: `f0-04-circuit-boundary.png`
+
+```text
+Make a clean, readable CIRCUIT picture using the Batch F colours. Reference: V1A_REVIEW_READABLE.pdf page 5 (Kelvin shunt / local telemetry supply), page 6 (load output), and v2-00-circuit-boundary.png. Copy only this exact connectivity: VOUT_PROTECTED enters R401 force pin 1; a 2 mΩ resistance leaves force pin 4 as LOAD_5V1, which reaches J502 pin 1 (+). J502 pin 2 (RETURN) reaches GND. A branch BEFORE R401 goes to U402 pin 1 (IN); label it "Local telemetry supply". R401 is a four-terminal device: label "Sense pins 2/3 omitted; see Lesson 04" without inventing a connection. Use conventional electrical symbols and ample space for pin names. Label "Captured subset · PDF pages 5–6" and "Teaching excerpt — not for fabrication". Draw no external computer; this picture ends at J502.
+```
+
+MUST NOT show: the local supply after R401; J502 as a 40-pin Pi header; sense pins carrying load current; a new circuit bridging Sheet 03; physical validation.
+
+Reject if: LOAD_5V1 and VOUT_PROTECTED are shorted around R401, or J502 return is absent.
