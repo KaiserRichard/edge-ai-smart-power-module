@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "pdf": "docs/evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf",
+  "sha256": "16627ebce40996055e3133e454f7b0abe5d26d92ccb4b0140636a989c49be992",
+  "page_count": 6,
+  "pages": [
+    {
+      "page": 1,
+      "sheet": "V1A",
+      "paper": "A3",
+      "width_mm": 419.989,
+      "height_mm": 297.002,
+      "warning_verified": true,
+      "image": "docs/evidence/r2/sheet03/readability/page_01_V1A_100pct.png",
+      "image_pixels": [
+        1588,
+        1123
+      ],
+      "image_dpi": 96,
+      "image_sha256": "12875b2453f1152cf9b2791df92671982017f93df4f52f2904ba54b81413772c"
+    },
+    {
+      "page": 2,
+      "sheet": "01_INPUT_PROTECTION",
+      "paper": "A3",
+      "width_mm": 419.989,
+      "height_mm": 297.002,
+      "warning_verified": true,
+      "image": "docs/evidence/r2/sheet03/readability/page_02_01_INPUT_PROTECTION_100pct.png",
+      "image_pixels": [
+        1588,
+        1123
+      ],
+      "image_dpi": 96,
+      "image_sha256": "0bf14f91a4d0ce19cc5aea79ec63012a67b9412a9624912d2b3e1345aa0653f9"
+    },
+    {
+      "page": 3,
+      "sheet": "02_BUCK_5V",
+      "paper": "A3",
+      "width_mm": 419.989,
+      "height_mm": 297.002,
+      "warning_verified": true,
+      "image": "docs/evidence/r2/sheet03/readability/page_03_02_BUCK_5V_100pct.png",
+      "image_pixels": [
+        1588,
+        1123
+      ],
+      "image_dpi": 96,
+      "image_sha256": "8ff3f54da69aedff0d2f2db35f92c09458b3654c882c63e1680b2a9a139250a0"
+    },
+    {
+      "page": 4,
+      "sheet": "03_OUTPUT_PROTECTION",
+      "paper": "A2",
+      "width_mm": 594.004,
+      "height_mm": 419.989,
+      "warning_verified": true,
+      "image": "docs/evidence/r2/sheet03/readability/page_04_03_OUTPUT_PROTECTION_100pct.png",
+      "image_pixels": [
+        2246,
+        1588
+      ],
+      "image_dpi": 96,
+      "image_sha256": "147b5fc6b916712021cdf8c1c6f3973dfc74bc179819515810f5551721591c7a"
+    },
+    {
+      "page": 5,
+      "sheet": "04_POWER_MONITOR",
+      "paper": "A3",
+      "width_mm": 419.989,
+      "height_mm": 297.002,
+      "warning_verified": true,
+      "image": "docs/evidence/r2/sheet03/readability/page_05_04_POWER_MONITOR_100pct.png",
+      "image_pixels": [
+        1588,
+        1123
+      ],
+      "image_dpi": 96,
+      "image_sha256": "60f7634bd33a15761807282ba16b48f78ed478bc9fb50e8bf0ed6a22024f9c84"
+    },
+    {
+      "page": 6,
+      "sheet": "05_IO_TEST",
+      "paper": "A3",
+      "width_mm": 419.989,
+      "height_mm": 297.002,
+      "warning_verified": true,
+      "image": "docs/evidence/r2/sheet03/readability/page_06_05_IO_TEST_100pct.png",
+      "image_pixels": [
+        1588,
+        1123
+      ],
+      "image_dpi": 96,
+      "image_sha256": "fba93d8d6a1dce4c04a1492de6bc1ff8083c75414afb0b6b53c5c0d0db19d47a"
+    }
+  ],
+  "method": "Native KiCad vector export; exact landscape A3/A2; no scaling or added margin.",
+  "image_method": "96 pixels per physical inch: 100% CSS/display scaling reference. Readability also depends on display DPI and viewer settings.",
+  "visual_review": "Human-agent inspection recorded separately in GATE2B_VALIDATION.md; image generation alone is not visual review."
+}
