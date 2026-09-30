@@ -1,0 +1,703 @@
+{
+  "ASSUMED_source_contract": {
+    "Cin_effective_max_F": 3e-05,
+    "Cin_main_ceramic_effective_min_F": 1e-05,
+    "Ldiff_max_H": 1.2e-05,
+    "Ldiff_min_H": 5e-06,
+    "Ldiff_qualified_domain_A": 100.0,
+    "classification": "ASSUMED qualification contract, not selected/qualified implementation",
+    "initial_L_current_A_max": 8.0,
+    "initial_output_voltage_V_max": 5.5,
+    "mandatory_VIN_pair_bypasses_nominal_F_each": 1e-07,
+    "mandatory_bypass_count": 2,
+    "physical_source_current_off_s_max": 1e-05,
+    "raw_cap_bank_max_F": 0.0055965599999999996,
+    "source_positive_charge_until_actual_current_isolation_C": 0.0001
+  },
+  "CALCULATED_source_contract": [
+    {
+      "L_envelopes": [
+        {
+          "I_upper_A": 17.6,
+          "Q_to_raw_upper_C": 2.56e-05,
+          "time_s": 2e-06
+        },
+        {
+          "I_upper_A": 32.0,
+          "Q_to_raw_upper_C": 0.00010000000000000002,
+          "time_s": 5e-06
+        },
+        {
+          "I_upper_A": 56.00000000000001,
+          "Q_to_raw_upper_C": 0.00032,
+          "time_s": 1e-05
+        },
+        {
+          "I_upper_A": 67.59881655768835,
+          "Q_to_raw_upper_C": 0.0009819743587499144,
+          "time_s": 2e-05
+        }
+      ],
+      "Vin_V": 24.0,
+      "conditional_L_current_ceiling_A": 67.59881655768835,
+      "continued_source_work_J": 0.0024000000000000002,
+      "existing_Cin_60p996uF_I_screen_A": 90.22382833819455,
+      "initial_L_energy_J": 0.000384,
+      "local_input_energy_J": 0.00864,
+      "new_fault_pool_J": 0.011424000000000002,
+      "raw_initial_cap_energy_J": 0.08464796999999999,
+      "source_limit_does_not_bound_Cin_discharge_A_at0p1uH": 415.76916672596104,
+      "source_plus_raw_initial_pool_J": 0.09607196999999999,
+      "within_100A_domain": true
+    },
+    {
+      "L_envelopes": [
+        {
+          "I_upper_A": 19.052,
+          "Q_to_raw_upper_C": 2.7051999999999998e-05,
+          "time_s": 2e-06
+        },
+        {
+          "I_upper_A": 35.629999999999995,
+          "Q_to_raw_upper_C": 0.00010907500000000001,
+          "time_s": 5e-06
+        },
+        {
+          "I_upper_A": 63.26,
+          "Q_to_raw_upper_C": 0.0003563,
+          "time_s": 1e-05
+        },
+        {
+          "I_upper_A": 76.41532176206549,
+          "Q_to_raw_upper_C": 0.0011047942879551216,
+          "time_s": 2e-05
+        }
+      ],
+      "Vin_V": 27.63,
+      "conditional_L_current_ceiling_A": 76.41532176206549,
+      "continued_source_work_J": 0.002763,
+      "existing_Cin_60p996uF_I_screen_A": 102.8196257845748,
+      "initial_L_energy_J": 0.000384,
+      "local_input_energy_J": 0.0114512535,
+      "new_fault_pool_J": 0.0145982535,
+      "raw_initial_cap_energy_J": 0.08464796999999999,
+      "source_limit_does_not_bound_Cin_discharge_A_at0p1uH": 478.63249994123885,
+      "source_plus_raw_initial_pool_J": 0.0992462235,
+      "within_100A_domain": true
+    },
+    {
+      "L_envelopes": [
+        {
+          "I_upper_A": 19.315684595360928,
+          "Q_to_raw_upper_C": 2.731568459536093e-05,
+          "time_s": 2e-06
+        },
+        {
+          "I_upper_A": 36.28921148840233,
+          "Q_to_raw_upper_C": 0.00011072302872100582,
+          "time_s": 5e-06
+        },
+        {
+          "I_upper_A": 64.57842297680466,
+          "Q_to_raw_upper_C": 0.00036289211488402327,
+          "time_s": 1e-05
+        },
+        {
+          "I_upper_A": 78.01823747912674,
+          "Q_to_raw_upper_C": 0.0011271118130617274,
+          "time_s": 2e-05
+        }
+      ],
+      "Vin_V": 28.289211488402323,
+      "conditional_L_current_ceiling_A": 78.01823747912674,
+      "continued_source_work_J": 0.0028289211488402325,
+      "existing_Cin_60p996uF_I_screen_A": 105.10917168782437,
+      "initial_L_energy_J": 0.000384,
+      "local_input_energy_J": 0.01200419229953331,
+      "new_fault_pool_J": 0.015217113448373542,
+      "raw_initial_cap_energy_J": 0.08464796999999999,
+      "source_limit_does_not_bound_Cin_discharge_A_at0p1uH": 490.0488200074215,
+      "source_plus_raw_initial_pool_J": 0.09986508344837353,
+      "within_100A_domain": true
+    }
+  ],
+  "D_E_rescore": {
+    "D_application_Pi_peak_V": null,
+    "D_complete_store_max_J": null,
+    "D_module_margin_V": 0.020000000000000462,
+    "D_module_target_peak_V_at80A": 5.4799999999999995,
+    "D_protected_interval_energy_J_at80A": 0.0008768,
+    "D_source_raw_module_subtotal_J": 0.12255258344837353,
+    "E_100ASE_two_pairs_before_new_shunt_L_ohm": 0.0513677405019685,
+    "E_Lfloor_proposal_H": 3.5e-05,
+    "E_Lmax_proposal_H": 5e-05,
+    "E_Pi_5A_screen_V": 4.790207699219575,
+    "E_REQUIRED_full_current_trip_max_A": 8.0,
+    "E_application_Pi_peak_V": null,
+    "E_application_total_protected_charge_C": null,
+    "E_breaker_threshold_A_at_35_45mV_and6mohm_pm1pct": [
+      5.775577557755776,
+      7.575757575757575
+    ],
+    "E_current_with35uH_2us_31p5V_A": 9.8,
+    "E_existing_loop_plus_10mohm_Pi_V": 4.711432699219575,
+    "E_ideal_constant5p42V_choke_tail_charge_screen_C": 0.0004612546125461255,
+    "E_ideal_constant5p42V_choke_tail_duration_screen_s": 9.225092250922509e-05,
+    "E_initial_interval_received_charge_screen_C": 5e-05,
+    "E_initial_interval_series_screen_using_NEW5p34_target_V": 5.459999999999999,
+    "E_no_absorber_choke_tail_counterexample_V": 5.6316605011310825,
+    "E_no_absorber_choke_tail_margin_V": -0.13166050113108252,
+    "E_normal_loop_target_ohm": 0.049612740501968504,
+    "E_received_absorber_energy_screen_J": 0.002771,
+    "E_required_Lfloor_H_at_31p5V": 3.15e-05,
+    "E_required_physical_off_s": 2e-06,
+    "E_source_raw_Pi_last_choke_initial_subtotal_J": 0.12415258344837353,
+    "actual_trip_min_max_V": [
+      null,
+      null
+    ],
+    "classification": "CALCULATED only within stated ASSUMED contracts; application proof OPEN",
+    "new_qualified_trip_target_V": [
+      5.3,
+      5.34
+    ],
+    "normal6_30us_reserve_V": -0.005248530541659762,
+    "normal6_false_trip_reserve_V": 0.019684980096638112,
+    "normal8_false_trip_reserve_V": -0.018794063197910875,
+    "normal_release_6A_20us_V": 5.270315019903362,
+    "normal_release_8A_20us_V": 5.308794063197911
+  },
+  "actual_input_transient_ceiling_V": null,
+  "actual_source_current_max_A": null,
+  "actual_source_energy_max_J": null,
+  "baseline_commit": "65a8698",
+  "classification": "Conditional engineering study; not validated or qualified electrical behavior",
+  "curve_models": {
+    "7443763540068": {
+      "actual_reaction_min_max_s": [
+        null,
+        null
+      ],
+      "application_fault_current_max_A": null,
+      "classification": "CALCULATED with ASSUMED typical graph proxy at20C; tolerance/temp/pulse transfer OPEN",
+      "maintained_source_fault_screens": [
+        {
+          "I_A": 15.058823529411764,
+          "L_energy_change_J": 0.0005534117647058823,
+          "Q_C": 2.3058823529411763e-05,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0005534117647058823,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 25.647058823529413,
+          "L_energy_change_J": 0.0020188235294117647,
+          "Q_C": 8.411764705882354e-05,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0020188235294117647,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 43.29511560540929,
+          "L_energy_change_J": 0.006155301567940701,
+          "Q_C": 0.00025647089866419586,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.006155301567940701,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": null,
+          "Q_C": null,
+          "Vin_V": 24.0,
+          "domain": "OPEN: model exits tabulated proxy domain",
+          "time_from_fault_s": 2e-05
+        },
+        {
+          "I_A": 16.126470588235293,
+          "L_energy_change_J": 0.000666614382352941,
+          "Q_C": 2.412647058823529e-05,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.000666614382352941,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 28.31617647058824,
+          "L_energy_change_J": 0.0025085398897058825,
+          "Q_C": 9.079044117647059e-05,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0025085398897058825,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 48.63921286755247,
+          "L_energy_change_J": 0.007823893731383218,
+          "Q_C": 0.00028316662075219753,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.007823893731383218,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": null,
+          "Q_C": null,
+          "Vin_V": 27.63,
+          "domain": "OPEN: model exits tabulated proxy domain",
+          "time_from_fault_s": 2e-05
+        },
+        {
+          "I_A": 16.32035632011833,
+          "L_energy_change_J": 0.0006880037034131292,
+          "Q_C": 2.432035632011832e-05,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0006880037034131292,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 28.800890800295825,
+          "L_energy_change_J": 0.00260267045702792,
+          "Q_C": 9.200222700073955e-05,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.00260267045702792,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 49.610270322620494,
+          "L_energy_change_J": 0.008147729576244614,
+          "Q_C": 0.00028801543583443194,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.008147729576244614,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": null,
+          "Q_C": null,
+          "Vin_V": 28.289211488402323,
+          "domain": "OPEN: model exits tabulated proxy domain",
+          "time_from_fault_s": 2e-05
+        }
+      ],
+      "normal": [
+        {
+          "Vin_V": 9.0,
+          "copper120_W_with_assumed_copper_TCR": 0.04188197793216512,
+          "copper20_W_at5A_with_ripple": 0.030066028666306616,
+          "ripple_Lminus20pct_f360kHz_App": 1.1285836808769714,
+          "ripple_nominal_App": 0.8125802502314194
+        },
+        {
+          "Vin_V": 24.0,
+          "copper120_W_with_assumed_copper_TCR": 0.04209356442689077,
+          "copper20_W_at5A_with_ripple": 0.030217921340194378,
+          "ripple_Lminus20pct_f360kHz_App": 2.050299869828489,
+          "ripple_nominal_App": 1.4762159062765121
+        },
+        {
+          "Vin_V": 28.289211488402323,
+          "copper120_W_with_assumed_copper_TCR": 0.042118901683478004,
+          "copper20_W_at5A_with_ripple": 0.030236110325540556,
+          "ripple_Lminus20pct_f360kHz_App": 2.1341502592601924,
+          "ripple_nominal_App": 1.5365881866673388
+        }
+      ],
+      "part": {
+        "DCR20_max_mohm": 1.2,
+        "L_uH": 6.8,
+        "points_A_uH": [
+          [
+            0,
+            6.8
+          ],
+          [
+            5,
+            6.8
+          ],
+          [
+            20,
+            6.8
+          ],
+          [
+            40,
+            6.8
+          ],
+          [
+            60,
+            6.775
+          ]
+        ]
+      }
+    },
+    "74437636350652": {
+      "actual_reaction_min_max_s": [
+        null,
+        null
+      ],
+      "application_fault_current_max_A": null,
+      "classification": "CALCULATED with ASSUMED typical graph proxy at20C; tolerance/temp/pulse transfer OPEN",
+      "maintained_source_fault_screens": [
+        {
+          "I_A": 15.435849722788006,
+          "L_energy_change_J": 0.0005622319811413388,
+          "Q_C": 2.3426332547555782e-05,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0005622319811413388,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 26.7101769331833,
+          "L_energy_change_J": 0.0020784375996174597,
+          "Q_C": 8.660156665072749e-05,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0020784375996174597,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 45.98026379854876,
+          "L_energy_change_J": 0.006432534517518232,
+          "Q_C": 0.0002680222715632597,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.006432534517518232,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": 88.84798144028579,
+          "L_energy_change_J": 0.02245242648921517,
+          "Q_C": 0.0009355177703839654,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.02245242648921517,
+          "time_from_fault_s": 2e-05
+        },
+        {
+          "I_A": 16.56551857430388,
+          "L_energy_change_J": 0.0006783961471548705,
+          "Q_C": 2.4552882633183878e-05,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0006783961471548705,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 29.582677902962438,
+          "L_energy_change_J": 0.0025892755057908287,
+          "Q_C": 9.371246854110854e-05,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0025892755057908287,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 52.01006728414464,
+          "L_energy_change_J": 0.008210693635350154,
+          "Q_C": 0.0002971658934256299,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.008210693635350154,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": 103.94760724345286,
+          "L_energy_change_J": 0.029442299620823672,
+          "Q_C": 0.0010655917343765353,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.029442299620823672,
+          "time_from_fault_s": 2e-05
+        },
+        {
+          "I_A": 16.77080966835385,
+          "L_energy_change_J": 0.0007003718329069832,
+          "Q_C": 2.4757559368316552e-05,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0007003718329069832,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 30.10573227596548,
+          "L_energy_change_J": 0.002687643600826637,
+          "Q_C": 9.50059566675616e-05,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.002687643600826637,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 53.11822468935942,
+          "L_energy_change_J": 0.008557200256422868,
+          "Q_C": 0.0003024898824037937,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.008557200256422868,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": 106.85290741903276,
+          "L_energy_change_J": 0.03083185952367005,
+          "Q_C": 0.0010898804845200488,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.03083185952367005,
+          "time_from_fault_s": 2e-05
+        }
+      ],
+      "normal": [
+        {
+          "Vin_V": 9.0,
+          "copper120_W_with_assumed_copper_TCR": 0.014591914672698728,
+          "copper20_W_at5A_with_ripple": 0.010475172055060109,
+          "ripple_Lminus20pct_f360kHz_App": 1.1806721584559086,
+          "ripple_nominal_App": 0.8500839540882543
+        },
+        {
+          "Vin_V": 24.0,
+          "copper120_W_with_assumed_copper_TCR": 0.01467257762097754,
+          "copper20_W_at5A_with_ripple": 0.010533077976293999,
+          "ripple_Lminus20pct_f360kHz_App": 2.144929094589804,
+          "ripple_nominal_App": 1.5443489481046588
+        },
+        {
+          "Vin_V": 28.289211488402323,
+          "copper120_W_with_assumed_copper_TCR": 0.014682236922816597,
+          "copper20_W_at5A_with_ripple": 0.010540012148468482,
+          "ripple_Lminus20pct_f360kHz_App": 2.232649501995278,
+          "ripple_nominal_App": 1.6075076414366005
+        }
+      ],
+      "part": {
+        "DCR20_max_mohm": 0.418,
+        "L_uH": 6.5,
+        "points_A_uH": [
+          [
+            0,
+            6.5
+          ],
+          [
+            5,
+            6.5
+          ],
+          [
+            20,
+            6.4
+          ],
+          [
+            40,
+            6.2
+          ],
+          [
+            60,
+            5.8
+          ],
+          [
+            80,
+            5.3
+          ],
+          [
+            100,
+            4.7
+          ],
+          [
+            120,
+            4.1
+          ]
+        ]
+      }
+    },
+    "74437636351002": {
+      "actual_reaction_min_max_s": [
+        null,
+        null
+      ],
+      "application_fault_current_max_A": null,
+      "classification": "CALCULATED with ASSUMED typical graph proxy at20C; tolerance/temp/pulse transfer OPEN",
+      "maintained_source_fault_screens": [
+        {
+          "I_A": 12.834924022963744,
+          "L_energy_change_J": 0.000499912594823839,
+          "Q_C": 2.082969145099329e-05,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.000499912594823839,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 20.14696908150767,
+          "L_energy_change_J": 0.0016868258104637468,
+          "Q_C": 7.028440876932279e-05,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0016868258104637468,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 32.61512171620687,
+          "L_energy_change_J": 0.004848109470816743,
+          "Q_C": 0.00020200456128403096,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.004848109470816743,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": 59.339199875843676,
+          "L_energy_change_J": 0.015819491379601158,
+          "Q_C": 0.0006591454741500482,
+          "Vin_V": 24.0,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.015819491379601158,
+          "time_from_fault_s": 2e-05
+        },
+        {
+          "I_A": 13.56895128407254,
+          "L_energy_change_J": 0.000595758222753973,
+          "Q_C": 2.1562005890480382e-05,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.000595758222753973,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 22.00461778278131,
+          "L_energy_change_J": 0.002069336770566553,
+          "Q_C": 7.489456281456942e-05,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.002069336770566553,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 36.476829731907785,
+          "L_energy_change_J": 0.006101996415184096,
+          "Q_C": 0.00022084677579385073,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.006101996415184096,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": 68.15927497408467,
+          "L_energy_change_J": 0.020445115254164602,
+          "Q_C": 0.0007399607402882592,
+          "Vin_V": 27.63,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.020445115254164602,
+          "time_from_fault_s": 2e-05
+        },
+        {
+          "I_A": 13.702329321426166,
+          "L_energy_change_J": 0.000613735761596166,
+          "Q_C": 2.169504660275802e-05,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.000613735761596166,
+          "time_from_fault_s": 2e-06
+        },
+        {
+          "I_A": 22.343014392151716,
+          "L_energy_change_J": 0.0021424228532960733,
+          "Q_C": 7.573285859078817e-05,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.0021424228532960733,
+          "time_from_fault_s": 5e-06
+        },
+        {
+          "I_A": 37.182836810810585,
+          "L_energy_change_J": 0.006344782100816149,
+          "Q_C": 0.00022428274833384126,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.006344782100816149,
+          "time_from_fault_s": 1e-05
+        },
+        {
+          "I_A": 69.80818334901477,
+          "L_energy_change_J": 0.021354595777630735,
+          "Q_C": 0.0007548671261616974,
+          "Vin_V": 28.289211488402323,
+          "domain": "ASSUMED graph proxy only; not an application bound",
+          "source_work_J": 0.021354595777630735,
+          "time_from_fault_s": 2e-05
+        }
+      ],
+      "normal": [
+        {
+          "Vin_V": 9.0,
+          "copper120_W_with_assumed_copper_TCR": 0.023774821555298507,
+          "copper20_W_at5A_with_ripple": 0.017067352157428935,
+          "ripple_Lminus20pct_f360kHz_App": 0.7674369029963406,
+          "ripple_nominal_App": 0.5525545701573653
+        },
+        {
+          "Vin_V": 24.0,
+          "copper120_W_with_assumed_copper_TCR": 0.02383042592188176,
+          "copper20_W_at5A_with_ripple": 0.01710726914707951,
+          "ripple_Lminus20pct_f360kHz_App": 1.3942039114833724,
+          "ripple_nominal_App": 1.0038268162680284
+        },
+        {
+          "Vin_V": 28.289211488402323,
+          "copper120_W_with_assumed_copper_TCR": 0.023837084485346865,
+          "copper20_W_at5A_with_ripple": 0.017112049163924527,
+          "ripple_Lminus20pct_f360kHz_App": 1.451222176296931,
+          "ripple_nominal_App": 1.0448799669337905
+        }
+      ],
+      "part": {
+        "DCR20_max_mohm": 0.682,
+        "L_uH": 10.0,
+        "points_A_uH": [
+          [
+            0,
+            10.0
+          ],
+          [
+            5,
+            10.0
+          ],
+          [
+            20,
+            9.8
+          ],
+          [
+            40,
+            9.25
+          ],
+          [
+            60,
+            8.4
+          ],
+          [
+            80,
+            7.5
+          ],
+          [
+            100,
+            6.6
+          ]
+        ]
+      }
+    }
+  },
+  "supply_hold": {
+    "Icontrol_A": 0.025,
+    "Qg_aggregate_C": 2.036e-06,
+    "Vstart_min": 11.2,
+    "Vvalid_min": 10.5,
+    "available_hold_s": 0.0012345599999999998,
+    "classification": "CALCULATED with ASSUMED load/charge/rail values; hot gate/supply validity OPEN",
+    "effective_C_F": 4.7e-05,
+    "hold_required_s": 0.001,
+    "required_C_F": 3.862285714285714e-05
+  }
+}

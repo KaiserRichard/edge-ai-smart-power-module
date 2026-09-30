@@ -246,3 +246,19 @@ No commit, push, purchase, ignored-cache deletion or schematic implementation wa
 **OPEN RISKS:** Every application worst-case Pi voltage remains OPEN/BLOCKING. No exact limiter/clamp/dump BOM is qualified. Source replenishment, raw-bank bypass current, saturated differential inductance, hot SOA/pulse/terminal ratings, complete timing and loaded driver/reference validity require applicable bounds. Harness resistance and normal/transient voltage windows are tight; adding a protection stage to the existing loop without recovering resistance fails the 4.75 V requirement. The upstream converter and local auxiliary supply/wiring contract are unselected. Negative margin screens remain BLOCKING.
 
 **NEXT GATE:** Owner approval of the proposed architecture and development allocations; then component/source/harness qualification and recalculation before any authorized schematic change. Maintain R2/R3 release BLOCKED and use dummy-load fault tests before SBC integration. The requested draft PR targets `feat/sheet03-output-protection`; do not merge.
+
+---
+
+# Manager update — Sheet 03 Gate 3b source-bound study (2026-09-30)
+
+**STATUS: BLOCKED for electrical qualification; requested analysis complete. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** The owner decides alone; there is no senior-reviewer approval step. This update follows the Gate3 proposal without changing hardware or historical decisions.
+
+**WHAT WAS DONE:** Compared three real manufacturer L/I-curve candidates and timed input-limit/source isolation, including local capacitor bypass, OVP tolerance corners, charge/energy pools, complete timing/rail/fault-policy proposals and D/E re-score. Added a one-page owner explanation and ten owner decisions with alternatives, consequences and recommendations. A pushed checkpoint follows each finished analysis sub-step. The accidental independent path-budget task was skipped.
+
+**EVIDENCE:** [Gate3b report](evidence/r2/sheet03/gate3b/GATE3B_SOURCE_BOUND.md), [conditional arithmetic](evidence/r2/sheet03/gate3b/SOURCE_BOUND_CALCULATIONS.json), [primary source register](evidence/r2/sheet03/gate3b/SOURCES.json) and [validation](evidence/r2/sheet03/gate3b/VALIDATION.json). Fourteen targeted tests cover conservation, current/charge/curve domains, magnetic tail and missing application bounds. No native KiCad file, ERC/DRC, export, simulation or bench work is claimed.
+
+**DECISIONS:** Recommend neither D nor E for implementation approval yet. Pursue timed source isolation, a qualified local-C implementation and the larger 10 µH metal-alloy candidate's minimum differential-L envelope as the source development route. This is an unapproved proposal; no frozen requirement or accepted schematic is superseded.
+
+**OPEN RISKS:** Actual source voltage/current/energy and physical reaction minima/maxima remain OPEN. Manufacturer typical curves do not supply a hot/lot/fault envelope. Local input/output stores, post-isolation leakage/restart, raw-bank receiving current, E's choke current tail/healthy release, new detector/clamp limits, loaded gate drive, hot SOA and real resistance/contact bounds remain unqualified. Negative voltage/domain cases stay BLOCKING.
+
+**NEXT GATE:** Owner choices plus applicable manufacturer/component limits and dummy-load qualification before any authorized schematic change or R2 release. R2/R3 remain BLOCKED. Draft PR targets `feat/sheet03-gate3-options`; no merge.

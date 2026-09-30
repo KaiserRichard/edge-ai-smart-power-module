@@ -1,0 +1,197 @@
+{
+  "Gate3_A_recheck": [
+    {
+      "60A_curve_domain_closed": true,
+      "Vin_V": 24.0,
+      "available_L_energy_J": 0.0095118168,
+      "classification": "CALCULATED using inherited ASSUMED Cin<=20uF, Qsource<=150uC, Ldiff>=5.44uH through60A, Ldiff<=8.16uH, I0<=6.1A",
+      "energy_current_screen_A": 59.1353656502455,
+      "minimum_Ldiff_for60A_H": 5.2843426666666665e-06
+    },
+    {
+      "60A_curve_domain_closed": false,
+      "Vin_V": 27.63,
+      "available_L_energy_J": 0.011930485799999998,
+      "classification": "CALCULATED using inherited ASSUMED Cin<=20uF, Qsource<=150uC, Ldiff>=5.44uH through60A, Ldiff<=8.16uH, I0<=6.1A",
+      "energy_current_screen_A": 66.22845321088121,
+      "minimum_Ldiff_for60A_H": 6.6280476666666656e-06
+    },
+    {
+      "60A_curve_domain_closed": false,
+      "Vin_V": 28.289211488402323,
+      "available_L_energy_J": 0.01239799338961589,
+      "classification": "CALCULATED using inherited ASSUMED Cin<=20uF, Qsource<=150uC, Ldiff>=5.44uH through60A, Ldiff<=8.16uH, I0<=6.1A",
+      "energy_current_screen_A": 67.51359718609164,
+      "minimum_Ldiff_for60A_H": 6.8877741053421606e-06
+    }
+  ],
+  "base_commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+  "date": "2026-09-30",
+  "frozen_requirements": {
+    "GPIO_D30": true,
+    "Pi_at5A_floor_V": 4.75,
+    "Pi_peak_strict_ceiling_V": 5.5,
+    "Vin_normal_V": [
+      9,
+      24
+    ]
+  },
+  "inherited_OPEN_application_bounds": {
+    "differential_inductance_floor_H": null,
+    "input_OVP_max_V": null,
+    "source_current_max_A": null,
+    "sourceoff_min_max_s": [
+      null,
+      null
+    ],
+    "trip_max_V": null
+  },
+  "inherited_conditional_inputs": {
+    "buck_static": {
+      "classification": "CALCULATED (typical only: IFB has no maximum)",
+      "max_V": 5.158632237795172,
+      "min_V": 5.038271401729418
+    },
+    "classification": "CALCULATED in historical ASSUMED tolerance boxes, not application guarantees",
+    "input": {
+      "24V_tolerance_headroom_to_OVP_min_fraction": 0.12391135664114383,
+      "ILIM_formula_nominal_A": 4.477611940298508,
+      "ILIM_max_A": 4.81981981981982,
+      "ILIM_min_A": 4.180819180819181,
+      "OVP_max_V": 28.289211488402323,
+      "OVP_min_V": 26.973872559387452,
+      "OVP_nominal_V": 27.63037974683544,
+      "UVLO_falling_V": [
+        7.618700857139583,
+        8.16823530754762
+      ],
+      "UVLO_falling_nominal_V": 7.9071366120218585,
+      "UVLO_rising_V": [
+        8.223734610271697,
+        8.690635766294163
+      ],
+      "UVLO_rising_nominal_V": 8.456830601092896,
+      "classification": "CALCULATED (worst-case with ASSUMED +/-0.1% resistors, no drift)",
+      "converter_fault_containment": "OPEN: exact converter not supplied",
+      "input_PGOOD_falling_V": [
+        7.195139069360641,
+        7.634377368938938
+      ],
+      "input_PGOOD_rising_V": [
+        7.763493395034966,
+        8.12508996153153
+      ],
+      "module_isolated": null,
+      "selected_converter": null
+    },
+    "margins": {
+      "false_trip": {
+        "allowed_loop_delay_s": 2.880508847787633e-05,
+        "claimed_V": 0.021954,
+        "classification": "OPEN",
+        "conditional_20us_V": 0.021954176723427705,
+        "conditional_30us_V": -0.002979333914870033,
+        "normal_20us_V": 5.261613976437252,
+        "worst_case_V": null
+      },
+      "fault": {
+        "claimed_V": 0.018388,
+        "classification": "OPEN",
+        "conditional_selected_V": 0.0186450142548318,
+        "worst_case_V": null
+      },
+      "harness": {
+        "claimed_V": 0.011431,
+        "classification": "OPEN",
+        "conditional_original_V": -0.08950129069184243,
+        "conditional_reduced_V": 0.011432699219574793,
+        "original_R_ohm": 0.07555453848425196,
+        "reduced_R_ohm": 0.0553677405019685,
+        "worst_case_V": null
+      }
+    },
+    "supplies": {
+      "DET_5V": {
+        "max_V": 5.1173980301002,
+        "min_V": 4.880624530499002,
+        "nominal_V": 4.99867
+      },
+      "DRV_7V5": {
+        "max_V": 7.807424257755512,
+        "min_V": 7.4402690342914175,
+        "nominal_V": 7.62327
+      },
+      "PG_detector_floor_screen_V": 4.050918360314172,
+      "PG_driver_floor_screen_V": 6.175423298461876,
+      "TPS3808_reference_reset_V": [
+        2.2950500000000003,
+        2.36495
+      ],
+      "TPS3808_release_assumed_scaled_s": [
+        0.6062222222222223,
+        2.112
+      ],
+      "TPS3808_release_nominal_s": 1.257642857142857,
+      "classification": "CALCULATED regulated screen; dropout/ramp validity OPEN"
+    },
+    "timing": {
+      "LTC7001_propagation_ns_10V": [
+        null,
+        35,
+        70
+      ],
+      "SN74LVC1G11_per_stage_ns": [
+        1.0,
+        null,
+        4.6
+      ],
+      "SN74LVC1G74_async_clear_ns": [
+        1.6,
+        null,
+        6.1
+      ],
+      "TLV3201_fall_ns": [
+        null,
+        45,
+        55
+      ],
+      "TPS26630_SHDN_to_off_us": [
+        0.8,
+        1.0,
+        1.5
+      ],
+      "TPS26630_hot_short_us": [
+        null,
+        1.0,
+        null
+      ],
+      "TPS26630_limit_timeout_ms": [
+        129,
+        162,
+        202
+      ],
+      "TPS26630_soft_short_us": [
+        2.2,
+        3.2,
+        4.5
+      ],
+      "UCC27511_INplus_ns_12V": [
+        4,
+        13,
+        23
+      ],
+      "UCC27511_INplus_ns_4p5V": [
+        4,
+        15,
+        26
+      ],
+      "actual_OV_onset_to_commutation_max_ns": null,
+      "actual_OV_onset_to_series_off_max_ns": null,
+      "classification": "DATASHEET stage tests; APPLICATION MAXIMUM OPEN",
+      "complete_digital_plus_charge_PG_floor_screen_ns": 307.3511417172143,
+      "complete_digital_plus_charge_regulated_screen_ns": 216.5611039588814,
+      "gate_to_4p5V_regulated_charge_screen_ns": 120.26110395888139
+    }
+  },
+  "scope": "Analysis only; no native KiCad files opened or saved"
+}

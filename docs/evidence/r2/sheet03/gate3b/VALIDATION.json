@@ -1,0 +1,77 @@
+{
+  "authored_evidence_SHA256": {
+    "docs/FINAL_MANAGER_REPORT.md": "e880dcd84beddb3f8c4d4a40642699ece0b1498767f64726817cbb03f459d8ff",
+    "docs/evidence/r2/sheet03/gate3b/BASELINE_AND_SCOPE.json": "686f94fe464d815f00d5f6a8c5c65231d2a37088d0604c725183d4ef0a516b07",
+    "docs/evidence/r2/sheet03/gate3b/COMMON_PROPOSED_FIXES.md": "e8b8880eb8a9fb2257039b6b2ff5d2857d676018a6ab354ba3c42f1bbe8629dd",
+    "docs/evidence/r2/sheet03/gate3b/D_E_RESCORE.md": "e22833afd09255bf371b7609ce2700c8653615d96ca62822decdd6247ac081dd",
+    "docs/evidence/r2/sheet03/gate3b/GATE3B_SOURCE_BOUND.md": "448eae4652a041a4a6bdec0e5b35a43bc73bcb681def9e23ce0414edf24d0862",
+    "docs/evidence/r2/sheet03/gate3b/INDUCTOR_CANDIDATES.md": "3b162658c3d33a77b306e545cfdc01e9046f345e8ee08ae00282b808102f0bfe",
+    "docs/evidence/r2/sheet03/gate3b/INPUT_LIMITER_AND_ENERGY.md": "c47c7d8cb9b5ae57d8e39bcc1cc69c14f47a5189ecdec39a34378e60b2615c44",
+    "docs/evidence/r2/sheet03/gate3b/SOURCES.json": "303cb9020b053b1ef79aa6b5fc93ad4b630ab78f01cc58cf7b68ddabbbb46005",
+    "docs/evidence/r2/sheet03/gate3b/SOURCE_BOUND_CALCULATIONS.json": "f3b7a28976425ccec77353c5db7c2c1c672b904edb6a74d7b00589e4745d3cfd",
+    "docs/evidence/r2/sheet03/gate3b/calculate_source_bound.py": "a70010450df0f727cb289308a0674c07c383d7c63059a0d9c8ee027492460a9a",
+    "docs/evidence/r2/sheet03/gate3b/test_source_bound.py": "c958948d5ab2d5f82522ea2dd7f4c97913b09d02216b25542645a83586273b7c"
+  },
+  "baseline_commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+  "branch": "feat/sheet03-gate3b-source-bound",
+  "checkpoint_HEAD_before_closure": "68808d8d74d60707d696d2f4186538393b32216b",
+  "checks": {
+    "JSON_parse": "PASS",
+    "authored_markdown_local_links": {
+      "count": 16,
+      "missing": []
+    },
+    "calculation_reproduction": {
+      "byte_identical": true,
+      "command": "python3 -B docs/evidence/r2/sheet03/gate3b/calculate_source_bound.py"
+    },
+    "hardware_metadata_diff": {
+      "changed_files": [],
+      "command": "git diff 65a86982fc4a48502d3a6da1cd710e796b3d8734 --name-only -- hardware"
+    },
+    "historical_evidence_preserved": {
+      "changed_files": [],
+      "files": [
+        "docs/evidence/r2/sheet03/GATE3_ARCHITECTURE_OPTIONS.md",
+        "docs/evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md",
+        "docs/evidence/r2/sheet03/CALCULATIONS.json",
+        "docs/context/06_DECISION_LOG.md"
+      ]
+    },
+    "targeted_tests": {
+      "command": "python3 -B -m unittest discover -s docs/evidence/r2/sheet03/gate3b -p test_source_bound.py -v",
+      "count": 14,
+      "output": "test_capped_current_envelope_integrates_both_segments (test_source_bound.SourceBounds.test_capped_current_envelope_integrates_both_segments) ... ok\ntest_constant_inductance_ramp_and_charge (test_source_bound.SourceBounds.test_constant_inductance_ramp_and_charge) ... ok\ntest_curve_end_is_not_extrapolated (test_source_bound.SourceBounds.test_curve_end_is_not_extrapolated) ... ok\ntest_hold_up_accounts_for_aggregate_gate_charge (test_source_bound.SourceBounds.test_hold_up_accounts_for_aggregate_gate_charge) ... ok\ntest_input_source_charge_is_not_output_charge (test_source_bound.SourceBounds.test_input_source_charge_is_not_output_charge) ... ok\ntest_larger_curve_changes_current_and_charge (test_source_bound.SourceBounds.test_larger_curve_changes_current_and_charge) ... ok\ntest_last_path_choke_limit_requires_actual_off_time (test_source_bound.SourceBounds.test_last_path_choke_limit_requires_actual_off_time) ... ok\ntest_missing_application_bounds_are_never_zero (test_source_bound.SourceBounds.test_missing_application_bounds_are_never_zero) ... ok\ntest_normal_nuisance_counterexamples_remain_blocking (test_source_bound.SourceBounds.test_normal_nuisance_counterexamples_remain_blocking) ... ok\ntest_old_local_cap_bank_exits_proposed_curve_domain (test_source_bound.SourceBounds.test_old_local_cap_bank_exits_proposed_curve_domain) ... ok\ntest_resistance_target_depends_on_contact_reduction (test_source_bound.SourceBounds.test_resistance_target_depends_on_contact_reduction) ... ok\ntest_series_off_does_not_dispose_of_downstream_magnetic_energy (test_source_bound.SourceBounds.test_series_off_does_not_dispose_of_downstream_magnetic_energy) ... ok\ntest_source_energy_and_domain_conserve_at_all_corners (test_source_bound.SourceBounds.test_source_energy_and_domain_conserve_at_all_corners) ... ok\ntest_weighted_integral_is_energy_not_flux (test_source_bound.SourceBounds.test_weighted_integral_is_energy_not_flux) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.015s\n\nOK",
+      "returncode": 0
+    }
+  },
+  "date": "2026-09-30",
+  "electrical_verdict": "BLOCKED; recommend neither D nor E yet",
+  "limitations": [
+    "Positive calculated screens are ASSUMED-target/proxy models, not confirmed maxima.",
+    "All application source/current/energy/trip/Pi peaks remain OPEN/null.",
+    "Manufacturer curve domain is enforced; no high-current extrapolation or initial-tolerance guarantee transfer.",
+    "E source isolation is not zero GPIO current; downstream choke tail needs absorber/return proof.",
+    "Source energy packets do not cover persistent leakage, feedthrough, retry or unlisted reservoirs.",
+    "D/E store numbers are explicit subtotals excluding additional cable/input/unknown Pi terms."
+  ],
+  "not_performed": [
+    "native KiCad read/edit",
+    "ERC",
+    "DRC",
+    "export",
+    "SPICE simulation",
+    "bench test",
+    "purchase",
+    "merge"
+  ],
+  "owner_alone_decides": true,
+  "pushed_analysis_checkpoints": [
+    "f24a66b",
+    "7ed087a",
+    "95e6d5b",
+    "c6ca3ae",
+    "68808d8"
+  ],
+  "scope": "Documentary/arithmetic validation, no electrical qualification"
+}
