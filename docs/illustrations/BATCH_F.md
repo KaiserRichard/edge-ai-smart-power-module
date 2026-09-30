@@ -42,6 +42,7 @@ Reply only with the image.
 | F3.2 | 03 | `f3-02-energy-springs.png` | Energy stores as compressed springs |
 | F3.3 | 03 | `f3-03-two-sides-two-drains.png` | Switch splits two sides, each with its own drain |
 | F3.4 | 03 | `f3-04-fault-bench-no-pi.png` | Fault-test bench with dummy load, Pi locked away |
+| F3.5 | 03 | `f3-05-schematic-walk-circuit.png` | Simplified Sheet 03 circuit with the fault path and the four actions |
 | F4.1 | 04 Monitoring | `f4-01-kelvin-sense-3d.png` | Four-terminal shunt close-up |
 | F4.2 | 04 | `f4-02-measurement-boundary.png` | What the INA228 does and does not see |
 | F4.3 | 04 | `f4-03-i2c-two-islands.png` | TCA9517 as a bridge between two bus islands |
@@ -237,6 +238,25 @@ Safety glasses on the bench. The positive and return leads are clearly separate 
 ```
 
 Reject if: the computer is wired to the board; leads merge into one cable; numbers appear on screens.
+
+### F3.5 — Simplified Sheet 03 circuit, read left to right
+
+Target filename: `f3-05-schematic-walk-circuit.png`
+
+```text
+Draw a clean, flat, textbook-style simplified circuit diagram on a white background, read left to right, like a figure in an electronics textbook. Use standard schematic symbols.
+Left: a box labelled "U101 eFuse" with a pin labelled "SHDN" on its bottom; its output wire labelled "VIN_PROTECTED" goes to a box labelled "U201 buck". Inside U201 draw the high-side switch as a MOSFET symbol with a red lightning mark and the words "failed short".
+From U201's "SW" pin a wire goes through an inductor symbol labelled "L201" to a thick orange wire labelled "VOUT_5V1 (raw)". A large capacitor symbol on that orange wire is labelled "raw bank".
+Next, two MOSFET symbols placed back-to-back (sources joined in the middle, label the middle node "PROT_MID"), labelled "Q301" and "Q302", with one shared gate wire labelled "PROT_GATE" going down to a small box "U301 LTC7001".
+After Q302, a thick blue wire labelled "VOUT_PROTECTED" goes to a resistor labelled "shunt" and then to a connector labelled "J502 to Pi".
+On the blue wire, a vertical MOSFET to ground labelled "Q303 crowbar", with a small resistor above it labelled "33 mΩ ballast", driven by a small box "U315".
+On the orange wire, a dashed vertical switch to ground labelled "raw dump (not drawn yet)", drawn in grey dashed lines.
+At the bottom: a small detector chain: a resistor divider from VOUT_5V1 to a comparator triangle labelled "U303", with a reference box "U302 2.5 V" on its other input, then a box "U304 latch". From the latch, four thin red arrows go to: U101 SHDN, U301, U315, and the raw dump.
+A thick red arrow shows the fault current flowing from VIN_PROTECTED through U201 and L201 into VOUT_5V1.
+Keep text only as labels listed above. No numbers other than "33 mΩ" and "2.5 V".
+```
+
+Reject if: Q301 and Q302 are drawn in the same direction instead of back-to-back; the crowbar is on the orange (raw) side; the raw dump is drawn as a normal solid part; extra numbers appear.
 
 ## Lesson 04 — Monitoring
 
