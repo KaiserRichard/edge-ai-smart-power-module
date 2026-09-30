@@ -864,25 +864,25 @@
     ],
     "hold_ASSUMED": {
       "Ceff_F": 0.0003,
-      "start_V": 11.2,
-      "floor_V": 10.5,
+      "start_V": 11.0,
+      "floor_V": 10.0,
       "total_load_A": 0.04,
       "gate_event_C": 2.036e-06
     },
-    "hold_time_screen_s": 0.0051991,
+    "hold_time_screen_s": 0.007449099999999998,
     "nominal_hold_energy_J": 0.03168,
     "hold_cap_only_average_input_if9ms_A": 0.48888888888888893,
     "driver_supervisor_screen_V": [
-      10.697782403210725,
-      11.255595974154135
+      10.224178614557356,
+      10.757090412124061
     ],
     "detector_supervisor_screen_V": [
-      4.856669009819203,
-      5.107360709116541
+      4.540933150716957,
+      4.775023667763159
     ],
     "actual_usable_hold_s": null,
     "actual_rails_valid": null,
-    "hold_at_low_12V_minus_ASSUMED0p5V_s": 0.004609175870040243
+    "hold_at_low_12V_minus_ASSUMED0p5V_s": 0.008359175870040243
   },
   "detector": {
     "old_nominal_trip_V": 5.325,
@@ -998,6 +998,14 @@
         "equations": "HistoricalG=1+1k/1M+(11.3k/10k)(1+1k/1M)+11.3k/1M=2.14343: Vtrip5.358575V;20mVraw42.8686mV. RevisedG=2.1327317073: trip5.331829268V,overdrive42.654634mV. Declared25→85°Cscreen±0.25%R,REF±0.068%,Vos±4mV,test-conditionedRon0…17Ω,120nAonleak+5nAinput and80nAclamp-diode leakage gives5.303164…5.361687V, excluding unboundedhysteresis/load/PSRR/dynamicterms. Switchoff3µA×R367max82.205k=0.246615V before bias/capacitiveinjection, versus3.0075V for1M. Partial-powered16Vfaultleak38µA gives3.12379V beforeclamps; staticoffmath is notpartial-powerproof. AtDRV_HOLD10.5V/shunt2.5175V,R361max82.205k provides97.1µA>80µA minimum. Atconditionalraw6.881668V,DIVclamp≤3.5175V with1Vdiode allocation, availableclampcurrent≈0.339mA plusbias. ThediodeVF/negativeinput response still requiremeasuredcorners; operation below−0.2V is not credited.58.1V is aux-only: if itreachesraw,R301power≈0.303W exceeds0603 and mainbuck/caps fail their input envelope.",
         "evidence": "[ADI ADG4612 Rev0](https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf),Tables3/5/8; [TI TLV3201 SBOS561C](https://www.ti.com/lit/ds/symlink/tlv3201.pdf); [TI LM4040 SLOS456Q](https://www.ti.com/lit/ds/symlink/lm4040.pdf); BAS116/BAT46W sources in SOURCES.md.",
         "bench": "T06 DETECTOR-PARTIAL-POWER. PASS revisedloadedtrip is bounded andnohealthyfalsefault; atpoweroffeach comparatorpin≥−0.3V and≤VCC+0.3V designguard, injection within ratings andnoDET5backfeed>0.3V; reference/clampcurrentswithinratings; comparator atmin validrail meetsT08 andfar-endT10. If partial-power clamp transient fails, redesign before capture/release. Measurement closescapacitance, diodeknee/negativecommutation andramps not specified by static tables."
+      },
+      {
+        "id": "R4A-07",
+        "status": "BENCH REQUIRED",
+        "resolution": "Keep upstream LT4363HMS-1#PBF/FDB33N25TM0.33Ωsense andLTC3115IFE-1#PBF12V block. C350 becomes verifiedGRM21BR71H105KA12L1µF50V TMR→GND. Retain100k/4.32k clamp and1M0805/90.9k converterFB. Replace supervisor dividers withU322249k/10k andU323105k/10k. D304B260/2×EEU-FR1E221 hold targets arestart≥11V, Ceff≥300µF,totalcontrol≤40mA, DRVfloor10V/DETfloor4.5V; VGS≥10V independently.",
+        "equations": "Clamp29.940620…31.643683V,12Vscreen11.621343…12.311325V retainstated±0.25%R anddatasheetbias. Supervisorcorners10.224179…10.757090V /4.540933…4.775024V leave0.224179V/0.040933V above declaredvalidfloors beforedelay/droop. At40mA/300µF,driverdroop100µs=13.333mV; actualDETload/C andsupervisorresponsemax remainOPEN. Hold=(300µF×1V−2.036µC)/40mA=7.4491ms conditional, notqualified. Buck-boostlow−assumed0.5Vdiode=11.121343V meets11V targetconditionally. Holdcapenergy31.68mJ; 9mschargeinputaverage488.889mA alone violatesnominal151.515mAlimit. With9V/80%/151.515mA and0.480Wload, availablechargepower0.610909W givesnominalminimum51.857ms beforeotherloads/losses. NewC350floor0.75µF×1.335V/310µA=3.229839ms at thehigh-stresstablepoint; lowstress13µA gives77.019ms. These are timer sensitivities, notallstartupguarantees. At58.1/31.644V/177.533mA,Q316instantaneousloss≈4.697W; hottime/SOA mustmatchobservedTMR/inrush. Retrying intoUVLO orlatchtrip isnotPASS.",
+        "evidence": "[ADI LT4363 RevC](https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf); [LTC3115-1 RevE,p38](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf); [TI TPS3808 SBVS050N](https://www.ti.com/lit/ds/symlink/tps3808.pdf); originalsources andexact C350primarysheet underR4A-05.",
+        "bench": "T07 AUX-START-HOLD. PASS9/24/26V cold/hot startupwithouttimertrip/UVLOoscillation, settledrails validwithmainU101OFF, loadedbootstrapT04, usablehold≥1ms ANDlongerthanactualT09disposal+uncertainty; invalidrails removepermissionbeforefloorscross andneverrearmpersistentfault. T14qualifiesauxpulseindependently. Measurement isrightclosurefor coupledsoftstart,currentlimit,timer,hotSOA,diodeloss andcompletecontrolcharge notspecifiedbyblockdatasheets."
       }
     ]
   }

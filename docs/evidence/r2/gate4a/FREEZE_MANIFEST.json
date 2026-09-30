@@ -402,12 +402,12 @@
         "C350"
       ],
       "old": "D303: BAT46W-E3-08 / BAT46W-E3-08; U316: NEW; Q316: NEW; R330: NEW; R331: NEW; R332: NEW; R333: NEW; C350: NEW",
-      "new_mpn": "BAT46W-E3-08; LT4363HMS-1#PBF; FDB33N25TM; TNPW0603100KBEEA; TNPW06034K32BEEA; WSL2512R3300FEA; CRCW060310R0FKEA; C2012C0G1H103J125AA",
-      "new_value_or_connection": "raw independent AUX surge stopper: D303->Q316->0.33ohm sense->AUX_LIMITED;100k/4.32k FB;10ohm gate;10nF timer",
+      "new_mpn": "BAT46W-E3-08; LT4363HMS-1#PBF; FDB33N25TM; TNPW0603100KBEEA; TNPW06034K32BEEA; WSL2512R3300FEA; CRCW060310R0FKEA; GRM21BR71H105KA12L",
+      "new_value_or_connection": "D303→Q316D; Q316S→R3320.33Ω→AUX_LIMITED. U316LT4363-1 SNS beforeR332/OUT afterR332; FB100k/4.32k OUT→GND. R33310Ω gate. C3501µF50V0805 TMR→GND replaces10nF; latchoff retained. RUN/U316 control/pins required by R4A-15.",
       "reason": "Bound AUX <=35V before its existing LDO EN and cap; branch remains upstream of U101",
-      "governing_equation": "Vclamp=VFB*(1+100k/4.32k)+IFB*100k; Ilim~50mV/0.33",
-      "status": "CONDITIONAL front-end candidate; transfer/dynamic/SOA/timer OPEN",
-      "source": "LT4363/ON"
+      "governing_equation": "Vlimit29.940620…31.643683V conditional; 1µF TMR measuredCeff≥0.75µF; CV/I faststress3.22984ms",
+      "status": "R4A-07 selection revised; T07 startup/timer/SOA BENCH REQUIRED",
+      "source": "LT4363RevC; exact Murata1µF50V sheet"
     },
     {
       "id": "S03-12",
@@ -466,10 +466,10 @@
       ],
       "old": "D304: NEW; C358: NEW; C359: NEW; U318: NEW",
       "new_mpn": "B260-13-F; Panasonic EEU-FR1E221 x2; TPS70933DBVR",
-      "new_value_or_connection": "12V output->D304->DRV_HOLD;2x220uF25V electrolytic; independent3V3_AUX from held rail",
+      "new_value_or_connection": "D304B260anodeAUX_12V/cathodeDRV_HOLD; C358/C359EEU-FR1E221220µF25V eachpositiveDRV_HOLD/negativeGND. U318TPS70933DBVR fromheldrail; ENno12Vtie (R4A-15). HoldqualificationCeff≥300µF, measuredstart≥11V, load≤40mA, usableDRVfloor10V; gateevent2.036µC reserve.",
       "reason": "Driver/detector survive input removal and main eFuse OFF; block reverse draining",
-      "governing_equation": "thold=(Ceff*(Vstart-Vfloor)-Qgate)/Icontrol; TARGET Ceff>=300uF,I<=40mA,>=1ms",
-      "status": "CONDITIONAL; effective C/leakage/total load/startV OPEN",
+      "governing_equation": "thold=(300µF*(11−10V)−2.036µC)/40mA=7.4491ms conditional",
+      "status": "R4A-07 holdtargets revised; T07 actualusablehold BENCH REQUIRED",
       "source": "HOLD"
     },
     {
@@ -484,12 +484,12 @@
         "R365"
       ],
       "old": "U322: NEW; U323: NEW; R362: NEW; R363: NEW; R364: NEW; R365: NEW",
-      "new_mpn": "TPS3808G01DBVR x2; TNPW0603261KBEEA; TNPW060310K0BEEA; TNPW0603113KBEEA; TNPW060310K0BEEA",
-      "new_value_or_connection": "direct held-driver and DET5 monitors; nominal~10.98V and4.9815V at0.405V threshold; outputs qualify RUN only",
+      "new_mpn": "TPS3808G01DBVR x2; TNPW0603249KBEEA; TNPW060310K0BEEA; TNPW0603105KBEEA; TNPW060310K0BEEA",
+      "new_value_or_connection": "U322SENSE monitors DRV_HOLD via249k/10k; U323SENSE monitorsDET5 via105k/10k. VDD=3V3_AUX; resetoutputs10k pullups→3V3_AUX; no PG dependency. Nominal10.4895V/4.6575V. Both outputsqualifyARM/RUN; FAULTdisposal heldindependently.",
       "reason": "Actual loaded rails must meet detector/driver timing conditions",
-      "governing_equation": "Vfall=VIT*(1+Rt/Rb); droop before action=I*t/C",
-      "status": "BLOCKED: response max/threshold/loaded bootstrap proof; datasheet20us is typical",
-      "source": "TPS3808"
+      "governing_equation": "Thresholdscreens10.224179…10.757090V /4.540933…4.775024V; floorsDRV10V/DET4.5V; loadedVGS≥10V separately",
+      "status": "R4A-07 thresholds revised; T07 rail-to-action BENCH REQUIRED;20µs typical not max",
+      "source": "TPS3808SBVS050N; T07"
     },
     {
       "id": "S03-16",
