@@ -1,0 +1,47 @@
+{
+  "base_commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+  "branch": "feat/v1a-5a-path-budget",
+  "scope": "New documentary analysis only under docs/evidence/r2/path_budget; no native KiCad files read or edited",
+  "inputs": [
+    {
+      "path": "docs/evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md",
+      "commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+      "sha256": "a2372477b9540704f71348cf8e8d5463a94fcd34846a4fc078974baaddd1b31f"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/GATE3_ARCHITECTURE_OPTIONS.md",
+      "commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+      "sha256": "5fd1a7c8768e413cd53a55baf64c3cd5930690ed6917cbc9435e87dc1b684d08"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/CALCULATIONS.json",
+      "commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+      "sha256": "0e968d476a69094440c83a0ac472287d6692097d94874dff75939307be752d1c"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3/OPTIONS_CALCULATIONS.json",
+      "commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+      "sha256": "13e8fc8cf45f0372a49e19aab2d2cc52f71015ecef976fcf874c75ee7b5ddfb0"
+    },
+    {
+      "path": "docs/context/06_DECISION_LOG.md",
+      "commit": "65a86982fc4a48502d3a6da1cd710e796b3d8734",
+      "sha256": "47a690667e5ec05471873f196d1dc22afcfac5612b8992ab24f23ef18af48b3e"
+    },
+    {
+      "path": "docs/evidence/r2/j502_harness/HARNESS_DECISION.md",
+      "commit": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+      "sha256": "4ec56cc6855f693e2f152aa56d5fb8acb63127f6e11d56261181dfbab19de097"
+    },
+    {
+      "path": "docs/evidence/r2/j502_harness/budget.json",
+      "commit": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+      "sha256": "3fafea467f0dfbc8d0222a2aa0bcc73e983062f1df840be9b5fa01e89ff8a283"
+    },
+    {
+      "path": "docs/evidence/r2/j502_harness/source_register.json",
+      "commit": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+      "sha256": "39285a2388f0dbc1723ac620fb0f715dd1cc9e3a10aa8d83f6a28dcb1406ab15"
+    }
+  ]
+}
