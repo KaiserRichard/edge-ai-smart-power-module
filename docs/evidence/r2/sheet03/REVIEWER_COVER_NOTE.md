@@ -1,6 +1,6 @@
 # V1A — request for senior laboratory engineering review
 
-**PRELIMINARY — Sheet 03 BLOCKED — NOT FOR FABRICATION**  
+**PRELIMINARY — Sheet 03 BLOCKED — NOT FOR FABRICATION**
 30 September 2026
 
 V1A is a standalone DC power module intended to supply a Raspberry Pi 5 through its GPIO power pins: **9–24 V input → fuse, reverse-polarity protection and eFuse → 5.1 V / 5 A buck → series output isolation and crowbar → current shunt/monitor → GPIO harness**. Voltage, current, power and energy telemetry use I2C. This is a preliminary schematic; protection performance has not been demonstrated in hardware. The review requirements are below 5.5 V during faults and at least 4.75 V at 5 A at the Pi.
