@@ -164,3 +164,11 @@ Supervisor-buffer conservative high 2.771 V > TTL 2 V; Q305 gate min 4.48875 V a
 Selected complete package pin maps for U318/U320/U321/U322/U323/U330 and auxiliary/watchdog devices; added local bypass and two AHCT supervisor translators. U318 EN floats per manufacturer (never 12 V); U320 fault set bypasses PG/ARM. R390 senses L201_SW_FORCE. Reset/ARM/safe-energy/persistent-short producer circuitry remains an explicit construction blocker, followed by T15.
 
 Closure: T15 PIN-RAIL-RACE-AND-THERMAL; prerequisite construction review, then guarded default-off, fault dominance, no re-arm, all pin/cap/thermal limits. Measurement is correct for dynamic/thermal behavior, not for missing wires.
+
+### R4A-16 — IDENTITY DECISIONS / CONSTRUCTION BLOCKED / BENCH REQUIRED
+
+50 V bypass at ≤35 V has 15 V nominal headroom; raw 58.1 V uses 100 V C. CRCW0603 standard P85=82.353 mW at specified board condition, jumper≤2 A/20 mΩ and unsuitable as 5 A force link. Dummy header≤3 A/contact needs positive branch ratio≤1.5 at 5 A. Ceff/RC/thermal ratings require actual qualification.
+
+Indexed all 154 baseline refs; selected 41 residual generic/retired passive assignments with exact code/value/package/net in RESIDUAL_PASSIVES.csv, C350 corrected to verified 1 µF, U307 network DNP. JGPIO_FIX Harwin M20-9982046 is a defined dummy male counterpart. J502 remains PENDING. Full energized fixture, state producers, module/source and hot pulse evidence remain construction prerequisites.
+
+Closure: T16 ASSEMBLY-IDENTITY-AND-INTERFACE. Incoming/assembled continuity, capacitance and contacts are measurable; identities/ratings/unbuilt drawings must be proved before testing.

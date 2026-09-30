@@ -149,3 +149,14 @@ Next, reviewedwhole-inputcoordinationmustcloseactualisolatedmoduleMPN/C/L/faultc
 **PASS:** SHDN physically asserted and series gate OFF whenever permission is absent or any required rail is invalid; independent OV/stuck-SW fault dominates PG/ARM/reset; no simultaneous U320 nPRE/nCLR assertion or uncontrolled power-up state; no re-arm on supply/PG return, held button or reset; no energy reconnection into a persistent short before the reviewed integrity check. Disposal drive remains valid through the entire T09 measured tail. Every pin stays within recommended conditions during function and absolute ratings during all transients, with uncertainty. Input/output effective bypass meets PIN_CONTRACT.md; converter/LDO stable, no excessive ringing or backfeed. Measured component temperature plus uncertainty is below its individual ceiling. T01/T03/T04/T06/T07/T08/T09 remain jointly required.
 
 **Why measurement:** comparator/supervisor dynamic thresholds, finite gate sink drive, bounce, supply races, charge coupling and actual PCB thermal paths have no complete transferable paper bounds. The construction is reviewed first; measurements then establish the defined test envelope, never universal safety or an unbuilt state machine.
+
+
+## T16 — ASSEMBLY-IDENTITY-AND-INTERFACE verification (R4A-16)
+
+**Prerequisite:** approved manufacturer identities, complete fixture/producer drawings and applicable ratings; reconcile every baseline and new reference to the capture BOM. Obtain exact male/female/crimp/tool/PCB drawings. Candidate identities and an absent drawing are not a bench PASS.
+
+**Measurement:** unpowered populated-board/fixture pin-to-net continuity and polarity; inspect exact markings/package and supply documentation; four-wire wire/contact resistance, crimp pull qualification using drawing limits, biased effective capacitance and local loop stability per T05/T07/T15; verify dummy header pin orientation and all ten force contacts. Review ratings and thermal/pulse evidence against the measured operating envelope.
+
+**PASS:** every populated ref has a supported exact manufacturer MPN, correct package/pin/polarity/land/net, and required derated voltage/current/pulse/temperature evidence; no generic MPN or unspecified energized fixture link; all DNP nets correctly retired; J502 resolved by its separate job before complete capture release. No shorted unused dummy GPIO pins; positive/return mates follow S06-02; hot resistance, branch sharing and temperatures pass T11. Local capacitors meet measured effective minima, regulator loops stable, all stresses within qualified bounds with uncertainty. Actual Pi remains disconnected.
+
+**Why measurement:** incoming and assembled pin mapping, crimp quality, contact resistance and effective capacitance depend on actual hardware. Manufacturer identity/rating and missing circuit drawings are documentary prerequisites, not facts that one surviving pulse can establish.
