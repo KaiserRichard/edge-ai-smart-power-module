@@ -187,15 +187,21 @@
       "refdes": [
         "TP201",
         "TP202",
-        "JP201"
+        "JP201",
+        "JP202",
+        "QF1",
+        "UF1",
+        "CF1",
+        "RF1",
+        "RF2"
       ],
       "old": "TP201: NEW; TP202: NEW; JP201: NEW",
-      "new_mpn": "N/A etched Kelvin pads; fixture link MPN OPEN",
-      "new_value_or_connection": "VIN_PROTECTED and both L201 ends with paired GND; removable injection connection",
+      "new_mpn": "N/A etchedKelvinpads andcustomboltedcopperforce-links; QF1BSC034N06NSATMA1; UF1LTC7001IMSE#PBF; CF1GRM21BR71H105KA12L; RF1CRCW06031R00FKEA; RF2TNPW12102M20BEEA",
+      "new_value_or_connection": "JP201normallyclosedforce linkU201_SW→L201_SW_FORCE; removeunpoweredforfault-portfixturetoisolateinternalLS. JP202faultforceportVIN_PROTECTED→QF1D/QF1S→L201_SW_FORCE; installedonlytestfixture. UF1isolated12Vcontrol, TS=QF1S/BSTcap1µFtoTS,1ΩG/2.2M G–S, commanddefaultlow. PRECHARGE sourceindependentlyisolatedbeforetest; source/latch actualPGobserved, neverforced.",
       "reason": "Measure L voltage and current; inject actual high-side fault at buck switch node",
-      "governing_equation": "Ldiff=(VL-I*DCR)/(dI/dt)",
-      "status": "HOOK requirement; physical fixture OPEN",
-      "source": "HOOKS"
+      "governing_equation": "5mm×3mm×1mmCu linkR20=0.028733mΩ; at78.018A P=0.1749W conditional; addedR/L/C mustbecounted; no live-VIN→internalLSbridge",
+      "status": "R4A-12 saferfaultport defined; abort/precharge/controlfixture RATING/CIRCUITBLOCKED",
+      "source": "TEST_HOOKS/T12; retainedBSC034/LTC7001primaryparts"
     },
     {
       "id": "S03-01",
