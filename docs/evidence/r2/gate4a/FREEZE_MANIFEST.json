@@ -578,11 +578,11 @@
         "JP501"
       ],
       "old": "J502: 1776508 / LOAD OUTPUT; J503: B4B-XH-A(LF)(SN) / HOST I2C; JP501: NEW",
-      "new_mpn": "Phoenix1776508+1777989; JST B4B-XH-A(LF)(SN); removable fixture links MPN OPEN",
-      "new_value_or_connection": "removable dummy-only harness; disconnect host/I2C/USB; Pi header physically absent until gates pass",
+      "new_mpn": "J502 PENDING — separate feat/v1a-j502-connector; J503 JSTB4B-XH-A(LF)(SN); JP501loadfixturelinkPENDINGratedconstruction",
+      "new_value_or_connection": "HistoricalPhoenix1776508/1777989isNOTcurrentJ502selection. Awaitseparateconnectorjob; removabledummyloadinterfaceandhostphysicallyabsent. J503hostplugdisconnectedforfirstfaults; noPiheaderuntilgatespass.",
       "reason": "Preserve PR15 connector/harness picks; lockout SBC integration",
       "governing_equation": "Rloop=sum(Rsend+Rreturn); Vpi=Vbuck_min-I*Rloop-Vtrough",
-      "status": "FIXTURE definition; current/thermal/mechanical qualification OPEN",
+      "status": "DEPENDENCYBLOCKED: J502PENDING; fixtureforce-linkconstructionR4A-12",
       "source": "PR15/PATH/HOOKS"
     },
     {
@@ -592,12 +592,12 @@
         "HARNESS"
       ],
       "old": "HARNESS: NEW",
-      "new_mpn": "Belden8521 AWG16; Belden8529 AWG22; HarwinM20-1071000 + M20-1070800;10xM20-1180042",
-      "new_value_or_connection": "75mm trunks each leg;15mm positive/35mm ground fanouts;physical5V2/4,GND6/9/14/20/25/30/34/39",
+      "new_mpn": "Belden8521AWG16trunks; Belden8503AWG22(7×30)fanouts; HarwinM20-1071000+M20-1070800 housings;10×M20-1180042crimpcontacts",
+      "new_value_or_connection": "Eachtrunk75mm16AWG;22AWGfanouts15mmpositive2parallel/35mmreturn8parallel. Map5Vphysical2/4;grounds6/9/14/20/25/30/34/39. Splice16→22 withreviewedstrainrelief; nevercrimp16/20AWGinto22–30AWGcontact. J502PENDING separately.",
       "reason": "Path-budget fix set with real approved connector inventory; matched positive branches",
       "governing_equation": "Rhot contacts<=20mOhm TARGET; Rhigh/Rlow<=1.5 for3A screen; actual rating OPEN",
-      "status": "CONDITIONAL; no20mOhm hot guarantee",
-      "source": "PR15/PATH"
+      "status": "R4A-11 conductor-size defectCORRECTED; T11 crimp/contact/thermalBENCH REQUIRED",
+      "source": "FIX-H11 Belden8503rev0.48720-Feb-2026; HarwinM20-1180042; pinnedPATH"
     },
     {
       "id": "S03-17",

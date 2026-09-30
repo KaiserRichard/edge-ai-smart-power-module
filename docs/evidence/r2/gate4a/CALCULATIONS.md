@@ -124,3 +124,11 @@ Cnom4×470=1880µF; initial±20%withadditionalassumed0.8/1.2 retention givesCmin
 SelectC340…343PCH1V471MCL1GS470µF35V,positiveprotectednode/negativeGND, solelyasmeasuredtest-boardcandidate. Explicitlywithdrawinherited≤1.5mF/≤0.5mΩclaim and0.5µscontainmentallocation; retainrawbankupstream. KeepDpair/localregulation/shunt. Acceptorrejectcandidateonlywithactualrawbank-arrivingcurrent, series/dumpactionsandrealharness/far-endtrajectoryT10; changingCwithoutESR/currentproof isnotclosure.
 
 Closure: T10 PROTECTED-BANK-HARNESS. PASSeveryT01/T08/T09autonomousfaultcorner maxfullbandfar-end+Upeak<5.5V includingboth5Vcontacts/loadedreturn, allcutoff/ringing/tail/recovery; normal5Amin−Umin≥4.75Vat9/24/26V, withcomponentstressacceptance. MeasureIseries/IPROTindependentlyofILandactualC/ESR/loopR. Failureoroverlaprejectscandidate; collectallcounterexamples. Measurementisthecorrectclosurebecausemulti-nodecap/harness/currentredistribution cannotbeprovedwithL201-onlybound orcatalogESR.
+
+### R4A-11 — CORRECTED / BENCH REQUIRED
+
+8503manufacturerDCR16.2Ω/1000ft=.0531496063Ω/mnominal. Declared20°Creference,60°Cfactor1+.00393×40=1.1572 and±10%screen givesmaxsend0.015×.0531496063×1.1572×1.1/2=0.507438mΩ; return0.035×same/8=0.296005mΩ. ThismatchesimportedAWG22model; nomDCRisnotmanufacturerworstcase. For5Awithtwo positivebranchesRhigh/Rlow≤1.5,Imax=5×1.5/(1+1.5)=3A; openbranchforces5Aonremainingpin andisnotpermitted. Wire8503rating−40…105°C/600Vrms doesnotestablishcontact/housinghot3A/faultpulseorbundledampacity. Belden8521lower80°C/housing85°C/shunt-reference85°C stillgovernlocalfixturetemperatures.
+
+ReplaceincorrectBelden8529AWG22description withBelden8503,22AWG7×30strandedtinnedcopperPVCfanout. RetainBelden8521AWG16trunks, HarwinM20-118004222–30AWGcontacts andtwohousings.75mmtrunks; positivefanouts15mm×2,return35mm×8. AWG16neverentersM20contact; connectviareviewedsplice. J502 remainsPENDINGseparatejob.
+
+Closure: T11 HARNESS-CRIMP-SHARING. PASScorrect22AWGwire/insulationdiameter/approvedcrimptool/pulltest; fullhotloopR andpercontactcurrentinsidequalifiedratings; bothpositives/all8grounds intact,Ipositive≤rated3Acase andimbalance≤1.5 when3Ascreencredited; localtemperaturesbelowwire/housing/contactlimits. T10strictfar-endrails stillgovern. Measurementcloses actualmate/crimp/hotresistance/sharing; wiregaugecompatibilityitselfisclosedbydatasheets.
