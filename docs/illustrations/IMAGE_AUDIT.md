@@ -23,7 +23,7 @@ Apply the project conductor’s 2026-09-30 addendum as current owner direction w
 
 - **REQUIREMENT / boundary:** 13S battery → PDB → a bought isolated 48 V to 24 V module → V1A. Exact module selection remains OPEN (PRs #11 and #13). Do not draw a direct battery-to-V1A path or select a module by implication.
 - **OPEN:** input transient suppressor and fuse are under reselection. Draw them by function, without D101/F101 reference designators or a claimed selected part.
-- **DECISION:** Sheet 03 is a fault-test board using architecture D: series disconnect at the module, latched detector using REF5025 / TLV3201 / 74LVC1G74, LTC7001 gate drive, and two BSC034N06 MOSFETs back-to-back; include the crowbar/absorber and the Gate 3b source bound. The negative paper margins remain OPEN and close only through dummy-load bench tests. The Pi stays disconnected until all board gates pass.
+- **DECISION:** Sheet 03 is a fault-test board using architecture D: series disconnect at the V1A 5 V output, latched detector using REF5025 / TLV3201 / 74LVC1G74, LTC7001 gate drive, and two BSC034N06 MOSFETs back-to-back; include the CSD18540Q5B + UCC27511 crowbar with ballast resistors (preliminary) and the Gate 3b source bound. The negative paper margins remain OPEN and close only through dummy-load bench tests. The Pi stays disconnected until all board gates pass.
 - **SOURCE-BOUND development direction:** L201 changes from 6.8 µH XAL8080 to a 10 µH alloy part; Würth 74437636351002 is a candidate, not a selected/qualified component. Depict a controlled 10–30 µF input bank and timed input isolation through TPS26630. These are development facts and allocations; do not label them validated.
 - **OPEN:** exact output limiter/absorber implementation details and application fault margins. Keep margin callouts explicitly OPEN; do not repeat historical positive margins as passes.
 - **Pi interface:** both 5 V pins and all eight ground pins share current through a short AWG16 harness. J502 is not final. Do not imply USB 3.x or D435i data passes through this PCB.
@@ -76,10 +76,10 @@ For every Sheet 03 image, include the exact banner text `PRELIMINARY V1A SHEET-0
 
 | Order | File | Focus | First output |
 |---:|---|---|---|
-| 1 | [`BATCH_A.md`](BATCH_A.md) | P0 bench, source boundary, Sheet 03 D architecture and fault sequence | Bench fault-injection setup |
+| 1 | [`BATCH_A.md`](BATCH_A.md) | P0 bench, source boundary, Sheet 03 D architecture, fault sequence and Pi harness (A5) | Bench fault-injection setup |
 | 2 | [`BATCH_B.md`](BATCH_B.md) | Input protection and reverse-polarity concepts | Updated input fault map |
 | 3 | [`BATCH_C.md`](BATCH_C.md) | Buck states, waveforms, L201 and converter teaching diagrams | Correct buck state/waveforms |
-| 4 | [`BATCH_D.md`](BATCH_D.md) | Power path, monitor, scope and harness | Pi harness/pin grouping |
+| 4 | [`BATCH_D.md`](BATCH_D.md) | System maps, buck switching-loop and feedback concepts | LM61460 input-loop concept |
 | 5 | [`BATCH_E.md`](BATCH_E.md) | Conceptual layout, measurement and bring-up lessons | Safe bring-up sequence |
 
 The five files contain 25 copy-paste prompts covering the 12 regenerations, 8 replacements and 5 new images. The optional Option E comparison is deferred and capped at one image; it must be clearly marked `NOT SELECTED` and cannot visually suggest an approved architecture. A routed-board render remains deferred until a board is actually routed and separately reviewed.
