@@ -9,12 +9,15 @@
     "classification": "DECISION",
     "negative_paper_margins": "OPEN for dummy-load measurement; remain historical blocking electrical-release evidence",
     "purpose": "FAULT-TEST BOARD",
-    "source_route": "TPS26630 timed input isolation, total local effective input C10\u201330uF, qualified10uH L201 candidate74437636351002"
+    "source_route": "TPS26630 timed input isolation, total local effective input C10\u201330uF, qualified10uH L201 candidate74437636351002",
+    "normal_input_V": [
+      9,
+      26
+    ],
+    "D101": "Littelfuse SMCJ36CA",
+    "F101": "Schurter 3403.0285.23",
+    "output_series_pair": "2x BSC034N06NSATMA1; no silent lower-RDS substitution"
   },
-  "pending_tvs_study": [
-    "D101",
-    "F101"
-  ],
   "read_evidence": [
     {
       "SHA256": "686f94fe464d815f00d5f6a8c5c65231d2a37088d0604c725183d4ef0a516b07",
@@ -77,12 +80,62 @@
       "access": "git show; no merge",
       "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
       "path": "docs/evidence/aux_converter/V1A_INPUT_WITHSTAND.md"
+    },
+    {
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "path": "docs/evidence/r2/FOOTPRINTS_COMPLETE.md",
+      "SHA256": "af04e87ea003604e62fc462e6dcb894e2faffef150482c7af8c6407d44eec32d",
+      "access": "git show; documentation/export only; no merge"
+    },
+    {
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "path": "docs/evidence/r2/footprints_complete/FULL_INVENTORY.csv",
+      "SHA256": "bdea1bb32cf45fe3db8a3925e228d920a49de81f6b819fa51764387468bde402",
+      "access": "git show; documentation/export only; no merge"
+    },
+    {
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "path": "docs/evidence/r2/footprints_complete/completed.xml",
+      "SHA256": "39318e12c26a93ff23c8bc54d6a9d210ae01f0a7a84d88af83f579ecbea4a263",
+      "access": "git show; documentation/export only; no merge"
+    },
+    {
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "path": "docs/evidence/r2/footprints_complete/SHEET05.md",
+      "SHA256": "8ec642bd11ea25b98abf94b1c2ddd7c11d9bb4b14e310b8b0afad90e89314269",
+      "access": "git show; documentation/export only; no merge"
+    },
+    {
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "path": "docs/evidence/aux_converter/TVS_RESELECTION.md",
+      "SHA256": "b9a3cb0484be74ca883a2334c5416ccdc67a43b7d0a89e7877c4c37e40136fc2",
+      "access": "git show; documentation/export only; no merge"
+    },
+    {
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "path": "docs/evidence/aux_converter/TVS_CALCULATIONS.json",
+      "SHA256": "155b9679145651e5c15530d1699eeff8a588c4fbf01ab6014859be11d6392237",
+      "access": "git show; documentation/export only; no merge"
+    },
+    {
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "path": "docs/evidence/aux_converter/TVS_INPUT_AUDIT.md",
+      "SHA256": "36fb1dbf0d8168747482f836ad929427cf89163953aa4807d0b08ec78a89744c",
+      "access": "git show; documentation/export only; no merge"
+    },
+    {
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "path": "docs/evidence/aux_converter/TVS_SOURCES.md",
+      "SHA256": "ac45b1f5f3878e878b478b6423825dce71d460c0a3fa886ace7c0f5dfc373ee5",
+      "access": "git show; documentation/export only; no merge"
     }
   ],
   "read_refs": {
     "origin/feat/sheet03-gate3b-source-bound": "0a853c79779bb09e943758fd119845ce30a79107",
     "origin/feat/v1a-5a-path-budget": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
-    "origin/feat/v1a-input-withstand": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf"
+    "origin/feat/v1a-input-withstand": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+    "origin/feat/v1a-footprints-complete": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+    "origin/feat/v1a-input-tvs": "84c991fe224c299e34751a3418640600f577a739"
   },
   "scope": "Analysis only; no native KiCad file access, schematic changes, bench action, purchase or fabrication"
 }

@@ -1,0 +1,155 @@
+Refdes,MPN,Value,Footprint,Disposition
+C101,OPEN,1uF 100V,Capacitor_SMD:C_1210_3225Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C102,OPEN,1uF 100V,Capacitor_SMD:C_1210_3225Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C103,OPEN,100nF 16V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+D101,SMBJ26CA,SMBJ26CA,Diode_SMD:D_SMB,OPEN owner exclusion
+D102,B260-13-F,B260,Diode_SMD:D_SMB,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+F101,OPEN,FUSE - OPEN,,OPEN owner exclusion
+Q101,CSD19537Q3,CSD19537Q3,V1A_Qualified:TI_Q3_CSD19537Q3,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+Q102,BSS138,BSS138,Package_TO_SOT_SMD:SOT-23,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R101,OPEN,332k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R102,OPEN,54.9k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R103,OPEN,348k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R104,OPEN,15.8k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R105,OPEN,4.02k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R106,OPEN,56.2k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R107,OPEN,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R108,OPEN,100k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+TP101,N/A etched copper,INPUT_SHDN,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+TP102,N/A etched copper,INPUT_FLT,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+U101,TPS26630RGER,TPS26630RGER,Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C201,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C202,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C203,OPEN,100nF 50V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C204,OPEN,100nF 50V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C205,OPEN,100nF 16V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C206,OPEN,1uF 16V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C207,CGA3E2C0G1H220J080AA,22pF 50V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C209,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C210,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C211,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C212,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C213,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C214,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+L201,XAL8080-682MED,6.8uH,,OPEN owner exclusion
+R201,OPEN,33.2k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R202,OPEN,100k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R203,OPEN,24.4k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R204,OPEN,0,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R205,OPEN,1k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R206,OPEN,100k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R207,OPEN,24.9k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U201,LM61460AANRJRR,LM61460AANRJRR,V1A_Qualified:TI_RJR0014A_LM61460,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C301,Capacitor_specification,220nF 50V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C302,Capacitor_specification,1uF 16V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C303,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C304,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C305,Capacitor_specification,10uF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C306,Capacitor_specification,10uF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C307,Capacitor_specification,1uF 50V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C308,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C309,Capacitor_specification,1uF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C310,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C311,Capacitor_specification,1uF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C312,Capacitor_specification,10nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C313,Capacitor_specification,10nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C314,Capacitor_specification,220nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C315,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C316,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C317,Capacitor_specification,10nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C318,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C319,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C320,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C321,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C322,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C323,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C324,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C325,Capacitor_specification,100nF 25V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C330,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C331,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C332,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C333,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C334,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C335,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C336,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C337,PCH1V471MCL1GS,470uF 35V,V1A_Qualified:Nichicon_PCH_10x16,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+D301,"BAS116,215","BAS116,215",Package_TO_SOT_SMD:SOT-23,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+D302,"BAS116,215","BAS116,215",Package_TO_SOT_SMD:SOT-23,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+D303,BAT46W-E3-08,BAT46W-E3-08,V1A_Qualified:Vishay_BAT46W_A1_K2,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+J301,B2B-XH-A(LF)(SN),ARM button,V1A_Qualified:JST_B2B_XH_A_P2.50_THT,PASS completion geometry
+J302,B2B-XH-A(LF)(SN),RESET button,V1A_Qualified:JST_B2B_XH_A_P2.50_THT,PASS completion geometry
+Q301,BSC034N06NSATMA1,BSC034N06NSATMA1,V1A_Qualified:Infineon_BSC034N06NS_8pin,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+Q302,BSC034N06NSATMA1,BSC034N06NSATMA1,V1A_Qualified:Infineon_BSC034N06NS_8pin,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+Q303,CSD18540Q5B,CSD18540Q5B,V1A_Qualified:TI_Q5B_CSD18540Q5B,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+Q304,"2N7002,215","2N7002,215",Package_TO_SOT_SMD:SOT-23,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R301,Resistor_specification,11.3k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R302,Resistor_specification,10.0k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R303,Resistor_specification,1.00k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R304,Resistor_specification,100,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R305,Resistor_specification,2.2M,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R306,Resistor_specification,1.00,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R307,Resistor_specification,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R308,WFMB2512R0330FEA,0.033,V1A_Qualified:Vishay_WFM2512,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R309,WFMB2512R0330FEA,0.033,V1A_Qualified:Vishay_WFM2512,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R310,WFMB2512R0330FEA,0.033,V1A_Qualified:Vishay_WFM2512,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R311,WFMB2512R0330FEA,0.033,V1A_Qualified:Vishay_WFM2512,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R312,Resistor_specification,31.9k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R313,Resistor_specification,10.0k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R314,Resistor_specification,53.9k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R315,Resistor_specification,10.0k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R316,Resistor_specification,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R317,Resistor_specification,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R318,Resistor_specification,47k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R319,Resistor_specification,100k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R320,Resistor_specification,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R321,Resistor_specification,100k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R322,Resistor_specification,100k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R323,Resistor_specification,10k,Resistor_SMD:R_1206_3216Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+TP301,TestPoint,VOUT_5V1,TestPoint:TestPoint_Pad_D1.5mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+TP302,TestPoint,VOUT_PROTECTED,TestPoint:TestPoint_Pad_D1.5mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+TP303,TestPoint,REF_2V5,TestPoint:TestPoint_Pad_D1.5mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+TP304,TestPoint,PROT_MID,TestPoint:TestPoint_Pad_D1.5mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+TP305,TestPoint,PROT_GATE,TestPoint:TestPoint_Pad_D1.5mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U301,LTC7001IMSE#PBF,LTC7001IMSE#PBF,Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U302,REF5025IDGKR,REF5025 2.5V DATASHEET,Package_SO:VSSOP-8_3x3mm_P0.65mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U303,TLV3201AIDBVR,TLV3201AIDBVR,Package_TO_SOT_SMD:SOT-23-5,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U304,SN74LVC1G74DCTR,SN74LVC1G74DCTR,V1A_Qualified:TI_DCT0008A_SN74LVC1G74,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U305,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Package_TO_SOT_SMD:SOT-23-6,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U306,TPS7A1601DGNR,TPS7A1601DGNR,Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U307,TPS7A1601DGNR,TPS7A1601DGNR,Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U308,TPS3808G25DBVR,TPS3808G25DBVR,Package_TO_SOT_SMD:SOT-23-6,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U309,SN74LVC1G74DCTR,SN74LVC1G74DCTR,V1A_Qualified:TI_DCT0008A_SN74LVC1G74,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U310,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Package_TO_SOT_SMD:SOT-23-6,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U311,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Package_TO_SOT_SMD:SOT-23-6,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U312,SN74LVC1G08DBVR,SN74LVC1G08DBVR,Package_TO_SOT_SMD:SOT-23-5,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U313,SN74LVC1G14DBVR,SN74LVC1G14DBVR,Package_TO_SOT_SMD:SOT-23-5,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U314,SN74LVC1G17DBVR,SN74LVC1G17DBVR,Package_TO_SOT_SMD:SOT-23-5,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U315,UCC27511DBVR,UCC27511DBVR,Package_TO_SOT_SMD:SOT-23-6,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C401,OPEN,100nF 50V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C402,OPEN,100nF 16V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C403,OPEN,1uF 50V,Capacitor_SMD:C_0805_2012Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C404,C5750X7R1H226M250KB,22uF 50V,V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50,PASS completion geometry
+C405,OPEN,100nF 16V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+C406,OPEN,100nF 16V,Capacitor_SMD:C_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R401,WSL27262L000FEA,2mOhm KELVIN,V1A_Qualified:Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R402,OPEN,10,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R403,OPEN,10,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R404,OPEN,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R405,OPEN,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R406,OPEN,4.7k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R407,OPEN,4.7k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+R408,OPEN,10k,Resistor_SMD:R_0603_1608Metric,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+TP401,N/A etched copper,ALERT_LOCAL,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+TP402,N/A etched copper,SHUNT_KPLUS,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+TP403,N/A etched copper,SHUNT_KMINUS,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+TP404,N/A etched copper,3V3_LOCAL,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+U401,INA228AIDGSR,INA228AIDGSR,Package_SO:VSSOP-10_3x3mm_P0.5mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U402,TPS70933DBVR,TPS70933DBVR,Package_TO_SOT_SMD:SOT-23-5,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+U403,TCA9517DGKR,TCA9517DGKR,Package_SO:VSSOP-8_3x3mm_P0.65mm,INHERITED assignment; pad numbers checked; not newly manufacturer-qualified
+J501,B2P-VH-FB-B(LF)(SN),DC INPUT,V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT,PASS completion geometry
+J502,1776508,LOAD OUTPUT,V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08,PASS geometry; hot mate OPEN
+J503,B4B-XH-A(LF)(SN),HOST I2C,V1A_Qualified:JST_B4B_XH_A_P2.50_THT,PASS completion geometry
+TP501,N/A etched copper,VIN_RAW,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+TP502,N/A etched copper,VIN_PROTECTED,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+TP503,N/A etched copper,LOAD_5V1,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
+TP504,N/A etched copper,GND,TestPoint:TestPoint_Pad_D1.5mm,PASS completion geometry
