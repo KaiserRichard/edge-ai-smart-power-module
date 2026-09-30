@@ -374,7 +374,7 @@ class Drawing:
                 if isinstance(obj,list) and obj[0] in ('symbol','wire','label','hierarchical_label','no_connect','junction'):
                     snap_connections(obj)
             replace(self.doc,'paper',['paper',q('A3')])
-        (HW/(self.name+'.kicad_sch')).write_text(dump(self.doc)+'\n')
+        (HW/(self.name+'.kicad_sch')).write_text('\n'.join(line.rstrip() for line in dump(self.doc).splitlines())+'\n')
         return self.libout
 
 def input_sheet():
@@ -471,7 +471,7 @@ def monitor_sheet():
     d.place('U403',83,83,c,width=14)
     for r,x,y in [('R404',26,83),('R405',42,83),('C406',60,83),('R406',108,83),('R407',124,83),('C405',141,83)]:d.place(r,x,y,c,True)
     for i,n in enumerate(['VOUT_PROTECTED','LOAD_5V1','3V3_HOST','SDA_HOST','SCL_HOST','GND']):d.port(n,(20+26*i,16))
-    d.notes(96,175);return d
+    d.notes(94,175);return d
 
 def io_sheet():
     d=Drawing('05_IO_TEST','io')
@@ -541,6 +541,6 @@ def main():
             old_fields={p[1] for p in nodes(s,'property')}
             replacement=[v for v in replacement if not isinstance(v,list) or (v[0]!='property' or v[1] in old_fields) and (v[0]!='embedded_fonts' or nodes(s,'embedded_fonts'))]
             lib[i]=replacement
-    (HW/'V1A.kicad_sym').write_text(dump(lib)+'\n')
+    (HW/'V1A.kicad_sym').write_text('\n'.join(line.rstrip() for line in dump(lib).splitlines())+'\n')
 
 if __name__=='__main__':main()

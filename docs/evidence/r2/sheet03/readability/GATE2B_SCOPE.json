@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "classification": "EVIDENCE: presentation-only preservation; not electrical validation",
+  "baseline_commit": "c47409fb2637c94ccaa685c3ac4cbbd10681d5a2",
+  "baseline_files": {
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "91101009b75f7c6ce3d6d951b137eab337561423476e996425723a9b11d4cf15",
+    "hardware/kicad/02_BUCK_5V.kicad_sch": "00dabd09fc3aedd3a46fdedcccc06cdec261a0804641fdcd021cce2d987c860f",
+    "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "46bafcfcca393310af272e5f59a3047ff5ff89b348890b386f15e3b45cbe583c",
+    "hardware/kicad/04_POWER_MONITOR.kicad_sch": "98b43392054547ed04a4ba2bb9b109c123b10a537581aa23258622103db78856",
+    "hardware/kicad/05_IO_TEST.kicad_sch": "e287c4cbb4960f6443a5047879d9bd236278c05d1fb39a44136d370a3f115ebf",
+    "hardware/kicad/V1A.kicad_pro": "2f3f1d74c5c1c75bbfb7daa1cc8822c177a31f2dea212aa09cc127ca813c62c5",
+    "hardware/kicad/V1A.kicad_sch": "08f3263ff42eb23fbcab7b4a21e2b800ff4401a7e5464114cc1ceddd63ce6902",
+    "hardware/kicad/V1A.kicad_sym": "ff639291b9a441c50a76783be74500f82e2183d78b04afc9ebcedffcf3debaef",
+    "hardware/kicad/V1A_Qualified.pretty/Infineon_BSC034N06NS_8pin.kicad_mod": "8a7a7599f1853fb25b8c06d59803ea0072b25f01a590501851f2ff65b0f3c10d",
+    "hardware/kicad/V1A_Qualified.pretty/Nichicon_PCH_10x16.kicad_mod": "97ee5d35f1938778ee05faaeba92d9add4220dca0b71236448cf245f23e7a39e",
+    "hardware/kicad/V1A_Qualified.pretty/TI_DCT0008A_SN74LVC1G74.kicad_mod": "d8bf0bd41a0c2c7aa954f8d48c8887e5915cfcfdf793404d0441532fb69b3b51",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod": "49490fa2d41fb553eb0c84297dcff799dedee0d560431f61b1962606ce16838e",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q5B_CSD18540Q5B.kicad_mod": "a5199f5c3148ea5f5dc0037191edcd6099287d95e811ff35aae52a04a364d650",
+    "hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_BAT46W_A1_K2.kicad_mod": "99bcb832df10fd78ab3c6faa17e99c36bc40a57ca5aac54d191b90c2075c79be",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WFM2512.kicad_mod": "ab4c6bf3379e911ef9e57668cffea306c52837861c3215e811e255c19a3a137b",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod": "5bf77b7075ce4232ced05e86c9e6c4aa9e88e61d52b3a9e6e10ee1819cc5e991",
+    "hardware/kicad/fp-lib-table": "703cfb0fd3f91b457a3766c56b14be8d218a74ffe252644f578791762c5dc02a",
+    "hardware/kicad/sym-lib-table": "b2a54c11e03449e84dfc1de436dfed2606a538f2deccf22bbae071d38a8ff747"
+  },
+  "files": {
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "d83a01f70fa8a7c7fd13d26b257a4d78ac838c2f5d6bd9215e4dcc09568e8f77",
+    "hardware/kicad/02_BUCK_5V.kicad_sch": "53e503198b9087c0c73d1b78b5fe5b6587f09c3d11e5347a078044522b08bb8c",
+    "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "12c78b6e82b9bf4dba25884feb73aa11923e56de976882e21e2cd55227c88fff",
+    "hardware/kicad/04_POWER_MONITOR.kicad_sch": "7f54f38877fe086c8f642e104dfcf8e28ba6c387f11d815cc18d192656dce649",
+    "hardware/kicad/05_IO_TEST.kicad_sch": "0776235bd6db98af6786fca9ba2153e3f9e62d8a03b5c520297e76cecf86c01e",
+    "hardware/kicad/V1A.kicad_pro": "2f3f1d74c5c1c75bbfb7daa1cc8822c177a31f2dea212aa09cc127ca813c62c5",
+    "hardware/kicad/V1A.kicad_sch": "3580b27084d7dee4d0a27a59d6ace32510fd7cc0d3af0863aaffb0fca253721f",
+    "hardware/kicad/V1A.kicad_sym": "375832f6c86aa0295605a892b289098833e927ae50c6da7c7896c100204caae0",
+    "hardware/kicad/V1A_Qualified.pretty/Infineon_BSC034N06NS_8pin.kicad_mod": "8a7a7599f1853fb25b8c06d59803ea0072b25f01a590501851f2ff65b0f3c10d",
+    "hardware/kicad/V1A_Qualified.pretty/Nichicon_PCH_10x16.kicad_mod": "97ee5d35f1938778ee05faaeba92d9add4220dca0b71236448cf245f23e7a39e",
+    "hardware/kicad/V1A_Qualified.pretty/TI_DCT0008A_SN74LVC1G74.kicad_mod": "d8bf0bd41a0c2c7aa954f8d48c8887e5915cfcfdf793404d0441532fb69b3b51",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod": "49490fa2d41fb553eb0c84297dcff799dedee0d560431f61b1962606ce16838e",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q5B_CSD18540Q5B.kicad_mod": "a5199f5c3148ea5f5dc0037191edcd6099287d95e811ff35aae52a04a364d650",
+    "hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_BAT46W_A1_K2.kicad_mod": "99bcb832df10fd78ab3c6faa17e99c36bc40a57ca5aac54d191b90c2075c79be",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WFM2512.kicad_mod": "ab4c6bf3379e911ef9e57668cffea306c52837861c3215e811e255c19a3a137b",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod": "5bf77b7075ce4232ced05e86c9e6c4aa9e88e61d52b3a9e6e10ee1819cc5e991",
+    "hardware/kicad/fp-lib-table": "703cfb0fd3f91b457a3766c56b14be8d218a74ffe252644f578791762c5dc02a",
+    "hardware/kicad/sym-lib-table": "b2a54c11e03449e84dfc1de436dfed2606a538f2deccf22bbae071d38a8ff747"
+  },
+  "allowed_changes": [
+    "Five circuit sheets and top hierarchy: drawing geometry, visible text, wires/labels with identical connectivity",
+    "V1A.kicad_sym: symbol graphics and pin placement only; identities/types unchanged"
+  ],
+  "project_and_erc_settings_unchanged": true
+}

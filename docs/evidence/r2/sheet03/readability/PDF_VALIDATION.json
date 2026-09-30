@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "pdf": "docs/evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf",
-  "sha256": "2a53940b8d666b5e54e8e574c7b3f30b08546b40e71a59000f91cfa5b7c02d27",
+  "sha256": "6be9579340f1dc097ee18d646bf2031820fa2a72e6656cd710b3237773050ae7",
   "page_count": 6,
   "pages": [
     {
@@ -17,7 +17,7 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "12875b2453f1152cf9b2791df92671982017f93df4f52f2904ba54b81413772c"
+      "image_sha256": "f823844f3a8a4d62baa7ee22da78836e334bb8488686746c52030a0114b5062e"
     },
     {
       "page": 2,
@@ -77,7 +77,7 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "60f7634bd33a15761807282ba16b48f78ed478bc9fb50e8bf0ed6a22024f9c84"
+      "image_sha256": "c8c12492f3d4535639bcfd19eb6bf84a7762cf2af8400d00773e6dd374281d83"
     },
     {
       "page": 6,
@@ -92,7 +92,7 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "fba93d8d6a1dce4c04a1492de6bc1ff8083c75414afb0b6b53c5c0d0db19d47a"
+      "image_sha256": "da19e78969bbd03109573a8fed7a6fb12f2781ff61e8e4464b79ba99303ef6ff"
     }
   ],
   "method": "Native KiCad vector export; exact landscape A3; no scaling or added margin.",

@@ -195,3 +195,18 @@ Additional evidence limits: some official PDFs remain remote-only; predecessor d
 **Stop here for technical review.** Send this report and the source pack to ChatGPT as requested. Manager review must resolve essential requirements, approve the architecture and component direction, and explicitly authorize R2. Only then capture a schematic, verify pins/footprints/ratings and run ERC. Continue R3–R5 sequentially; dummy-load fault/thermal/ripple validation precedes SBC use.
 
 No commit, push, purchase, ignored-cache deletion or schematic implementation was performed. Documentary rollback can be limited to this mission's new files and scope annotations; retain historical evidence and the user's existing AGENTS edits.
+
+
+## Gate 2b — schematic readability, 2026-09-30
+
+**STATUS: PASS (presentation gate only).** Existing R2 electrical release and R3 remain BLOCKED.
+
+**WHAT WAS DONE:** recovered and pushed useful uncommitted work, completed all five circuit-sheet redraws plus hierarchy, grouped local circuits with real wires and named inter-block links, retained top power/bottom returns and title blocks, added Sheet 03 detector/latch/disconnect/crowbar reading guide, and exported six native A3 review pages. Each finished sheet has a pushed checkpoint.
+
+**EVIDENCE:** [Gate 2b report](evidence/r2/sheet03/GATE2B_READABILITY.md), [review PDF](evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf), [netlist identity](evidence/r2/sheet03/readability/NETLIST_IDENTITY.json), [ERC](evidence/r2/sheet03/readability/ERC.json), [source scope](evidence/r2/sheet03/readability/GATE2B_SCOPE.json). Fresh c47409f/final exports match: 154 components, 94 nets, all 161 source symbols, zero canonical diff. ERC all severities: zero violations. Twenty regression tests pass; all six rendered pages visually reviewed. PDF copied to the requested external review folder.
+
+**DECISIONS:** presentation-only changes accepted for review; parts, values, footprints, pin identities, nets, hierarchy and project/ERC settings preserved. Commit/push and draft PR are authorized by this task; no merge or fabrication release.
+
+**OPEN RISKS:** Gate 2 fault timing/energy/SOA and transient/stability issues remain unresolved. ERC/netlist identity establish drawing integrity, not electrical safety or physical performance. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.
+
+**NEXT GATE:** designer reviews the draft PR and Gate 2 electrical blockers. R3 layout must await the existing electrical review/release gates; physical R5 validation is outstanding.
