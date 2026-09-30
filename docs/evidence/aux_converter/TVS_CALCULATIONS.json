@@ -1,0 +1,628 @@
+{
+  "classification": "CALCULATED within labelled ASSUMED screens; electrical qualification BLOCKED",
+  "base_commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+  "frozen_normal_input_V": [
+    9,
+    24
+  ],
+  "frozen_Pi_load_A": 5,
+  "frozen_Pi_peak_strictly_below_V": 5.5,
+  "initial_only_efuse_OVP_min_V": 26.973872559387452,
+  "normal_nuisance_comparison_V": 26.97,
+  "assumed_standoff_margin_V": 1,
+  "assumed_nuisance_margin_V": 1,
+  "user_comparison_figures_are_complete_peaks_only_if_guaranteed": true,
+  "TVS_candidates": [
+    {
+      "MPN": "SMBJ30CA",
+      "manufacturer": "Littelfuse",
+      "bidirectional": true,
+      "classification": "Manufacturer table at25 C; application transfer ASSUMED",
+      "VRWM_V": 30,
+      "VBR_min_V": 33.3,
+      "VBR_max_V": 36.8,
+      "VBR_test_A": 0.001,
+      "VC_max_V": 48.4,
+      "IPP_A": 12.4,
+      "Vishay_comparison_IPP_A": 12.4,
+      "leakage_max_at_VRWM_A": 1e-06,
+      "peak_pulse_power_W": 600,
+      "waveform": "10/1000 us, nonrepetitive, specified mounting/temperature",
+      "clamp_margin_to_67V_V": 18.6,
+      "standoff_margin_to_module_OVP_trigger_max_V": {
+        "RSD-100C-24": -2.3999999999999986,
+        "RSD-200C-24": -2.3999999999999986,
+        "TEP 150-4815WI": -3.6000000000000014,
+        "TEP 200-7215UIR": -1.1999999999999993
+      },
+      "additional_overshoot_after_assumed_1V_margin_V": {
+        "RSD-100C-24": -3.3999999999999986,
+        "RSD-200C-24": -3.3999999999999986,
+        "TEP 150-4815WI": -4.600000000000001,
+        "TEP 200-7215UIR": -2.1999999999999993
+      },
+      "actual_hot_VC_max_V": null,
+      "actual_hot_leakage_max_A": null
+    },
+    {
+      "MPN": "SMCJ30CA",
+      "manufacturer": "Littelfuse",
+      "bidirectional": true,
+      "classification": "Manufacturer table at25 C; application transfer ASSUMED",
+      "VRWM_V": 30,
+      "VBR_min_V": 33.3,
+      "VBR_max_V": 36.8,
+      "VBR_test_A": 0.001,
+      "VC_max_V": 48.4,
+      "IPP_A": 31.0,
+      "Vishay_comparison_IPP_A": 31.0,
+      "leakage_max_at_VRWM_A": 1e-06,
+      "peak_pulse_power_W": 1500,
+      "waveform": "10/1000 us, nonrepetitive, specified mounting/temperature",
+      "clamp_margin_to_67V_V": 18.6,
+      "standoff_margin_to_module_OVP_trigger_max_V": {
+        "RSD-100C-24": -2.3999999999999986,
+        "RSD-200C-24": -2.3999999999999986,
+        "TEP 150-4815WI": -3.6000000000000014,
+        "TEP 200-7215UIR": -1.1999999999999993
+      },
+      "additional_overshoot_after_assumed_1V_margin_V": {
+        "RSD-100C-24": -3.3999999999999986,
+        "RSD-200C-24": -3.3999999999999986,
+        "TEP 150-4815WI": -4.600000000000001,
+        "TEP 200-7215UIR": -2.1999999999999993
+      },
+      "actual_hot_VC_max_V": null,
+      "actual_hot_leakage_max_A": null
+    },
+    {
+      "MPN": "SMBJ33CA",
+      "manufacturer": "Littelfuse",
+      "bidirectional": true,
+      "classification": "Manufacturer table at25 C; application transfer ASSUMED",
+      "VRWM_V": 33,
+      "VBR_min_V": 36.7,
+      "VBR_max_V": 40.6,
+      "VBR_test_A": 0.001,
+      "VC_max_V": 53.3,
+      "IPP_A": 11.3,
+      "Vishay_comparison_IPP_A": 11.3,
+      "leakage_max_at_VRWM_A": 1e-06,
+      "peak_pulse_power_W": 600,
+      "waveform": "10/1000 us, nonrepetitive, specified mounting/temperature",
+      "clamp_margin_to_67V_V": 13.700000000000003,
+      "standoff_margin_to_module_OVP_trigger_max_V": {
+        "RSD-100C-24": 0.6000000000000014,
+        "RSD-200C-24": 0.6000000000000014,
+        "TEP 150-4815WI": -0.6000000000000014,
+        "TEP 200-7215UIR": 1.8000000000000007
+      },
+      "additional_overshoot_after_assumed_1V_margin_V": {
+        "RSD-100C-24": -0.3999999999999986,
+        "RSD-200C-24": -0.3999999999999986,
+        "TEP 150-4815WI": -1.6000000000000014,
+        "TEP 200-7215UIR": 0.8000000000000007
+      },
+      "actual_hot_VC_max_V": null,
+      "actual_hot_leakage_max_A": null
+    },
+    {
+      "MPN": "SMCJ33CA",
+      "manufacturer": "Littelfuse",
+      "bidirectional": true,
+      "classification": "Manufacturer table at25 C; application transfer ASSUMED",
+      "VRWM_V": 33,
+      "VBR_min_V": 36.7,
+      "VBR_max_V": 40.6,
+      "VBR_test_A": 0.001,
+      "VC_max_V": 53.3,
+      "IPP_A": 28.2,
+      "Vishay_comparison_IPP_A": 28.1,
+      "leakage_max_at_VRWM_A": 1e-06,
+      "peak_pulse_power_W": 1500,
+      "waveform": "10/1000 us, nonrepetitive, specified mounting/temperature",
+      "clamp_margin_to_67V_V": 13.700000000000003,
+      "standoff_margin_to_module_OVP_trigger_max_V": {
+        "RSD-100C-24": 0.6000000000000014,
+        "RSD-200C-24": 0.6000000000000014,
+        "TEP 150-4815WI": -0.6000000000000014,
+        "TEP 200-7215UIR": 1.8000000000000007
+      },
+      "additional_overshoot_after_assumed_1V_margin_V": {
+        "RSD-100C-24": -0.3999999999999986,
+        "RSD-200C-24": -0.3999999999999986,
+        "TEP 150-4815WI": -1.6000000000000014,
+        "TEP 200-7215UIR": 0.8000000000000007
+      },
+      "actual_hot_VC_max_V": null,
+      "actual_hot_leakage_max_A": null
+    },
+    {
+      "MPN": "SMBJ36CA",
+      "manufacturer": "Littelfuse",
+      "bidirectional": true,
+      "classification": "Manufacturer table at25 C; application transfer ASSUMED",
+      "VRWM_V": 36,
+      "VBR_min_V": 40.0,
+      "VBR_max_V": 44.2,
+      "VBR_test_A": 0.001,
+      "VC_max_V": 58.1,
+      "IPP_A": 10.4,
+      "Vishay_comparison_IPP_A": 10.3,
+      "leakage_max_at_VRWM_A": 1e-06,
+      "peak_pulse_power_W": 600,
+      "waveform": "10/1000 us, nonrepetitive, specified mounting/temperature",
+      "clamp_margin_to_67V_V": 8.899999999999999,
+      "standoff_margin_to_module_OVP_trigger_max_V": {
+        "RSD-100C-24": 3.6000000000000014,
+        "RSD-200C-24": 3.6000000000000014,
+        "TEP 150-4815WI": 2.3999999999999986,
+        "TEP 200-7215UIR": 4.800000000000001
+      },
+      "additional_overshoot_after_assumed_1V_margin_V": {
+        "RSD-100C-24": 2.6000000000000014,
+        "RSD-200C-24": 2.6000000000000014,
+        "TEP 150-4815WI": 1.3999999999999986,
+        "TEP 200-7215UIR": 3.8000000000000007
+      },
+      "actual_hot_VC_max_V": null,
+      "actual_hot_leakage_max_A": null
+    },
+    {
+      "MPN": "SMCJ36CA",
+      "manufacturer": "Littelfuse",
+      "bidirectional": true,
+      "classification": "Manufacturer table at25 C; application transfer ASSUMED",
+      "VRWM_V": 36,
+      "VBR_min_V": 40.0,
+      "VBR_max_V": 44.2,
+      "VBR_test_A": 0.001,
+      "VC_max_V": 58.1,
+      "IPP_A": 25.9,
+      "Vishay_comparison_IPP_A": 25.8,
+      "leakage_max_at_VRWM_A": 1e-06,
+      "peak_pulse_power_W": 1500,
+      "waveform": "10/1000 us, nonrepetitive, specified mounting/temperature",
+      "clamp_margin_to_67V_V": 8.899999999999999,
+      "standoff_margin_to_module_OVP_trigger_max_V": {
+        "RSD-100C-24": 3.6000000000000014,
+        "RSD-200C-24": 3.6000000000000014,
+        "TEP 150-4815WI": 2.3999999999999986,
+        "TEP 200-7215UIR": 4.800000000000001
+      },
+      "additional_overshoot_after_assumed_1V_margin_V": {
+        "RSD-100C-24": 2.6000000000000014,
+        "RSD-200C-24": 2.6000000000000014,
+        "TEP 150-4815WI": 1.3999999999999986,
+        "TEP 200-7215UIR": 3.8000000000000007
+      },
+      "actual_hot_VC_max_V": null,
+      "actual_hot_leakage_max_A": null
+    }
+  ],
+  "selected_D101": "Littelfuse SMCJ36CA",
+  "proposed_continuous_board_fault_target_V": 35,
+  "catalogue_standoff_V": 36,
+  "proven_V1A_continuous_withstand_V": null,
+  "pulse_envelope": {
+    "classification": "CALCULATED within ASSUMED 5 A TVS current waveform, not a source guarantee",
+    "peak_A": 5.0,
+    "rise_s": 1e-05,
+    "half_time_from_start_s": 0.001,
+    "exponential_tau_s": 0.0014282680904800739,
+    "integrated_charge_C": 0.007166340452400369,
+    "integrated_I2t_A2s": 0.017936684464334256,
+    "energy_at_58p1V_J": 0.41636438028446143,
+    "energy_at_60V_J": 0.4299804271440221,
+    "assumed_energy_envelope_J": 0.45,
+    "node_peak_acceptance_V": 60.0,
+    "assumed_initial_Tj_C": 85,
+    "assumed_linear_pulse_power_derating": 0.52,
+    "SMCJ_derated_power_screen_W": 780.0,
+    "SMBJ_derated_power_screen_W": 312.0,
+    "peak_power_at_node_ceiling_W": 300.0,
+    "actual_hot_energy_rating_J": null,
+    "actual_source_fault_energy_J": null
+  },
+  "hot_clamp_sensitivity": {
+    "classification": "ASSUMED sensitivity only, not manufacturer hot VC maximum",
+    "VBR_coefficient_misapplied_to_VC_per_K": 0.001,
+    "temperature_C": 85,
+    "layout_overshoot_V": 2,
+    "illustrative_node_V": 63.586000000000006,
+    "actual_hot_node_peak_V": null
+  },
+  "component_stress": [
+    {
+      "node_V": 24.0,
+      "classification": "CALCULATED voltage-only and assumed10 mA/LDO screen; diode drop not credited",
+      "efuse_abs_margin_V": 43.0,
+      "efuse_operating_margin_V": 36.0,
+      "C101_C102_100V_margin_V": 76.0,
+      "Q101_VDS_100V_screen_margin_V": 76.0,
+      "LDO_input_abs_margin_V": 38.0,
+      "LDO_EN_recommended_margin_V": 16.0,
+      "C307_50V_margin_V": 26.0,
+      "R323_10k_1pct_max_W": 0.05818181818181818,
+      "detector_LDO_10mA_W": 0.19119375469501,
+      "driver_LDO_10mA_W": 0.16559730965708583,
+      "UVLO": {
+        "pin_max_V": 3.418451460754083,
+        "top_max_V": 20.60737067679359,
+        "top_max_W": 0.0012796620924550378,
+        "bottom_max_W": 0.00021264364760070032
+      },
+      "OVP": {
+        "pin_max_V": 1.046596037325012,
+        "top_max_V": 22.961926353053205,
+        "top_max_W": 0.0015163397951784305,
+        "bottom_max_W": 6.925753141443483e-05
+      }
+    },
+    {
+      "node_V": 33.6,
+      "classification": "CALCULATED voltage-only and assumed10 mA/LDO screen; diode drop not credited",
+      "efuse_abs_margin_V": 33.4,
+      "efuse_operating_margin_V": 26.4,
+      "C101_C102_100V_margin_V": 66.4,
+      "Q101_VDS_100V_screen_margin_V": 66.4,
+      "LDO_input_abs_margin_V": 28.4,
+      "LDO_EN_recommended_margin_V": 6.399999999999999,
+      "C307_50V_margin_V": 16.4,
+      "R323_10k_1pct_max_W": 0.11403636363636364,
+      "detector_LDO_10mA_W": 0.28719375469501,
+      "driver_LDO_10mA_W": 0.26159730965708583,
+      "UVLO": {
+        "pin_max_V": 4.783003431162458,
+        "top_max_V": 28.84749438245697,
+        "top_max_W": 0.0025076466112299144,
+        "bottom_max_W": 0.000416289026501947
+      },
+      "OVP": {
+        "pin_max_V": 1.4643267964183897,
+        "top_max_V": 32.145790894557635,
+        "top_max_W": 0.002971858477962582,
+        "bottom_max_W": 0.0001355766364463982
+      }
+    },
+    {
+      "node_V": 35.0,
+      "classification": "CALCULATED voltage-only and assumed10 mA/LDO screen; diode drop not credited",
+      "efuse_abs_margin_V": 32.0,
+      "efuse_operating_margin_V": 25.0,
+      "C101_C102_100V_margin_V": 65.0,
+      "Q101_VDS_100V_screen_margin_V": 65.0,
+      "LDO_input_abs_margin_V": 27.0,
+      "LDO_EN_recommended_margin_V": 5.0,
+      "C307_50V_margin_V": 15.0,
+      "R323_10k_1pct_max_W": 0.12373737373737374,
+      "detector_LDO_10mA_W": 0.30119375469501,
+      "driver_LDO_10mA_W": 0.27559730965708584,
+      "UVLO": {
+        "pin_max_V": 4.982000593513678,
+        "top_max_V": 30.049179089532878,
+        "top_max_W": 0.0027209174315063287,
+        "bottom_max_W": 0.0004516490779488389
+      },
+      "OVP": {
+        "pin_max_V": 1.5252458654528407,
+        "top_max_V": 33.48510447352703,
+        "top_max_W": 0.0032246546507850916,
+        "bottom_max_W": 0.00014709182906213946
+      }
+    },
+    {
+      "node_V": 36.0,
+      "classification": "CALCULATED voltage-only and assumed10 mA/LDO screen; diode drop not credited",
+      "efuse_abs_margin_V": 31.0,
+      "efuse_operating_margin_V": 24.0,
+      "C101_C102_100V_margin_V": 64.0,
+      "Q101_VDS_100V_screen_margin_V": 64.0,
+      "LDO_input_abs_margin_V": 26.0,
+      "LDO_EN_recommended_margin_V": 4.0,
+      "C307_50V_margin_V": 14.0,
+      "R323_10k_1pct_max_W": 0.13090909090909092,
+      "detector_LDO_10mA_W": 0.31119375469501,
+      "driver_LDO_10mA_W": 0.2855973096570858,
+      "UVLO": {
+        "pin_max_V": 5.124141423764551,
+        "top_max_V": 30.907525308872813,
+        "top_max_W": 0.0028785820035928723,
+        "bottom_max_W": 0.00047778861085617124
+      },
+      "OVP": {
+        "pin_max_V": 1.5687594861917342,
+        "top_max_V": 34.44175702993375,
+        "top_max_W": 0.0034115401817491954,
+        "bottom_max_W": 0.0001556042897303048
+      }
+    },
+    {
+      "node_V": 58.1,
+      "classification": "CALCULATED voltage-only and assumed10 mA/LDO screen; diode drop not credited",
+      "efuse_abs_margin_V": 8.899999999999999,
+      "efuse_operating_margin_V": 1.8999999999999986,
+      "C101_C102_100V_margin_V": 41.9,
+      "Q101_VDS_100V_screen_margin_V": 41.9,
+      "LDO_input_abs_margin_V": 3.8999999999999986,
+      "LDO_EN_recommended_margin_V": -18.1,
+      "C307_50V_margin_V": -8.100000000000001,
+      "R323_10k_1pct_max_W": 0.3409707070707071,
+      "detector_LDO_10mA_W": 0.5321937546950101,
+      "driver_LDO_10mA_W": 0.5065973096570858,
+      "UVLO": {
+        "pin_max_V": 8.265453772308831,
+        "top_max_V": 49.87697675628538,
+        "top_max_W": 0.0074963590809163224,
+        "bottom_max_W": 0.001243159864946971
+      },
+      "OVP": {
+        "pin_max_V": 2.530410504521281,
+        "top_max_V": 55.583778526522075,
+        "top_max_W": 0.008885380413037498,
+        "bottom_max_W": 0.0004048468823196832
+      }
+    },
+    {
+      "node_V": 60.0,
+      "classification": "CALCULATED voltage-only and assumed10 mA/LDO screen; diode drop not credited",
+      "efuse_abs_margin_V": 7.0,
+      "efuse_operating_margin_V": 0.0,
+      "C101_C102_100V_margin_V": 40.0,
+      "Q101_VDS_100V_screen_margin_V": 40.0,
+      "LDO_input_abs_margin_V": 2.0,
+      "LDO_EN_recommended_margin_V": -20.0,
+      "C307_50V_margin_V": -10.0,
+      "R323_10k_1pct_max_W": 0.36363636363636365,
+      "detector_LDO_10mA_W": 0.55119375469501,
+      "driver_LDO_10mA_W": 0.5255973096570858,
+      "UVLO": {
+        "pin_max_V": 8.535521349785487,
+        "top_max_V": 51.50783457303125,
+        "top_max_W": 0.007994599705945687,
+        "bottom_max_W": 0.0013257257262344916
+      },
+      "OVP": {
+        "pin_max_V": 2.6130863839251783,
+        "top_max_V": 57.401418383694825,
+        "top_max_W": 0.009476001947608037,
+        "bottom_max_W": 0.00043173411713951654
+      }
+    },
+    {
+      "node_V": 67.2,
+      "classification": "CALCULATED voltage-only and assumed10 mA/LDO screen; diode drop not credited",
+      "efuse_abs_margin_V": -0.20000000000000284,
+      "efuse_operating_margin_V": -7.200000000000003,
+      "C101_C102_100V_margin_V": 32.8,
+      "Q101_VDS_100V_screen_margin_V": 32.8,
+      "LDO_input_abs_margin_V": -5.200000000000003,
+      "LDO_EN_recommended_margin_V": -27.200000000000003,
+      "C307_50V_margin_V": -17.200000000000003,
+      "R323_10k_1pct_max_W": 0.4561454545454546,
+      "detector_LDO_10mA_W": 0.62319375469501,
+      "driver_LDO_10mA_W": 0.5975973096570859,
+      "UVLO": {
+        "pin_max_V": 9.558935327591769,
+        "top_max_V": 57.68792735227879,
+        "top_max_W": 0.01002813126547159,
+        "bottom_max_W": 0.0016626951299535066
+      },
+      "OVP": {
+        "pin_max_V": 2.9263844532452117,
+        "top_max_V": 64.28931678982315,
+        "top_max_W": 0.01188659633547219,
+        "bottom_max_W": 0.0005414665061644228
+      }
+    }
+  ],
+  "F101_candidates": [
+    {
+      "MPN": "3403.0281.23",
+      "family": "Schurter UMT-H",
+      "rated_A": 5,
+      "rated_DC_V": 125,
+      "DC_breaking_A": 1500,
+      "typical_melting_I2t_at_10x_A2s": 100,
+      "typical_drop_at_rated_current_mV": 115,
+      "conservative_hold_screen_60C_A": 2.8000000000000003,
+      "conservative_hold_screen_85C_A": 2.4499999999999997,
+      "meets_assumed_5A_at_85C": false,
+      "actual_hot_hold_A": null,
+      "max_total_DC_clearing_I2t_A2s": null,
+      "assumed_60C_graph_factor": 0.8,
+      "assumed_85C_graph_factor": 0.7,
+      "continuous_utilisation": 0.7
+    },
+    {
+      "MPN": "3403.0283.23",
+      "family": "Schurter UMT-H",
+      "rated_A": 8,
+      "rated_DC_V": 125,
+      "DC_breaking_A": 1500,
+      "typical_melting_I2t_at_10x_A2s": 95,
+      "typical_drop_at_rated_current_mV": 79,
+      "conservative_hold_screen_60C_A": 4.4799999999999995,
+      "conservative_hold_screen_85C_A": 3.9199999999999995,
+      "meets_assumed_5A_at_85C": false,
+      "actual_hot_hold_A": null,
+      "max_total_DC_clearing_I2t_A2s": null,
+      "assumed_60C_graph_factor": 0.8,
+      "assumed_85C_graph_factor": 0.7,
+      "continuous_utilisation": 0.7
+    },
+    {
+      "MPN": "3403.0284.23",
+      "family": "Schurter UMT-H",
+      "rated_A": 10,
+      "rated_DC_V": 125,
+      "DC_breaking_A": 1500,
+      "typical_melting_I2t_at_10x_A2s": 180,
+      "typical_drop_at_rated_current_mV": 73,
+      "conservative_hold_screen_60C_A": 5.6000000000000005,
+      "conservative_hold_screen_85C_A": 4.8999999999999995,
+      "meets_assumed_5A_at_85C": false,
+      "actual_hot_hold_A": null,
+      "max_total_DC_clearing_I2t_A2s": null,
+      "assumed_60C_graph_factor": 0.8,
+      "assumed_85C_graph_factor": 0.7,
+      "continuous_utilisation": 0.7
+    },
+    {
+      "MPN": "3403.0285.23",
+      "family": "Schurter UMT-H",
+      "rated_A": 12.5,
+      "rated_DC_V": 125,
+      "DC_breaking_A": 1000,
+      "typical_melting_I2t_at_10x_A2s": 340,
+      "typical_drop_at_rated_current_mV": 63,
+      "conservative_hold_screen_60C_A": 7.0,
+      "conservative_hold_screen_85C_A": 6.125,
+      "meets_assumed_5A_at_85C": true,
+      "actual_hot_hold_A": null,
+      "max_total_DC_clearing_I2t_A2s": null,
+      "assumed_60C_graph_factor": 0.8,
+      "assumed_85C_graph_factor": 0.7,
+      "continuous_utilisation": 0.7
+    }
+  ],
+  "selected_F101": "Schurter 3403.0285.23",
+  "assumed_F101_local_max_C": 85,
+  "required_source_DC_interrupt_envelope_V": 67.2,
+  "actual_prospective_short_current_A": null,
+  "actual_circuit_L_over_R_s": null,
+  "normal_module_budgets": [
+    {
+      "MPN": "RSD-100C-24",
+      "classification": "CALCULATED with ASSUMED150 mV step; ripple typical-only for TEP200",
+      "temperature_screen": "0..50 C only; outside OPEN",
+      "dc_allowance_V": 0.66,
+      "full_pp_ripple_positive_allowance_V": 0.15,
+      "assumed_healthy_startup_or_load_step_V": 0.15,
+      "normal_peak_screen_V": 24.959999999999997,
+      "headroom_to_user_26p97_V": 2.0100000000000016,
+      "nuisance_margin_after_assumed_1V_V": 1.0100000000000016,
+      "excess_above_frozen_24V_V": 0.9599999999999973,
+      "actual_normal_peak_V": null
+    },
+    {
+      "MPN": "RSD-200C-24",
+      "classification": "CALCULATED with ASSUMED150 mV step; ripple typical-only for TEP200",
+      "temperature_screen": "0..50 C only; outside OPEN",
+      "dc_allowance_V": 0.66,
+      "full_pp_ripple_positive_allowance_V": 0.15,
+      "assumed_healthy_startup_or_load_step_V": 0.15,
+      "normal_peak_screen_V": 24.959999999999997,
+      "headroom_to_user_26p97_V": 2.0100000000000016,
+      "nuisance_margin_after_assumed_1V_V": 1.0100000000000016,
+      "excess_above_frozen_24V_V": 0.9599999999999973,
+      "actual_normal_peak_V": null
+    },
+    {
+      "MPN": "TEP 150-4815WI",
+      "classification": "CALCULATED with ASSUMED150 mV step; ripple typical-only for TEP200",
+      "temperature_screen": "ASSUMED -20..60 C",
+      "dc_allowance_V": 0.6000000000000001,
+      "full_pp_ripple_positive_allowance_V": 0.2,
+      "assumed_healthy_startup_or_load_step_V": 0.15,
+      "normal_peak_screen_V": 24.95,
+      "headroom_to_user_26p97_V": 2.0199999999999996,
+      "nuisance_margin_after_assumed_1V_V": 1.0199999999999996,
+      "excess_above_frozen_24V_V": 0.9499999999999993,
+      "actual_normal_peak_V": null
+    },
+    {
+      "MPN": "TEP 200-7215UIR",
+      "classification": "CALCULATED with ASSUMED150 mV step; ripple typical-only for TEP200",
+      "temperature_screen": "ASSUMED -20..60 C",
+      "dc_allowance_V": 0.528,
+      "full_pp_ripple_positive_allowance_V": 0.2,
+      "assumed_healthy_startup_or_load_step_V": 0.15,
+      "normal_peak_screen_V": 24.877999999999997,
+      "headroom_to_user_26p97_V": 2.0920000000000023,
+      "nuisance_margin_after_assumed_1V_V": 1.0920000000000023,
+      "excess_above_frozen_24V_V": 0.8779999999999966,
+      "actual_normal_peak_V": null
+    }
+  ],
+  "trim_screens": {
+    "classification": "CALCULATED enquiries; complete bounds OPEN",
+    "proposed_23V_3pct_plus_100mV_ripple_150mV_step_V": 23.94,
+    "same_with_full_200mV_ripple_V": 24.04,
+    "setpoint_ceiling_with_3pct_200mV_ripple_150mV_step_V": 22.96116504854369,
+    "TEP200_23V_nominal24_referenced_2p2pct_200mV_ripple_150mV_step_V": 23.877999999999997,
+    "TEP200_23V_usable_power_before_derating_W": 193.20000000000002
+  },
+  "module_rescores": [
+    {
+      "MPN": "RSD-100C-24",
+      "new_TVS_standoff_screen": "CONDITIONAL voltage screen",
+      "OVP_trigger_max_V": 32.4,
+      "standard_downward_trim": false,
+      "allowance_after_36V_catalogue_minus_1V_margin_V": 2.6000000000000014,
+      "allowance_after_35V_proposed_board_target_minus_1V_margin_V": 1.6000000000000014,
+      "actual_module_fault_peak_V": null,
+      "actual_board_continuous_withstand_V": null,
+      "capacity_at_hypothetical_23V_W": 96.60000000000001,
+      "known_interface_mismatches": [
+        "Standard fixed/upward-only setting fails frozen24 V normal-peak ceiling",
+        "67.2 V/1 s primary surge specification fails proposed100 V/1 s without qualified PDB suppression",
+        "Hypothetical23 V capacity96.6 W fails +50 W scenario97.916667 W before hot derating"
+      ],
+      "standalone_recommendation": "NONE: full normal/fault/thermal/interface bounds OPEN"
+    },
+    {
+      "MPN": "RSD-200C-24",
+      "new_TVS_standoff_screen": "CONDITIONAL voltage screen",
+      "OVP_trigger_max_V": 32.4,
+      "standard_downward_trim": false,
+      "allowance_after_36V_catalogue_minus_1V_margin_V": 2.6000000000000014,
+      "allowance_after_35V_proposed_board_target_minus_1V_margin_V": 1.6000000000000014,
+      "actual_module_fault_peak_V": null,
+      "actual_board_continuous_withstand_V": null,
+      "capacity_at_hypothetical_23V_W": 193.20000000000002,
+      "known_interface_mismatches": [
+        "Standard fixed/upward-only setting fails frozen24 V normal-peak ceiling",
+        "67.2 V/1 s primary surge specification fails proposed100 V/1 s without qualified PDB suppression"
+      ],
+      "standalone_recommendation": "NONE: full normal/fault/thermal/interface bounds OPEN"
+    },
+    {
+      "MPN": "TEP 150-4815WI",
+      "new_TVS_standoff_screen": "CONDITIONAL voltage screen",
+      "OVP_trigger_max_V": 33.6,
+      "standard_downward_trim": false,
+      "allowance_after_36V_catalogue_minus_1V_margin_V": 1.3999999999999986,
+      "allowance_after_35V_proposed_board_target_minus_1V_margin_V": 0.3999999999999986,
+      "actual_module_fault_peak_V": null,
+      "actual_board_continuous_withstand_V": null,
+      "capacity_at_hypothetical_23V_W": 144.9,
+      "known_interface_mismatches": [
+        "Standard fixed/upward-only setting fails frozen24 V normal-peak ceiling",
+        "Nominal151.2 W fails +100 W scenario160.416667 W before hot derating"
+      ],
+      "standalone_recommendation": "NONE: full normal/fault/thermal/interface bounds OPEN"
+    },
+    {
+      "MPN": "TEP 200-7215UIR",
+      "new_TVS_standoff_screen": "CONDITIONAL voltage screen",
+      "OVP_trigger_max_V": 31.2,
+      "standard_downward_trim": true,
+      "allowance_after_36V_catalogue_minus_1V_margin_V": 3.8000000000000007,
+      "allowance_after_35V_proposed_board_target_minus_1V_margin_V": 2.8000000000000007,
+      "actual_module_fault_peak_V": null,
+      "actual_board_continuous_withstand_V": null,
+      "capacity_at_hypothetical_23V_W": 193.20000000000002,
+      "known_interface_mismatches": [],
+      "standalone_recommendation": "NONE: full normal/fault/thermal/interface bounds OPEN"
+    }
+  ],
+  "assumed_power_capacity_targets_W": {
+    "0": 35.416666666666664,
+    "50": 97.91666666666666,
+    "100": 160.41666666666669
+  },
+  "recommended_standalone_module": null,
+  "next_enquiry_candidate": "TEP 200-7215UIR",
+  "verdict": "NEW D101 SMCJ36CA, F101 3403.0285.23, V1A WITHSTANDS OPEN V continuous, RECOMMENDED MODULE NONE"
+}
