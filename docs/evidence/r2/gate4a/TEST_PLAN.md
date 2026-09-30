@@ -109,3 +109,22 @@ Selectedmodel: removeJP201U201_SW↔L201_SW_FORCE withallpoweroff. UseactualL201
 Beforetest, freezeexternalprechargetransfer/abort/discharge circuitsandallMPNs/hotSOA/current/C/L/sourceenergy. Unselectedindependentabort/disconnecthardwareiscurrentDESIGNBLOCKED. Supplycurrentlimitdoesnotcontain174mJalreadyinstores. Qualifylowenergyfirst: injectoractualconduction/t0, source/drivercoupling, prechargeisolation, nointernalLSshootthrough, passiveoff, emergencyE-stop andautomaticabortwhenDUTshutdownissuppressed. PASSsequencingonlywheninitialstate isrealPG/RUN-valid, allforceenergycounted, noprotectivebackfeed andactualabort/dischargeinsidepreviouslyreviewedratings. AnyfixturetimedopeningthatrescuesDUTisFAULTCONTAINMENTFAIL orconditionalmodeB, neverautonomousmodeAPASS.
 
 Measurementisrightclosureforinitialization/commutation/parasitic/physicalabort; missingconstruction/MPN/SOA cannotbeclosedbymeasurementinstructionalone. No test run.
+
+## T13 — METROLOGY-QUALIFICATION (R4A-13)
+
+Proposed equipment: two synchronized Tektronix MSO58B, 1 GHz option, 6.25 GS/s on all active channels. A scope records raw/protected/far-end voltage, IL201, IMAIN, Ipair, raw-dump current and physical fault SW epoch; B records additional protected-dump/per-string currents, VGS, SHDN/latch and held rails. Use common reference/trigger and calibrated deskew; record acquisition jitter and every active-channel range. Same-event correlation is required. TIVP1 IsoVu/TIVPMX1X at1MΩ for low rails/Kelvin-current shunts; TIVPMX10X where voltage/commonmode requiresit. TCP0150(150A/20MHz, documented500Apeak subject tofrequency/pulse derating) onlyDC/tailcrosscheck. Fast current shunts RM_IL/RM_MAIN/RM_PAIR/RM_RAW/RM_PROT = WSL27262L000FEA2mΩ, actualKelvinZ(f)/temperature/pulse reviewed. Added forceR/L iscounted; INA228's filteredmeasurementcannotreplace them. Keysight34465A proposed DC/four-wire reference, exactperformance/certificate pending. Noequipmentpurchase/availabilityclaim.
+
+Far-end precisionchannel: 5.1Voffset and±1Vmeasurementrange, isolatedloadedreturn, sensitivity chosen afternoisecheck. A simultaneouswide-rangechannel records0V/disposaltail; precisionchannelclippingoutsideitswindowneverhidesanapplicablepeak. Usefullbandwidthforfaultpeak andseparate20MHzfilteredripple only. ProbeDCleakage/28pF1Xtiploading andforce-loopZ areincluded; ifloadingchangesthetrajectory, instrumentconfigurationrequiresrequalification.
+
+Numerical allocated worst-case uncertainty ceilings (qualification targets, not achieved specs):
+
+| Quantity | Required calibration/evidence components | Ceiling / acceptance implication |
+|---|---|---|
+| Upeak/Umin | 0.5mV DCreference;5mV residualgain;4mV offset/noise;5mV verifiedBW/loading;3mV commonmode;2.5mVrepeatability | Sum20mV; measuredfaultpeak<5.480V; measurednormalminimum≥4.770V |
+| Utiming | 0.16ns sample;2ns deskew;2ns endpointthreshold;15ns measuredshunt/probephase/BW;1ns clock;5nsrepeatability;roundup | ≤30ns; sourceobservedmax≤9.970µs |
+| Ucharge | gain2% of100µC; offset50mA×10µs; conservativeedge250A×30ns | ≤10µC; measuredpositiveQ≤90µC; I>250A/rangeclippingrequirelargerrange/rebudget |
+| Uenergy | calibratedV/I/C/R and eventdeskew/transfer: provisional4%E+.5mJ | 7.463459mJ at174.086483mJ; useactualderivedvalueiflarger |
+
+Calibrate with traceable DCpoints4.75/5.1/5.5V andrated faststeps/pulses covering observededge/CMspectra, before/afterthermaltest; recordresidualgain,offset/noise, commonmode,tiploadingandmatchedfull-bandreference. Verify fastshuntZ(f) anddeembedinductivecomponent; compareintegral/DCtailagainstTCP0150/DMM withoutusing20MHzsensorforunboundedHFpeak. Calibrationlogserials/certificates/date/settings areOPEN, so theseceilings cannotbeinsertedasachievedU. TypicalTIVP1gainaccuracy1.5% alone82.5mVat5.5V istoo large.
+
+Compute conservative actual chargeerror`Ug*Q+Ioffset*T+Imax*Ut+transfer/integrationerror` and energyerror`UV*∫|I|dt+UI*∫|V|dt+UV*UI*T+Ut*∫|I*dV/dt|dt+remainingC/R/transfererror`; include signs,positive-currentrectification andinstrumentzero. PASSonlyifallnumericalceilingsareactuallyestablished at usedranges/temperature/spectra, unclipped/unsaturated, andnewmodelparametersincludeinstrumentinsertion. OtherwiseINCONCLUSIVE/BLOCKED; increaseUandreevaluateinequalities, neverarbitraryguardbandorasubstitutionofDCaccuracyforHFcapture. No test run.
