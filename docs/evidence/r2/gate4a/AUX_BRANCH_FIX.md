@@ -4,7 +4,7 @@
 
 **OBSERVATION:** pinned PR15 exported netlist has D303 anode on VIN_FUSED, cathode on VIN_AUX; VIN_AUX feeds both U306/U307 IN and EN, C307 and 10 kΩ R323. It is upstream of U101. A SMCJ36CA 58.1 V pulse clamp therefore reaches this branch despite main-eFuse shutdown. The TVS's 36 V standoff is not a 36 V regulated supply. See [pinned identities](INPUT_PROVENANCE.json) and [primary register](SOURCES.md).
 
-**EVIDENCE:** TPS7A16 recommends IN/EN ≤40 V; C307 is specified as 1 µF/50 V. At an ASSUMED 0.5 V D303 drop the old node is CALCULATED 57.6 V, exceeding those recommendations/capacitor rating. Old R323 dissipates CALCULATED 331.8 mW nominal at that voltage, before tolerance, beyond an ordinary 100 mW 0603 construction. An absolute-maximum IN/EN headline is not operating permission. [TI TPS7A16](https://www.ti.com/lit/ds/symlink/tps7a16.pdf).
+**EVIDENCE:** TPS7A16 recommends IN ≤60 V and EN ≤40 V; C307 is specified as 1 µF/50 V. At an ASSUMED 0.5 V D303 drop the old node is CALCULATED 57.6 V, exceeding those recommendations/capacitor rating. Old R323 dissipates CALCULATED 331.8 mW nominal at that voltage, before tolerance, beyond an ordinary 100 mW 0603 construction. An absolute-maximum IN/EN headline is not operating permission. [TI TPS7A16](https://www.ti.com/lit/ds/symlink/tps7a16.pdf).
 
 **DECISION:** keep a separate adjustable surge stopper followed by the 12 V buck-boost, upstream of the main eFuse. Feeding this branch solely from VIN_PROTECTED would remove control power precisely when source isolation acts; hold-up could cover a short interval but not sustained source-off status or deliberate re-arm. No connection from raw/protected 5 V output or host power is credited.
 

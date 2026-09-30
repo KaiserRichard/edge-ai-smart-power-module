@@ -1,0 +1,53 @@
+"""Independent Gate4a-FIX screens. No electrical validation or missing-bound defaults."""
+from itertools import product
+import math
+
+def loaded_divider(rt, rb, rs, rp, ron=0.0, sense=2.5, ileak=0.0):
+    # KCL: leakage is conservatively lumped at the comparator pin, after rs.
+    ip = sense / rp + ileak
+    div = sense + (rs + ron) * ip
+    return div * (1 + rt / rb) + rt * ip
+
+def supervisor(rt):
+    f=.0025; rb=10000.; ib=25e-9
+    return [.405*.98*(1+rt*(1-f)/(rb*(1+f)))-ib*rt*(1+f),
+            .405*1.02*(1+rt*(1+f)/(rb*(1-f)))+ib*rt*(1+f)]
+
+def calculate_fix():
+    f=.0025
+    reference_fraction=.0012125  # inherited conservative screen, incl. assumed age/noise
+    # Table Vos maximum + assumed hysteresis allowance + transferred PSRR/CMRR screen.
+    extra=.004+.002+.25*10**(-65/20)+.125*10**(-60/20)
+    ilo=1.125e-6  # 120nA switch +5nA comparator +1uA unqualified diode/PCB allocation
+    corners=[]; gains=[]
+    for signs in product((-1,1),repeat=4):
+        rt,rb,rs,rp=[r*(1+s*f) for r,s in zip((1e4,1e4,1e3,1e5),signs)]
+        for ron in (0.,17.):
+            gains.append(loaded_divider(rt,rb,rs,rp,ron,sense=1.))
+            for s,i in product((-1,1),repeat=2):
+                v=2.5*(1+s*reference_fraction)+s*extra
+                corners.append(loaded_divider(rt,rb,rs,rp,ron,v,i*ilo))
+    cmax=5.59656e-3; vraw=6.881668
+    energy=.099865083
+    return dict(
+      classification='CALCULATED conditional screens/acceptance allocations; no bench results; verdict BLOCKED',
+      resistor=dict(R103_58p1V_power_W=58.1**2/(348e3*(1-f)),R340_power_W=12.311325**2/(1e6*(1-f)),R367_historical1M_power_W=2.5**2/(1e6*(1-f)),tnpw0805_general85C_derated_W=.14*(125-85)/(125-70)),
+      bootstrap=dict(old220k_load_10V_A=10/220e3,new2M_10V_max_A=10/(2e6*(1-f)),new2M_14V_max_A=14/(2e6*(1-f)),new2M_power14V_W=14**2/(2e6*(1-f)),table15uA_remaining_at10V_A=15e-6-10/(2e6*(1-f)),table_test_TS_V=20,applicable_pump_min_at_TS5V_A=None,Cboot_effective_target_F=.5e-6,event_Qg_table_C=82e-9,event_droop_V=82e-9/.5e-6,passive_equivalent_tau_s=2e6*(1+f)*82e-9/10,passive_equivalent_10to1V_s=2e6*(1+f)*82e-9/10*math.log(10),actual_loaded_VGS_min_V=None),
+      detector=dict(old_loaded_1M_trip_corrected_V=loaded_divider(11300,10000,1000,1e6),old_loaded_20mV_increment_V=.02*loaded_divider(11300,10000,1000,1e6,sense=1),new_nominal_zero_Ron_trip_V=loaded_divider(10000,10000,1000,100000),new_nominal_17ohm_trip_V=loaded_divider(10000,10000,1000,100000,17),new_nominal_17ohm_overdrive_increment_V=.02*loaded_divider(10000,10000,1000,100000,17,sense=1),ASSUMED=dict(resistor_total_fraction=f,reference_total_fraction=reference_fraction,hysteresis_allowance_V=.002,aggregate_leakage_bound_A=ilo,rail_window_V=[4.75,5.25],temperature_screen_C=[25,85]),conditional_trip_min_max_V=[min(corners),max(corners)],conditional_20mV_overdrive_raw_upper_V=max(corners)+.02*max(gains),actual_trip_min_max_V=[None,None],fully_off_3uA_100k_max_V=3e-6*100e3*(1+f),powered_isolation_38uA_100k_estimate_V=38e-6*100e3*(1+f),R303_6p9V_current_ceiling_A=6.9/(1000*(1-f)),clamp_bias_low_A=(10.5-2.525)/(68100*(1+f)),clamp_bias_high_A=(12.312-2.475)/(68100*(1-f))),
+      auxiliary=dict(new_driver_supervisor_min_max_V=supervisor(249e3),new_detector_supervisor_min_max_V=supervisor(110e3),nominal_hold_upper_initial_energy_J=.5*440e-6*1.2*12**2,illustrative_charge_time_at_100mA_input_s=(.5*440e-6*12**2)/(.8*9*.1-.48),timer_C_only_min_max_s=[10e-9*.95*1.335/310e-6,10e-9*1.05*1.335/310e-6],actual_startup_min_max_s=[None,None],actual_hold_min_s=None),
+      source=dict(nominal_4p02k_current_A=18/4.02,nominal_charge_if10us_C=(18/4.02)*10e-6,remaining_time_after_TPS_max_s=10e-6-1.5e-6,current_trigger_0to10A_at9V_12uH_s=12e-6*10/(9-5.1),autonomous_trigger=None,upstream_module='Isolated48to24V; exact identity/source envelope OPEN'),
+      raw_dump=dict(R_nom_ohm=.1,R_initial_min_max_ohm=[.099,.101],I5p5_nom_A=5.5/.1,I6p881668_at_Rmin_A=vraw/.099,Cmax_conditional_F=cmax,RC_max_initial_s=cmax*.101,ideal_decay_to0p3V_s=cmax*.101*math.log(vraw/.3),raw_pool_conditional_J=energy,equal_share_resistor_energy_J=energy/4,ASSUMED10pct_imbalance_resistor_energy_J=energy/4*1.1,remaining_cap_energy_at0p3V_J=.5*cmax*.3**2,clamp_MPN='STPS60H100CT',actual_hot_pulse_rating_J=None,actual_negative_excursion_V=None),
+      receiving_bank=dict(current_limit_inverted_screen_at3p5mOhm_A=.1/(.0035+.5e-6/.0012032),current_limit_inverted_screen_at7mOhm_A=.1/(.007+.5e-6/.0012032),actual_arriving_current_bound_A=None,actual_far_peak_V=None),
+      harness=dict(wire='Belden8503',DCR_nominal_ohm_per_m=16.2/304.8,fanout_send_hot_assumed_ohm=(16.2/304.8)*.015/2*1.1*(1+.00393*40),fanout_return_hot_assumed_ohm=(16.2/304.8)*.035/8*1.1*(1+.00393*40),loop_without_J502_allocation_ohm=.04267294149439301-.00624,J502='PENDING feat/v1a-j502-connector',actual_hot_loop_ohm=None),
+      fixture=dict(illustrative_handover_s=5e-6,raw_drop_at5A_V=5*5e-6/.0024064,actual_abort_ceiling_s=None,actual_source_energy_bound_J=None),
+      measurement=dict(classification='Qualification ceilings, NOT measured uncertainties',voltage_error_allocations_V=dict(gain=.0008*5.5,offset=.003,common_mode=.002,noise_repeatability=.003,bandwidth_sampling_loading=.0026),U_voltage_target_V=.015,U_time_target_s=25e-9,U_charge_example_C=.01*100e-6+.01*10e-6+2*10*25e-9+.05e-6,U_energy_example_J=.0008*.1+.01*.1+.002*100*.002+6.9*.01*.002+2*6.9*100*25e-9+.0001,measured_peak_ceiling_if15mV_V=5.5-.015,measured_min_floor_if15mV_V=4.75+.015,calibration_records=None),
+      aux_surge_fixture=dict(voltage_ceiling_V=58.1,pulse_plateau_s=.001,rise_fall_s=10e-6,source_current_target_A=.2,extra_source_cap_target_F=1e-6,source_work_screen_J=58.1*.2*.00102+.5*1e-6*58.1**2,actual_fixture_bound_J=None))
+
+def render_fix_md(d):
+    import json
+    f=d['gate4a_fix']
+    out='\n## Gate4a-FIX current screens\n\nThe sections above preserve the original energy/path screens, with the detector arithmetic corrected. Current circuit deltas, assumptions and remaining blockers are in [FIX_RESOLUTIONS.md](FIX_RESOLUTIONS.md). J502 is PENDING; old connector resistance remains an allocation. This section is generated by [calculate_gate4a_fix.py](calculate_gate4a_fix.py). A numeric target is not a measurement.\n\n|Item|Calculated value / status|\n|---|---|\n'
+    vals=[('R103 conservative58.1V power,0805',f['resistor']['R103_58p1V_power_W']),('R3052M bleed at10V maximum,A',f['bootstrap']['new2M_10V_max_A']),('C3010.5µF/82nC event droop,V',f['bootstrap']['event_droop_V']),('Old loaded1M trip corrected,V',f['detector']['old_loaded_1M_trip_corrected_V']),('Old20mV raw increment,V',f['detector']['old_loaded_20mV_increment_V']),('New ideal trip,V',f['detector']['new_nominal_zero_Ron_trip_V']),('New conditional trip min/max,V',f['detector']['conditional_trip_min_max_V']),('New conditional20mV-overdrive upper,V',f['detector']['conditional_20mV_overdrive_raw_upper_V']),('New supervisor held rail min/max,V',f['auxiliary']['new_driver_supervisor_min_max_V']),('New supervisorDET5 min/max,V',f['auxiliary']['new_detector_supervisor_min_max_V']),('Raw100mΩ conditional peak current,A',f['raw_dump']['I6p881668_at_Rmin_A']),('Raw ideal discharge to0.3V,s',f['raw_dump']['ideal_decay_to0p3V_s']),('Conditional protected current allowance3.5/7mΩ,A',[f['receiving_bank']['current_limit_inverted_screen_at3p5mOhm_A'],f['receiving_bank']['current_limit_inverted_screen_at7mOhm_A']]),('Measurement target Upeak/Umin,V',.015),('Charge example uncertainty,C',f['measurement']['U_charge_example_C']),('Energy example uncertainty,J',f['measurement']['U_energy_example_J']),('Aux-only pulse source energy screen,J',f['aux_surge_fixture']['source_work_screen_J'])]
+    for k,v in vals:out+=f'|{k}|{json.dumps(v)}|\n'
+    out+='\nDetector equation: `Ip=Vs/R367+Ileak; Vdiv=Vs+(R303+Ron)Ip; Vraw=Vdiv(1+R301/R302)+R301Ip`. Corners enumerate four independently±0.25% resistors, Ron0…17Ω, inherited reference error0.12125%, comparator offset±4mV, **assumed** hysteresis±2mV, transferred PSRR/CMRR and **assumed**1µA diode/PCB leakage plus125nA switch/comparator allowance. This conditional bound is not a guaranteed5.38V overdrive PASS; the missing hysteresis/dynamic/leakage transfer is T06.\n\nRaw decay is ideal RC with maximum conditional bank and+1% ballast only; FET resistance, continued source current, harness coupling and hot resistance change the measured time. Timing minima/maxima, actual source bound, loadedVGS, clamp/negative peaks and calibration remain JSONnull. No computed conditional number fills them.\n'
+    return out

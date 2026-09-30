@@ -1,0 +1,42 @@
+refdes,old_mpn,new_mpn,value,connection,status
+C103,OPEN,GRM188R71H104KA93D,100nF50V X7R0603,1=/01_INPUT_PROTECTION/INPUT_DVDT; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R106,OPEN,TNPW060356K2BEEA,56.2k0.1%25ppm0603,2=/01_INPUT_PROTECTION/INPUT_PGTH; 1=/VIN_PROTECTED,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R107,OPEN,TNPW060310K0BEEA,10k0.1%25ppm0603,1=/01_INPUT_PROTECTION/INPUT_PGTH; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R108,OPEN,TNPW0603100KBEEA,100k0.1%25ppm0603,2=/01_INPUT_PROTECTION/INPUT_FLT; 1=/VIN_PROTECTED,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C205,OPEN,GRM188R71H104KA93D,100nF50V X7R0603,1=/02_BUCK_5V/BUCK_CBOOT; 2=/02_BUCK_5V/BUCK_SW,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C206,OPEN,GRM21BR71E105KA99L,1uF25V X7R0805,1=/02_BUCK_5V/BUCK_VCC; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R201,OPEN,TNPW060333K2BEEA,33.2k0.1%25ppm0603,1=/02_BUCK_5V/BUCK_RT; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R204,OPEN,CRCW06030000Z0EA,zero-ohm0603,1=/02_BUCK_5V/BUCK_CBOOT; 2=/02_BUCK_5V/BUCK_RBOOT,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R205,OPEN,TNPW06031K00BEEA,1k0.1%25ppm0603,2=/02_BUCK_5V/BUCK_FB; 1=/02_BUCK_5V/BUCK_FF,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R206,OPEN,TNPW0603100KBEEA,100k0.1%25ppm0603,2=/BUCK_INPUT_PGOOD; 1=/VIN_PROTECTED,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R207,OPEN,TNPW060324K9BEEA,24.9k0.1%25ppm0603,1=/BUCK_INPUT_PGOOD; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C303,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C304,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C305,Capacitor_specification,GRM32ER71H106KA12L,10uF50V X7R1210,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C306,Capacitor_specification,GRM32ER71H106KA12L,10uF50V X7R1210,1=/DRV_HOLD; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C308,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/DRV_HOLD; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C309,Capacitor_specification,GRM21BR71E105KA99L,1uF25V X7R0805,1=/DRV_HOLD; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C310,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/DRV_HOLD; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C311,Capacitor_specification,GRM21BR71E105KA99L,1uF25V X7R0805,1=/DRV_HOLD; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C312,Capacitor_specification,C1608C0G1H103J080AA,10nF50V C0G0603,1=/03_OUTPUT_PROTECTION/DET_DELAY; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C313,Capacitor_specification,C1608C0G1H103J080AA,10nF50V C0G0603,1=/03_OUTPUT_PROTECTION/DRV_DELAY; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C314,Capacitor_specification,GRM21BR71H224KA01L,220nF50V X7R0805,1=/03_OUTPUT_PROTECTION/REF_DELAY; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C315,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C316,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/ARM_N; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C317,Capacitor_specification,C1608C0G1H103J080AA,10nF50V C0G0603,1=/03_OUTPUT_PROTECTION/ARM_RC; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C318,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C319,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C320,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C321,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C322,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C323,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C324,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C325,Capacitor_specification,GRM188R71H104KA93D,100nF50V X7R0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R304,Resistor_specification,TNPW0603100RBEEA,100ohm0.1%25ppm0603,2=/03_OUTPUT_PROTECTION/PROT_GATE; 1=/03_OUTPUT_PROTECTION/TGUP_SLOW,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R318,Resistor_specification,TNPW060347K0BEEA,47k0.1%25ppm0603,1=/03_OUTPUT_PROTECTION/DET_5V; 2=/03_OUTPUT_PROTECTION/RESET_N,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R319,Resistor_specification,TNPW0603100KBEEA,100k0.1%25ppm0603,2=/03_OUTPUT_PROTECTION/ARM_N; 1=/03_OUTPUT_PROTECTION/DET_5V,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+R320,Resistor_specification,TNPW060310K0BEEA,10k0.1%25ppm0603,1=/03_OUTPUT_PROTECTION/ARM_CLOCK; 2=/03_OUTPUT_PROTECTION/ARM_RC,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C402,OPEN,GRM188R71H104KA93D,100nF50V X7R0603,1=/04_POWER_MONITOR/3V3_LOCAL; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C403,OPEN,GRM21BR71H105KA12L,1uF50V X7R0805,2=/GND; 1=/VOUT_PROTECTED,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C405,OPEN,GRM188R71H104KA93D,100nF50V X7R0603,1=/3V3_HOST; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15
+C406,OPEN,GRM188R71H104KA93D,100nF50V X7R0603,1=/04_POWER_MONITOR/3V3_LOCAL; 2=/GND,Selection only; land/DC-bias/timing/thermal and revised-logic relevance T16/T15

@@ -52,3 +52,7 @@ Additional exact document revisions/files, usage, license, modifications and att
 |ina228 / SLYS021A, May2022|[ADCRANGE and shunt input/accuracy limits](https://www.ti.com/lit/ds/symlink/ina228.pdf); `third_party/documents/gate4a/ina228.pdf`; FETCHED; REFERENCED|
 
 Exact suffix availability/lifecycle is OPEN before procurement. Manufacturer order-code construction is the basis for passive candidates. Pin/land/package verification remains mandatory for every changed MPN, including proposed THT L201 and changed TVS/fuse. The register exposes the missing autonomous FAULT_TRIGGER rather than inventing its MPN.
+
+## Gate4a-FIX sources
+
+Rechecked TNPW document 28758, 10-Apr-2026: 0805 348 kΩ/1 MΩ replacements and 0805 lands; same URL/revision as `tnpw` above. Referenced only, Vishay copyright, no copied circuit or attribution change. Detailed decisions: [FIX_RESOLUTIONS.md](FIX_RESOLUTIONS.md).
