@@ -224,9 +224,9 @@
         "R303"
       ],
       "old": "U302: REF5025IDGKR / REF5025 2.5V DATASHEET; U303: TLV3201AIDBVR / TLV3201AIDBVR; R301: Resistor_specification / 11.3k; R302: Resistor_specification / 10.0k; R303: Resistor_specification / 1.00k",
-      "new_mpn": "REF5025IDGKR; TLV3201AIDBVR; TNPW060310K0BEEA x2; TNPW06031K00BEEA",
-      "new_value_or_connection": "R301 10.0k VOUT_5V1-to-OV_DIV; R302 10.0k OV_DIV-to-GND; U321 switch then R3031k to U303.4 SENSE; U303.3=REF_2V5; R367100k SENSE-to-GND; nominal trip5.300V before Ron/leakage",
-      "reason": "Preserve owner threshold chain; added protection leakage/capacitance cannot be omitted",
+      "new_mpn": "REF5025IDGKR; TLV3201AIDBVR; TNPW06039K88BEEA; TNPW060310K0BEEA; TNPW06031K00BEEA",
+      "new_value_or_connection": "R301 9.88k VOUT_5V1-to-OV_DIV; R302 10.0k OV_DIV-to-GND; U321 switch then R3031k to U303.4 SENSE; U303.3=REF_2V5; R367100k SENSE-to-GND; nominal trip5.266700V before Ron/leakage",
+      "reason": "R4A-06 resume correction: 10k top resistor exceeded 5.38V conditional overdrive allocation; reduce R301 to 9.88k with the same 0.1%/25ppm screen",
       "governing_equation": "G=(1+(R303+Ron)/R367)*(1+R301/R302)+R301/R367; Vtrip=(Vref+Vos+H)*G+Ileak*((R303+Ron)*(1+R301/R302)+R301)",
       "status": "R4A-06 arithmetic CORRECTED; detector pin/current/settling qualification T06",
       "source": "G2C/PASSIVES"

@@ -762,7 +762,6 @@
     "terminal_screen_CALCULATED_V": 6.881668479208298,
     "actual_terminal_peak_V": null,
     "complete_negative_fault_path": null,
-    "raw_dump_hot_rating_target_J": 0.2,
     "raw_dump_actual_hot_rating_J": null,
     "bulk35V_energy_headroom_at_Cmin_J": 1.4375232000000002,
     "bulk_published_initial_parallel_ESR20C100kHz_max_ohm": 0.00175,
@@ -786,7 +785,8 @@
       "max_energy_residual_J": 3.469446951953614e-17,
       "actual_peak_V": null
     },
-    "current_dump_ballast_ohm": 0.1
+    "current_dump_ballast_ohm": 0.1,
+    "historical_dump_hot_rating_target_J": 0.2
   },
   "protected_node": {
     "candidate_Cnom_F": 0.00188,
@@ -983,9 +983,9 @@
     "detector": {
       "old_loaded_1M_trip_corrected_V": 5.358574999999999,
       "old_loaded_20mV_increment_V": 0.04286859999999999,
-      "new_nominal_zero_Ron_trip_V": 5.3,
-      "new_nominal_17ohm_trip_V": 5.30085,
-      "new_nominal_17ohm_overdrive_increment_V": 0.0424068,
+      "new_nominal_zero_Ron_trip_V": 5.266699999999999,
+      "new_nominal_17ohm_trip_V": 5.2675449,
+      "new_nominal_17ohm_overdrive_increment_V": 0.042140359200000005,
       "ASSUMED": {
         "resistor_total_fraction": 0.0025,
         "reference_total_fraction": 0.0012125,
@@ -1001,10 +1001,10 @@
         ]
       },
       "conditional_trip_min_max_V": [
-        5.252793296185037,
-        5.348358172983068
+        5.21993214204144,
+        5.314610956947997
       ],
-      "conditional_20mV_overdrive_raw_upper_V": 5.390878295344108,
+      "conditional_20mV_overdrive_raw_upper_V": 5.3568632907730365,
       "actual_trip_min_max_V": [
         null,
         null
@@ -1041,6 +1041,36 @@
       "nominal_charge_if10us_C": 4.4776119402985085e-05,
       "remaining_time_after_TPS_max_s": 8.5e-06,
       "current_trigger_0to10A_at9V_12uH_s": 3.076923076923077e-05,
+      "OV_only_current_nominal_latency": [
+        {
+          "Vin_V": 9.0,
+          "trip_V": 5.266699999999999,
+          "conditional_latency_s": 2.956487356739687e-05,
+          "raw_at10us_V": 5.1396863063788105,
+          "actual_response_s": null
+        },
+        {
+          "Vin_V": 24.0,
+          "trip_V": 5.266699999999999,
+          "conditional_latency_s": 1.6912575964072873e-05,
+          "raw_at10us_V": 5.170842403116886,
+          "actual_response_s": null
+        },
+        {
+          "Vin_V": 26.0,
+          "trip_V": 5.266699999999999,
+          "conditional_latency_s": 1.6240793974457944e-05,
+          "raw_at10us_V": 5.174996549348631,
+          "actual_response_s": null
+        },
+        {
+          "Vin_V": 27.0,
+          "trip_V": 5.266699999999999,
+          "conditional_latency_s": 1.5935291252588232e-05,
+          "raw_at10us_V": 5.177073622464501,
+          "actual_response_s": null
+        }
+      ],
       "autonomous_trigger": null,
       "upstream_module": "Isolated48to24V; exact identity/source envelope OPEN"
     },
@@ -1096,7 +1126,9 @@
       "U_voltage_target_V": 0.015,
       "U_time_target_s": 2.5e-08,
       "U_charge_example_C": 1.6500000000000003e-06,
-      "U_energy_example_J": 0.0017525000000000002,
+      "U_charge_2ms_example_C": 2.1550000000000002e-05,
+      "U_energy_example_J": 0.0034948223999999996,
+      "energy_additive_voltage_error_V": 0.0106,
       "measured_peak_ceiling_if15mV_V": 5.485,
       "measured_min_floor_if15mV_V": 4.765,
       "calibration_records": null

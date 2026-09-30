@@ -1,55 +1,64 @@
-# Gate4a freeze review — 2026-09-30
+# Gate4a-FIX — resumed test-board freeze review
 
-**VERDICT: BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** TASKS1–5 analysis deliverables are complete. The proposed change register is reviewable, but essential circuit connections/trigger/rail/receiving-bank contracts are not ready to freeze. This is an R2 fault-test-board review; it does not advance the repository to R3/R4/R5.
+**VERDICT: BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Resumed from `0a81d2820449b678d5fef369774fbaf2eef0a9b3`; valid partial fixes retained. This is analysis only. No KiCad edits, physical tests, fabrication approval or advancement to R3/R4/R5 occurred. The review contains12 BLOCKING,4 MAJOR and1 MINOR numbered findings; all17 are covered even though the brief calls them14 blockers.
 
 ## OWNER EXPLANATION — one page
 
-The owner selected **D**: a module-side opposed series pair and protected crowbar, paired with a bounded main input source. Normal operation remains **9–26 V**, locally regulated about5.10 V, with at least4.75 V at the far end at5 A. The selected BSC034 pair and improved short harness give a conditional42.673 mΩ loop: about4.793 V with the inherited minimum regulator screen and an assumed20 mV trough. Hot resistance and true source accuracy are still OPEN.
+The owner’s **architecture D test board** remains: input protection and buck, module-side opposed BSC034 pair, protected crowbar and2 mΩ telemetry shunt. Normal input is **9–26 V**, D101 remains **SMCJ36CA**, F101 remains **Schurter3403.0285.23**, and an isolated48→24 V module is upstream. Its exact identity/source envelope is OPEN. **J502 is PENDING** in the separate connector job. No Pi is used before fault, normal and interface gates pass.
 
-1. A failed buck high-side can connect the protected input through L201 to the raw output. Current rise depends on differential inductance: `dI/dt=VL/Ldiff`. The proposed10 µH part needs a qualified5…12 µH envelope through100 A; a typical curve is not that guarantee.
-2. The main eFuse must stop fresh source work within10 µs of the **fault onset**, with positive replenishment charge≤100 µC. A separate fault trigger is needed: charging the bulk bank before raw OV trips can already consume about19…36 µs in illustrative screens. Source-off timing is therefore OPEN, not the sum of a fast comparator headline and an eFuse headline.
-3. Even with the source isolated, local input capacitance and L201 still contain energy. `Enew≤½Cin Vin²+Vin Qsource+½Lmax I0²` gives15.217 mJ under the proposed highest source screen. The output pair opens to stop delivery to the protected node, and its crowbar discharges the protected bank/load-side energy. Raw bulk can bypass L201 into that node before opening, so protected current needs its own bound.
-4. The eight bulk capacitors are **upstream** of the open pair. Their energy and L201's tail do not reach the protected crowbar afterward. They charge VOUT_5V1 or flow through a separate raw dump. `Vraw≤sqrt(Vraw0²+2Enew/Craw,min)` gives6.550 V under assumptions, or a6.882 V ESR/ringing sensitivity. Those voltage screens fit35 V bulk; actual peak and powered-off sense stress remain OPEN. A separately rated raw dump is proposed for up to99.865 mJ conditional raw/source energy.
-5. Control power comes from a separate surge-limited12 V buck-boost upstream of the main eFuse, with supervised usable rails, hold energy, passive off gates and a fault latch independent of PGOOD. Its tentative inrush/timer/supervisor values still need correction and qualification.
-6. The harness and dummy input capacitance can ring after cutoff. Only simultaneous measurements of **both output nodes, L201 current and the far-end real-harness voltage**, with calibrated uncertainty and component-stress review, establish this board's fault result. Require `measured_peak+uncertainty<5.5 V`, and normal `measured_min−uncertainty≥4.75 V`. Test27 V as an OVP-window fault point. No Pi is used until every applicable gate passes.
+The review exposed real selection defects. The partial work repaired resistor packages, selected two documented AHCT1G125 buffers, separated bootstrap C301 from reference C302, reduced the bootstrap bleed load with2 MΩ, selected Belden8503 AWG22 fanouts, and corrected TPS7A16’s IN/EN limits. Those fixes are retained. The resumed detector uses9.88k/10k/1k/100k: its conditional20 mV-overdrive upper point is **5.356863 V**, replacing the partial proposal’s failing5.390878 V. Lowering the threshold reduces nuisance-trip headroom; normal peaks, partial-power leakage and loaded timing remain measurements, not PASS claims.
 
-## Completed task evidence
+A high-side short feeds L201 and the raw bank. The main source must stop within **10 µs of physical fault onset**, with **whole-event positive charge≤100 µC**. Even the revised nominal output threshold takes15.94–29.56 µs in illustrative OV-only cases. An autonomous discriminator is still missing; fixture timing cannot replace it. Reset/ARM/POR arbitration is also incomplete. A discharged raw node cannot reveal whether the unpowered buck still has a short, so a repair/diagnostic lockout must accompany reset.
 
-|Original task|Delivered evidence|Engineering result|
+Under the declared source/C/L assumptions, new energy is15.217 mJ, raw-cap peak6.550 V and the ESR/ringing screen6.882 V. After the series pair opens, raw energy needs its own destination. The retained candidate raw dump now uses100 mΩ ballast and STPS60H100CT negative-return candidates; its pool is99.865 mJ and ideal decay to0.3 V is1.771 ms. Hot pulse/SOA, negative excursions and physical decay are unproved. The protected four-PCH bank cannot inherit the old0.5 mΩ ESR contract: the legacy sensitivity is5.713245 V and the historical5.542140 V far-end counterexample remains evidence.
+
+The upstream auxiliary architecture supplies controls independently of the main eFuse. Its startup current-limit/timer, rail-loss action and actual loaded bootstrap still need closure. The conditional hold screen is4.609 ms; it is not a guaranteed disposal interval. A complete rated fault fixture also needs its independent energy limiter, abort/discharge circuitry and numerical limits.
+
+The test plan now assigns every finding a named check, measured quantity and PASS criterion. At a **substantiated**15 mV voltage uncertainty, fault peak must be<5.485 V and normal5 A minimum≥4.765 V at the real harness endpoint. Current-tail uncertainty must cover the full record; a10 µs calculation cannot certify a2 ms event. No calibration or hardware results exist. **The remaining construction and external-evidence gaps prevent freezing this board for capture.**
+
+## Review item → resolution → evidence
+
+“Paper corrected” closes only the stated documentary/selection defect. “Bench required” is a specified candidate awaiting physical evidence. “Construction blocked” cannot be discharged by writing a test name. No row is a hardware PASS.
+
+| Review item | Resolution and remaining disposition | Evidence / closure |
 |---|---|---|
-|1 FREEZE LIST|[Full register](FREEZE_TABLE.md), [CSV](FREEZE_BOM.csv), [manifest](FREEZE_MANIFEST.json), [timing/logic](TIMING_AND_LOGIC.md)|35 proposed change rows; retained identities and real candidates recorded; missing autonomous trigger explicitly OPEN|
-|2 AUX BRANCH FIX|[Supply analysis](AUX_BRANCH_FIX.md)|Independent stopper plus buck-boost retained; main-eFuse-off independence established by topology, actual operation untested|
-|3 TEST HOOKS|[Hooks/fixture](TEST_HOOKS.md)|Actual L201-path injection, paired Kelvin/force points and removable dummy harness; fixture/live-switch modes require qualification|
-|4 BENCH FAULT TEST PLAN|[TEST_PLAN.md](TEST_PLAN.md)|9/24/26/27 V ×0/2.5/5 A ×cold/hot, dummy C/ESR variants, normal steps and uncertainty-aware far-end acceptance|
-|5 CALCULATIONS|[Calculation report](CALCULATIONS.md), [JSON](CALCULATIONS.json), [raw-node energy](RAW_NODE_ENERGY.md), [script](calculate_gate4a.py)|Selected pair re-budgeted; raw/protected energies separated; source/timing/actual peaks remain OPEN|
+| R4A-01 source trigger | **Construction blocked:** retain TPS26630/4.02k/latch-off/SHDN sinks; no defensible autonomous discriminator selected. Revised OV-only latency still exceeds10 µs. | FIX_RESOLUTIONS R4A-01; CALCULATIONS `gate4a_fix.source`; T01 |
+| R4A-02 resistor identities | **Paper corrected:** R1030805/348k, R3400805/1M; current R3670603/100k. New lands require capture audit. | FREEZE_TABLE S01-06/S03-03/S03-13; Vishay28758; T02/T16 |
+| R4A-03 buffer identity | **Paper corrected; bench required:** U319/U324 SN74AHCT1G125DBVR, preceding Schmitt conditioners, explicit bypass/pulldowns/pins. | S03-05; FIX_RESOLUTIONS pin table; T03/T15 |
+| R4A-04 bootstrap load | **Selection corrected; bench required:** R3052MΩ; max screened bleed5.013 µA at10 V. Actual TS≈5 V pump equilibrium remains unqualified. | S03-07; CALCULATIONS bootstrap; T04/T07 |
+| R4A-05 C301/C302 | **Paper corrected:** C301 BST–TS and separate C302 REF–GND, each1µF25 V exact MPN. | S03-17; pinned exported netlist; T05/T04 |
+| R4A-06 detector | **Arithmetic/selection corrected; bench required:**9.88k/10k/1k/100k,68.1k shunt bias, separate positive/negative clamps and DET5-powered switch. Conditional overdrive5.356863 V; partial-power/normal margin still OPEN. | S03-02/03; independent Thevenin check; T06 |
+| R4A-07 aux | **Construction blocked:** revised249k/110k monitor tops and explicit supplies retained; controlled charge/timer/fast rail-loss construction and hot SOA missing. | S03-11…15; AUX_BRANCH_FIX; T07A/B |
+| R4A-08 B02 timing | **Bench required with blocked prerequisites:** parallel physical endpoints and test-conditioned partial sums distinguished; complete guaranteed min/max remain OPEN/OPEN. | TIMING_AND_LOGIC; T08 plus T01/T04/T06/T07/T12/T13/T15 |
+| R4A-09 energy/returns | **Bench required; hot-rating prerequisite blocked:** raw100mΩ dump and STPS60H100CT returns selected as candidates; each pulse/negative waveform must fit rated construction. | S01-04/S03-09; RAW_NODE_ENERGY; T09A/B |
+| R4A-10 bank/harness peak | **Bench required:** retain four PCH as test candidate, withdraw inherited C/ESR margin; keep adverse historical trajectory. | S03-10; CALCULATIONS protected_node; T10 |
+| R4A-11 wire | **Paper corrected; handoff/bench required:**8503 AWG22 fanouts,8521 trunks, current sharing/crimps/mates; J502 PENDING. | S04-04/05; T11; path expression excludes assumed J502 allocation |
+| R4A-12 fixture | **Construction blocked:** QF2/QF3 break-before-make isolation proposal prevents direct injection into connected native low-side; abort/source-limit/discharge/force connections and numerical ratings still missing. | TEST_HOOKS; FIX_RESOLUTIONS R4A-12; T12 |
+| R4A-13 uncertainty | **Paper budget corrected; inventory/calibration blocked:**15 mV/25 ns targets; full-tail UQ and all additive voltage/cross-product energy errors included. | CALCULATIONS measurement; TEST_PLAN T13; no actual calibrations |
+| R4A-14 aux surge | **Development test defined; external evidence/fixture blocked:** separate58.1 V bounded aux pulse; no main-buck exposure; real upstream surge/fuse/TVS coordination OPEN. | T14A/B; FIX_RESOLUTIONS R4A-14 |
+| R4A-15 pins/thermal | **Partial paper correction; construction blocked:** named new-IC pins/bypass and component-local limits recorded; POR/fault/reset/freshARM/rail-loss ownership and persistent-short diagnosis unresolved. | S03-03/04/05/14/15; TIMING_AND_LOGIC; T15L/T15T |
+| R4A-16 assembly | **Selection work retained; assembly blocked:** identified C350 and41 remaining generic passives; timer value, new lands/approval sheets, added circuits and fixture/J502 handoffs unresolved. | PASSIVE_COMPLETION; FREEZE_MANIFEST; T16 |
+| R4A-17 TPS7A16 | **Paper corrected:** IN60 V, EN40 V recommended; both new inputs DRV_HOLD. Original EN/cap/resistor rejection remains. | SOURCES; AUX_BRANCH_FIX; T17 |
 
-[Recovery/task accounting](TASK_PROGRESS.md) records STEP0 and each original task. [Source provenance](SOURCES.md)/[machine register](SOURCES.json) record revisions/hashes, function, license, proposed adaptation and attribution. [Validation](VALIDATION.json): six numerical/artifact checks pass; ideal-model curve visually reviewed. No native CAD access/change, new ERC/DRC or bench test occurred.
+## Original freeze blockers retained
 
-## Why the capture freeze is blocked
+| Original gap | Current coverage and remaining action |
+|---|---|
+| Source isolation, independent C/L/work bounds | R4A-01/09/12/14; implement discriminator, source/fixture limits and characterize C/L before accepting100 µC/10 µs. |
+| B02 and M01 usable supply/bootstrap/hold | R4A-04/07/08/15; startup, loaded VGS, rail-loss action and current endpoints require completed construction plus T04/T07/T08. |
+| M02/M04/M06 PG/fault/reset/default SHDN | R4A-03/15; remove false PG-to-crowbar coupling, complete fault priority/POR/ARM and persistent-short lockout; T03/T15. |
+| M03 powered-off detector | R4A-06; explicit current-limited ground-return clamp candidate, T06 all rail orders and normal peak margin. |
+| M05 raw/protected hot pulse/negative energy | R4A-09/15;100mΩ raw vs33mΩ protected ballast kept distinct; documented hot limits and T09/T15T. |
+| Protected bank, actual arrival, historical far-end peak | R4A-10/11; T10/T11 real-harness/dummy matrix; no inherited0.5mΩ or80 A protected-arrival guarantee. |
+| Normal path/hot RDS/regulation/connector | R4A-04/11/16; conditional42.673mΩ includes historical6.24mΩ J502 allocation; final choice PENDING.100mV trough screen remains4.712779 V, below4.75 V. |
+| Main58.1 V let-through, new pins/lands, rated assembly | R4A-12/14/16; main-source coordination and component review precede capture release. |
 
-- Autonomous source-fault trigger and full fault-onset→current-off min/max are absent. OV-only triggering does not establish the10 µs/100 µC source contract. Independent current/voltage/energy/C/L bounds remain qualification targets.
-- Auxiliary architecture is retained, but10 nF stopper TMR with440 µF nominal hold bank can trip during inrush. Usable-rail supervisor tolerance corners can reject healthy supplies; actual loaded gate/bootstrap and comparator delay condition remain OPEN.
-- The proposed powered-off clamp/default-SHDN/latch circuits need pin-level positive/negative/partial-supply/race proof. The1 MΩ sense pull-down increases nominal OV trip28.25 mV, so old trip/timing margins cannot be retained unchanged.
-- Proposed protected bank4×470 µF is1.88 mF nominal with published3.5 mΩ initial parallel ESR at20°C/100kHz. It does not meet the inherited≤1.5 mF/≤0.5 mΩ contract. The old conditional module formula gives5.713245 V with that bank; actual arriving current and the full harness trajectory are OPEN. The historical5.542140 V far-end counterexample is not excluded.
-- A raw dump has real candidate parts and a concrete topology, but negative/stray-current returns, hot SOA/pulse/repetition and hold duration to safe decay are unqualified. Ballast pre-pulse≤85°C and total terminal<95°C remain mandatory technical limits.
-- The selected BSC034 hot pair resistance, complete timing, actual hot contacts/regulation/C/ESR, loop/thermal/startup behavior, source58.1 V main-path let-through and new-MPN pin/land/rating checks remain OPEN. The100 mV negative-excursion path sensitivity fails4.75 V by37.221 mV. No actual failure or PASS is claimed from these calculations alone.
+## Evidence, next work and Git handback
 
-## DECISIONS FOR THE OWNER
+Current [freeze table](FREEZE_TABLE.md), [CSV](FREEZE_BOM.csv) and [manifest](FREEZE_MANIFEST.json) contain36 change rows (the35-row baseline plus passive-completion row). [FIX_RESOLUTIONS.md](FIX_RESOLUTIONS.md) gives circuit decisions/equations; [CALCULATIONS.md](CALCULATIONS.md)/[JSON](CALCULATIONS.json) are reproducible. [TEST_PLAN.md](TEST_PLAN.md) owns named acceptance and dependency order. [VALIDATION.json](VALIDATION.json) records numerical/document checks only. The original baseline remains byte-preserved under [history/931e369](history/931e369/README.md); partial work remains in Git commit0a81d28. Failed paper screens have not been deleted.
 
-These are recommended engineering directions, not requests for manufacturing or merge approval. Existing owner decisions D, source-development route,9–26 V, SMCJ36CA,3403.0285.23, PR15 retained MPNs and BSC034 pair remain in force.
+The next engineering work is to finish the autonomous discriminator, reset/POR/ARM/rail-loss circuitry, controlled aux startup and complete rated fixture, obtain source/J502/instrument handoffs, then perform the defined coupon/rating reviews. These are substantive unfinished items. A test name does not make an absent circuit ready for capture. Native recapture/ERC, layout/DRC/visual, fabrication review and physical qualification remain sequential future gates.
 
-|Decision|Recommended option|Alternative / consequence|
-|---|---|---|
-|Raw energy destination|Keep raw bank; add/qualify the separate Q330 raw dump and its negative/stray return|Credit capacitive absorption only after its full C/source/spike/pin/discharge limits are proved; moving all bulk downstream increases protected delivery/discharge energy and needs a new model|
-|Source deadline|Implement an independently bounded high-side-fault discriminator with physical source-off/charge proof|Use fixture-timed cutoff only for a clearly conditional development experiment; it cannot close autonomous containment or claim a source-bound freeze|
-|Aux power|Retain upstream adjustable surge stopper+12 V buck-boost+held output; solve inrush/timer/SOA as one block|Main-eFuse downstream-only power requires qualified hold energy for every source-off/re-arm state and loses sustained independence|
-|Usable rails/timing|Set direct-supervisor thresholds from verified minimum loaded rails and response maxima; requalify actual comparator/bootstrap/gates|Typical supervisor delay or gross PG cannot substitute for complete min/max timing; no automatic permission below valid rail conditions|
-|Powered-off sense and latch/default SHDN|Complete the proposed ground-return shunt/isolation, explicit fault-priority/disarmed truth table and passive SHDN topology; re-stack trip/leakage/delay|Retaining the old reference-sink clamp or coupling OV to PGOOD leaves partial-power/fault race behavior unresolved|
-|Protected receiving bank/harness|Select a credible C/ESR implementation and recompute actual raw-bank arriving current and full harness transient; qualify the bank jointly with timing|Four PCH capacitors cannot inherit the0.5 mΩ margin; adding nominal C alone does not fix ESR/harness/current or startup|
-|Path loss|Keep BSC034; qualify10 V loaded VGS/hot resistance and the improved contacts/wire/fanout set|Do not silently restore the previous6 mΩ pair or raise setpoint;100 mV excursion reserve requires further reduction/proven transient bounds|
-|M05|Keep selected ballast only with measured pre-pulse terminals≤85°C and hot waveform/repetition acceptance|If that cannot be met, select/review a pulse-rated construction and recalculate geometry/current/thermal behavior; a cold curve is not hot qualification|
-|Bench/SBC gate|Use the real harness/dummy endpoint matrix and calibrated strict5.5 V criterion; preserve all failures|A board-local voltage PASS, synthetic PG or fixture-rescued cutoff is insufficient; actual Pi range and repository gates must close before integration|
+`git pull --ff-only` was attempted but denied writing the worktree FETCH_HEAD. The first item checkpoint `git add` was denied creating the worktree index.lock, so no local commit could be made. Per the resume brief, all resumed changes remain uncommitted; no push was attempted. No Git permission bypass or index repair was attempted. The conductor can review the working diff and commit/publish it from an authorized environment.
 
-## Freeze table
-
-The current complete register is [FREEZE_TABLE.md](FREEZE_TABLE.md), synchronized with [FREEZE_BOM.csv](FREEZE_BOM.csv) and [FREEZE_MANIFEST.json](FREEZE_MANIFEST.json). Current fixes and remaining blockers are in [FIX_RESOLUTIONS.md](FIX_RESOLUTIONS.md).
+VERDICT: BLOCKED — autonomous source trigger; aux startup/SOA/rail-loss construction; reset/POR/ARM/persistent-short lockout; rated fixture/abort/discharge; hot-pulse/measurement evidence and source/J502/instrument handoffs remain open.

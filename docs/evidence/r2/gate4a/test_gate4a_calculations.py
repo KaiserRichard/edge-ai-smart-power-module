@@ -53,6 +53,19 @@ class PhysicalCalculationChecks(unittest.TestCase):
         self.assertGreater(p['published_initial_parallel_ESR20C100kHz_max_ohm'],p['legacy_ESR_target_ohm'])
         self.assertGreater(p['legacy_conditional_at_candidate14mOhm_parallel_ESR_V'],5.5)
 
+    def test_loaded_detector_against_independent_thevenin_solution(self):
+        from calculate_gate4a_fix import loaded_divider
+        # Solve the source divider as a Thevenin equivalent, not the KCL implementation.
+        for rt, rb, rs, rp, ron, leak in [(11300.,10000.,1000.,1e6,0.,0.),
+                                          (9880.,10000.,1000.,1e5,17.,1.125e-6)]:
+            vraw=loaded_divider(rt,rb,rs,rp,ron,2.5,leak)
+            rth=rt*rb/(rt+rb)+rs+ron
+            vs=(vraw*rb/(rt+rb)-leak*rth)/(1+rth/rp)
+            self.assertAlmostEqual(vs,2.5,places=12)
+        detector=self.data['gate4a_fix']['detector']
+        self.assertLess(detector['conditional_20mV_overdrive_raw_upper_V'],5.38)
+        self.assertEqual(detector['actual_trip_min_max_V'],[None,None])
+
     def test_recovered_machine_registers_and_regenerated_artifact_match(self):
         p=Path(__file__).parent
         manifest=json.loads((p/'FREEZE_MANIFEST.json').read_text())['changes']
@@ -62,6 +75,15 @@ class PhysicalCalculationChecks(unittest.TestCase):
         for r,m in zip(rows,manifest):
             self.assertEqual(r,{**m,'refdes':','.join(m['refdes'])})
         self.assertEqual(json.loads((p/'CALCULATIONS.json').read_text()),self.data)
+
+    def test_measurement_error_cannot_discard_tail_or_additive_voltage_errors(self):
+        from calculate_gate4a_fix import charge_uncertainty, energy_uncertainty
+        short=charge_uncertainty(100e-6,10e-6)
+        tail=charge_uncertainty(100e-6,.002)
+        self.assertAlmostEqual(short,1.65e-6,places=12)
+        self.assertAlmostEqual(tail-short,.010*(.002-10e-6),places=12)
+        self.assertGreater(energy_uncertainty(.1,.2,.0138,.002),.00349)
+        self.assertIsNone(self.data['gate4a_fix']['measurement']['calibration_records'])
 
 
 if __name__ == '__main__':

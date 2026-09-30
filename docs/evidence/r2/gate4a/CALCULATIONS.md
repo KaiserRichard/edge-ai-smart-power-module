@@ -22,11 +22,11 @@ Reproduce: `python3 -B docs/evidence/r2/gate4a/calculate_gate4a.py --write`; opt
 |27.000000|14.019000|74.883910|6.473131|
 |28.289211|15.217113|78.018236|6.549596|
 
-Raw Cmin=2.4064mF (eight470µF ×0.8 initial ×0.8 additional assumed retention); ceramic minimum not credited. Cmax=5.59656mF, all raw initial energy upper=84.647970mJ. At highest source screen, raw terminal sensitivity with4mΩ/20mV is 6.881668V; extra local parasitic spike is OPEN. Maximum raw dump pool=99.865083mJ; proposed0.2J hot capacity is a target, not a part rating. Actual raw peak OPEN.
+Raw Cmin=2.4064mF (eight470µF ×0.8 initial ×0.8 additional assumed retention); ceramic minimum not credited. Cmax=5.59656mF, all raw initial energy upper=84.647970mJ. At highest source screen, raw terminal sensitivity with4mΩ/20mV is 6.881668V; extra local parasitic spike is OPEN. Maximum raw dump pool=99.865083mJ; the historical0.2J capacity target is withdrawn as a current claim; no hot part rating is established. Actual raw peak OPEN.
 
 Proposed protected bank4×470µF: nominal1.88mF, assumed minimum1.2032mF/maximum2.7072mF. Published14mΩ20°C/100kHz per capacitor means3.5mΩ for four, versus the inherited0.5mΩ target; low-temperature/endurance row28mΩ gives7mΩ. These frequency-conditioned values do not bound edge ESR/ESL. Substitution into the legacy80 A/0.5µs/5.38V/20mV screen gives 5.713245V, not a PASS/prediction. Capacitor/harness topology must be recomputed. Initial protected energy upper=40.946400mJ. Including assumed2.2mF dummy gives an all-store subtotal174.086483mJ, before cable/other stores. Protected-arriving peak and Pi Cmax remain OPEN.
 
-OV latency counterexamples use an ideal maintained voltage,10µH/2.4064mF,8 A initial andzero ESR, not a qualified TPS26630 trajectory. They demonstrate why output OV propagation cannot be assumed to start at fault onset.
+Historical5.325V OV latency counterexamples use an ideal maintained voltage,10µH/2.4064mF,8 A initial andzero ESR, not a qualified TPS26630 trajectory. They demonstrate why output OV propagation cannot be assumed to start at fault onset.
 
 |Input V|Raw V after10µs|Time to nominal5.325V µs|
 |---|---:|---:|
@@ -35,7 +35,7 @@ OV latency counterexamples use an ideal maintained voltage,10µH/2.4064mF,8 A in
 |26|5.174997|19.353955|
 |27|5.177074|18.978433|
 
-Aux static limited output=29.940620…31.643683V; buck-boost=11.621343…12.311325V. Hold screen=5.199100ms at300µF/11.2→10.5V/40mA/2.036µC; lower buck-boost minus0.5V diode gives4.609176ms. Nominal hold store31.68mJ, capacitor-only9ms average input0.488889A at9V/80% efficiency. Supervisor screens=10.697782…11.255596V / 4.856669…5.107361V. Actual dynamic clamp/usable supply/hold remain OPEN.
+Aux static limited output=29.940620…31.643683V; buck-boost=11.621343…12.311325V. Hold screen=5.199100ms at300µF/11.2→10.5V/40mA/2.036µC; lower buck-boost minus0.5V diode gives4.609176ms. Nominal hold store31.68mJ, capacitor-only9ms average input0.488889A at9V/80% efficiency. Historical261k/113k supervisor screens=10.697782…11.255596V / 4.856669…5.107361V. Actual dynamic clamp/usable supply/hold remain OPEN.
 
 Current sense: retain2mΩ ±1%,25ppm/K inherited shunt inputs. At5 A,10mV/50mW nominal; independent100°C/initial corners give maximum2.0237875mΩ,10.1189375mV/50.5946875mW. At80 A the nominal shunt screen is160mV/12.8W while it actually carries that current; pulse energy requires the measured integral and actual protected current can exceed L201 due to raw-bank bypass. INA228 full-scale ±163.84mV normal range (alternate ±40.96mV range) and input common-mode/absolute/pin limits must be checked at the fault and correct ADCRANGE. Normal full scale with2mΩ is81.92A or20.48A nominal, not a fault-survival guarantee. Kelvin force/sense, shunt tolerance/TCR/self-heating, monitor gain/offset/timebase/error and energy accuracy remain qualification items. Filter10Ω+10Ω/100nF gives79.577kHz; it is not the high-bandwidth fault current probe.
 
@@ -52,9 +52,10 @@ The sections above preserve the original energy/path screens, with the detector 
 |C3010.5µF/82nC event droop,V|0.164|
 |Old loaded1M trip corrected,V|5.358574999999999|
 |Old20mV raw increment,V|0.04286859999999999|
-|New ideal trip,V|5.3|
-|New conditional trip min/max,V|[5.252793296185037, 5.348358172983068]|
-|New conditional20mV-overdrive upper,V|5.390878295344108|
+|Current OV-only latency at9/24/26/27V,s|[2.956487356739687e-05, 1.6912575964072873e-05, 1.6240793974457944e-05, 1.5935291252588232e-05]|
+|New ideal trip,V|5.266699999999999|
+|New conditional trip min/max,V|[5.21993214204144, 5.314610956947997]|
+|New conditional20mV-overdrive upper,V|5.3568632907730365|
 |New supervisor held rail min/max,V|[10.224178614557356, 10.757090412124061]|
 |New supervisorDET5 min/max,V|[4.73826806265586, 4.982734318609023]|
 |Raw100mΩ conditional peak current,A|69.51179797979798|
@@ -62,7 +63,8 @@ The sections above preserve the original energy/path screens, with the detector 
 |Conditional protected current allowance3.5/7mΩ,A|[25.539140770928853, 13.48516094324397]|
 |Measurement target Upeak/Umin,V|0.015|
 |Charge example uncertainty,C|1.6500000000000003e-06|
-|Energy example uncertainty,J|0.0017525000000000002|
+|Whole2ms charge example uncertainty,C|2.1550000000000002e-05|
+|Energy example uncertainty,J|0.0034948223999999996|
 |Aux-only pulse source energy screen,J|0.013540205000000003|
 
 Detector equation: `Ip=Vs/R367+Ileak; Vdiv=Vs+(R303+Ron)Ip; Vraw=Vdiv(1+R301/R302)+R301Ip`. Corners enumerate four independently±0.25% resistors, Ron0…17Ω, inherited reference error0.12125%, comparator offset±4mV, **assumed** hysteresis±2mV, transferred PSRR/CMRR and **assumed**1µA diode/PCB leakage plus125nA switch/comparator allowance. This conditional bound is not a guaranteed5.38V overdrive PASS; the missing hysteresis/dynamic/leakage transfer is T06.
