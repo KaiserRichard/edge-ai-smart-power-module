@@ -1,0 +1,61 @@
+{
+  "all_severity_erc_violations": 0,
+  "base": "c47409fb2637c94ccaa685c3ac4cbbd10681d5a2",
+  "canonical_diff_bytes": 0,
+  "full_xml_canonical_sha256": "ecc42c3314e904f920a956dbda9b8b19964f1855dc82740d57baa5fc3f0fab05",
+  "full_xml_equal": true,
+  "head": "46495d2520e7b55eff28a19d60d936602d70b1aa",
+  "power_flags": 7,
+  "project_byte_identical": true,
+  "project_sha256": "2f3f1d74c5c1c75bbfb7daa1cc8822c177a31f2dea212aa09cc127ca813c62c5",
+  "source_inventories": {
+    "01_INPUT_PROTECTION": {
+      "equal": true,
+      "flags": 2,
+      "pins": 68,
+      "sha256": "6e1bccb838e69608a880d814ab0f648fe40b54947064f283882895c39184b1c4",
+      "symbols": 21
+    },
+    "02_BUCK_5V": {
+      "equal": true,
+      "flags": 0,
+      "pins": 56,
+      "sha256": "f79ec2025962719e76bf015eb966bde3c7174137b504762891faf6402bf9a3aa",
+      "symbols": 22
+    },
+    "03_OUTPUT_PROTECTION": {
+      "equal": true,
+      "flags": 2,
+      "pins": 261,
+      "sha256": "fa0daf3bed2e18c0b8dc5312c0c4f5767b4f7c82a914d7d6ef625d94c63aa178",
+      "symbols": 87
+    },
+    "04_POWER_MONITOR": {
+      "equal": true,
+      "flags": 0,
+      "pins": 57,
+      "sha256": "8db47664409bc82892aa8186532206e7a5dfc08e6069c257fc063a1869bfd8d1",
+      "symbols": 21
+    },
+    "05_IO_TEST": {
+      "equal": true,
+      "flags": 3,
+      "pins": 15,
+      "sha256": "b7f529802e391ec039873cc120976464e3ec99a0a665d38ee31ca66d15af9017",
+      "symbols": 10
+    },
+    "V1A": {
+      "equal": true,
+      "flags": 0,
+      "pins": 0,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "symbols": 0
+    }
+  },
+  "source_pins": 457,
+  "source_symbols": 161,
+  "standalone_library_equal": true,
+  "standalone_library_pins": 457,
+  "standalone_library_sha256": "953a73d625870d1f9296974b3529929cce1099650e1dba2fd6b098976d16792f",
+  "standalone_library_symbols": 161
+}

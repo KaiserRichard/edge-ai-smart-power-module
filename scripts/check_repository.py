@@ -28,6 +28,39 @@ def check(root):
             if name not in permitted and reviewed['files'].get(name) != old_hash:
                 errors.append(f'Unapproved change to historical preservation record: {name}')
         integrity = reviewed
+    # Gate2b permits presentation changes only. Chain the historical hashes;
+    # retain exact file-set checks and require an independently exported,
+    # electrically identical netlist before accepting the new source hashes.
+    gate2b = root / 'docs/evidence/r2/sheet03/readability/GATE2B_SCOPE.json'
+    if gate2b.is_file():
+        from check_schematic_readability import canonical_netlist
+        reviewed = json.loads(gate2b.read_text())
+        permitted = {f'hardware/kicad/{name}.kicad_sch' for name in (
+            'V1A', '01_INPUT_PROTECTION', '02_BUCK_5V',
+            '03_OUTPUT_PROTECTION', '04_POWER_MONITOR', '05_IO_TEST')}
+        permitted.add('hardware/kicad/V1A.kicad_sym')
+        if reviewed['baseline_files'] != integrity['files']:
+            errors.append('Gate2b does not preserve the historical Gate2 baseline')
+        if set(reviewed['files']) != set(integrity['files']):
+            errors.append('Gate2b changed the hardware file set')
+        for name, old_hash in integrity['files'].items():
+            if name not in permitted and reviewed['files'].get(name) != old_hash:
+                errors.append(f'Non-presentation hardware change in Gate2b: {name}')
+        evidence_dir = gate2b.parent
+        identity = json.loads((evidence_dir / 'NETLIST_IDENTITY.json').read_text())
+        for filename, field in (('baseline.net.xml', 'baseline_xml_sha256'),
+                                ('readable.net.xml', 'readable_xml_sha256')):
+            if hashlib.sha256((evidence_dir / filename).read_bytes()).hexdigest() != identity[field]:
+                errors.append(f'Gate2b exported evidence hash mismatch: {filename}')
+        baseline = canonical_netlist(evidence_dir / 'baseline.net.xml')
+        current = canonical_netlist(evidence_dir / 'readable.net.xml')
+        if baseline != current or (evidence_dir / 'netlist.diff').read_bytes():
+            errors.append('Gate2b electrical netlist differs from baseline')
+        for filename, expected in (('baseline.canonical.json', baseline),
+                                   ('readable.canonical.json', current)):
+            if json.loads((evidence_dir / filename).read_text()) != expected:
+                errors.append(f'Gate2b canonical proof differs from XML: {filename}')
+        integrity = reviewed
     for name, expected in integrity['files'].items():
         path = root / name
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
