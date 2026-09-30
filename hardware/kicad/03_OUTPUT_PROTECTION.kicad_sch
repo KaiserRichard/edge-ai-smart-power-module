@@ -3455,13 +3455,13 @@
       (effects
         (font
           (size 1.524 1.524))))
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    (property "Footprint" "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
       (at 229.616 201.676 0)
       (effects
         (font
           (size 1.524 1.524))
         (hide yes)))
-    (property "MPN" "PinHeader_1x02"
+    (property "MPN" "B2B-XH-A(LF)(SN)"
       (at 229.616 201.676 0)
       (effects
         (font
@@ -3767,13 +3767,13 @@
       (effects
         (font
           (size 1.524 1.524))))
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    (property "Footprint" "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
       (at 278.638 201.676 0)
       (effects
         (font
           (size 1.524 1.524))
         (hide yes)))
-    (property "MPN" "PinHeader_1x02"
+    (property "MPN" "B2B-XH-A(LF)(SN)"
       (at 278.638 201.676 0)
       (effects
         (font
