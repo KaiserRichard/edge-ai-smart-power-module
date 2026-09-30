@@ -172,3 +172,11 @@ Closure: T15 PIN-RAIL-RACE-AND-THERMAL; prerequisite construction review, then g
 Indexed all 154 baseline refs; selected 41 residual generic/retired passive assignments with exact code/value/package/net in RESIDUAL_PASSIVES.csv, C350 corrected to verified 1 µF, U307 network DNP. JGPIO_FIX Harwin M20-9982046 is a defined dummy male counterpart. J502 remains PENDING. Full energized fixture, state producers, module/source and hot pulse evidence remain construction prerequisites.
 
 Closure: T16 ASSEMBLY-IDENTITY-AND-INTERFACE. Incoming/assembled continuity, capacitance and contacts are measurable; identities/ratings/unbuilt drawings must be proved before testing.
+
+### R4A-17 — CORRECTED (documentation); dependent BENCH REQUIRED
+
+Original57.6 V R323 nominal331.776 mW (58.1 V337.561 mW). At new35 V andRmin9.9k:123.737 mW, below205.882 mW 85°C conditional derating. U306 at12.311325 V/assumed20 mA gives146.227 mW; IN60 V/EN40 V, EN−IN≤0.3 V, junction≤125°C, actual cap/load/thermal remain T07/T15.
+
+Corrected TPS7A16 IN maximum recommended voltage to60 V; EN remains40 V. U306 TPS7A1601DGNR now has IN/EN tied to DRV_HOLD with explicit pins; U307 DNP. Original raw tied EN/C30750 V/R323 dissipation defects remain real. R323 CRCW120610K0FKEA10k spans AUX_LIMITED–GND.
+
+Closure: No bench needed to correct manufacturer rating text. T07/T14/T15 already qualify the actual rail/input/enable/capacitor/thermal circuit; the rating correction alone is not a circuit PASS.

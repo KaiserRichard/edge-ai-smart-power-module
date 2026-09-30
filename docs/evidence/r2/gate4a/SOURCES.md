@@ -20,7 +20,7 @@ All manufacturer documents are copyrighted; no open-source or redistribution lic
 |LT4363|[ADI Rev C, January2024; adjustable surge stopper, SNS/OUT/TMR](https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf)|
 |ON|[onsemi Rev3, January2022; FDB33N25TM research pass FET](https://www.onsemi.com/pdf/datasheet/fdb33n25-d.pdf)|
 |LTC3115|[ADI Rev E, April2023; p38 example PROPOSED ADAPTATION](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf)|
-|TPS7A16|[TI SBVS171F,October2015; IN/EN40V recommended, PG5V recommended, regulation](https://www.ti.com/lit/ds/symlink/tps7a16.pdf)|
+|TPS7A16|[TI SBVS171F,October2015; IN60V/EN40V recommended, PG5V recommended, regulation](https://www.ti.com/lit/ds/symlink/tps7a16.pdf)|
 |TPS3808|[TI SBVS050N,August2026; thresholds and20us typical SENSE propagation](https://www.ti.com/lit/ds/symlink/tps3808.pdf)|
 |MURATA10|[Murata exact family/ordering code; DC-bias C remains OPEN](https://www.murata.com/en-us/products/productdetail?partno=GRM32ER71H106KA12%23)|
 |PASSIVES|[Vishay28758,10April2026; 0.1%25ppm/K E-series order-code candidates, not purchase stock confirmation](https://www.vishay.com/docs/28758/tnpw_e3.pdf)|

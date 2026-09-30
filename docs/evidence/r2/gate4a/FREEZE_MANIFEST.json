@@ -415,9 +415,9 @@
       "old": "D303: BAT46W-E3-08 / BAT46W-E3-08; U316: NEW; Q316: NEW; R330: NEW; R331: NEW; R332: NEW; R333: NEW; C350: NEW",
       "new_mpn": "BAT46W-E3-08; LT4363HMS-1#PBF; FDB33N25TM; TNPW0603100KBEEA; TNPW06034K32BEEA; WSL2512R3300FEA; CRCW060310R0FKEA; GRM21BR71H105KA12L",
       "new_value_or_connection": "D303→Q316D; Q316S→R3320.33Ω→AUX_LIMITED. U316LT4363-1 SNS beforeR332/OUT afterR332; FB100k/4.32k OUT→GND. R33310Ω gate. C3501µF50V0805 TMR→GND replaces10nF; latchoff retained. RUN/U316 control/pins required by R4A-15.",
-      "reason": "Bound AUX <=35V before its existing LDO EN and cap; branch remains upstream of U101",
-      "governing_equation": "Vlimit29.940620…31.643683V conditional; 1µF TMR measuredCeff≥0.75µF; CV/I faststress3.22984ms",
-      "status": "R4A-07 selection revised; T07 startup/timer/SOA BENCH REQUIRED",
+      "reason": "TPS7A16 IN recommended max60V, EN40V: original tied-EN 58.1V fails EN function, C30750V and R323 stress; U306 held input/EN avoids that exposure",
+      "governing_equation": "P_R323 historical57.6²/10k=331.776mW; new35²/9.9k=123.737mW; INmax60V,ENmax40V,EN−IN≤0.3V; detector thermal/stability T07/T15",
+      "status": "R4A-17 rating text CORRECTED; T07/T14/T15 electrical qualification required",
       "source": "LT4363RevC; exact Murata1µF50V sheet"
     },
     {
