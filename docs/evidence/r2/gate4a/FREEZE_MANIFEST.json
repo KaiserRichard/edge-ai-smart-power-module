@@ -321,12 +321,12 @@
         "R322"
       ],
       "old": "R305: Resistor_specification / 2.2M; R307: Resistor_specification / 10k; R321: Resistor_specification / 100k; R322: Resistor_specification / 100k",
-      "new_mpn": "TNPW0603220KBEEA; TNPW060310K0BEEA; TNPW0603100KBEEA x2",
-      "new_value_or_connection": "series gate-source bleed 2.2M->220k candidate; retain crowbar10k and command100k default-low",
+      "new_mpn": "TNPW12102M20BEEA; TNPW060310K0BEEA; TNPW0603100KBEEA x2",
+      "new_value_or_connection": "R305 restore2.2MΩ across PROT_GATE→PROT_MID; use1210 (0603≤332k,0805≤1M,1206≤2M,1210≤3.01M). R30710k/R321/R322100k retained. TGDN is active rapid-off; bleed is only eventual discharge.",
       "reason": "Passive gates default off without powered logic",
-      "governing_equation": "tau=R*Cgate; Pbleed=VGS^2/R; loaded gate timing must be measured",
-      "status": "CONDITIONAL; gate fall and supply budget OPEN",
-      "source": "COMMON"
+      "governing_equation": "Ibleed=VGS/Rmin; at12V5.469µA; charge-pump15µA min is atTS20V, not guaranteedTS5V",
+      "status": "R4A-04 DC-load defect CORRECTED; T04 loaded bootstrap BENCH REQUIRED",
+      "source": "LTC7001 RevG; Vishay TNPW28758"
     },
     {
       "id": "S03-08",

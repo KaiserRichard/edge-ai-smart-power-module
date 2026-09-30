@@ -7,7 +7,7 @@
 |R4A-01|Pending reconciliation|Independent review|PENDING|
 |R4A-02|R103 = TNPW0805348KBEEA (348 kΩ) VIN_FUSED→U101 OVP with R104 15.8 kΩ to GND; R340 = TNPW08051M00BEEA (1 MΩ) AUX_12V→U317 FB; R367 initially same 0805 1 MΩ SENSE→GND, revised under R4A-06. 0.1%, 25 ppm/K; replace 0603 lands at capture.|[Vishay TNPW document28758,10-Apr-2026](https://www.vishay.com/docs/28758/tnpw_e3.pdf), resistance, ordering and derating tables; [historical package](history/931e369/README.md).; T07 OVP/hot divider; T06 detector settling; T07 converter loop before power qualification. These test actual board parasitics, not resistor existence.|CORRECTED|
 |R4A-03|Replace unsupported U319 dual-DCU proposal with separate U319/U324 SN74AHCT1G125DBVR buffers. Five-pin DBV circuit, pullups, 220 kΩ output pulldowns and100 nF local bypass are explicit in S03-05; existing SUPPLY_OK and BUCK_PGOOD receiver nets must pass through these outputs. No dual footprint reuse.|[TI SCLS378P March2024](https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf), pins/DC; [exact DBVR order entry](https://www.ti.com/product/SN74AHCT1G125/part-details/SN74AHCT1G125DBVR); accessed2026-09-30.; T03 BUFFER-SEQUENCING. PASS only with no source/series conduction before valid rails plus freshARM; no DET5 backfeed>0.3 V; every pin remains within ratings. Measures unspecified partial-power behavior under passive shutdown; does not replace the R4A-15 policy implementation.|CORRECTED / BENCH REQUIRED|
-|R4A-04|Pending reconciliation|Independent review|PENDING|
+|R4A-04|R305 = TNPW12102M20BEEA,2.2 MΩ,0.1%/25ppm/K,1210, common PROT_GATE→PROT_MID source. Remove220 kΩ proposal. Retain LTC7001IMSE#PBF and BAS116,215 D302; C301 assigned under R4A-05. 2.2M requires1210 because1206 ends at2MΩ.|[ADI LTC7001 RevG](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf), electrical/charge-pump/bootstrap; [Vishay TNPW28758 10-Apr-2026](https://www.vishay.com/docs/28758/tnpw_e3.pdf),1210 range/ordering.; T04 BOOTSTRAP-DC-HOLD. PASS measuredVGS−U≥10V under lowestDRV_HOLD andTS4.75…5.5V,0/5A,25°C/hot,10-minute settled hold; no continuing downwardBST/VGS trend. Repeat after input removal through disposal; verify physical series-off in T08. Measurement closes TS5V pump/leakage not guaranteed by theTS20V table.|CORRECTED / BENCH REQUIRED|
 |R4A-05|Pending reconciliation|Independent review|PENDING|
 |R4A-06|Pending reconciliation|Independent review|PENDING|
 |R4A-07|Pending reconciliation|Independent review|PENDING|
@@ -41,3 +41,13 @@
 **EVIDENCE:** [TI SCLS378P March2024](https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf), pins/DC; [exact DBVR order entry](https://www.ti.com/product/SN74AHCT1G125/part-details/SN74AHCT1G125DBVR); accessed2026-09-30.
 
 **CLOSURE:** T03 BUFFER-SEQUENCING. PASS only with no source/series conduction before valid rails plus freshARM; no DET5 backfeed>0.3 V; every pin remains within ratings. Measures unspecified partial-power behavior under passive shutdown; does not replace the R4A-15 policy implementation.
+
+## R4A-04 — CORRECTED / BENCH REQUIRED
+
+**DECISION:** R305 = TNPW12102M20BEEA,2.2 MΩ,0.1%/25ppm/K,1210, common PROT_GATE→PROT_MID source. Remove220 kΩ proposal. Retain LTC7001IMSE#PBF and BAS116,215 D302; C301 assigned under R4A-05. 2.2M requires1210 because1206 ends at2MΩ.
+
+**CALCULATION / consequence:** At10 V,220k requires45.455µA versus15µA minimum pump atTS20V/10V differential table point. 2.2M nominal requires4.545µA; at12V andRmin2.1945M,5.469µA. Residual15−5.469=9.531µA is a test-point leakage budget only. At actualTS≈5V andDRV_HOLD≈11V, D302 cannot replenishBST≈15V; no TS5V pump minimum is provided. C cannot cure steady DC loss. With82nC/10V effective gate capacitance, passiveτ≈18.04ms; activeTGDN must establish fault cutoff. Hot leakage/full gate charge remain OPEN.
+
+**EVIDENCE:** [ADI LTC7001 RevG](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf), electrical/charge-pump/bootstrap; [Vishay TNPW28758 10-Apr-2026](https://www.vishay.com/docs/28758/tnpw_e3.pdf),1210 range/ordering.
+
+**CLOSURE:** T04 BOOTSTRAP-DC-HOLD. PASS measuredVGS−U≥10V under lowestDRV_HOLD andTS4.75…5.5V,0/5A,25°C/hot,10-minute settled hold; no continuing downwardBST/VGS trend. Repeat after input removal through disposal; verify physical series-off in T08. Measurement closes TS5V pump/leakage not guaranteed by theTS20V table.

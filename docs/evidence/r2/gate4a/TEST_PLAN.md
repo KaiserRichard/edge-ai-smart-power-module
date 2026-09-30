@@ -43,3 +43,9 @@ Equipment: a current-limited programmable 0…30 V bench supply with measured ou
 DECISION: U319/U324 and their exact pin/net/bypass/pulldown circuit are S03-05. Sweep DET_5V 0→5.5→0 V and3V3_AUX0→3.4→0 V in both orders, independently disconnected supplies, both PG states, heldARM/reset. Begin with no main source and isolated monitored supplies, then current-limited dummy load after the interlock is complete. Measure buffered PG outputs, DET5 injected current, MAIN_PERMISSION, SHDN, RUN and physical series/source conduction.
 
 PASS: no MAIN_PERMISSION/series/source conduction until valid rails and a fresh ARM; no disconnected DET5 rise above0.3 V; PG static high/low and≤50µA output loading meet R4A-03 bounds; all pins/current remain within manufacturer limits. Include slow ramps and fast brownout, not just binary power states. Measurement is necessary because AHCT supplies no powered-off-output functional guarantee. Prerequisite: R4A-15 actual interlock; an unbuilt policy cannot receive PASS. No test run.
+
+## T04 — BOOTSTRAP-DC-HOLD (R4A-04 / M01)
+
+Use R3052.2MΩ1210, actual Q301/Q302, D302 and C301. Isolated controls, monitored dummy load. At0/5A, source node4.75/5.1/5.5V and lowest qualifiedDRV_HOLD, run25±5°C and permitted localhot conditions. Record differentialBST−TS andeachVGS with probe DC resistance/leakage included; a10MΩ probe at10V adds1µA and is material. After thermal settlement maintain ON for10min and plot trend; log pump/bleed/probe/diode/gate leakage separately where measurable. Repeat rail-loss hold to actual safe disposal endpoint.
+
+PASS: eachVGS−U≥10.0V through every intendedON interval, no continuing droop after settlement, no pin overstress; each physical turn-off meetsT08. Powered-off passivebleed time is recorded, not credited as rapid cutoff. Measure because the pump's15µA minimum applies atTS20V, while normalTS≈5V; unknown hot leakage cannot be inferred from capacitor size. No test run.
