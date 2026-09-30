@@ -1,85 +1,179 @@
 ---
 title: "Buck converter LM61460"
 lesson: 2
-tags: [v1a, lesson]
+tags: [v1a, lesson, visual]
 ---
 
 # 02 — Buck converter LM61460
 
-## Why this matters
+> [!abstract] In one sentence
+> The buck alternates two current paths so an inductor and capacitors can turn a pulsed switch-node voltage into a nearly steady local 5.1 V rail.
 
-V1A targets a 9–26 V input; the LM61460 receives that supply after input-stage losses and regulates a local rail near 5.1 V.<br>
-Its switches, inductor and capacitors work together to deliver fairly steady power.<br>
-Understanding that energy path also explains why a failed switch needs separate protection.
+## 1. An everyday picture: push a flywheel, then let it coast
 
-## Two states, one current direction
+![[f2-02-inductor-flywheel.png|800]]
+*BATCH_F F2.2. Speed represents current; a push represents applied voltage. This picture explains continuity, not the magnetic saturation law.*
 
-A **buck converter** lowers voltage by switching. The LM61460's **metal-oxide-semiconductor field-effect transistors (MOSFETs)** alternately connect the switch node (**SW**) to input or ground (**GND**). Turning both on together would short the input.
+A heavy flywheel does not instantly reach full speed when pushed, and does not stop the moment the push ends. You can maintain its average speed with repeated short pushes. An inductor behaves similarly with **current**: applied voltage changes the current gradually.
 
-Take inductor current as positive from SW toward the output. Define its voltage as **left end minus right end**: $V_L=V_{SW}-V_{OUT}$.
+The important difference is that the buck gives current a closed path while the high-side switch is off. Opening a path without providing another one would produce a voltage transient rather than a gentle coast.
 
-| State | Inductor voltage | What current does |
-| --- | --- | --- |
-| High side on; low side off | $V_L\approx V_{IN}-V_{OUT}>0$ | Rises; input supplies the output and adds magnetic energy. |
-| High side off; low side on | $V_L\approx -V_{OUT}<0$ | Falls; stored magnetic energy continues supplying the output. |
+**After this lesson:** explain both switch states, read the three aligned waveforms, calculate one ripple cycle, and connect the inductor/capacitor choices to the fault problem.
 
-![[c2-buck-low-side-freewheel-state.png|500]]
+> [!warning] Status
+> The normal V1A input requirement is **9–26 V**; the buck receives that supply after input-stage losses. The **10 µH candidate is selected for qualification**, not validated. **Gate 4a-FIX BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
-Follow the blue loop: ground → low-side switch → inductor → load → ground. **Falling current still flows toward the load.** Here it stays above zero: continuous-conduction operation. The picture's +/− marks define the voltage reference; they do not mean the left end is actually more positive in this state. The output capacitor also carries the difference between inductor and load current. Light-load behavior can differ; brief switching transitions are simplified.
+## 2. First state: the input pushes current upward
 
-## Why L201 is changing
+![[c1-buck-high-side-mosfet-on.png|850]]
+*Existing C1 teaching image. High-side metal-oxide-semiconductor field-effect transistor (MOSFET) on, low-side MOSFET off. Geometry is functional, not a pin-level circuit.*
 
-For constant inductance and voltage, $\Delta I=V_L\Delta t/L$: more inductance slows current change. At large current, magnetic saturation can reduce inductance, speeding up the rise.
+Follow the power loop: input capacitor/source → high-side switch → switch node (**SW**) → L201 → output/load → ground return. The output capacitor carries the difference between inductor current and load current; not every ampere through L201 necessarily enters the load.
 
-**DECISION — selected qualification candidate:** move from the inherited **6.8 microhenry (µH)** XAL8080 to the **10 µH alloy Würth 74437636351002** for further qualification. Gate 4a lists this proposed change; it is **not a qualified or fitted replacement**. Its published current-dependent curve helps the fault study, but guaranteed behavior across temperature and production batches is **(still open)**.
-
-**Ldiff** means differential inductance at the present current; **DCR** means direct-current winding resistance.
-
-**Image status correction:** the older picture below says “not selected.” Gate 4a now selects this part **for qualification**, with its limits still open. The component shape and shaded curve are generic illustrations, not a manufacturer drawing or a guaranteed inductance envelope.
-
-![[c4-10-h-alloy-inductor-selection.png|600]]
-
-Heating, footprint and stable regulation need checking, especially low ripple at 9 V **(still open)**. A larger inductor cannot stop a connected source supplying energy indefinitely.
-
-## Why this design and not another
-
-The old small inductor lacks a justified inductance bound across the studied fault currents. The larger 10 µH alloy candidate has a published curve extending through the study's current range, making it a useful qualification starting point. The cost is a much larger through-hole package, different mounting and changed ripple/load-step behavior. A typical curve alone does not close those checks.
-
-Gate 3b therefore combines the candidate with **timed source isolation and controlled input capacitance**. More inductance alone cannot bound the energy from a source that remains connected. **Gate 4a freeze remains BLOCKED** while these circuit and component limits are open.
-
-**Calculated example — illustrative only:** assume constant inductance, 24 V input, 5.1 V output and a 0.5 microsecond high-side-on interval; ignore losses:
+Choose positive inductor current from SW toward the output. Define inductor voltage left minus right:
 
 $$
-\Delta I_{10\,\mu H}=\frac{(24-5.1)\times0.5\,\mu s}{10\,\mu H}=0.945\,A
+V_L=V_{SW}-V_{out},\qquad \frac{di_L}{dt}=\frac{V_L}{L}
 $$
 
-With 6.8 µH, the increase is **1.39 A**. These are not predicted fault peaks.
+At an **assumed 24 V input and 5.1 V output**, the on-state inductor voltage is approximately **+18.9 V**. The current rises. Some energy goes to the load and some increases the inductor's magnetic store.
 
-## Capacitors, feedback and the hot loop
+## 3. Second state: current keeps moving toward the load
 
-**Input capacitors** supply switching-current pulses. **Output capacitors** carry the difference between inductor and load current, charging or discharging to smooth voltage. Ceramic capacitance can fall under applied direct-current (**DC**) voltage. The source study calls for at least **10 microfarads (µF) effective main input ceramic capacitance**, plus a nominal **100 nanofarad (nF) bypass at each VIN/PGND pair**. All local reservoirs and bypasses must fit the proposed **30 µF total effective maximum**. These are qualification targets; nominal part labels do not prove them.
+![[c2-buck-low-side-freewheel-state.png|850]]
+*Existing C2. The +/− marks define the left-to-right voltage reference. In this state the left end is actually at lower potential. Falling current still flows toward the load.*
 
-**Feedback (FB)** senses local output through a resistor divider: falling voltage increases energy delivery; rising voltage reduces it. Sensing is before the output disconnect, so cable voltage drop remains.
+Now the high side is off and the low side conducts. Follow the loop: ground → low-side switch → SW → L201 → output/load → ground. The SW node is near ground, so $V_L\approx-5.1\ \mathrm{V}$. The current slopes downward, but remains positive in the continuous-conduction example.
 
-The **hot loop** links input capacitors, both switches and power-ground return. Rapid current changes demand a small loop area; keep FB away from SW. This describes switching-current transfer, not simultaneous switch conduction. Layout is **conceptual; no printed circuit board (PCB) is routed**.
+The switches must not conduct together: that would short the input to ground. Real control includes brief dead time and other switching details; the ideal waveform below omits them. Light-load operation can differ from this continuous-current example.
+
+| State | Approximate SW voltage | Inductor voltage at 24 V input | Current slope |
+|---|---:|---:|---|
+| High side on | 24 V | +18.9 V | Positive |
+| Low side on | 0 V | −5.1 V | Negative, while current can remain positive |
+
+## 4. Read the waveforms from top to bottom
+
+![[v2-02-buck-waveforms.png|900]]
+
+1. **Purple:** SW jumps between approximately input and ground. It is not a 5.1 V rail.
+2. **Orange:** L201 current forms a triangle. Its average supplies the assumed 5 A load.
+3. **Blue:** capacitor current is $i_C=i_L-I_{load}$. Positive current charges the output capacitor; negative current lets it supply the difference.
+
+A steady average output requires no accumulating change in inductor current over a cycle. In the ideal model:
+
+$$
+(V_{in}-V_{out})DT+(-V_{out})(1-D)T=0
+\quad\Rightarrow\quad D=\frac{V_{out}}{V_{in}}
+$$
+
+Here $D$ is duty cycle, the high-side on fraction; $T$ is the full switching period. The basic operating explanation follows the [TI LM61460 datasheet, SNVSBD5D](https://www.ti.com/lit/ds/symlink/lm61460.pdf). This ideal relation does not include losses or controller timing limits.
+
+## 5. Worked example: rebuild one triangle
+
+**ASSUMED:** 24 V in, 5.1 V out, 400 kHz, constant 10 µH, 5 A average current, no losses.
+
+$$
+T=\frac{1}{400\,000}=2.5\ \mathrm{\mu s},\qquad
+D=\frac{5.1}{24}=0.2125
+$$
+
+$$
+t_{on}=DT=0.53125\ \mathrm{\mu s},\qquad
+t_{off}=1.96875\ \mathrm{\mu s}
+$$
+
+The rise during the short on interval is
+
+$$
+\Delta I_{on}=\frac{18.9\times0.53125\ \mathrm{\mu s}}{10\ \mathrm{\mu H}}
+=1.004\ \mathrm{A}
+$$
+
+The fall during the longer off interval is
+
+$$
+\Delta I_{off}=\frac{-5.1\times1.96875\ \mathrm{\mu s}}{10\ \mathrm{\mu H}}
+=-1.004\ \mathrm{A}
+$$
+
+They cancel over the period. Current ranges from approximately **4.498 to 5.502 A**. This is normal-operation ripple under fixed inductance, not the fault peak or an established current rating.
+
+## 6. Why L201 is changing
+
+![[v2-02-inductor-ripple.png|850]]
+
+The inherited inductor is **6.8 µH XAL8080-682MED**. The owner-selected qualification candidate is **10 µH alloy Würth 74437636351002**. At the same applied voltage, a larger constant inductance slows the current change; the lower curve shows that simple effect.
+
+During a fault, **differential inductance** means the inductance at the actual current. Magnetic saturation can reduce it, allowing current to rise faster. The candidate's published current-dependent curve helps the investigation, but hot behavior and production bounds remain **(still open)**. A typical graph is not a guaranteed minimum.
+
+The candidate also changes size, mounting, direct-current winding resistance (**DCR**), ripple and load-step behavior. Heating, physical fit and stable regulation, especially low ripple at 9 V, remain **(still open)**. No illustrative component drawing is a footprint approval.
+
+## 7. Capacitors and feedback: local helpers with costs
+
+![[e1-capacitor-behavior-and-effective-capacitance.png|850]]
+*Existing E1: conceptual capacitor behavior. A nominal capacitance label is not the effective value under voltage, temperature and tolerance.*
+
+The **input capacitors** provide switching-current pulses close to the chip. The source study asks for at least **10 µF effective main input ceramic capacitance**, plus nominal **100 nF local bypassing at each VIN/PGND pair**. Every local reservoir and bypass must fit the proposed **30 µF total effective maximum**. More input capacitance can help normal switching while storing more fault energy.
+
+The **output bank** supplies the load while inductor current catches up. Capacitance controls gradual voltage change; equivalent series resistance (**ESR**) adds an immediate voltage component when capacitor current changes. Effective capacitance, ESR and startup stress must be qualified together.
+
+![[d5-lm61460-feedback-principle.png|800]]
+*Existing D5: feedback is local to the raw output, before the series disconnect. Arrows describe control information, not a power path.*
+
+The captured **100 kΩ / 24.4 kΩ** feedback divider sets about **5.098 V** locally. Feedback adjusts energy delivery when this voltage changes. It does not measure Pi-header ground rise or harness loss. Keeping the sense route quiet matters because a false reading prompts a real control action.
+
+## 8. What goes wrong: the controller loses its switch
+
+![[p03-02-buck-normal-vs-shorted.png|850]]
+
+With a permanent high-side short, SW stays near input. Using the **same assumed 10 µH** at the beginning of a 24 V fault:
+
+$$
+\frac{di}{dt}=\frac{24-5.1}{10\ \mathrm{\mu H}}=1.89\ \mathrm{A/\mu s}
+$$
+
+Ten microseconds would add roughly **18.9 A** if that initial voltage and inductance remained constant. The inductor cannot contain a source that stays connected indefinitely. Saturation can make the rise faster. See [[03 Output protection]] for the reused pilot fault model and its explicit limitations.
+
+![[f2-03-hot-loop-3d.png|800]]
+*BATCH_F F2.3. The outlined hot loop is the switching-current **difference/commutation loop**, not simultaneous conduction through both switches.*
+
+A second failure comes from physical layout: a large loop adds unwanted inductance, making rapid current changes generate extra voltage. Keep local input bypasses close to both VIN/PGND pairs and feedback away from SW. This is a future layout principle; **no PCB is routed**.
+
+## 9. Why this design and not another
+
+LM61460 is the captured synchronous buck choice. The bigger inductor is a qualification direction because the small inherited part lacks a justified fault-current inductance bound across the studied range. The cost is size and changed normal behavior. Gate 3b therefore couples the candidate with timed source isolation and controlled capacitance. Replacing L201 alone cannot solve an indefinitely energized fault.
 
 > [!warning] Common misconceptions
-> Negative inductor voltage does not immediately reverse current. A 10 µH label does not guarantee fault behavior. More capacitance stores more fault energy. Feedback cannot turn off a shorted high-side switch.
+> Negative inductor voltage does not instantly reverse current. SW is not the regulated output. A 10 µH label does not establish hot fault behavior. Extra capacitance can increase fault energy. Feedback cannot command a physical short off.
 
-## Check yourself
+## 10. Check yourself
 
-1. Which state makes inductor current rise?
-2. How does current return during the low-side state?
-3. Why is the 10 µH candidate not a completed fix?
-4. Why keep input capacitors close and feedback away from SW?
+1. Why does current still flow toward the load with SW near ground?
+2. Why are the up and down slopes different but their current changes equal?
+3. When does the output capacitor supply current to the load?
+4. Why does the new inductor still require qualification?
 
 > [!question]- Answers
-> 1. High side on: the inductor sees positive left-to-right voltage.
-> 2. Through ground and the conducting low-side switch, then back into the inductor.
-> 3. Its hot/current-dependent inductance, normal regulation and physical fit need qualification; source isolation must also bound fault energy.
-> 4. A compact switching loop reduces unwanted voltage spikes and noise; quiet feedback helps the controller sense the actual output.
+> 1. The inductor's stored energy sustains positive current while negative voltage reduces it.
+> 2. The on/off durations differ; equal and opposite changes give a steady repeating cycle.
+> 3. When load current exceeds inductor current; $i_C=i_L-I_{load}$ is then negative.
+> 4. Its current/temperature-dependent inductance, thermal behavior, mounting and regulation are unproved.
 
-> [!info]- Evidence and current status
-> [Pinned sources and fact-check record](FACTCHECK_LOG.md#sources): BUCK and LM for converter principles; L and SRC for the inductor/capacitor tradeoffs; BASIS and G4 for current selections and the blocked freeze. IMG is historical illustration context. No bench validation is claimed.
+## 11. One-page visual summary
+
+![[v2-02-buck-waveforms.png|700]]
+
+| Picture to remember | Equation / boundary |
+|---|---|
+| High-side push | $V_L\approx V_{in}-V_{out}$; current rises |
+| Low-side coast | $V_L\approx-V_{out}$; current falls but can stay positive |
+| Capacitor shares the load | $i_C=i_L-I_{load}$ |
+| Example at 24 V | **21.25% duty**, **1.004 A** peak-to-peak, ideal 10 µH |
+| Candidate decision | **74437636351002**, selected for qualification only |
+| Failed switch | Independent Sheet 03 and a bounded source are required |
+
+> [!info]- Sources and reproducibility
+> [Fact-check register](FACTCHECK_LOG.md#sources): BUCK, LM, L, SRC, BASIS and G4. Gate 4a-FIX `2b99ac7` retains magnetic, capacitor and source qualifications as open. [BATCH_F](../illustrations/BATCH_F.md) contains the flywheel and hot-loop prompts. Charts: `python3 -B docs/lessons/figures/src/lesson_charts.py 02`.
 
 Previous: [[01 Input protection]] · Next: [[03 Output protection]] · Terms: [[99-Glossary]]

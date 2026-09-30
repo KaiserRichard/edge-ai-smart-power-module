@@ -6,13 +6,19 @@ tags: [v1a, lesson]
 
 # 99 — Glossary
 
-## Why this matters
+> [!abstract] In one sentence
+> This glossary is a map: each word points to a physical job, a measurement boundary or a kind of evidence.
 
-Short names help you read diagrams once you know what they mean.<br>
-Similar words can describe very different protection functions.<br>
-Use this page when a term interrupts your understanding of the system.
+## 1. An everyday picture: a map legend
 
-## System and measurement
+![[f9-01-course-map.png|850]]
+*BATCH_F F9.1. A map legend helps you understand the symbols before choosing a route; these words help you read the engineering without guessing.*
+
+Read a term in three steps: **name the object**, **find its boundary**, then **ask what evidence supports the claim**. For example, “protected output” names a node after a protection stage. It does not establish that every fault has been contained. The lessons below provide the pictures and examples behind the terms.
+
+**Learning goals:** distinguish similar protection words, translate the units, and avoid turning an assumption into a measured claim.
+
+## 2. System and measurement
 
 | Term | Plain meaning in these lessons |
 | --- | --- |
@@ -28,7 +34,7 @@ Use this page when a term interrupts your understanding of the system.
 | Shunt / Kelvin sensing | A small resistor produces a current-dependent voltage. Separate sense connections read that voltage without including the power-trace drops. |
 | PCB — printed circuit board | The physical interconnect and component support. V1A layout pictures are conceptual; no board is routed. |
 
-## Conversion and protection
+## 3. Conversion and protection
 
 | Term | Plain meaning in these lessons |
 | --- | --- |
@@ -51,7 +57,7 @@ Use this page when a term interrupts your understanding of the system.
 | Source bound | A justified limit on fault voltage, current, charge, energy, and duration, including local stored energy. |
 | SOA — safe operating area | Allowed combinations of transistor voltage, current, time, and temperature under stated conditions. |
 
-## Units and evidence
+## 4. Units and evidence
 
 **mΩ** means milliohm: $1\,\mathrm{m\Omega}=0.001\,\Omega$. **µH** means microhenry; **µF** means microfarad. **µs** means microsecond; **µC** means microcoulomb, a unit of electric charge. The prefix **µ** means one millionth.
 
@@ -66,7 +72,33 @@ Use this page when a term interrupts your understanding of the system.
 > Electrical rules check (ERC) and design rules check (DRC) test design rules; passing them does not establish electrical safety.<br>
 > A component's headline current rating is not the assembled board's rating.
 
-## Check yourself
+## 5. Worked example: connect the units to a picture
+
+![[v2-04-shunt-signal-loss.png|850]]
+
+At nominal 5 A through 2 mΩ:
+
+$$
+V=IR=5	imes0.002=0.010\ \mathrm{V}=10\ \mathrm{mV}
+$$
+
+$$
+P=I^2R=25	imes0.002=0.050\ \mathrm{W}=50\ \mathrm{mW}
+$$
+
+Read the straight line for voltage and the curved line for heating. A factor of two in current makes twice the voltage drop but four times the dissipation. The formulas are **CALCULATIONS**; the nominal resistance is an input; the actual hot temperature and accuracy require **MEASURED** evidence.
+
+## 6. What goes wrong: treating a boundary as a guarantee
+
+![[v2-p03-09-voltage-ladder.png|850]]
+
+The preliminary trip threshold, a conditional modeled peak and the project limit are different marks on this ruler. An **OVP threshold** says when a detector responds. **Let-through** is what happens during the remaining delay and energy transfer. A **requirement** states what must be met; it is not proof that the circuit meets it. The historical 5.542 V counterexample stays visible because evidence cannot be erased by a later architecture decision.
+
+## 7. Why this design and not another
+
+The course separates power conversion, fault containment and monitoring so each claim has a clear boundary. It uses **ASSUMED**, **CALCULATED**, **MEASURED**, **OPEN** and **BLOCKED** instead of treating every precise-looking number alike. This vocabulary lets a reviewer say exactly what remains to be proved without confusing a component choice with qualification.
+
+## 8. Check yourself
 
 1. What does a 2 mΩ shunt drop at 5 A?
 2. Why is an OVP threshold different from a guaranteed voltage peak?
@@ -77,8 +109,22 @@ Use this page when a term interrupts your understanding of the system.
 > 2. Voltage can continue rising during detection and turn-off; stored energy and wiring also matter.
 > 3. Its inductance can change with current and temperature, especially during faults.
 
+## 9. One-page visual summary
+
+| Word family | Picture / example | Ask yourself |
+|---|---|---|
+| Voltage / current / power / energy | Pressure / flow / delivery rate / accumulated delivery | Which units and which time interval? |
+| Input / raw / protected / load | Different locations in the power path | Exactly where is the voltage measured? |
+| Fuse / TVS / eFuse | Clear overcurrent / divert surge / controlled admission | Which fault, duration and source limit? |
+| Comparator / latch / disconnect / dump | Detect / remember / cut / dispose | Does the control power survive the event? |
+| Kelvin / force / sense | Load path versus observation taps | Did unwanted copper enter the measurement? |
+| ASSUMED / CALCULATED / MEASURED | Input / arithmetic / physical evidence | What supports the claim? |
+| BLOCKED / FAIL / selected | Gate status / unmet criterion / development choice | Has the exact criterion actually closed? |
+
+**Current boundary:** 9–26 V input; architecture D test board; Gate 4a-FIX BLOCKED; no Pi before required gates pass. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
 > [!info]- Evidence and reading
 > [Pinned source register](FACTCHECK_LOG.md#sources): CTX for scope/evidence vocabulary; BUCK and MON for conversion/measurement; AUX for isolation; G2C and G4 for latch and blocked-freeze limits; VERIFY for the contact FAIL. Older captured selections do not supersede current owner decisions.<br>
-> This reference page needs no illustration; examples and terms link the other lessons together.
+> This visual reference reuses lesson charts; those charts remain conditional teaching examples, not new evidence. See [visual rebuild record](VISUAL_REBUILD_LOG.md).
 
 Previous: [[08 V1A inside the robot]] · Next: [[00 System overview]]

@@ -1,80 +1,147 @@
 ---
 title: "System overview"
 lesson: 0
-tags: [v1a, lesson]
+tags: [v1a, lesson, visual]
 ---
 
 # 00 — System overview
 
-## Why this matters
+> [!abstract] In one sentence
+> V1A is a small power station: it admits a suitable input, converts voltage, contains output faults, measures one branch, and delivers power through a real harness.
 
-V1A is designed to turn a higher direct-current (DC) supply into a monitored 5 V supply.<br>
-Each block has a different job: distribute, convert, protect, or measure.<br>
-Understanding these boundaries helps you find where a fault must be stopped.
+## 1. An everyday picture: supplying a house with water
 
-## Follow the power
+![[f0-03-five-jobs-analogy.png|850]]
+*BATCH_F F0.3. This is a job analogy. The existing picture puts the meter before the emergency gate; in V1A, the shunt is **after output protection**, as the exact sequence below shows.*
 
-The proposed Wheel-Biped Robot (WBR) integration context uses a **13-series-cell (13S) battery** and a **power distribution board (PDB)**; the complete robot electrical architecture is still open. The intended Raspberry Pi 5 connection uses the power pins on its **general-purpose input/output (GPIO)** header.
+Imagine supplying a house from a reservoir on a hill. The high pressure is useful for moving water, but it is too high for the house. A reducing station lowers it. An entrance guard rejects unsuitable supply conditions. A separate emergency valve protects the house if the reducing station breaks. A meter records consumption, and the pipe carries water to the house.
 
-**Battery → PDB → bought isolated 48 V → 24 V module → V1A → Pi 5 GPIO power pins.**
+In this analogy, voltage resembles pressure and current resembles flow. Power is the rate of energy delivery. The analogy stops at switching and magnetic storage; a buck converter does more than squeeze a pipe.
 
-![[a3-present-source-boundary.png|650]]
+**After this lesson you should be able to:** trace the five jobs, distinguish three output measurement points, and explain why a diagram is not evidence that the board works.
 
-The picture ends at V1A and highlights the unselected upstream module. “48 V → 24 V” describes the module class, not guaranteed operating or fault limits. Its exact model and fault behavior are **(still open)**. Isolation separates the converter's power-transfer sides; it does not guarantee that every output fault is contained.
+> [!warning] Project status
+> **PRELIMINARY V1A SHEET-03 ARCHITECTURE (TEST BOARD). Gate 4a-FIX freeze: BLOCKED. R2 schematic release and R3 PCB release remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** The lessons explain intended behavior; they do not release hardware. No Pi before fault tests and all other applicable gates pass.
 
-**REQUIREMENT:** V1A's normal input range is **9–26 V**. The robot battery must never connect directly to it. V1A remains a standalone Project II design; it can first be studied using a suitable current-limited bench source.
+## 2. Picture walkthrough: from the robot to V1A
 
-## Inside V1A
+![[f0-01-power-journey-robot.png|900]]
+*BATCH_F F0.1. “48 V → 24 V” is an upstream module class. “5.1 V target” is the local buck target, not a guaranteed voltage at the computer.*
 
-![[d3-v1a-circuit-anatomy-without-fake-hardware.png|650]]
+Read the journey left to right:
 
-The upper row shows power moving toward the load. The lower row shows measurement and test access; it is a functional drawing, not a wiring diagram.
+1. **Battery:** the future Wheel-Biped Robot (WBR) context uses 13 series cells, abbreviated **13S**. Its final electrical architecture is not frozen here.
+2. **Power distribution board (PDB):** distributes battery power to separate branches. V1A is not the PDB.
+3. **Bought isolated converter:** supplies the lower-voltage compute branch. Its exact model and fault behavior are **(still open)**. The owner rejected the UENPO non-isolated module.
+4. **V1A:** accepts a **9–26 V normal input**, including the source's healthy tolerance, ripple and startup behavior. The battery must never connect directly to V1A.
+5. **Computer:** the intended Raspberry Pi 5 receives power through dedicated 5 V and ground pins on its general-purpose input/output (**GPIO**) header. A dummy load occupies this position during qualification.
 
-| Block | Job |
-| --- | --- |
-| Input protection | Handle input faults and control admission of power. See [[01 Input protection]]. |
-| LM61460 buck converter | Reduce the input to about **5.1 V locally**, targeting **5 A** operation. See [[02 Buck converter LM61460]]. |
-| Output protection | Independently interrupt a failed converter's output path. Architecture D is a **preliminary test-board design**. See [[03 Output protection]]. |
-| Shunt and INA228 | Measure current through a **2 milliohm (mΩ)** resistor and the load-side voltage; report telemetry over **Inter-Integrated Circuit (I2C)**. See [[04 Monitoring]]. |
-| Output interface | Carry power through the connector and harness to the load. Their voltage drops matter. |
+V1A remains a standalone Project II design. A suitable current-limited bench source can represent the upstream boundary before robot integration.
 
-The buck's local 5.1 V is not a guarantee of 5.1 V at the Pi. Switches, the shunt, contacts, and both supply and return wires lose some voltage. Monitoring reports measurements; it does not replace fast hardware protection.
+## 3. Open the module: five jobs, five sheets
 
-## Small example: the power target
+![[f0-02-v1a-board-exploded.png|850]]
+*BATCH_F F0.2. The floating layers are functional groups, not physical PCB layers or a routed design.*
 
-**CALCULATION:** at the local regulator target, power is
+```mermaid
+flowchart LR
+    I["01 Input protection"] --> B["02 Buck converter"]
+    B --> O["03 Independent output protection"]
+    O --> M["04 Shunt and monitor"]
+    M --> H["05 Connector and harness"]
+    H --> L["Dummy load during qualification"]
+```
+
+| Follow the picture | Job | What it cannot establish alone |
+|---|---|---|
+| Purple entrance | Fuse, transient voltage suppressor and electronic fuse manage input faults | Safe output after a failed buck switch |
+| Orange converter | LM61460 switching stage regulates locally near 5.1 V | The voltage after every downstream loss |
+| Orange-to-blue boundary | Architecture D disconnects the output and disposes of stored energy | A qualified result until timing, parts and the harness are tested |
+| Teal monitor | INA228 reads a 2 mΩ shunt and load-side module voltage | Whole-robot energy or a fast fault peak |
+| Blue exit | Connector and harness carry send **and return** current | Equal pin sharing or negligible resistance |
+
+The input fuse **F101 is Schurter 3403.0285.23**; the selected TVS **D101 is Littelfuse SMCJ36CA**. Those owner choices are distinct from installed qualification.
+
+## 4. Three places that are all called “5 V”
+
+![[f4-02-measurement-boundary.png|850]]
+*BATCH_F F4.2. Look at the protection switch, shunt, and cable as separate boundaries.*
+
+| Name on the schematic | Where it is | Why the distinction matters |
+|---|---|---|
+| `VOUT_5V1` | Raw buck output | The feedback divider regulates here |
+| `VOUT_PROTECTED` → `LOAD_5V1` | Before → after the 2 mΩ shunt | INA228 bus voltage is on the load side of the shunt |
+| Pi header voltage | Far end, measured against its own ground | Includes positive and return-path losses and cable transients |
+
+For a simple resistive loop, $V_{Pi}=V_{buck}-IR_{loop}$. The loop includes switches, shunt, board copper, contacts, positive wire **and ground wire**. A module-side 5 V reading cannot prove the Pi-end voltage.
+
+## 5. Worked example: where does the power go?
+
+![[v2-00-power-accounting.png|800]]
+
+**ASSUMED teaching case:** 5.1 V and 5 A at the local buck output, with 90% efficiency from the V1A input to that node. Actual efficiency and continuous thermal capability are **(still open)**.
 
 $$
-P=VI=5.1\,\mathrm{V}\times5\,\mathrm{A}=25.5\,\mathrm{W}.
+P_{out}=VI=5.1\times5=25.5\ \mathrm{W}
 $$
 
-The input must supply more than 25.5 W because conversion and wiring produce heat. Actual efficiency and continuous thermal capability are **(still open)**; the calculation is not a measured board rating.
+$$
+P_{in}=\frac{25.5}{0.90}=28.33\ \mathrm{W},\qquad
+P_{loss}=28.33-25.5=2.83\ \mathrm{W}
+$$
 
-## Where the project stands
+At 24 V, the estimated input current is $28.33/24=1.18\ \mathrm{A}$. The output can carry 5 A because it is at a lower voltage. There is no free energy: input power pays for output power and losses. Downstream harness loss further reduces the power reaching the computer; this example is not a measured board rating.
 
-**PRELIMINARY V1A SHEET-03 ARCHITECTURE (TEST BOARD). Gate 4a freeze: BLOCKED.** Required circuit connections and limits are still open: the independent fault trigger, control supplies, fault logic and protected capacitor bank. Gate 4a is part of R2 schematic work, not the R4 fabrication gate. No printed circuit board (PCB) is routed. Schematic, layout and fabrication reviews must precede hardware tests. Later tests use dummy loads; **no Pi is connected before fault tests and all other required gates pass**.
+## 6. What goes wrong: one job cannot replace another
 
-**NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+![[p03-02-buck-normal-vs-shorted.png|850]]
+*The pilot's concept picture compares a healthy switching action with a permanent high-side short. Read it as a functional explanation, not a buildable schematic.*
+
+A shorted high-side switch can apply the input to the inductor continuously. A normal 24 V input gives the **input** overvoltage detector no reason to trip. Meanwhile the **output** rises. Feedback cannot switch off a physical short; telemetry does not replace the independent protection circuit.
+
+```mermaid
+flowchart LR
+    F["Buck high-side short"] --> R["Raw output rises"]
+    R --> D["Independent protection must act"]
+    D --> T["Prove source cutoff, energy disposal and far-end voltage"]
+```
+
+The unresolved independent source trigger, control supplies, fault/re-arm logic and protected capacitor bank keep the freeze blocked. Lesson 03 explains the favorable teaching waveform **and** the failed conditional screens.
+
+## 7. Why this design and not another
+
+A bought 5 V regulator would perform conversion, but conversion alone does not answer V1A's protection, measurement and testability requirements. Separating the jobs makes each claim reviewable. Architecture D keeps output protection on V1A; the owner chose it for a fault-test board, with far-end proof still owed. The isolated upstream module addresses the robot's supply boundary while preserving V1A as a standalone project.
 
 > [!warning] Common misconceptions
-> A nominal 24 V module is not automatically a qualified source.<br>
-> V1A is not the robot's whole power distribution board.<br>
-> A clean schematic or rule-check report does not prove electrical performance.
+> A nominal 24 V label is not a qualified source envelope. A 5.1 V setpoint is not the Pi voltage. Monitoring is not fault containment. Electrical/design rule checks do not demonstrate performance or safety.
 
-## Check yourself
+## 8. Check yourself
 
-1. Which block sits between the PDB and V1A?
-2. Why can the Pi receive less voltage than the buck produces?
-3. Does 5.1 V × 5 A establish the input power requirement exactly?
-4. What replaces the Pi during initial testing?
+1. Why is protection needed on both sides of the buck?
+2. Which side of the shunt supplies the INA228 bus-voltage reading?
+3. Does 25.5 W at the buck establish 25.5 W at the Pi?
+4. What replaces the Pi in qualification?
 
 > [!question]- Answers
-> 1. A bought isolated 48 V → 24 V module; its model is still open.
-> 2. Current causes voltage drops in the complete output and return path.
-> 3. No. It gives 25.5 W at the local output; input power also covers losses.
-> 4. A dummy or electronic load, with controlled power and measurements.
+> 1. Input faults and a buck's own output fault are different events at different nodes.
+> 2. `LOAD_5V1`, relative to module ground; the distant header remains outside that voltage measurement.
+> 3. No. The downstream path dissipates power and drops voltage.
+> 4. A reviewed dummy/electronic load and representative harness, after the preceding engineering gates.
 
-> [!info]- Evidence and reading
-> [Pinned sources and fact-check record](FACTCHECK_LOG.md#sources): CTX and MON explain the blocks; G4 and OWNER control the current 9–26 V requirement, architecture D decision and blocked freeze. IMG records the illustration context; its older part-selection statements are superseded. Neither drawing is a completed circuit or hardware result.
+## 9. One-page visual summary
+
+![[f0-02-v1a-board-exploded.png|650]]
+
+| Keep this boundary in mind | Remember |
+|---|---|
+| Source → V1A | Isolated module required; normal input **9–26 V** |
+| Buck → protection | Local target **about 5.1 V / 5 A**; not validated |
+| Protection → load | Owner chose **D test board**; fault behavior remains open |
+| Shunt → host | **2 mΩ + INA228**, one branch's telemetry |
+| Harness → Pi | Loaded minimum **4.75 V**; peak **strictly below 5.5 V** |
+| Paper → hardware | **Gate 4a-FIX BLOCKED; no Pi before all required gates pass** |
+
+> [!info]- Sources and reproducibility
+> [Fact-check source register](FACTCHECK_LOG.md#sources): CTX, MON, BASIS, G4 and OWNER. Later Gate 4a-FIX at `2b99ac7` retains the blocked verdict. Artwork targets are in [BATCH_F](../illustrations/BATCH_F.md). Chart: `python3 -B docs/lessons/figures/src/lesson_charts.py 00`. A teaching edit closes no engineering gate.
 
 Previous: [[00-INDEX|Lesson index]] · Next: [[01 Input protection]] · Terms: [[99-Glossary]]

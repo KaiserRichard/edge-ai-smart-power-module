@@ -1,88 +1,151 @@
 ---
 title: "Input protection"
 lesson: 1
-tags: [v1a, lesson]
+tags: [v1a, lesson, visual]
 ---
 
 # 01 — Input protection
 
-## Why this matters
+> [!abstract] In one sentence
+> Four different input guards manage sustained overcurrent, brief surges, reversed connections and unsuitable supply conditions; none alone guarantees a safe 5 V output.
 
-A power cable can deliver a voltage spike, reversed polarity or excessive current.<br>
-Different faults need different protection functions.<br>
-Understanding the input stage explains its jobs and limits.
+## 1. An everyday picture: guards at an entrance
 
-## What reaches V1A?
+![[f1-01-input-guards-analogy.png|850]]
+*BATCH_F F1.1. Four responsibilities, not four identical switches. “Backwards power” groups two different cases: reversed input polarity and output backfeed; each needs its own path analysis.*
 
-**REQUIREMENT:** normal input is **9–26 V direct current (DC)**. The Wheel-Biped Robot (WBR) context below places a bought isolated **48 V → 24 V module** before V1A; its selection is **(still open)**. Here, 13S means 13 series cells and PDB means power distribution board.
+A building entrance has a guard who checks visitors, a barrier that closes, an emergency overflow channel and a last-resort breakaway link. Giving every guard the same job would leave gaps. V1A similarly combines a fuse, a transient voltage suppressor (**TVS**), a reverse-protection arrangement and an electronic fuse (**eFuse**).
 
-![[b5-standalone-v1a-and-future-integration-boundary.png|700]]
+**Learning goals:** trace the real input path; distinguish standoff, breakdown and clamp; read the voltage window; explain why 5 A out can need much less than 5 A in.
 
-The picture shows functional boundaries. Its “regulated 5 V” label means the approximately 5.1 V local target; it does not establish delivered Pi voltage or a validated board rating.
+> [!warning] Status
+> Normal input is **9–26 V**. **Gate 4a-FIX freeze BLOCKED. PRELIMINARY TEST BOARD — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Component selections below are not installed protection ratings.
 
-## Four jobs at the input
+## 2. Picture walkthrough: where current actually travels
 
-**OBSERVATION — captured circuit:** input → F101 → fused node → Q101 → TPS26630 → buck input bank. D101 connects from the fused node to ground; Q102 controls Q101's gate.
+![[b2-conceptual-input-protection-placement.png|850]]
+*Existing B2 image: conceptual placement only. Current owner selections are D101 **SMCJ36CA** and F101 **Schurter 3403.0285.23**, regardless of older labels. No PCB is routed.*
 
-| Device | Job and limit |
-| --- | --- |
-| **F101, fuse** | Opens the series path after enough fault current flows for enough time. Provides backup protection. |
-| **D101, transient voltage suppressor (TVS)** | Diverts a short voltage surge toward ground. Must survive the pulse and work with the fuse and electronic cutoff. |
-| **Q101/Q102** | Q101 carries power; Q102 helps turn it off by discharging its gate relative to its source. They provide the external reverse-protection arrangement. |
-| **U101, TPS26630 electronic fuse (eFuse)** | Checks voltage, limits input current, controls startup and can interrupt incoming power. |
+Read the paths in this order:
 
-Q101 and Q102 are metal-oxide-semiconductor field-effect transistors (**MOSFETs**). An off MOSFET still has a body diode. Reversing the input wires and feeding power backward from the output are different faults; both paths need checking.
+1. Incoming positive power passes through **F101** to the fused node.
+2. **D101** branches from that fused node to ground. Surge current through it passes through F101, but **does not pass through the downstream eFuse**.
+3. **Q101** carries normal input current. **Q102** helps discharge Q101's gate relative to its source in the captured external reverse-protection arrangement.
+4. **U101 TPS26630** checks the admitted supply, limits input current and controls startup. Its output feeds the local input bank and buck.
+5. Ground is the physical return conductor. A protection symbol cannot make its inductance or resistance disappear.
 
-**DECISION — selected for proposed capture:** Gate 4a adopts **Littelfuse SMCJ36CA for D101** and **Schurter 3403.0285.23 for F101**, following the TVS/fuse reselection report. D101 has 36 V standoff; its specified pulse clamp is 58.1 V at 25.9 A for the stated 25°C, 10/1000 µs test. F101 is a 12.5 A time-lag fuse, rated 125 VDC with 1000 A DC interruption under its specified conditions. These are component specifications, not V1A ratings. Installed clearing, hot surge behavior and coordination are **(still open)**.
+| Guard | Selected device / arrangement | What must be established |
+|---|---|---|
+| Fuse | F101 Schurter 3403.0285.23 | Hot hold current, total clearing, DC interruption and source/wire coordination |
+| TVS | D101 Littelfuse SMCJ36CA | Pulse clamp at actual current, temperature and repetition |
+| Reverse path | Q101 CSD19537Q3 with Q102 BSS138 control | Gate voltage, body-diode paths, reversed input and backfeed cases |
+| Electronic admission | TPS26630 | Threshold corners, current limit, startup and physical cutoff |
 
-## Read the eFuse settings correctly
+The fuse is a **12.5 A time-lag** part, with **125 VDC / 1000 A DC interruption** at its specified conditions. Its number is not V1A's output-current rating. Installed clearing, hot surge behavior and coordination remain **(still open)**.
 
-These are **CALCULATED baseline nominal settings**, not measured guarantees or a newly approved operating range:
+## 3. TVS: three voltage labels, three meanings
 
-| Function | Baseline value | Meaning |
-| --- | --- | --- |
-| Undervoltage lockout (**UVLO**) | About **8.46 V**, rising | Holds the power path off when input voltage is too low. |
-| Overvoltage protection (**OVP**) | About **27.6 V** | Commands cutoff above its threshold; it does not clamp the rail to 27.6 V. |
-| Input current limit | About **4.5 A** | Controls current entering the converter, not its 5 V output current. |
+![[v2-01-tvs-iv.png|850]]
 
-The inherited rising OVP screen is about **26.97–28.29 V**, only 0.97 V above the normal ceiling at its low end. Thus **27 V is a fault-test point, not a guaranteed trip voltage**. The falling/reset screen is about **25.00–26.58 V**, so returning to 26 V after a trip does not guarantee recovery. Hot drift, restart and nuisance-trip behavior are **(still open)**; these screens are not complete hot limits.
+Follow the positive-polarity curve from left to right. The bidirectional CA part also has an avalanche behavior under reversed polarity; this plot only shows the positive magnitude.
 
-The development plan also uses **timed TPS26630 input isolation** with **10–30 microfarads (µF) of effective local input capacitance**. Source isolation cuts further supply; charged capacitors can still feed a fault. The independent fault trigger and full isolation time are **(still open)**. See [[03 Output protection]].
+1. At **36 V standoff**, the device is specified to have only small leakage under its stated test conditions. “36 V TVS” does not mean a surge stays at 36 V.
+2. **40.0–44.2 V breakdown** is specified at **1 mA**. It describes the beginning of appreciable avalanche conduction.
+3. At the specified **25.9 A pulse**, the maximum clamp is **58.1 V**, for the datasheet's **25°C, 10/1000 µs** test conditions.
 
-## Why this design and not another
+The drawn curve between the anchors is **ASSUMED**, not a measured characteristic or a hot guarantee. Read the anchors as different tests, not as an accurate interpolated component model. These values come from the [Littelfuse SMCJ datasheet, 2025-02-27 v.2](https://www.littelfuse.com/assetdocs/littelfuse_tvs_diode_smcj_datasheet?assetguid=37388813-0d6d-4329-969b-1aa8b7614ac1).
 
-The owner's **9–26 V** normal range leaves a nominal 24 V module room for tolerance and ripple. That makes 26 V a design requirement, not proven operation: the complete healthy waveform must stay in range, and the remaining OVP margin needs testing. It also does not approve sustained 33.6 V input.
+The higher standoff avoids the old 26 V device conducting during some studied upstream faults. The cost is a higher clamp: the **58.1 V figure cannot be allowed directly onto the LM61460 input**. The main eFuse's dynamic let-through and the separately supplied auxiliary branch need their own review.
 
-The upstream module must be isolated: a non-isolated buck's shorted high-side switch can create a direct path from the robot bus toward V1A. The owner rejected the UENPO non-isolated module. Isolation removes that direct power-transfer path while its barrier is intact; output-fault limits and connected ports still need review. See [[08 V1A inside the robot]].
+## 4. eFuse: read the window, then read its uncertainty
 
-The 36 V bidirectional TVS gives more standoff margin for the studied upstream faults than the older 26 V part. The larger SMC package improves the pulse-power screen, but its higher clamp requires separate checks of the buck and auxiliary-supply paths. The 12.5 A fuse improves the assumed hot hold-current margin; it clears moderate faults more slowly. The approximately 4.5 A eFuse limit cannot be relied on to blow it, and the upstream TVS current bypasses that limit. This is why timed source shutdown and coordination remain necessary.
+![[f1-03-efuse-three-jobs.png|800]]
+*BATCH_F F1.3. Admission, cutoff and current limiting are different actions. A commanded cutoff has a response delay.*
 
-**Gate 4a freeze is BLOCKED** until these and the other open circuit contracts are resolved.
+![[v2-01-efuse-window.png|900]]
 
-## Small example: input current is different
+Read the top ruler first. **Undervoltage lockout (UVLO)** holds the path off below its threshold; **overvoltage protection (OVP)** commands cutoff above its threshold. Baseline nominal rising thresholds are **8.46 V** and **27.63 V**. The normal-input requirement remains **9–26 V**, inside that wider nominal window.
 
-**ASSUMPTION:** 5.1 V, 5 A at the buck output, 90% buck efficiency and 9 V at its input.<br>
-**CALCULATION:** $P_{OUT}=5.1\times5=25.5\,\mathrm{W}$; $I_{IN}\approx25.5/(9\times0.90)=3.15\,\mathrm{A}$.
+Now read the enlarged lower ruler:
 
-Thus a 5 A output can coexist with an approximately 4.5 A input limit. Extra path losses and startup are excluded; this is not measured.
+- The inherited rising OVP screen spans **26.97–28.29 V**. A 27 V test can trip one corner and leave another on. **27 V is a fault-test point, not guaranteed normal operation or a guaranteed trip.**
+- The falling/reset screen spans **25.00–26.58 V**. After a trip, returning to 26 V does not guarantee recovery.
+- The initial minimum rising screen is only **0.97 V above 26 V**. Hot drift, restart and nuisance-trip behavior are **(still open)**; the plotted bands are not complete hot limits.
+
+Startup control reduces the rate at which the downstream voltage rises. It is not a promise of a particular inrush current: capacitor current also depends on effective capacitance through $I=C\,dV/dt$.
+
+## 5. Worked example: why the input limit can be below 5 A
+
+![[v2-01-input-current.png|800]]
+
+**ASSUMED:** local output 5.1 V at 5 A, buck efficiency 90%, and **9 V at the buck input**. Ignore input-path and auxiliary losses for this example.
+
+$$
+P_{out}=5.1\times5=25.5\ \mathrm{W}
+$$
+
+$$
+I_{in}=\frac{P_{out}}{\eta V_{in}}
+=\frac{25.5}{0.90\times9}=3.15\ \mathrm{A}
+$$
+
+At 24 V the same estimate is **1.18 A**. The eFuse's roughly **4.48 A nominal input limit** therefore does not contradict a 5 A output target. At low input voltage, current and losses increase; the graph does not prove startup or hot full-load capability.
+
+## 6. What goes wrong: assigning each guard a fixed timescale
+
+![[f1-02-tvs-vs-fuse-timescale.png|850]]
+*F1.2 requires regeneration with the corrected BATCH_F prompt. The existing “eFuse acts in between” / millisecond placement is **not a valid timing bound**. eFuse response depends on the fault and action; fuse clearing depends on current. Use this picture only to distinguish mechanisms.*
+
+A TVS diverts current when voltage rises. A fuse must heat enough to open. An eFuse detects a condition and changes semiconductor conduction. These responses overlap in time; they are not exclusive microsecond/millisecond/second lanes.
+
+A particularly important failure is a **sustained excessive voltage**. The TVS could keep dissipating heat while the current is too small to clear F101. The downstream 4.48 A limit cannot guarantee blowing a 12.5 A fuse, and it does not limit the upstream TVS branch at all.
+
+```mermaid
+flowchart LR
+    F["Sustained upstream fault"] --> T["TVS may keep conducting"]
+    T --> H["Heat accumulates"]
+    H --> X["Pulse rating alone cannot prove survival"]
+    F --> C["Need bounded source shutdown and fuse coordination"]
+```
+
+A different failure starts **inside the buck** at an otherwise normal input. Source isolation is necessary but leaves charged capacitors downstream. The development route calls for **10–30 µF effective local input capacitance** and a **physical cutoff within 10 µs** of fault onset. The independent fault trigger and full isolation time are **(still open)**; see [[03 Output protection]].
+
+## 7. Why this design and not another
+
+The owner chose 9–26 V to give the nominal 24 V source normal tolerance room; it is a requirement to prove, not permission for sustained 33.6 V operation. The required isolated upstream module is **(still open)** in model and qualification. The UENPO non-isolated module was rejected because its failed high-side switch can create a direct battery pass-through path.
+
+The larger SMCJ36CA improves the studied pulse-power/standoff screen but raises clamp exposure. A bidirectional TVS ahead of Q101 avoids the straightforward forward-conduction path a unidirectional diode would create under reversed input. The selected larger time-lag fuse improves an assumed hot hold-current screen but clears moderate faults more slowly. Each choice trades one margin for another; source shutdown and component coordination remain necessary.
 
 > [!warning] Common misconceptions
-> A fuse does not stop every fast spike. A TVS voltage label is not its surge clamping voltage. The TPS26630 alone does not provide the captured external reverse-input function. Input protection cannot by itself guarantee a safe 5 V output after a buck fault.
+> A fuse is not a universal fast-spike stopper. Standoff is not clamp voltage. An OVP threshold is not a maximum transient peak. TPS26630 does not replace the captured external reverse-input arrangement. Input protection cannot by itself contain a shorted buck switch.
 
-## Check yourself
+## 8. Check yourself
 
-1. Why do we need both a fuse and a TVS?
-2. Does a 27.6 V OVP setting mean V1A may operate normally at 27.6 V?
-3. Why can input current be below 5 A while output current is 5 A?
-4. Does opening the eFuse remove all stored fault energy?
+1. Why does TVS current bypass the eFuse's current limit?
+2. What does the 58.1 V label actually mean?
+3. Why might a 27 V OVP test leave the input on?
+4. Why does 5 A at the output need only about 1.18 A at 24 V in the example?
 
 > [!question]- Answers
-> 1. The TVS handles short surges; the fuse interrupts sufficiently severe, lasting current. Their coordination needs testing.
-> 2. No. Normal input is 9–26 V; the cutoff has tolerances and delay.
-> 3. The buck trades input voltage for output current, with some power lost as heat.
-> 4. No. Local capacitors and the inductor can still release stored energy.
+> 1. D101 branches from the fused node before the eFuse; topology determines the current path.
+> 2. A specified clamp maximum at a particular pulse current and test condition, not a continuous rail or hot installed limit.
+> 3. The inherited rising threshold screen extends above 27 V, to about 28.29 V.
+> 4. The converter lowers voltage while approximately conserving power; 90% efficiency supplies the assumed loss.
 
-> [!info]- Evidence and reading
-> [Pinned sources and fact-check record](FACTCHECK_LOG.md#sources): IN for the path/settings; TVS for the selected parts and their tradeoffs; BASIS and G4 for 9–26 V and the blocked freeze; SRC for timed isolation. Older 24 V ceilings and unselected-fuse statements are historical.
+## 9. One-page visual summary
+
+![[v2-01-efuse-window.png|700]]
+
+| Remember | Current fact | Still owed |
+|---|---|---|
+| Normal input | **9–26 V** | Complete source waveform within range |
+| D101 | **SMCJ36CA**, 36 V standoff | Hot/repeated pulse and downstream clamp exposure |
+| F101 | **3403.0285.23**, 12.5 A time-lag | Installed hold/clearing and DC source coordination |
+| eFuse | **8.46 / 27.63 V** nominal admission thresholds | Tolerance, hot behavior and restart |
+| Source isolation | **≤10 µs**, **≤100 µC** proposed contract | Autonomous trigger and whole-event measurements |
+| Release | **BLOCKED** | No Pi before required qualification gates |
+
+> [!info]- Sources and reproducibility
+> [Fact-check register](FACTCHECK_LOG.md#sources): IN, TVS, SRC, BASIS, G4, OWNER. Threshold corners also read from `0677fea:GATE2C_REVIEW_CLOSURE.md` under `docs/evidence/r2/sheet03/`; Gate 4a-FIX `2b99ac7` retains source/auxiliary gaps. [BATCH_F](../illustrations/BATCH_F.md) records the F1.2 correction. Charts: `python3 -B docs/lessons/figures/src/lesson_charts.py 01`.
 
 Previous: [[00 System overview]] · Next: [[02 Buck converter LM61460]] · Terms: [[99-Glossary]]
