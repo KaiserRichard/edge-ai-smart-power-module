@@ -1,0 +1,30 @@
+[
+  {
+    "id": "tps7a16",
+    "url": "https://www.ti.com/lit/ds/symlink/tps7a16.pdf",
+    "path": "third_party/documents/gate4a/tps7a16.pdf",
+    "sha256": "4e05cfdef8f64684f9f24b7d1f86e83badb7784c09c96f2ddbcbdbc0a3b48f80",
+    "pages": 37
+  },
+  {
+    "id": "tps3808",
+    "url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+    "path": "third_party/documents/gate4a/tps3808.pdf",
+    "sha256": "74d889c0f68af88032f1633c26381817cc03e10d9fd3b4c177a044ad3ed86eed",
+    "pages": 39
+  },
+  {
+    "id": "tps2662",
+    "url": "https://www.ti.com/lit/ds/symlink/tps2662.pdf",
+    "path": "third_party/documents/gate4a/tps2662.pdf",
+    "sha256": "ff038eaa557fb618f93c0b6276a5ae08d0d3d9fbff1dddf0c45974a89120aefa",
+    "pages": 46
+  },
+  {
+    "id": "tmux1511",
+    "url": "https://www.ti.com/lit/ds/symlink/tmux1511.pdf",
+    "path": "third_party/documents/gate4a/tmux1511.pdf",
+    "sha256": "c32b83722e3717c554dc8f68da05d9e02aa44087043d7b820f5e113713adbfcb",
+    "pages": 45
+  }
+]
