@@ -24,7 +24,7 @@
     "hardware/kicad/sym-lib-table": "b2a54c11e03449e84dfc1de436dfed2606a538f2deccf22bbae071d38a8ff747"
   },
   "files": {
-    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "d83a01f70fa8a7c7fd13d26b257a4d78ac838c2f5d6bd9215e4dcc09568e8f77",
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "82efd48ab32a84b2ec0f34fb8ea1736eee954b4d56d812a990ee07bdc96c4a3d",
     "hardware/kicad/02_BUCK_5V.kicad_sch": "53e503198b9087c0c73d1b78b5fe5b6587f09c3d11e5347a078044522b08bb8c",
     "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "12c78b6e82b9bf4dba25884feb73aa11923e56de976882e21e2cd55227c88fff",
     "hardware/kicad/04_POWER_MONITOR.kicad_sch": "7f54f38877fe086c8f642e104dfcf8e28ba6c387f11d815cc18d192656dce649",
