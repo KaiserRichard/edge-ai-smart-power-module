@@ -33,8 +33,8 @@
     },
     {
       "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/J502_RESUME.md",
-      "sha256": "7d88c2cb5ae3c154b020478c13816d83956b773260a6cf3b8f293a1bc7f29f8a",
-      "bytes": 551
+      "sha256": "aa0a395e518a44803d93515976e166a006e9c1184f56b1fc6f3dc1bafd5173e4",
+      "bytes": 565
     }
   ],
   "scope": "Analysis only; no KiCad edits; local commit authorized, push/PR withheld by conductor notes",
@@ -44,5 +44,15 @@
     "read_only_ls_remote": "PASS, 2026-09-30",
     "refs/heads/feat/v1a-5a-path-budget": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
     "refs/heads/feat/v1a-footprints-complete": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75"
-  }
+  },
+  "historical_input_versions": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/J502_RESUME.md",
+      "sha256": "7d88c2cb5ae3c154b020478c13816d83956b773260a6cf3b8f293a1bc7f29f8a",
+      "bytes": 551,
+      "recorded_at_commit": "89590ab9283f494448189ba2fdecd96a199b03d3",
+      "note": "Previous resume-brief version; retained as history, current file differs."
+    }
+  ],
+  "final_resume_commit": "89590ab9283f494448189ba2fdecd96a199b03d3"
 }
