@@ -5,6 +5,7 @@ Only geometry, text placement and wire/label representation are changed. Run
 check_schematic_readability.py on fresh KiCad exports before accepting output.
 Coordinates below are in 100 mil drawing units. No PCB operations.
 """
+import argparse
 import copy
 import heapq
 import json
@@ -281,7 +282,7 @@ class Drawing:
         route=[]
         while end in prev:route.append(end[0]);end=prev[end]
         route.append(start);return list(reversed(route))
-    def notes(self,y,width=150):
+    def notes(self,y,width=110):
         texts=[val(t[1]) for t in nodes(self.original,'text') if '\n' in val(t[1])]
         self.text('DESIGN NOTES / EXISTING ENGINEERING LIMITATIONS',6,y,2.032)
         if self.name=='03_OUTPUT_PROTECTION':
@@ -294,7 +295,7 @@ class Drawing:
             return
         for s in texts:
             for line in s.splitlines():
-                for ln in textwrap.wrap(line,width=width,break_long_words=False):y+=1.8;self.text(ln,6,y+2)
+                for ln in textwrap.wrap(line,width=min(width,110),break_long_words=False):y+=1.8;self.text(ln,6,y+2)
     def save(self):
         assert set(self.parts)==set(self.placed),(self.name,set(self.parts)-set(self.placed))
         self.route()
@@ -326,6 +327,22 @@ class Drawing:
                     seen.add(tuple(sorted((end,nxt))));prior,end=end,nxt
                 self.add(['wire',['pts',['xy',xy(p[0]),xy(p[1])],['xy',xy(end[0]),xy(end[1])]],['stroke',['width','0'],['type','default']],self.ident()])
         self.doc.append(['lib_symbols',*self.libout.values()])
+        if self.name=='03_OUTPUT_PROTECTION':
+            # A3 landscape, with a 70-mil drawing grid; every endpoint and glyph
+            # transforms together. Visible text remains at least 1.27 mm.
+            def compact(tree):
+                for item in tree:
+                    if not isinstance(item,list):continue
+                    key=item[0]
+                    if key in ('at','xy','start','end','center'):
+                        item[1:3]=[f'{float(v)*0.7:.6f}'.rstrip('0').rstrip('.') for v in item[1:3]]
+                    elif key in ('length','offset','radius'):
+                        item[1]=str(float(item[1])*0.7)
+                    elif key=='size' and len(item)==3:
+                        item[1:]=[str(max(1.27,float(v)*0.7)) for v in item[1:]]
+                    else:compact(item)
+            compact(self.doc)
+            replace(self.doc,'paper',['paper',q('A3')])
         (HW/(self.name+'.kicad_sch')).write_text(dump(self.doc)+'\n')
         return self.libout
 
@@ -396,7 +413,19 @@ def output_sheet():
     for r,x,y,v in [('U310',129,112,False),('U304',133,127,False),('U309',158,127,False),('R317',145,110,True),('C321',120,120,True),('C318',120,135,True),('C320',170,135,True)]:d.place(r,x,y,l,v,width=8,field_at=(138,106,'left') if r=='U310' else (141,119,'left') if r=='U304' else None)
     for r,x,y,v in [('U305',188,115,False),('U311',201,131,False),('Q304',221,131,False),('R321',208,111,True),('R322',213,135,True),('C319',179,124,True),('C325',223,115,True)]:d.place(r,x,y,m,v,width=8,field_at=None)
     for i,n in enumerate(['VOUT_5V1','VIN_FUSED','BUCK_PGOOD','INPUT_SHDN','VOUT_PROTECTED','GND']):d.port(n,(21+38*i,16))
-    d.notes(143,260);return d
+    # Compact guide replaces long duplicated calculation prose; full evidence remains in docs.
+    d.text('HOW TO READ: DETECTOR -> LATCH -> SERIES SWITCH + CROWBAR',6,145,2.032)
+    for i,line in enumerate([
+        '1  U302 reference + R301/R302 divider -> U303 OV_OK (nominal trip 5.325 V).',
+        '2  U308/U312 qualify supply/reset; U310 qualifies OV_OK and BUCK_PGOOD.',
+        '3  ARM clock sets U304; U309 retains ARM_HISTORY until manual RESET.',
+        '4  U305 RUN_GATE -> U301 -> opposed Q301/Q302: raw rail to protected rail.',
+        '5  Fault clears run latch; U311 CROWBAR_ON -> U315 -> Q303 + ballast to GND.',
+        '6  Q304 also asserts INPUT_SHDN. No automatic retry; RESET then ARM.',
+        'OPEN: timing, SOA, stability and fault energy require review and physical tests.',
+        'EVIDENCE: docs/evidence/r2/sheet03/; ERC does not validate electrical safety.'
+    ]):d.text(line,6,149+i*1.4,1.85)
+    return d
 
 def monitor_sheet():
     d=Drawing('04_POWER_MONITOR','monitor')
@@ -433,7 +462,7 @@ def root_sheet():
     sheets=sorted(nodes(d.original,'sheet'),key=lambda s:val(prop(s,'Sheetname')[2]));d.parts={}
     d.text('VIN_RAW  ->  01  ->  02  ->  03  ->  04  ->  J502',10,22,3.048)
     d.text('9-24 V DC input     |     5.1 V nominal / 5 A     |     I2C: 3.3 V, 100 kHz',10,29,2.032)
-    positions=[(12,43,28,28),(49,43,28,28),(86,43,28,28),(123,43,28,28),(12,85,139,10)]
+    positions=[(12,43,28,28),(49,43,28,28),(86,43,28,28),(123,43,28,28),(12,87,139,8)]
     power=[('VIN_RAW','VIN_PROTECTED'),('VIN_PROTECTED','VOUT_5V1'),('VOUT_5V1','VOUT_PROTECTED'),('VOUT_PROTECTED','LOAD_5V1')]
     summaries=['Input / reverse protection','Buck: LM61460 / 400 kHz','Disconnect + crowbar','INA228 / Kelvin shunt','J501 input / J502 load / J503 host']
     anchors={}
@@ -454,7 +483,7 @@ def root_sheet():
             replace(pin,'at',at(*p,angle));replace(pin,'effects',effects(1.524,'left' if angle==180 else 'right' if angle==0 else 'left'))
             anchors[i,net]=p
             if net not in main:
-                end=(p[0],p[1]-5 if i==4 else p[1]+3+(count%2)*3);d.path(net,[p,end]);d.label(net,end)
+                end=(p[0],p[1]-8 if i==4 else p[1]+3+(count%2)*3);d.path(net,[p,end]);d.label(net,end)
         d.add(s);d.text(summaries[i],x+2,y+(5 if i==4 else 13),1.524)
     for i in range(3):
         p,t=anchors[i,power[i][1]],anchors[i+1,power[i][1]]
@@ -467,10 +496,14 @@ def root_sheet():
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--sheet',choices=['01','02','03','04','05','root'])
+    args=parser.parse_args()
     libraries={}
-    for build in [input_sheet,buck_sheet,output_sheet,monitor_sheet,io_sheet,root_sheet]:
+    builders=dict(zip(['01','02','03','04','05','root'],[input_sheet,buck_sheet,output_sheet,monitor_sheet,io_sheet,root_sheet]))
+    for build in ([builders[args.sheet]] if args.sheet else builders.values()):
         d=build();libraries.update(d.save());print('Redrawn',d.name,flush=True)
-    lib=source('V1A.kicad_sym')
+    lib=parse((HW/'V1A.kicad_sym').read_text())
     for i,s in enumerate(lib):
         if isinstance(s,list) and s[0]=='symbol' and 'V1A:'+val(s[1]) in libraries:
             replacement=copy.deepcopy(libraries['V1A:'+val(s[1])]);replacement[1]=s[1]
