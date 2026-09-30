@@ -34,12 +34,12 @@ Route sense traces together from those dedicated terminals to the monitor's filt
 
 **CALCULATION — small signal, real power:** For the nominal 2 milliohm (mΩ) shunt at 5 A:
 
-\[
+$$
 V=IR=5\times0.002=0.010\ \text{V}=10\ \text{mV}
-\]
-\[
+$$
+$$
 P=I^2R=5^2\times0.002=0.050\ \text{W}
-\]
+$$
 
 Only 10 mV represents 5 A, so unwanted sense-path voltage matters. The 50 mW result does not establish temperature or accuracy.
 
