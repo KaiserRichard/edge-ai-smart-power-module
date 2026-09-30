@@ -112,6 +112,36 @@ Normal startup/repetitive inrush must survive the fuse pulse derating; nuisance 
 
 ASSUMED incremental budget: fuse/holder, SCR/trigger, pulse ballast and dump/snubber, roughly12–25 placements plus mechanics; **US$8–35**, excluding common supply fixes and replacement fuses. Exact price OPEN. Bench: hot5 A fuse/holder drop and temperature;9/24 V repeated startup/inrush; minimum and maximum available fault-current short tests; Pi peak before fuse clearing; full DC arc extinction/no restrike; hot SCR turn-on/slew and transfer; gate-power loss/holding/retrigger; eFuse/fuse interaction and pulse repetition. Use fresh fuses/dummy loads; a few successful clearing trials do not replace a supplier clearing maximum.
 
+## C — two-stage conversion
+
+**Topology proposal:** 9–24 V→6 V intermediate→5.1 V, with independent final output protection retained. A final-stage high-side short now connects the lower intermediate reservoir through its inductor. Conversion is source reduction, not itself a sub5.5 V clamp.
+
+### Voltage/current/energy and normal margins
+
+ASSUMED intermediate6.00 V±2% full static target gives5.88–6.12 V; intermediate ripple/startup/load release and fault OVP must be added/qualified. A sustained final high-side short exposes6.12 V, giving **−620 mV, BLOCKING** without independent protection. In an ideal undamped maintained-source LC example starting at5.158632 V, first voltage crest `2Vin−V0` is CALCULATED **7.081368 V** even with zero initial excess current. This is a counterexample model, not a predicted prototype peak. Merely putting the intermediate below5.5 V does not eliminate resonant overshoot either.
+
+DATASHEET [LM61460 Rev D](https://www.ti.com/lit/ds/symlink/lm61460.pdf) has a recommended output relation≤0.95VIN. Using ASSUMED±1% intermediate tolerance and the inherited final static upper5.158632 V requires CALCULATED intermediate nominal≥**5.484989 V**; guaranteeing intermediate high<5.5 requires nominal<**5.445545 V**. The **−39.445 mV nominal window is BLOCKING** for this implementation before dynamics. A typical dropout number cannot resolve the5 A worst case. Different converter/dropout data would need a new full normal/fault tolerance proof.
+
+CALCULATED local60.996 µF upper screen at6.12 V stores **1.142284 mJ**, versus17.566848 mJ at24 V (about15.38× less). However ASSUMED first-stage output store264 µF plus that local input store gives total324.996 µF /**6.086265 mJ**; all intermediate capacitance must count. Also include the first-stage inductor and charge delivered until it is physically isolated. For positive final current, `Ipk<=sqrt[2(E_intermediate+E_first_L+Vmid Qcontinued+E_final_L0)/Ldiff,min]` is available only after every term and the nonlinear inductance floor are bounded. The existing final choke's high-current floor is still OPEN.
+
+Both stages can use a full24 V-rated converter family such as LM61460 as research candidates. Selecting a final-stage IC rated only17 V creates an upstream-first-stage-short overrating problem; a separate intermediate clamp/isolator or full source-rated final stage is needed. Do not assume the healthy first-stage current limit is a maximum pulse, nor its6 A output headline an energy bound. A first-stage-short fault requires its own independent test/containment argument.
+
+### Efficiency, thermal cost and normal behavior
+
+ASSUMED ηfirst92%, ηfinal95%, at inherited25.491803 W raw output: CALCULATED ηcombined**87.4%**, first-stage loss**2.333346 W**, final-stage loss**1.341674 W**, total**3.675020 W**. Compare ASSUMED single-stage93.5%: loss1.772157 W; the example adds**1.902862 W** before auxiliaries/protection/harness. These efficiencies are illustrative targets, not datasheet minima or measured V1A values. They cannot be read directly from curves with different voltages/L/C/bias. Total module efficiency and ambient/enclosure thermal limits are OPEN; stage losses go to their own IC/inductor/copper, not all to one IC thermal resistance.
+
+The example draws CALCULATED3.240758 A at9 V before auxiliaries/inrush. Check startup against the eFuse minimum limit, stage sequencing and intermediate charging; two soft-start loops can interact. Final normal voltage/trip/harness windows stay at inherited conditional values if output setting/path are unchanged. Cascade conversion does not recover the11.433 mV harness margin or qualify the20 µs load-release assumption. Avoid output setpoint/remote-sense changes as a hidden way to compensate losses.
+
+### Timing, supplies, rated destination and blockers
+
+Complete fault→final detector/clamp/series isolation minimum/maximum remains **OPEN/OPEN**; intermediate lowering may lengthen voltage-rise time but does not remove any unbounded delay. First-stage current-limit/OVP/physical-off chain is separately **OPEN/OPEN**. The final clamp/dump stage must still be selected and sized from its residual intermediate energy/current bound, as in D/E. Rated destinations: source-isolation pass FET, both stage magnetics/capacitors under their ratings, and a qualified final absorber/dump MOSFET. Without a timed source stop the healthy first stage can supply continuing energy indefinitely; no finite absorber rating follows from the local store alone.
+
+Keep protection auxiliaries upstream on the original input domain. A6 V intermediate cannot supply the existing7.623 V driver LDO in regulation. Use qualified boost/driver power and direct rail supervision/hold-up if an alternate supply is proposed. Startup/reset, partially powered sensing, independent fault latch and eFuse shutdown remain necessary.
+
+Would reduce B01 excitation only after intermediate voltage/store/current are qualified; leaves saturation, B02/B03/M01/M03/M04/M05/M06/m03 for the retained protection. Does not remove the resistor-terminal conflict. ASSUMED incremental15–25 conversion placements and **US$8–20**, excluding the required independent protection and common fixes; adds another hot IC/inductor and PCB area. Exact parts/cost OPEN.
+
+Bench: each stage's high-side-short separately with dummy loads; intermediate overshoot/C/impedance bounds; coupled-loop stability and9 V startup/brownout; final Pi fault voltage and complete action delays; both stages'5 A efficiency/thermal/ripple at9/24 V; load release, ARM/prebias/inrush and recovery. No efficiency or transient behavior is validated here.
+
 ## Checkpoint status
 
-A/B complete; C/D/E and final comparison/recommendation pending. No schematic change is authorized.
+A/B/C complete; D/E and final comparison/recommendation pending. No schematic change is authorized.
