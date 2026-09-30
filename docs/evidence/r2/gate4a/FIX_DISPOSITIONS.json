@@ -1,0 +1,14 @@
+{
+  "basis": "931e36907c00683a409cd33cc6bba2f95d843b29",
+  "review_file": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md",
+  "review_items": [
+    {
+      "id": "R4A-02",
+      "status": "CORRECTED",
+      "resolution": "R103 = TNPW0805348KBEEA (348 kΩ) VIN_FUSED→U101 OVP with R104 15.8 kΩ to GND; R340 = TNPW08051M00BEEA (1 MΩ) AUX_12V→U317 FB; R367 initially same 0805 1 MΩ SENSE→GND, revised under R4A-06. 0.1%, 25 ppm/K; replace 0603 lands at capture.",
+      "equations": "Rmin=Rnom(1−0.001−25 ppm/K×60 K)=0.9975Rnom. At 58.1 V across R103, P≤9.724 mW. R340 at 12.311325 V: P≤0.151949 mW. R367 at 2.5 V: 6.266 µW. 0805 range ≤1 MΩ, working voltage 150 V, general-operation P70=140 mW; conditional 85°C linear derating toward125°C gives101.818 mW. Values unchanged, initial-only OVP26.973873–28.289211 V / aux11.621343–12.311325 V screens retained; pads/parasitic transfer is not assumed unchanged.",
+      "evidence": "[Vishay TNPW document28758,10-Apr-2026](https://www.vishay.com/docs/28758/tnpw_e3.pdf), resistance, ordering and derating tables; [historical package](history/931e369/README.md).",
+      "bench": "T07 OVP/hot divider; T06 detector settling; T07 converter loop before power qualification. These test actual board parasitics, not resistor existence."
+    }
+  ]
+}

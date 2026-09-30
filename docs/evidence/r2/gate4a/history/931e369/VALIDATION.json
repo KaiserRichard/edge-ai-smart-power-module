@@ -1,0 +1,30 @@
+{
+  "classification": "Analysis/artifact verification only, not electrical validation",
+  "date": "2026-09-30",
+  "unit_test_command": "python3 -B -m unittest discover -s docs/evidence/r2/gate4a -p test_gate4a_calculations.py",
+  "unit_tests_pass": 6,
+  "checks": [
+    "Ideal coupled-capacitor/freewheel energy conservation to1e-12J",
+    "Independent numerical KCL/inductor-equation derivatives",
+    "Pinned exported netlist raw/protected energy separation",
+    "Unknown electrical limits remain OPEN/null",
+    "Candidate protected bank cannot inherit C/ESR contract",
+    "Manifest/CSV consistency and deterministic JSON regeneration"
+  ],
+  "plot_visual_review": "Two-axis ideal-model plot visually inspected; legible labels and units, explicitly not measured hardware",
+  "native_CAD_access": false,
+  "schematic_changes": false,
+  "PCB_changes": false,
+  "ERC_DRC_run": false,
+  "physical_tests_run": false,
+  "actual_electrical_safety_verdict": "BLOCKED",
+  "artifact_sha256": {
+    "CALCULATIONS.json": "f5237f2aa0cfa5b23dabda39b870bf870ca844a802424f8e6e0ad15cf754b38c",
+    "CALCULATIONS.md": "b11407ea3089ead02da58f70db7a68585992471e1624b8190c83db54f2bcc109",
+    "calculate_gate4a.py": "3e256d3189bd5654845b17daeda1a202e7232e2afd57b6a8eda2393b79d1e44d",
+    "test_gate4a_calculations.py": "803d741145bc8dfe0e33ef1f0a5e7055cea976f2decf610b12178f15f5ce28ec",
+    "RAW_IDEAL_TRANSFER.csv": "148af937b88845fe7657812f77161615636dc6728327e49300feede0d0410b7b",
+    "RAW_IDEAL_TRANSFER.svg": "36e29fcd941dec542b0327769abdb216ec4ca1928e6adac1e840609d04c5a654",
+    "RAW_NODE_ENERGY.md": "c79f463c0f319de247f84de1deb0dd107ce3fd4405df08a0eaecca419c830030"
+  }
+}

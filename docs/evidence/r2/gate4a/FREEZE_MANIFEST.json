@@ -1,5 +1,5 @@
 {
-  "classification": "PROPOSED capture deltas; not implemented",
+  "classification": "Gate4a-FIX analysis decisions; bench qualification is not PASS; J502 PENDING",
   "verdict": "BLOCKED",
   "baseline_inventory": "PR15_INVENTORY.csv",
   "changes": [
@@ -87,11 +87,11 @@
         "R105"
       ],
       "old": "R101: OPEN / 332k; R102: OPEN / 54.9k; R103: OPEN / 348k; R104: OPEN / 15.8k; R105: OPEN / 4.02k",
-      "new_mpn": "TNPW0603332KBEEA; TNPW060354K9BEEA; TNPW0603348KBEEA; TNPW060315K8BEEA; TNPW06034K02BEEA",
+      "new_mpn": "TNPW0603332KBEEA; TNPW060354K9BEEA; TNPW0805348KBEEA; TNPW060315K8BEEA; TNPW06034K02BEEA",
       "new_value_or_connection": "332k/54.9k/348k/15.8k/4.02k, 0.1%, 25 ppm/K candidates; preserve thresholds",
       "reason": "Real tolerance/TCR order candidates replace generic resistors",
       "governing_equation": "OVPmin-26=0.973872559 V; ILIM=18/Rk; include independent R(T)",
-      "status": "CONDITIONAL; full hot corners OPEN",
+      "status": "R4A-02 CORRECTED; R103 0805 land; T07 hot OVP BENCH REQUIRED",
       "source": "PASSIVES"
     },
     {
@@ -242,11 +242,11 @@
         "R367"
       ],
       "old": "D301: BAS116,215 / BAS116,215; U321: NEW; D321: NEW; R361: NEW",
-      "new_mpn": "BAS116,215 retained candidate; ADG4612BRUZ; LM4040A25IDBZR; TNPW0603100KBEEA; TNPW06031M00BEEA",
+      "new_mpn": "BAS116,215; ADG4612BRUZ; LM4040A25IDBZR; TNPW0603100KBEEA; TNPW08051M00BEEA",
       "new_value_or_connection": "PROPOSAL: DIV->BAS116->LM4040 shunt to GND,100k bias from DRV_HOLD; ADG4612 isolates comparator;1k series retained,1M sense-to-GND; remove D301->REF5025 sink path",
       "reason": "Existing reference must not absorb fault current while off",
       "governing_equation": "Vtrip_nom=2.5*(1+11.3k/(10k||1M))=5.35325V; off leakage/pin voltage and negative clamp OPEN",
-      "status": "BLOCKED: exact bias/clamp/pulldown/negative-fault network must be solved; MPNs are candidates only",
+      "status": "R4A-02 resistor identity CORRECTED; R4A-06 circuit remains BLOCKED",
       "source": "M03"
     },
     {
@@ -441,7 +441,7 @@
         "C357"
       ],
       "old": "U317: NEW; L301: NEW; R340: NEW; R341: NEW; R342: NEW; R343: NEW; R344: NEW; C351: NEW; C352: NEW; C353: NEW; C354: NEW; C355: NEW; C356: NEW",
-      "new_mpn": "LTC3115IFE-1#PBF; Wurth7447789004; TNPW06031M00BEEA; TNPW060390K9BEEA; TNPW060323K7BEEA; TNPW060315K0BEEA x2; C3216X7R1H475K160AB; GRM32ER71H106KA12L; GRM21BR71E475KA73L; GRM188R71H104KA93D x2; C1608C0G1H102J080AA; GRM1885C1H330JA01D",
+      "new_mpn": "LTC3115IFE-1#PBF; Wurth7447789004; TNPW08051M00BEEA; TNPW060390K9BEEA; TNPW060323K7BEEA; TNPW060315K0BEEA x2; C3216X7R1H475K160AB; GRM32ER71H106KA12L; GRM21BR71E475KA73L; GRM188R71H104KA93D x2; C1608C0G1H102J080AA; GRM1885C1H330JA01D",
       "new_value_or_connection": "adapt manufacturer p38 6-40V->12V example:4.7uH,1M/90.9k FB,23.7k RT,15k/15k compensation,1nF CFB; 33pF feedforward C357; RUN enable must work below8V",
       "reason": "Buck-boost avoids failed9V cascaded LDO dropout; upstream eFuse independence",
       "governing_equation": "V12=VFB*(1+Rt/Rb)+IFB*Rt; input9V minus diode/drop must remain>=6V",
