@@ -25,6 +25,17 @@ At a nominal 5.10 V starting point and a 4.75 V minimum, the entire allowance is
 
 ## 2. Picture walkthrough: power pins are not signal pins
 
+Start with **PDF page 6, LOAD OUTPUT / J502 pins 1 (+) and 2 (RETURN)**. The V1A drawing ends at this two-terminal module connector; it does **not** contain a Raspberry Pi 40-pin header or a released external harness pinout. Use the [schematic reading guide](SCHEMATIC_READING_GUIDE.md) to keep PDF pages, connector pin numbers and Pi physical pin numbers separate.
+
+![[v2-review-p06.png|1000]]
+*Unchanged PDF page 6. J501 is the input, J502 the load-power output, and J503 the host-reference/I2C interface.*
+
+![[v2-05-circuit-connectors.png|950]]
+*Exact connector subset. J502 pin 1 is load power; **J503 pin 1 is GND**. Reusing a pin number on different connectors does not join those pins or give them the same function.*
+
+![[f5-04-output-connectors-circuit.png|900]]
+*Circuit companion F5.4 in [BATCH_F](../illustrations/BATCH_F.md). Run `python3 -B docs/lessons/figures/src/circuit_05.py` for the exact excerpt.*
+
 ![[f5-02-gpio-pin-map-power.png|650]]
 *BATCH_F F5.2. Physical numbering, viewed in the illustrated orientation: pin 1 at top left. The picture is a learning map, not a released mating-face assembly drawing.*
 
@@ -37,12 +48,26 @@ At a nominal 5.10 V starting point and a 4.75 V minimum, the entire allowance is
 
 These currents are calculations, not contact ratings. A wire-entry view can mirror the mating-face view; verify indexing, orientation and continuity with power removed. Both positive connections and all eight grounds are the intended arrangement.
 
+Read the intended external mapping as **J502 pin 1 → Pi physical pins 2 and 4**, and **J502 pin 2 → the eight physical GND pins above**. That mapping is a reviewed requirement/proposal outside the PDF, not a newly drawn connector in it. **Pi physical pin 1 is a 3.3 V pin, not J502's positive pin.** The early fixture uses a representative dummy header in place of the Pi.
+
 ## 3. Trace both halves of the loop
 
 ![[a5-pi-power-harness-boundary.png|850]]
 *Existing A5 shows functional grouping. Its generic connector is not the selected two-pole J502 geometry; its “not final” wording must not hide the known Harwin resistance failure.*
 
 Follow positive current from local buck output through the series disconnect, shunt, PCB copper, J502, harness and Pi positive contacts. Then follow the same total current back through Pi ground contacts, return wires, connector and module ground.
+
+Use these stops in the PDF while tracing that sentence:
+
+| Stop | Page, block and pins | How to read it |
+|---|---|---|
+| Local regulation | Page 3, OUTPUT / FEEDBACK: **L201 pin 2; R202 pin 1** | Both join raw `VOUT_5V1`. The buck senses this node, before downstream drops. |
+| Series pair | Page 4, OPPOSED SERIES FETS: **Q301 drains 5–8 → sources 1–3 → Q302 sources 1–3 → drains 5–8** | Shared sources are `PROT_MID`; the outer output is `VOUT_PROTECTED`. No bypass wire joins the outer rails. |
+| Current shunt | Page 5, KELVIN SHUNT: **R401 force pin 1→4** | This is a further series drop; output becomes `LOAD_5V1`. Sense pins 2/3 carry no load current. |
+| Module exit | Page 6, LOAD OUTPUT: **J502 pin 1→external harness** | The harness and Pi contacts are outside the captured sheet. A net label cannot specify their resistance. |
+| Return | Page 6, **J502 pin 2 GND**, back to page 3 **U201 PGND pins 9/11** | The common net still needs actual copper, connector and wire resistance in the loop budget. |
+
+Page 4 shows the earlier preliminary pair/crowbar. The **revised architecture D series/crowbar/control arrangement is frozen on paper, not yet in the schematic**; its later resistor/driver assumptions cannot be inferred from the old drawing. The raw dump is also absent from this snapshot.
 
 $$
 V_{Pi}=V_{buck}-I(R_{send}+R_{return})-V_{dynamic\ trough}
@@ -53,6 +78,8 @@ The Pi cares about its own positive pin **relative to its own loaded ground**. M
 The INA228 bus-voltage tap is before this external harness. Its reading cannot substitute for the far-end differential measurement. Lesson 07 shows where to put the probes on a dummy-header fixture.
 
 ## 4. Worked example: build the drop budget
+
+**Endpoints for this calculation:** begin at **page 3 L201 pin 2** against local GND; pass **page 6 J502 pins 1/2**; end across the **external dummy/Pi power and return contacts**. The far-end voltage is not a node drawn in this PDF. Every resistance allocation below refers to that complete trip, including the return.
 
 ![[v2-05-full-drop-budget.png|900]]
 
@@ -78,6 +105,8 @@ These are conditional arithmetic results. Actual hot resistance and dynamic marg
 For comparison, a simple **ASSUMED 50 mΩ loop** at exactly 5.10 V gives $5.10-5\times0.050=4.85\ \mathrm{V}$ and $25\times0.050=1.25\ \mathrm{W}$ loss before any extra transient allowance. Starting from the nominal voltage hides the lower regulation corner.
 
 ## 5. Contacts: resistance decides how current shares
+
+**Page 6 J502 pin 1 is one electrical net before the external positive fan-out; pin 2 is the collected return.** The two positive branches and eight ground branches appear only in the proposed harness map. The PDF's single wire does not prove equal branch resistance or sharing.
 
 ![[f5-03-current-sharing-lanes.png|850]]
 *BATCH_F F5.3. The inset shows a positive contact opening. “Doubles” assumes the two original branches shared equally.*
@@ -106,6 +135,8 @@ At **20 mΩ each**, this is 12.5 mΩ, or **62.5 mV at 5 A**. At **30 mΩ each**,
 
 The inherited path uses **American Wire Gauge (AWG)16 trunks with AWG22 fan-outs** and retains **Phoenix 1776508 header + 1777989 plug** as the J502 proposal. The **≤3.12 mΩ per complete hot pole** allocation remains **(still open)**; footprint geometry and a catalogue current rating cannot establish it.
 
+**Snapshot check — page 6 J502 pins 1/2:** the generic symbol specifies the two nets, not the eventual mating geometry. In the later Gate 4a-FIX record at `2b99ac7`, **J502 is PENDING** its separate handoff. “Retained Phoenix” above names the inherited budget/proposal; it is not a completed current connector freeze.
+
 The separately requested connector report, pinned at **`4ff92f3`**, proposes a new external assembly. It is useful new evidence, not an automatically accepted change to the inherited budget:
 
 | Version | Pi end / fan-outs | Module side | Meaning of its numbers |
@@ -118,7 +149,11 @@ Proposal A's small improvement also relies on a **redefined combined contact-plu
 
 The new full housing also occupies the header. Telemetry contacts would need an integrated reviewed map; an added stacking adapter would add contacts and losses. Keep these as proposals until the connector handoff is reconciled. The old Harwin FAIL remains historical evidence.
 
+For telemetry, find **page 6 HOST I2C / J503 pins 1 GND, 2 VREF, 3 SDA and 4 SCL**. These are separate from J502's power terminals. Page 5 **U403 VCCA pin 1** expects the host reference from J503 pin 2; the lesson does not invent how extra contacts would fit into the proposed full Pi housing.
+
 ## 7. What goes wrong: the module looks good while the endpoint fails
+
+**Compare measurement planes:** page 5 **U401 VBUS pin 8** observes `LOAD_5V1`, which reaches **page 6 TP503 pin 1 / J502 pin 1**. The real far-end measurement crosses the external positive contact **and its own return contact**. Referencing it to **TP504 pin 1 (module GND)** would omit the return-wire voltage difference.
 
 ![[v2-p03-07-with-vs-without.png|850]]
 *Pilot fault-model chart: ideal far end, **no harness model**. It explains why stopping source energy alone is insufficient; it cannot predict the actual Pi-header peak.*

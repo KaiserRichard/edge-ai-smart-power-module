@@ -10,6 +10,8 @@ tags: [v1a, lesson, visual]
 
 Nine lesson topics build one system picture in ten lesson notes (03 has A/B parts). Each begins with an analogy, walks through images, works a numerical example, shows a failure, and ends with a visual summary. Expand the check-yourself answers after trying the questions. The glossary is a companion reference, not a tenth design stage.
 
+Keep [the schematic reading guide](SCHEMATIC_READING_GUIDE.md) open beside the review PDF. The walkthroughs name the **PDF page, printed block, component reference and pin**. PDF page 1 is the hierarchy; Sheet 01 begins on PDF page 2. Exact circuit excerpts let you practise the connections, while their captions identify omissions and later changes that are **frozen on paper, not yet in the schematic**.
+
 **Current controlling state:** normal input **9–26 V**; D101 **SMCJ36CA**; F101 **Schurter 3403.0285.23**; architecture **D fault-test board**; required **isolated 48→24 V module**, exact model open. **Gate 4a-FIX freeze BLOCKED. No Pi before fault tests and all other applicable gates pass. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 | Lesson | Follow this picture | By the end, explain… |
@@ -32,7 +34,7 @@ The Harwin contact criterion failure and newer unqualified TE harness proposal a
 
 - [[FACTCHECK_LOG|Original fact-check log and pinned sources]] — preserved historical audit.
 - [[VISUAL_REBUILD_LOG|Visual rewrite, source pins, checks and handoff]] — current editorial evidence and asset handling.
-- [BATCH_F prompts](../illustrations/BATCH_F.md) — existing concept-image prompts plus the specific pilot-image additions.
-- [Figure source README](figures/src/README.md) — reproduce the charts from Python.
+- [BATCH_F prompts](../illustrations/BATCH_F.md) — existing concept images and exact circuit companion prompts, with save-as filenames.
+- [Figure source README](figures/src/README.md) — reproduce charts and the permitted simple circuit excerpts; identify PDF exports and pending owner-generated pictures.
 
 Read illustrations as teaching views, never as build instructions or component/package approval. Owner images are referenced by filename; newly generated charts use unique `v2-` filenames under `figures/` to avoid confusing them with older vault charts.

@@ -25,14 +25,20 @@ A shunt is a deliberately small resistance. Current makes a small voltage across
 
 ## 2. Picture walkthrough: two power terminals and two sense terminals
 
+Open **PDF page 5, “04 POWER MONITOR”** using the [schematic reading guide](SCHEMATIC_READING_GUIDE.md). Read the top-left KELVIN SHUNT / MEASUREMENT block before the local supply at top right or the I2C interface along the bottom.
+
+![[v2-review-p05.png|1000]]
+*Unchanged PDF page 5. The shunt, its two filtered sense connections and the separate VBUS connection can all be followed on this page.*
+
 ![[f4-01-kelvin-sense-3d.png|900]]
 *BATCH_F F4.1. The package and chip geometry are generic. Use the reviewed footprint mapping below, not the drawing, for actual pad identity.*
 
-Read the picture in three passes:
+Read the picture in four passes:
 
-1. **Thick blue path:** load current enters a force terminal, crosses the resistive element and leaves through the other force terminal.
-2. **Thin teal pair:** the sense terminals read the voltage across the intended element. They do not carry the load current. Small input bias currents still exist; “sense” does not mean a physically impossible zero-current wire.
-3. **Monitor:** the INA228 receives both sense connections. A separate bus-voltage connection reads `LOAD_5V1` relative to module ground; it is not drawn as a third shunt terminal.
+1. **Power — page 5, KELVIN SHUNT / MEASUREMENT, R401 force pins 1→4.** Read the line through the resistor from `VOUT_PROTECTED` to `LOAD_5V1`. This carries the load current; it continues to **page 6 J502 pin 1**. R401's four numbers are the project's symbol/footprint convention, not pin numbers printed by Vishay on the resistor.
+2. **Sense — page 5, R401 sense pins 2/3 → R402/R403 pin 1.** `SHUNT_KPLUS` starts on the source side; `SHUNT_KMINUS` starts on the load side. The thin sense pair reads across the intended resistor element. It does not carry load current, although small input bias currents exist.
+3. **Filter — page 5, R402/R403 pin 2 → U401 IN+ pin 10 / IN− pin 9.** The two 10 Ω resistors lead to the measurement inputs. **C401 pin 1 joins IN+ and pin 2 joins IN−**: it is a differential capacitor, not a capacitor to ground. Track junction dots rather than treating every crossing wire as connected.
+4. **Bus voltage — page 5, U401 VBUS pin 8 and GND pin 7.** Follow the separate VBUS wire back to `LOAD_5V1` at R401 force pin 4. It measures load-side voltage relative to module ground; it is neither a third shunt-sense input nor a far-end Pi measurement.
 
 The selected R401 is **WSL27262L000FEA**, nominal **2 mΩ**, with four-terminal **Kelvin sensing**.
 
@@ -45,9 +51,17 @@ The selected R401 is **WSL27262L000FEA**, nominal **2 mΩ**, with four-terminal 
 
 Separate sense taps exclude the intended high-current connection drops. They must begin at the dedicated sense terminals, run together and avoid switching noise. A copper pour around the resistor must not create a second load-current path that bypasses it.
 
+![[v2-04-circuit-sense-filter.png|950]]
+*Exact filter and VBUS excerpt from page 5. The high-current force path is omitted here so the three measurement connections remain easy to distinguish.*
+
+![[f4-04-kelvin-filter-circuit.png|900]]
+*Circuit companion F4.4 in [BATCH_F](../illustrations/BATCH_F.md). Run `python3 -B docs/lessons/figures/src/circuit_04.py` for the exact excerpt.*
+
 ## 3. Worked example: 5 A becomes only 10 mV
 
 ![[v2-04-shunt-signal-loss.png|900]]
+
+**Read the example at page 5 R401:** 5 A flows from force pin 1 to force pin 4; the nominal 10 mV is sensed from **pin 2 minus pin 3**, reaching **U401 pins 10 minus 9** after the filter. The resistor dissipates the calculated power; the sense wires do not carry that 5 A.
 
 Use the nominal resistor value, not an assumed perfect installed calibration:
 
@@ -70,6 +84,8 @@ $$
 That is **50% high**, even if the converter inside the INA228 measured voltage perfectly. Better digital resolution cannot correct the wrong physical boundary.
 
 ## 4. Range and accuracy answer different questions
+
+**Schematic anchor — page 5 U401 IN+ pin 10 / IN− pin 9.** The range below applies to the **difference** between these inputs. At normal operation both sit near 5 V relative to ground, while their difference is only millivolts. Configuration arrives through **SDA pin 4 / SCL pin 5**; `ADCRANGE` is a register setting, not another physical pin.
 
 | Question | Number or evidence | Meaning |
 |---|---|---|
@@ -96,6 +112,14 @@ For perspective, an **assumed 40°C shunt rise** with a 25 ppm/°C coefficient m
 
 **Inter-Integrated Circuit (I2C)** uses serial data (**SDA**) and clock (**SCL**). The captured TPS70933 creates the monitor's local 3.3 V supply from `VOUT_PROTECTED`. The TCA9517 buffer joins the local and host bus segments. Each has pull-ups to its own supply, with common ground.
 
+Read this part of **PDF page 5** in three short steps:
+
+1. **LOCAL TELEMETRY SUPPLY, U402 IN pin 1 → OUT pin 5; GND pin 2.** IN branches from `VOUT_PROTECTED` **before R401**. OUT is `3V3_LOCAL`, which reaches **U401 VS pin 6**. The host does not supply that rail through J503.
+2. **I2C DOMAIN SEPARATION, U403 local B side.** **VCCB pin 8 and EN pin 5** use `3V3_LOCAL`; **SDAB pin 6 / SCLB pin 7** reach U401 SDA 4 / SCL 5. R404/R405 are the 10 kΩ local pull-ups. The B-side supply and enable are not host pins.
+3. **U403 host A side, VCCA pin 1, SDAA pin 3 / SCLA pin 2; GND pin 4.** Follow `3V3_HOST`, `SDA_HOST` and `SCL_HOST` to **page 6 HOST I2C / J503 pins 2, 3 and 4**, with **pin 1 GND**. R406/R407 pull up to the host reference. The two 3.3 V labels are different nets; the GND net is shared.
+
+**U401 ALERT pin 3** stays local at **TP401 pin 1**, with R408 as its local pull-up. There is no direct ALERT wire to J503. Do not read a local test point as an implemented host interrupt.
+
 The buffer does not power the host. Existing host pull-ups must be counted in the bus design; adding another set blindly changes the loading. Powered-off behavior and signal timing remain **(still open)**. Supply order matters: the host can remain powered when V1A's monitor rail disappears.
 
 ```mermaid
@@ -108,6 +132,8 @@ flowchart LR
 This flow is telemetry. Independent hardware protection in Lesson 03 cannot wait for the host to poll, interpret and react to a microsecond fault.
 
 ## 6. What goes wrong: a convincing number with missing context
+
+**Locate the lost supply on page 5:** U402 OUT pin 5 powers **U401 VS pin 6**, while **U401 VBUS pin 8** is a separate analog input. A voltage remaining on VBUS does not mean the monitor's conversion, registers or I2C interface remain powered. The plotted outage is an imposed teaching case; the schematic does not promise that this exact supply sequence occurs.
 
 ![[v2-04-energy-reset-gap.png|850]]
 
@@ -141,7 +167,8 @@ The 2 mΩ shunt gives a small delivery-path drop and a measurable current signal
 
 ## 9. One-page visual summary
 
-![[f4-01-kelvin-sense-3d.png|650]]
+![[v2-04-circuit-sense-filter.png|750]]
+*Page 5: R401 sense 2/3 → U401 IN+ 10 / IN− 9; force-side LOAD_5V1 → VBUS 8. Check supply at VS 6 before trusting the data.*
 
 | Read the measurement as… | Do not read it as… |
 |---|---|

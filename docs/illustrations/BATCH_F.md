@@ -31,33 +31,45 @@ Reply only with the image.
 |---|---|---|---|
 | F0.1 | 00 System overview | `f0-01-power-journey-robot.png` | Battery-to-Pi journey inside the robot |
 | F0.2 | 00 | `f0-02-v1a-board-exploded.png` | V1A as five functional zones |
-| F0.4 | 00 | `f0-04-circuit-boundary.png` | Actual shunt, local-supply branch and output pins |
 | F0.3 | 00 | `f0-03-five-jobs-analogy.png` | Distribute / convert / protect / measure analogy |
+| F0.4 | 00 | `f0-04-circuit-boundary.png` | Actual shunt, local-supply branch and output pins |
 | F1.1 | 01 Input protection | `f1-01-input-guards-analogy.png` | Four guards at a gate |
 | F1.2 | 01 | `f1-02-tvs-vs-fuse-timescale.png` | Fast spike vs slow overload |
 | F1.3 | 01 | `f1-03-efuse-three-jobs.png` | eFuse: UVLO, OVP, current limit |
+| F1.4 | 01 | `f1-04-input-sense-circuit.png` | Actual fused-input dividers and U101 sense pins |
 | F2.1 | 02 Buck converter | `f2-01-buck-two-states-3d.png` | Two switch states as water paths |
 | F2.2 | 02 | `f2-02-inductor-flywheel.png` | Inductor as a flywheel |
 | F2.3 | 02 | `f2-03-hot-loop-3d.png` | Hot loop area on a board |
+| F2.4 | 02 | `f2-04-feedback-circuit.png` | Actual local raw-output feedback divider |
 | F3.1 | 03 Output protection | `f3-01-analogy-stuck-tap.png` | Stuck-open tap and four valves |
 | F3.2 | 03 | `f3-02-energy-springs.png` | Energy stores as compressed springs |
 | F3.3 | 03 | `f3-03-two-sides-two-drains.png` | Switch splits two sides, each with its own drain |
 | F3.4 | 03 | `f3-04-fault-bench-no-pi.png` | Fault-test bench with dummy load, Pi locked away |
 | F3.5 | 03 | `f3-05-schematic-walk-circuit.png` | Simplified Sheet 03 circuit with the fault path and the four actions |
+| F3.6 | 03 | `p03-02-buck-normal-vs-shorted.png` | Healthy switching versus a permanent high-side short |
+| F3.7 | 03 | `p03-04-back-to-back-mosfets.png` | Opposed body diodes in the series pair |
+| F3.8 | 03 | `p03-05-detector-chain.png` | Separate detector inputs and parallel fault actions |
+| F3.9 | 03 | `p03-11-d-vs-e.png` | Module-side versus Pi-end protection |
+| F3.10 | 03 | `p03-01-where-sheet03-sits.png` | Raw, protected and downstream measurement boundaries |
 | F4.1 | 04 Monitoring | `f4-01-kelvin-sense-3d.png` | Four-terminal shunt close-up |
 | F4.2 | 04 | `f4-02-measurement-boundary.png` | What the INA228 does and does not see |
 | F4.3 | 04 | `f4-03-i2c-two-islands.png` | TCA9517 as a bridge between two bus islands |
+| F4.4 | 04 | `f4-04-kelvin-filter-circuit.png` | Actual differential input filter and separate VBUS tap |
 | F5.1 | 05 Pi GPIO power | `f5-01-voltage-staircase.png` | Voltage lost step by step along the path |
 | F5.2 | 05 | `f5-02-gpio-pin-map-power.png` | Which header pins carry power and ground |
 | F5.3 | 05 | `f5-03-current-sharing-lanes.png` | Current sharing across contacts |
+| F5.4 | 05 | `f5-04-output-connectors-circuit.png` | Actual J502 power and J503 host-interface pin connections |
 | F6.1 | 06 PCB concepts | `f6-01-loop-area-compare.png` | Small vs large current loop |
 | F6.2 | 06 | `f6-02-heat-flow-cutaway.png` | Heat path from part to copper |
 | F6.3 | 06 | `f6-03-kelvin-routing-rule.png` | Right vs wrong sense routing |
+| F6.4 | 06 | `f6-04-bypass-pins-circuit.png` | Actual bypass capacitors at both U201 VIN/PGND pairs |
 | F7.1 | 07 Bench bring-up | `f7-01-bench-station-overview.png` | Complete bench station |
 | F7.2 | 07 | `f7-02-bring-up-staircase.png` | Bring-up as a staircase with gates |
 | F7.3 | 07 | `f7-03-probe-placement.png` | Where probes go |
+| F7.4 | 07 | `f7-04-test-nets-circuit.png` | Actual TP501–TP504 voltage-test connections |
 | F8.1 | 08 V1A in the robot | `f8-01-robot-cutaway-power.png` | Wheel-biped robot power cutaway |
 | F8.2 | 08 | `f8-02-isolated-vs-nonisolated.png` | Why the upstream module must be isolated |
+| F8.3 | 08 | `f8-03-input-boundary-circuit.png` | Actual input connector, fuse and fused-node capacitor |
 | F9.1 | Index / glossary | `f9-01-course-map.png` | Course map, one tile per lesson |
 
 ---
@@ -430,7 +442,7 @@ Reject if: a station is missing or misspelled.
 
 The following five targets already exist in the owner's read-only image folder. They replace the pilot's former code-drawn concept illustrations. Existing F3.1–F3.4 explain the analogy and bench; they do not cover these specific teaching views. Use these prompts when correcting or regenerating the retained images. Charts remain Python-generated under `docs/lessons/figures/`.
 
-### F3.5 — Where Sheet 03 sits
+### F3.10 — Where Sheet 03 sits
 
 Target filename: `p03-01-where-sheet03-sits.png`
 
@@ -508,3 +520,87 @@ Make a clean, readable CIRCUIT picture using the Batch F colours. Reference: V1A
 MUST NOT show: the local supply after R401; J502 as a 40-pin Pi header; sense pins carrying load current; a new circuit bridging Sheet 03; physical validation.
 
 Reject if: LOAD_5V1 and VOUT_PROTECTED are shorted around R401, or J502 return is absent.
+
+### F1.4 — The two input-voltage dividers
+
+Target filename: `f1-04-input-sense-circuit.png`
+
+```text
+Create a textbook CIRCUIT picture from V1A_REVIEW_READABLE.pdf page 2, UVLO / OVP DIVIDERS, and v2-01-circuit-dividers.png. Use conventional resistor and ground symbols, purple input and teal sense wires. One top rail VIN_FUSED feeds two separate vertical dividers. Left: R101 332 kΩ from pin 1 at VIN_FUSED to pin 2 at INPUT_UVLO; R102 54.9 kΩ from pin 1 at INPUT_UVLO to pin 2 at GND. Bring INPUT_UVLO to a terminal labelled U101 pin 6 UVLO. Right: R103 348 kΩ from pin 1 at VIN_FUSED to pin 2 at INPUT_OVP; R104 15.8 kΩ from pin 1 at INPUT_OVP to pin 2 at GND. Bring INPUT_OVP to U101 pin 7 OVP. Label the common top rail "Sensing the fused input" and the footer "Captured subset · PDF page 2 · not for fabrication". Keep the power-switch circuitry out of this small excerpt; label "Power path omitted". Exact connectivity matters more than decoration.
+```
+
+MUST NOT show: joined UVLO/OVP midpoints; load current flowing into a sensing pin; dividers connected to the 5 V output; a fitted new fuse or TVS; validated threshold limits.
+
+Reject if: either lower resistor is absent, or either IC pin number is swapped.
+
+### F2.4 — Local feedback has a precise measurement point
+
+Target filename: `f2-04-feedback-circuit.png`
+
+```text
+Make a clear textbook CIRCUIT picture using V1A_REVIEW_READABLE.pdf page 3, OUTPUT / FEEDBACK, and v2-02-circuit-feedback.png. Draw only this DC resistor branch: orange VOUT_5V1, also labelled L201 pin 2, enters R202 pin 1. R202 is 100 kΩ. Its pin 2 joins R203 pin 1 and the teal net BUCK_FB; route that net to U201 pin 4 FB. R203 is 24.4 kΩ, with pin 2 at GND. Mark "GND shared with U201 AGND pin 3". Put a small note by the top rail "Before output protection and harness". State "DC branch only: C207/R205 feedforward and power stage omitted". Use standard resistor symbols with generous label spacing and no invented IC pinout. Footer "Captured subset · PDF page 3 · not for fabrication".
+```
+
+MUST NOT show: feedback connected after Sheet 03 or at the Pi; SW shorted to the feedback midpoint; a new divider value; an added external load on VCC; qualified output regulation.
+
+Reject if: the midpoint is not connected to FB pin 4, or the top node is labelled as the protected output.
+
+### F4.4 — Kelvin inputs and the separate voltage tap
+
+Target filename: `f4-04-kelvin-filter-circuit.png`
+
+```text
+Draw a precise CIRCUIT teaching excerpt from V1A_REVIEW_READABLE.pdf page 5 and v2-04-circuit-sense-filter.png. Top teal line: R401 sense pin 2, SHUNT_KPLUS, enters R402 pin 1; R402 10 Ω pin 2 reaches U401 IN+ pin 10. Lower teal line: R401 sense pin 3, SHUNT_KMINUS, enters R403 pin 1; R403 10 Ω pin 2 reaches U401 IN− pin 9. A vertical capacitor C401 100 nF connects pin 1 to the filtered IN+ line and pin 2 to the filtered IN− line. Separately below, draw a blue wire from LOAD_5V1, labelled R401 force pin 4, to U401 VBUS pin 8. Leave space between all three input labels. State "R401 force element and U401 supply/digital pins omitted". Footer "Captured subset · PDF page 5 · not for fabrication". Use standard resistor and capacitor symbols, not component photos.
+```
+
+MUST NOT show: C401 grounded; VBUS joined to filtered IN−; sense wires carrying load current; a short around R401; invented INA228 pins or a claimed accuracy.
+
+Reject if: either sense polarity is swapped or the bus-voltage tap is on VOUT_PROTECTED.
+
+### F5.4 — Two connector numbers, two different jobs
+
+Target filename: `f5-04-output-connectors-circuit.png`
+
+```text
+Create a clear CIRCUIT excerpt from V1A_REVIEW_READABLE.pdf page 6 and v2-05-circuit-connectors.png. Use two logical connector symbols, not mating-face drawings. Left: J502 has pin 1 labelled + on the blue LOAD_5V1 net and pin 2 labelled RETURN on GND. Right: J503 has pin 1 GND on GND, pin 2 VREF on 3V3_HOST, pin 3 SDA on SDA_HOST, and pin 4 SCL on SCL_HOST. State "Common GND; separate power and host-reference roles". Under J502 say "External power harness starts here"; under J503 say "Host supplies VREF". Note "These numbers are not Pi physical-header numbers". Omit test points and power flags exactly as the reference excerpt does. Footer "Captured subset · PDF page 6 · not for fabrication". No external computer or proposed connector body geometry.
+```
+
+MUST NOT show: J502 pin 1 as Pi physical pin 1; 5 V on J503 VREF or SDA/SCL; J502 as a 40-pin connector; 3V3_HOST shorted to 3V3_LOCAL; a qualified assembled harness.
+
+Reject if: any of the six stated connector pin-to-net connections differs from the reference.
+
+### F6.4 — Both local bypass pin pairs
+
+Target filename: `f6-04-bypass-pins-circuit.png`
+
+```text
+Create an exact CIRCUIT teaching excerpt from V1A_REVIEW_READABLE.pdf page 3 and v2-06-circuit-bypass.png. Draw two ordinary capacitor symbols as separate readable groups. Left: C203, 100 nF 50 V, pin 1 on VIN_PROTECTED wired to U201 VIN1 pin 8, pin 2 on GND wired to U201 PGND1 pin 9. Right: C204, 100 nF 50 V, pin 1 on VIN_PROTECTED wired to U201 VIN2 pin 12, pin 2 on GND wired to U201 PGND2 pin 11. State "Same supply and ground nets; two local bypass connections" and "AGND pin 3 also joins GND". U201 internal switches and C201/C202 are omitted, not removed. Use purple supply lines and grey return lines. State prominently "Connectivity only — not a PCB layout". Footer "Captured subset · PDF page 3 · not for fabrication".
+```
+
+MUST NOT show: a PCB, chosen loop geometry or trace width; a fabricated extra exposed pad; a capacitor on SW instead of VIN; only one bypass serving as proof for both pin pairs; measured noise reduction.
+
+Reject if: VIN1/PGND1 or VIN2/PGND2 pin identities are swapped, or the drawing implies the two supplies or grounds are separate domains.
+
+### F7.4 — Test-point names identify measurement planes
+
+Target filename: `f7-04-test-nets-circuit.png`
+
+```text
+Draw an exact CIRCUIT excerpt from V1A_REVIEW_READABLE.pdf page 6 and v2-07-circuit-test-nets.png. Four separate horizontal nets, with no electrical connection between rows: VIN_RAW from J501 pin 1 has a branch to TP501 pin 1; VIN_PROTECTED from U101 OUT pins 17/18 on page 2 has a branch to TP502 pin 1; LOAD_5V1 from J502 pin 1 has a branch to TP503 pin 1; GND joining J501 pin 2 and J502 pin 2 has a branch to TP504 pin 1. Use ordinary wires, junction dots and test-point symbols. Label "Circuit between these nets omitted". Add "Voltage access only; no current sensor is implied" and "Far-end dummy header is external". Purple input rows, blue output row, grey ground. Footer "Captured subset · PDF page 6 · not for fabrication". Show no scope screens or assumed traces.
+```
+
+MUST NOT show: joined positive rails; TP502 as a current sensor; TP503 as a far-end measurement; high-current injection through a signal test point; implemented raw dump or autonomous source trigger.
+
+Reject if: a test-point number is attached to the wrong net or the drawing implies the fixture is ready to build.
+
+### F8.3 — The V1A input is the system boundary
+
+Target filename: `f8-03-input-boundary-circuit.png`
+
+```text
+Make a clean CIRCUIT teaching excerpt from V1A_REVIEW_READABLE.pdf pages 6 and 2, and v2-08-circuit-input-boundary.png. Draw J501 pin 1 (+) on VIN_RAW leading through fuse F101 pins 1→2 to VIN_FUSED. Draw C101, 1 µF 100 V, pin 1 on VIN_FUSED and pin 2 on GND. J501 pin 2 RETURN joins that GND. Use a conventional fuse symbol, not a resistor. State "Upstream isolated converter and robot are outside this captured circuit". State "Subset: D101, Q101/Q102, U101 and auxiliary branches omitted" without drawing bypasses. The old PDF marks F101 OPEN; add a separate caption "Owner selection: Schurter 3403.0285.23; qualification open". Keep all other part numbers and ratings absent. Purple positive supply and grey return, ample labels. Footer "Captured subset · PDF pages 2 and 6 · not for fabrication".
+```
+
+MUST NOT show: a direct battery feed; an invented upstream converter circuit or transformer pins; a new ground bond across isolation; C101 on VIN_PROTECTED; a fuse depicted as installed/qualified; omitted protection bypassed.
+
+Reject if: the capacitor is before the fuse, J501 return is absent, or the external robot circuit is presented as captured hardware.

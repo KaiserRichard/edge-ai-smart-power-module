@@ -25,6 +25,13 @@ The important difference is that the buck gives current a closed path while the 
 
 ## 2. First state: the input pushes current upward
 
+Open **PDF page 3, “02 BUCK 5V”** with the [schematic reading guide](SCHEMATIC_READING_GUIDE.md). Its three blocks are INPUT / ENABLE, BUCK CONVERTER and OUTPUT / FEEDBACK. The two switching MOSFETs are **inside U201**, so the external schematic gives them no separate Q-refdes or gate pins.
+
+![[v2-review-p03.png|1000]]
+*Unchanged PDF page 3. It still labels L201 as **6.8 µH**. The later **10 µH** candidate used in the teaching waveforms is selected for qualification and not recaptured in this snapshot.*
+
+**Read the first path:** INPUT / ENABLE **C201–C204 pin 1** join `VIN_PROTECTED`; in BUCK CONVERTER this reaches **U201 VIN1 pin 8 and VIN2 pin 12**. The internal high-side switch connects input toward **SW pin 10** when on. Follow `BUCK_SW` into OUTPUT / FEEDBACK **L201 pin 1→2**, then `VOUT_5V1`. The matching net labels are continuous electrical connections across the separate blocks.
+
 ![[c1-buck-high-side-mosfet-on.png|850]]
 *Existing C1 teaching image. High-side metal-oxide-semiconductor field-effect transistor (MOSFET) on, low-side MOSFET off. Geometry is functional, not a pin-level circuit.*
 
@@ -40,6 +47,8 @@ At an **assumed 24 V input and 5.1 V output**, the on-state inductor voltage is 
 
 ## 3. Second state: current keeps moving toward the load
 
+**Return to page 3, BUCK CONVERTER, U201 PGND1 pin 9 / PGND2 pin 11 and SW pin 10.** During the low-side interval, the internal low-side switch gives positive inductor current a path from ground toward SW. Follow **L201 pin 1→2** in the same direction as before; the current direction has not reversed merely because the voltage across L201 changes sign.
+
 ![[c2-buck-low-side-freewheel-state.png|850]]
 *Existing C2. The +/− marks define the left-to-right voltage reference. In this state the left end is actually at lower potential. Falling current still flows toward the load.*
 
@@ -53,6 +62,8 @@ The switches must not conduct together: that would short the input to ground. Re
 | Low side on | 0 V | −5.1 V | Negative, while current can remain positive |
 
 ## 4. Read the waveforms from top to bottom
+
+**Match traces to page 3:** SW voltage belongs at **U201 pin 10** and inductor current runs through **L201 pins 1/2**. Output-bank current divides among **C209–C214 pins 1/2** and the same-net raw bank **C330–C337 pins 1/2 on page 4**. The plotted capacitor current is the **total** in the ideal model, not a prediction for any individual capacitor; a schematic pin label alone cannot provide that waveform.
 
 ![[v2-02-buck-waveforms.png|900]]
 
@@ -70,6 +81,8 @@ $$
 Here $D$ is duty cycle, the high-side on fraction; $T$ is the full switching period. The basic operating explanation follows the [TI LM61460 datasheet, SNVSBD5D](https://www.ti.com/lit/ds/symlink/lm61460.pdf). This ideal relation does not include losses or controller timing limits.
 
 ## 5. Worked example: rebuild one triangle
+
+**Schematic settings:** page 3 BUCK CONVERTER **U201 RT pin 6 → R201 pin 1 (33.2 kΩ), R201 pin 2 → GND** sets the nominal 400 kHz. Use **L201 pins 1/2** for the voltage reference. The calculation deliberately substitutes the later 10 µH candidate for the PDF's inherited 6.8 µH label.
 
 **ASSUMED:** 24 V in, 5.1 V out, 400 kHz, constant 10 µH, 5 A average current, no losses.
 
@@ -101,6 +114,8 @@ They cancel over the period. Current ranges from approximately **4.498 to 5.502 
 
 ## 6. Why L201 is changing
 
+**Look at page 3, OUTPUT / FEEDBACK, L201 pins 1/2.** The two-terminal symbol says where the inductor connects, not how its inductance changes with current or temperature. The 10 µH replacement is **frozen on paper, not yet in the schematic**; that phrase identifies the recorded candidate, not a passed freeze gate.
+
 ![[v2-02-inductor-ripple.png|850]]
 
 The inherited inductor is **6.8 µH XAL8080-682MED**. The owner-selected qualification candidate is **10 µH alloy Würth 74437636351002**. At the same applied voltage, a larger constant inductance slows the current change; the lower curve shows that simple effect.
@@ -111,6 +126,8 @@ The candidate also changes size, mounting, direct-current winding resistance (**
 
 ## 7. Capacitors and feedback: local helpers with costs
 
+**Page 3, INPUT / ENABLE:** C201/C202 are the larger input bank, and **C203/C204 pins 1/2** are the local bypasses. Follow their common top net to **U201 VIN1 8 / VIN2 12** and the return net to **PGND1 9 / PGND2 11**. The drawing joins the nets logically; only a later layout can make each physical bypass loop short.
+
 ![[e1-capacitor-behavior-and-effective-capacitance.png|850]]
 *Existing E1: conceptual capacitor behavior. A nominal capacitance label is not the effective value under voltage, temperature and tolerance.*
 
@@ -118,12 +135,24 @@ The **input capacitors** provide switching-current pulses close to the chip. The
 
 The **output bank** supplies the load while inductor current catches up. Capacitance controls gradual voltage change; equivalent series resistance (**ESR**) adds an immediate voltage component when capacitor current changes. Effective capacitance, ESR and startup stress must be qualified together.
 
+**Page 3, OUTPUT / FEEDBACK, C209–C214:** each **pin 1** connects to raw `VOUT_5V1`, each **pin 2** to GND. Also find the larger raw bank at **page 4, RAW BULK / FAULT-RISE BUFFER, C330–C337 pins 1/2**. Those capacitors are on the same raw net even though a different sheet draws them; the sheet boundary does not remove their stored energy.
+
 ![[d5-lm61460-feedback-principle.png|800]]
 *Existing D5: feedback is local to the raw output, before the series disconnect. Arrows describe control information, not a power path.*
 
 The captured **100 kΩ / 24.4 kΩ** feedback divider sets about **5.098 V** locally. Feedback adjusts energy delivery when this voltage changes. It does not measure Pi-header ground rise or harness loss. Keeping the sense route quiet matters because a false reading prompts a real control action.
 
+![[v2-02-circuit-feedback.png|900]]
+*Exact DC feedback branch from page 3. R202 pin 1 samples raw output; **R202 pin 2 / R203 pin 1** form `BUCK_FB` and reach **U201 FB pin 4**. R203 pin 2 returns to GND, shared with **U201 AGND pin 3**. The feedforward branch C207/R205 is omitted from this small excerpt, not removed from the design.*
+
+![[f2-04-feedback-circuit.png|850]]
+*Circuit companion F2.4 in [BATCH_F](../illustrations/BATCH_F.md). Reproduce the exact excerpt with `python3 -B docs/lessons/figures/src/circuit_02.py`.*
+
+Two other pin pairs explain useful boundaries. **Page 3 U201 VCC pin 2 → C206 pin 1, C206 pin 2 → GND** is the chip's internal-supply bypass, not an external accessory supply. **C205 pins 1/2** connect **CBOOT pin 14** to **SW pin 10**, so the bootstrap capacitor sees their differential voltage, not simply the input voltage to ground. **EN/SYNC pin 7** follows `BUCK_INPUT_PGOOD` from page 2 **U101 PGOOD pin 16**; an enable permission is separate from the raw-output feedback measurement.
+
 ## 8. What goes wrong: the controller loses its switch
+
+**Find page 3 U201 VIN pins 8/12 and SW pin 10; follow SW through L201 pins 1→2.** The failure joins the internal high-side path permanently. Changing **FB pin 4** or **EN/SYNC pin 7** cannot open shorted silicon. The revised architecture D series/crowbar/control arrangement and raw dump are **frozen on paper, not yet in the schematic**; page 4 shows an earlier preliminary implementation.
 
 ![[p03-02-buck-normal-vs-shorted.png|850]]
 
@@ -163,6 +192,7 @@ LM61460 is the captured synchronous buck choice. The bigger inductor is a qualif
 ## 11. One-page visual summary
 
 ![[v2-02-buck-waveforms.png|700]]
+*Page 3: find SW pin 10 before L201, raw output at L201 pin 2, then FB pin 4 at the divider midpoint. These are three different nodes.*
 
 | Picture to remember | Equation / boundary |
 |---|---|

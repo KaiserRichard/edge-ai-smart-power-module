@@ -18,6 +18,11 @@ Read a term in three steps: **name the object**, **find its boundary**, then **a
 
 **Learning goals:** distinguish similar protection words, translate the units, and avoid turning an assumption into a measured claim.
 
+**Read a real example:** PDF **page 5, KELVIN SHUNT / MEASUREMENT, R401 force pins 1/4, sense pins 2/3 and U401 IN+ pin 10 / IN− pin 9**. `R401` is a **reference designator** (one component's identity); `10` is a **pin number**; `IN+` is the **pin's function**; `SHUNT_KPLUS` is a **net name**. The [schematic reading guide](SCHEMATIC_READING_GUIDE.md) explains how to follow these labels.
+
+![[v2-04-circuit-sense-filter.png|850]]
+*A circuit picture to attach the words to: the thin sense connections are different from the force path. Companion image prompt **F4.4**, `f4-04-kelvin-filter-circuit.png`, and runnable `figures/src/circuit_04.py` are shared with Lesson 04; no new circuit is invented for the glossary.*
+
 ## 2. System and measurement
 
 | Term | Plain meaning in these lessons |
@@ -78,12 +83,14 @@ Read a term in three steps: **name the object**, **find its boundary**, then **a
 
 At nominal 5 A through 2 mΩ:
 
+Find that resistance at **page 5 R401**, with power current through **force pins 1→4** and voltage observed across **sense pins 2/3**. The filter delivers the differential signal to **U401 pins 10/9**; VBUS pin 8 is a separate voltage measurement.
+
 $$
-V=IR=5	imes0.002=0.010\ \mathrm{V}=10\ \mathrm{mV}
+V=IR=5\times0.002=0.010\ \mathrm{V}=10\ \mathrm{mV}
 $$
 
 $$
-P=I^2R=25	imes0.002=0.050\ \mathrm{W}=50\ \mathrm{mW}
+P=I^2R=25\times0.002=0.050\ \mathrm{W}=50\ \mathrm{mW}
 $$
 
 Read the straight line for voltage and the curved line for heating. A factor of two in current makes twice the voltage drop but four times the dissipation. The formulas are **CALCULATIONS**; the nominal resistance is an input; the actual hot temperature and accuracy require **MEASURED** evidence.
