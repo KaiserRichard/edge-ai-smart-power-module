@@ -1,30 +1,208 @@
 {
-  "classification": "Analysis/artifact verification only, not electrical validation",
+  "classification": "Numerical/documentary verification only; no electrical validation",
   "date": "2026-09-30",
+  "resume_base_commit": "2b99ac7bd60d352a4b418cd75e0fc8f66e345b4d",
   "unit_test_command": "python3 -B -m unittest discover -s docs/evidence/r2/gate4a -p test_gate4a_calculations.py",
-  "unit_tests_pass": 6,
+  "unit_tests_pass": 10,
   "checks": [
-    "Ideal coupled-capacitor/freewheel energy conservation to1e-12J",
-    "Independent numerical KCL/inductor-equation derivatives",
-    "Pinned exported netlist raw/protected energy separation",
-    "Unknown electrical limits remain OPEN/null",
-    "Candidate protected bank cannot inherit C/ESR contract",
-    "Manifest/CSV consistency and deterministic JSON regeneration"
+    "Ideal local-store energy conservation and independent KCL/inductor derivatives",
+    "Pinned raw/protected netlist boundary",
+    "Unknown electrical limits remain null; failed protected-bank screens retained",
+    "Loaded-divider independent Thevenin solution",
+    "CSV/manifest and deterministic calculation JSON/Markdown consistency",
+    "Whole-tail charge and additive voltage-energy uncertainty",
+    "Independent time integral confirms raw-resistor energy sharing",
+    "Rising supervisor hysteresis rejects the superseded110k choice",
+    "All pinned input hashes match;931e369 archive bytes preserved",
+    "No reference collisions across36 change-register rows",
+    "Git diff whitespace and Markdown table columns checked"
   ],
-  "plot_visual_review": "Two-axis ideal-model plot visually inspected; legible labels and units, explicitly not measured hardware",
+  "pinned_inputs_verified": [
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/BASELINE_AND_SCOPE.json",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "686f94fe464d815f00d5f6a8c5c65231d2a37088d0604c725183d4ef0a516b07"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/COMMON_PROPOSED_FIXES.md",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "e8b8880eb8a9fb2257039b6b2ff5d2857d676018a6ab354ba3c42f1bbe8629dd"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/D_E_RESCORE.md",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "e22833afd09255bf371b7609ce2700c8653615d96ca62822decdd6247ac081dd"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/GATE3B_SOURCE_BOUND.md",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "448eae4652a041a4a6bdec0e5b35a43bc73bcb681def9e23ce0414edf24d0862"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/INDUCTOR_CANDIDATES.md",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "3b162658c3d33a77b306e545cfdc01e9046f345e8ee08ae00282b808102f0bfe"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/INPUT_LIMITER_AND_ENERGY.md",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "c47c7d8cb9b5ae57d8e39bcc1cc69c14f47a5189ecdec39a34378e60b2615c44"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/SOURCES.json",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "303cb9020b053b1ef79aa6b5fc93ad4b630ab78f01cc58cf7b68ddabbbb46005"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/SOURCE_BOUND_CALCULATIONS.json",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "f3b7a28976425ccec77353c5db7c2c1c672b904edb6a74d7b00589e4745d3cfd"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/VALIDATION.json",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "3b575a3e6cefc69b91aa75764f94a2ea0a4bbca359927c8bf9caec7d4745b294"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/calculate_source_bound.py",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "a70010450df0f727cb289308a0674c07c383d7c63059a0d9c8ee027492460a9a"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/gate3b/test_source_bound.py",
+      "commit": "0a853c79779bb09e943758fd119845ce30a79107",
+      "sha256": "c958948d5ab2d5f82522ea2dd7f4c97913b09d02216b25542645a83586273b7c"
+    },
+    {
+      "path": "docs/evidence/r2/path_budget/PATH_BUDGET.md",
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "sha256": "93e0c5fd17798dd038e95f9659cf10a563d93b9533baeadd5ffb39fc65f2b701"
+    },
+    {
+      "path": "docs/evidence/r2/path_budget/PATH_CALCULATIONS.json",
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "sha256": "7ad3e2562273eb08921d6805331e9691324c4ce1c665fc88d56df1860ab308bc"
+    },
+    {
+      "path": "docs/evidence/aux_converter/V1A_INPUT_WITHSTAND.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "cb97bc2252c94869ff96313ca465d6eaf4df581ab1b2e1ae6b18c7bdb41b7f9f"
+    },
+    {
+      "path": "docs/evidence/r2/FOOTPRINTS_COMPLETE.md",
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "sha256": "af04e87ea003604e62fc462e6dcb894e2faffef150482c7af8c6407d44eec32d"
+    },
+    {
+      "path": "docs/evidence/r2/footprints_complete/FULL_INVENTORY.csv",
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "sha256": "bdea1bb32cf45fe3db8a3925e228d920a49de81f6b819fa51764387468bde402"
+    },
+    {
+      "path": "docs/evidence/r2/footprints_complete/completed.xml",
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "sha256": "39318e12c26a93ff23c8bc54d6a9d210ae01f0a7a84d88af83f579ecbea4a263"
+    },
+    {
+      "path": "docs/evidence/r2/footprints_complete/SHEET05.md",
+      "commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+      "sha256": "8ec642bd11ea25b98abf94b1c2ddd7c11d9bb4b14e310b8b0afad90e89314269"
+    },
+    {
+      "path": "docs/evidence/aux_converter/TVS_RESELECTION.md",
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "sha256": "b9a3cb0484be74ca883a2334c5416ccdc67a43b7d0a89e7877c4c37e40136fc2"
+    },
+    {
+      "path": "docs/evidence/aux_converter/TVS_CALCULATIONS.json",
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "sha256": "155b9679145651e5c15530d1699eeff8a588c4fbf01ab6014859be11d6392237"
+    },
+    {
+      "path": "docs/evidence/aux_converter/TVS_INPUT_AUDIT.md",
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "sha256": "36fb1dbf0d8168747482f836ad929427cf89163953aa4807d0b08ec78a89744c"
+    },
+    {
+      "path": "docs/evidence/aux_converter/TVS_SOURCES.md",
+      "commit": "84c991fe224c299e34751a3418640600f577a739",
+      "sha256": "ac45b1f5f3878e878b478b6423825dce71d460c0a3fa886ace7c0f5dfc373ee5"
+    }
+  ],
+  "historical_archive_files_preserved": [
+    "TEST_HOOKS.md",
+    "CALCULATIONS.json",
+    "TIMING_AND_LOGIC.md",
+    "TEST_PLAN.md",
+    "AUX_BRANCH_FIX.md",
+    "FREEZE_TABLE.md",
+    "RAW_NODE_ENERGY.md",
+    "VALIDATION.json",
+    "FREEZE_BOM.csv",
+    "GATE4A_FREEZE.md",
+    "CALCULATIONS.md",
+    "FREEZE_MANIFEST.json",
+    "calculate_gate4a.py"
+  ],
+  "manufacturer_cache_hashes_verified": [
+    "third_party/documents/gate4a/tps7a16.pdf",
+    "third_party/documents/gate4a/tps3808.pdf",
+    "third_party/documents/gate4a/tps2662.pdf",
+    "third_party/documents/gate4a/tmux1511.pdf",
+    "third_party/documents/gate4a/lm61460.pdf",
+    "third_party/documents/gate4a/tps2663.pdf",
+    "third_party/documents/gate4a/ucc27511.pdf",
+    "third_party/documents/gate4a/fdb33.pdf",
+    "third_party/documents/gate4a/wfm.pdf",
+    "third_party/documents/gate4a/tnpw.pdf",
+    "third_party/documents/gate4a/we10.pdf",
+    "third_party/documents/gate4a/tlv3201.pdf",
+    "third_party/documents/gate4a/lm4040.pdf",
+    "third_party/documents/gate4a/csd18540.pdf",
+    "third_party/documents/gate4a/pch.pdf",
+    "third_party/documents/gate4a/ina228.pdf"
+  ],
+  "manufacturer_caches_unavailable": [],
+  "local_link_issues": [],
+  "plot_visual_review": "No new plot generation or visual review in this resume; unchanged ideal-model CSV/SVG remain historical numerical illustrations",
   "native_CAD_access": false,
   "schematic_changes": false,
   "PCB_changes": false,
   "ERC_DRC_run": false,
   "physical_tests_run": false,
   "actual_electrical_safety_verdict": "BLOCKED",
+  "git": {
+    "pull": "FAILED: Operation not permitted writing FETCH_HEAD",
+    "local_item_checkpoints": "FAILED: Operation not permitted creating index.lock",
+    "push": "Not attempted; conductor publishes",
+    "changes": "Latest resume uncommitted; both earlier partial commits retained"
+  },
   "artifact_sha256": {
-    "CALCULATIONS.json": "f5237f2aa0cfa5b23dabda39b870bf870ca844a802424f8e6e0ad15cf754b38c",
-    "CALCULATIONS.md": "b11407ea3089ead02da58f70db7a68585992471e1624b8190c83db54f2bcc109",
-    "calculate_gate4a.py": "3e256d3189bd5654845b17daeda1a202e7232e2afd57b6a8eda2393b79d1e44d",
-    "test_gate4a_calculations.py": "803d741145bc8dfe0e33ef1f0a5e7055cea976f2decf610b12178f15f5ce28ec",
+    "AUX_BRANCH_FIX.md": "33b0d71ffbcfdc0c7014bfa5f2daf7f7a9089f84c44c8ab18f05f8d0635f2414",
+    "BASIS.md": "c4c4a8f2457299573140f02f99a9e08f1178e711c0c0d6830598a62d84d04afa",
+    "CALCULATIONS.json": "0a1b2f78c2190421bd9ad0925871b28fcb929d52688ed008960e825e4c86c1b0",
+    "CALCULATIONS.md": "31da945be0897e5bf4b39cbdf7e69b510cdf52580fc71424ad93cf3c42116b1b",
+    "FIX_RESOLUTIONS.md": "4cac4b6f2fc2de89cb87d657b0d929d84c0f644110c4f4f8d4e453ca7a9f93b4",
+    "FREEZE_BOM.csv": "bfc2906741f9039b59d8c2a319ee0cfff04f822e41e893dbb1878fa83526162d",
+    "FREEZE_MANIFEST.json": "a95491c549f192221e0aafcca4e78b235e9b8f9fa7d1f6a67fb8a3ca0852f970",
+    "FREEZE_TABLE.md": "252e29981f35dd44017710ddc94515e3f2478d01327a52cdd795d27db4ae824d",
+    "GATE4A_FREEZE.md": "a87e5296f5d7943df9e0b43cf993d91b4c8de16286a3825e078a7cf12e74a2d7",
+    "INPUT_PROVENANCE.json": "38be702d211800314d6b9555591f527444f0a377743bd887219b7187f296e1ff",
+    "PASSIVE_COMPLETION.csv": "7aedeb036ddb7902c4ac309b6777988582c3d9b5f0d8af77d06ccf0a18daf9aa",
+    "PR15_INVENTORY.csv": "bdea1bb32cf45fe3db8a3925e228d920a49de81f6b819fa51764387468bde402",
     "RAW_IDEAL_TRANSFER.csv": "148af937b88845fe7657812f77161615636dc6728327e49300feede0d0410b7b",
     "RAW_IDEAL_TRANSFER.svg": "36e29fcd941dec542b0327769abdb216ec4ca1928e6adac1e840609d04c5a654",
-    "RAW_NODE_ENERGY.md": "c79f463c0f319de247f84de1deb0dd107ce3fd4405df08a0eaecca419c830030"
-  }
+    "RAW_NODE_ENERGY.md": "822d217d544341ab640a0a3baf1de511531fc19a3a1c29c871d43c93dbd7fb06",
+    "SOURCES.json": "cf253751ba8cd5e90c7c23b81c164db9ad121fa2de2aa1d84d9e3ac44c0058e8",
+    "SOURCES.md": "59e5121b389de75faa028057bd83e5dade634b7b8ef7883b368163aa400fd2f8",
+    "SOURCES_FIX.json": "870139f2ac3d1e334842f5d8e127808b9b747b27265eae0d92a0a99da0cedc4b",
+    "TASK_PROGRESS.md": "b0a1113991eb598bcf501231c159c4f8bec8f07dbe2dd8b77581ed98536f1946",
+    "TEST_HOOKS.md": "f6a7046ea31baf7f6d6f7d527876173b827128f0633d779496c730b22db74f84",
+    "TEST_PLAN.md": "c03e850086ea96a910d2320c8dca4bc029fc55026a9cf846e2fafeae0e4c3f02",
+    "TIMING_AND_LOGIC.md": "cece716034afb620bdd5dbd2be737a2f47ad69850d621ef3244fc71156a2b01f",
+    "calculate_gate4a.py": "8bf99e53e2cd84825e9f84c53f40cc219532281d51e45519ecb396902ac0606b",
+    "calculate_gate4a_fix.py": "f87133f3c58a18ce58fedea0b955f4d3e3ae7d493703e8643ddadbf9be4ec3a0",
+    "test_gate4a_calculations.py": "a3981d4467da738af9349c12859c78f990ad473030de3a56352ae3f0eb1c3a06"
+  },
+  "manager_report_sha256": "de331da477c1f6ce7001580b1d6d91e881d932f1f7455d69683c55d1fb4b8aaf"
 }

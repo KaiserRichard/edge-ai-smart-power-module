@@ -785,7 +785,7 @@
       "max_energy_residual_J": 3.469446951953614e-17,
       "actual_peak_V": null
     },
-    "current_dump_ballast_ohm": 0.1,
+    "current_dump_ballast_ohm": 0.099,
     "historical_dump_hot_rating_target_J": 0.2
   },
   "protected_node": {
@@ -1001,16 +1001,24 @@
         ]
       },
       "conditional_trip_min_max_V": [
-        5.21993214204144,
-        5.314610956947997
+        5.219921610220708,
+        5.314621546439162
       ],
-      "conditional_20mV_overdrive_raw_upper_V": 5.3568632907730365,
+      "conditional_20mV_overdrive_raw_upper_V": 5.356873880264201,
       "actual_trip_min_max_V": [
         null,
         null
       ],
       "fully_off_3uA_100k_max_V": 0.30074999999999996,
       "powered_isolation_38uA_100k_estimate_V": 3.8095,
+      "reference_series_R_nom_ohm": 1000.0,
+      "reference_2p525V_injection_ceiling_A": 0.002531328320802005,
+      "reference_bias_extra_V": 5.0125e-06,
+      "reference_C_nom_F": 4.7e-06,
+      "reference_C_effective_required_F": [
+        1e-06,
+        5e-05
+      ],
       "R303_6p9V_current_ceiling_A": 0.006917293233082707,
       "clamp_bias_low_A": 0.00011681515740750912,
       "clamp_bias_high_A": 0.00014481136762611375
@@ -1021,9 +1029,14 @@
         10.757090412124061
       ],
       "new_detector_supervisor_min_max_V": [
-        4.73826806265586,
-        4.982734318609023
+        4.343598238778056,
+        4.567313016917294
       ],
+      "new_detector_supervisor_rise_upper_V": 4.704332407424813,
+      "old110k_detector_rise_upper_V": 5.132216348167294,
+      "driver_supervisor_rise_upper_V": 11.079803124487784,
+      "startup_9ms_typical_only_peak_input_A": 1.24,
+      "startup_9ms_typical_only_average_input_A": 0.6533333333333334,
       "nominal_hold_upper_initial_energy_J": 0.038016,
       "illustrative_charge_time_at_100mA_input_s": 0.13199999999999995,
       "timer_C_only_min_max_s": [
@@ -1075,19 +1088,47 @@
       "upstream_module": "Isolated48to24V; exact identity/source envelope OPEN"
     },
     "raw_dump": {
-      "R_nom_ohm": 0.1,
-      "R_initial_min_max_ohm": [
-        0.099,
-        0.101
+      "R_nom_ohm": 0.099,
+      "part_MPN": "WFMB2512R0330FEA",
+      "part_count": 12,
+      "branches": [
+        [
+          "R380",
+          "R381",
+          "R382",
+          "R383",
+          "R386",
+          "R387"
+        ],
+        [
+          "R388",
+          "R389",
+          "R390",
+          "R391",
+          "R392",
+          "R393"
+        ]
       ],
-      "I5p5_nom_A": 55.0,
-      "I6p881668_at_Rmin_A": 69.51179797979798,
+      "R_initial_min_max_ohm": [
+        0.09801,
+        0.09999000000000001
+      ],
+      "R_hot_screen_min_max_ohm": [
+        0.09766349999999999,
+        0.10033650000000004
+      ],
+      "resistor_tolerance_plus_TCR_fraction": 0.0135,
+      "I5p5_nom_A": 55.55555555555555,
+      "I6p881668_at_Rmin_A": 70.46305404996032,
       "Cmax_conditional_F": 0.00559656,
-      "RC_max_initial_s": 0.0005652525600000001,
-      "ideal_decay_to0p3V_s": 0.0017708423643641577,
-      "raw_pool_conditional_J": 0.099865083,
-      "equal_share_resistor_energy_J": 0.02496627075,
-      "ASSUMED10pct_imbalance_resistor_energy_J": 0.027462897825,
+      "RC_max_initial_s": 0.0005596000344,
+      "RC_hot_screen_max_s": 0.0005615392424400003,
+      "ideal_decay_to0p3V_s": 0.001759209196449833,
+      "raw_pool_conditional_J": 0.09986508302957717,
+      "equal_share_resistor_energy_J": 0.008322090252464763,
+      "worst_corner_part_energy_fraction": 0.08618199448147153,
+      "worst_corner_resistor_energy_J": 0.008606572034546716,
+      "worst_corner_resistor_initial_power_W": 41.13840952390223,
       "remaining_cap_energy_at0p3V_J": 0.0002518452,
       "clamp_MPN": "STPS60H100CT",
       "actual_hot_pulse_rating_J": null,
@@ -1104,7 +1145,7 @@
       "DCR_nominal_ohm_per_m": 0.053149606299212594,
       "fanout_send_hot_assumed_ohm": 0.0005074139763779527,
       "fanout_return_hot_assumed_ohm": 0.00029599148622047253,
-      "loop_without_J502_allocation_ohm": 0.03643294149439301,
+      "loop_without_J502_allocation_ohm": 0.03643294099409449,
       "J502": "PENDING feat/v1a-j502-connector",
       "actual_hot_loop_ohm": null
     },
@@ -1125,6 +1166,10 @@
       },
       "U_voltage_target_V": 0.015,
       "U_time_target_s": 2.5e-08,
+      "source_off_current_band_A": 0.01,
+      "endpoint_additive_current_error_target_A": 0.002,
+      "endpoint_measured_limit_A": 0.007920792079207921,
+      "source_nominal_SW_timeout_plus_TPS_s": 1.0500000000000001e-05,
       "U_charge_example_C": 1.6500000000000003e-06,
       "U_charge_2ms_example_C": 2.1550000000000002e-05,
       "U_energy_example_J": 0.0034948223999999996,

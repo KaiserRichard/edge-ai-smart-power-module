@@ -1,3 +1,21 @@
+# Gate4a-FIX final resume — 2026-09-30 (current)
+
+**STATUS: BLOCKED for test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** This update supersedes the status descriptions below, which remain historical evidence.
+
+**WHAT WAS DONE:** Continued both partial commits0a81d28/2b99ac7. Retained valid fixes and completed dispositions for all17 review findings and original freeze blockers. Added comparator reference-input current limiting and corrected C302 effective capacitance; replaced the raw-dump100mΩ elements with twelve pulse-chart-supported33mΩ elements (99mΩ total); included supervisor rising hysteresis and auxiliary startup peak demand; corrected source-off endpoint and full-event measurement acceptance. Updated the one-page owner explanation, register, calculations, tests and provenance.
+
+**EVIDENCE:** [Freeze and owner explanation](evidence/r2/gate4a/GATE4A_FREEZE.md), [item decisions/equations](evidence/r2/gate4a/FIX_RESOLUTIONS.md), [calculations](evidence/r2/gate4a/CALCULATIONS.md), [named test criteria](evidence/r2/gate4a/TEST_PLAN.md), [source supplement](evidence/r2/gate4a/SOURCES_FIX.json) and [validation](evidence/r2/gate4a/VALIDATION.json). Ten targeted numerical tests pass. No physical test, ERC/DRC or electrical validation is claimed.
+
+**DECISIONS:** Architecture D,9–26V,SMCJ36CA,Schurter3403.0285.23, BSC034 pair and isolated upstream48→24V route remain fixed. J502 remains PENDING in its separate job. No Pi before the fault/normal/interface gates. Negative historical results and unknown bounds are retained.
+
+**OPEN RISKS:** Autonomous source discriminator; auxiliary charger/timer/SOA and fast rail-loss circuit; complete reset/POR/ARM/fault-priority/persistent-short lockout; rated fixture limiter/abort/discharge/links; hot pulse, physical timing and bank/harness measurements; actual source, instrument/calibration and connector handoffs. A named future test does not close missing circuitry. The source contract still lacks proof of10µs/100µC, and the protected-bank ESR cannot inherit the former allocation.
+
+**NEXT GATE:** Complete the remaining circuit and fixture constructions, obtain the external handoffs and applicable component evidence, then the specified coupon/review gates. R2 capture/pin review/ERC, R3 layout/DRC/visual, R4 fabrication review and R5 physical validation remain sequential. No gate advancement or fabrication release.
+
+**GIT:** Pull failed writing FETCH_HEAD; every local item checkpoint failed creating index.lock (Operation not permitted). Latest-resume work remains uncommitted under the brief’s explicit fallback. No push was attempted.
+
+---
+
 # Gate4a manager update — 2026-09-30 (current)
 
 **STATUS: BLOCKED for test-board capture freeze and electrical qualification. TASKS1–5 analysis complete. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** This is the owner's R2 fault-test-board review, not the repository R4 fabrication gate. Earlier sections below are historical evidence.

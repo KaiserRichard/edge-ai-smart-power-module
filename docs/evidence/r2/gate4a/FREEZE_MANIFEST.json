@@ -221,13 +221,14 @@
         "U303",
         "R301",
         "R302",
-        "R303"
+        "R303",
+        "R373"
       ],
       "old": "U302: REF5025IDGKR / REF5025 2.5V DATASHEET; U303: TLV3201AIDBVR / TLV3201AIDBVR; R301: Resistor_specification / 11.3k; R302: Resistor_specification / 10.0k; R303: Resistor_specification / 1.00k",
-      "new_mpn": "REF5025IDGKR; TLV3201AIDBVR; TNPW06039K88BEEA; TNPW060310K0BEEA; TNPW06031K00BEEA",
-      "new_value_or_connection": "R301 9.88k VOUT_5V1-to-OV_DIV; R302 10.0k OV_DIV-to-GND; U321 switch then R3031k to U303.4 SENSE; U303.3=REF_2V5; R367100k SENSE-to-GND; nominal trip5.266700V before Ron/leakage",
-      "reason": "R4A-06 resume correction: 10k top resistor exceeded 5.38V conditional overdrive allocation; reduce R301 to 9.88k with the same 0.1%/25ppm screen",
-      "governing_equation": "G=(1+(R303+Ron)/R367)*(1+R301/R302)+R301/R367; Vtrip=(Vref+Vos+H)*G+Ileak*((R303+Ron)*(1+R301/R302)+R301)",
+      "new_mpn": "REF5025IDGKR; TLV3201AIDBVR; TNPW06039K88BEEA; TNPW060310K0BEEA; TNPW06031K00BEEA; R373 TNPW06031K00BEEA",
+      "new_value_or_connection": "R301 9.88k VOUT_5V1-to-OV_DIV; R302 10.0k OV_DIV-to-GND; U321 switch then R3031k to U303.4 SENSE; R373 1k REF_2V5-to-REF_SENSE; U303.3=REF_SENSE; R367100k SENSE-to-GND; nominal trip5.266700V before Ron/leakage",
+      "reason": "R4A-06 resume correction: 10k top resistor exceeded 5.38V conditional overdrive allocation; reduce R301 to 9.88k with the same 0.1%/25ppm screen; limit retained reference-capacitor injection into IN+ on DET5 loss",
+      "governing_equation": "G=(1+(R303+Ron)/R367)*(1+R301/R302)+R301/R367; Vtrip=(Vref+Vos+H)*G+Ileak*((R303+Ron)*(1+R301/R302)+R301); I_INplus<=2.525V/997.5ohm=2.53133mA; added bias error<=5nA*1002.5ohm",
       "status": "R4A-06 arithmetic CORRECTED; detector pin/current/settling qualification T06",
       "source": "G2C/PASSIVES"
     },
@@ -372,14 +373,22 @@
         "D330",
         "D331",
         "C367",
-        "C368"
+        "C368",
+        "R386",
+        "R387",
+        "R388",
+        "R389",
+        "R390",
+        "R391",
+        "R392",
+        "R393"
       ],
       "old": "Q330: NEW; D330: NEW; R380: NEW",
-      "new_mpn": "CSD18540Q5B; UCC27511DBVR; WFMB2512R1000FEA x4; CRCW06031R00FKEA; TNPW060310K0BEEA; STPS60H100CT x2; GRM21BR71E105KA99L; GRM188R71H104KA93D",
-      "new_value_or_connection": "R380/R381 and R382/R383: two series100mOhm strings in parallel (100mOhm equivalent), from raw VOUT_5V1 to Q330 drain; Q330 source GND; U330 held driver, R3841ohm gate, R38510k gate-source; D330 pins1/3 anodesGND pin2/tab cathodeVOUT_5V1; D331 identical to VOUT_PROTECTED; U330DBV6:1VDD=DRV_HOLD,2OUTH=R384,3OUTL=Q330gate,4GND=Q330sourceKelvin,5IN-=GND,6IN+=DISPOSAL; C3671uF/C368100nF pins1-4",
-      "reason": "Protected crowbar is disconnected from upstream magnetics after Q301/Q302 off",
-      "governing_equation": "Rdump=100mOhm nominal; Icap at5.5V=55A; Epool99.865mJ conditional; tau=5.59656mF*0.1=559.656us",
-      "status": "R4A-09 current/commutation candidates selected; T09 hot pulse and negative capacitor stress REQUIRED",
+      "new_mpn": "CSD18540Q5B; UCC27511DBVR; WFMB2512R0330FEA x12; CRCW06031R00FKEA; TNPW060310K0BEEA; STPS60H100CT x2; GRM21BR71E105KA99L; GRM188R71H104KA93D",
+      "new_value_or_connection": "Raw VOUT_5V1 -> R380 -> R381 -> R382 -> R383 -> R386 -> R387 -> Q330 drain, in parallel with VOUT_5V1 -> R388 -> R389 -> R390 -> R391 -> R392 -> R393 -> Q330 drain. Each ballast33mOhm1%; two198mOhm strings give99mOhm. Q330 sourceGND. U330DBV6:1VDD=DRV_HOLD,2OUTH->R3841ohm->Q330gate,3OUTL=Q330gate,4GND=Q330sourceKelvin,5IN-=GND,6IN+=DISPOSAL; R38510k gate-source; C3671uF/C368100nF pins1-4. D330 pins1/3 anodesGND pin2/tab cathodeVOUT_5V1; D331 identical to VOUT_PROTECTED.",
+      "reason": "Independent raw dump; published WFM pulse curves apply only to33mOhm; retire the100mOhm-element candidate",
+      "governing_equation": "Rdump=(6*33mOhm)||(6*33mOhm)=99mOhm; independent1%+50ppm/K*70K corners:97.6635..100.3365mOhm; Ej=Epool*(Rj/Sbranch^2)/(1/Sa+1/Sb), max8.606573mJ",
+      "status": "R4A-09 revised pulse-evidence candidate; T09 hot pulse/SOA and negative waveform still REQUIRED",
       "source": "RAW_DUMP"
     },
     {
@@ -501,11 +510,11 @@
         "C370"
       ],
       "old": "U322: NEW; U323: NEW; R362: NEW; R363: NEW; R364: NEW; R365: NEW",
-      "new_mpn": "TPS3808G01DBVR x2; TNPW0603249KBEEA; TNPW060310K0BEEA; TNPW0603110KBEEA; TNPW060310K0BEEA; TNPW060310K0BEEA x2; GRM188R71H104KA93D x2",
-      "new_value_or_connection": "R362249k/R36310k DRV_HOLD-to-SENSE-to-GND; R364110k/R36510k DET5-to-SENSE-to-GND; each supervisor VDD=3V3_AUX; proposed startup qualification only, not fast power-loss action; DBV6 each:1RESET_N via10k toDET5,2GND,3MR=3V3_AUX,4CT=NC20ms mode,5SENSE divider,6VDD=3V3_AUX; C369/C370100nF local supply bypass",
-      "reason": "Actual loaded rails must meet detector/driver timing conditions",
-      "governing_equation": "Vfall=VIT*(1+Rt/Rb) +/- Ibias*Rt; calculated corners in FIX_CALCULATIONS; TPS3808 sense delay maximum unspecified",
-      "status": "R4A-07 healthy-rail threshold screen improved; response/loaded validity BLOCKED T07/T15",
+      "new_mpn": "TPS3808G01DBVR x2; TNPW0603249KBEEA; TNPW060310K0BEEA; TNPW0603100KBEEA; TNPW060310K0BEEA; TNPW060310K0BEEA x2; GRM188R71H104KA93D x2",
+      "new_value_or_connection": "R362249k/R36310k DRV_HOLD-to-SENSE-to-GND; R364100k/R36510k DET5-to-SENSE-to-GND; each supervisor VDD=3V3_AUX; proposed startup qualification only, not fast power-loss action; DBV6 each:1RESET_N via10k toDET5,2GND,3MR=3V3_AUX,4CT=NC20ms mode,5SENSE divider,6VDD=3V3_AUX; C369/C370100nF local supply bypass",
+      "reason": "Actual loaded rails must meet detector/driver timing conditions; include maximum3% hysteresis in rising/startup threshold",
+      "governing_equation": "Vfall=VIT*(1+Rt/Rb) +/- Ibias*Rt; calculated corners in FIX_CALCULATIONS; TPS3808 sense delay maximum unspecified; Vrise_max<=1.03*Vfall_max=4.704333V for100k/10k; old110k gives5.132216V",
+      "status": "R4A-07 falling/rising threshold arithmetic corrected; monitors are startup/state only; fast rail-loss ownership T07/T15 BLOCKED",
       "source": "TPS3808"
     },
     {
@@ -622,10 +631,10 @@
         "D302"
       ],
       "old": "R312: generic31.9k; R313: generic10k; C302: generic1uF16V; D302:BAS116,215",
-      "new_mpn": "TNPW060331K9BEEA; TNPW060310K0BEEA; GRM21BR71E105KA99L x2; BAS116,215",
-      "new_value_or_connection": "C301 1uF25V BST-to-TS (U301.9-to-.8); C302 separate 1uF25V REF_2V5-to-GND; R31231.9k/R31310k retain DET5 divider; D302 anode DRV_HOLD cathode PROT_BST, pin2 NC",
-      "reason": "Real passives and bootstrap voltage margin needed for M01",
-      "governing_equation": "Cboot_eff>=Qg_pair/deltaV; for82nC/0.5uF,deltaV=0.164V; C302 is NOT bootstrap",
+      "new_mpn": "TNPW060331K9BEEA; TNPW060310K0BEEA; C301 GRM21BR71E105KA99L; C302 GRM21BR71E475KA73L; BAS116,215",
+      "new_value_or_connection": "C301 1uF25V BST-to-TS (U301.9-to-.8); C302 separate 4.7uF25V, effective 1..50uF required, REF_2V5-to-GND; R31231.9k/R31310k retain DET5 divider; D302 anode DRV_HOLD cathode PROT_BST, pin2 NC",
+      "reason": "Real passives and bootstrap voltage margin needed for M01; REF5025 output capacitance must remain within 1..50uF after bias/tolerance",
+      "governing_equation": "Cboot_eff>=Qg_pair/deltaV; for82nC/0.5uF,deltaV=0.164V; C302 is NOT bootstrap; old C302 initial minimum0.9uF<1uF; new initial minimum4.23uF, effective capacitance T06",
       "status": "R4A-05 refdes CORRECTED; C301 DC-bias and loaded-bootstrap T04",
       "source": "TPS7A16/HOLD"
     },

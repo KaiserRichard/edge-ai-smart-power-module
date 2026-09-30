@@ -85,6 +85,36 @@ class PhysicalCalculationChecks(unittest.TestCase):
         self.assertGreater(energy_uncertainty(.1,.2,.0138,.002),.00349)
         self.assertIsNone(self.data['gate4a_fix']['measurement']['calibration_records'])
 
+    def test_raw_dump_energy_sharing_by_independent_time_integration(self):
+        # Integrate each resistor loss in a capacitor discharge; check the proposed
+        # worst-corner share against energy conservation without using its formula.
+        f=.0135
+        resistors=[.033*(1+f)]+[.033*(1-f)]*5+[.033*(1+f)]*6
+        branch=[sum(resistors[:6]),sum(resistors[6:])]
+        capacitance=.00559656; v0=6.881668479208298
+        req=1/(1/branch[0]+1/branch[1]); tau=req*capacitance
+        dt=20*tau/20000
+        energy=[0.]*12
+        for n in range(20001):
+            voltage=v0*math.exp(-n*dt/tau)
+            weight=.5 if n in (0,20000) else 1.
+            for k,r in enumerate(resistors):
+                energy[k]+=weight*dt*(voltage/branch[k//6])**2*r
+        initial=.5*capacitance*v0*v0
+        self.assertAlmostEqual(sum(energy)/initial,1.,places=6)
+        raw=self.data['gate4a_fix']['raw_dump']
+        self.assertAlmostEqual(energy[0]/sum(energy),raw['worst_corner_part_energy_fraction'],places=10)
+        self.assertLess(raw['worst_corner_resistor_energy_J'],.009)
+        self.assertIsNone(raw['actual_hot_pulse_rating_J'])
+
+    def test_supervisor_startup_includes_rising_hysteresis(self):
+        aux=self.data['gate4a_fix']['auxiliary']
+        self.assertGreater(aux['old110k_detector_rise_upper_V'],5.)
+        self.assertLess(aux['new_detector_supervisor_rise_upper_V'],4.75)
+        self.assertLess(aux['new_detector_supervisor_min_max_V'][0],4.75)
+        self.assertIsNone(aux['actual_startup_min_max_s'][0])
+        # Startup monitor selection cannot silently become a fast rail-floor proof.
+
 
 if __name__ == '__main__':
     unittest.main()

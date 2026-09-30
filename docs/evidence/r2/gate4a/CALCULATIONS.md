@@ -54,19 +54,23 @@ The sections above preserve the original energy/path screens, with the detector 
 |Old20mV raw increment,V|0.04286859999999999|
 |Current OV-only latency at9/24/26/27V,s|[2.956487356739687e-05, 1.6912575964072873e-05, 1.6240793974457944e-05, 1.5935291252588232e-05]|
 |New ideal trip,V|5.266699999999999|
-|New conditional trip min/max,V|[5.21993214204144, 5.314610956947997]|
-|New conditional20mV-overdrive upper,V|5.3568632907730365|
+|New conditional trip min/max,V|[5.219921610220708, 5.314621546439162]|
+|New conditional20mV-overdrive upper,V|5.356873880264201|
 |New supervisor held rail min/max,V|[10.224178614557356, 10.757090412124061]|
-|New supervisorDET5 min/max,V|[4.73826806265586, 4.982734318609023]|
-|Raw100mΩ conditional peak current,A|69.51179797979798|
-|Raw ideal discharge to0.3V,s|0.0017708423643641577|
+|New supervisorDET5 falling min/max,V|[4.343598238778056, 4.567313016917294]|
+|New supervisorDET5 rising upper,V|4.704332407424813|
+|Hold charging end-of-ramp input sensitivity,A|1.24|
+|Raw99mΩ conditional peak current,A|70.46305404996032|
+|Raw worst resistor energy,J|0.008606572034546716|
+|Raw ideal discharge to0.3V,s|0.001759209196449833|
 |Conditional protected current allowance3.5/7mΩ,A|[25.539140770928853, 13.48516094324397]|
 |Measurement target Upeak/Umin,V|0.015|
+|Source-off measured current ceiling with1%+2mA error,A|0.007920792079207921|
 |Charge example uncertainty,C|1.6500000000000003e-06|
 |Whole2ms charge example uncertainty,C|2.1550000000000002e-05|
 |Energy example uncertainty,J|0.0034948223999999996|
 |Aux-only pulse source energy screen,J|0.013540205000000003|
 
-Detector equation: `Ip=Vs/R367+Ileak; Vdiv=Vs+(R303+Ron)Ip; Vraw=Vdiv(1+R301/R302)+R301Ip`. Corners enumerate four independently±0.25% resistors, Ron0…17Ω, inherited reference error0.12125%, comparator offset±4mV, **assumed** hysteresis±2mV, transferred PSRR/CMRR and **assumed**1µA diode/PCB leakage plus125nA switch/comparator allowance. This conditional bound is not a guaranteed5.38V overdrive PASS; the missing hysteresis/dynamic/leakage transfer is T06.
+Detector equation: `Ip=Vs/R367+Ileak; Vdiv=Vs+(R303+Ron)Ip; Vraw=Vdiv(1+R301/R302)+R301Ip`. Corners enumerate four independently±0.25% resistors, Ron0…17Ω, inherited reference error0.12125%, comparator offset±4mV, **assumed** hysteresis±2mV, transferred PSRR/CMRR, additional R373 input-bias error±5.0125µV, and **assumed**1µA diode/PCB leakage plus125nA switch/comparator allowance. This conditional bound is not a guaranteed5.38V overdrive PASS; the missing hysteresis/dynamic/leakage transfer is T06.
 
-Raw decay is ideal RC with maximum conditional bank and+1% ballast only; FET resistance, continued source current, harness coupling and hot resistance change the measured time. Timing minima/maxima, actual source bound, loadedVGS, clamp/negative peaks and calibration remain JSONnull. No computed conditional number fills them.
+Raw decay is ideal RC with maximum conditional bank and independent initial/tolerance plus TCR resistor corners; FET resistance, continued source current, harness coupling and hot resistance change the measured time. Timing minima/maxima, actual source bound, loadedVGS, clamp/negative peaks and calibration remain JSONnull. No computed conditional number fills them.

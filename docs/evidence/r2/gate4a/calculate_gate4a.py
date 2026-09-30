@@ -92,7 +92,7 @@ def calculate():
     d['detector']['classification']='Historical1M proposal corrected; current100k detector in gate4a_fix.detector'
     d['auxiliary']['classification']='Historical aux/supervisor screens; current divider candidates in gate4a_fix.auxiliary'
     d['selected_path']['J502_status']='PENDING;6.24mOhm is historical loop allocation only'
-    d['raw_node']['current_dump_ballast_ohm']=.1
+    d['raw_node']['current_dump_ballast_ohm']=d['gate4a_fix']['raw_dump']['R_nom_ohm']
     d['raw_node']['historical_dump_hot_rating_target_J']=d['raw_node'].pop('raw_dump_hot_rating_target_J')
     return d,curve
 

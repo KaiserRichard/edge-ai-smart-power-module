@@ -1,0 +1,433 @@
+{
+  "classification": "Provenance supplement; no electrical validation",
+  "date": "2026-09-30",
+  "resume_commits": [
+    "0a81d2820449b678d5fef369774fbaf2eef0a9b3",
+    "2b99ac7bd60d352a4b418cd75e0fc8f66e345b4d"
+  ],
+  "task_inputs": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX_RESUME.md",
+      "sha256": "51ea3bda5fbcaab344e70a3e45879bb837952e224a07219721a91ef7315297e8",
+      "bytes": 583,
+      "access": "Read in full; unchanged"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX.md",
+      "sha256": "98766c651e035b6dcde3331445983b9be32ee033062ba7305a6e962bb882473b",
+      "bytes": 1595,
+      "access": "Read in full; unchanged"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md",
+      "sha256": "21b1bde5968c13198b2772cd445c2ac3d318b7dc342669ca4c59c61cf7082e32",
+      "bytes": 57654,
+      "access": "Read in full; unchanged"
+    }
+  ],
+  "documents": [
+    {
+      "id": "lm61460",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "revision": "SNVSBD5D, July2022",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/lm61460.pdf"
+      ],
+      "relevant_sections": "§6 pins; §8.3.2–3 synchronization; §8.4.3.5 dropout",
+      "circuit_or_function": "Source-discriminator feasibility; BIAS1/AGND3 correction",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Texas Instruments, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "tps2663",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "revision": "SLVSE94G, June2024",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/tps2663.pdf"
+      ],
+      "relevant_sections": "SHDN table; §8.3.7.2 fast-trip/restart",
+      "circuit_or_function": "Do not treat fast trip as persistent autonomous isolation",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Texas Instruments, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "lt4363",
+      "manufacturer": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf",
+      "revision": "RevC, January2024",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf"
+      ],
+      "relevant_sections": "Electrical table pp3–4; inrush/gate-network application section",
+      "circuit_or_function": "Existing current/timer/startup construction remains blocked",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Analog Devices, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "ltc3115",
+      "manufacturer": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf",
+      "revision": "RevE, April2023",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf"
+      ],
+      "relevant_sections": "p3 soft-start table; p15 soft-start operation",
+      "circuit_or_function": "9ms typical only; linear-ramp startup-current sensitivity",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Analog Devices, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "tlv3201",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv3201.pdf",
+      "revision": "SBOS561C, May2024",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/tlv3201.pdf"
+      ],
+      "relevant_sections": "§6.1 input injection note; bias/timing tables",
+      "circuit_or_function": "R3731k added on reference-side IN+; application timing still measured",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Texas Instruments, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "ref50",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/ref50.pdf",
+      "revision": "SBOS410O, October2025",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/ref50.pdf"
+      ],
+      "relevant_sections": "§9.4.1.1 output capacitance, REF50xxI",
+      "circuit_or_function": "C302 now4.7uF nominal, effective1..50uF required",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Texas Instruments, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "tps3808",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+      "revision": "SBVS050N, August2026",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/tps3808.pdf"
+      ],
+      "relevant_sections": "§§6.5–6.6 hysteresis/release/falling delay",
+      "circuit_or_function": "R364100k replaces110k after rising-threshold audit",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Texas Instruments, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "wfm",
+      "manufacturer": "Vishay",
+      "url": "https://www.vishay.com/docs/30387/wfm.pdf",
+      "revision": "30387,04-Aug-2022",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.vishay.com/docs/30387/wfm.pdf"
+      ],
+      "relevant_sections": "p2 total TCR; p3 pulse-curve resistance restriction",
+      "circuit_or_function": "Twelve33mOhm elements replace four100mOhm elements in raw dump",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Vishay, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "fdb33",
+      "manufacturer": "onsemi",
+      "url": "https://www.onsemi.com/pdf/datasheet/fdb33n25-d.pdf",
+      "revision": "FDB33N25/D,Rev3,January2022",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.onsemi.com/pdf/datasheet/fdb33n25-d.pdf"
+      ],
+      "relevant_sections": "p5 SOA/Tcase/single-pulse conditions",
+      "circuit_or_function": "No application hot SOA guarantee inferred; Q316 remains unqualified",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "onsemi, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "logic74",
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf",
+      "revision": "SCES794G,September2021",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf"
+      ],
+      "relevant_sections": "Latch pins and asynchronous controls",
+      "circuit_or_function": "Retained candidate; no completed reset/POR/ARM arbitration claim",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Texas Instruments, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "2n7002",
+      "manufacturer": "Nexperia",
+      "url": "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+      "revision": "Rev7,08-Sep-2011",
+      "access": "WEB_READ in final resume,2026-09-30",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf"
+      ],
+      "relevant_sections": "p5 threshold/leakage/RDS table",
+      "circuit_or_function": "Default-SHDN bias review; no new transistor substitution",
+      "usage": "REFERENCED; calculations/circuit proposals authored in project",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Nexperia, document/revision and primary URL in this record and linked project analysis"
+    },
+    {
+      "id": "ahct",
+      "manufacturer": "TI",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf",
+      "revision": "SCLS378P,March2024",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf"
+      ],
+      "circuit_or_function": "U319/U324 single-channel buffer and power sequence",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "TI and linked primary record"
+    },
+    {
+      "id": "schmitt",
+      "manufacturer": "TI",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+      "revision": "SCES351Y, as cited by partial work",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf"
+      ],
+      "circuit_or_function": "U325/U326 Schmitt conditioning",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "TI and linked primary record"
+    },
+    {
+      "id": "stps",
+      "manufacturer": "STMicroelectronics",
+      "url": "https://www.st.com/resource/en/datasheet/stps60h100c.pdf",
+      "revision": "DS3978 Rev3,August2018",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.st.com/resource/en/datasheet/stps60h100c.pdf"
+      ],
+      "circuit_or_function": "D102/D330/D331 candidates; hot pulse remains OPEN",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "STMicroelectronics and linked primary record"
+    },
+    {
+      "id": "belden8503",
+      "manufacturer": "Belden",
+      "url": "https://www.belden.com/products/cable/electronic-wire-cable/lead-wire-hook-up-wire/8503",
+      "revision": "Unversioned live record; partial access2026-09-30",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.belden.com/products/cable/electronic-wire-cable/lead-wire-hook-up-wire/8503"
+      ],
+      "circuit_or_function": "8503 stranded22AWG fanouts",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Belden and linked primary record"
+    },
+    {
+      "id": "harwin",
+      "manufacturer": "Harwin",
+      "url": "https://www.harwin.com/products/M20-1180042",
+      "revision": "Unversioned live record; partial access2026-09-30",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.harwin.com/products/M20-1180042"
+      ],
+      "circuit_or_function": "22–30AWG contact identity; mate/hot rating remains OPEN",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Harwin and linked primary record"
+    },
+    {
+      "id": "tdk10n",
+      "manufacturer": "TDK",
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H103J080AA",
+      "revision": "Unversioned primary record; exact approval sheet OPEN",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H103J080AA"
+      ],
+      "circuit_or_function": "C350/passive10nF identity; timer value not frozen",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "TDK and linked primary record"
+    },
+    {
+      "id": "murata220n",
+      "manufacturer": "Murata",
+      "url": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H224KA01%23",
+      "revision": "Unversioned primary family record; exact approval sheet OPEN",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H224KA01%23"
+      ],
+      "circuit_or_function": "C314220nF candidate",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Murata and linked primary record"
+    },
+    {
+      "id": "murata4u7",
+      "manufacturer": "Murata",
+      "url": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71E475KA73-01.pdf",
+      "revision": "Part-family control01; creation/revision date OPEN",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71E475KA73-01.pdf"
+      ],
+      "circuit_or_function": "C302/C353/C3664.7uF25V candidate; effective C requires measurement",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Murata and linked primary record",
+      "final_resume_fetch": "Exact PDF inaccessible through web tool; product-family fallback returned403. Retain provisional identity from partial evidence; exact approval/bias sheet remains OPEN."
+    },
+    {
+      "id": "tdk22p",
+      "manufacturer": "TDK",
+      "url": "https://product.tdk.com/ja/search/capacitor/ceramic/mlcc/info?part_no=CGA3E2C0G1H220J080AA",
+      "revision": "Unversioned primary record; exact approval sheet OPEN",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://product.tdk.com/ja/search/capacitor/ceramic/mlcc/info?part_no=CGA3E2C0G1H220J080AA"
+      ],
+      "circuit_or_function": "Retained C20722pF identity",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "TDK and linked primary record"
+    },
+    {
+      "id": "tekvoltage",
+      "manufacturer": "Tektronix",
+      "url": "https://download.tek.com/datasheet/TDP1000-TDP0500-P6251-Datasheet-EN-US-51W-19997-11.pdf",
+      "revision": "51W-19997-11",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://download.tek.com/datasheet/TDP1000-TDP0500-P6251-Datasheet-EN-US-51W-19997-11.pdf"
+      ],
+      "circuit_or_function": "Candidate low-voltage probes; calibration not available",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Tektronix and linked primary record"
+    },
+    {
+      "id": "tekcurrent",
+      "manufacturer": "Tektronix",
+      "url": "https://www.tek.com/vn/datasheet/tcp0150-ac-dc-current-probe-datasheet",
+      "revision": "Unversioned live record; partial access2026-09-30",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.tek.com/vn/datasheet/tcp0150-ac-dc-current-probe-datasheet"
+      ],
+      "circuit_or_function": "Candidate current range; no2mA endpoint accuracy inferred",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Tektronix and linked primary record"
+    },
+    {
+      "id": "tekscope",
+      "manufacturer": "Tektronix",
+      "url": "https://www.tek.com/en/datasheet/6-series-mso",
+      "revision": "Unversioned live record; partial access2026-09-30",
+      "access": "Citation/selection retained from0a81d28 or2b99ac7; not independently requalified in final resume",
+      "local_file": null,
+      "sha256": null,
+      "relevant_source_files": [
+        "https://www.tek.com/en/datasheet/6-series-mso"
+      ],
+      "circuit_or_function": "Candidate acquisition family; exact inventory remains OPEN",
+      "usage": "REFERENCED; no upstream circuit/CAD copied",
+      "upstream_modifications": "None",
+      "license": "Manufacturer copyright; no open redistribution license inferred",
+      "required_attribution": "Tektronix and linked primary record"
+    }
+  ]
+}
