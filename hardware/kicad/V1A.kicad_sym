@@ -5428,17 +5428,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "LTC7001IMSE#PBF"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U301_LTC7001IMSE_PBF_0_1"
       (rectangle
@@ -5456,121 +5456,121 @@
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -11.43 -1.27 0)
         (length 1.7779999999999998)
         (name "VCCUV"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -3.81 -12.7 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -11.43 1.27 0)
         (length 1.7779999999999998)
         (name "INP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -11.43 -5.08 0)
         (length 1.7779999999999998)
         (name "OVLO"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 10.16 -1.27 180)
         (length 1.7779999999999998)
         (name "TGDN"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 10.16 1.27 180)
         (length 1.7779999999999998)
         (name "TGUP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 10.16 -5.08 180)
         (length 1.7779999999999998)
         (name "TS"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 10.16 5.08 180)
         (length 1.7779999999999998)
         (name "BST"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "9"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin no_connect line
         (at 2.54 -12.7 90)
         (length 1.7779999999999998)
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "10"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -12.7 90)
         (length 1.7779999999999998)
         (name "EP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "11"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U302_REF5025IDGKR"
     (pin_names
       (offset 0.7111999999999999))
@@ -5581,17 +5581,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "REF5025 2.5V DATASHEET"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_SO:VSSOP-8_3x3mm_P0.65mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U302_REF5025IDGKR_0_1"
       (rectangle
@@ -5609,88 +5609,88 @@
         (name "DNC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -13.97 0.0 0)
         (length 1.7779999999999998)
         (name "VIN"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at -1.27 -7.62 90)
         (length 1.7779999999999998)
         (name "TEMP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -8.89 -7.62 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 2.54 -7.62 90)
         (length 1.7779999999999998)
         (name "TRIM_NR"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_out line
         (at 15.24 0.0 180)
         (length 1.7779999999999998)
         (name "VOUT"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin no_connect line
         (at 6.35 -7.62 90)
         (length 1.7779999999999998)
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin no_connect line
         (at 8.89 -7.62 90)
         (length 1.7779999999999998)
         (name "DNC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U303_TLV3201AIDBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -5701,17 +5701,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "TLV3201AIDBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U303_TLV3201AIDBVR_0_1"
       (rectangle
@@ -5729,55 +5729,55 @@
         (name "OUT"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -7.62 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 1.27 0)
         (length 1.7779999999999998)
         (name "IN+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -2.54 0)
         (length 1.7779999999999998)
         (name "IN-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 6.35 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U304_SN74LVC1G74DCTR"
     (pin_names
       (offset 0.7111999999999999))
@@ -5788,17 +5788,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G74DCTR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:TI_DCT0008A_SN74LVC1G74"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U304_SN74LVC1G74DCTR_0_1"
       (rectangle
@@ -5816,88 +5816,88 @@
         (name "CLK"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 2.54 0)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 -1.27 180)
         (length 1.7779999999999998)
         (name "nQ"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -10.16 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 2.54 180)
         (length 1.7779999999999998)
         (name "Q"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -1.27 0)
         (length 1.7779999999999998)
         (name "nCLR"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -5.08 0)
         (length 1.7779999999999998)
         (name "nPRE"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 11.43 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U305_SN74LVC1G11DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -5908,17 +5908,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G11DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U305_SN74LVC1G11DBVR_0_1"
       (rectangle
@@ -5936,66 +5936,66 @@
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -8.89 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 0.0 0)
         (length 1.7779999999999998)
         (name "B"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 0.0 180)
         (length 1.7779999999999998)
         (name "Y"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 8.89 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -3.81 0)
         (length 1.7779999999999998)
         (name "C"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U306_TPS7A1601DGNR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6006,17 +6006,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "TPS7A1601DGNR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U306_TPS7A1601DGNR_0_1"
       (rectangle
@@ -6034,99 +6034,99 @@
         (name "OUT"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at 10.16 0.0 180)
         (length 1.7779999999999998)
         (name "FB"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin open_collector line
         (at 10.16 -3.81 180)
         (length 1.7779999999999998)
         (name "PG"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -3.81 -10.16 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -11.43 0.0 0)
         (length 1.7779999999999998)
         (name "EN"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin no_connect line
         (at 2.54 -10.16 90)
         (length 1.7779999999999998)
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -11.43 -3.81 0)
         (length 1.7779999999999998)
         (name "DELAY"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -11.43 3.81 0)
         (length 1.7779999999999998)
         (name "IN"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -10.16 90)
         (length 1.7779999999999998)
         (name "EP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "9"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U307_TPS7A1601DGNR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6137,17 +6137,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "TPS7A1601DGNR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U307_TPS7A1601DGNR_0_1"
       (rectangle
@@ -6165,99 +6165,99 @@
         (name "OUT"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at 11.43 0.0 180)
         (length 1.7779999999999998)
         (name "FB"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin open_collector line
         (at 11.43 -3.81 180)
         (length 1.7779999999999998)
         (name "PG"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -2.54 -10.16 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -10.16 0.0 0)
         (length 1.7779999999999998)
         (name "EN"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin no_connect line
         (at 3.81 -10.16 90)
         (length 1.7779999999999998)
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -10.16 -3.81 0)
         (length 1.7779999999999998)
         (name "DELAY"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -10.16 3.81 0)
         (length 1.7779999999999998)
         (name "IN"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -10.16 90)
         (length 1.7779999999999998)
         (name "EP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "9"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U308_TPS3808G25DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6268,17 +6268,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "TPS3808G25DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U308_TPS3808G25DBVR_0_1"
       (rectangle
@@ -6296,66 +6296,66 @@
         (name "nRESET"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -8.89 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 0.0 0)
         (length 1.7779999999999998)
         (name "nMR"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -8.89 -3.81 0)
         (length 1.7779999999999998)
         (name "CT"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 3.81 0)
         (length 1.7779999999999998)
         (name "SENSE"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 8.89 270)
         (length 1.7779999999999998)
         (name "VDD"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U309_SN74LVC1G74DCTR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6366,17 +6366,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G74DCTR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:TI_DCT0008A_SN74LVC1G74"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U309_SN74LVC1G74DCTR_0_1"
       (rectangle
@@ -6394,88 +6394,88 @@
         (name "CLK"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 2.54 0)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 -1.27 180)
         (length 1.7779999999999998)
         (name "nQ"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -10.16 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 2.54 180)
         (length 1.7779999999999998)
         (name "Q"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -1.27 0)
         (length 1.7779999999999998)
         (name "nCLR"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -5.08 0)
         (length 1.7779999999999998)
         (name "nPRE"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 11.43 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U310_SN74LVC1G11DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6486,17 +6486,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G11DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U310_SN74LVC1G11DBVR_0_1"
       (rectangle
@@ -6514,66 +6514,66 @@
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -8.89 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 0.0 0)
         (length 1.7779999999999998)
         (name "B"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 0.0 180)
         (length 1.7779999999999998)
         (name "Y"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 8.89 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -3.81 0)
         (length 1.7779999999999998)
         (name "C"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U311_SN74LVC1G11DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6584,17 +6584,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G11DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U311_SN74LVC1G11DBVR_0_1"
       (rectangle
@@ -6612,66 +6612,66 @@
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -8.89 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 0.0 0)
         (length 1.7779999999999998)
         (name "B"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 0.0 180)
         (length 1.7779999999999998)
         (name "Y"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 8.89 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -3.81 0)
         (length 1.7779999999999998)
         (name "C"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U312_SN74LVC1G08DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6682,17 +6682,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G08DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U312_SN74LVC1G08DBVR_0_1"
       (rectangle
@@ -6710,55 +6710,55 @@
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -2.54 0)
         (length 1.7779999999999998)
         (name "B"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -7.62 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 0.0 180)
         (length 1.7779999999999998)
         (name "Y"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 6.35 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U313_SN74LVC1G14DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6769,17 +6769,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G14DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U313_SN74LVC1G14DBVR_0_1"
       (rectangle
@@ -6797,55 +6797,55 @@
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -7.62 0.0 0)
         (length 1.7779999999999998)
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -1.27 -6.35 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 7.62 0.0 180)
         (length 1.7779999999999998)
         (name "Y"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 7.62 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U314_SN74LVC1G17DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6856,17 +6856,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "SN74LVC1G17DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U314_SN74LVC1G17DBVR_0_1"
       (rectangle
@@ -6884,55 +6884,55 @@
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -7.62 0.0 0)
         (length 1.7779999999999998)
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at -2.54 -6.35 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 6.35 0.0 180)
         (length 1.7779999999999998)
         (name "Y"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 7.62 270)
         (length 1.7779999999999998)
         (name "VCC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "U315_UCC27511DBVR"
     (pin_names
       (offset 0.7111999999999999))
@@ -6943,17 +6943,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "UCC27511DBVR"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "U315_UCC27511DBVR_0_1"
       (rectangle
@@ -6971,66 +6971,66 @@
         (name "VDD"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 1.27 180)
         (length 1.7779999999999998)
         (name "OUTH"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin output line
         (at 8.89 -1.27 180)
         (length 1.7779999999999998)
         (name "OUTL"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin power_in line
         (at 0.0 -7.62 90)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 -1.27 0)
         (length 1.7779999999999998)
         (name "IN-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -8.89 1.27 0)
         (length 1.7779999999999998)
         (name "IN+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "Q301_BSC034N06NSATMA1"
     (pin_names
       (offset 0.7111999999999999))
@@ -7041,17 +7041,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "BSC034N06NSATMA1"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Infineon_BSC034N06NS_8pin"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "Q301_BSC034N06NSATMA1_0_1"
       (rectangle
@@ -7069,88 +7069,88 @@
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 11.43 0.0 180)
         (length 1.7779999999999998)
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 11.43 -3.81 180)
         (length 1.7779999999999998)
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at 0.0 -10.16 90)
         (length 1.7779999999999998)
         (name "G"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -10.16 5.08 0)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -10.16 1.27 0)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -10.16 -1.27 0)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -10.16 -5.08 0)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "Q302_BSC034N06NSATMA1"
     (pin_names
       (offset 0.7111999999999999))
@@ -7161,17 +7161,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "BSC034N06NSATMA1"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Infineon_BSC034N06NS_8pin"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "Q302_BSC034N06NSATMA1_0_1"
       (rectangle
@@ -7189,88 +7189,88 @@
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -11.43 0.0 0)
         (length 1.7779999999999998)
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -11.43 -3.81 0)
         (length 1.7779999999999998)
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at 0.0 -10.16 90)
         (length 1.7779999999999998)
         (name "G"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 10.16 5.08 180)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 10.16 1.27 180)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 10.16 -1.27 180)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 10.16 -5.08 180)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "Q303_CSD18540Q5B"
     (pin_names
       (offset 0.7111999999999999))
@@ -7281,17 +7281,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "CSD18540Q5B"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:TI_Q5B_CSD18540Q5B"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "Q303_CSD18540Q5B_0_1"
       (rectangle
@@ -7309,88 +7309,88 @@
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -7.62 90)
         (length 1.7779999999999998)
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 -7.62 90)
         (length 1.7779999999999998)
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin input line
         (at -10.16 0.0 0)
         (length 1.7779999999999998)
         (name "G"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "4"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -5.08 6.35 270)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "5"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -1.27 6.35 270)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "6"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 1.27 6.35 270)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "7"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 5.08 6.35 270)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "8"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "Q304_2N7002_215"
     (pin_names
       (offset 0.7111999999999999))
@@ -7401,17 +7401,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "2N7002,215"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "Q304_2N7002_215_0_1"
       (rectangle
@@ -7429,33 +7429,33 @@
         (name "G"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -7.62 90)
         (length 1.7779999999999998)
         (name "S"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin open_collector line
         (at 0.0 6.35 270)
         (length 1.7779999999999998)
         (name "D"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "D301_BAS116_215"
     (pin_names
       (offset 0.7111999999999999))
@@ -7466,17 +7466,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "BAS116,215"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "D301_BAS116_215_0_1"
       (rectangle
@@ -7494,33 +7494,33 @@
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin no_connect line
         (at 0.0 -7.62 90)
         (length 1.7779999999999998)
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 5.08 0.0 180)
         (length 1.7779999999999998)
         (name "K"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "D302_BAS116_215"
     (pin_names
       (offset 0.7111999999999999))
@@ -7531,17 +7531,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "BAS116,215"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "D302_BAS116_215_0_1"
       (rectangle
@@ -7559,33 +7559,33 @@
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin no_connect line
         (at 0.0 -7.62 90)
         (length 1.7779999999999998)
         (name "NC"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 7.62 0.0 180)
         (length 1.7779999999999998)
         (name "K"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "3"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R301_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -7597,17 +7597,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "11.3k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R301_Resistor_specification_0_1"
       (rectangle
@@ -7625,22 +7625,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R302_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -7652,17 +7652,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10.0k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R302_Resistor_specification_0_1"
       (rectangle
@@ -7680,22 +7680,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R303_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -7707,17 +7707,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "1.00k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R303_Resistor_specification_0_1"
       (rectangle
@@ -7735,22 +7735,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R304_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -7762,17 +7762,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R304_Resistor_specification_0_1"
       (rectangle
@@ -7790,22 +7790,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R305_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -7817,17 +7817,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "2.2M"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R305_Resistor_specification_0_1"
       (rectangle
@@ -7845,22 +7845,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R306_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -7872,17 +7872,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "1.00"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R306_Resistor_specification_0_1"
       (rectangle
@@ -7900,22 +7900,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R307_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -7927,17 +7927,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R307_Resistor_specification_0_1"
       (rectangle
@@ -7955,22 +7955,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R308_WFMB2512R0330FEA"
     (pin_names
       (offset 0.5334)
@@ -7982,17 +7982,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "0.033"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Vishay_WFM2512"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R308_WFMB2512R0330FEA_0_1"
       (rectangle
@@ -8010,22 +8010,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R309_WFMB2512R0330FEA"
     (pin_names
       (offset 0.5334)
@@ -8037,17 +8037,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "0.033"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Vishay_WFM2512"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R309_WFMB2512R0330FEA_0_1"
       (rectangle
@@ -8065,22 +8065,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R310_WFMB2512R0330FEA"
     (pin_names
       (offset 0.5334)
@@ -8092,17 +8092,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "0.033"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Vishay_WFM2512"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R310_WFMB2512R0330FEA_0_1"
       (rectangle
@@ -8120,22 +8120,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R311_WFMB2512R0330FEA"
     (pin_names
       (offset 0.5334)
@@ -8147,17 +8147,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "0.033"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Vishay_WFM2512"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R311_WFMB2512R0330FEA_0_1"
       (rectangle
@@ -8175,22 +8175,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R312_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8202,17 +8202,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "31.9k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R312_Resistor_specification_0_1"
       (rectangle
@@ -8230,22 +8230,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R313_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8257,17 +8257,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10.0k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R313_Resistor_specification_0_1"
       (rectangle
@@ -8285,22 +8285,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R314_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8312,17 +8312,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "53.9k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R314_Resistor_specification_0_1"
       (rectangle
@@ -8340,22 +8340,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R315_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8367,17 +8367,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10.0k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R315_Resistor_specification_0_1"
       (rectangle
@@ -8395,22 +8395,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R316_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8422,17 +8422,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R316_Resistor_specification_0_1"
       (rectangle
@@ -8450,22 +8450,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R317_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8477,17 +8477,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R317_Resistor_specification_0_1"
       (rectangle
@@ -8505,22 +8505,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R318_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8532,17 +8532,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "47k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R318_Resistor_specification_0_1"
       (rectangle
@@ -8560,22 +8560,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R319_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8587,17 +8587,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R319_Resistor_specification_0_1"
       (rectangle
@@ -8615,22 +8615,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R320_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8642,17 +8642,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R320_Resistor_specification_0_1"
       (rectangle
@@ -8670,22 +8670,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 2.54 0.0 180)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R321_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8697,17 +8697,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R321_Resistor_specification_0_1"
       (rectangle
@@ -8725,22 +8725,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R322_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -8752,17 +8752,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R322_Resistor_specification_0_1"
       (rectangle
@@ -8780,22 +8780,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C301_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -8807,17 +8807,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "220nF 50V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C301_Capacitor_specification_0_1"
       (polyline
@@ -8863,22 +8863,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C302_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -8890,17 +8890,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "1uF 16V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C302_Capacitor_specification_0_1"
       (polyline
@@ -8946,22 +8946,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C303_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -8973,17 +8973,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C303_Capacitor_specification_0_1"
       (polyline
@@ -9029,22 +9029,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C304_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9056,17 +9056,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C304_Capacitor_specification_0_1"
       (polyline
@@ -9112,22 +9112,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C305_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9139,17 +9139,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10uF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C305_Capacitor_specification_0_1"
       (polyline
@@ -9195,22 +9195,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C306_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9222,17 +9222,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10uF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C306_Capacitor_specification_0_1"
       (polyline
@@ -9278,22 +9278,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C307_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9305,17 +9305,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "1uF 50V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C307_Capacitor_specification_0_1"
       (polyline
@@ -9361,22 +9361,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C308_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9388,17 +9388,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C308_Capacitor_specification_0_1"
       (polyline
@@ -9444,22 +9444,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C309_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9471,17 +9471,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "1uF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C309_Capacitor_specification_0_1"
       (polyline
@@ -9527,22 +9527,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C310_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9554,17 +9554,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C310_Capacitor_specification_0_1"
       (polyline
@@ -9610,22 +9610,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C311_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9637,17 +9637,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "1uF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C311_Capacitor_specification_0_1"
       (polyline
@@ -9693,22 +9693,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C312_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9720,17 +9720,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C312_Capacitor_specification_0_1"
       (polyline
@@ -9776,22 +9776,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C313_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9803,17 +9803,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C313_Capacitor_specification_0_1"
       (polyline
@@ -9859,22 +9859,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C314_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9886,17 +9886,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "220nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C314_Capacitor_specification_0_1"
       (polyline
@@ -9942,22 +9942,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C315_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -9969,17 +9969,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C315_Capacitor_specification_0_1"
       (polyline
@@ -10025,22 +10025,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C316_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10052,17 +10052,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C316_Capacitor_specification_0_1"
       (polyline
@@ -10108,22 +10108,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C317_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10135,17 +10135,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C317_Capacitor_specification_0_1"
       (polyline
@@ -10191,22 +10191,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C318_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10218,17 +10218,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C318_Capacitor_specification_0_1"
       (polyline
@@ -10274,22 +10274,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C319_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10301,17 +10301,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C319_Capacitor_specification_0_1"
       (polyline
@@ -10357,22 +10357,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -2.54 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C320_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10384,17 +10384,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C320_Capacitor_specification_0_1"
       (polyline
@@ -10440,22 +10440,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C321_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10467,17 +10467,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C321_Capacitor_specification_0_1"
       (polyline
@@ -10523,22 +10523,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C322_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10550,17 +10550,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C322_Capacitor_specification_0_1"
       (polyline
@@ -10606,22 +10606,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C323_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10633,17 +10633,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C323_Capacitor_specification_0_1"
       (polyline
@@ -10689,22 +10689,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C324_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10716,17 +10716,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C324_Capacitor_specification_0_1"
       (polyline
@@ -10772,22 +10772,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C325_Capacitor_specification"
     (pin_names
       (offset 0.5334)
@@ -10799,17 +10799,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "100nF 25V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C325_Capacitor_specification_0_1"
       (polyline
@@ -10855,22 +10855,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C330_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -10882,17 +10882,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C330_PCH1V471MCL1GS_0_1"
       (polyline
@@ -10956,22 +10956,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C331_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -10983,17 +10983,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C331_PCH1V471MCL1GS_0_1"
       (polyline
@@ -11057,22 +11057,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C332_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -11084,17 +11084,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C332_PCH1V471MCL1GS_0_1"
       (polyline
@@ -11158,22 +11158,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C333_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -11185,17 +11185,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C333_PCH1V471MCL1GS_0_1"
       (polyline
@@ -11259,22 +11259,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C334_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -11286,17 +11286,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C334_PCH1V471MCL1GS_0_1"
       (polyline
@@ -11360,22 +11360,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C335_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -11387,17 +11387,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C335_PCH1V471MCL1GS_0_1"
       (polyline
@@ -11461,22 +11461,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C336_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -11488,17 +11488,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C336_PCH1V471MCL1GS_0_1"
       (polyline
@@ -11562,22 +11562,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "C337_PCH1V471MCL1GS"
     (pin_names
       (offset 0.5334)
@@ -11589,17 +11589,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "470uF 35V"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Nichicon_PCH_10x16"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "C337_PCH1V471MCL1GS_0_1"
       (polyline
@@ -11663,22 +11663,22 @@
         (name "+"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "-"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "J301_PinHeader_1x02"
     (pin_names
       (offset 0.7111999999999999))
@@ -11689,17 +11689,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "ARM button"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "J301_PinHeader_1x02_0_1"
       (rectangle
@@ -11717,22 +11717,22 @@
         (name "BUTTON"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -6.35 -1.27 0)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "J302_PinHeader_1x02"
     (pin_names
       (offset 0.7111999999999999))
@@ -11743,17 +11743,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "RESET button"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "J302_PinHeader_1x02_0_1"
       (rectangle
@@ -11771,22 +11771,22 @@
         (name "BUTTON"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at -8.89 -1.27 0)
         (length 1.7779999999999998)
         (name "GND"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "TP301_TestPoint"
     (pin_names
       (offset 0.5334)
@@ -11798,17 +11798,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "VOUT_5V1"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "TP301_TestPoint_0_1"
       (circle
@@ -11826,11 +11826,11 @@
         (name "TP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "TP302_TestPoint"
     (pin_names
       (offset 0.5334)
@@ -11842,17 +11842,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "VOUT_PROTECTED"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "TP302_TestPoint_0_1"
       (circle
@@ -11870,11 +11870,11 @@
         (name "TP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "TP303_TestPoint"
     (pin_names
       (offset 0.5334)
@@ -11886,17 +11886,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "REF_2V5"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "TP303_TestPoint_0_1"
       (circle
@@ -11914,11 +11914,11 @@
         (name "TP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "TP304_TestPoint"
     (pin_names
       (offset 0.5334)
@@ -11930,17 +11930,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "PROT_MID"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "TP304_TestPoint_0_1"
       (circle
@@ -11958,11 +11958,11 @@
         (name "TP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "TP305_TestPoint"
     (pin_names
       (offset 0.5334)
@@ -11974,17 +11974,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "PROT_GATE"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "TP305_TestPoint_0_1"
       (circle
@@ -12002,11 +12002,11 @@
         (name "TP"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "D303_BAT46W_E3_08"
     (pin_names
       (offset 0.5334)
@@ -12018,17 +12018,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "BAT46W-E3-08"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "V1A_Qualified:Vishay_BAT46W_A1_K2"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "D303_BAT46W_E3_08_0_1"
       (polyline
@@ -12074,22 +12074,22 @@
         (name "A"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 3.81 0.0 180)
         (length 1.7779999999999998)
         (name "K"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "R323_Resistor_specification"
     (pin_names
       (offset 0.5334)
@@ -12101,17 +12101,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "10k"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "R323_Resistor_specification_0_1"
       (rectangle
@@ -12129,22 +12129,22 @@
         (name "1"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))
+              (size 1.524 1.524)))))
       (pin passive line
         (at 0.0 -3.81 90.0)
         (length 1.7779999999999998)
         (name "2"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "2"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "#FLG301_"
     (pin_names
       (offset 0.5334)
@@ -12156,17 +12156,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "PWR_FLAG"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "#FLG301__0_1"
       (polyline
@@ -12203,11 +12203,11 @@
         (name "PWR"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27)))))))
+              (size 1.524 1.524)))))))
   (symbol "#FLG302_"
     (pin_names
       (offset 0.5334)
@@ -12219,17 +12219,17 @@
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Value" "PWR_FLAG"
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))))
+          (size 1.524 1.524))))
     (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
-          (size 1.27 1.27))
+          (size 1.524 1.524))
         (hide yes)))
     (symbol "#FLG302__0_1"
       (polyline
@@ -12266,8 +12266,8 @@
         (name "PWR"
           (effects
             (font
-              (size 1.27 1.27))))
+              (size 1.524 1.524))))
         (number "1"
           (effects
             (font
-              (size 1.27 1.27))))))))
+              (size 1.524 1.524))))))))
