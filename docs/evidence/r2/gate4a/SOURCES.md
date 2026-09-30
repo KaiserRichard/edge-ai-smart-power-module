@@ -52,3 +52,6 @@ Additional exact document revisions/files, usage, license, modifications and att
 |ina228 / SLYS021A, May2022|[ADCRANGE and shunt input/accuracy limits](https://www.ti.com/lit/ds/symlink/ina228.pdf); `third_party/documents/gate4a/ina228.pdf`; FETCHED; REFERENCED|
 
 Exact suffix availability/lifecycle is OPEN before procurement. Manufacturer order-code construction is the basis for passive candidates. Pin/land/package verification remains mandatory for every changed MPN, including proposed THT L201 and changed TVS/fuse. The register exposes the missing autonomous FAULT_TRIGGER rather than inventing its MPN.
+
+
+FIX-S03: TI SN74AHCT1G125 SCLS378P March2024, exact SN74AHCT1G125DBVR order entry, accessed2026-09-30. [Datasheet](https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf), [order entry](https://www.ti.com/product/SN74AHCT1G125/part-details/SN74AHCT1G125DBVR). Studied identity, DBV pins, voltage/DC/loading and partial-power limitations; REFERENCED only. TI copyright, no open redistribution license inferred. No upstream file/circuit/PCB copied or modified; two-channel proposal replaced with two single-channel circuits. Attribution by manufacturer/document/URLs.

@@ -37,3 +37,9 @@ Equipment: a current-limited programmable 0…30 V bench supply with measured ou
 - Telemetry after faults: continuity/polarity/pulse survival first; four-wire shunt/calibrated V/I/P/E, I2C states and accuracy against declared error/temperature range. Host/SBC connection remains prohibited while other gates are unresolved.
 
 **Results record:** one row per voltage/load/temperature/C/ESR/harness/fault mode, commit/testboard/fixture/instrument revision, calibrated peak±uncertainty/minimum±uncertainty, trigger→endpoints with bounds, charge/energy, actual temperatures, fault/reset outcome, raw-file paths and PASS/FAIL/INCONCLUSIVE with the failed criterion. Record failed traces; do not delete them. An instrumented dummy-board PASS is evidence for its measured conditions; Pi integration additionally requires actual Pi input-range/interface and all repository gates to close.
+
+## T03 — BUFFER-SEQUENCING (R4A-03)
+
+DECISION: U319/U324 and their exact pin/net/bypass/pulldown circuit are S03-05. Sweep DET_5V 0→5.5→0 V and3V3_AUX0→3.4→0 V in both orders, independently disconnected supplies, both PG states, heldARM/reset. Begin with no main source and isolated monitored supplies, then current-limited dummy load after the interlock is complete. Measure buffered PG outputs, DET5 injected current, MAIN_PERMISSION, SHDN, RUN and physical series/source conduction.
+
+PASS: no MAIN_PERMISSION/series/source conduction until valid rails and a fresh ARM; no disconnected DET5 rise above0.3 V; PG static high/low and≤50µA output loading meet R4A-03 bounds; all pins/current remain within manufacturer limits. Include slow ramps and fast brownout, not just binary power states. Measurement is necessary because AHCT supplies no powered-off-output functional guarantee. Prerequisite: R4A-15 actual interlock; an unbuilt policy cannot receive PASS. No test run.

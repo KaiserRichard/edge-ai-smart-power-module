@@ -276,15 +276,20 @@
       "refdes": [
         "R316",
         "R317",
-        "U319"
+        "U319",
+        "U324",
+        "R368",
+        "R369",
+        "C360",
+        "C361"
       ],
       "old": "R316: Resistor_specification / 10k; R317: Resistor_specification / 10k; U319: NEW",
-      "new_mpn": "TNPW060310K0BEEA x2; SN74AHCT2G125DCUR",
-      "new_value_or_connection": "PG pullups to independent 3V3_AUX; 5 V AHCT buffer for 3.3 V signals",
+      "new_mpn": "TNPW060310K0BEEA x2; SN74AHCT1G125DBVR x2; TNPW0603220KBEEA x2; GRM188R71H104KA93D x2",
+      "new_value_or_connection": "R316/R31710k from3V3_AUX to SUPPLY_OK/BUCK_PGOOD respectively. U319/U324 DBV pin1 OE=GND,2 A=SUPPLY_OK/BUCK_PGOOD,3 GND,4 Y=SUPPLY_OK_5V/BUCK_PG_5V,5 VCC=DET_5V. R368/R369220k Y→GND. C360/C361100nF VCC→GND at pins. All existing PG receivers reconnect to corresponding Y; U307 PG removed with DNP.",
       "reason": "TPS7A16 PG recommended ceiling5V; 3.3V not guaranteed LVC high at5V",
-      "governing_equation": "VOH_3V3>=VIH_buffer; output-high/low and Ioff at all partial supplies",
-      "status": "CONDITIONAL; buffer pin/power state review OPEN",
-      "source": "COMMON"
+      "governing_equation": "VIH=2V,VIL=0.8V; output load≤50µA; VOH≥4.4V vs LVC VIH≤3.85V",
+      "status": "R4A-03 identity/pins CORRECTED; T03 partial-power BENCH REQUIRED",
+      "source": "FIX-S03 TI SCLS378P / exact DBVR order page"
     },
     {
       "id": "S03-06",
