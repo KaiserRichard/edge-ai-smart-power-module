@@ -93,3 +93,56 @@ The five files contain 25 copy-paste prompts covering the 12 regenerations, 8 re
 **LIMIT:** macOS denied filesystem access to `/Users/quockaiser/Documents`, so the Obsidian search covered the accessible Desktop vault and the full Research tree, not Documents. No KiCad project was opened or edited. This audit does not validate the circuit or the generated images; it sets the visual work queue and required review checks.
 
 **NEXT:** Generate P0 first. Review it for tool placement, current-limited source, dummy load, current probe/scope measurement and explicit no-Pi boundary. Then generate the D architecture and updated source boundary. Keep all application voltage margins OPEN until dummy-load tests produce evidence.
+
+## Image folder consolidation (2026-09-30)
+
+At the owner's request, all images now live in one folder, `images/`, in the Obsidian vault (`~/Desktop/Research/edge-ai-smart-power-module`). Files from `assets/` kept their names; files from `new_assets/` were renamed to lowercase-hyphen names that keep their batch prefix. The lesson notes (`docs/lessons/`) link the new names.
+
+| Old location | Old name | New name in `images/` |
+| --- | --- | --- |
+| `assets/` | `00-v1a-kicad-sheet-map.png` | `00-v1a-kicad-sheet-map.png` |
+| `assets/` | `00-v1a-system-anatomy.png` | `00-v1a-system-anatomy.png` |
+| `assets/` | `01-input-fault-timescale-map.png` | `01-input-fault-timescale-map.png` |
+| `assets/` | `01-input-protection-pcb-placement.png` | `01-input-protection-pcb-placement.png` |
+| `assets/` | `01-reverse-mosfet-operating-states.png` | `01-reverse-mosfet-operating-states.png` |
+| `assets/` | `01-tps26630-functional-anatomy.png` | `01-tps26630-functional-anatomy.png` |
+| `assets/` | `01-v1a-to-wbr-system-architecture.png` | `01-v1a-to-wbr-system-architecture.png` |
+| `assets/` | `02-buck-high-side-on.png` | `02-buck-high-side-on.png` |
+| `assets/` | `02-buck-low-side-on.png` | `02-buck-low-side-on.png` |
+| `assets/` | `02-buck-waveforms.png` | `02-buck-waveforms.png` |
+| `assets/` | `02-inductor-selection.png` | `02-inductor-selection.png` |
+| `assets/` | `02-input-hot-loop.png` | `02-input-hot-loop.png` |
+| `assets/` | `02-lm61460-feedback-loop.png` | `02-lm61460-feedback-loop.png` |
+| `assets/` | `02-lm61460-ideal-placement.png` | `02-lm61460-ideal-placement.png` |
+| `assets/` | `02-output-capacitor-real-behavior.png` | `02-output-capacitor-real-behavior.png` |
+| `assets/` | `02-v1a-circuit-anatomy.png` | `02-v1a-circuit-anatomy.png` |
+| `assets/` | `03-buck-power-flow-and-waveforms.png` | `03-buck-power-flow-and-waveforms.png` |
+| `assets/` | `04-protection-and-operating-states.png` | `04-protection-and-operating-states.png` |
+| `assets/` | `05-pcb-layout-kelvin-and-thermal.png` | `05-pcb-layout-kelvin-and-thermal.png` |
+| `assets/` | `06-power-board-bringup-and-characterization.png` | `06-power-board-bringup-and-characterization.png` |
+| `assets/` | `07-wbr-power-distribution-board.png` | `07-wbr-power-distribution-board.png` |
+| `new_assets/` | `C1 — Buck high-side MOSFET on.png` | `c1-buck-high-side-mosfet-on.png` |
+| `new_assets/` | `A1 — P0 fault-injection bench setup.png` | `a1-p0-fault-injection-bench-setup.png` |
+| `new_assets/` | `A2 — Sheet 03 architecture D.png` | `a2-sheet-03-architecture-d.png` |
+| `new_assets/` | `A3 — Present source boundary.png` | `a3-present-source-boundary.png` |
+| `new_assets/` | `A4 — Fault-event sequence.png` | `a4-fault-event-sequence.png` |
+| `new_assets/` | `A5 — Pi power harness boundary .png` | `a5-pi-power-harness-boundary.png` |
+| `new_assets/` | `B1 — Input fault:timescale map.png` | `b1-input-fault-timescale-map.png` |
+| `new_assets/` | `B2 — Conceptual input protection placement.png` | `b2-conceptual-input-protection-placement.png` |
+| `new_assets/` | `B3 — Reverse polarity and backfeed teaching diagram.png` | `b3-reverse-polarity-and-backfeed-teaching-diagram.png` |
+| `new_assets/` | `B4 — TPS26630 functional role and timing concept .png` | `b4-tps26630-functional-role-and-timing-concept.png` |
+| `new_assets/` | `B5 — Standalone V1A and future integration boundary.png` | `b5-standalone-v1a-and-future-integration-boundary.png` |
+| `new_assets/` | `C2 — Buck low-side:freewheel state.png` | `c2-buck-low-side-freewheel-state.png` |
+| `new_assets/` | `C3 — Buck cycle waveforms.png` | `c3-buck-cycle-waveforms.png` |
+| `new_assets/` | `C4 — 10 µH alloy inductor selection.png` | `c4-10-h-alloy-inductor-selection.png` |
+| `new_assets/` | `C5 — Buck power flow and both states.png` | `c5-buck-power-flow-and-both-states.png` |
+| `new_assets/` | `D1 — KiCad sheet map.png` | `d1-kicad-sheet-map.png` |
+| `new_assets/` | `D2 — V1A system anatomy.png` | `d2-v1a-system-anatomy.png` |
+| `new_assets/` | `D3 — V1A circuit anatomy without fake hardware.png` | `d3-v1a-circuit-anatomy-without-fake-hardware.png` |
+| `new_assets/` | `D4 — Buck input switching loop.png` | `d4-buck-input-switching-loop.png` |
+| `new_assets/` | `D5 — LM61460 feedback principle.png` | `d5-lm61460-feedback-principle.png` |
+| `new_assets/` | `E1 — Capacitor behavior and effective capacitance.png` | `e1-capacitor-behavior-and-effective-capacitance.png` |
+| `new_assets/` | `E2 — LM61460 placement principles.png` | `e2-lm61460-placement-principles.png` |
+| `new_assets/` | `E3 — Protection states and fault response.png` | `e3-protection-states-and-fault-response.png` |
+| `new_assets/` | `E4 — PCB layout principles without implying a routed board.png` | `e4-pcb-layout-principles-without-implying-a-routed-board.png` |
+| `new_assets/` | `E5 — Safe bring-up and characterization.png` | `e5-safe-bring-up-and-characterization.png` |
