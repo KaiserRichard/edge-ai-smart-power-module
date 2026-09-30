@@ -53,3 +53,9 @@ PASS: eachVGS−U≥10.0V through every intendedON interval, no continuing droop
 ## T05 — BOOT-CAP-REFERENCE (R4A-05)
 
 InspectC301BST–TS andC302REF–GND as separate1µF50V parts. Measure C301 effective capacitance atactual differential bias/temperature, including source-following/probe fixture; characterize actual gate-event charge/droop. Measure REF_2V5 startup, load and noise withC302, inT06powered/off-state sequencing. PASS: C301eff≥330nF; gate-event droop plus uncertainty≤0.25V andeachVGS−U≥10V throughout itsON interval; REF2V5 stays inside the T06error stack with stable startup/no oscillation. If gatecharge exceeds82nC, raiseCfloor frommeasuredQ/0.25V and recompute before claimingPASS. CapacitorDCbias andactualcharge cannot be bounded bynominal1µF alone. No test run.
+
+## T06 — DETECTOR-PARTIAL-POWER (R4A-06 / M03)
+
+UseS03-02/03 revisedR3019.88k/R30210k/R3031k/R36782k circuit. With bounded isolated signal source, sweepactualrawfrom0 toconditional6.882V andapplytheT09negative waveform; separatelybenchcheckhigherDIVsignalswithinADG16Vblockingrange, without exposingrawbuckto58.1V. TestDET5/DRV_HOLD0,minimumvalid,nominal andslow/fast independentramps; PG high/low andARM/resetstates. MeasureREF2V5,CLAMP2V5,DIV,SENSE,DET5injectedcurrent,U303out andlatch; recordprobeC/leakage.
+
+PASS: complete measuredloadedtripupper/lower anduncertainty areentered intheT08/T10 model; nofalsefault onqualifiednormalwaveforms; validrailsproduce specifiedfaultaction; whenoff,no comparatorinput outside−0.3…VCC+0.3V guardandnoratingcurrentviolation/backfeed>0.3V. Ground-returnshuntcurrentmeets80µAminimumwheneverregulation iscredited and≤15mAmaximum. Normalanalog operation stayswithin−0.2…VCC+0.2V. Negativepulse andpartialrampconduction cannot be assumed fromVFtypicaloroffDCleakage. Anyguardfailure means redesign; no observedfailure may beaveraged away. No test run.

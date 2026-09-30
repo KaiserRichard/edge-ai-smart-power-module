@@ -224,12 +224,12 @@
         "R303"
       ],
       "old": "U302: REF5025IDGKR / REF5025 2.5V DATASHEET; U303: TLV3201AIDBVR / TLV3201AIDBVR; R301: Resistor_specification / 11.3k; R302: Resistor_specification / 10.0k; R303: Resistor_specification / 1.00k",
-      "new_mpn": "REF5025IDGKR; TLV3201AIDBVR; TNPW060311K3BEEA; TNPW060310K0BEEA; TNPW06031K00BEEA",
-      "new_value_or_connection": "retain nominal 11.3k/10k and 1k sense; integrate independently powered clamp only after revised error stack",
+      "new_mpn": "REF5025IDGKR; TLV3201AIDBVR; TNPW06039K88BEEA; TNPW060310K0BEEA; TNPW06031K00BEEA",
+      "new_value_or_connection": "R3019.88k VOUT_5V1→DIV; R30210k DIV→GND; DIV→U321S1; U321D1→R3031k→SENSE/U303IN−; U303IN+=REF2V5. R36782k SENSE→GND compensates power-off leakage/loading. Raw OV comparator output low asserts genuinefault; upstream sinkD301 removed fromREF2V5.",
       "reason": "Preserve owner threshold chain; added protection leakage/capacitance cannot be omitted",
-      "governing_equation": "Vtrip=(Vref+Vos)*(1+R301/R302)+Ileak*R301; tod=20mV*(1+Rt/Rb)/slew",
-      "status": "BLOCKED full detector freeze: new clamp error and timing OPEN",
-      "source": "G2C/PASSIVES"
+      "governing_equation": "G=1+Rs/Rp+(Rt/Rb)(1+Rs/Rp)+Rt/Rp; Vtrip_nom=2.5G=5.331829V;20mV*G=42.654634mV",
+      "status": "R4A-06 arithmetic/network revised; T06 static/partial-power BENCH REQUIRED",
+      "source": "FIX-D06 TLV3201/ADG4612/LM4040/BAS116/BAT46W"
     },
     {
       "id": "S03-03",
@@ -238,16 +238,18 @@
         "D301",
         "U321",
         "D321",
+        "D322",
         "R361",
-        "R367"
+        "R367",
+        "C362"
       ],
       "old": "D301: BAS116,215 / BAS116,215; U321: NEW; D321: NEW; R361: NEW",
-      "new_mpn": "BAS116,215; ADG4612BRUZ; LM4040A25IDBZR; TNPW0603100KBEEA; TNPW08051M00BEEA",
-      "new_value_or_connection": "PROPOSAL: DIV->BAS116->LM4040 shunt to GND,100k bias from DRV_HOLD; ADG4612 isolates comparator;1k series retained,1M sense-to-GND; remove D301->REF5025 sink path",
+      "new_mpn": "BAS116,215; ADG4612BRUZ; LM4040A25IDBZR; BAT46W-E3-08; TNPW060382K0BEEA x2; GRM188R71H104KA93D",
+      "new_value_or_connection": "D301anodeDIV/cathodeCLAMP2V5; D321LM4040cathodeCLAMP2V5/anodeGND/NCpad; R36182k DRV_HOLD→CLAMP2V5; D322BAT46WanodeGND/cathodeDIV. R36782k SENSE→GND. U321BRUZ TSSOP pin1IN1=DET5_VALID,2D1=R303,3S1=DIV,4VSS=GND,5GND,13VDD=DET_5V; pin12NC; unused6/7/8/9/10/11/14/15/16→GND. C362100nF pins13→5. NoREF5025faultsink.",
       "reason": "Existing reference must not absorb fault current while off",
-      "governing_equation": "Vtrip_nom=2.5*(1+11.3k/(10k||1M))=5.35325V; off leakage/pin voltage and negative clamp OPEN",
-      "status": "R4A-02 resistor identity CORRECTED; R4A-06 circuit remains BLOCKED",
-      "source": "M03"
+      "governing_equation": "3µA off*82.205k=246.615mV;38µA partialfault*82.205k=3.12379V before pinclamp; Ibias_shunt≥97.1µA vs80µA minimum",
+      "status": "R4A-06 selected correction; T06 required; ramp/transient extrema OPEN",
+      "source": "ADIADG4612Rev0 TI LM4040SLOS456Q; original BAS116/BAT46W source register"
     },
     {
       "id": "S03-04",

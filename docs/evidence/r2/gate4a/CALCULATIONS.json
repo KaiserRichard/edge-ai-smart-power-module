@@ -886,8 +886,10 @@
   },
   "detector": {
     "old_nominal_trip_V": 5.325,
-    "new1M_pulldown_nominal_trip_V": 5.353250000000001,
-    "sense20mV_overdrive_raw_increment_V": 0.0426,
+    "historical1M_pulldown_nominal_trip_V": 5.358574999999998,
+    "historical1M_20mV_raw_increment_V": 0.04286859999999999,
+    "revised82k_nominal_trip_V": 5.331829268292684,
+    "sense20mV_overdrive_raw_increment_V": 0.04265463414634147,
     "actual_trip_min_max_V": [
       null,
       null
@@ -988,6 +990,14 @@
         "equations": "Qpair published test maximum82nC gives Ceff≥82nC/0.25V=328nF; declared measured floor330nF yields ΔV≤0.248485V at that charge. Additional leakage/driver charge is measured, not hidden in82nC.50V rating exceeds12V bootstrap differential/2.5Vreference, not a dynamic differential proof. MLCC effective-C and REF50 loop stability depend on bias/temperature/ESR; nominal1µF cannot guarantee either.",
         "evidence": "Pinned PR15 completed.xml commit51d1c2ff1f7eca4f20eef137c1595e4b9e052a75; [Murata exact reference sheet GRM21BR71H105KA12-01,7-Mar-2016](https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H105KA12-01.pdf),30pages, SHA256 9921ee74a9703bfed89f091cba34075e54707b2487c428a984253470da53c52e; [TI REF50 SBOS410O](https://www.ti.com/lit/ds/symlink/ref50.pdf).",
         "bench": "T05 BOOT-CAP-REFERENCE: C301 effective≥330nF at measuredBST−TS/temperature, actual gate-event droop≤0.25V whileVGS−U≥10V; C302 stable/reference within completeT06threshold budget. T04DCbudget still mandatory. Measurement closes bias and real charge/stability; refdes itself is closed by exportednet connectivity."
+      },
+      {
+        "id": "R4A-06",
+        "status": "CORRECTED / BENCH REQUIRED",
+        "resolution": "Correct the historical1k/1M loaded trip to5.358575V andraw20mV overdrive42.8686mV. Replace that network withR3019.88k,R30210k,R3031k,R36782k; R36182k independentshunt bias, D322BAT46W negativeDIVclamp. ExactMPNs/pins inS03-02/03. U321 powered byDET5; enableDET5_VALID; unused pins defined. D301feeds independentLM4040 ground-return shunt, neverREF50.",
+        "equations": "HistoricalG=1+1k/1M+(11.3k/10k)(1+1k/1M)+11.3k/1M=2.14343: Vtrip5.358575V;20mVraw42.8686mV. RevisedG=2.1327317073: trip5.331829268V,overdrive42.654634mV. Declared25→85°Cscreen±0.25%R,REF±0.068%,Vos±4mV,test-conditionedRon0…17Ω,120nAonleak+5nAinput and80nAclamp-diode leakage gives5.303164…5.361687V, excluding unboundedhysteresis/load/PSRR/dynamicterms. Switchoff3µA×R367max82.205k=0.246615V before bias/capacitiveinjection, versus3.0075V for1M. Partial-powered16Vfaultleak38µA gives3.12379V beforeclamps; staticoffmath is notpartial-powerproof. AtDRV_HOLD10.5V/shunt2.5175V,R361max82.205k provides97.1µA>80µA minimum. Atconditionalraw6.881668V,DIVclamp≤3.5175V with1Vdiode allocation, availableclampcurrent≈0.339mA plusbias. ThediodeVF/negativeinput response still requiremeasuredcorners; operation below−0.2V is not credited.58.1V is aux-only: if itreachesraw,R301power≈0.303W exceeds0603 and mainbuck/caps fail their input envelope.",
+        "evidence": "[ADI ADG4612 Rev0](https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf),Tables3/5/8; [TI TLV3201 SBOS561C](https://www.ti.com/lit/ds/symlink/tlv3201.pdf); [TI LM4040 SLOS456Q](https://www.ti.com/lit/ds/symlink/lm4040.pdf); BAS116/BAT46W sources in SOURCES.md.",
+        "bench": "T06 DETECTOR-PARTIAL-POWER. PASS revisedloadedtrip is bounded andnohealthyfalsefault; atpoweroffeach comparatorpin≥−0.3V and≤VCC+0.3V designguard, injection within ratings andnoDET5backfeed>0.3V; reference/clampcurrentswithinratings; comparator atmin validrail meetsT08 andfar-endT10. If partial-power clamp transient fails, redesign before capture/release. Measurement closescapacitance, diodeknee/negativecommutation andramps not specified by static tables."
       }
     ]
   }
