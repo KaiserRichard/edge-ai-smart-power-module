@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-30",
+  "base_commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+  "branch": "feat/v1a-j502-connector",
+  "inputs": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/J502_SELECTION.md",
+      "sha256": "969c4a7fbe0d26b21b57676a3a760f6ee1e614528b4380ed17a4173e52ab6e2a",
+      "bytes": 1739
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/VERIFY_FOOTPRINTS.md",
+      "sha256": "a515d5c7e9c527b3f5d45b2b40a79e838083729ea1ba0938bf0899d69dd72583",
+      "bytes": 31697
+    },
+    {
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/PATH_BUDGET.md",
+      "sha256": "93e0c5fd17798dd038e95f9659cf10a563d93b9533baeadd5ffb39fc65f2b701",
+      "bytes": 42965
+    },
+    {
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/PATH_CALCULATIONS.json",
+      "sha256": "7ad3e2562273eb08921d6805331e9691324c4ce1c665fc88d56df1860ab308bc",
+      "bytes": 41493
+    },
+    {
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/SOURCES.md",
+      "sha256": "470a85131998ff8fc925565bcb6cc7eb09b7e5784b18c0355e312c9409de618f",
+      "bytes": 8044
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/J502_RESUME.md",
+      "sha256": "aa0a395e518a44803d93515976e166a006e9c1184f56b1fc6f3dc1bafd5173e4",
+      "bytes": 565
+    }
+  ],
+  "scope": "Analysis only; no KiCad edits; local commit authorized, push/PR withheld by conductor notes",
+  "resume_commit": "4ff92f3ef68822007642a0e2cbb09b351d043222",
+  "resume_remote_check": {
+    "fetch": "DENIED: cannot write .git/worktrees/wt-j502/FETCH_HEAD (Operation not permitted)",
+    "read_only_ls_remote": "PASS, 2026-09-30",
+    "refs/heads/feat/v1a-5a-path-budget": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+    "refs/heads/feat/v1a-footprints-complete": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75"
+  },
+  "historical_input_versions": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/J502_RESUME.md",
+      "sha256": "7d88c2cb5ae3c154b020478c13816d83956b773260a6cf3b8f293a1bc7f29f8a",
+      "bytes": 551,
+      "recorded_at_commit": "89590ab9283f494448189ba2fdecd96a199b03d3",
+      "note": "Previous resume-brief version; retained as history, current file differs."
+    }
+  ],
+  "final_resume_commit": "89590ab9283f494448189ba2fdecd96a199b03d3"
+}

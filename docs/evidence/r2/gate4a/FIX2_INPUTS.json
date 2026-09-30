@@ -1,0 +1,48 @@
+{
+  "baseline_commit": "47c7c07",
+  "connector_commit": "41cb9e889418d50d2f5f24467e66ac7f15a90476",
+  "connector_files": [
+    {
+      "path": "docs/evidence/r2/J502_SELECTION.md",
+      "sha256": "2584ea47c26c10830a0da4e7015d47de560fbbaa37014f0cf23cd83b8bd8879f"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/CALCULATIONS.json",
+      "sha256": "109ddd96518cb71ad3070ac59fb8c1aeb4eec15740c5944a05c9c20f9651668c"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/INPUT_PROVENANCE.json",
+      "sha256": "7d02a90aea5612af1ada5f808524ecad1549ace9f2aec3ea34b945cb0cf136c6"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/OWNER_EXPLANATION.pdf",
+      "sha256": "3f417732e7df69644a9aca46e7199d057088b54f5d9bd9f406960455ba885a90"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/VALIDATION.md",
+      "sha256": "588a23247ecc2ef0cdefd3e57ae2f28e654de5b6a534afc27fe9b6b6ca89b273"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/calculate.py",
+      "sha256": "be96d0c0869a941788e9cd4c7e242e0d920d3e90ef58f2722932d44bf2b4e3ae"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/export_owner.py",
+      "sha256": "aebc45145dfc9b0a0751abf7c61a8c1373332fba4c137f518dcddcd675850126"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/validate.py",
+      "sha256": "116a6f224c1932761be295138d7b937453753ceb339bb02cdb4b2418370a89e7"
+    },
+    {
+      "path": "third_party/j502_selection/README.md",
+      "sha256": "fec9cd8cb296396ab1a580b0a973a3c817e87aca8ac4f3702f870127ce89d234"
+    },
+    {
+      "path": "third_party/j502_selection/SOURCES.json",
+      "sha256": "bdd2536d40a12ecaaa2bec2b35e92d01b6b7e3d4415f134826603c7e1336a28c"
+    }
+  ],
+  "review": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md",
+  "review_sha256": "21b1bde5968c13198b2772cd445c2ac3d318b7dc342669ca4c59c61cf7082e32"
+}

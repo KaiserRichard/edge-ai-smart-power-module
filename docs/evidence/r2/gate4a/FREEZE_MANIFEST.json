@@ -599,12 +599,12 @@
         "JP501"
       ],
       "old": "J502: 1776508 / LOAD OUTPUT; J503: B4B-XH-A(LF)(SN) / HOST I2C; JP501: NEW",
-      "new_mpn": "J502 PENDING (feat/v1a-j502-connector); JST B4B-XH-A(LF)(SN); fixture-link selection OPEN",
-      "new_value_or_connection": "J502.1 LOAD_5V1, .2 GND is the inherited logical interface only; final connector/pin map/rating PENDING separate job; dummy-only removable harness; host/I2C/USB absent",
+      "new_mpn": "Phoenix 1776508 + 1777989 (J502); JST B4B-XH-A(LF)(SN) (J503)",
+      "new_value_or_connection": "J502.1 LOAD_5V1; J502.2 GND; solution A from connector commit 41cb9e8. J503 retains telemetry pin map; JP501 force-link selection remains separate.",
       "reason": "Do not pre-empt separate J502 selection; its resistance is an allocation, not a selected-part bound",
       "governing_equation": "Rloop=sum(Rsend+Rreturn); Vpi=Vbuck_min-I*Rloop-Vtrough",
-      "status": "PENDING J502; T11/T12 and capture pin-map reconciliation required",
-      "source": "PR15/PATH/HOOKS"
+      "status": "SELECTED FOR TEST candidate; <=3.12 mOhm per complete hot pole is T11 acceptance, not catalog guarantee",
+      "source": "41cb9e8 docs/evidence/r2/J502_SELECTION.md solution A"
     },
     {
       "id": "S04-05",
@@ -613,12 +613,12 @@
         "HARNESS"
       ],
       "old": "HARNESS: NEW",
-      "new_mpn": "Belden8521 AWG16; Belden8503 AWG22 stranded; HarwinM20-1071000 + M20-1070800;10xM20-1180042",
-      "new_value_or_connection": "75mm trunks each leg;15mm positive/35mm ground fanouts;physical5V2/4,GND6/9/14/20/25/30/34/39",
-      "reason": "Path-budget fix set with real approved connector inventory; matched positive branches",
-      "governing_equation": "Rhot contacts<=20mOhm TARGET; Rhigh/Rlow<=1.5 for3A screen; actual rating OPEN",
-      "status": "R4A-11 wire gauge CORRECTED; hot crimp/mate/imbalance T11; J502 PENDING",
-      "source": "FIX-BELDEN / FIX-HARWIN / PATH"
+      "new_mpn": "TE 3-87456-6 housing; 10x TE 87309-9 sockets; Belden 8502 002100 / 010100 branches; Belden 8521 002100 / 010100 trunks",
+      "new_value_or_connection": "75 mm AWG16 trunks; 2x15 mm positive and 8x35 mm return AWG20 pigtails; Pi physical +2/4, GND6/9/14/20/25/30/34/39. Power-only full housing; reviewed indexed carrier and welded fanouts required.",
+      "reason": "Adopt completed J502 solution A; supersede Harwin/8503 proposal without importing E or 6 mOhm pair",
+      "governing_equation": "Rloop_D=34.255546+7.6=41.855546 mOhm; Vfar_20mV=4.796866 V; Imax=5r/(1+r), r<=1.05 gives 2.560976 A",
+      "status": "SELECTION COMPLETE; hot mixed-mate rating, <=20 mOhm combined pin block and <=0.5 mOhm/polarity splices T11; no Pi release",
+      "source": "41cb9e8 J502_SELECTION and third_party/j502_selection/SOURCES.json"
     },
     {
       "id": "S03-17",

@@ -1,0 +1,212 @@
+{
+  "classification": "CALCULATION within proposed ASSUMPTIONS; actual qualification OPEN",
+  "source_min_screen_V": 5.026143254670701,
+  "load_A": 5.0,
+  "Pi_min_requirement_V": 4.75,
+  "thermal_assumptions_C": {
+    "wire_and_contacts": 60,
+    "PCB_and_feedback": 85,
+    "FET_junction": 150,
+    "shunt": 100
+  },
+  "wire_DCR_hot_screen_factor": 1.27292,
+  "allowed_loop_mohm_20mV": 51.22865093414024,
+  "allowed_loop_mohm_100mV": 35.22865093414023,
+  "physical_Pi_pins": {
+    "2": "5V",
+    "4": "5V",
+    "6": "GND",
+    "9": "GND",
+    "14": "GND",
+    "20": "GND",
+    "25": "GND",
+    "30": "GND",
+    "34": "GND",
+    "39": "GND"
+  },
+  "pin_currents_equal_sharing_A": {
+    "positive": 2.5,
+    "ground": 0.625
+  },
+  "positive_branch_ratio_1p05_peak_A": 2.5609756097560976,
+  "options": {
+    "A_TE_Phoenix": {
+      "items": [
+        {
+          "element": "unsensed_buck_copper",
+          "send_mohm": 0.5,
+          "return_mohm": 0.5
+        },
+        {
+          "element": "module_FET_pair_proposed",
+          "send_mohm": 6.0,
+          "return_mohm": 0.0
+        },
+        {
+          "element": "shunt_2mohm_1pct_25ppm_100C",
+          "send_mohm": 2.0237875,
+          "return_mohm": 0.0
+        },
+        {
+          "element": "module_PCB",
+          "send_mohm": 1.0,
+          "return_mohm": 1.0
+        },
+        {
+          "element": "J502_complete_pole_including_termination",
+          "send_mohm": 3.12,
+          "return_mohm": 3.12
+        },
+        {
+          "element": "AWG16_trunk_75mm",
+          "send_mohm": 1.2528740157480316,
+          "return_mohm": 1.2528740157480316
+        },
+        {
+          "element": "AWG20_fanout_15mm_35mm",
+          "send_mohm": 0.30695413385826775,
+          "return_mohm": 0.17905657808398953
+        },
+        {
+          "element": "Pi_mate_and_female_crimp_combined",
+          "send_mohm": 10.0,
+          "return_mohm": 2.5
+        },
+        {
+          "element": "Pi_male_attachment",
+          "send_mohm": 0.24,
+          "return_mohm": 0.06
+        },
+        {
+          "element": "fanout_splices",
+          "send_mohm": 0.5,
+          "return_mohm": 0.5
+        },
+        {
+          "element": "module_solder_joints",
+          "send_mohm": 0.1,
+          "return_mohm": 0.1
+        }
+      ],
+      "send_mohm": 25.0436156496063,
+      "return_mohm": 9.211930593832022,
+      "results": {
+        "D": {
+          "loop_mohm": 34.25554624343832,
+          "drop_mV": 171.2777312171916,
+          "path_loss_W": 0.8563886560859579,
+          "Pi_static_V": 4.854865523453509,
+          "Pi_20mV_trough_V": 4.83486552345351,
+          "Pi_100mV_total_excursion_V": 4.7548655234535095,
+          "margin_20mV_mV": 84.86552345350961,
+          "Pi_20mV_with_old_13p6mohm_FET_pair_V": 4.796865523453509,
+          "actual_qualified_hot_min_V": null
+        },
+        "E": {
+          "loop_mohm": 44.25554624343832,
+          "drop_mV": 221.2777312171916,
+          "path_loss_W": 1.106388656085958,
+          "Pi_static_V": 4.804865523453509,
+          "Pi_20mV_trough_V": 4.78486552345351,
+          "Pi_100mV_total_excursion_V": 4.70486552345351,
+          "margin_20mV_mV": 34.865523453509795,
+          "Pi_20mV_with_old_13p6mohm_FET_pair_V": 4.7468655234535095,
+          "actual_qualified_hot_min_V": null
+        }
+      }
+    },
+    "B_TE_MiniFitSr_gold": {
+      "items": [
+        {
+          "element": "unsensed_buck_copper",
+          "send_mohm": 0.5,
+          "return_mohm": 0.5
+        },
+        {
+          "element": "module_FET_pair_proposed",
+          "send_mohm": 6.0,
+          "return_mohm": 0.0
+        },
+        {
+          "element": "shunt_2mohm_1pct_25ppm_100C",
+          "send_mohm": 2.0237875,
+          "return_mohm": 0.0
+        },
+        {
+          "element": "module_PCB",
+          "send_mohm": 1.0,
+          "return_mohm": 1.0
+        },
+        {
+          "element": "J502_complete_pole_including_termination",
+          "send_mohm": 4.0,
+          "return_mohm": 4.0
+        },
+        {
+          "element": "AWG16_trunk_75mm",
+          "send_mohm": 1.2528740157480316,
+          "return_mohm": 1.2528740157480316
+        },
+        {
+          "element": "AWG20_fanout_15mm_35mm",
+          "send_mohm": 0.30695413385826775,
+          "return_mohm": 0.17905657808398953
+        },
+        {
+          "element": "Pi_mate_and_female_crimp_combined",
+          "send_mohm": 10.0,
+          "return_mohm": 2.5
+        },
+        {
+          "element": "Pi_male_attachment",
+          "send_mohm": 0.24,
+          "return_mohm": 0.06
+        },
+        {
+          "element": "fanout_splices",
+          "send_mohm": 0.5,
+          "return_mohm": 0.5
+        },
+        {
+          "element": "module_solder_joints",
+          "send_mohm": 0.1,
+          "return_mohm": 0.1
+        }
+      ],
+      "send_mohm": 25.9236156496063,
+      "return_mohm": 10.091930593832021,
+      "results": {
+        "D": {
+          "loop_mohm": 36.01554624343832,
+          "drop_mV": 180.07773121719163,
+          "path_loss_W": 0.900388656085958,
+          "Pi_static_V": 4.846065523453509,
+          "Pi_20mV_trough_V": 4.82606552345351,
+          "Pi_100mV_total_excursion_V": 4.74606552345351,
+          "margin_20mV_mV": 76.0655234535097,
+          "Pi_20mV_with_old_13p6mohm_FET_pair_V": 4.788065523453509,
+          "actual_qualified_hot_min_V": null
+        },
+        "E": {
+          "loop_mohm": 46.01554624343832,
+          "drop_mV": 230.07773121719163,
+          "path_loss_W": 1.150388656085958,
+          "Pi_static_V": 4.7960655234535094,
+          "Pi_20mV_trough_V": 4.77606552345351,
+          "Pi_100mV_total_excursion_V": 4.69606552345351,
+          "margin_20mV_mV": 26.065523453509876,
+          "Pi_20mV_with_old_13p6mohm_FET_pair_V": 4.73806552345351,
+          "actual_qualified_hot_min_V": null
+        }
+      }
+    }
+  },
+  "sensitivity": {
+    "extra_10mm_each_AWG16_trunk_drop_mV": 1.670498687664042,
+    "extra_10mm_every_AWG20_pigtail_drop_mV": 1.2789755577427822,
+    "extra_1mohm_each_Pi_termination_drop_mV": 3.125,
+    "extra_1mohm_each_J502_pole_drop_mV": 10.0,
+    "Pi_positive_20mohm_block_loss_W": 0.125
+  },
+  "independent_parallel_network_check": "PASS; arithmetic only"
+}
