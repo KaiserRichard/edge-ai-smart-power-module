@@ -315,6 +315,14 @@ def fix_04():
     for net,y in [('SCL_LOCAL',124.46),('SDA_LOCAL',129.54)]:
         move_label(d,net,(177.8,y),(190.5,y))
         d.append(['wire',['pts',['xy','177.8',str(y)],['xy','190.5',str(y)]],['stroke',['width','0'],['type','default']],uid(name+net+'clearance')])
+    # The separator repeats these signals. Clear its crossing supply/return
+    # routes too; perpendicular crossings have no junction and add no pins.
+    for net,y in [('SCL_LOCAL',203.2),('SDA_LOCAL',208.28)]:
+        move_label(d,net,(185.42,y),(177.8,y))
+        d.append(['wire',['pts',['xy','185.42',str(y)],['xy','177.8',str(y)]],['stroke',['width','0'],['type','default']],uid(name+net+'separator-clearance')])
+    for net,y in [('SCL_HOST',205.74),('SDA_HOST',210.82)]:
+        move_label(d,net,(236.22,y),(248.92,y))
+        d.append(['wire',['pts',['xy','236.22',str(y)],['xy','248.92',str(y)]],['stroke',['width','0'],['type','default']],uid(name+net+'separator-clearance')])
     write(d,name)
 
 

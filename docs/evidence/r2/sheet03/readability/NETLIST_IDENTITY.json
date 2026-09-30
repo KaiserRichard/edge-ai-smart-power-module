@@ -1,6 +1,6 @@
 {
   "baseline_commit": "c47409fb2637c94ccaa685c3ac4cbbd10681d5a2",
-  "baseline_xml_sha256": "e3b8a9a4abe68f9380925907908bf6c9710cd9aaededade032153bb67cbe3b64",
+  "baseline_xml_sha256": "c27f6f22b688b9b4f11312e63d3f68e7f39428a97885a894e8e75b36bf841f97",
   "canonical_diff_bytes": 0,
   "canonical_sha256": "2257bd9f080e02365bf209175b83235a7975dce2e30cef671fc9d480279f09fc",
   "comparison": "Complete component/libpart XML, full net names and all node attributes; ordering normalized; only design export metadata, library URIs and numeric net codes excluded.",
@@ -25,7 +25,7 @@
     },
     {
       "paper": "A3",
-      "reference_value_minimum_mm": 1.27,
+      "reference_value_minimum_mm": 1.524,
       "sheet": "03_OUTPUT_PROTECTION"
     },
     {
@@ -39,7 +39,7 @@
       "sheet": "05_IO_TEST"
     }
   ],
-  "readable_xml_sha256": "4159a42da69a202fe5a370e77112bae270269889d7b76bf742658c0b0b9c9a0a",
+  "readable_xml_sha256": "5596792059981bd3453871a40345ea9aeead0c358b51e68877ac2778e2b855ac",
   "source_inventory_identical": true,
   "source_symbols_including_power_flags": 161,
   "status": "PASS"

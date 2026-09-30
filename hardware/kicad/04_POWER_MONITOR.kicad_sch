@@ -1706,28 +1706,28 @@
       (justify left bottom))
     (uuid "27147078-53c6-562a-9773-3b4edb0d17e3"))
   (label "SCL_LOCAL"
-    (at 185.42 203.2 180)
+    (at 177.8 203.2 180)
     (effects
       (font
         (size 1.524 1.524))
       (justify right bottom))
     (uuid "050cd25a-c73f-5235-add9-b18fbcd0f38d"))
   (label "SDA_LOCAL"
-    (at 185.42 208.28 180)
+    (at 177.8 208.28 180)
     (effects
       (font
         (size 1.524 1.524))
       (justify right bottom))
     (uuid "2ff3dfe0-7fde-53d6-85c1-13a13319f52b"))
   (label "SCL_HOST"
-    (at 236.22 205.74 0)
+    (at 248.92 205.74 0)
     (effects
       (font
         (size 1.524 1.524))
       (justify left bottom))
     (uuid "0128c027-dd7a-54ff-bc4e-71fcc753ef99"))
   (label "SDA_HOST"
-    (at 236.22 210.82 0)
+    (at 248.92 210.82 0)
     (effects
       (font
         (size 1.524 1.524))
@@ -5061,4 +5061,36 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "c18c0963-8e1f-5f9f-8462-23025f4c276b")))
+    (uuid "c18c0963-8e1f-5f9f-8462-23025f4c276b"))
+  (wire
+    (pts
+      (xy 185.42 203.2)
+      (xy 177.8 203.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b9f38142-1757-5c96-ae9f-f7ac8a323541"))
+  (wire
+    (pts
+      (xy 185.42 208.28)
+      (xy 177.8 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "f26dad9f-71f7-5e23-a92f-c29a1760470d"))
+  (wire
+    (pts
+      (xy 236.22 205.74)
+      (xy 248.92 205.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "f0a0aaca-a4ce-5d57-bb49-cb1c9f80328a"))
+  (wire
+    (pts
+      (xy 236.22 210.82)
+      (xy 248.92 210.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "91953fc8-2a45-514e-bbf0-b234e0837b19")))
