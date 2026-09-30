@@ -7,6 +7,9 @@ are pinned under third_party/footprints_complete; no third-party PCB is copied.
 """
 import argparse
 from pathlib import Path
+from build_sheet03_preliminary import children
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def frame(name, description, body, courtyard, attr):
@@ -45,12 +48,40 @@ def xh(n):
     return name,'\n'.join(lines+[')',''])
 
 
+def vh():
+    original='JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical'
+    name='JST_B2P_VH_FB_B_P3.96_THT'
+    text=(ROOT/'third_party/footprints_complete'/(original+'.kicad_mod')).read_text()
+    text=text.replace(original,name)
+    for a,b,form in reversed(list(children(text))):
+        if form.startswith('(descr '):
+            desc='JST B2P-VH-FB-B(LF)(SN); eVH.pdf metadata2026-01-09 pp1-4; pitch3.96 drill1.70 boss1.45; mate VHR-2N plus SVH-21T-P1.1; adapted unchanged geometry from KiCad f64dbd7 CC-BY-SA-4.0 with design exception; KiCad library contributors'
+            text=text[:a]+'(descr "'+desc+'")'+text[b:]
+        elif form.startswith('(model '):
+            text=text[:a]+text[b:]
+    return name,text
+
+
+def phoenix():
+    name='Phoenix_1776508_MSTB_2_GF_5.08'
+    lines=frame(name, 'Phoenix Contact1776508 MSTB2.5/2-GF-5.08; Nov12,2013 p6 drilling drawing plus current product record2026-09-30; mate1777989; project terminal1 atleft; PTH1.40 pitch5.08; optional board fixing NPTH2.40; no EP/paste',
+                (-7.62,-2,12.7,10),(-8.12,-2.5,13.2,10.5),'through_hole')
+    for n,x in [(1,0),(2,5.08)]:
+        lines.append(f'  (pad "{n}" thru_hole {"rect" if n==1 else "circle"} (at {x} 0) (size 2.8 2.8) (drill 1.4) (layers "*.Cu" "*.Mask"))')
+    for x in [-5.08,10.16]:
+        lines.append(f'  (pad "" np_thru_hole circle (at {x} 2.5) (size 2.4 2.4) (drill 2.4) (layers "*.Cu" "*.Mask"))')
+    lines.append('  (fp_text user "1 +" (at 0 -2.2) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))')
+    lines.append('  (fp_rect (start -7.62 10) (end 12.7 20) (stroke (width 0.1) (type solid)) (fill none) (layer "Dwgs.User"))')
+    lines.append('  (fp_text user "MATE / TOOL ACCESS - REVIEW" (at 2.54 21) (layer "Dwgs.User") (effects (font (size 0.8 0.8) (thickness 0.12))))')
+    return name,'\n'.join(lines+[')',''])
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--output-dir', type=Path, required=True)
-    p.add_argument('--part',choices=['tdk','xh2','xh4'],required=True)
+    p.add_argument('--part',choices=['tdk','xh2','xh4','vh','phoenix'],required=True)
     args=p.parse_args()
-    name,text = tdk() if args.part=='tdk' else xh(int(args.part[-1]))
+    name,text = {'tdk':tdk,'xh2':lambda:xh(2),'xh4':lambda:xh(4),'vh':vh,'phoenix':phoenix}[args.part]()
     args.output_dir.mkdir(parents=True,exist_ok=True)
     (args.output_dir/(name+'.kicad_mod')).write_text(text)
     print(name)
