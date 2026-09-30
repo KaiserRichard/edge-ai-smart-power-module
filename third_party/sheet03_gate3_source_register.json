@@ -215,6 +215,19 @@
       "required_attribution": "Name manufacturer and link official document in Gate3 report",
       "retrieved_or_verified": "2026-09-30",
       "evidence_mode": "Primary web document/table inspected; download/maxima limits disclosed in report"
+    },
+    {
+      "id": "driver_buckboost",
+      "manufacturer": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf",
+      "revision": "Rev E, April7 2023",
+      "relevant_sections": "Operating input/output range; separate driver-supply feasibility, not circuit qualification",
+      "license": "Manufacturer copyright, reference only",
+      "usage": "REFERENCED; no circuit copied/adapted",
+      "modifications": "None",
+      "required_attribution": "Manufacturer and official URL in Gate3 report",
+      "retrieved_or_verified": "2026-09-30",
+      "evidence_mode": "Official web-rendered datasheet inspected"
     }
   ]
 }

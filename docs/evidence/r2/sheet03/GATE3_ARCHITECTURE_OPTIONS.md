@@ -196,6 +196,50 @@ Normal DC margin can retain the inherited conditional11.433 mV only with no extr
 
 ASSUMED incremental20–35 placements, absorbers/bulk/supervisors and some crowbar parts removed, **US$15–35**, plus common driver-supply fixes; exact BOM/thermal/cost OPEN. Bench: source-bound confirmation, zero/5 A injected short, both clamp nodes and individualFETVDS/current/gate trajectories, worst harnessL/C/initial current, local and Pi overshoot, hot/cold clamp accuracy and SOA/repetition; partial-rail/prebias/reset faults; normal ARM/startup/bulk loop interaction, ripple/load release and5 A connector drop/temperature.
 
+## E — independent protection at the Pi end
+
+**Topology proposal:** protection immediately before GPIO5 V/GND entry: high-voltage-rated opposed disconnect, independent precision OV/fault latch, qualified transient-current limiting, Pi-side local capacitor/active absorber, and cable-input-side dump path. No wire may bypass it. Keep the module's upstream current/store containment; location alone does not bound current or eliminate source energy.
+
+### Conditional Pi-node bounds
+
+ASSUMED targets: **10 A maximum arriving at the protected Pi node during every transient**, including limiter delay/overshoot and charged-cap discharge; physical isolation≤5 µs; effective local Pi-side C≥1 mF, ESR≤5 mΩ; all residual local ringing≤20 mV. The 10 A bound requires a qualified fast limiter and, if necessary, a series impedance/magnetic element with a guaranteed trajectory. It is **not** inferred from either5 A load rating or a10 A settled setting. Its input-side current can be much larger before isolation and must go into the upstream dump, not the GPIO capacitor.
+
+Using the inherited conditional trip upper5.356563 V, a conservative series-only fallback charge/ESR screen is:
+
+`VPi <=5.356563 +10A×5µs/1mF +10A×5mΩ +20mV =5.476563 V`.
+
+CALCULATED margin**+23.437 mV**. Overdrive and all sense-to-current-isolation behavior must be included within that5 µs target; if the inherited comparator cannot supply a bound from threshold crossing, add its overdrive explicitly and re-evaluate. With 220 µF instead, the screen is**5.653835 V/−153.835 mV: BLOCKING**. With60 A overshoot instead of10 A it is**5.976563 V/−476.563 mV: BLOCKING**. Any target violated blocks the fallback proof; an unqualified limiter is not a bypass around B01.
+
+The primary proposed absorber has ASSUMED **full static5.30–5.40 V** clamp limits and **≤20 mV total dynamic/physical overshoot**, including response, capacitor ESR/ESL, wiring and measurement uncertainty. This is a separate whole-loop qualification requirement, not just a comparator tolerance. If proved, CALCULATED target**5.420 V**, reserve**+80 mV**. Clamp-low nuisance screen is `5.30−5.261614−10mV =+28.386 mV`; independent disconnect nuisance screen remains+21.954 mV conditionally. Do not add the20 mV overshoot a second time to the5.420 V target.
+
+Source/detector maxima, actual active-clamp stability/overshoot and VPi,max remain **OPEN**. The active clamp must set a fault indication that latches current isolation/source shutdown even if its lower clamp prevents another OV comparator from crossing. Clamp activity may not become indefinite dissipation into a persistent24 V short. Sensing input OV and protected-output clamp activity provides two bounded shutdown triggers; the earliest applicable path must have a physical isolation bound.
+
+### Harness/source energy and rated destination
+
+The absorber is on the Pi side of the isolating FET and within the protected GPIO power loop. Cable-inductor current after opening is diverted into a separate input-side dump; energy already on the Pi side is intercepted locally. This makes the actual protected plane visible/measurable and avoids relying on an unknown Pi capacitor behind a long cable. It does not protect a wire added downstream that bypasses the stage, or a separate energized USB-C/other backfeed.
+
+ASSUMED cableL≤10 µH/current≤10 A at the protected-side transient boundary and5 µs isolation: CALCULATED incoming active-clamp energy≤`5.4×10×5µs +0.5×10µH×10² =0.770 mJ`. Proposed **≥0.01 J hot pulse capacity** leaves an allocation reserve, but exact VDS–ID–time/hot SOA and repeated faults still need supplier acceptance/bench evidence. Local1.5 mF maximum store at5.42 V is22.0323 mJ; add it if the chosen reset/crowbar deliberately dumps it. A voltage-holding clamp normally dissipates excess delivered energy, not all initial capacitor energy.
+
+The independent limiter's pass-FET can dissipate much more than0.770 mJ: its stress is `integral[(Vin−Vout) I dt]`. ASSUMED input24 V/10 A/5 µs/near5.4 V gives a rectangular0.930 mJ screen before transition/cable energy. Its true maximum input current, response and source reservoir remain OPEN; qualify its own SOA, not only the shunt clamp. Upstream source and cable-input dump retain **ASSUMED0.2 J** hot event targets based on the full source/store envelope. No internal low-voltage eFuse with23 V recommended maximum is accepted for a24 V sustained fault.
+
+Named candidate hot-SOA devices are the Nexperia family studied in D, but none is selected; lowRDS, gate charge and source-referenced turn-off must also fit. Source charge and saturated-L missing from the current design must be bounded by A's approach or an independently qualified input-side absorber/limiter combination. A second unbounded copy of the present Sheet03 circuit would leave B01/B02 untouched.
+
+### Timing and rail validity from startup through fault
+
+Independent path: local input/OV or clamp-activity detection→latch→gate driver→limiter/series current interruption→input-dump/cable decay. Complete minimum/maximum **OPEN/OPEN**; proposed isolation maximum5 µs and active-clamp total overshoot20 mV are distinct qualification targets. Stage specs cannot be combined across unsupported conditions. Power-up into pre-existing24 V must hold the FETs off before precision sensing settles; safe behavior cannot depend on the failed buck's PGOOD.
+
+A Pi-end stage normally sees about5.1 V, so the old7.623 V LDO cannot be copied there. Proposed supply uses an independent current-limited auxiliary feed from the original input domain, with its own protection and return definition, plus a qualified local driver converter/supervisor/hold-up. A self-powered alternative adds control current to the5 A V1A load envelope and needs an explicit budget. It is not silently credited while demanding5 A at the Pi.
+
+[ADI LTC3115-1 Rev E](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf) is a supply research candidate: DATASHEET2.7–40 V input/output permits a boost/buck driver rail from either normal5.1 V or bounded24 V; it is not already a validated10 V fault supply. Required output accuracy, input step response, switching-noise interaction, startup and failure containment remain OPEN. Local auxiliary source failure must produce default-off gates and retain enough energy for the clamp/dump action, not automatic re-arm.
+
+### Normal5 A margin, complexity and blocker disposition
+
+ASSUMED combined hot loop target **≤50 mΩ**, including module protection, shunt, PCB, cable, all contacts/returns and new local stage. CALCULATED inherited raw minimum minus5 A drop gives Pi**4.788271 V/+38.271 mV**. This is a proposed lower-resistance redesign, not the existing55.367741 mΩ path. Adding an ASSUMED10 mΩ stage to the existing path instead gives Pi4.711433 V/**−38.567 mV BLOCKING**. New gate-drive shunt/FET loss and extra connector resistance must be recovered elsewhere; the raw voltage setting stays unchanged. Local1 mF adds≥5.1 mC charging at startup; qualified maximum C, inrush timing/current and ARM sequence are required. The100 mV dynamic reserve remains unclosed, not claimed.
+
+Would resolve the reference-plane/harness-energy part of B01/B03 if local absorber/dump are qualified; could remove bulk-discharge ballast/terminal premise by an approved active-clamp redesign. Leaves transient input bounds, B02/supply/powered-off sequencing and normal-path verification until qualified. Local independence reduces reliance on the remote failed converter/PG, but does not alone close M01/M03/M04. Common policy fixes below still apply.
+
+ASSUMED added30–55 placements for local limiter/disconnect, reference/detector/latch, absorber, controlled C and supply/supervisor; **US$20–50** plus auxiliary conductor/connector and small PCB. Source containment/common module changes are shared costs and must not be double counted. Exact MPNs/cost/thermal realization OPEN. Bench: fault injection with cable attached; measure at GPIO and both sides of local isolation, limiter overshoot, source-charge integral, clamp current/voltage and gates; worstL/C/zero-load/5 A/prebias; hot SOA/repetition/cooldown; local supply startup/24 V step/UVLO/power disappearance; connector/keying/bypass/backfeed checks,5 A drop/temperature and normal load-release/inrush false-fire tests.
+
 ## Checkpoint status
 
-A/B/C/D complete; E and final comparison/recommendation pending. No schematic change is authorized.
+A/B/C/D/E complete; final comparison, common fixes and recommendation pending. No schematic change is authorized.
