@@ -68,3 +68,6 @@ The retained parts and new candidates are listed by refdes in [FREEZE_TABLE.md](
 Current R4A-04 correction: R305 = TNPW12102M20BEEA2.2MΩ1210 PROT_GATE→PROT_MID;220k proposal superseded. At12V worstbleed5.469µA. TS20V charge-pump current does not boundTS5V. T04 qualifies static loadedVGS; TGDN, not passivebleed, supplies the measured rapid-off path. See REVIEW_RESOLUTIONS.md.
 
 CurrentS01-07replacesabsenttriggerwithcontinuous-SW-high watchdogcandidate; completepins/MPNs and6µsprogrammingareinFREEZE_TABLE. SourcepathremainBLOCKEDuntilT01proveshealthy-pulse separation, readiness, physical≤10µs/≤100µC andallpartial-powercases. Do notcredittypicaltimerstartuporPGqualification.
+
+
+The current exact package/enable/reset/decoupling decisions and explicitly missing state producers are in [PIN_CONTRACT.md](PIN_CONTRACT.md). That contract supersedes abbreviated pin labels above. Source sensing is L201_SW_FORCE after JP201. T15 does not waive construction review.

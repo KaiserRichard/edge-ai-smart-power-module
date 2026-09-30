@@ -138,3 +138,14 @@ Developmentwaveform atactualauxbranchinput:26Vbaseline,10µsrise to58.1V,1msplat
 PASS: exactwaveform/sourcebox andinstrumentU established; AUX_LIMITED+U≤35V, everypin/componenthotSOA/thermalwithinratings; T04/T07loadedrails/holdthroughphysicaldisposal, safe defaultoff andnoauto-rearm evenifstopperlatches. Sustained58.1Voperationisnotinferredfromthispulseorrequiredwithoutanownerrequirement. Thiswaveformisadevelopmenttest condition, notareplacementforSMCJ10/1000µs/hotclamporactualupstreammoduletransients.
 
 Next, reviewedwhole-inputcoordinationmustcloseactualisolatedmoduleMPN/C/L/faultcurrent/tolerance/surge/hotclamp/fuseclearing/eFuselet-through. PreservebuckVIN≤36Vrecommended and≤chosen28.289211Venergybox; ifmeasuredsourceexceedsenergybox,recalculateallT01/T09bounds. No instruction toapply58.1Vdirectlytothemainbuck. Missingactualsurgeenvelope/currenttimer/fixture isBLOCKED; measurementclosesdynamictransfer, notamissingrequirement. No test run.
+
+
+## T15 — PIN-RAIL-RACE-AND-THERMAL qualification (R4A-15)
+
+**Prerequisite:** complete the MAIN_PERMISSION/SERIES_RUN/reset/ARM/safe-energy/persistent-short check circuits in PIN_CONTRACT.md, review pin maps and defaults, qualify fixture and metrology, use a dummy load. Missing construction cannot be closed by this measurement.
+
+**Measurement:** capture each supply and physical gate/SHDN/current while sweeping all orders and slow ramps of input, AUX, DRV, DET and 3V3; supervisor thresholds in both directions; manual bounce/held ARM; fault+PG loss; fault+reset; total supply loss; attempted reset of a permanent simulated short. Include warmed local components within their individual limits. Audit every package pin and local bypass, and calculate actual worst-case IC load/temperature.
+
+**PASS:** SHDN physically asserted and series gate OFF whenever permission is absent or any required rail is invalid; independent OV/stuck-SW fault dominates PG/ARM/reset; no simultaneous U320 nPRE/nCLR assertion or uncontrolled power-up state; no re-arm on supply/PG return, held button or reset; no energy reconnection into a persistent short before the reviewed integrity check. Disposal drive remains valid through the entire T09 measured tail. Every pin stays within recommended conditions during function and absolute ratings during all transients, with uncertainty. Input/output effective bypass meets PIN_CONTRACT.md; converter/LDO stable, no excessive ringing or backfeed. Measured component temperature plus uncertainty is below its individual ceiling. T01/T03/T04/T06/T07/T08/T09 remain jointly required.
+
+**Why measurement:** comparator/supervisor dynamic thresholds, finite gate sink drive, bounce, supply races, charge coupling and actual PCB thermal paths have no complete transferable paper bounds. The construction is reviewed first; measurements then establish the defined test envelope, never universal safety or an unbuilt state machine.

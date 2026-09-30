@@ -156,3 +156,11 @@ Worstfixturefreshinputstore½10µF×60²=18mJ; maximumnewpulsework60V×0.30A×1.
 Add a separate auxiliary-only HV pulse fixture rated at least80V and0.30A, with independent hardware current/timeout/discharge and measured downstream fixtureC≤10µF. Physically disconnect the whole mainU101/U201 input path during this test; a SHDN command is not isolation evidence. Apply a declared development waveform atVIN_AUX_BRANCH:26Vbaseline→58.1V,10µsrise,1msplateau,10µsfall; hardware ceiling60V/0.30A/1.2ms. Ten pulses≥60s apart onlyaftertemperaturesreturn. These areexplicit test conditions, notinventedowner surge/repetition requirements. Originalisolated48→24Vmodule waveform remainsOPEN; reviewedwhole-inputcoordination followsseparately.
 
 Closure: T14 AUX-HV-PULSE thenINPUT-COORDINATION. PASSaux-only actualwaveformand39.6mJsourceboxestablished, AUX_LIMITED+U≤35V, allpin/SOA/temp ratingshold, loadedrails/holdT04/T07validthroughdisposal andnoauto-rearm. Afterwardsseparatewhole-inputreview/testmustestablishactualmodule/TVS/fuse/eFuse sourceenvelope, preserveU201 input≤36V andchosen≤28.289211Venergybox (otherwise recompute), withhotratings/sourceC included. No whole-input58.1Vtest instruction here. Missinghardware/envelope prevents energization/release; measurementclosesdynamicclamp/timer/loadedhold forspecifiedpulseonly.
+
+### R4A-15 — PIN DECISIONS / DESIGN BLOCKED / BENCH REQUIRED
+
+Supervisor-buffer conservative high 2.771 V > TTL 2 V; Q305 gate min 4.48875 V at 9 V before leakage, below the 4.5 V table condition, so hot SHDN sink margin remains OPEN. TPS709 dissipation screen 180.2 mW at assumed 20 mA. Local temperature limits/uncertainty and complete fault-onset min/max remain required; no blanket hot ambient or autonomous re-arm guarantee.
+
+Selected complete package pin maps for U318/U320/U321/U322/U323/U330 and auxiliary/watchdog devices; added local bypass and two AHCT supervisor translators. U318 EN floats per manufacturer (never 12 V); U320 fault set bypasses PG/ARM. R390 senses L201_SW_FORCE. Reset/ARM/safe-energy/persistent-short producer circuitry remains an explicit construction blocker, followed by T15.
+
+Closure: T15 PIN-RAIL-RACE-AND-THERMAL; prerequisite construction review, then guarded default-off, fault dominance, no re-arm, all pin/cap/thermal limits. Measurement is correct for dynamic/thermal behavior, not for missing wires.
