@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-30",
+  "base_commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+  "branch": "feat/v1a-j502-connector",
+  "inputs": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/J502_SELECTION.md",
+      "sha256": "969c4a7fbe0d26b21b57676a3a760f6ee1e614528b4380ed17a4173e52ab6e2a",
+      "bytes": 1739
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/VERIFY_FOOTPRINTS.md",
+      "sha256": "a515d5c7e9c527b3f5d45b2b40a79e838083729ea1ba0938bf0899d69dd72583",
+      "bytes": 31697
+    },
+    {
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/PATH_BUDGET.md",
+      "sha256": "93e0c5fd17798dd038e95f9659cf10a563d93b9533baeadd5ffb39fc65f2b701",
+      "bytes": 42965
+    },
+    {
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/PATH_CALCULATIONS.json",
+      "sha256": "7ad3e2562273eb08921d6805331e9691324c4ce1c665fc88d56df1860ab308bc",
+      "bytes": 41493
+    },
+    {
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/SOURCES.md",
+      "sha256": "470a85131998ff8fc925565bcb6cc7eb09b7e5784b18c0355e312c9409de618f",
+      "bytes": 8044
+    }
+  ],
+  "scope": "Analysis only; no KiCad edits; local commit authorized, push/PR withheld by conductor notes"
+}

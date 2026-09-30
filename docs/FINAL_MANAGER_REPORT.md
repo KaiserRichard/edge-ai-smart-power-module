@@ -240,3 +240,17 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **OPEN RISKS:** J502 module complete pole/clamp ≤3.12 mΩ hot and Pi complete contact ≤20 mΩ hot/conditioned are acceptance targets, not guaranteed by the inspected datasheets. Exact Pi male-header identity/rating, contact current sharing, indexed carrier/engagement, assembly tolerances and hot tests remain OPEN. Existing source/fault containment, capacitor/inductor, thermal and physical bring-up blockers remain. ERC and pad consistency do not establish electrical safety.
 
 **NEXT GATE:** review the footprint PR and obtain the held component decisions and connector/assembly qualification. Complete R2 electrical review before authorizing R3. Follow the existing dummy-load-first R5 sequence before SBC integration.
+
+## J502 / Pi harness selection — 2026-09-30
+
+**STATUS: CONDITIONAL PASS** for two component proposals and reproducible arithmetic; **R2 electrical release / R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** The independent review rejects the prior Harwin choice against the conditioned-resistance criterion; the historical footprint record above is not electrical acceptance.
+
+**WHAT WAS DONE:** compared two complete harnesses using a TE 3-87456-6 full 2×20 housing, ten gold 87309-9 sockets, AWG16 trunks and AWG20 fan-out: A retains Phoenix J502; B proposes a matched-gold Molex Mini-Fit Sr. module connector. Recorded real MPNs, manufacturer rating conditions, contact/crimp measurement boundaries, assembly notes and all ten Pi power positions. No KiCad edits.
+
+**EVIDENCE:** [selection report and one-page owner explanation](evidence/r2/J502_SELECTION.md), [calculations](evidence/r2/j502_selection/CALCULATIONS.json), [input identities](evidence/r2/j502_selection/INPUT_PROVENANCE.json), [source register](../third_party/j502_selection/SOURCES.json), [validation](evidence/r2/j502_selection/VALIDATION.md). Conditional hot/5 A/20 mV-trough E voltages: A 4.784866 V, B 4.776066 V. These require the prior proposed ≤6 mΩ module FET pair and ≤10 mΩ added E stage; retaining the old module-pair screen makes both E cases fail.
+
+**DECISIONS:** recommend A for qualification first; retain B if the Phoenix hot complete-pole target cannot be substantiated. Tighten the Pi target to ≤20 mΩ for the combined mating/female-crimp block, avoiding overlapping resistance accounting. Keep regulator setpoint and protection thresholds unchanged. Local commit only; conductor handles push and draft PR.
+
+**OPEN RISKS:** released applicable TE specification (inspected Rev B PCN attachment is preliminary); actual Pi male mate, hot/conditioned resistance/current sharing, splice process and geometry; Phoenix complete hot pole; source/FET/E-stage/fault evidence. Both E cases fail with a 100 mV total excursion. Catalogue current and resistance do not qualify a mixed-manufacturer Pi mate. No physical tests performed.
+
+**NEXT GATE:** complete R2 supplier/mechanical/electrical review and the existing later fabrication/bring-up gates. Qualify with current-limited dummy loads before connecting an SBC; no fabrication release or gate advancement.
