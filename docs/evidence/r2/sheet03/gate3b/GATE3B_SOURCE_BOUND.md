@@ -17,7 +17,7 @@ CALCULATED in the inherited ASSUMED resistor/leakage box: the requested 27.63 V 
 ## Progress and checkpoint policy
 
 - Setup and inherited-input recovery: complete; source/inductor research ongoing.
-- Task 1a manufacturer curves and normal/fault arithmetic: pending.
+- Task 1a manufacturer curves and normal/fault arithmetic: complete; qualification OPEN. See [inductor comparison](INDUCTOR_CANDIDATES.md).
 - Task 1b limiter/local-input discharge and source recommendation: pending.
 - Task 2 common fixes/timing/supply: pending.
 - Task 3 D/E re-score and resistance/current/independent-threshold contract: pending.
