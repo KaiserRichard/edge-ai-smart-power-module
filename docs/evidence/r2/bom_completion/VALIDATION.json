@@ -12,6 +12,8 @@
   "original_refs_accounted_for": 154,
   "passive_source_mappings_checked": 41,
   "critical_mappings_checked": 35,
+  "earlier_open_positions_resolved": 42,
+  "fitted_refs_added_to_earlier_draft": 32,
   "assigned_open_mpns": [
     "JP201",
     "JP501"
