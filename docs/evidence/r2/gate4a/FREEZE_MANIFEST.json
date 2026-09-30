@@ -387,11 +387,11 @@
       ],
       "old": "C340: NEW; C341: NEW; C342: NEW; C343: NEW",
       "new_mpn": "Nichicon PCH1V471MCL1GS x4, candidate only",
-      "new_value_or_connection": "proposed additional protected bank 4x470uF35V; cannot claim Gate3b1mF/0.5mOhm from this code",
+      "new_value_or_connection": "C340…343PCH1V471MCL1GS x4; eachpositiveVOUT_PROTECTED/negativeGND; retainasTEST-CANDIDATE receivingbankonly.1.88mFnominal, assumed1.2032…2.7072mF. CatalogESR3.5mΩparallel initial/7mΩlow-temp/endurance; not0.5mΩ. Measurejointwatchdog/series/dumps/harness trajectory beforeacceptance.",
       "reason": "An actual protected receiving bank is absent from original export",
-      "governing_equation": "Ceff_min=4*470uF*0.8*0.8=1203.2uF sensitivity;Cmax=2707.2uF; published14mOhm/4=3.5mOhm20C100kHz",
-      "status": "BLOCKED inherited <=1.5mF / <=0.5mOhm contract; new conditional screen5.713245V, actual peak OPEN",
-      "source": "PR15/G3B"
+      "governing_equation": "Vpeak_sensitivity5.38+80*0.5µs/1.2032mF+80*3.5mΩ+20mV=5.713245V; failsallocation, actualfar-endT10OPEN",
+      "status": "R4A-10 legacybankcontractWITHDRAWN; T10 actualjointtrajectory BENCH REQUIRED",
+      "source": "NichiconPCH; retainedhistorical5.542140Vharnesscounterexample"
     },
     {
       "id": "S03-11",
