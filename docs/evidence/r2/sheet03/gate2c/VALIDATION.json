@@ -1,0 +1,16 @@
+{
+  "classification": "CALCULATED verification counts/hashes, not electrical validation",
+  "baseline": "c47409fb2637c94ccaa685c3ac4cbbd10681d5a2",
+  "historical_JSON_members_preserved": true,
+  "repeat_generation_identical": true,
+  "hardware_index_metadata_identical": true,
+  "hardware_diff_empty": true,
+  "native_KiCad_files_opened_or_saved": false,
+  "numerical_test_command": "python3 -B -m unittest discover -s tests -p test_sheet03_gate2c_calculations.py",
+  "numerical_tests": 6,
+  "electrical_validation": "NOT PERFORMED; actual margins and SOA OPEN",
+  "readability_capture_owner": "codex-a; revised PDF qualification not part of this branch",
+  "plot_review": "Standalone conditional chart visually inspected; no clipping or missing labels found",
+  "netlist_sha256": "8e7e4fd0ab4e3f6541d030f37904412a38eace9c075c9f732dbd34a13e5591ad",
+  "source_register_sha256": "14114106f19575d345476af0516f373db82bca0f942f7330feeb8c61580cb41f"
+}
