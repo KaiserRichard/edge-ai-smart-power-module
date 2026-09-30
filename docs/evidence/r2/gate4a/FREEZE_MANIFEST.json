@@ -356,20 +356,25 @@
       "refdes": [
         "Q330",
         "U330",
+        "D330",
         "R380",
         "R381",
         "R382",
         "R383",
         "R384",
-        "R385"
+        "R385",
+        "R386",
+        "R387",
+        "R388",
+        "R389"
       ],
       "old": "Q330: NEW; D330: NEW; R380: NEW",
-      "new_mpn": "CSD18540Q5B; UCC27511DBVR; WFMB2512R0330FEA x4; CRCW06031R00FKEA; TNPW060310K0BEEA",
-      "new_value_or_connection": "PROPOSAL: second independent raw crowbar from VOUT_5V1 through two parallel strings of 2x33mOhm to Q330 drain; source GND; held12V driver,1ohm gate,10k gate-source; command true FAULT alongside protected crowbar",
+      "new_mpn": "CSD18540Q5B; UCC27511DBVR; B260-13-F; WFMB2512R0330FEA x8; CRCW06031R00FKEA; TNPW060310K0BEEA",
+      "new_value_or_connection": "Rawdump: VOUT_5V1→(R380+R381+R386+R387)||(R382+R383+R388+R389)→Q330D; all8res33mΩ, effective66mΩ. Q330S=GND,U330OUT→R3841Ω→G; R38510kG→S. D330anodeGND/cathodeVOUT_5V1 localnegative/strayreturn. U330DRV_HOLD,FAULTlatchedcommand,negativeinputGND; localbypass perR4A-15. ProtectedQ30333mΩ remainsseparate.",
       "reason": "Protected crowbar is disconnected from upstream magnetics after Q301/Q302 off",
-      "governing_equation": "Eraw_dump<=Eraw_initial+Enew; Icap~Vraw/Rdump; require actual hot pulse/SOA;0.2J is TARGET only",
-      "status": "CONDITIONAL topology/real MPN candidates; hot pulse, timing, returns and negative clamp OPEN",
-      "source": "RAW_DUMP"
+      "governing_equation": "Erawpool99.865083mJ; raw66mΩ initialcurrent≤105.321A conditional; tau_max373.067µs,0.5Vend978.184µs; Ej_nom12.483mJ perresistor beforeunequalsharing",
+      "status": "R4A-09 concrete revised dump; T09 hotSOA/negativecommutation BENCH REQUIRED; rating prerequisite OPEN",
+      "source": "CSD18540SLPS488B; WFM30387; B260DS13004; RAW_NODE_ENERGY"
     },
     {
       "id": "S03-10",
