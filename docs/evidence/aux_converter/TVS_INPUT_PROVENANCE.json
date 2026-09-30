@@ -1,0 +1,47 @@
+{
+  "base_commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+  "branch": "feat/v1a-input-tvs",
+  "scope": "New analysis files only under docs/evidence/aux_converter; no KiCad files opened/read/saved",
+  "inputs": [
+    {
+      "path": "docs/evidence/aux_converter/V1A_INPUT_WITHSTAND.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "cb97bc2252c94869ff96313ca465d6eaf4df581ab1b2e1ae6b18c7bdb41b7f9f"
+    },
+    {
+      "path": "docs/evidence/aux_converter/AUX24_INTERFACE.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "aac450017e8d54522310194cfb3286875ef089ee69465b0d57203cbf866c0b5a"
+    },
+    {
+      "path": "docs/evidence/aux_converter/SOURCE_REGISTER.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "77ffdce82e2fb8d39db2ff90fec7f035ab10fea6155531e7024d66a2d4552a2a"
+    },
+    {
+      "path": "docs/evidence/r2/INPUT_PROTECTION.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "71e345f757f50809602ef1b48d525908dd63a2290def6e7d2e8d7022dc4e94a0"
+    },
+    {
+      "path": "docs/evidence/r2/forensic_2026-09-14/FUSE_REQUIREMENTS_AND_CANDIDATES.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "43da588029390120a371f90292a757412a899e420c1a2bbd922ff16618065115"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "a2372477b9540704f71348cf8e8d5463a94fcd34846a4fc078974baaddd1b31f"
+    },
+    {
+      "path": "docs/evidence/r2/sheet03/CALCULATIONS.json",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "0e968d476a69094440c83a0ac472287d6692097d94874dff75939307be752d1c"
+    },
+    {
+      "path": "docs/context/06_DECISION_LOG.md",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "sha256": "f9a2c46915ae7183c2b082f83471797303b280f82aede69edc25c7535bfce3f8"
+    }
+  ]
+}
