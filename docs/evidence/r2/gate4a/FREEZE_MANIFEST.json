@@ -415,7 +415,7 @@
       ],
       "old": "C307: Capacitor_specification / 1uF 50V; R323: Resistor_specification / 10k; U306: TPS7A1601DGNR / TPS7A1601DGNR; U307: TPS7A1601DGNR / TPS7A1601DGNR; R314: Resistor_specification / 53.9k; R315: Resistor_specification / 10.0k",
       "new_mpn": "GRM21BR71H105KA12L; CRCW120610K0FKEA; TPS7A1601DGNR retained U306; U307 DNP",
-      "new_value_or_connection": "C3071uF50V at AUX_LIMITED; R32310k now AUX_LIMITED; feed U306 from held12V, remove 7.5V LDO/divider from driver path",
+      "new_value_or_connection": "C3071uF50V and R32310k at AUX_LIMITED; U306 IN AND EN both from DRV_HOLD; U307/divider DNP in new driver path; EN must not exceed IN",
       "reason": "58.1V raw branch violates EN/C307/R323; higher driver rail needed at9V",
       "governing_equation": "P_R323=Vaux^2/Rmin; P_U306=(Vhold-5V)*I; dropout/thermal OPEN",
       "status": "CONDITIONAL; U307 removed only in future capture",
