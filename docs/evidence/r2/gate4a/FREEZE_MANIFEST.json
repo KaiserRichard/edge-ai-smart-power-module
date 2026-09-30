@@ -299,8 +299,8 @@
         "D305"
       ],
       "old": "Q304: 2N7002,215 / 2N7002,215; Q305: NEW; R324: NEW; R325: NEW",
-      "new_mpn": "2N7002,215 x3; TNPW0603100KBEEA x2; BZT52H-C10,115",
-      "new_value_or_connection": "Q305 drainSHDN/sourceGND;gate100k toVIN_FUSED and100k toGND plus10V zener;Q306 pulls gate low only with valid latched MAIN_PERMISSION;Q304 independent fault sink retained",
+      "new_mpn": "2N7002,215 x3; TNPW0603100KBEEA x3; BZT52H-C10,115",
+      "new_value_or_connection": "Q305 drainSHDN/sourceGND;gate100k toVIN_FUSED and100k toGND plus10V zener;Q306 pulls gate low only with valid latched MAIN_PERMISSION;Q304 independent fault sink retained;R326100k holds Q306 gate toGND when permission unpowered",
       "reason": "Unpowered logic must not release main eFuse into a persistent failed buck",
       "governing_equation": "Vg_unclamped=Vin/2; at9V=4.5V; SHDNlow<=VIL; zener, Ipin and partial supplies OPEN",
       "status": "BLOCKED exact transistor polarity/loading proof",

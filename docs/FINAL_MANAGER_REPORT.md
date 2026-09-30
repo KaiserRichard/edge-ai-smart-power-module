@@ -1,3 +1,19 @@
+# Gate4a manager update — 2026-09-30 (current)
+
+**STATUS: BLOCKED for test-board capture freeze and electrical qualification. TASKS1–5 analysis complete. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** This is the owner's R2 fault-test-board review, not the repository R4 fabrication gate. Earlier sections below are historical evidence.
+
+**WHAT WAS DONE:** recovered and pushed useful WIP; completed the Sheets01–04 change register, independent auxiliary supply proposal/checks, test hooks, uncertainty-aware real-harness bench plan and reproducible selected-BOM/two-node calculations. Proposed a separate raw-node dump because the protected crowbar is disconnected from the raw bank/L201 after series opening. Supplied the one-page owner explanation, recommended decisions and explicit freeze blockers. Each finished task was committed and pushed; no merge/native CAD/bench/PCB/fabrication activity.
+
+**EVIDENCE:** [Gate4a freeze report](evidence/r2/gate4a/GATE4A_FREEZE.md), [task accounting](evidence/r2/gate4a/TASK_PROGRESS.md), [calculations](evidence/r2/gate4a/CALCULATIONS.md), [raw-node energy](evidence/r2/gate4a/RAW_NODE_ENERGY.md), [TEST_PLAN](evidence/r2/gate4a/TEST_PLAN.md), [primary-source provenance](evidence/r2/gate4a/SOURCES.json) and [validation](evidence/r2/gate4a/VALIDATION.json). Six numerical/artifact tests pass; standalone ideal transfer curve visually reviewed. Actual voltage/current/thermal/timing/behavior remain untested/OPEN.
+
+**DECISIONS:** retain D plus Gate3b source-development route, normal9–26 V, PR17 SMCJ36CA/Schurter3403.0285.23 and PR15 retained identities; keep BSC034 pair/local setpoint/2mΩ shunt. Keep independent surge-stopper/12V buck-boost upstream of main eFuse. Raw dump is a proposed additional destination, not a qualified rating.27V remains outside-normal OVP-window test; no Pi until gates pass.
+
+**OPEN RISKS:** autonomous source trigger/complete min/max, qualified source/C/L envelope, aux inrush/timer/supervisor/hold/bootstrap, powered-off sense/negative return and pin-level fault-priority/default SHDN, hot MOSFET/ballast waveforms, protected receiving C/ESR/arrival and harness peak, source58.1V main let-through, actual regulation/hot path/thermal/contact/footprint limits. Conditional raw cap bound6.549596V (6.881668V terminal sensitivity) is below35V bulk voltage rating inside assumptions but is not an actual peak/safety result. Protected four-cap ESR fails the inherited allocation;100mV normal path sensitivity fails by37.221mV.
+
+**NEXT GATE:** close the explicitly listed circuit/evidence blockers before authorized R2 capture, then ERC and sequential R3/R4/R5 gates. Draft PR targets feat/sheet03-output-protection; no merge, fabrication or SBC release.
+
+---
+
 # Gate2c manager update — 2026-09-30
 
 **STATUS: BLOCKED. PRELIMINARY — R2/R3 BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**

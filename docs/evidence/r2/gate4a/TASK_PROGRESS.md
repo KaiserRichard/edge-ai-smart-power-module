@@ -12,4 +12,6 @@ STEP 0 inspected `git status`, `git log --oneline -8`, and `git diff --stat` on 
 | 4 BENCH FAULT TEST PLAN | NOT STARTED | Plan complete; no physical tests run | TEST_PLAN.md |
 | 5 CALCULATIONS | PARTIAL numbers in BASIS | Calculation analysis complete; actual bounds OPEN | CALCULATIONS.md/JSON, RAW_NODE_ENERGY.md, script/model/tests |
 
-Final GATE4A_FREEZE.md, owner explanation/decisions, FINAL_MANAGER_REPORT update and draft PR into feat/sheet03-output-protection follow these tasks. No Pi, physical test, fabrication or electrical-validation claim is authorized by these documents.
+Final [GATE4A_FREEZE.md](GATE4A_FREEZE.md), owner explanation/decisions and FINAL_MANAGER_REPORT update are complete. Draft PR targets feat/sheet03-output-protection; no merge. No Pi, physical test, fabrication or electrical-validation claim is authorized by these documents.
+
+Task checkpoints: 1=`0ab43c2`,2=`e65a7f2`,3=`78fbf4e`,4=`2774400`,5=`8e45366`; each pushed to origin/feat/r2-testboard-freeze. Freeze verdict is BLOCKED at technical construction/evidence limits, independent of completed analysis deliverables.
