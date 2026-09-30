@@ -1,0 +1,222 @@
+{
+  "A": {
+    "ASSUMED_targets": {
+      "Cin_max_F": 2e-05,
+      "Cin_min_F": 1e-05,
+      "Cprotected_max_F": 0.00022,
+      "Craw_bulk_max_F": 0.0054144,
+      "Craw_ceramic_max_F": 0.00018216,
+      "Craw_min_F": 0.0024064,
+      "Ldiff_max_H": 8.16e-06,
+      "Ldiff_min_H": 5.44e-06,
+      "ballast_R_max_ohm": 0.033495,
+      "ballast_R_min_ohm": 0.032505,
+      "crowbar_Rtotal_max_ohm": 0.040095,
+      "crowbar_action_after_overdrive_s_max": 1e-06,
+      "initial_inductor_A_max": 6.1,
+      "input_V_max": 24.0,
+      "positive_source_charge_until_isolation_C": 0.00015,
+      "proposed_hot_single_pulse_J_per_resistor": 0.05,
+      "raw_ESR_max_ohm": 0.004,
+      "raw_overdrive_V": 0.04269058116232465,
+      "resistor_terminal_target_C_max": 85.0,
+      "ring_V_max": 0.02,
+      "rounded_fault_current_A_max": 60.0,
+      "series_isolation_s_max": 2e-06,
+      "source_isolation_deadline_s": 2e-05
+    },
+    "CALCULATED": {
+      "Cin14p076uF_initial_only_current_A": 39.0691694306393,
+      "all_stores_energy_ceiling_J": 0.0974872868,
+      "ballast_I2t_energy_upper_A2s": 2.9991474173204122,
+      "fault_margin_2us_V": -0.004414251932671753,
+      "fault_margin_V": 0.038166317529155336,
+      "fully_on_crowbar_loadline_V_max": 2.4057,
+      "initial_L_energy_J": 0.00015181679999999999,
+      "input_energy_J": 0.00936,
+      "normal_30us_margin_V": -0.008033198558235135,
+      "normal_30us_screen_V": 5.291601351718914,
+      "normal_false_trip_margin_V": 0.017315870590700617,
+      "normal_release_screen_V": 5.266252282569979,
+      "on_interval_module_peak_2us_action_V": 5.504414251932672,
+      "on_interval_module_peak_screen_V": 5.461833682470845,
+      "positive_L_current_energy_bound_A": 59.1353656502455,
+      "single_resistor_energy_upper_J": 0.02492154839789826,
+      "single_resistor_fraction_max": 0.25563895781637713
+    },
+    "application_VPi_peak_max_V": null,
+    "guaranteed_application_action_time_min_max_s": [
+      null,
+      null
+    ]
+  },
+  "B": {
+    "ASSUMED": {
+      "equal_ballast_ohm": 0.033,
+      "eta_normal": 0.9,
+      "fuse_clearing_integral_A2s": 11.0,
+      "output_fuse_cold_R_ohm": 0.009
+    },
+    "CALCULATED": {
+      "Pi_margin_with_extra_fuse_V": -0.033567300780425136,
+      "Pi_with_extra_fuse_V": 4.716432699219575,
+      "SCR_cold_I2t_ratio_510_over_11": 46.36363636363637,
+      "ballast_J_at11A2s": 0.363,
+      "constant100A_clearing_screen_s": 0.0011,
+      "each_equal_ballast_J_at11A2s": 0.09075,
+      "input_9V_A": 3.1471362072454965,
+      "input_fuse_rating_at75pct_A": 4.196181609660662,
+      "output_fuse_drop_V": 0.045,
+      "output_fuse_rating_at75pct_A": 6.666666666666667
+    },
+    "application_VPi_peak_max_V": null,
+    "guaranteed_24VDC_total_clearing_s_max": null
+  },
+  "C": {
+    "ASSUMED": {
+      "all_mid_C_max_F": 0.000324996,
+      "eta_final": 0.95,
+      "eta_first": 0.92,
+      "local_C_max_F": 6.0996e-05,
+      "mid_nom_V": 6.0,
+      "mid_tolerance_fraction": 0.02,
+      "single_eta_comparison": 0.935
+    },
+    "CALCULATED": {
+      "additional_loss_vs_single_W": 1.9028622474577561,
+      "all_mid_input_energy_J": 0.006086265091199999,
+      "combined_eta": 0.874,
+      "final_stage_loss_W": 1.341673856773081,
+      "first_stage_loss_W": 2.3333458378662257,
+      "local_input_energy_J": 0.0011422842912,
+      "lossless_stiff_source_LC_screen_V": 7.081367762204828,
+      "maintained_mid_DC_fault_margin_V": -0.6200000000000001,
+      "mid_V_range": [
+        5.88,
+        6.12
+      ],
+      "mid_for95pct_duty_nom_min_V": 5.484989088564776,
+      "mid_nom_max_for5p5_V": 5.445544554455446,
+      "normal_input_A_at9V": 3.2407581081475367,
+      "output_W": 25.491803278688522,
+      "single_loss_comparison_W": 1.7721574471815507,
+      "total_loss_W": 3.6750196946393068
+    },
+    "application_VPi_peak_max_V": null
+  },
+  "D": {
+    "ASSUMED_targets": {
+      "Cprotected_max_F": 0.0015,
+      "Cprotected_min_F": 0.001,
+      "Pi_C_min_F": 0.00022,
+      "clamp_high_V": 5.38,
+      "clamp_low_V": 5.34,
+      "dump_hot_energy_target_J": 0.2,
+      "effective_clamp_response_s_max": 5e-07,
+      "extra_Pi_ring_V": 0.01,
+      "harness_L_max_H": 2e-06,
+      "harness_current_A_max": 10.0,
+      "incoming_A_max": 60.0,
+      "local_ring_V_max": 0.02,
+      "protected_ESR_max_ohm": 0.0005,
+      "raw_dump_clamp_max_V": 31.5,
+      "raw_dump_clamp_min_V": 28.5,
+      "series_current_isolation_s_max": 2e-06
+    },
+    "CALCULATED": {
+      "LT4363_high_corner_at_that_nominal_V": 5.487302373872778,
+      "LT4363_nominal_clamp_min_to_clear_normal_V": 5.381777328221378,
+      "LTC4367_false_trip_margin_V": -0.05009983746019774,
+      "LTC4367_trip_range_before_other_errors_V": [
+        5.226152445109781,
+        5.42450375751503
+      ],
+      "Pi_2uF_5A_2uH_energy_screen_V": 7.403485665549708,
+      "complete_all_store_energy_max_J": null,
+      "dump_L_only_plus_source_J": 0.093024,
+      "local_clamp_interval_energy_J": 0.0006552,
+      "module_margin_V": 0.040000000000000036,
+      "module_peak_screen_V": 5.46,
+      "raw_dump_max_voltage_vs35V_bulk_margin_V": 3.5,
+      "restricted_L_only_Pi_fault_margin_V": -0.052624911455843915,
+      "restricted_L_only_Pi_peak_screen_V": 5.552624911455844,
+      "restricted_L_only_required_Pi_C_F": 0.0006088280060882701,
+      "source_raw_module_store_subtotal_excluding_Pi_J": 0.1168472868,
+      "sustained_source_dump_decay_s": 0.00010879999999999999,
+      "sustained_source_dump_multiplier_at_min_clamp": 6.333333333333333,
+      "two_cap_counterexample_margin_V": -0.04214014625217288,
+      "two_cap_counterexample_peak_V": 5.542140146252173
+    },
+    "application_VPi_peak_max_V": null
+  },
+  "E": {
+    "ASSUMED_targets": {
+      "10A_bound_includes_limiting_overshoot": true,
+      "ESR_max_ohm": 0.005,
+      "Pi_C_max_F": 0.0015,
+      "Pi_C_min_F": 0.001,
+      "clamp_high_V": 5.4,
+      "clamp_low_V": 5.3,
+      "harness_L_max_H": 1e-05,
+      "hot_output_absorber_energy_target_J": 0.01,
+      "incoming_A_max": 10.0,
+      "isolation_s_max": 5e-06,
+      "local_ring_V_max": 0.02,
+      "normal_total_loop_R_max_ohm": 0.05,
+      "total_clamp_overshoot_V_max": 0.02,
+      "upstream_dump_energy_target_J": 0.2
+    },
+    "CALCULATED": {
+      "220uF_margin_V": -0.1538352591194201,
+      "220uF_peak_screen_V": 5.65383525911942,
+      "60A_margin_V": -0.4765625318466924,
+      "60A_peak_screen_V": 5.976562531846692,
+      "Pi_5A_at50mohm_margin_V": 0.038271401729417676,
+      "Pi_5A_at50mohm_screen_V": 4.788271401729418,
+      "active_clamp_false_fire_margin_V": 0.02374771743002114,
+      "active_clamp_margin_V": 0.08000000000000007,
+      "active_clamp_peak_target_V": 5.42,
+      "output_absorber_received_energy_J": 0.000771,
+      "series_only_letthrough_peak_screen_V": 5.476562531846692,
+      "series_only_margin_V": 0.023437468153307606
+    },
+    "application_VPi_peak_max_V": null
+  },
+  "baseline": {
+    "Pi_reduced_path_min_V": 4.761432699219575,
+    "buck_max_V": 5.158632237795172,
+    "buck_min_V": 5.038271401729418,
+    "existing_application_worst_case_V": null,
+    "normal_10mV_margin_V": 0.021954176723427705,
+    "normal_max_20us_V": 5.261613976437252,
+    "trip_max_V": 5.356562531846693,
+    "trip_min_V": 5.293568153160679
+  },
+  "baseline_commit": "0677fea",
+  "classification": "CALCULATED conditional extrema within expressly ASSUMED target boxes; not application worst cases",
+  "frozen_requirements": {
+    "GPIO_power": true,
+    "Pi_5A_V_floor": 4.75,
+    "Pi_peak_V_strict_ceiling": 5.5,
+    "Vin_V": [
+      9,
+      24
+    ]
+  },
+  "status": "ANALYSIS COMPLETE; ALL APPLICATION QUALIFICATION OPEN",
+  "supply_hold_up": {
+    "ASSUMED": {
+      "C_effective_min_F": 1e-05,
+      "Vstart_min": 10.5,
+      "Vvalid_min": 10.0,
+      "aggregate_gate_charge_C_max": 4.8e-07,
+      "control_A_max": 0.025,
+      "required_action_hold_s": 0.00015
+    },
+    "CALCULATED": {
+      "hold_s_after_gate_charge": 0.00018080000000000003,
+      "minimum_C_F": 8.459999999999999e-06
+    },
+    "actual_supply_validity": null
+  }
+}

@@ -1,12 +1,39 @@
 # Sheet 03 preliminary architecture decision
 
-## Gates 1d + 2 — current decision, completed 2026-09-30
+## Gate2c — current engineering decision, 2026-09-30
+
+**VERDICT: BLOCKED. PRELIMINARY — R2/R3 BLOCKED — NOT FOR FABRICATION.**
+
+The [independent closure analysis](GATE2C_REVIEW_CLOSURE.md) supersedes the
+historical readiness/positive-margin interpretation below. Fault current,
+inductive-energy disposal, complete delays and supply validity remain
+BLOCKING. Every application worst-case margin is OPEN. New DATASHEET evidence
+(Vishay30387 p2) gives maximum selected resistor-terminal temperature **95°C**;
+the inherited ASSUMED **125°C** terminal envelope exceeds it by CALCULATED
+**30 K** and cannot support pulse acceptance.
+
+**PROPOSED CHANGES only:** qualify the energy/current path, timing rail/hold-up,
+reset/clamp sequencing, actual harness, and applicable resistor thermal/pulse
+rating. No circuit/part/value change is applied in this branch. The pair is
+COMMON SOURCE: sources and LTC7001 TS meet at PROT_MID; outer drains meet raw
+and protected rails. Both-off channels block through-current either way;
+enabled channels are bidirectional.
+
+Nominal operation from the proposed robot rail is plausible; converter selection
+is still OPEN. The user clarified that no model has been selected. The closure
+report gives its normal-output/trim/OVP/isolation/containment contract and a
+CALCULATED typical-only thermal/loss comparison. No fallback-module purchase
+or shortlist is justified by the current evidence.
+
+## Historical decision record
+
+## Gates 1d + 2 — historical preliminary decision, completed 2026-09-30
 
 **VERDICT: PRELIMINARY — READY FOR SCHEMATIC REVIEW.**
 
 **Gate1d pulse selection and Gate2 preliminary capture: CONDITIONAL PASS. R2 release BLOCKED; R3 BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
-The user accepted Candidate C + crowbar and the Gate1c preliminary envelope, then authorized routine part/value/connection corrections, scoped commits/pushes to PR5 and Gate2 only after pulse selection passed. This is the one current decision; earlier no-capture decisions are superseded for preliminary capture only. Historical evidence remains in Git and the analysis appendices below.
+The user accepted Candidate C + crowbar and the Gate1c preliminary envelope, then authorized routine part/value/connection corrections, scoped commits/pushes to PR5 and Gate2 only after pulse selection passed. This was the Gate2 decision; Gate2c below supersedes its readiness interpretation; earlier no-capture decisions are superseded for preliminary capture only. Historical evidence remains in Git and the analysis appendices below.
 
 **DECISION:** select CSD18540Q5B with UCC27511DBVR on the independent `DRV_7V5` rail (captured setpoint 7.62327 V) and a drain-side 33 mΩ ballast made from four WFMB2512R0330FEA parts, `(R+R)||(R+R)`. Source and driver return are grounded. The former source ballast reduced VGS to 1.04 V at the modeled current and is rejected. Keep REF5025 + TLV3201 + SN74LVC1G74 and LTC7001 with two BSC034N06NSATMA1 series devices. The captured pair is common-source: both series sources and LTC7001 TS share `PROT_MID`. The raw and protected rails attach to opposite drains. No raw-to-protected bypass is permitted.
 
@@ -89,11 +116,13 @@ The following replaces the earlier unbounded placeholders for this gate.
 
 The 30 V source and 0.5 µH fault corner are deliberately explicit design acceptance assumptions. They are not claimed properties of the future auxiliary converter, TPS26630, or XAL8080. If the system owner adopts different limits, this calculation must be rerun.
 
-### Complete Candidate C review circuit
+### Complete Candidate C review circuit — historical parameters superseded
+
+**Historical concept only.** The common-source topology description is corrected here. The following historical driver supply, TS connection, gate bleed, bootstrap capacitance and clamp/latch details are superseded by the captured XML/pin review and Gate2c closure; do not use them as the current wiring contract.
 
 The review concept is a normally-off, latched, common-source disconnect:
 
-* Q1/Q2 are Infineon BSC034N06NSATMA1, 60 V SuperSO8 N-channel MOSFETs, common drain at `PROT_MID`; Q1 source=`VOUT_5V1`, Q2 source=`VOUT_PROTECTED`; each body diode points toward `PROT_MID`, so neither diode provides a raw-to-load bypass. Pins 1–3 are source, pin 4 gate, pins 5–8 drain (Infineon Rev 2.3, p.1). Qg max is 41 nC (defined-by-design, not production tested), Qgd max 9.2 nC; RDS(on) max is 3.4 mΩ at 10 V/50 A.
+* Q1/Q2 are Infineon BSC034N06NSATMA1, 60 V SuperSO8 N-channel MOSFETs, common source at `PROT_MID`; Q1 drain=`VOUT_5V1`, Q2 drain=`VOUT_PROTECTED`; each body diode points from `PROT_MID` toward its outer drain, so neither diode provides a through-conduction path in either direction when both channels are off. Enabled channels conduct in either direction. Pins 1–3 are source, pin 4 gate, pins 5–8 drain (Infineon Rev 2.3, p.1). Qg max is 41 nC (defined-by-design, not production tested), Qgd max 9.2 nC; RDS(on) max is 3.4 mΩ at 10 V/50 A.
 * U301 is LTC7001IMSE#PBF. Pin 1 VCC is an independent 10 V gate-drive supply, pin 2 VCCUV is tied to GND for the 3.5 V minimum gate-driver UVLO, pin 3 and exposed pad 11 are GND, pin 4 INP is `RUN_GATE`, pin 5 OVLO is tied low, pin 6 TGDN is the direct gate-sink output, pin 7 TGUP is the turn-on output through 100 Ω, pin 8 TS is `VOUT_PROTECTED`, pin 9 BST is connected to TS by 100 nF, and pin 10 is NC. A 22 kΩ external gate-source resistor is fitted; the driver’s own 1 MΩ pulldown is not relied upon. LTC7001 Rev G §§6, 7.2.
 * U302 is REF5025IDGKR high-grade 2.5 V reference, powered from the independent detector supply ahead of the buck fault path, with 1 µF output capacitance. U303 is TLV3201AIDBVR at 5 V. The raw divider is R301=11.3 kΩ and R302=10.0 kΩ, both 0.1%, giving 5.325 V nominal. R303=1.00 kΩ and BAS116 D301 (anode at the divider, cathode at comparator supply) current-limit positive input clamp; the divider is never allowed to rely on a comparator absolute maximum.
 * U304 is SN74LVC1G74DCTR. D=1, PRE=VDD, CLR=`FAULT_CLEAR`, Q=`ARM_LATCH`; Q and `BUCK_PGOOD` are combined with the comparator-good signal in U305 SN74LVC1G11DBVR (A=`ARM_LATCH`, B=`BUCK_PGOOD`, C=`OV_OK`, Y=`RUN_GATE`). A momentary manual ARM input clocks U304; an overvoltage or detector-supply-invalid condition clears it. There is no automatic retry. U306 TPS7A1601 supplies the detector/logic rail from `VIN_FUSED`; its PG is included in `FAULT_CLEAR`. Exact U306 resistor values and the manual ARM connector remain OPEN until capture review.

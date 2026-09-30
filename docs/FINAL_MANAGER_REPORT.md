@@ -1,3 +1,38 @@
+# Gate2c manager update — 2026-09-30
+
+**STATUS: BLOCKED. PRELIMINARY — R2/R3 BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** independently reviewed the input findings and manufacturer
+limits; created numerical scripts/tests, complete stage/supply tables, pulse-tail
+energy and current sensitivities; corrected common-source text. No native KiCad
+file was opened or saved. All electrical changes remain PROPOSED CHANGES.
+
+**EVIDENCE:** [Gate2c closure](evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md),
+[calculations](evidence/r2/sheet03/GATE2_CALCULATIONS.md), appended `gate_2c`
+JSON member, manufacturer source register, preserved independent input review,
+and numerical tests. Historical members are retained. Numerical PASS does
+not establish an electrical protection envelope.
+
+**DECISIONS:** supersede the earlier preliminary-readiness interpretation with
+BLOCKED. Application worst-case margins are OPEN. Finite conditional negative
+cases and the DATASHEET resistor-terminal rating conflict are disclosed.
+The future converter is not selected; nominal rail operation is plausible,
+while its exact tolerance/trim/OVP/isolation/containment remains OPEN. Provide
+selection requirements; no fallback-module shortlist yet.
+
+**OPEN RISKS:** saturated-L/current and energy disposal; applicable complete
+delays and supply qualification/hold-up/reset/back-power; hot resistor terminal
+and pulse rating; series inrush/VGS/SOA; actual harness/effective C/loop/startup;
+source/converter fault envelope and thermal qualification. codex-a owns revised
+PDF readability and new capture reconciliation.
+
+**NEXT GATE:** senior R2 engineering decisions on the proposed changes and
+qualification contracts. R2/R3 release remains BLOCKED. No merge, fabrication,
+procurement, board routing or expensive-SBC first test. Earlier reports below
+are historical evidence.
+
+---
+
 # Gate2 manager update — 2026-09-30
 
 **STATUS: CONDITIONAL PASS for the authorized preliminary schematic capture/review package. VERDICT: PRELIMINARY — READY FOR SCHEMATIC REVIEW. R2 release and R3 remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
@@ -195,3 +230,19 @@ Additional evidence limits: some official PDFs remain remote-only; predecessor d
 **Stop here for technical review.** Send this report and the source pack to ChatGPT as requested. Manager review must resolve essential requirements, approve the architecture and component direction, and explicitly authorize R2. Only then capture a schematic, verify pins/footprints/ratings and run ERC. Continue R3–R5 sequentially; dummy-load fault/thermal/ripple validation precedes SBC use.
 
 No commit, push, purchase, ignored-cache deletion or schematic implementation was performed. Documentary rollback can be limited to this mission's new files and scope annotations; retain historical evidence and the user's existing AGENTS edits.
+
+---
+
+# Manager update — Sheet 03 Gate 3 architecture comparison (2026-09-30)
+
+**STATUS: BLOCKED for electrical qualification; the requested architecture comparison is complete. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** This update is the current Sheet 03 analysis state; the R0/R1 report above remains historical evidence. The user's Gate 3 analysis task does not authorize the repository's R3 PCB gate.
+
+**WHAT WAS DONE:** Compared five fault-containment architectures for a buck high-side short: bounded-source crowbar, coordinated fuse/crowbar, two-stage conversion, module-side disconnect/absorber, and independent Pi-end protection. Recorded tolerance/current/energy/timing/supply/normal-loss screens, supplier evidence, common Gate2c fixes, costs and required dummy-load tests. Saved and pushed a checkpoint after each option. Native KiCad files, historical calculations and prior review evidence were not opened or changed.
+
+**EVIDENCE:** [Architecture comparison and designer explanation](evidence/r2/sheet03/GATE3_ARCHITECTURE_OPTIONS.md), [conditional calculation record](evidence/r2/sheet03/gate3/OPTIONS_CALCULATIONS.json), [validation record](evidence/r2/sheet03/gate3/VALIDATION.json) and [manufacturer source register](../third_party/sheet03_gate3_source_register.json). Twelve targeted tests verify arithmetic/unknown-bound handling; they do not establish electrical performance. No ERC/DRC, export, simulation or bench validation is claimed.
+
+**DECISIONS:** Recommend E, an independent Pi-end precision disconnect with local energy absorber and a separately qualified input-side energy path. Runner-up D is conditional on the complete module-capacitor/harness/Pi-capacitor trajectory and damping contract. These are proposals awaiting owner approval; no approved preliminary architecture, frozen Pi limit, GPIO interface or 9–24 V requirement is superseded.
+
+**OPEN RISKS:** Every application worst-case Pi voltage remains OPEN/BLOCKING. No exact limiter/clamp/dump BOM is qualified. Source replenishment, raw-bank bypass current, saturated differential inductance, hot SOA/pulse/terminal ratings, complete timing and loaded driver/reference validity require applicable bounds. Harness resistance and normal/transient voltage windows are tight; adding a protection stage to the existing loop without recovering resistance fails the 4.75 V requirement. The upstream converter and local auxiliary supply/wiring contract are unselected. Negative margin screens remain BLOCKING.
+
+**NEXT GATE:** Owner approval of the proposed architecture and development allocations; then component/source/harness qualification and recalculation before any authorized schematic change. Maintain R2/R3 release BLOCKED and use dummy-load fault tests before SBC integration. The requested draft PR targets `feat/sheet03-output-protection`; do not merge.

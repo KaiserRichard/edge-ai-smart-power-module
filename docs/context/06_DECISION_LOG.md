@@ -12,6 +12,17 @@ Consolidated 2026-09-26; this is an index into existing decisions, not a replace
 | R2 must close before PCB work | [Manager report](../FINAL_MANAGER_REPORT.md); [gate workflow](05_WORKFLOW_AND_GATES.md) | R2/R3 BLOCKED; R3 requires separate authorization |
 | Never fabricate qualification state | [AGENTS.md](../../AGENTS.md); [engineering state](03_ENGINEERING_STATE.md) | Permanent evidence discipline |
 
+## 2026-09-30 — Gate2c analysis override
+
+[Gate2c closure](../evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md): BLOCKED;
+all application worst-case margins OPEN. Preserve historical arithmetic,
+correct common-source wording, disclose conditional negative cases and the
+resistor-terminal rating conflict. No circuit edits or physical validation.
+The senior has not selected the upstream converter. Write selection limits
+and honestly leave model-specific tolerance/trim/OVP/isolation/containment
+OPEN; nominal higher-rail operation has not been rejected, so no fallback
+module shortlist is authorized by that conditional request yet.
+
 ## 2026-09-30 — Gate2 preliminary capture completed
 
 Retain and reconcile `13e4c2d`; do not replace its two-latch startup/fault implementation with the overlapping alternative. Manufacturer pin review corrects UCC27511 to 1 VDD / 2 OUTH / 3 OUTL / 4 GND / 5 IN− / 6 IN+; the series-FET footprint retains pads 1–8. The auxiliary diode, driver divider 53.9 kΩ/10kΩ and reviewed package/polarity corrections are captured. Unrelated sheets are preserved with the explicitly listed hierarchy exceptions. See [Gate2 validation](../evidence/r2/sheet03/GATE2_VALIDATION.md).
@@ -42,3 +53,7 @@ Gate 1c retains Candidate C and adds a low-side crowbar: CSD17308Q3, UCC27511DBV
 Candidate C is retained as the only review concept: REF5025 + TLV3201 threshold detector, SN74LVC1G74 latch, LTC7001 independent high-side driver, and common-source BSC034N06NS pair. With explicit assumptions and a reproducible script, `V_trip` is 5.325 V nominal / 5.294–5.357 V corner and the normal-release screen leaves +22 mV. The 30 V, 0.5 µH, 2 µs fault screen reaches 5.868 V, failing the Pi limit by 368 mV. The single remaining blocker is `B1_FAULT_INTERRUPTION_ENVELOPE`: authoritative source/inductance bounds and an effective isolation time below 0.385 µs are not evidenced. No KiCad capture is authorized.
 
 Future entries should link to the authoritative dated decision record, include rationale and evidence state, and identify superseded decisions explicitly. Do not copy whole reviews here.
+
+## 2026-09-30 — Gate3 architecture options, recommendation awaiting approval
+
+[Gate3 options](../evidence/r2/sheet03/GATE3_ARCHITECTURE_OPTIONS.md) compares A–E against the frozen GPIO/Pi/input requirements. Recommend E (independent Pi-end precision disconnect and local absorber, with separately qualified source/input energy path); runner-up D needs the full coupled harness/capacitor contract. This is an unapproved proposal, not a replacement for the accepted preliminary crowbar architecture or permission to change CAD. All application worst-case peaks remain OPEN/BLOCKING; R2/R3 release stays BLOCKED. See the report for proposed allocations, supplier limits, negative screens and required tests. No historical decision is superseded by this analysis.
