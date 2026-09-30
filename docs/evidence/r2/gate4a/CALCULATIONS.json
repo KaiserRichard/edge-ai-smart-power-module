@@ -1,0 +1,956 @@
+{
+  "classification": "CALCULATED within stated ASSUMED/test-conditioned inputs; all actual application maxima OPEN",
+  "baseline_PR15_commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+  "path_input_commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+  "path_input_sha256": "7ad3e2562273eb08921d6805331e9691324c4ce1c665fc88d56df1860ab308bc",
+  "netlist_sha256": "39318e12c26a93ff23c8bc54d6a9d210ae01f0a7a84d88af83f579ecbea4a263",
+  "netlist_energy_boundaries": {
+    "/03_OUTPUT_PROTECTION/CB_DRAIN": [
+      {
+        "ref": "Q303",
+        "pin": "5"
+      },
+      {
+        "ref": "Q303",
+        "pin": "6"
+      },
+      {
+        "ref": "Q303",
+        "pin": "7"
+      },
+      {
+        "ref": "Q303",
+        "pin": "8"
+      },
+      {
+        "ref": "R309",
+        "pin": "2"
+      },
+      {
+        "ref": "R311",
+        "pin": "2"
+      }
+    ],
+    "/03_OUTPUT_PROTECTION/CB_GATE": [
+      {
+        "ref": "Q303",
+        "pin": "4"
+      },
+      {
+        "ref": "R306",
+        "pin": "2"
+      },
+      {
+        "ref": "R307",
+        "pin": "1"
+      },
+      {
+        "ref": "U315",
+        "pin": "3"
+      }
+    ],
+    "/03_OUTPUT_PROTECTION/CB_R_A": [
+      {
+        "ref": "R308",
+        "pin": "2"
+      },
+      {
+        "ref": "R309",
+        "pin": "1"
+      }
+    ],
+    "/03_OUTPUT_PROTECTION/CB_R_B": [
+      {
+        "ref": "R310",
+        "pin": "2"
+      },
+      {
+        "ref": "R311",
+        "pin": "1"
+      }
+    ],
+    "/04_POWER_MONITOR/SHUNT_KMINUS": [
+      {
+        "ref": "R401",
+        "pin": "3"
+      },
+      {
+        "ref": "R403",
+        "pin": "1"
+      },
+      {
+        "ref": "TP403",
+        "pin": "1"
+      }
+    ],
+    "/04_POWER_MONITOR/SHUNT_KPLUS": [
+      {
+        "ref": "R401",
+        "pin": "2"
+      },
+      {
+        "ref": "R402",
+        "pin": "1"
+      },
+      {
+        "ref": "TP402",
+        "pin": "1"
+      }
+    ],
+    "/LOAD_5V1": [
+      {
+        "ref": "J502",
+        "pin": "1"
+      },
+      {
+        "ref": "R401",
+        "pin": "4"
+      },
+      {
+        "ref": "TP503",
+        "pin": "1"
+      },
+      {
+        "ref": "U401",
+        "pin": "8"
+      }
+    ],
+    "/VOUT_5V1": [
+      {
+        "ref": "C207",
+        "pin": "1"
+      },
+      {
+        "ref": "C209",
+        "pin": "1"
+      },
+      {
+        "ref": "C210",
+        "pin": "1"
+      },
+      {
+        "ref": "C211",
+        "pin": "1"
+      },
+      {
+        "ref": "C212",
+        "pin": "1"
+      },
+      {
+        "ref": "C213",
+        "pin": "1"
+      },
+      {
+        "ref": "C214",
+        "pin": "1"
+      },
+      {
+        "ref": "C330",
+        "pin": "1"
+      },
+      {
+        "ref": "C331",
+        "pin": "1"
+      },
+      {
+        "ref": "C332",
+        "pin": "1"
+      },
+      {
+        "ref": "C333",
+        "pin": "1"
+      },
+      {
+        "ref": "C334",
+        "pin": "1"
+      },
+      {
+        "ref": "C335",
+        "pin": "1"
+      },
+      {
+        "ref": "C336",
+        "pin": "1"
+      },
+      {
+        "ref": "C337",
+        "pin": "1"
+      },
+      {
+        "ref": "L201",
+        "pin": "2"
+      },
+      {
+        "ref": "Q301",
+        "pin": "5"
+      },
+      {
+        "ref": "Q301",
+        "pin": "6"
+      },
+      {
+        "ref": "Q301",
+        "pin": "7"
+      },
+      {
+        "ref": "Q301",
+        "pin": "8"
+      },
+      {
+        "ref": "R202",
+        "pin": "1"
+      },
+      {
+        "ref": "R301",
+        "pin": "1"
+      },
+      {
+        "ref": "TP301",
+        "pin": "1"
+      }
+    ],
+    "/VOUT_PROTECTED": [
+      {
+        "ref": "C403",
+        "pin": "1"
+      },
+      {
+        "ref": "Q302",
+        "pin": "5"
+      },
+      {
+        "ref": "Q302",
+        "pin": "6"
+      },
+      {
+        "ref": "Q302",
+        "pin": "7"
+      },
+      {
+        "ref": "Q302",
+        "pin": "8"
+      },
+      {
+        "ref": "R308",
+        "pin": "1"
+      },
+      {
+        "ref": "R310",
+        "pin": "1"
+      },
+      {
+        "ref": "R401",
+        "pin": "1"
+      },
+      {
+        "ref": "TP302",
+        "pin": "1"
+      },
+      {
+        "ref": "U402",
+        "pin": "1"
+      }
+    ]
+  },
+  "selected_path": {
+    "itemised_rows": [
+      {
+        "element": "Buck output copper",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.4060894499980087
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; unsensed segment only, PCB 85 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Buck return copper",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.4060894499980087
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; unsensed segment only, PCB 85 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module series FET pair",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          5.6,
+          6.8
+        ],
+        "hot_min_typ_max": [
+          null,
+          11.2,
+          13.6
+        ],
+        "classification": "BSC034N06 pair: published25C10V RDS2x2.8typ/2x3.4max; ASSUMED2x150C screen, hot actual OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "2 mOhm current shunt",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          1.98,
+          2,
+          2.02
+        ],
+        "hot_min_typ_max": [
+          1.9762875,
+          2,
+          2.0237875
+        ],
+        "classification": "CALCULATED from +/-1%, +/-25 ppm/K, shunt 100 C; WSL2726 terminal/reference-plane coverage OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module PCB traces / vias",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.8121788999960174
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          1
+        ],
+        "classification": "ASSUMED acceptance allocation; PCB 85 C; geometry not measured",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "J502 complete mated pole and clamp",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          2.4
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          3.12
+        ],
+        "classification": "ASSUMED acceptance allocation; contact 60 C; manufacturer application maximum OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Trunk wire AWG16 75 mm",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.9032332677165353,
+          1.0035925196850393,
+          1.1039517716535432
+        ],
+        "hot_min_typ_max": [
+          1.0250787401574804,
+          1.138976377952756,
+          1.2528740157480316
+        ],
+        "classification": "CALCULATED from nominal DCR with ASSUMED 20 C reference, +/-10%; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module PCB traces / vias",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.8121788999960174
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          1
+        ],
+        "classification": "ASSUMED acceptance allocation; PCB 85 C; geometry not measured",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "J502 complete mated pole and clamp",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          2.4
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          3.12
+        ],
+        "classification": "ASSUMED acceptance allocation; contact 60 C; manufacturer application maximum OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Trunk wire AWG16 75 mm",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.9032332677165353,
+          1.0035925196850393,
+          1.1039517716535432
+        ],
+        "hot_min_typ_max": [
+          1.0250787401574804,
+          1.138976377952756,
+          1.2528740157480316
+        ],
+        "classification": "CALCULATED from nominal DCR with ASSUMED 20 C reference, +/-10%; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "AWG22 fan-out 15 mm, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.3658094734251968,
+          0.4064549704724409,
+          0.447100467519685
+        ],
+        "hot_min_typ_max": [
+          0.4151568897637795,
+          0.4612854330708661,
+          0.5074139763779527
+        ],
+        "classification": "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi mated contacts, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          7.692307692307692
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          10.0
+        ],
+        "classification": "ASSUMED acceptance allocation; new hot/conditioned <=20 mOhm/contact procurement target; no qualified mate yet",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi female crimps, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.3076923076923077
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.4
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.8 mOhm target, separate from mating interface",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi male pin / solder attachment, 2 parallel",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.1846153846153846
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.24
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.48 mOhm target; actual Pi pin attachment OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "AWG22 fan-out 35 mm, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          0.2133888594980315,
+          0.23709873277559054,
+          0.2608086060531496
+        ],
+        "hot_min_typ_max": [
+          0.24217485236220473,
+          0.2690831692913386,
+          0.29599148622047244
+        ],
+        "classification": "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi mated contacts, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          1.923076923076923
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          2.5
+        ],
+        "classification": "ASSUMED acceptance allocation; new hot/conditioned <=20 mOhm/contact procurement target; no qualified mate yet",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi female crimps, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.07692307692307693
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.1
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.8 mOhm target, separate from mating interface",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Pi male pin / solder attachment, 8 parallel",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.04615384615384615
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.06
+        ],
+        "classification": "ASSUMED acceptance allocation; per-termination <=0.48 mOhm target; actual Pi pin attachment OPEN",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Fan-out splice",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.3846153846153846
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module solder joints",
+        "leg": "SEND",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.07692307692307693
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.1
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Fan-out splice",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.3846153846153846
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.5
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      },
+      {
+        "element": "Module solder joints",
+        "leg": "RETURN",
+        "units": "mOhm",
+        "cold_25C_min_typ_max": [
+          null,
+          null,
+          0.07692307692307693
+        ],
+        "hot_min_typ_max": [
+          null,
+          null,
+          0.1
+        ],
+        "classification": "ASSUMED acceptance allocation; hot termination target",
+        "applicable_guaranteed_hot_max_mOhm": null
+      }
+    ],
+    "BSC034_pair_Qg_at_published_test_max_C": 8.2e-08,
+    "hot_Rpair_assumed_ohm": 0.0136,
+    "hot_Rpair_actual_ohm": null,
+    "source_min_assumed_V": 5.026143254670701,
+    "source_actual_min_V": null,
+    "results": {
+      "0": {
+        "ASSUMED_total_negative_excursion_V": 0,
+        "loop_mOhm": 42.672940994094496,
+        "loss_5A_V": 0.21336470497047247,
+        "dissipation_5A_W": 1.0668235248523623,
+        "Vfar_end_CALCULATED_V": 4.812778549700228,
+        "margin_to4p75_V": 0.06277854970022823,
+        "conditional_meets": true,
+        "actual_min_V": null
+      },
+      "0.02": {
+        "ASSUMED_total_negative_excursion_V": 0.02,
+        "loop_mOhm": 42.672940994094496,
+        "loss_5A_V": 0.21336470497047247,
+        "dissipation_5A_W": 1.0668235248523623,
+        "Vfar_end_CALCULATED_V": 4.792778549700229,
+        "margin_to4p75_V": 0.04277854970022865,
+        "conditional_meets": true,
+        "actual_min_V": null
+      },
+      "0.1": {
+        "ASSUMED_total_negative_excursion_V": 0.1,
+        "loop_mOhm": 42.672940994094496,
+        "loss_5A_V": 0.21336470497047247,
+        "dissipation_5A_W": 1.0668235248523623,
+        "Vfar_end_CALCULATED_V": 4.712778549700229,
+        "margin_to4p75_V": -0.03722145029977142,
+        "conditional_meets": false,
+        "actual_min_V": null
+      }
+    },
+    "at6Vgate_and_ASSUMED2x_hot": {
+      "pair_ohm": 0.0204,
+      "loop_mOhm": 49.47294099409449,
+      "Vfar_end_after20mV_V": 4.758778549700229,
+      "actual_V": null
+    }
+  },
+  "source_contract": {
+    "ASSUMED": {
+      "Cin_effective_F": [
+        1e-05,
+        3e-05
+      ],
+      "Ldiff_H": [
+        5e-06,
+        1.2e-05
+      ],
+      "current_domain_A": [
+        0,
+        100
+      ],
+      "healthy_I0_max_A": 8,
+      "source_off_max_s": 1e-05,
+      "replenishment_positive_max_C": 0.0001,
+      "actual_source_voltage_ceiling_V": null
+    },
+    "CALCULATED": [
+      {
+        "Vin_assumed_V": 9,
+        "Cin_energy_J": 0.001215,
+        "replenishment_work_J": 0.0009000000000000001,
+        "initial_L_energy_J": 0.000384,
+        "Enew_CALCULATED_J": 0.0024990000000000004,
+        "I_L_positive_upper_A": 31.6164514137814,
+        "Vraw_cap_upper_V": 5.6856803846303405,
+        "actual_Vraw_peak_V": null
+      },
+      {
+        "Vin_assumed_V": 24,
+        "Cin_energy_J": 0.00864,
+        "replenishment_work_J": 0.0024000000000000002,
+        "initial_L_energy_J": 0.000384,
+        "Enew_CALCULATED_J": 0.011424000000000002,
+        "I_L_positive_upper_A": 67.59881655768835,
+        "Vraw_cap_upper_V": 6.30433825639645,
+        "actual_Vraw_peak_V": null
+      },
+      {
+        "Vin_assumed_V": 26,
+        "Cin_energy_J": 0.01014,
+        "replenishment_work_J": 0.0026000000000000003,
+        "initial_L_energy_J": 0.000384,
+        "Enew_CALCULATED_J": 0.013124,
+        "I_L_positive_upper_A": 72.4541234161314,
+        "Vraw_cap_upper_V": 6.415417350978347,
+        "actual_Vraw_peak_V": null
+      },
+      {
+        "Vin_assumed_V": 27,
+        "Cin_energy_J": 0.010935,
+        "replenishment_work_J": 0.0027,
+        "initial_L_energy_J": 0.000384,
+        "Enew_CALCULATED_J": 0.014019000000000002,
+        "I_L_positive_upper_A": 74.8839101543182,
+        "Vraw_cap_upper_V": 6.473131353624503,
+        "actual_Vraw_peak_V": null
+      },
+      {
+        "Vin_assumed_V": 28.28921104694895,
+        "Cin_energy_J": 0.012004191924882278,
+        "replenishment_work_J": 0.002828921104694895,
+        "initial_L_energy_J": 0.000384,
+        "Enew_CALCULATED_J": 0.015217113029577173,
+        "I_L_positive_upper_A": 78.0182364055409,
+        "Vraw_cap_upper_V": 6.549595533586135,
+        "actual_Vraw_peak_V": null
+      }
+    ],
+    "actual_off_min_max_s": [
+      null,
+      null
+    ],
+    "actual_source_energy_max_J": null
+  },
+  "raw_node": {
+    "Cmin_ASSUMED_F": 0.0024064000000000004,
+    "Cmax_ASSUMED_F": 0.005596559999999999,
+    "initial_voltage_upper_ASSUMED_V": 5.5,
+    "initial_raw_energy_upper_J": 0.08464796999999998,
+    "total_raw_dump_pool_upper_J": 0.09986508302957715,
+    "ESR_ASSUMED_upper_ohm": 0.004,
+    "ringing_ASSUMED_V": 0.02,
+    "terminal_screen_CALCULATED_V": 6.881668479208298,
+    "actual_terminal_peak_V": null,
+    "complete_negative_fault_path": null,
+    "raw_dump_hot_rating_target_J": 0.2,
+    "raw_dump_actual_hot_rating_J": null,
+    "bulk35V_energy_headroom_at_Cmin_J": 1.4375232000000002,
+    "bulk_published_initial_parallel_ESR20C100kHz_max_ohm": 0.00175,
+    "bulk_lowtemperature_endurance_parallel_ESR_ohm": 0.0035,
+    "ideal_local_store_transfer": {
+      "ASSUMED": {
+        "Cin_F": 3e-05,
+        "Craw_F": 0.0024064,
+        "L_H": 1e-05,
+        "Vin0_V": 28.28921104694895,
+        "Vraw0_V": 5.5,
+        "I0_A": 8,
+        "source_work_J": 0,
+        "losses": 0,
+        "ideal_input_ground_diode": true
+      },
+      "input_ground_diode_start_s": 2.7954676814121183e-05,
+      "first_current_zero_s": 9.052897283438885e-05,
+      "peak_Vraw_CALCULATED_V": 6.363398909564701,
+      "energy_initial_J": 0.04872099192488228,
+      "max_energy_residual_J": 3.469446951953614e-17,
+      "actual_peak_V": null
+    }
+  },
+  "protected_node": {
+    "candidate_Cnom_F": 0.00188,
+    "Cmin_ASSUMED_F": 0.0012032000000000002,
+    "Cmax_ASSUMED_F": 0.0027071999999999995,
+    "published_initial_parallel_ESR20C100kHz_max_ohm": 0.0035,
+    "lowtemperature_endurance_parallel_ESR_ohm": 0.007,
+    "legacy_ESR_target_ohm": 0.0005,
+    "legacy_Cmax_target_F": 0.0015,
+    "initial_protected_energy_upper_J": 0.040946399999999994,
+    "separate_PiCmax_actual_F": null,
+    "ASSUMED_dummy_Cmax_F": 0.0022,
+    "ASSUMED_dummy_energy_upper_J": 0.033275,
+    "all_store_source_raw_protected_dummy_screen_J": 0.17408648302957713,
+    "actual_protected_arriving_current_A": null,
+    "legacy_conditional_module_screen_V": 5.4799999999999995,
+    "legacy_conditional_at_candidate14mOhm_parallel_ESR_V": 5.713244680851064,
+    "actual_module_peak_V": null,
+    "actual_far_end_peak_V": null,
+    "inherited_ASSUMED_harness_counterexample_V": 5.54214
+  },
+  "OV_trigger_latency_sensitivity": [
+    {
+      "ASSUMED_stiff_Vin_V": 9,
+      "L_H": 1e-05,
+      "Craw_F": 0.0024064000000000004,
+      "I0_A": 8,
+      "ESR_ohm": 0,
+      "initial_raw_V": 5.0983606557377055,
+      "Vraw_after10us_V": 5.1396863063788105,
+      "time_to_nominal_OV_s": 3.637976115793472e-05,
+      "actual_trigger_delay_s": null
+    },
+    {
+      "ASSUMED_stiff_Vin_V": 24,
+      "L_H": 1e-05,
+      "Craw_F": 0.0024064000000000004,
+      "I0_A": 8,
+      "ESR_ohm": 0,
+      "initial_raw_V": 5.0983606557377055,
+      "Vraw_after10us_V": 5.170842403116886,
+      "time_to_nominal_OV_s": 2.018161680019689e-05,
+      "actual_trigger_delay_s": null
+    },
+    {
+      "ASSUMED_stiff_Vin_V": 26,
+      "L_H": 1e-05,
+      "Craw_F": 0.0024064000000000004,
+      "I0_A": 8,
+      "ESR_ohm": 0,
+      "initial_raw_V": 5.0983606557377055,
+      "Vraw_after10us_V": 5.174996549348631,
+      "time_to_nominal_OV_s": 1.9353954782910085e-05,
+      "actual_trigger_delay_s": null
+    },
+    {
+      "ASSUMED_stiff_Vin_V": 27,
+      "L_H": 1e-05,
+      "Craw_F": 0.0024064000000000004,
+      "I0_A": 8,
+      "ESR_ohm": 0,
+      "initial_raw_V": 5.0983606557377055,
+      "Vraw_after10us_V": 5.177073622464501,
+      "time_to_nominal_OV_s": 1.8978433316248863e-05,
+      "actual_trigger_delay_s": null
+    }
+  ],
+  "auxiliary": {
+    "static_limit_screen_V": [
+      29.94062004710446,
+      31.64368265571336
+    ],
+    "nominal_limit_V": 30.788888888888888,
+    "static_12V_screen_V": [
+      11.6213434493387,
+      12.311324607930716
+    ],
+    "hold_ASSUMED": {
+      "Ceff_F": 0.0003,
+      "start_V": 11.2,
+      "floor_V": 10.5,
+      "total_load_A": 0.04,
+      "gate_event_C": 2.036e-06
+    },
+    "hold_time_screen_s": 0.0051991,
+    "nominal_hold_energy_J": 0.03168,
+    "hold_cap_only_average_input_if9ms_A": 0.48888888888888893,
+    "driver_supervisor_screen_V": [
+      10.697782403210725,
+      11.255595974154135
+    ],
+    "detector_supervisor_screen_V": [
+      4.856669009819203,
+      5.107360709116541
+    ],
+    "actual_usable_hold_s": null,
+    "actual_rails_valid": null,
+    "hold_at_low_12V_minus_ASSUMED0p5V_s": 0.004609175870040243
+  },
+  "detector": {
+    "old_nominal_trip_V": 5.325,
+    "new1M_pulldown_nominal_trip_V": 5.353250000000001,
+    "sense20mV_overdrive_raw_increment_V": 0.0426,
+    "actual_trip_min_max_V": [
+      null,
+      null
+    ],
+    "complete_path_min_max_s": {
+      "crowbar": [
+        null,
+        null
+      ],
+      "series": [
+        null,
+        null
+      ],
+      "source": [
+        null,
+        null
+      ]
+    },
+    "partial_digital_crowbar_max_s": 9.33e-08,
+    "partial_digital_series_max_s": 1.342e-07
+  },
+  "normal_buck": {
+    "input_current_screens": [
+      {
+        "Vin_V": 9,
+        "I_main_ASSUMED90pct_A": 3.1471362072454974,
+        "I_aux_ASSUMED80pct40mA12V_A": 0.06666666666666667
+      },
+      {
+        "Vin_V": 24,
+        "I_main_ASSUMED90pct_A": 1.1801760777170616,
+        "I_aux_ASSUMED80pct40mA12V_A": 0.024999999999999994
+      },
+      {
+        "Vin_V": 26,
+        "I_main_ASSUMED90pct_A": 1.0893933025080567,
+        "I_aux_ASSUMED80pct40mA12V_A": 0.023076923076923075
+      }
+    ],
+    "inrush_actual_min_max_s": [
+      null,
+      null
+    ],
+    "inductor_DCR_hot_actual_ohm": null,
+    "nominal_Vout_V": 5.0983606557377055,
+    "normal_Vin_requirement_V": [
+      9,
+      26
+    ],
+    "ripple_A_pp": [
+      {
+        "Vin_V": 9,
+        "at10uH400kHz_A": 0.5525545701573651
+      },
+      {
+        "Vin_V": 24,
+        "at10uH400kHz_A": 1.0038268162680284
+      },
+      {
+        "Vin_V": 26,
+        "at10uH400kHz_A": 1.0246547660885204
+      }
+    ],
+    "thermal_efficiency_startup_regulation_actual": null
+  }
+}

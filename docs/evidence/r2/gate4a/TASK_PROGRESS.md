@@ -10,6 +10,6 @@ STEP 0 inspected `git status`, `git log --oneline -8`, and `git diff --stat` on 
 | 2 AUX BRANCH FIX | PARTIAL proposal | Analysis complete; startup/threshold qualification BLOCKED | AUX_BRANCH_FIX.md |
 | 3 TEST HOOKS | PARTIAL rows | Analysis complete; physical fixture qualification OPEN | TEST_HOOKS.md |
 | 4 BENCH FAULT TEST PLAN | NOT STARTED | Plan complete; no physical tests run | TEST_PLAN.md |
-| 5 CALCULATIONS | PARTIAL numbers in BASIS | PENDING | CALCULATIONS.md/JSON and reproducible script to follow |
+| 5 CALCULATIONS | PARTIAL numbers in BASIS | Calculation analysis complete; actual bounds OPEN | CALCULATIONS.md/JSON, RAW_NODE_ENERGY.md, script/model/tests |
 
 Final GATE4A_FREEZE.md, owner explanation/decisions, FINAL_MANAGER_REPORT update and draft PR into feat/sheet03-output-protection follow these tasks. No Pi, physical test, fabrication or electrical-validation claim is authorized by these documents.

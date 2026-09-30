@@ -377,8 +377,8 @@
       "new_mpn": "Nichicon PCH1V471MCL1GS x4, candidate only",
       "new_value_or_connection": "proposed additional protected bank 4x470uF35V; cannot claim Gate3b1mF/0.5mOhm from this code",
       "reason": "An actual protected receiving bank is absent from original export",
-      "governing_equation": "Ceff_min=4*470uF*0.8*0.8=1203.2uF sensitivity; Cmax and ESR OPEN",
-      "status": "BLOCKED inherited <=1.5mF / <=0.5mOhm contract conflicts with candidate bank unless requalified/recomputed",
+      "governing_equation": "Ceff_min=4*470uF*0.8*0.8=1203.2uF sensitivity;Cmax=2707.2uF; published14mOhm/4=3.5mOhm20C100kHz",
+      "status": "BLOCKED inherited <=1.5mF / <=0.5mOhm contract; new conditional screen5.713245V, actual peak OPEN",
       "source": "PR15/G3B"
     },
     {

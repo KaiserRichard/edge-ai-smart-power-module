@@ -20,31 +20,35 @@ All manufacturer documents are copyrighted; no open-source or redistribution lic
 |LT4363|[ADI Rev C, January2024; adjustable surge stopper, SNS/OUT/TMR](https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf)|
 |ON|[onsemi Rev3, January2022; FDB33N25TM research pass FET](https://www.onsemi.com/pdf/datasheet/fdb33n25-d.pdf)|
 |LTC3115|[ADI Rev E, April2023; p38 example PROPOSED ADAPTATION](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf)|
-|TPS7A16|[TI SBVS171G; IN/EN40V recommended, PG5V recommended, regulation](https://www.ti.com/lit/ds/symlink/tps7a16.pdf)|
-|TPS3808|[TI SBVS050L; thresholds and20us typical SENSE propagation](https://www.ti.com/lit/ds/symlink/tps3808.pdf)|
+|TPS7A16|[TI SBVS171F,October2015; IN/EN40V recommended, PG5V recommended, regulation](https://www.ti.com/lit/ds/symlink/tps7a16.pdf)|
+|TPS3808|[TI SBVS050N,August2026; thresholds and20us typical SENSE propagation](https://www.ti.com/lit/ds/symlink/tps3808.pdf)|
 |MURATA10|[Murata exact family/ordering code; DC-bias C remains OPEN](https://www.murata.com/en-us/products/productdetail?partno=GRM32ER71H106KA12%23)|
 |PASSIVES|[Vishay28758,10April2026; 0.1%25ppm/K E-series order-code candidates, not purchase stock confirmation](https://www.vishay.com/docs/28758/tnpw_e3.pdf)|
 
-Additional primary documents inspected for the new review are registered below. Every use is REFERENCED, except the LTC3115 p38 functional block is a PROPOSED ADAPTATION: input limiter, held-output diode/capacitance and RUN sequencing are added, and capacitor/package candidates require review. No source files are modified.
+Additional exact document revisions/files, usage, license, modifications and attribution are registered in [SOURCES.json](SOURCES.json). PDFs/text are isolated under third_party; failed local fetches are explicitly web-read without invented hashes.
 
-- [tps7a16](https://www.ti.com/lit/ds/symlink/tps7a16.pdf): revision to be read from pinned PDF; `third_party/documents/gate4a/tps7a16.pdf`; local pinned reference; FETCHED.
-- [tps3808](https://www.ti.com/lit/ds/symlink/tps3808.pdf): revision to be read from pinned PDF; `third_party/documents/gate4a/tps3808.pdf`; local pinned reference; FETCHED.
-- [tps2662](https://www.ti.com/lit/ds/symlink/tps2662.pdf): revision to be read from pinned PDF; `third_party/documents/gate4a/tps2662.pdf`; local pinned reference; FETCHED.
-- [tmux1511](https://www.ti.com/lit/ds/symlink/tmux1511.pdf): revision to be read from pinned PDF; `third_party/documents/gate4a/tmux1511.pdf`; local pinned reference; FETCHED.
-- [lt4363](https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf): Rev C, January 2024; `no local file`; surge-stopper feedback, current/timer, pins and SOA; DOWNLOAD OPEN.
-- [ltc3115](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf): Rev E, April 2023; `no local file`; p38 6–40 V to12 V example; feedback, RUN, startup and layout; DOWNLOAD OPEN.
-- [bsc034](https://www.infineon.com/assets/row/public/documents/non-assigned/49/infineon-bsc034n06ns-datasheet-en.pdf): Read pinned PDF title/revision; `no local file`; selected series FET RDS, gate charge, voltage and SOA; DOWNLOAD OPEN.
-- [lm61460](https://www.ti.com/lit/ds/symlink/lm61460.pdf): SNVSBD5D, July 2022; `third_party/documents/gate4a/lm61460.pdf`; FB/SW/VIN/BIAS limits; input bank, inductance, layout; FETCHED.
-- [tps2663](https://www.ti.com/lit/ds/symlink/tps2663.pdf): SLVSE94G, June 2024; `third_party/documents/gate4a/tps2663.pdf`; SHDN, OVP, physical cutoff conditions; FETCHED.
-- [ltc7001](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf): Read pinned PDF title/revision; `no local file`; loaded bootstrap, gate drive and delay; DOWNLOAD OPEN.
-- [ucc27511](https://www.ti.com/lit/ds/symlink/ucc27511.pdf): Read pinned PDF title/revision; `third_party/documents/gate4a/ucc27511.pdf`; 12 V gate drive and min/max propagation; FETCHED.
-- [adg4612](https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf): Rev 0, October 2010; `no local file`; power-off isolation and16 V blocking; DOWNLOAD OPEN.
-- [fdb33](https://www.onsemi.com/pdf/datasheet/fdb33n25-d.pdf): Read pinned PDF title/revision; `third_party/documents/gate4a/fdb33.pdf`; LT4363 pass-FET research candidate, linear SOA; FETCHED.
-- [wfm](https://www.vishay.com/docs/30387/wfm.pdf): 30387, 4 August 2022; `third_party/documents/gate4a/wfm.pdf`; 95 C terminal and pulse limits; FETCHED.
-- [tnpw](https://www.vishay.com/docs/28758/tnpw_e3.pdf): Read pinned PDF title/revision; `third_party/documents/gate4a/tnpw.pdf`; ordering codes, temperature and voltage/power ratings; FETCHED.
-- [we10](https://www.we-online.com/components/products/datasheet/74437636351002.pdf): 001.000, 7 February 2025; `third_party/documents/gate4a/we10.pdf`; L, DCR, bias curve, footprint; FETCHED.
-- [tlv3201](https://www.ti.com/lit/ds/symlink/tlv3201.pdf): Read pinned PDF title/revision; `third_party/documents/gate4a/tlv3201.pdf`; offset/hysteresis and delay conditions; FETCHED.
-- [lm4040](https://www.ti.com/lit/ds/symlink/lm4040.pdf): Read pinned PDF title/revision; `third_party/documents/gate4a/lm4040.pdf`; independent shunt clamp bias/current; FETCHED.
-- [csd18540](https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf): SLPS488B, April 2016; `third_party/documents/gate4a/csd18540.pdf`; protected crowbar pulse and gate charge; FETCHED.
+|ID / revision|Primary URL / file / status / use|
+|---|---|
+|tps7a16 / SBVS171F, October2015|[Candidate inspected; not selected if absent from freeze register](https://www.ti.com/lit/ds/symlink/tps7a16.pdf); `third_party/documents/gate4a/tps7a16.pdf`; FETCHED; REFERENCED|
+|tps3808 / SBVS050N, August2026|[Candidate inspected; not selected if absent from freeze register](https://www.ti.com/lit/ds/symlink/tps3808.pdf); `third_party/documents/gate4a/tps3808.pdf`; FETCHED; REFERENCED|
+|tps2662 / SLVSDT4F, December2021|[Candidate inspected; not selected if absent from freeze register](https://www.ti.com/lit/ds/symlink/tps2662.pdf); `third_party/documents/gate4a/tps2662.pdf`; FETCHED; REFERENCED|
+|tmux1511 / SCDS390B, March2025|[Candidate inspected; not selected if absent from freeze register](https://www.ti.com/lit/ds/symlink/tmux1511.pdf); `third_party/documents/gate4a/tmux1511.pdf`; FETCHED; REFERENCED|
+|lt4363 / Rev C, January2024; web-read exact PDF|[surge-stopper feedback, current/timer, pins and SOA](https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf); `no downloaded file`; WEB_READ; local download OPEN; REFERENCED|
+|ltc3115 / Rev E,2023-04-07; web-read exact PDF|[p38 6–40 V to12 V example; feedback, RUN, startup and layout](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf); `no downloaded file`; WEB_READ; local download OPEN; PROPOSED ADAPTATION of p38 functional block; no CAD copied; input limiting/hold-up/RUN changes documented|
+|bsc034 / Rev2.3,2020-05-06; primary dgdl PDF verified with web tool|[selected series FET RDS, gate charge, voltage and SOA](https://www.infineon.com/dgdl/Infineon-BSC034N06NS-DataSheet-v02_03-EN.pdf?fileId=db3a304342371bb001424c65286a70be); `no downloaded file`; WEB_READ; local download OPEN; REFERENCED|
+|lm61460 / SNVSBD5D, July 2022|[FB/SW/VIN/BIAS limits; input bank, inductance, layout](https://www.ti.com/lit/ds/symlink/lm61460.pdf); `third_party/documents/gate4a/lm61460.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|tps2663 / SLVSE94G, June 2024|[SHDN, OVP, physical cutoff conditions](https://www.ti.com/lit/ds/symlink/tps2663.pdf); `third_party/documents/gate4a/tps2663.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|ltc7001 / Rev G, primary PDF/product page verified with web tool|[loaded bootstrap, gate drive and delay](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf); `no downloaded file`; WEB_READ; local download OPEN; REFERENCED|
+|ucc27511 / SLUSAW9F,November2014|[12 V gate drive and min/max propagation](https://www.ti.com/lit/ds/symlink/ucc27511.pdf); `third_party/documents/gate4a/ucc27511.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|adg4612 / Rev0,2010-10-28; web-read exact PDF|[power-off isolation and16 V blocking](https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf); `no downloaded file`; WEB_READ; local download OPEN; REFERENCED|
+|fdb33 / FDB33N25/D,Rev3,January2022|[LT4363 pass-FET research candidate, linear SOA](https://www.onsemi.com/pdf/datasheet/fdb33n25-d.pdf); `third_party/documents/gate4a/fdb33.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|wfm / 30387, 4 August 2022|[95 C terminal and pulse limits](https://www.vishay.com/docs/30387/wfm.pdf); `third_party/documents/gate4a/wfm.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|tnpw / 28758,2026-04-10|[ordering codes, temperature and voltage/power ratings](https://www.vishay.com/docs/28758/tnpw_e3.pdf); `third_party/documents/gate4a/tnpw.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|we10 / 001.000, 7 February 2025|[L, DCR, bias curve, footprint](https://www.we-online.com/components/products/datasheet/74437636351002.pdf); `third_party/documents/gate4a/we10.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|tlv3201 / SBOS561C,May2024|[offset/hysteresis and delay conditions](https://www.ti.com/lit/ds/symlink/tlv3201.pdf); `third_party/documents/gate4a/tlv3201.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|lm4040 / SLOS456Q,April2026|[independent shunt clamp bias/current](https://www.ti.com/lit/ds/symlink/lm4040.pdf); `third_party/documents/gate4a/lm4040.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|csd18540 / SLPS488B,April2017|[protected crowbar pulse and gate charge](https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf); `third_party/documents/gate4a/csd18540.pdf`; FETCHED; REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only|
+|pch / PCH English catalog,2 pages; no explicit revision shown; pinned by SHA256|[PCH1V471MCL1GS exact capacitance/ESR/voltage row and ordering, p2](https://www.nichicon.co.jp/english/_assets/images/products/catalog/corporate/digital/PCH_e.pdf); `third_party/documents/gate4a/pch.pdf`; FETCHED; REFERENCED|
+|ina228 / SLYS021A, May2022|[ADCRANGE and shunt input/accuracy limits](https://www.ti.com/lit/ds/symlink/ina228.pdf); `third_party/documents/gate4a/ina228.pdf`; FETCHED; REFERENCED|
 
-Exact suffix availability/lifecycle is OPEN before procurement. Manufacturer order-code construction is the basis for passive candidates. Pin/land/package verification remains mandatory for every changed MPN, including proposed THT L201 and changed TVS/fuse. The register intentionally exposes the missing autonomous FAULT_TRIGGER rather than inventing its MPN.
+Exact suffix availability/lifecycle is OPEN before procurement. Manufacturer order-code construction is the basis for passive candidates. Pin/land/package verification remains mandatory for every changed MPN, including proposed THT L201 and changed TVS/fuse. The register exposes the missing autonomous FAULT_TRIGGER rather than inventing its MPN.

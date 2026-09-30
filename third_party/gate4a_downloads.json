@@ -4,61 +4,88 @@
     "url": "https://www.ti.com/lit/ds/symlink/tps7a16.pdf",
     "path": "third_party/documents/gate4a/tps7a16.pdf",
     "sha256": "4e05cfdef8f64684f9f24b7d1f86e83badb7784c09c96f2ddbcbdbc0a3b48f80",
-    "pages": 37
+    "pages": 37,
+    "revision": "SBVS171F, October2015",
+    "license": "Manufacturer copyright; reference only, no redistribution license inferred",
+    "usage": "REFERENCED",
+    "modifications": "None to upstream",
+    "required_attribution": "Manufacturer and primary URL linked in SOURCES.md",
+    "relevant_sections": "Candidate inspected; not selected if absent from freeze register"
   },
   {
     "id": "tps3808",
     "url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
     "path": "third_party/documents/gate4a/tps3808.pdf",
     "sha256": "74d889c0f68af88032f1633c26381817cc03e10d9fd3b4c177a044ad3ed86eed",
-    "pages": 39
+    "pages": 39,
+    "revision": "SBVS050N, August2026",
+    "license": "Manufacturer copyright; reference only, no redistribution license inferred",
+    "usage": "REFERENCED",
+    "modifications": "None to upstream",
+    "required_attribution": "Manufacturer and primary URL linked in SOURCES.md",
+    "relevant_sections": "Candidate inspected; not selected if absent from freeze register"
   },
   {
     "id": "tps2662",
     "url": "https://www.ti.com/lit/ds/symlink/tps2662.pdf",
     "path": "third_party/documents/gate4a/tps2662.pdf",
     "sha256": "ff038eaa557fb618f93c0b6276a5ae08d0d3d9fbff1dddf0c45974a89120aefa",
-    "pages": 46
+    "pages": 46,
+    "revision": "SLVSDT4F, December2021",
+    "license": "Manufacturer copyright; reference only, no redistribution license inferred",
+    "usage": "REFERENCED",
+    "modifications": "None to upstream",
+    "required_attribution": "Manufacturer and primary URL linked in SOURCES.md",
+    "relevant_sections": "Candidate inspected; not selected if absent from freeze register"
   },
   {
     "id": "tmux1511",
     "url": "https://www.ti.com/lit/ds/symlink/tmux1511.pdf",
     "path": "third_party/documents/gate4a/tmux1511.pdf",
     "sha256": "c32b83722e3717c554dc8f68da05d9e02aa44087043d7b820f5e113713adbfcb",
-    "pages": 45
+    "pages": 45,
+    "revision": "SCDS390B, March2025",
+    "license": "Manufacturer copyright; reference only, no redistribution license inferred",
+    "usage": "REFERENCED",
+    "modifications": "None to upstream",
+    "required_attribution": "Manufacturer and primary URL linked in SOURCES.md",
+    "relevant_sections": "Candidate inspected; not selected if absent from freeze register"
   },
   {
     "id": "lt4363",
     "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf",
-    "revision": "Rev C, January 2024",
+    "revision": "Rev C, January2024; web-read exact PDF",
     "relevant_sections": "surge-stopper feedback, current/timer, pins and SOA",
-    "status": "DOWNLOAD OPEN",
+    "status": "WEB_READ; local download OPEN",
     "error": "Command '['curl', '--http1.1', '-fsSL', '--max-time', '35', 'https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf']' returned non-zero exit status 28.",
     "license": "Manufacturer copyright; reference only",
     "modifications": "None",
-    "required_attribution": "Manufacturer and primary URL in SOURCES.md"
+    "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "usage": "REFERENCED"
   },
   {
     "id": "ltc3115",
     "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf",
-    "revision": "Rev E, April 2023",
-    "relevant_sections": "p38 6\u201340 V to12 V example; feedback, RUN, startup and layout",
-    "status": "DOWNLOAD OPEN",
+    "revision": "Rev E,2023-04-07; web-read exact PDF",
+    "relevant_sections": "p38 6–40 V to12 V example; feedback, RUN, startup and layout",
+    "status": "WEB_READ; local download OPEN",
     "error": "Command '['curl', '--http1.1', '-fsSL', '--max-time', '35', 'https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3115-1.pdf']' returned non-zero exit status 28.",
     "license": "Manufacturer copyright; reference only",
     "modifications": "None",
-    "required_attribution": "Manufacturer and primary URL in SOURCES.md"
+    "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "usage": "PROPOSED ADAPTATION of p38 functional block; no CAD copied; input limiting/hold-up/RUN changes documented"
   },
   {
     "id": "bsc034",
-    "url": "https://www.infineon.com/assets/row/public/documents/non-assigned/49/infineon-bsc034n06ns-datasheet-en.pdf",
-    "revision": "Read pinned PDF title/revision",
+    "url": "https://www.infineon.com/dgdl/Infineon-BSC034N06NS-DataSheet-v02_03-EN.pdf?fileId=db3a304342371bb001424c65286a70be",
+    "revision": "Rev2.3,2020-05-06; primary dgdl PDF verified with web tool",
     "relevant_sections": "selected series FET RDS, gate charge, voltage and SOA",
-    "status": "DOWNLOAD OPEN",
+    "status": "WEB_READ; local download OPEN",
     "error": "not PDF",
     "license": "Manufacturer copyright; reference only",
     "modifications": "None",
-    "required_attribution": "Manufacturer and primary URL in SOURCES.md"
+    "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "usage": "REFERENCED"
   },
   {
     "id": "lm61460",
@@ -91,13 +118,14 @@
   {
     "id": "ltc7001",
     "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf",
-    "revision": "Read pinned PDF title/revision",
+    "revision": "Rev G, primary PDF/product page verified with web tool",
     "relevant_sections": "loaded bootstrap, gate drive and delay",
-    "status": "DOWNLOAD OPEN",
+    "status": "WEB_READ; local download OPEN",
     "error": "Command '['curl', '--http1.1', '-fsSL', '--max-time', '35', 'https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf']' returned non-zero exit status 28.",
     "license": "Manufacturer copyright; reference only",
     "modifications": "None",
-    "required_attribution": "Manufacturer and primary URL in SOURCES.md"
+    "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "usage": "REFERENCED"
   },
   {
     "id": "ucc27511",
@@ -105,7 +133,7 @@
     "path": "third_party/documents/gate4a/ucc27511.pdf",
     "sha256": "781cc451dbb371a4137337a4bdecbe11a9f1ff8979a11e238e97d8a80a287b31",
     "pages": 40,
-    "revision": "Read pinned PDF title/revision",
+    "revision": "SLUSAW9F,November2014",
     "relevant_sections": "12 V gate drive and min/max propagation",
     "license": "Manufacturer copyright; no redistribution or open-source license inferred",
     "usage": "REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only",
@@ -116,13 +144,14 @@
   {
     "id": "adg4612",
     "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf",
-    "revision": "Rev 0, October 2010",
+    "revision": "Rev0,2010-10-28; web-read exact PDF",
     "relevant_sections": "power-off isolation and16 V blocking",
-    "status": "DOWNLOAD OPEN",
+    "status": "WEB_READ; local download OPEN",
     "error": "Command '['curl', '--http1.1', '-fsSL', '--max-time', '35', 'https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf']' returned non-zero exit status 56.",
     "license": "Manufacturer copyright; reference only",
     "modifications": "None",
-    "required_attribution": "Manufacturer and primary URL in SOURCES.md"
+    "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "usage": "REFERENCED"
   },
   {
     "id": "fdb33",
@@ -130,7 +159,7 @@
     "path": "third_party/documents/gate4a/fdb33.pdf",
     "sha256": "08982131cc18dcbfb47dfbe8f968732b6e66c7508cf0179e00e38c4f0c99dead",
     "pages": 9,
-    "revision": "Read pinned PDF title/revision",
+    "revision": "FDB33N25/D,Rev3,January2022",
     "relevant_sections": "LT4363 pass-FET research candidate, linear SOA",
     "license": "Manufacturer copyright; no redistribution or open-source license inferred",
     "usage": "REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only",
@@ -158,7 +187,7 @@
     "path": "third_party/documents/gate4a/tnpw.pdf",
     "sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
     "pages": 16,
-    "revision": "Read pinned PDF title/revision",
+    "revision": "28758,2026-04-10",
     "relevant_sections": "ordering codes, temperature and voltage/power ratings",
     "license": "Manufacturer copyright; no redistribution or open-source license inferred",
     "usage": "REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only",
@@ -186,7 +215,7 @@
     "path": "third_party/documents/gate4a/tlv3201.pdf",
     "sha256": "1777bba814c74772bb54c6f1f56702985039043ce2fb2affaf996a83eaf1076e",
     "pages": 40,
-    "revision": "Read pinned PDF title/revision",
+    "revision": "SBOS561C,May2024",
     "relevant_sections": "offset/hysteresis and delay conditions",
     "license": "Manufacturer copyright; no redistribution or open-source license inferred",
     "usage": "REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only",
@@ -200,7 +229,7 @@
     "path": "third_party/documents/gate4a/lm4040.pdf",
     "sha256": "f43b6b6d3ecd51c8c90b70a7c4630c7e3140822b0073953ed2459df81b251c1c",
     "pages": 62,
-    "revision": "Read pinned PDF title/revision",
+    "revision": "SLOS456Q,April2026",
     "relevant_sections": "independent shunt clamp bias/current",
     "license": "Manufacturer copyright; no redistribution or open-source license inferred",
     "usage": "REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only",
@@ -214,12 +243,40 @@
     "path": "third_party/documents/gate4a/csd18540.pdf",
     "sha256": "2e43c4a2ac82af8a089be0a9e413282326f8d7857254ac07390b458deca854e0",
     "pages": 13,
-    "revision": "SLPS488B, April 2016",
+    "revision": "SLPS488B,April2017",
     "relevant_sections": "protected crowbar pulse and gate charge",
     "license": "Manufacturer copyright; no redistribution or open-source license inferred",
     "usage": "REFERENCED; LTC3115 p38 block PROPOSED ADAPTATION only",
     "modifications": "None to upstream; authored proposed changes described in Gate4a evidence",
     "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "status": "FETCHED"
+  },
+  {
+    "id": "pch",
+    "url": "https://www.nichicon.co.jp/english/_assets/images/products/catalog/corporate/digital/PCH_e.pdf",
+    "revision": "PCH English catalog,2 pages; no explicit revision shown; pinned by SHA256",
+    "relevant_sections": "PCH1V471MCL1GS exact capacitance/ESR/voltage row and ordering, p2",
+    "license": "Manufacturer copyright; no reuse license inferred",
+    "usage": "REFERENCED",
+    "modifications": "None",
+    "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "path": "third_party/documents/gate4a/pch.pdf",
+    "sha256": "418b2838c3d9044b26e9b396a8f94fa24dddfd728cc3ef076c640205f5612bf4",
+    "pages": 2,
+    "status": "FETCHED"
+  },
+  {
+    "id": "ina228",
+    "url": "https://www.ti.com/lit/ds/symlink/ina228.pdf",
+    "revision": "SLYS021A, May2022",
+    "relevant_sections": "ADCRANGE and shunt input/accuracy limits",
+    "license": "Manufacturer copyright; no reuse license inferred",
+    "usage": "REFERENCED",
+    "modifications": "None",
+    "required_attribution": "Manufacturer and primary URL in SOURCES.md",
+    "path": "third_party/documents/gate4a/ina228.pdf",
+    "sha256": "a138d39eeee04f8388426fed204c2f4012e75d36e95b60b0751ef003cd277447",
+    "pages": 48,
     "status": "FETCHED"
   }
 ]
