@@ -15,6 +15,8 @@ EVIDENCE: fresh recovered-source export matched the baseline canonical netlist (
 
 - Sheet 03: raw capacitor bank, opposed series FETs and ballast/crowbar form the top power path. Auxiliary supplies, reference/OV detector and gate drivers occupy the middle row; reset/ARM, qualification/latches and fault action occupy the bottom row. An on-sheet numbered guide explains detector → latch → series switch + crowbar. A3 fit uses 1.27-mm minimum text and keeps every connection on the original 50-mil grid; project/ERC settings are unchanged. Fresh netlist identical and ERC zero.
 
+- Sheet 04: four-terminal shunt force path reads left to right, sense pins connect to the existing differential filter/INA228 block, telemetry LDO stays above right, and I2C domains occupy a separate lower block. Ground is at each block bottom. Notes wrapped to keep the title clear. Visual review completed; ERC zero.
+
 ## Remaining at this checkpoint
 
-Sheets 04/05 final review, hierarchy label spacing, final fresh netlist comparison/ERC/PDF, manager report and draft PR.
+Sheet 05 final review, hierarchy label spacing, final fresh netlist comparison/ERC/PDF, manager report and draft PR.
