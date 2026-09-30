@@ -679,18 +679,18 @@
       "applicable_guaranteed_hot_max_mOhm": null
     },
     {
-      "element": "AWG22 fan-out 15 mm, 8 parallel",
+      "element": "AWG22 fan-out 35 mm, 8 parallel",
       "leg": "RETURN",
       "units": "mOhm",
       "cold_25C_min_typ_max": [
-        0.0914523683562992,
-        0.10161374261811022,
-        0.11177511687992125
+        0.2133888594980315,
+        0.23709873277559054,
+        0.2608086060531496
       ],
       "hot_min_typ_max": [
-        0.10378922244094488,
-        0.11532135826771653,
-        0.12685349409448818
+        0.24217485236220473,
+        0.2690831692913386,
+        0.29599148622047244
       ],
       "classification": "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C",
       "applicable_guaranteed_hot_max_mOhm": null
@@ -815,7 +815,7 @@
       "applicable_guaranteed_hot_max_mOhm": null
     }
   ],
-  "recommended_25C_upper_screen_mOhm": 26.17716198154089,
+  "recommended_25C_upper_screen_mOhm": 26.32619547071412,
   "E_additional_hot_stage_mOhm": {
     "local_series_FET_pair": 6.0,
     "limiter_shunt": 1.01568125,
@@ -887,42 +887,42 @@
         "actual_worst_case_pi_V": null
       }
     },
-    "wire_16AWG_75mm_22AWG_15mm_only": {
+    "wire_16AWG_75mm_22AWG_send15mm_return35mm_only": {
       "D": {
-        "loop_mOhm": 54.378803001968514,
-        "loss_5A_mV": 271.8940150098426,
-        "loop_dissipation_5A_W": 1.359470075049213,
-        "pi_static_screen_V": 4.754249239660858,
-        "margin_to_4p75_mV": 4.249239660857995,
+        "loop_mOhm": 54.547940994094496,
+        "loss_5A_mV": 272.7397049704725,
+        "loop_dissipation_5A_W": 1.3636985248523623,
+        "pi_static_screen_V": 4.753403549700228,
+        "margin_to_4p75_mV": 3.403549700228048,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "E": {
-        "loop_mOhm": 64.37880300196852,
-        "loss_5A_mV": 321.89401500984263,
-        "loop_dissipation_5A_W": 1.609470075049213,
-        "pi_static_screen_V": 4.704249239660858,
-        "margin_to_4p75_mV": -45.75076033914183,
+        "loop_mOhm": 64.54794099409449,
+        "loss_5A_mV": 322.7397049704724,
+        "loop_dissipation_5A_W": 1.613698524852362,
+        "pi_static_screen_V": 4.703403549700228,
+        "margin_to_4p75_mV": -46.596450299771774,
         "meets_4p75_within_assumptions": false,
         "actual_worst_case_pi_V": null
       }
     },
-    "shorten_18AWG_to_50mm_22AWG_to_15mm_only": {
+    "shorten_18AWG_to_50mm_22AWG_send15mm_return35mm_only": {
       "D": {
-        "loop_mOhm": 54.587615337926515,
-        "loss_5A_mV": 272.93807668963257,
-        "loop_dissipation_5A_W": 1.364690383448163,
-        "pi_static_screen_V": 4.7532051779810685,
-        "margin_to_4p75_mV": 3.205177981068452,
+        "loop_mOhm": 54.756753330052504,
+        "loss_5A_mV": 273.7837666502625,
+        "loop_dissipation_5A_W": 1.3689188332513127,
+        "pi_static_screen_V": 4.7523594880204385,
+        "margin_to_4p75_mV": 2.359488020438505,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "E": {
-        "loop_mOhm": 64.58761533792651,
-        "loss_5A_mV": 322.93807668963257,
-        "loop_dissipation_5A_W": 1.6146903834481627,
-        "pi_static_screen_V": 4.703205177981069,
-        "margin_to_4p75_mV": -46.79482201893137,
+        "loop_mOhm": 64.7567533300525,
+        "loss_5A_mV": 323.7837666502625,
+        "loop_dissipation_5A_W": 1.6189188332513127,
+        "pi_static_screen_V": 4.702359488020438,
+        "margin_to_4p75_mV": -47.640511979562206,
         "meets_4p75_within_assumptions": false,
         "actual_worst_case_pi_V": null
       }
@@ -1069,60 +1069,60 @@
     },
     "recommended_combination": {
       "D": {
-        "loop_mOhm": 34.903803001968505,
-        "loss_5A_mV": 174.51901500984252,
-        "loop_dissipation_5A_W": 0.8725950750492126,
-        "pi_static_screen_V": 4.851624239660858,
-        "margin_to_4p75_mV": 101.62423966085842,
+        "loop_mOhm": 35.072940994094495,
+        "loss_5A_mV": 175.36470497047247,
+        "loop_dissipation_5A_W": 0.8768235248523625,
+        "pi_static_screen_V": 4.8507785497002285,
+        "margin_to_4p75_mV": 100.77854970022848,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "E": {
-        "loop_mOhm": 44.903803001968505,
-        "loss_5A_mV": 224.51901500984252,
-        "loop_dissipation_5A_W": 1.1225950750492126,
-        "pi_static_screen_V": 4.801624239660859,
-        "margin_to_4p75_mV": 51.624239660858606,
+        "loop_mOhm": 45.072940994094495,
+        "loss_5A_mV": 225.36470497047247,
+        "loop_dissipation_5A_W": 1.1268235248523624,
+        "pi_static_screen_V": 4.800778549700229,
+        "margin_to_4p75_mV": 50.77854970022866,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       }
     },
     "recommended_except_keep_inherited_Pi_contacts": {
       "D": {
-        "loop_mOhm": 46.778803001968505,
-        "loss_5A_mV": 233.89401500984252,
-        "loop_dissipation_5A_W": 1.1694700750492126,
-        "pi_static_screen_V": 4.792249239660858,
-        "margin_to_4p75_mV": 42.24923966085825,
+        "loop_mOhm": 46.947940994094495,
+        "loss_5A_mV": 234.73970497047247,
+        "loop_dissipation_5A_W": 1.1736985248523624,
+        "pi_static_screen_V": 4.791403549700228,
+        "margin_to_4p75_mV": 41.403549700228304,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "E": {
-        "loop_mOhm": 56.778803001968505,
-        "loss_5A_mV": 283.8940150098425,
-        "loop_dissipation_5A_W": 1.4194700750492126,
-        "pi_static_screen_V": 4.742249239660858,
-        "margin_to_4p75_mV": -7.750760339141571,
+        "loop_mOhm": 56.947940994094495,
+        "loss_5A_mV": 284.7397049704725,
+        "loop_dissipation_5A_W": 1.4236985248523624,
+        "pi_static_screen_V": 4.7414035497002285,
+        "margin_to_4p75_mV": -8.596450299771519,
         "meets_4p75_within_assumptions": false,
         "actual_worst_case_pi_V": null
       }
     },
     "recommended_6V_module_FET_gate_sensitivity": {
       "D": {
-        "loop_mOhm": 37.70380300196851,
-        "loss_5A_mV": 188.51901500984255,
-        "loop_dissipation_5A_W": 0.9425950750492127,
-        "pi_static_screen_V": 4.837624239660858,
-        "margin_to_4p75_mV": 87.6242396608582,
+        "loop_mOhm": 37.87294099409449,
+        "loss_5A_mV": 189.36470497047247,
+        "loop_dissipation_5A_W": 0.9468235248523623,
+        "pi_static_screen_V": 4.836778549700228,
+        "margin_to_4p75_mV": 86.77854970022824,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "E": {
-        "loop_mOhm": 47.70380300196851,
-        "loss_5A_mV": 238.51901500984255,
-        "loop_dissipation_5A_W": 1.1925950750492127,
-        "pi_static_screen_V": 4.787624239660858,
-        "margin_to_4p75_mV": 37.62423966085837,
+        "loop_mOhm": 47.87294099409449,
+        "loss_5A_mV": 239.36470497047247,
+        "loop_dissipation_5A_W": 1.1968235248523622,
+        "pi_static_screen_V": 4.786778549700228,
+        "margin_to_4p75_mV": 36.778549700228425,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       }
@@ -1131,58 +1131,58 @@
   "final_conditional": {
     "D": {
       "static": {
-        "loop_mOhm": 34.903803001968505,
-        "loss_5A_mV": 174.51901500984252,
-        "loop_dissipation_5A_W": 0.8725950750492126,
-        "pi_static_screen_V": 4.851624239660858,
-        "margin_to_4p75_mV": 101.62423966085842,
+        "loop_mOhm": 35.072940994094495,
+        "loss_5A_mV": 175.36470497047247,
+        "loop_dissipation_5A_W": 0.8768235248523625,
+        "pi_static_screen_V": 4.8507785497002285,
+        "margin_to_4p75_mV": 100.77854970022848,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "20mV_ripple_trough": {
-        "loop_mOhm": 34.903803001968505,
-        "loss_5A_mV": 174.51901500984252,
-        "loop_dissipation_5A_W": 0.8725950750492126,
-        "pi_static_screen_V": 4.831624239660859,
-        "margin_to_4p75_mV": 81.62423966085885,
+        "loop_mOhm": 35.072940994094495,
+        "loss_5A_mV": 175.36470497047247,
+        "loop_dissipation_5A_W": 0.8768235248523625,
+        "pi_static_screen_V": 4.830778549700229,
+        "margin_to_4p75_mV": 80.77854970022891,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "100mV_total_negative_excursion": {
-        "loop_mOhm": 34.903803001968505,
-        "loss_5A_mV": 174.51901500984252,
-        "loop_dissipation_5A_W": 0.8725950750492126,
-        "pi_static_screen_V": 4.751624239660859,
-        "margin_to_4p75_mV": 1.624239660858784,
+        "loop_mOhm": 35.072940994094495,
+        "loss_5A_mV": 175.36470497047247,
+        "loop_dissipation_5A_W": 0.8768235248523625,
+        "pi_static_screen_V": 4.750778549700229,
+        "margin_to_4p75_mV": 0.7785497002288366,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       }
     },
     "E": {
       "static": {
-        "loop_mOhm": 44.903803001968505,
-        "loss_5A_mV": 224.51901500984252,
-        "loop_dissipation_5A_W": 1.1225950750492126,
-        "pi_static_screen_V": 4.801624239660859,
-        "margin_to_4p75_mV": 51.624239660858606,
+        "loop_mOhm": 45.072940994094495,
+        "loss_5A_mV": 225.36470497047247,
+        "loop_dissipation_5A_W": 1.1268235248523624,
+        "pi_static_screen_V": 4.800778549700229,
+        "margin_to_4p75_mV": 50.77854970022866,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "20mV_ripple_trough": {
-        "loop_mOhm": 44.903803001968505,
-        "loss_5A_mV": 224.51901500984252,
-        "loop_dissipation_5A_W": 1.1225950750492126,
-        "pi_static_screen_V": 4.781624239660859,
-        "margin_to_4p75_mV": 31.624239660859033,
+        "loop_mOhm": 45.072940994094495,
+        "loss_5A_mV": 225.36470497047247,
+        "loop_dissipation_5A_W": 1.1268235248523624,
+        "pi_static_screen_V": 4.780778549700229,
+        "margin_to_4p75_mV": 30.778549700229085,
         "meets_4p75_within_assumptions": true,
         "actual_worst_case_pi_V": null
       },
       "100mV_total_negative_excursion": {
-        "loop_mOhm": 44.903803001968505,
-        "loss_5A_mV": 224.51901500984252,
-        "loop_dissipation_5A_W": 1.1225950750492126,
-        "pi_static_screen_V": 4.701624239660859,
-        "margin_to_4p75_mV": -48.37576033914104,
+        "loop_mOhm": 45.072940994094495,
+        "loss_5A_mV": 225.36470497047247,
+        "loop_dissipation_5A_W": 1.1268235248523624,
+        "pi_static_screen_V": 4.700778549700229,
+        "margin_to_4p75_mV": -49.221450299770986,
         "meets_4p75_within_assumptions": false,
         "actual_worst_case_pi_V": null
       }
@@ -1197,8 +1197,8 @@
       "normal_release_screen_V": 5.278715117293371,
       "trip_min_V": 5.293568153160679,
       "nuisance_margin_after_10mV_mV": 4.853035867308684,
-      "D_pi_V": 4.851624239660858,
-      "E_pi_V": 4.801624239660859
+      "D_pi_V": 4.8507785497002285,
+      "E_pi_V": 4.800778549700229
     },
     {
       "nominal_setpoint_V": 5.108360655737705,
@@ -1208,8 +1208,8 @@
       "normal_release_screen_V": 5.288865743859785,
       "trip_min_V": 5.293568153160679,
       "nuisance_margin_after_10mV_mV": -5.2975906991055055,
-      "D_pi_V": 4.861474863102255,
-      "E_pi_V": 4.811474863102255
+      "D_pi_V": 4.860629173141625,
+      "E_pi_V": 4.810629173141625
     },
     {
       "nominal_setpoint_V": 5.118360655737705,
@@ -1219,8 +1219,8 @@
       "normal_release_screen_V": 5.299016370426201,
       "trip_min_V": 5.293568153160679,
       "nuisance_margin_after_10mV_mV": -15.448217265521471,
-      "D_pi_V": 4.871325486543651,
-      "E_pi_V": 4.8213254865436515
+      "D_pi_V": 4.870479796583021,
+      "E_pi_V": 4.8204797965830215
     },
     {
       "nominal_setpoint_V": 5.198360655737705,
@@ -1230,8 +1230,8 @@
       "normal_release_screen_V": 5.380221382957529,
       "trip_min_V": 5.293568153160679,
       "nuisance_margin_after_10mV_mV": -96.65322979685008,
-      "D_pi_V": 4.950130474074823,
-      "E_pi_V": 4.900130474074823
+      "D_pi_V": 4.949284784114193,
+      "E_pi_V": 4.899284784114193
     },
     {
       "nominal_setpoint_V": 5.2,
@@ -1241,8 +1241,8 @@
       "normal_release_screen_V": 5.381885420099565,
       "trip_min_V": 5.293568153160679,
       "nuisance_margin_after_10mV_mV": -98.31726693888608,
-      "D_pi_V": 4.951745330376691,
-      "E_pi_V": 4.901745330376691
+      "D_pi_V": 4.950899640416061,
+      "E_pi_V": 4.900899640416061
     }
   ],
   "ideal_differential_remote_sense": {
@@ -1256,20 +1256,20 @@
       "actual_pi_min_V": null
     },
     "recommended_D": {
-      "physical_loop_mOhm": 34.903803001968505,
-      "raw_high_at_5A_V": 5.345614370098385,
-      "raw_trip_nuisance_margin_5A_mV": -62.046216937705836,
-      "release_upper_screen_V": 5.453234132303213,
-      "raw_trip_release_margin_mV": -169.66597914253367,
+      "physical_loop_mOhm": 35.072940994094495,
+      "raw_high_at_5A_V": 5.346460060059015,
+      "raw_trip_nuisance_margin_5A_mV": -62.891906898335776,
+      "release_upper_screen_V": 5.454079822263843,
+      "raw_trip_release_margin_mV": -170.51166910316363,
       "ideal_pi_static_min_V": 5.026143254670701,
       "actual_pi_min_V": null
     },
     "recommended_E": {
-      "physical_loop_mOhm": 44.903803001968505,
-      "raw_high_at_5A_V": 5.395614370098385,
-      "raw_trip_nuisance_margin_5A_mV": -112.04621693770565,
-      "release_upper_screen_V": 5.503234132303213,
-      "raw_trip_release_margin_mV": -219.6659791425335,
+      "physical_loop_mOhm": 45.072940994094495,
+      "raw_high_at_5A_V": 5.396460060059015,
+      "raw_trip_nuisance_margin_5A_mV": -112.8919068983356,
+      "release_upper_screen_V": 5.504079822263843,
+      "raw_trip_release_margin_mV": -220.51166910316346,
       "ideal_pi_static_min_V": 5.026143254670701,
       "actual_pi_min_V": null
     }

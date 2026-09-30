@@ -105,8 +105,9 @@ def build():
             item("Trunk wire AWG" + ("16" if recommended else "18") + " 75 mm", leg,
                  w["25"], w["60"], "CALCULATED from nominal DCR with ASSUMED 20 C reference, +/-10%; wire 60 C")
         for leg, n in (("SEND", 2), ("RETURN", 8)):
-            w = wire(16.2, .015 if recommended else .025, n)
-            item(f"AWG22 fan-out {15 if recommended else 25} mm, {n} parallel", leg,
+            length = (.015 if leg == "SEND" else .035) if recommended else .025
+            w = wire(16.2, length, n)
+            item(f"AWG22 fan-out {round(length*1000)} mm, {n} parallel", leg,
                  w["25"], w["60"], "CALCULATED with ASSUMED equal branch geometry, +/-10% DCR; wire 60 C")
             per_hot = 20 if recommended else 39
             allocation(f"Pi mated contacts, {n} parallel", leg, per_hot / n, 1.3,
@@ -152,16 +153,16 @@ def build():
     wire_before = sum(wire(6.5, .075)["60"][2] for _ in range(2)) + sum(
         wire(16.2, .025, n)["60"][2] for n in (2, 8))
     wire_after = sum(wire(4, .075)["60"][2] for _ in range(2)) + sum(
-        wire(16.2, .015, n)["60"][2] for n in (2, 8))
+        wire(16.2, length, n)["60"][2] for n, length in ((2,.015),(8,.035)))
     short_only = sum(wire(6.5, .05)["60"][2] for _ in range(2)) + sum(
-        wire(16.2, .015, n)["60"][2] for n in (2, 8))
+        wire(16.2, length, n)["60"][2] for n, length in ((2,.015),(8,.035)))
     options = {}
     option_r = {
         "unchanged_reduced_plus_buck_copper_allowance": audited,
         "original_PR6_four_grounds_same_buck_allowance": original + 1,
         "eight_grounds_only_from_original": original + 1 - 4.875 - .42284498031496066,
-        "wire_16AWG_75mm_22AWG_15mm_only": audited - wire_before + wire_after,
-        "shorten_18AWG_to_50mm_22AWG_to_15mm_only": audited - wire_before + short_only,
+        "wire_16AWG_75mm_22AWG_send15mm_return35mm_only": audited - wire_before + wire_after,
+        "shorten_18AWG_to_50mm_22AWG_send15mm_return35mm_only": audited - wire_before + short_only,
         "module_FET_hot_6mOhm_only": audited - 13.6 + 6,
         "qualified_Pi_hot_20mOhm_contact_only": audited - 39 * (1/2 + 1/8) + 20 * (1/2 + 1/8),
         "J502_hot_1mOhm_each_pole_only": audited - 6.24 + 2,
