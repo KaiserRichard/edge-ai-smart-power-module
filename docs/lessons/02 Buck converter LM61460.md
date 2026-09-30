@@ -8,7 +8,7 @@ tags: [v1a, lesson]
 
 ## Why this matters
 
-The LM61460 converts the protected 9–26 V input into a local rail near 5.1 V.<br>
+V1A targets a 9–26 V input; the LM61460 receives that supply after input-stage losses and regulates a local rail near 5.1 V.<br>
 Its switches, inductor and capacitors work together to deliver fairly steady power.<br>
 Understanding that energy path also explains why a failed switch needs separate protection.
 
@@ -25,19 +25,27 @@ Take inductor current as positive from SW toward the output. Define its voltage 
 
 ![[c2-buck-low-side-freewheel-state.png|500]]
 
-Follow the blue loop: ground → low-side switch → inductor → load → ground. **Falling current still flows toward the load.** Here it stays above zero: continuous-conduction operation. Light-load behavior can differ; brief switching transitions are simplified.
+Follow the blue loop: ground → low-side switch → inductor → load → ground. **Falling current still flows toward the load.** Here it stays above zero: continuous-conduction operation. The picture's +/− marks define the voltage reference; they do not mean the left end is actually more positive in this state. The output capacitor also carries the difference between inductor and load current. Light-load behavior can differ; brief switching transitions are simplified.
 
 ## Why L201 is changing
 
-From $\Delta I=V_L\Delta t/L$, more inductance slows current change. At large current, magnetic saturation can reduce inductance, speeding up the rise.
+For constant inductance and voltage, $\Delta I=V_L\Delta t/L$: more inductance slows current change. At large current, magnetic saturation can reduce inductance, speeding up the rise.
 
-**Development direction:** move from the inherited **6.8 microhenry (µH)** XAL8080 to a **10 µH alloy candidate**. Würth **74437636351002** is being studied, **not selected or qualified**. Its published current-dependent curve helps the fault study, but guaranteed behavior across temperature and production batches is **(still open)**.
+**DECISION — selected qualification candidate:** move from the inherited **6.8 microhenry (µH)** XAL8080 to the **10 µH alloy Würth 74437636351002** for further qualification. Gate 4a lists this proposed change; it is **not a qualified or fitted replacement**. Its published current-dependent curve helps the fault study, but guaranteed behavior across temperature and production batches is **(still open)**.
 
 **Ldiff** means differential inductance at the present current; **DCR** means direct-current winding resistance.
 
+**Image status correction:** the older picture below says “not selected.” Gate 4a now selects this part **for qualification**, with its limits still open. The component shape and shaded curve are generic illustrations, not a manufacturer drawing or a guaranteed inductance envelope.
+
 ![[c4-10-h-alloy-inductor-selection.png|600]]
 
-The pictured component and curve are generic illustrations. Heating, footprint and stable regulation need checking, especially low ripple at 9 V **(still open)**. A larger inductor cannot stop a connected source supplying energy indefinitely.
+Heating, footprint and stable regulation need checking, especially low ripple at 9 V **(still open)**. A larger inductor cannot stop a connected source supplying energy indefinitely.
+
+## Why this design and not another
+
+The old small inductor lacks a justified inductance bound across the studied fault currents. The larger 10 µH alloy candidate has a published curve extending through the study's current range, making it a useful qualification starting point. The cost is a much larger through-hole package, different mounting and changed ripple/load-step behavior. A typical curve alone does not close those checks.
+
+Gate 3b therefore combines the candidate with **timed source isolation and controlled input capacitance**. More inductance alone cannot bound the energy from a source that remains connected. **Gate 4a freeze remains BLOCKED** while these circuit and component limits are open.
 
 **Calculated example — illustrative only:** assume constant inductance, 24 V input, 5.1 V output and a 0.5 microsecond high-side-on interval; ignore losses:
 
@@ -49,7 +57,7 @@ With 6.8 µH, the increase is **1.39 A**. These are not predicted fault peaks.
 
 ## Capacitors, feedback and the hot loop
 
-**Input capacitors** supply switching-current pulses. **Output capacitors** absorb the difference between inductor and load current, smoothing voltage. Ceramic capacitance can fall under applied direct-current (**DC**) voltage. The proposed **10–30 microfarad (µF) total effective local input bank** balances converter needs against stored fault energy; qualification is **(still open)**.
+**Input capacitors** supply switching-current pulses. **Output capacitors** carry the difference between inductor and load current, charging or discharging to smooth voltage. Ceramic capacitance can fall under applied direct-current (**DC**) voltage. The source study calls for at least **10 microfarads (µF) effective main input ceramic capacitance**, plus a nominal **100 nanofarad (nF) bypass at each VIN/PGND pair**. All local reservoirs and bypasses must fit the proposed **30 µF total effective maximum**. These are qualification targets; nominal part labels do not prove them.
 
 **Feedback (FB)** senses local output through a resistor divider: falling voltage increases energy delivery; rising voltage reduces it. Sensing is before the output disconnect, so cable voltage drop remains.
 
@@ -72,6 +80,6 @@ The **hot loop** links input capacitors, both switches and power-ground return. 
 > 4. A compact switching loop reduces unwanted voltage spikes and noise; quiet feedback helps the controller sense the actual output.
 
 > [!info]- Evidence and current status
-> [LM61460 review](../docs/evidence/r2/BUCK_DESIGN.md): converter principles; old input ceiling/L201 superseded by [Gate 4a basis](../../wt-gate4a/docs/evidence/r2/gate4a/BASIS.md). [Inductor study](../../wt-gate3b/docs/evidence/r2/sheet03/gate3b/INDUCTOR_CANDIDATES.md) and [source-energy study](../../wt-gate3b/docs/evidence/r2/sheet03/gate3b/INPUT_LIMITER_AND_ENERGY.md): development limits. [Image audit](../../wt-illustrations/docs/illustrations/IMAGE_AUDIT.md) and [Batch C](../../wt-illustrations/docs/illustrations/BATCH_C.md): illustration scope. No bench validation claimed.
+> [Pinned sources and fact-check record](FACTCHECK_LOG.md#sources): BUCK and LM for converter principles; L and SRC for the inductor/capacitor tradeoffs; BASIS and G4 for current selections and the blocked freeze. IMG is historical illustration context. No bench validation is claimed.
 
 Previous: [[01 Input protection]] · Next: [[03 Output protection]] · Terms: [[99-Glossary]]

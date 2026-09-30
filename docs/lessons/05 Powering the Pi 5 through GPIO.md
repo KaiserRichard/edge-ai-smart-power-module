@@ -32,21 +32,41 @@ Every resistance in that loop consumes voltage. Measuring at J502 misses harness
 
 **CALCULATION — teaching example:** assume 5.10 V at the buck and 50 milliohms (mΩ) for the complete loop at 5 amperes (A).
 
-```text
-Drop = I × R = 5 × 0.050 = 0.25 V
-Pi-end voltage = 5.10 − 0.25 = 4.85 V
-Path heating = I² × R = 25 × 0.050 = 1.25 W
-```
+$$
+V_{DROP}=IR=5\times0.050=0.25\,\mathrm{V}
+$$
+
+$$
+V_{Pi}=5.10-0.25=4.85\,\mathrm{V}
+$$
+
+$$
+P_{PATH}=I^2R=25\times0.050=1.25\,\mathrm{W}
+$$
 
 Only 0.10 V remains above the minimum. Lower regulator voltage, hotter contacts or a load transient can consume it. This is not a qualified result; actual hot resistance and dynamic margins are **(still open)**. Raising the setpoint spends light-load and protection margin; it is not an approved fix.
+
+The **current selected-parts screen** is different: Gate 4a retains the BSC034 series pair and calculates a **42.673 mΩ** loop with its improved harness assumptions. With a conditional **5.026 V** regulator minimum and assumed **20 mV** trough, that gives about **4.793 V** at 5 A. The older **35.073 mΩ** target assumed a different, lower-loss pair and cannot be claimed for this selection. Hot contacts and regulation are still unqualified; a 100 mV total-excursion sensitivity gives only **4.713 V**, below the minimum.
 
 ## Share current through the intended contacts
 
 ![[a5-pi-power-harness-boundary.png|700]]
 
-The image shows grouping, not an assembly pinout. **DECISION:** both 5 V pins and all eight grounds, with a short **American Wire Gauge 16 (AWG16)** harness trunk. J502 is not final. Fan-out, mating contacts, retention and hot ratings remain **(still open)**.
+The image shows grouping, not an assembly pinout. Its generic connector drawing is **not the selected J502 geometry**. **DECISION:** use both 5 V pins and all eight grounds, with a short **American Wire Gauge 16 (AWG16)** trunk and **AWG22 fan-out wires** at the Pi crimps. Gate 4a retains the proposed **Phoenix 1776508 header + 1777989 plug** at J502. Its footprint review does not qualify its complete hot resistance; the **≤3.12 mΩ per pole** budget remains **(still open)**.
+
+**EVIDENCE — Pi-contact qualification FAIL:** the proposed Harwin **M20-1180042** contacts permit **30 mΩ after conditioning**, exceeding the path target of **≤20 mΩ per complete hot/conditioned mating contact**. The actual Pi male header and hot mate are also unqualified. This is a **failure to meet the documented acceptance criterion**, not a measured specimen failure. The generic picture's “not final” label must not hide this known finding.
+
+For equal intact contacts, the target Pi interface contributes $R_{Pi}=(20/2+20/8)\,\mathrm{m\Omega}=12.5\,\mathrm{m\Omega}$, or **62.5 mV at 5 A**. Substituting 30 mΩ gives **93.75 mV**, an extra **31.25 mV** before any further hot effect. This calculation explains why the missing guarantee matters; it does not predict actual contact resistance.
 
 **Physical pins:** 2 and 4 are 5 V; 6, 9, 14, 20, 25, 30, 34 and 39 are ground. Verify orientation against a checked assembly drawing. At 5 A with equal sharing, each positive contact carries 2.5 A; each ground carries 0.625 A. These are calculations, not ratings. Contact resistance differences change sharing.
+
+The proposed Harwin housings span physical pins **1–20 and 25–40**; one 2×10 housing cannot reach all eight grounds. Retention, exact mating fit and continuity checks remain open. One open positive contact would put the full 5 A through the survivor, exceeding the cited 3 A female-contact rating; the assembled hot-pair rating still needs evidence.
+
+## Why this design and not another
+
+GPIO is the owner's chosen interface, so V1A must provide independent output protection. Keeping local regulation and the 2 mΩ shunt preserves the detector relationship and useful current signal. The path study favors reducing real switch/contact/wire losses: thicker wire alone cannot fix poor contacts, while a higher setpoint consumes overvoltage margin. Remote sensing would require a new feedback and fault review.
+
+The owner selected **D for the test board**. E's extra Pi-end stage could protect the load endpoint more directly, but adds series loss and auxiliary wiring. D still needs far-end fault testing and qualified contacts. **Gate 4a freeze is BLOCKED; the Pi stays disconnected until fault tests and all other applicable gates pass.**
 
 > [!warning] Common misconceptions
 >
@@ -69,6 +89,6 @@ The image shows grouping, not an assembly pinout. **DECISION:** both 5 V pins an
 > 3. No. It assumes equal sharing; the complete hot mating interface still needs qualification.
 > 4. No. Peak voltage includes brief excursions.
 
-Sources: [path budget](../../wt-pathbudget/docs/evidence/r2/path_budget/PATH_BUDGET.md) (`ebe51b9`); [Pi fault envelope](../../v1a-wt-pi5-envelope/docs/evidence/r2/pi5_input_envelope_2026-09-29/PI5_INPUT_FAULT_ENVELOPE.md); [owner decision](../../wt-illustrations/docs/illustrations/IMAGE_AUDIT.md), which supersedes older harness choices and the report's architecture-E recommendation.
+Sources: [pinned source register](FACTCHECK_LOG.md#sources), PATH for loss/current calculations; PI for the USB-C/GPIO distinction; VERIFY for the failed Harwin criterion and proposed harness map; G3 for the D/E comparison; BASIS and G4 for current owner choices and the blocked freeze. Earlier 35.073 mΩ/E recommendations are historical.
 
 Previous: [[04 Monitoring]] · Next: [[06 PCB concepts]]

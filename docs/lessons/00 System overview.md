@@ -8,13 +8,13 @@ tags: [v1a, lesson]
 
 ## Why this matters
 
-V1A turns a higher direct-current (DC) supply into a monitored 5 V supply.<br>
+V1A is designed to turn a higher direct-current (DC) supply into a monitored 5 V supply.<br>
 Each block has a different job: distribute, convert, protect, or measure.<br>
 Understanding these boundaries helps you find where a fault must be stopped.
 
 ## Follow the power
 
-The current Wheel-Biped Robot (WBR) integration context uses a **13-series-cell (13S) battery** and a **power distribution board (PDB)**. The eventual Raspberry Pi 5 connection uses the power pins on its **general-purpose input/output (GPIO)** header.
+The proposed Wheel-Biped Robot (WBR) integration context uses a **13-series-cell (13S) battery** and a **power distribution board (PDB)**; the complete robot electrical architecture is still open. The intended Raspberry Pi 5 connection uses the power pins on its **general-purpose input/output (GPIO)** header.
 
 **Battery → PDB → bought isolated 48 V → 24 V module → V1A → Pi 5 GPIO power pins.**
 
@@ -44,13 +44,15 @@ The buck's local 5.1 V is not a guarantee of 5.1 V at the Pi. Switches, the shun
 
 **CALCULATION:** at the local regulator target, power is
 
-`P = V × I = 5.1 V × 5 A = 25.5 W`.
+$$
+P=VI=5.1\,\mathrm{V}\times5\,\mathrm{A}=25.5\,\mathrm{W}.
+$$
 
 The input must supply more than 25.5 W because conversion and wiring produce heat. Actual efficiency and continuous thermal capability are **(still open)**; the calculation is not a measured board rating.
 
 ## Where the project stands
 
-**PRELIMINARY V1A SHEET-03 ARCHITECTURE (TEST BOARD).** No printed circuit board (PCB) is routed. Output fault margins and source limits are **(still open)**. The next hardware evidence must come from dummy-load tests; the Pi stays disconnected until the required board gates pass.
+**PRELIMINARY V1A SHEET-03 ARCHITECTURE (TEST BOARD). Gate 4a freeze: BLOCKED.** Required circuit connections and limits are still open: the independent fault trigger, control supplies, fault logic and protected capacitor bank. Gate 4a is part of R2 schematic work, not the R4 fabrication gate. No printed circuit board (PCB) is routed. Schematic, layout and fabrication reviews must precede hardware tests. Later tests use dummy loads; **no Pi is connected before fault tests and all other required gates pass**.
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
@@ -73,8 +75,6 @@ The input must supply more than 25.5 W because conversion and wiring produce hea
 > 4. A dummy or electronic load, with controlled power and measurements.
 
 > [!info]- Evidence and reading
-> [Project scope](../docs/context/01_PROJECT_OVERVIEW.md) and [monitor boundary](../docs/evidence/r2/MONITOR_POWER_DOMAINS.md) explain the blocks. Their older release/input statements are historical.<br>
-> [Gate 4a basis, 2026-09-30](../../wt-gate4a/docs/evidence/r2/gate4a/BASIS.md) supplies the newer 9–26 V requirement and architecture D decision.<br>
-> [Current source illustration brief](../../wt-illustrations/docs/illustrations/BATCH_A.md) and [functional anatomy brief](../../wt-illustrations/docs/illustrations/BATCH_D.md) define the two diagrams.
+> [Pinned sources and fact-check record](FACTCHECK_LOG.md#sources): CTX and MON explain the blocks; G4 and OWNER control the current 9–26 V requirement, architecture D decision and blocked freeze. IMG records the illustration context; its older part-selection statements are superseded. Neither drawing is a completed circuit or hardware result.
 
 Previous: [[00-INDEX|Lesson index]] · Next: [[01 Input protection]] · Terms: [[99-Glossary]]

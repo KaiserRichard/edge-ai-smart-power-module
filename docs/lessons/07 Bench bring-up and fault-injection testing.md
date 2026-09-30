@@ -12,7 +12,7 @@ A correct-looking schematic cannot show the real fault voltage or temperature.
 A dummy load lets us investigate failures before connecting an expensive computer.  
 Measurements must prove both normal operation and fault containment.
 
-**Current status:** architecture D is a **PRELIMINARY TEST BOARD** proposal. No printed circuit board (PCB) is routed; no tests have run. Application margins are **(still open)**. Schematic, layout and fabrication-readiness gates precede bench work. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+**Current status:** architecture D is a **PRELIMINARY TEST BOARD** proposal. **Gate 4a capture freeze is BLOCKED** by open circuit contracts. No printed circuit board (PCB) is routed; the cited bench plan reports no physical tests. Application margins are **(still open)**. Schematic, layout and fabrication-readiness gates precede bench work. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 ## What the bench equipment tells us
 
@@ -24,7 +24,7 @@ Measurements must prove both normal operation and fault containment.
 | Calibrated current probe | Captures L201 current through cutoff and decay; additional measurements establish incoming charge and energy-disposal currents. |
 | Multimeter and temperature instruments | Check continuity, steady rails and component temperatures. |
 
-Use the reviewed harness with a dummy header; the actual Pi input model is **(still open)**. Probe bandwidth, range and timing alignment must suit the event. Instrument grounds must not bypass the harness return.
+Use the proposed harness with a dummy header only after reviewing its suitability for each planned test. **The Harwin Pi-contact selection fails the documented resistance criterion** in [[05 Powering the Pi 5 through GPIO]]; a review is not electrical qualification. The actual Pi input model is **(still open)**. Probe bandwidth, range and timing alignment must suit the event. Instrument grounds must not bypass the harness return; keep equipment protective earth intact.
 
 ## Bring up in this order
 
@@ -35,15 +35,17 @@ Use the reviewed harness with a dummy header; the actual Pi input model is **(st
 
 Change connections only with supplies off and all capacitors discharged. Review traces and temperatures before increasing fault energy.
 
+The plan includes normal tests at **9, 24 and 26 V**, with **0, 2.5 and 5 A** load cases and controlled temperature states. **27 V is an additional fault/OVP-window point**, outside normal operation. It may or may not trip the fitted eFuse. If the source is already isolated, that run cannot demonstrate fault interruption from an energized source; do not defeat OVP to disguise that difference.
+
 ## What fault injection must establish
 
 ![[a4-fault-event-sequence.png|700]]
 
-**Planned** detection, disconnection and energy disposal; the scope trace is illustrative, not measured.
+**Planned** detection, disconnection and energy disposal; the scope trace is illustrative, not measured. Set up recording before injection and capture the entire event. Frame 5 means reviewing recorded data, not starting the oscilloscope after cutoff. The diagram omits source isolation and the separate raw-side energy path.
 
 A buck high-side switch failed short connects input through L201 to output. The reviewed injector must preserve this path; an external supply straight into the output tests a different fault. Never improvise a short across a running converter.
 
-Source containment combines timed TPS26630 isolation, controlled local capacitance and a qualified inductor; applicable limits are **(still open)**. Source cutoff leaves energy in capacitors and L201. The disconnect and crowbar must handle it within component limits.
+The proposed source containment combines timed TPS26630 isolation, controlled local capacitance and an inductor whose fault limits still need qualification. Source cutoff leaves energy in capacitors and L201. The protected crowbar handles its side of the disconnect; upstream energy needs the separately reviewed raw-side path after the pair opens. All paths must stay within component limits.
 
 **Worked example — calculation:** an assumed 2.2 millifarad (mF) dummy capacitor at 5.5 V stores
 
@@ -51,7 +53,11 @@ $$E=\tfrac12 CV^2=\tfrac12(0.0022)(5.5)^2=0.033275\ \mathrm{J}\approx33.3\ \math
 
 Include that energy even after source cutoff. This assumption does not establish the Pi's capacitance.
 
-Save raw traces, settings and temperatures. At the dummy header, fault peak **plus uncertainty must be below 5.5 V**; normal minimum **minus uncertainty must be at least 4.75 V at 5 A**. Check current decay, component stress and restart too. Fixture emergency cutoff rescuing a run does not prove autonomous protection.
+Save synchronized raw traces, settings and temperatures, starting before injection and continuing through current decay. At the dummy header, fault peak **plus uncertainty must be below 5.5 V**; normal minimum **minus uncertainty must be at least 4.75 V at 5 A**. Capture both module output nodes, L201 current and source/dump currents; check component stress, usable control rails and restart too.
+
+For retained WFMB2512 ballast, the plan requires pre-pulse terminal temperature plus uncertainty **≤85°C**, with terminal temperature including pulse rise kept **below 95°C**. A temperature label for the room cannot establish those limits.
+
+Fixture-timed shutdown tests only a conditional source bound; it cannot prove the missing autonomous trigger. Fixture emergency cutoff rescuing a run does not prove autonomous protection either.
 
 > [!warning] Common misconceptions
 > A supply current limit does not stop a charged capacitor's fast discharge. One acceptable output peak does not prove component survival. A dummy-load pass covers its tested conditions; it does not authorize immediate Pi connection.
@@ -69,6 +75,6 @@ Save raw traces, settings and temperatures. At the dummy header, fault peak **pl
 > 3. Harness impedance changes the voltage seen by the load, including transients.
 > 4. No. Normal, fault, thermal, telemetry and interface gates all need closure.
 
-Sources: [current basis](../../wt-gate4a/docs/evidence/r2/gate4a/BASIS.md), [bench plan](../../wt-gate4a/docs/evidence/r2/gate4a/TEST_PLAN.md), [fault fixture](../../wt-gate4a/docs/evidence/r2/gate4a/TEST_HOOKS.md).
+Sources: [pinned source register](FACTCHECK_LOG.md#sources), G4 and BASIS for status/input limits; TEST and HOOKS for the planned matrix, recording, temperature and fixture distinctions; VERIFY for the contact finding. This lesson describes planned work, not performed tests.
 
 Previous: [[06 PCB concepts]] · Next: [[08 V1A inside the robot]]

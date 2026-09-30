@@ -18,7 +18,7 @@ Knowing the measurement boundary prevents misleading power and energy claims.
 
 ![[d3-v1a-circuit-anatomy-without-fake-hardware.png|700]]
 
-The image separates power flow from sensing and test access. No printed circuit board (PCB) is routed. Architecture D remains a preliminary fault-test board; application margins are **(still open)**.
+The image separates power flow from sensing and test access. Its single “shunt sense” arrow is simplified: current needs two Kelvin sense connections, and bus voltage needs a separate connection to `LOAD_5V1`. No printed circuit board (PCB) is routed. Architecture D remains a preliminary fault-test board; **Gate 4a freeze is BLOCKED** and application margins are **(still open)**.
 
 ## Why four-terminal Kelvin sensing matters
 
@@ -28,16 +28,21 @@ The sense traces must start at those sense terminals, stay together, and avoid t
 
 **CALCULATION — nominal 5 ampere (A) example:**
 
-```text
-Shunt voltage = I × R = 5 × 0.002 = 0.010 V = 10 mV
-Shunt heating = I² × R = 5² × 0.002 = 0.050 W = 50 mW
-```
+$$
+V_{SHUNT}=IR=5\times0.002=0.010\,\mathrm{V}=10\,\mathrm{mV}
+$$
+
+$$
+P_{SHUNT}=I^2R=5^2\times0.002=0.050\,\mathrm{W}=50\,\mathrm{mW}
+$$
 
 A small resistance wastes little power but produces a small signal. The reviewed shunt has ±1% initial tolerance and a temperature coefficient of ±25 parts per million per degree Celsius. Amplifier error, routing and calibration also affect accuracy. The accuracy requirement and measured result are **(still open)**.
 
+With the INA228's `ADCRANGE=1` setting, its ±40.96 mV shunt-input range corresponds to $40.96\,\mathrm{mV}/2\,\mathrm{m\Omega}=20.48\,\mathrm{A}$ in each direction using nominal resistance. This is a measurement-range calculation, **not a ±20.48 A board rating**. Firmware scaling/calibration must match the shunt and chosen range.
+
 ## What reaches the host
 
-The INA228 sends readings through **Inter-Integrated Circuit (I2C)**: serial data and clock lines. The monitor has a local 3.3 volt (V) supply. A TCA9517 buffer separates local and host signals; each side has pull-up resistors to its own supply. It does not power the host. Powered-off behavior and signal timing are **(still open)** pending bench checks.
+The INA228 sends readings through **Inter-Integrated Circuit (I2C)**: serial data and clock lines. The monitor has a local 3.3 volt (V) supply. A TCA9517 buffer connects separately powered local and host bus segments; each side has pull-ups to its own supply, with shared ground. **It is not galvanic isolation and does not power the host.** Existing host pull-ups must be included in the bus check. Powered-off behavior and signal timing are **(still open)** pending bench checks.
 
 Current means current crossing **this shunt**. Voltage means the load-side node relative to module ground, before the harness. Monitoring power branches before the shunt. These readings exclude upstream conversion losses and do not establish whole-module efficiency or actual Pi voltage.
 
@@ -63,6 +68,6 @@ Energy accumulates power over time. Monitor power loss resets accumulation and l
 > 3. No. Its voltage measurement is at the module, relative to module ground.
 > 4. No. Accumulation resets and the unpowered interval is a measurement gap.
 
-Sources: [monitoring review](../docs/evidence/r2/MONITOR_POWER_DOMAINS.md); [current owner decision](../../wt-illustrations/docs/illustrations/IMAGE_AUDIT.md), which supersedes the review's old empty-Sheet-03 status.
+Sources: [pinned source register](FACTCHECK_LOG.md#sources), MON and INA for measurement/domain behavior; G4 for the blocked freeze. The monitor review's old empty-Sheet-03 statement is historical. The manufacturer range does not establish assembled-board accuracy or fault survival.
 
 Previous: [[03 Output protection]] · Next: [[05 Powering the Pi 5 through GPIO]]

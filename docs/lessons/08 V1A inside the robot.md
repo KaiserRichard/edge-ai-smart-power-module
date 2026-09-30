@@ -20,7 +20,11 @@ The current integration concept is **13 series-connected battery cells (13S) →
 
 The picture separates V1A's five functions from the future robot interfaces. The isolated module's model, limits and fault behavior are **(still open)**. V1A remains a standalone Project II design; the dashed boundary does not add robot control or other power branches to it.
 
-**REQUIREMENT:** upstream protection must prevent the battery voltage from passing through a failed converter into V1A. Isolation removes a direct conductive power path while its barrier is intact, but does not prove safe output voltage during every fault. Module fault testing, grounding and connected ports still need review. Source current, stored energy and shutdown behavior are **(still open)** inputs to V1A's protection review.
+**DECISION:** an **isolated 48 V → 24 V module is required**. The **UENPO non-isolated module was rejected for V1A's supply**. A non-isolated buck can pass its input toward the output if its high-side switch fails short. An isolated converter transfers power across an isolation barrier, removing that direct switch-short path while the barrier is intact. It still needs output-fault protection and review of every external connection.
+
+**REQUIREMENT:** upstream protection must prevent the battery voltage from passing through a failed converter into V1A. Isolation alone does not prove safe output voltage during every fault. Module fault testing, grounding and connected ports still need review. Source current, stored energy and shutdown behavior are **(still open)** inputs to V1A's protection review.
+
+The selected module must meet V1A's **9–26 V normal-input requirement**, including its complete normal tolerance, ripple and startup behavior. A nominal 24 V label is insufficient. **Gate 4a freeze remains BLOCKED**; module procurement/qualification and a later robot integration are not released by these lessons.
 
 ## What telemetry can tell the robot
 
@@ -30,9 +34,9 @@ A useful future log would pair readings with time, workload and monitor-reset ev
 
 ## Worked example — budget upstream power
 
-**ASSUMPTION:** use the study's 5.1 V, 5 A output target and 90% V1A efficiency for an example.
+**ASSUMPTION:** use the local buck target of 5.1 V, 5 A and assume 90% efficiency from V1A's input to that node. This does not assume 5.1 V at the Pi after the downstream path losses.
 
-**CALCULATION:** output power = 5.1 × 5 = **25.5 W**; input power = 25.5 / 0.90 = **28.3 W**. At a nominal 24 V input, that is about **1.18 A**.
+**CALCULATION:** $P_{OUT}=5.1\times5=25.5\,\mathrm{W}$; $P_{IN}=25.5/0.90\approx28.3\,\mathrm{W}$. At a nominal 24 V input, $I_{IN}=25.5/(0.90\times24)\approx1.18\,\mathrm{A}$.
 
 The different input and output currents follow from power conversion. This is a sizing estimate, not measured efficiency or a module selection; other auxiliary loads require their own budget.
 
@@ -52,6 +56,6 @@ The different input and output currents follow from power conversion. This is a 
 > 3. No. Actual voltage, current, stored energy and shutdown limits need evidence.
 > 4. Complete the required engineering reviews and dummy-load bring-up, thermal, ripple, transient, protection and telemetry gates in lesson 07.
 
-Sources: [project scope](../docs/context/01_PROJECT_OVERVIEW.md), [monitor boundary](../docs/evidence/r2/MONITOR_POWER_DOMAINS.md), [upstream interface study](../../wt-aux24/docs/evidence/aux_converter/AUX24_INTERFACE.md), and [current scope illustration brief](../../wt-illustrations/docs/illustrations/BATCH_B.md#b5--standalone-v1a-and-future-integration-boundary-replace).
+Sources: [pinned source register](FACTCHECK_LOG.md#sources), CTX for standalone scope; MON for the measurement boundary; AUX for isolation/fault reasoning; OWNER for the UENPO rejection and required isolated module; BASIS and G4 for 9–26 V and blocked status. AUX's older 24 V ceiling/trim proposals do not override current requirements.
 
 Previous: [[07 Bench bring-up and fault-injection testing]] · Next reference: [[99-Glossary]] · [[00-INDEX|Lesson index]]

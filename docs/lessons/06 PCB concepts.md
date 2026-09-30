@@ -12,7 +12,7 @@ The printed circuit board (PCB) carries current, heat and measurement signals.
 Its copper paths can add voltage drop, switching noise and measurement error.  
 Understanding these paths helps you review a future layout before hardware testing.
 
-**OBSERVATION:** This lesson is conceptual: no V1A PCB is routed. R2 schematic release and R3 PCB release remain blocked. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+**OBSERVATION:** This lesson is conceptual: no V1A PCB is routed. **Gate 4a capture freeze is BLOCKED** by open circuit contracts; R2 schematic release and R3 PCB release remain blocked. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 ## 1. The hot loop and its return
 
@@ -20,7 +20,7 @@ The buck's **hot loop** surrounds the local input capacitor, both switches and t
 
 ![[d4-buck-input-switching-loop.png|700]]
 
-The dashed outlines compare compact and long-return loops. They mark loop area, **not simultaneous conduction** of both switches. The switches alternate; see [[02 Buck converter LM61460]].
+The dashed outlines compare compact and long-return switching loops. Their arrows represent the change between the two switch-state current paths, **not an instantaneous current flowing through both conducting switches**. The switches alternate, with brief dead time between them; see [[02 Buck converter LM61460]].
 
 Current must return to its source. A ground symbol does not remove the return copper's impedance. Keep input capacitors close to both LM61460 input-voltage (VIN) and power-ground (PGND) pairs, following manufacturer guidance.
 
@@ -37,6 +37,7 @@ Route sense traces together from those dedicated terminals to the monitor's filt
 $$
 V=IR=5\times0.002=0.010\ \text{V}=10\ \text{mV}
 $$
+
 $$
 P=I^2R=5^2\times0.002=0.050\ \text{W}
 $$
@@ -50,6 +51,7 @@ Power parts transfer heat into copper through package connections. Copper and su
 Board layers, copper thickness, dimensions, ambient temperature and airflow are **(still open)**. No trace width or via count is approved here. Calculations guide the layout; later dummy-load measurements check temperatures.
 
 > [!warning] Common misconceptions
+>
 > - “Short outgoing trace means small loop.” The return matters too.
 > - “Any shunt connection is Kelvin sensing.” Use dedicated sense terminals.
 > - “More copper is always better.” Respect noisy nodes and the shunt boundary.
@@ -70,9 +72,6 @@ Board layers, copper thickness, dimensions, ambient temperature and airflow are 
 
 ## Sources
 
-- [Engineering state and blocked layout gate](../docs/context/03_ENGINEERING_STATE.md).
-- [Buck review: local decoupling and later layout gates](../docs/evidence/r2/BUCK_DESIGN.md#pinpackage-and-later-layout-gates); its older component selections are not final selections for this lesson.
-- [Footprint review: LM61460 thermal lands and R401 Kelvin mapping](../docs/evidence/r2/forensic_2026-09-14/CRITICAL_FOOTPRINT_QUALIFICATION.md).
-- [Illustration audit: no routed board](../../wt-illustrations/docs/illustrations/IMAGE_AUDIT.md) and [D4 conceptual-loop prompt](../../wt-illustrations/docs/illustrations/BATCH_D.md#d4--buck-input-switching-loop-regenerate).
+[Pinned source register](FACTCHECK_LOG.md#sources): G4 for the blocked freeze; BUCK and LM for switching loops/local bypassing; FP for the LM61460's named thermal lands and four-terminal Kelvin mapping; MON for the shunt. Old component selections and illustrative geometry are not layout approval.
 
 Previous: [[05 Powering the Pi 5 through GPIO]] · Next: [[07 Bench bring-up and fault-injection testing]]

@@ -18,6 +18,8 @@ Understanding the input stage explains its jobs and limits.
 
 ![[b5-standalone-v1a-and-future-integration-boundary.png|700]]
 
+The picture shows functional boundaries. Its “regulated 5 V” label means the approximately 5.1 V local target; it does not establish delivered Pi voltage or a validated board rating.
+
 ## Four jobs at the input
 
 **OBSERVATION — captured circuit:** input → F101 → fused node → Q101 → TPS26630 → buck input bank. D101 connects from the fused node to ground; Q102 controls Q101's gate.
@@ -31,7 +33,7 @@ Understanding the input stage explains its jobs and limits.
 
 Q101 and Q102 are metal-oxide-semiconductor field-effect transistors (**MOSFETs**). An off MOSFET still has a body diode. Reversing the input wires and feeding power backward from the output are different faults; both paths need checking.
 
-**DECISION — proposed update:** Gate4a adopts **SMCJ36CA for D101** and **3403.0285.23 for F101**, superseding the older reselection notes. These are proposed capture choices. Fuse clearing, hot surge behavior and coordination are **(still open)**.
+**DECISION — selected for proposed capture:** Gate 4a adopts **Littelfuse SMCJ36CA for D101** and **Schurter 3403.0285.23 for F101**, following the TVS/fuse reselection report. D101 has 36 V standoff; its specified pulse clamp is 58.1 V at 25.9 A for the stated 25°C, 10/1000 µs test. F101 is a 12.5 A time-lag fuse, rated 125 VDC with 1000 A DC interruption under its specified conditions. These are component specifications, not V1A ratings. Installed clearing, hot surge behavior and coordination are **(still open)**.
 
 ## Read the eFuse settings correctly
 
@@ -43,14 +45,24 @@ These are **CALCULATED baseline nominal settings**, not measured guarantees or a
 | Overvoltage protection (**OVP**) | About **27.6 V** | Commands cutoff above its threshold; it does not clamp the rail to 27.6 V. |
 | Input current limit | About **4.5 A** | Controls current entering the converter, not its 5 V output current. |
 
-The inherited minimum OVP threshold is about 26.97 V, only 0.97 V above normal input's ceiling. Final settings, hot drift and nuisance-trip behavior are **(still open)**.
+The inherited rising OVP screen is about **26.97–28.29 V**, only 0.97 V above the normal ceiling at its low end. Thus **27 V is a fault-test point, not a guaranteed trip voltage**. The falling/reset screen is about **25.00–26.58 V**, so returning to 26 V after a trip does not guarantee recovery. Hot drift, restart and nuisance-trip behavior are **(still open)**; these screens are not complete hot limits.
 
 The development plan also uses **timed TPS26630 input isolation** with **10–30 microfarads (µF) of effective local input capacitance**. Source isolation cuts further supply; charged capacitors can still feed a fault. The independent fault trigger and full isolation time are **(still open)**. See [[03 Output protection]].
+
+## Why this design and not another
+
+The owner's **9–26 V** normal range leaves a nominal 24 V module room for tolerance and ripple. That makes 26 V a design requirement, not proven operation: the complete healthy waveform must stay in range, and the remaining OVP margin needs testing. It also does not approve sustained 33.6 V input.
+
+The upstream module must be isolated: a non-isolated buck's shorted high-side switch can create a direct path from the robot bus toward V1A. The owner rejected the UENPO non-isolated module. Isolation removes that direct power-transfer path while its barrier is intact; output-fault limits and connected ports still need review. See [[08 V1A inside the robot]].
+
+The 36 V bidirectional TVS gives more standoff margin for the studied upstream faults than the older 26 V part. The larger SMC package improves the pulse-power screen, but its higher clamp requires separate checks of the buck and auxiliary-supply paths. The 12.5 A fuse improves the assumed hot hold-current margin; it clears moderate faults more slowly. The approximately 4.5 A eFuse limit cannot be relied on to blow it, and the upstream TVS current bypasses that limit. This is why timed source shutdown and coordination remain necessary.
+
+**Gate 4a freeze is BLOCKED** until these and the other open circuit contracts are resolved.
 
 ## Small example: input current is different
 
 **ASSUMPTION:** 5.1 V, 5 A at the buck output, 90% buck efficiency and 9 V at its input.<br>
-**CALCULATION:** output power = 5.1 × 5 = **25.5 W**; input current ≈ 25.5 ÷ (9 × 0.90) = **3.15 A**.
+**CALCULATION:** $P_{OUT}=5.1\times5=25.5\,\mathrm{W}$; $I_{IN}\approx25.5/(9\times0.90)=3.15\,\mathrm{A}$.
 
 Thus a 5 A output can coexist with an approximately 4.5 A input limit. Extra path losses and startup are excluded; this is not measured.
 
@@ -71,6 +83,6 @@ Thus a 5 A output can coexist with an approximately 4.5 A input limit. Extra pat
 > 4. No. Local capacitors and the inductor can still release stored energy.
 
 > [!info]- Evidence and reading
-> [Captured input review](../docs/evidence/r2/INPUT_PROTECTION.md), [current Gate4a basis](../../wt-gate4a/docs/evidence/r2/gate4a/BASIS.md), [source-isolation study](../../wt-gate3b/docs/evidence/r2/sheet03/gate3b/INPUT_LIMITER_AND_ENERGY.md).
+> [Pinned sources and fact-check record](FACTCHECK_LOG.md#sources): IN for the path/settings; TVS for the selected parts and their tradeoffs; BASIS and G4 for 9–26 V and the blocked freeze; SRC for timed isolation. Older 24 V ceilings and unselected-fuse statements are historical.
 
 Previous: [[00 System overview]] · Next: [[02 Buck converter LM61460]] · Terms: [[99-Glossary]]
