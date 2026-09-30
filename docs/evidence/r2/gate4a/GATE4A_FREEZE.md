@@ -14,7 +14,7 @@ The retained protected bank is 1.88 mF nominal / 3.5 mΩ catalog ESR. The inheri
 
 Paper defects, actual measurements and incomplete construction are distinguished in the resolution table. Each unmeasured behavior has a named test with a PASS criterion and prerequisites. Missing fixture hardware, uncertainty, source construction or BOM proof keeps this package BLOCKED. Passing arithmetic checks does not remove those blocks.
 
-Current design blockers: R4A-01, R4A-09, R4A-12, R4A-13. Bench qualification: R4A-01, R4A-03, R4A-04, R4A-05, R4A-06, R4A-07, R4A-08, R4A-09, R4A-10, R4A-11, R4A-12, R4A-13. Pending review reconciliation: R4A-14, R4A-15, R4A-16, R4A-17. J502 remains a separate dependency.
+Current design blockers: R4A-01, R4A-09, R4A-12, R4A-13, R4A-14. Bench qualification: R4A-01, R4A-03, R4A-04, R4A-05, R4A-06, R4A-07, R4A-08, R4A-09, R4A-10, R4A-11, R4A-12, R4A-13, R4A-14. Pending review reconciliation: R4A-15, R4A-16, R4A-17. J502 remains a separate dependency.
 
 ## Evidence and current circuit register
 
