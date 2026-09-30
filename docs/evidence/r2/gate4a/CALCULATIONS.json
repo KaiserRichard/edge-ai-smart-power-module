@@ -960,6 +960,14 @@
     "review_file": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md",
     "review_items": [
       {
+        "id": "R4A-01",
+        "status": "DESIGN BLOCKED / BENCH REQUIRED",
+        "resolution": "Replace blankFAULT_TRIGGER with a concretecontinuous-SW-high watchdogcandidateU331TLV3201AIDBVR→U332LTC6994IS6-1#TRPBF,6µs rising-edge qualifier, independentofPG/outputOV. S01-07 specifies exactMPNs, values, sharedADGsparechannel, independentclamps andsourcefaultOR/Q304/U320connection. It isnot yeta proven discriminator; T01mustfirst boundhealthymaximumSW-high/startup/foldback andreadinessbeforethemainpathcanarm. KeeparchitectureD andTPS26630RGER; nofixturetimingclaim.",
+        "equations": "WithSWdivider40.2k/10k,1kseries and82kpulldown,G=5.5714634146; REF1V25 gives6.964329268V nominalSWthreshold. DeclaredhotR±0.25%, REF±0.068%, derivedrefdivider±0.25%, comparatoroffset±4mV+1.25mVCMRRsensitivity, RON0…17Ω andspecifiedleakage screen6.875509…7.055127V, excludingdynamic/partial-supplyterms. Nominal9V source leaves≈1.945V beforemainpathdropandthresholdmax. At400kHz,normal9V/5.098Videalontime1.4162µs, notanallmodebound. LM61460allows98%duty in frequencyfoldback; nofullhealthymaximumONwidth ispublished. TimerNDIV1,RSET300k:6µs×(1±0.25%)×(1±6.2%)=5.61393…6.38793µs screen. AddingTPS1.5µs leaves2.11207µs foranalogsettling/comparator/OR/SHDN/physicalcommutation. Timerstartupis500×tMASTER≈3ms typical; require measuredreadybeforemainpermission, nottypicaldelayassumption. Qsource=integral(max(IMAIN,0)dt)≤100µC isindependentofdeadline andmustincludeallpositivework; moduleisolationdoesnotboundC/current.",
+        "evidence": "[ADI LTC6994-1/-2 RevC](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC6994-1-6994-2.pdf),pins,NDIV1/POL0,delay±6.2%,startup; [TI LM61460 SNVSBD5D](https://www.ti.com/lit/ds/symlink/lm61460.pdf),foldback98%duty; TLV/logicprimaryregister. Thisadaptsthemanufacturerpulse-qualifier block, noPCB/CADcopy.",
+        "bench": "T01 SOURCE-WATCHDOG. Beforecapturefreeze, measurehealthySW-highmaximumat9/24/26V, allstartup/prebias/load/foldback/brownoutstates, plusobservedwatchdogminimum. PASShealthymax+Utime<watchdogmin−Utime withnofalsefault; readinessbeforemainpermission; everyphysicalfaultphase/sourcecorner gives tOFF+U≤10µs andQpositive+U≤100µC, includingpersistentfault/inputreturn. CannotclaimPASSwithmissinghealthybehaviororfixture. Measuringat0load/9V catches currentthresholdschemes thatotherwiseexceeddeadline; bulkOV19–36µs isretainedcounterevidence."
+      },
+      {
         "id": "R4A-02",
         "status": "CORRECTED",
         "resolution": "R103 = TNPW0805348KBEEA (348 kΩ) VIN_FUSED→U101 OVP with R104 15.8 kΩ to GND; R340 = TNPW08051M00BEEA (1 MΩ) AUX_12V→U317 FB; R367 initially same 0805 1 MΩ SENSE→GND, revised under R4A-06. 0.1%, 25 ppm/K; replace 0603 lands at capture.",

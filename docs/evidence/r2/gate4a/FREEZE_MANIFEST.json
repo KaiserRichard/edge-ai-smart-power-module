@@ -245,7 +245,7 @@
       ],
       "old": "D301: BAS116,215 / BAS116,215; U321: NEW; D321: NEW; R361: NEW",
       "new_mpn": "BAS116,215; ADG4612BRUZ; LM4040A25IDBZR; BAT46W-E3-08; TNPW060382K0BEEA x2; GRM188R71H104KA93D",
-      "new_value_or_connection": "D301anodeDIV/cathodeCLAMP2V5; D321LM4040cathodeCLAMP2V5/anodeGND/NCpad; R36182k DRV_HOLD→CLAMP2V5; D322BAT46WanodeGND/cathodeDIV. R36782k SENSE→GND. U321BRUZ TSSOP pin1IN1=DET5_VALID,2D1=R303,3S1=DIV,4VSS=GND,5GND,13VDD=DET_5V; pin12NC; unused6/7/8/9/10/11/14/15/16→GND. C362100nF pins13→5. NoREF5025faultsink.",
+      "new_value_or_connection": "D301anodeDIV/cathodeCLAMP2V5; D321LM4040cathodeCLAMP2V5/anodeGND/NCpad; R36182k DRV_HOLD→CLAMP2V5; D322BAT46WanodeGND/cathodeDIV. R36782k SENSE→GND. U321BRUZ TSSOP pin1IN1=DET5_VALID,2D1=R303,3S1=DIV,4VSS=GND,5GND,13VDD=DET_5V; pin12NC; unused6/7/8/9/10/11→GND;14/15/16reservedsourcewatchdogchannelS2/D2/IN2 perS01-07. C362100nF pins13→5. NoREF5025faultsink.",
       "reason": "Existing reference must not absorb fault current while off",
       "governing_equation": "3µA off*82.205k=246.615mV;38µA partialfault*82.205k=3.12379V before pinclamp; Ibias_shunt≥97.1µA vs80µA minimum",
       "status": "R4A-06 selected correction; T06 required; ramp/transient extrema OPEN",
@@ -616,15 +616,33 @@
       "id": "S01-07",
       "sheet": "01/03 interface",
       "refdes": [
-        "FAULT_TRIGGER"
+        "U331",
+        "U332",
+        "U333",
+        "U334",
+        "U335",
+        "R390",
+        "R391",
+        "R392",
+        "R393",
+        "R394",
+        "R395",
+        "R396",
+        "D331",
+        "D332",
+        "C370",
+        "C371",
+        "C372",
+        "C373",
+        "C374"
       ],
       "old": "No independently qualified high-side-short discriminator",
-      "new_mpn": "OPEN; no claimed selected part",
-      "new_value_or_connection": "require independent bounded fault-onset trigger for TPS26630 source isolation; fixture-timed cutoff is separate conditional test mode only",
+      "new_mpn": "TLV3201AIDBVR; LTC6994IS6-1#TRPBF; SN74LVC1G32DBVR; SN74LVC1G14DBVR x2; TNPW060340K2BEEA; TNPW060310K0BEEA; TNPW06031K00BEEA; TNPW060382K0BEEA; TNPW0603300KBEEA; TNPW060310K0BEEA x2; BAS116,215; BAT46W-E3-08; GRM188R71H104KA93D x5",
+      "new_value_or_connection": "IndependentcontinuousSW-highwatchdog: R39040.2k BUCK_SW→SW_DIV,R39110kSW_DIV→GND; U321spareS2(pin14)=SW_DIV,D2(pin15)→R3921k→SW_SENSE,R39382kSW_SENSE→GND,IN2pin16=DET5_VALID. D331SW_DIV→independentCLAMP2V5; D332GND→SW_DIV. R395/R39610k/10kREF2V5→REF1V25→GND. U331DBV1OUT=SW_HIGH,2GND,3IN+=SW_SENSE,4IN−=REF1V25,5DET5. U332S6:1IN=SW_HIGH,2GND,3SET300kR394→GND,4DIV=GND(NDIV1/POL0),5DET5,6OUT=STUCK_SW. U334invertU303out; U333ORthatOVrequestandSTUCK_SW→FAULT_REQUEST/Q304gate. U335invertFAULT_REQUEST→U320nPRE. EachlogicDBV1A,2or3GNDperexactvariant,4Y,5DET5; C370…374100nF perIC. NoPGgate; sourcewatchdogactivebeforemainpermission.",
       "reason": "Bulk charging can delay raw OV beyond10us source contract",
-      "governing_equation": "tSRC=trigger+logic+SHDN+TPS+commutation<=10us; integral(Iin_positive)dt<=100uC",
-      "status": "BLOCKED autonomous implementation; do not represent OV chain or fixture sync as qualified substitute",
-      "source": "G3B/COMMON"
+      "governing_equation": "SWtrip_nom6.964329V; tDELAY=Rset/50k*1µs=6µs;5.61393…6.38793µs screen;10−6.38793−1.5=2.11207µs otherstagebudget",
+      "status": "R4A-01 selected candidate; BLOCKED T01 healthypulse/startup/physicalsource-off evidence",
+      "source": "FIX-SOURCE LTC6994RevC; TLV3201; LM61460SNVSBD5D foldback; TIlogic"
     }
   ]
 }

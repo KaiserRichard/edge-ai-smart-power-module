@@ -45,6 +45,14 @@ Normal input-current screens use25.491803W buck output/ASSUMED90% buck efficienc
 
 The preceding conditional energy/path models remain evidence, with any superseded component proposals identified below. These are paper calculations or named bench prerequisites; no test was run.
 
+### R4A-01 — DESIGN BLOCKED / BENCH REQUIRED
+
+WithSWdivider40.2k/10k,1kseries and82kpulldown,G=5.5714634146; REF1V25 gives6.964329268V nominalSWthreshold. DeclaredhotR±0.25%, REF±0.068%, derivedrefdivider±0.25%, comparatoroffset±4mV+1.25mVCMRRsensitivity, RON0…17Ω andspecifiedleakage screen6.875509…7.055127V, excludingdynamic/partial-supplyterms. Nominal9V source leaves≈1.945V beforemainpathdropandthresholdmax. At400kHz,normal9V/5.098Videalontime1.4162µs, notanallmodebound. LM61460allows98%duty in frequencyfoldback; nofullhealthymaximumONwidth ispublished. TimerNDIV1,RSET300k:6µs×(1±0.25%)×(1±6.2%)=5.61393…6.38793µs screen. AddingTPS1.5µs leaves2.11207µs foranalogsettling/comparator/OR/SHDN/physicalcommutation. Timerstartupis500×tMASTER≈3ms typical; require measuredreadybeforemainpermission, nottypicaldelayassumption. Qsource=integral(max(IMAIN,0)dt)≤100µC isindependentofdeadline andmustincludeallpositivework; moduleisolationdoesnotboundC/current.
+
+Replace blankFAULT_TRIGGER with a concretecontinuous-SW-high watchdogcandidateU331TLV3201AIDBVR→U332LTC6994IS6-1#TRPBF,6µs rising-edge qualifier, independentofPG/outputOV. S01-07 specifies exactMPNs, values, sharedADGsparechannel, independentclamps andsourcefaultOR/Q304/U320connection. It isnot yeta proven discriminator; T01mustfirst boundhealthymaximumSW-high/startup/foldback andreadinessbeforethemainpathcanarm. KeeparchitectureD andTPS26630RGER; nofixturetimingclaim.
+
+Closure: T01 SOURCE-WATCHDOG. Beforecapturefreeze, measurehealthySW-highmaximumat9/24/26V, allstartup/prebias/load/foldback/brownoutstates, plusobservedwatchdogminimum. PASShealthymax+Utime<watchdogmin−Utime withnofalsefault; readinessbeforemainpermission; everyphysicalfaultphase/sourcecorner gives tOFF+U≤10µs andQpositive+U≤100µC, includingpersistentfault/inputreturn. CannotclaimPASSwithmissinghealthybehaviororfixture. Measuringat0load/9V catches currentthresholdschemes thatotherwiseexceeddeadline; bulkOV19–36µs isretainedcounterevidence.
+
 ### R4A-02 — CORRECTED
 
 Rmin=Rnom(1−0.001−25 ppm/K×60 K)=0.9975Rnom. At 58.1 V across R103, P≤9.724 mW. R340 at 12.311325 V: P≤0.151949 mW. R367 at 2.5 V: 6.266 µW. 0805 range ≤1 MΩ, working voltage 150 V, general-operation P70=140 mW; conditional 85°C linear derating toward125°C gives101.818 mW. Values unchanged, initial-only OVP26.973873–28.289211 V / aux11.621343–12.311325 V screens retained; pads/parasitic transfer is not assumed unchanged.
