@@ -1,0 +1,85 @@
+{
+  "classification": "CALCULATED conditional screens, not validated performance",
+  "baseline_commit": "0677fea0a32fc87b740949d589abe1588e55934c",
+  "assumed": {
+    "v1a_efficiency": 0.9,
+    "upstream_efficiency_for_primary_budget": 0.9,
+    "power_reserve_factor": 1.25,
+    "battery_empty_v": 39,
+    "trim_v": 23.5,
+    "complete_dc_error_fraction_target": 0.01,
+    "positive_ripple_v": 0.1,
+    "additional_healthy_transient_v": 0.15,
+    "module_ovp_nominal_v": 25.0,
+    "module_ovp_total_error_fraction": 0.02,
+    "complete_fault_peak_ceiling_v": 26.0,
+    "input_surge_screen_v": 100,
+    "ambient_c": [
+      -20,
+      60
+    ]
+  },
+  "calculated": {
+    "pi_output_w": 25.5,
+    "v1a_input_w": 28.333333333333332,
+    "normal_dc_min_v": 23.265,
+    "normal_dc_max_v": 23.735,
+    "normal_peak_v": 23.985,
+    "normal_ceiling_margin_v": 0.015000000000000568,
+    "module_ovp_min_v": 24.5,
+    "module_ovp_max_v": 25.5,
+    "ovp_threshold_margin_to_frozen_initial_only_min_v": 1.4699999999999989,
+    "fault_peak_margin_to_frozen_initial_only_min_v": 0.9699999999999989,
+    "surge_screen_headroom_over_54_6v_v": 45.4,
+    "current_limited_capacity_at_23_5v_w": {
+      "4_2a": 98.7,
+      "6_3a": 148.04999999999998,
+      "8_4a": 197.4
+    },
+    "rsd_100_70c_60pct_free_air_w": 60.48,
+    "rsd_200_70c_60pct_free_air_w": 120.96,
+    "tep200_128w_loss_at_89pct_typical_w": 15.861423220973794,
+    "tep200_limited_dc_error_fraction_screen": 0.022000000000000002,
+    "tep200_23_5v_limited_peak_v": 24.267,
+    "tep200_limited_setting_ceiling_v": 23.238747553816047,
+    "tep200_23v_limited_peak_v": 23.756,
+    "tep200_23v_current_limited_capacity_w": 193.20000000000002,
+    "scenarios": [
+      {
+        "other_load_w_scenario_actual_open": 0,
+        "continuous_demand_w_calculated": 28.333333333333332,
+        "current_at_24v_a_calculated": 1.1805555555555556,
+        "current_at_23_5v_a_calculated": 1.2056737588652482,
+        "minimum_usable_w_calculated": 35.416666666666664,
+        "minimum_usable_a_at_23_5v_calculated": 1.5070921985815602,
+        "primary_current_at_39v_90pct_a_calculated": 0.8072174738841404
+      },
+      {
+        "other_load_w_scenario_actual_open": 50,
+        "continuous_demand_w_calculated": 78.33333333333333,
+        "current_at_24v_a_calculated": 3.263888888888889,
+        "current_at_23_5v_a_calculated": 3.333333333333333,
+        "minimum_usable_w_calculated": 97.91666666666666,
+        "minimum_usable_a_at_23_5v_calculated": 4.166666666666666,
+        "primary_current_at_39v_90pct_a_calculated": 2.231718898385565
+      },
+      {
+        "other_load_w_scenario_actual_open": 100,
+        "continuous_demand_w_calculated": 128.33333333333334,
+        "current_at_24v_a_calculated": 5.347222222222222,
+        "current_at_23_5v_a_calculated": 5.460992907801419,
+        "minimum_usable_w_calculated": 160.41666666666669,
+        "minimum_usable_a_at_23_5v_calculated": 6.826241134751774,
+        "primary_current_at_39v_90pct_a_calculated": 3.65622032288699
+      }
+    ]
+  },
+  "open": {
+    "actual_bus_peak_waveform_energy_repetition": null,
+    "complete_efuse_ovp_min_with_drift": null,
+    "complete_module_error_with_aging_trim_sense_harness": null,
+    "independent_output_barrier_delay_fault_peak_energy": null,
+    "shared_load_peaks_and_hot_usable_capacity": null,
+    "single_fault_containment_report": null
+  }
+}
