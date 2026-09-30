@@ -2,7 +2,9 @@
 
 2026-09-30. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
-**STATUS: CONDITIONAL PASS for component proposals and arithmetic; BLOCKED for a qualified hot 5 A claim.** No KiCad changes or gate advancement. The two complete proposals below meet the calculated hot acceptance budget, subject to its explicitly unproved bounds. Neither is represented as a datasheet-guaranteed or tested Pi assembly.
+**STATUS: CONDITIONAL PASS for component proposals and arithmetic; BLOCKED for a qualified hot 5 A claim.** Resumed from partial commit `4ff92f3ef68822007642a0e2cbb09b351d043222`; valid work retained. No KiCad changes or gate advancement. The two complete proposals below meet the calculated hot acceptance budget, subject to its explicitly unproved bounds. Neither is represented as a datasheet-guaranteed or tested Pi assembly.
+
+[Standalone one-page owner explanation](j502_selection/OWNER_EXPLANATION.pdf).
 
 ## OWNER EXPLANATION — one-page briefing
 
@@ -27,7 +29,7 @@ Both numbers include the path-budget proposal for a **≤6 mΩ hot module FET pa
 
 **REQUIREMENT:** ≥4.75 V at the loaded Pi GPIO power/ground endpoint at 5 A; use the fixed pins above. Do not replace the Pi header, add alternative Pi power contacts, or route USB data. Retain the inherited strict fault ceiling below 5.5 V. This report selects candidates; it does not resolve the fault architecture.
 
-**EVIDENCE:** independent `VERIFY_FOOTPRINTS.md`, dated 2026-09-30, at the requested external path; PATH_BUDGET at commit `ebe51b9e141588d118d74daf37e65a3bd2307c1f`, [pinned report](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/ebe51b9e141588d118d74daf37e65a3bd2307c1f/docs/evidence/r2/path_budget/PATH_BUDGET.md). Repository baseline `51d1c2ff1f7eca4f20eef137c1595e4b9e052a75`. Exact input paths/hashes are in [INPUT_PROVENANCE.json](j502_selection/INPUT_PROVENANCE.json). The fetched branch was read, not merged.
+**EVIDENCE:** independent `VERIFY_FOOTPRINTS.md`, dated 2026-09-30, at the requested external path; PATH_BUDGET at commit `ebe51b9e141588d118d74daf37e65a3bd2307c1f`, [pinned report](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/ebe51b9e141588d118d74daf37e65a3bd2307c1f/docs/evidence/r2/path_budget/PATH_BUDGET.md). Repository baseline `51d1c2ff1f7eca4f20eef137c1595e4b9e052a75`. Exact input paths/hashes are in [INPUT_PROVENANCE.json](j502_selection/INPUT_PROVENANCE.json). The existing local branch objects were read, not merged. Resume-time `git fetch origin` could not write `FETCH_HEAD`; read-only `git ls-remote` confirmed both requested remote tips still match these pins.
 
 **OBSERVATION:** the previous selection fails its datasheet resistance criterion; it is not evidence that every physical Harwin sample has high resistance. The footprint-only work and earlier ERC evidence are retained as history.
 
@@ -41,7 +43,7 @@ Source IDs resolve to manufacturer URLs, revisions, reviewed sections, retrieval
 
 | Item / quantity | Exact MPN | Evidence and fit |
 |---|---|---|
-| Full Pi socket housing / 1 | **TE 3-87456-6** | 40 positions, two rows, 2.54 mm pitch/row spacing; 50.93 mm catalogue length, 6.1 mm height. Drawing 87456 **S5, 2025-04-14**; source T1. Covers the complete header with one body. |
+| Full Pi socket housing / 1 | **TE 3-87456-6** | 40 positions, two rows, 2.54 mm pitch/row spacing; covers the complete header with one body. Source T1 links drawing 87456 **S5**. Catalogue length 50.93 mm and dimension labelled height 6.1 mm are not an installed clearance drawing; see the axial-depth check below. |
 | Female socket / 10 | **TE 87309-9** | Gold 0.76 µm mating finish, phosphor bronze, high-pressure MOD V contact; 24–20 AWG, insulation diameter 1.75 mm, 0.64 mm square post; 3 A catalogue rating. Sources T2/T3. The loose-piece **1-87309-4** is a sourcing alternative, subject to its own tooling/drawing check. |
 | Positive pigtails / 2 × 15 mm | **Belden 8502 002100** | Red, AWG20 stranded tinned copper; nominal OD 1.5 mm, below the stated 1.75 mm contact limit; verify actual lot/tolerance and crimp. |
 | Return pigtails / 8 × 35 mm | **Belden 8502 010100** | Black, same AWG20 construction. Longer ground branches span the full header. |
@@ -51,7 +53,7 @@ Source IDs resolve to manufacturer URLs, revisions, reviewed sections, retrieval
 
 **DECISION — proposed tighter combined target:** allocate **≤20 mΩ hot and conditioned per Pi mated-contact-plus-female-crimp block**. This contains, rather than adds, the female crimp. Measure from the free conductor immediately behind the crimp to the male pin immediately above its PCB attachment; the separate attachment allowance covers the remaining connection to the Pi board. Keep the complete wire length as its own conservative allowance. The original budget allocated 20 mΩ to mating alone plus 0.5 mΩ equivalent for female crimps; this proposal removes that separate 0.5 mΩ only because the new combined block must pass the tighter test. If measurements use different endpoints, reconcile them before summing.
 
-The 12 mΩ TE figure qualifies its specified mating system at the stated conditions, **not** the unidentified Pi male header at 60°C. No thermal multiplier turns it into such a guarantee. The proposed 20 mΩ combined bound needs supplier applicability evidence and hot/conditioned measurements on the actual mate.
+The 12 mΩ TE figure applies to its specified mating system at the stated conditions, **not** the unidentified Pi male header at 60°C. No thermal multiplier turns it into such a guarantee. The proposed 20 mΩ combined bound needs supplier applicability evidence and hot/conditioned measurements on the actual mate. Resume review confirmed that the T1 housing page links 108-25020 Rev B, but retrieval of that standalone specification failed; the preserved preliminary PCN attachment remains the inspected copy.
 
 ### Solution A — retain Phoenix J502, change the external harness
 
@@ -63,7 +65,7 @@ The 12 mΩ TE figure qualifies its specified mating system at the stated conditi
 
 **OPEN RISK:** Phoenix's test readings do not establish non-overlapping series elements or a complete hot pole maximum. Retain the inherited **≤3.12 mΩ/pole including clamp** as an acceptance target only. Do not add 1.0, 1.3 and 1.4 mΩ as three series losses. [P1 header](https://www.phoenixcontact.com/en-sg/products/pcb-header-mstb-25-2-gf-508-1776508), [P2 plug](https://www.phoenixcontact.com/en-nl/products/pcb-connector-mstb-25-2-stf-508-1777989).
 
-**Assembly:** use the permitted bare-stranded termination or a separately qualified ferrule process; no assumed ferrule MPN is hidden in this BOM. Strip 7 mm and apply the specified conductor torque 0.5–0.6 N·m; flange retention torque is a separate 0.3 N·m operation. Support the cable, retain both flanges and do not mate under load. The candidate needs no J502 footprint substitution. No native file was edited.
+**Assembly:** use the permitted bare-stranded termination or a separately qualified ferrule process; no assumed ferrule MPN is hidden in this BOM. Strip 7 mm and apply the specified conductor torque 0.5–0.6 N·m; flange retention torque is a separate 0.3 N·m operation. Support the cable, retain both flanges, and disconnect power before mating or unmating. The candidate needs no J502 footprint substitution. No native file was edited.
 
 ### Solution B — separate high-current board connector
 
@@ -128,6 +130,8 @@ All non-wire/shunt maxima in that table are acceptance allocations. D locates th
 
 **Critical counterexample:** keeping the old 13.6 mΩ hot FET-pair screen adds 7.6 mΩ / 38 mV. A/E becomes **4.746866 V**, B/E **4.738066 V** with the 20 mV trough. Both fail. Keeping the old FETs at a weaker real gate drive can be worse. Do not claim these are connector-only fixes for E.
 
+For completeness, the same old-pair cases in D give **41.855546 / 43.615546 mΩ** and **4.796866 / 4.788066 V** for A/B with the 20 mV trough. These meet the voltage screen conditionally, but retain the old pair's unqualified gate-drive/temperature assumptions and D's separate fault-containment blocker. Choosing D merely to save the extra stage's drop is not an electrical release decision.
+
 **CALCULATION — heat/sensitivity:** at equal sharing each positive 20 mΩ combined Pi block dissipates 0.125 W; each ground block 7.81 mW. A's J502 is 78 mW per pole; B's is 100 mW per pole. Entire E path losses are 1.106 W / 1.150 W, distributed among components. Another 10 mm on both trunks costs 1.670 mV; another 10 mm on every pigtail costs 1.279 mV; +1 mΩ at each Pi block costs 3.125 mV; +1 mΩ at each J502 pole costs 10 mV. None of these watts establishes an acceptable temperature rise.
 
 ## 4. Pin map, current sharing and mechanical acceptance
@@ -154,6 +158,8 @@ Leave all other cavities electrically unconnected in this **power-only** harness
 For two positive branches, `I_lowR = 5 R_high/(R_low+R_high)`. A 3 A limit allows resistance ratio ≤1.5, but a 2.58 A hot limit would allow only about 1.066. **Proposed process target:** match complete positive branches to ratio ≤1.05, giving a calculated maximum 2.561 A; still obtain a hot rating above that measured current. Include Pi plane spreading in the current test. No vendor maximum resistance alone establishes this ratio. One open positive contact forces 5 A through the survivor: single-contact loss is **not qualified**, and the main 5 A current limit does not protect a 3 A survivor. Establish fault detection/derating or reject the 5 A operating claim.
 
 **Assembly acceptance:** verify the real Pi revision, pin cross-section, mating length, plating compatibility, contact wipe and lack of bottoming; 2.54 mm pitch alone is insufficient. Use TE application specification **114-25003 Rev N** and part-specific crimp tooling/height; inspect conductor and insulation crimps and pull-test process samples. Provide an indexed insulating carrier fixed to Pi mounting features, preventing reversal, row/column offset and lift under cable load. A bare Pi header supplies no keyed shroud. Check cooler/HAT clearance and cable bend radii. Never probe sockets with oversized meter tips. Measure insulation diameter on the selected wire lot; nominal diameter is not a tolerance guarantee.
+
+**Resume mechanical finding:** T4 Figure 2 makes the **1.75 mm** insulation allowance conditional on a **15.24 mm** housing depth; its 16.38/13.84 mm alternatives allow only **1.4 mm**. The older manufacturer drawing 87456 **S2, 2024-01-01**, distributed by RS (T6), identifies the selected 40-position code and a 15.24 +0.13/−0.25 mm axial dimension, with 50.80 mm nominal length. This supports the proposed 1.5 mm nominal wire, but the installed envelope, latest S5 drawing and lot tolerances must be reconciled before assembly release. Do not use the product page's 6.1 mm dimension as the height above the Pi. T6 was available as extracted drawing text only; no visual geometry PASS is claimed.
 
 ## 5. Alternatives screened out of the two proposals
 

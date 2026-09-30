@@ -19,7 +19,8 @@
       "retrieval": "Read through web retrieval; local binary download failed. No download hash claimed.",
       "related_urls": [
         "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=87456&DocType=Customer+Drawing&PartCntxt=2-87456-0"
-      ]
+      ],
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text. Product page links S5 drawing and Rev B specification, but direct PDF retrieval failed on resume. Do not infer installed height from catalogue 6.1 mm field; older S2 text cross-reference is T6."
     },
     {
       "id": "T2",
@@ -36,7 +37,8 @@
       "related_urls": [
         "https://www.te.com/en/product-1-87309-4.html",
         "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=87309&DocType=Customer+Drawing&PartCntxt=1-87309-4"
-      ]
+      ],
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "T3",
@@ -52,7 +54,11 @@
       "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
       "local_review_file": "third_party/documents/j502_selection/te_pcn.pdf",
       "sha256": "9df4e8577da6991933779bf332a615b0f382bda2857c7ca8442168b8a4ca33b1",
-      "retrieval": "Downloaded unmodified PDF; ignored local review cache"
+      "retrieval": "Downloaded unmodified PDF; ignored local review cache",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text; T3 Figures 3/4 also visually rechecked from preserved PDF renders. Standalone released revision was linked by housing page but could not be retrieved; preliminary limitation retained.",
+      "related_urls": [
+        "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=108-25020&DocType=Specification+Or+Standard&PartCntxt=3-87456-6"
+      ]
     },
     {
       "id": "T4",
@@ -68,7 +74,11 @@
       "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
       "local_review_file": "third_party/documents/j502_selection/te_application.pdf",
       "sha256": null,
-      "retrieval": "Read through web retrieval; local binary download failed. No download hash claimed."
+      "retrieval": "Read through web retrieval; local binary download failed. No download hash claimed.",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text. Figure 2 footnote: 1.75 mm insulation limit applies to 15.24 mm housings; 16.38/13.84 mm housings allow 1.4 mm.",
+      "related_urls": [
+        "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-25003&DocType=Specification+Or+Standard&PartCntxt=87309-9"
+      ]
     },
     {
       "id": "T5",
@@ -94,7 +104,8 @@
       "use": "REFERENCED only; no third-party circuit or PCB copied",
       "modifications": "None to upstream material",
       "license": "Manufacturer copyright; no redistribution license assumed",
-      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable"
+      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "P2",
@@ -107,7 +118,8 @@
       "use": "REFERENCED only; no third-party circuit or PCB copied",
       "modifications": "None to upstream material",
       "license": "Manufacturer copyright; no redistribution license assumed",
-      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable"
+      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "M1",
@@ -123,7 +135,8 @@
       "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
       "local_review_file": "third_party/documents/j502_selection/molex_sr_spec.pdf",
       "sha256": null,
-      "retrieval": "Read through web retrieval; local binary download failed. No download hash claimed."
+      "retrieval": "Read through web retrieval; local binary download failed. No download hash claimed.",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "M2",
@@ -136,7 +149,8 @@
       "use": "REFERENCED only; no third-party circuit or PCB copied",
       "modifications": "None to upstream material",
       "license": "Manufacturer copyright; no redistribution license assumed",
-      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable"
+      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "M3",
@@ -152,7 +166,8 @@
       "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
       "related_urls": [
         "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/428/42816/428160212_sd.pdf"
-      ]
+      ],
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "M4",
@@ -168,7 +183,8 @@
       "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
       "related_urls": [
         "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/428/42815/428150042_sd.pdf"
-      ]
+      ],
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "W1",
@@ -181,7 +197,8 @@
       "use": "REFERENCED only; no third-party circuit or PCB copied",
       "modifications": "None to upstream material",
       "license": "Manufacturer copyright; no redistribution license assumed",
-      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable"
+      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "W2",
@@ -194,7 +211,8 @@
       "use": "REFERENCED only; no third-party circuit or PCB copied",
       "modifications": "None to upstream material",
       "license": "Manufacturer copyright; no redistribution license assumed",
-      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable"
+      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
+      "resume_review": "Rechecked 2026-09-30 against manufacturer web text."
     },
     {
       "id": "W3",
@@ -372,6 +390,21 @@
       "modifications": "None to upstream material",
       "license": "Manufacturer copyright; no redistribution license assumed",
       "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable"
+    },
+    {
+      "id": "T6",
+      "owner": "TE Connectivity; distributed by RS",
+      "url": "https://docs.rs-online.com/06be/A700000011026568.pdf",
+      "revision": "Drawing 87456 Rev S2, 2024-01-01, sheet 1 of 1; older than S5 linked by T1",
+      "reviewed_sections": "40-position 3-87456-6 row: L=50.80 mm; 15.24 +0.13/-0.25 mm dimension; used with T4 housing-depth footnote, not for geometry release",
+      "disposition": "Mechanical cross-check only; latest drawing and installed clearance still OPEN",
+      "accessed": "2026-09-30",
+      "use": "REFERENCED only; no third-party circuit or PCB copied",
+      "modifications": "None to upstream material",
+      "license": "Manufacturer copyright; no redistribution license assumed",
+      "required_attribution": "Retain manufacturer, document identity/revision and source URL; no source reproduction in deliverable",
+      "sha256": null,
+      "retrieval": "Web-extracted manufacturer drawing text read. Web screenshot failed; local download returned HTTP 403. No visual geometry pass or download hash claimed."
     }
   ]
 }
