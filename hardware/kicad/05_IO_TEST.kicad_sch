@@ -1117,7 +1117,7 @@
   (wire
     (pts
       (xy 332.74 104.14)
-      (xy 330.2 104.14))
+      (xy 314.96 104.14))
     (stroke
       (width 0)
       (type default))
@@ -1181,7 +1181,7 @@
   (wire
     (pts
       (xy 304.8 175.26)
-      (xy 330.2 175.26))
+      (xy 314.96 175.26))
     (stroke
       (width 0)
       (type default))
@@ -1337,8 +1337,8 @@
     (uuid "e4e92c3c-3b82-5142-90e7-e1eb91eb1430"))
   (wire
     (pts
-      (xy 330.2 175.26)
-      (xy 330.2 104.14))
+      (xy 314.96 175.26)
+      (xy 314.96 104.14))
     (stroke
       (width 0)
       (type default))

@@ -317,6 +317,16 @@ def fix_04():
         d.append(['wire',['pts',['xy','177.8',str(y)],['xy','190.5',str(y)]],['stroke',['width','0'],['type','default']],uid(name+net+'clearance')])
     write(d,name)
 
+
+def fix_05():
+    name='05_IO_TEST';d=reviewed(name)
+    # Move the entire host-reference return to the left of the label column.
+    for w in nodes(d,'wire'):
+        points=one(w,'pts')[1:]
+        for a in points:
+            if float(a[1])==330.2 and float(a[2]) in (104.14,175.26):a[1]='314.96'
+    write(d,name)
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sheet',required=True,choices=['01','02','03','04'])
-    a=p.parse_args();{'01':fix_01,'02':fix_02,'03':fix_03,'04':fix_04}[a.sheet]()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sheet',required=True,choices=['01','02','03','04','05'])
+    a=p.parse_args();{'01':fix_01,'02':fix_02,'03':fix_03,'04':fix_04,'05':fix_05}[a.sheet]()
