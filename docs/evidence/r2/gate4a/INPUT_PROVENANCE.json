@@ -1,0 +1,88 @@
+{
+  "base_commit": "0a853c79779bb09e943758fd119845ce30a79107",
+  "date": "2026-09-30",
+  "input_withstand": "OPEN; no direct33.6V continuous or67.2V/1s approval",
+  "new_file_directory": "docs/evidence/r2/gate4a",
+  "owner_decision": {
+    "Pi_connection": "PROHIBITED until all applicable fault and normal tests pass",
+    "architecture": "D: module series disconnect plus output crowbar/absorber",
+    "classification": "DECISION",
+    "negative_paper_margins": "OPEN for dummy-load measurement; remain historical blocking electrical-release evidence",
+    "purpose": "FAULT-TEST BOARD",
+    "source_route": "TPS26630 timed input isolation, total local effective input C10\u201330uF, qualified10uH L201 candidate74437636351002"
+  },
+  "pending_tvs_study": [
+    "D101",
+    "F101"
+  ],
+  "read_evidence": [
+    {
+      "SHA256": "686f94fe464d815f00d5f6a8c5c65231d2a37088d0604c725183d4ef0a516b07",
+      "path": "docs/evidence/r2/sheet03/gate3b/BASELINE_AND_SCOPE.json"
+    },
+    {
+      "SHA256": "e8b8880eb8a9fb2257039b6b2ff5d2857d676018a6ab354ba3c42f1bbe8629dd",
+      "path": "docs/evidence/r2/sheet03/gate3b/COMMON_PROPOSED_FIXES.md"
+    },
+    {
+      "SHA256": "e22833afd09255bf371b7609ce2700c8653615d96ca62822decdd6247ac081dd",
+      "path": "docs/evidence/r2/sheet03/gate3b/D_E_RESCORE.md"
+    },
+    {
+      "SHA256": "448eae4652a041a4a6bdec0e5b35a43bc73bcb681def9e23ce0414edf24d0862",
+      "path": "docs/evidence/r2/sheet03/gate3b/GATE3B_SOURCE_BOUND.md"
+    },
+    {
+      "SHA256": "3b162658c3d33a77b306e545cfdc01e9046f345e8ee08ae00282b808102f0bfe",
+      "path": "docs/evidence/r2/sheet03/gate3b/INDUCTOR_CANDIDATES.md"
+    },
+    {
+      "SHA256": "c47c7d8cb9b5ae57d8e39bcc1cc69c14f47a5189ecdec39a34378e60b2615c44",
+      "path": "docs/evidence/r2/sheet03/gate3b/INPUT_LIMITER_AND_ENERGY.md"
+    },
+    {
+      "SHA256": "303cb9020b053b1ef79aa6b5fc93ad4b630ab78f01cc58cf7b68ddabbbb46005",
+      "path": "docs/evidence/r2/sheet03/gate3b/SOURCES.json"
+    },
+    {
+      "SHA256": "f3b7a28976425ccec77353c5db7c2c1c672b904edb6a74d7b00589e4745d3cfd",
+      "path": "docs/evidence/r2/sheet03/gate3b/SOURCE_BOUND_CALCULATIONS.json"
+    },
+    {
+      "SHA256": "3b575a3e6cefc69b91aa75764f94a2ea0a4bbca359927c8bf9caec7d4745b294",
+      "path": "docs/evidence/r2/sheet03/gate3b/VALIDATION.json"
+    },
+    {
+      "SHA256": "a70010450df0f727cb289308a0674c07c383d7c63059a0d9c8ee027492460a9a",
+      "path": "docs/evidence/r2/sheet03/gate3b/calculate_source_bound.py"
+    },
+    {
+      "SHA256": "c958948d5ab2d5f82522ea2dd7f4c97913b09d02216b25542645a83586273b7c",
+      "path": "docs/evidence/r2/sheet03/gate3b/test_source_bound.py"
+    },
+    {
+      "SHA256": "93e0c5fd17798dd038e95f9659cf10a563d93b9533baeadd5ffb39fc65f2b701",
+      "access": "git show; no merge",
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/PATH_BUDGET.md"
+    },
+    {
+      "SHA256": "7ad3e2562273eb08921d6805331e9691324c4ce1c665fc88d56df1860ab308bc",
+      "access": "git show; no merge",
+      "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+      "path": "docs/evidence/r2/path_budget/PATH_CALCULATIONS.json"
+    },
+    {
+      "SHA256": "cb97bc2252c94869ff96313ca465d6eaf4df581ab1b2e1ae6b18c7bdb41b7f9f",
+      "access": "git show; no merge",
+      "commit": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf",
+      "path": "docs/evidence/aux_converter/V1A_INPUT_WITHSTAND.md"
+    }
+  ],
+  "read_refs": {
+    "origin/feat/sheet03-gate3b-source-bound": "0a853c79779bb09e943758fd119845ce30a79107",
+    "origin/feat/v1a-5a-path-budget": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+    "origin/feat/v1a-input-withstand": "50c94e05a4896b6d95ec13019e4c722a6ae2c1bf"
+  },
+  "scope": "Analysis only; no native KiCad file access, schematic changes, bench action, purchase or fabrication"
+}
