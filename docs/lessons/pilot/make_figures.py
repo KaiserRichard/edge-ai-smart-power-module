@@ -429,6 +429,10 @@ if __name__ == "__main__":
     c = fm.simulate(24, 10e-6, True)
     b = fm.simulate(24, 10e-6, False, t_end=400e-6)
     a = fm.simulate(24, None, False, t_end=100e-6)
-    f1_map(); f2_buck(); f3_energy(); f4_fets(); f5_chain(); f6_timeline(c); f7_compare(a, b, c)
-    f8_latency(); f9_ladder(); f10_drop(); f11_options()
+    # Data figures are always rendered. The five diagram figures were replaced by
+    # ChatGPT illustrations (docs/illustrations/REGEN_P03.md); --diagrams overwrites them.
+    import sys
+    f3_energy(); f6_timeline(c); f7_compare(a, b, c); f8_latency(); f9_ladder(); f10_drop()
+    if "--diagrams" in sys.argv:
+        f1_map(); f2_buck(); f4_fets(); f5_chain(); f11_options()
     print(sorted(p.name for p in OUT.glob("*.png")))
