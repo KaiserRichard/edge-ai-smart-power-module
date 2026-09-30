@@ -44,7 +44,7 @@ def main():
     result={'status':'PASS','pdf':pdf.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),
             'page_count':6,'pages':pages,'method':'Native KiCad vector export; exact landscape A3; no scaling or added margin.',
             'image_method':'96 pixels per physical inch: 100% CSS/display scaling reference. Readability also depends on display DPI and viewer settings.',
-            'visual_review':'Human-agent inspection recorded separately in GATE2B_READABILITY.md; image generation alone is not visual review.'}
+            'visual_review':'Human-agent inspection recorded separately in GATE2B_FIX_REVIEW.md; image generation alone is not visual review.'}
     (OUT/'readability/PDF_VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 

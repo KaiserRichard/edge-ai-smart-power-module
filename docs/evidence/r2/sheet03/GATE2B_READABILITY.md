@@ -1,5 +1,7 @@
 # Gate 2b — V1A schematic readability
 
+OBSERVATION (subsequent independent review, 2026-09-30): the original PDF visual PASS below was rejected by VERIFY_GATE2B.md. It is retained as historical evidence. The replacement PDF and correction disposition are documented in [GATE2B_FIX_REVIEW.md](GATE2B_FIX_REVIEW.md); its text minimum is now 1.524 mm on all sheets.
+
 REQUIREMENT: presentation only against c47409fb2637c94ccaa685c3ac4cbbd10681d5a2. No electrical changes. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.
 
 ## Recovery

@@ -66,7 +66,7 @@ def validate_sources(root=ROOT):
         for inst in nodes(after,'symbol'):
             for field in ('Reference','Value'):
                 p=prop(inst,field);font=one(one(p,'effects'),'font')
-                if min(map(float,one(font,'size')[1:]))<(1.27 if name.startswith('03') else 1.5)-1e-6:errors.append(f'Text below sheet minimum: {name} {val(prop(inst,"Reference")[2])}.{field}')
+                if min(map(float,one(font,'size')[1:]))<1.524-1e-6:errors.append(f'Text below sheet minimum: {name} {val(prop(inst,"Reference")[2])}.{field}')
         visible='\n'.join(val(t[1]) for t in nodes(after,'text'))
         if 'PRELIMINARY / R2 BLOCKED / NOT FOR FABRICATION' not in visible:errors.append(f'Missing warning: {name}')
         # Same hierarchy pin identities/directions, source files and UUIDs.
@@ -75,7 +75,7 @@ def validate_sources(root=ROOT):
                             'pins':sorted([p[1:3]+[one(p,'uuid')[1]] for p in nodes(s,'pin')]),
                             'instances':nodes(s,'instances')} for s in nodes(doc,'sheet')],key=lambda s:s['uuid'])
         if hierarchy(before)!=hierarchy(after):errors.append(f'Changed hierarchy identity: {name}')
-        pages.append({'sheet':name,'paper':expected,'reference_value_minimum_mm':1.27 if name.startswith('03') else 1.524})
+        pages.append({'sheet':name,'paper':expected,'reference_value_minimum_mm':1.524})
     return errors,count,pages
 
 

@@ -199,6 +199,8 @@ No commit, push, purchase, ignored-cache deletion or schematic implementation wa
 
 ## Gate 2b — schematic readability, 2026-09-30
 
+Historical handoff: its visual PASS was subsequently superseded by the independent readability FAIL. See the completed correction record below; retain this earlier evidence as history.
+
 **STATUS: PASS (presentation gate only).** Existing R2 electrical release and R3 remain BLOCKED.
 
 **WHAT WAS DONE:** recovered and pushed useful uncommitted work, completed all five circuit-sheet redraws plus hierarchy, grouped local circuits with real wires and named inter-block links, retained top power/bottom returns and title blocks, added Sheet 03 detector/latch/disconnect/crowbar reading guide, and exported six native A3 review pages. Each finished sheet has a pushed checkpoint.
@@ -210,3 +212,17 @@ No commit, push, purchase, ignored-cache deletion or schematic implementation wa
 **OPEN RISKS:** Gate 2 fault timing/energy/SOA and transient/stability issues remain unresolved. ERC/netlist identity establish drawing integrity, not electrical safety or physical performance. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.
 
 **NEXT GATE:** designer reviews the draft PR and Gate 2 electrical blockers. R3 layout must await the existing electrical review/release gates; physical R5 validation is outstanding.
+
+## Readability corrections and reviewer handoff — 2026-09-30
+
+**STATUS: PASS (readability and electrical identity only); Sheet 03 / R2 electrical release and R3 BLOCKED. PRELIMINARY — NOT FOR FABRICATION.**
+
+**WHAT WAS DONE:** corrected every independent readability finding across Sheets 01–05, increased Sheet 03 technical text to match the other sheets, reordered its actual control circuit, and cleared four additional separator labels found during final PDF review. Each finished sheet was committed and pushed. Replaced the external six-page A3 review PDF and supplied a one-page plain-English reviewer cover note/PDF with five laboratory questions.
+
+**EVIDENCE:** [Correction/criterion closure](evidence/r2/sheet03/GATE2B_FIX_REVIEW.md), [review PDF](evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf), [cover note](evidence/r2/sheet03/REVIEWER_COVER_NOTE.md), [delivery and independent checks](evidence/r2/sheet03/readability/fix/DELIVERY.json). Fresh baseline `c47409f` / final hardware `46495d2` exports: 154 components, 94 nets, 450 pin memberships; canonical diff 0 bytes. Source/library audit: 161 symbols / 457 pins including seven power flags. Fresh all-severity ERC zero; project/ERC settings byte-identical. All 20 tests and fresh-netlist/repository checks pass. All six actual PDF pages and original failed details rechecked; physical A3 print comfort remains unvalidated.
+
+**DECISIONS:** retain identical parts, values, footprints, pins and nets. Presentation PASS permits reviewer handoff only. Engineering source for the cover note is the pinned independent closure `0677fea`; no electrical redesign was imported. Update draft PR #8 on `feat/sheet03-readable`; do not merge.
+
+**OPEN RISKS:** a physically shorted buck high-side switch defeats controller current limiting; inductor saturation and fault-energy disposal remain unqualified. Partial protection timing is 307 ns at minimum driver supply versus 300 ns allocated, excluding settling/commutation. Assumed ballast terminals at 125 °C exceed the 95 °C rating. Fault-voltage, harness-drop and false-trip margins remain OPEN with negative counterexamples. ERC and connectivity equality do not establish electrical safety.
+
+**NEXT GATE:** senior laboratory engineer reviews containment, fuse/crowbar coordination, driver qualification and harness practice. Resolve the existing electrical blockers before R3; current-limited dummy-load and fault/thermal/ripple validation must precede any Raspberry Pi connection.

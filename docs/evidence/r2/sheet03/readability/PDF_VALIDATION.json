@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "pdf": "docs/evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf",
-  "sha256": "6be9579340f1dc097ee18d646bf2031820fa2a72e6656cd710b3237773050ae7",
+  "sha256": "61d50d69de3942a87d5ff7381e25f01bbd1eee937a1e1de698e8f4c0a0db0e70",
   "page_count": 6,
   "pages": [
     {
@@ -32,7 +32,7 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "0bf14f91a4d0ce19cc5aea79ec63012a67b9412a9624912d2b3e1345aa0653f9"
+      "image_sha256": "6c80e4f0491830ab4b94b99bd8a5387b8252bf3723ca56ed743340b59b181f1e"
     },
     {
       "page": 3,
@@ -47,7 +47,7 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "2b2bfd09353ff91a285296549dcbd366a06563d74ee81f32544b766eccd3d25c"
+      "image_sha256": "f8c2b6a5b33dd614ce262c3cf262e50a366ae67be4fbeb99012ff18638817a26"
     },
     {
       "page": 4,
@@ -62,7 +62,7 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "8bc62358caab7888383532d7bd3096db9321c27fad046582f8ee6230070febb4"
+      "image_sha256": "70b707f3e24b0577cfb9d80db9a5fe0b3933aa94b5e39c131ca80f3a5dbf8b0d"
     },
     {
       "page": 5,
@@ -77,7 +77,7 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "c8c12492f3d4535639bcfd19eb6bf84a7762cf2af8400d00773e6dd374281d83"
+      "image_sha256": "e82a2b0975bcd817a9aaee2468487d25d9384c4fc2a21c89e0b2838112e400f1"
     },
     {
       "page": 6,
@@ -92,10 +92,10 @@
         1123
       ],
       "image_dpi": 96,
-      "image_sha256": "da19e78969bbd03109573a8fed7a6fb12f2781ff61e8e4464b79ba99303ef6ff"
+      "image_sha256": "0a717d52f8683ded3e4a67100b28b0d2ca9bfb98febdd458315b830876a59da9"
     }
   ],
   "method": "Native KiCad vector export; exact landscape A3; no scaling or added margin.",
   "image_method": "96 pixels per physical inch: 100% CSS/display scaling reference. Readability also depends on display DPI and viewer settings.",
-  "visual_review": "Human-agent inspection recorded separately in GATE2B_READABILITY.md; image generation alone is not visual review."
+  "visual_review": "Human-agent inspection recorded separately in GATE2B_FIX_REVIEW.md; image generation alone is not visual review."
 }

@@ -1,0 +1,27 @@
+{
+  "baseline": {
+    "components": 154,
+    "nets": 94,
+    "pin_memberships": 450
+  },
+  "baseline_canonical_sha256": "d05d276d194f8cb69ad2c79aea422a650e8037c4adcff2d8d348e041d564da0b",
+  "differences": {
+    "components": {
+      "added": {},
+      "changed": {},
+      "removed": {}
+    },
+    "nets": {
+      "added": {},
+      "changed": {},
+      "removed": {}
+    }
+  },
+  "equal": true,
+  "head": {
+    "components": 154,
+    "nets": 94,
+    "pin_memberships": 450
+  },
+  "head_canonical_sha256": "d05d276d194f8cb69ad2c79aea422a650e8037c4adcff2d8d348e041d564da0b"
+}
