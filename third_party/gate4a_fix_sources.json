@@ -1,0 +1,14 @@
+[
+  {
+    "id": "FIX-C301-C302",
+    "url": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H105KA12-01.pdf",
+    "revision": "GRM21BR71H105KA12-01; specifications7-Mar-2016",
+    "path": "third_party/documents/gate4a_fix/murata1u50.pdf",
+    "sha256": "9921ee74a9703bfed89f091cba34075e54707b2487c428a984253470da53c52e",
+    "function": "bootstrap and REF50 output bypass identity/rating/package;30-page part reference sheet",
+    "usage": "REFERENCED",
+    "modifications": "No upstream changes; proposed own circuit assignments corrected",
+    "license": "Murata copyright; no open redistribution license inferred",
+    "required_attribution": "Murata/document revision/primary URL"
+  }
+]

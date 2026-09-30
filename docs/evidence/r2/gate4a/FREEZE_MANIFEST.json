@@ -598,16 +598,17 @@
       "refdes": [
         "R312",
         "R313",
+        "C301",
         "C302",
         "D302"
       ],
-      "old": "R312: generic31.9k; R313: generic10k; C302: generic1uF16V; D302:BAS116,215",
-      "new_mpn": "TNPW060331K9BEEA; TNPW060310K0BEEA; GRM21BR71E105KA99L; BAS116,215",
-      "new_value_or_connection": "retain detector LDO divider and bootstrap diode; candidate1uF25V X7R for bootstrap at new held-driver voltage",
+      "old": "Pinned PR15: R31231.9k,R31310k; C301220nF50V BST–TS; C3021µF16V REF bypass; D302BAS116,215",
+      "new_mpn": "TNPW060331K9BEEA; TNPW060310K0BEEA; GRM21BR71H105KA12L x2; BAS116,215",
+      "new_value_or_connection": "R31231.9k/R31310k DET5 divider. C3011µF50V pin1 PROT_BST/U301.9; pin2 PROT_MID/U301.8. C3021µF50V pin1 REF_2V5/U302.6; pin2GND. D302anodeDRV_HOLD,cathodePROT_BST,pad2NC. Distinct bootstrap/reference purposes.",
       "reason": "Real passives and bootstrap voltage margin needed for M01",
-      "governing_equation": "Vdet=Vref*(1+31.9k/10k); Cboot_eff>=Qg_pair/dVboot; loaded VGS>=10V TARGET",
-      "status": "CONDITIONAL; biased C, reverse/leakage and detector timing-supply bound OPEN",
-      "source": "TPS7A16/HOLD"
+      "governing_equation": "C301eff≥Qg_pair/ΔVboot;82nC/0.25V=328nF. C302REF bypass perTIREF50; nobootstrap assignment.",
+      "status": "R4A-05 refdes/pin/MPN CORRECTED; T04/T05 biasedC/reference BENCH REQUIRED",
+      "source": "PR15 exportedxml; Murata GRM21BR71H105KA12-01,7-Mar-2016; TIREF50"
     },
     {
       "id": "S01-07",

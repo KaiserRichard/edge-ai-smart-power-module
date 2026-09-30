@@ -68,3 +68,11 @@ At10 V,220k requires45.455µA versus15µA minimum pump atTS20V/10V differential 
 R305 = TNPW12102M20BEEA,2.2 MΩ,0.1%/25ppm/K,1210, common PROT_GATE→PROT_MID source. Remove220 kΩ proposal. Retain LTC7001IMSE#PBF and BAS116,215 D302; C301 assigned under R4A-05. 2.2M requires1210 because1206 ends at2MΩ.
 
 Closure: T04 BOOTSTRAP-DC-HOLD. PASS measuredVGS−U≥10V under lowestDRV_HOLD andTS4.75…5.5V,0/5A,25°C/hot,10-minute settled hold; no continuing downwardBST/VGS trend. Repeat after input removal through disposal; verify physical series-off in T08. Measurement closes TS5V pump/leakage not guaranteed by theTS20V table.
+
+### R4A-05 — CORRECTED / BENCH REQUIRED
+
+Qpair published test maximum82nC gives Ceff≥82nC/0.25V=328nF; declared measured floor330nF yields ΔV≤0.248485V at that charge. Additional leakage/driver charge is measured, not hidden in82nC.50V rating exceeds12V bootstrap differential/2.5Vreference, not a dynamic differential proof. MLCC effective-C and REF50 loop stability depend on bias/temperature/ESR; nominal1µF cannot guarantee either.
+
+C301 = GRM21BR71H105KA12L1µF50V0805X7R: PROT_BST(U301.9)→PROT_MID(U301.8). C302 = same1µF50V part REF_2V5(U302.6)→GND. R31231.9k,R31310k retained; D302BAS116,215 anodeDRV_HOLD,cathodePROT_BST,NC pad2. Do not assign reference bypass asbootstrap.
+
+Closure: T05 BOOT-CAP-REFERENCE: C301 effective≥330nF at measuredBST−TS/temperature, actual gate-event droop≤0.25V whileVGS−U≥10V; C302 stable/reference within completeT06threshold budget. T04DCbudget still mandatory. Measurement closes bias and real charge/stability; refdes itself is closed by exportednet connectivity.

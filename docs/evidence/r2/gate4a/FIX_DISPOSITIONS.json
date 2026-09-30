@@ -25,6 +25,14 @@
       "equations": "At10 V,220k requires45.455µA versus15µA minimum pump atTS20V/10V differential table point. 2.2M nominal requires4.545µA; at12V andRmin2.1945M,5.469µA. Residual15−5.469=9.531µA is a test-point leakage budget only. At actualTS≈5V andDRV_HOLD≈11V, D302 cannot replenishBST≈15V; no TS5V pump minimum is provided. C cannot cure steady DC loss. With82nC/10V effective gate capacitance, passiveτ≈18.04ms; activeTGDN must establish fault cutoff. Hot leakage/full gate charge remain OPEN.",
       "evidence": "[ADI LTC7001 RevG](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc7001.pdf), electrical/charge-pump/bootstrap; [Vishay TNPW28758 10-Apr-2026](https://www.vishay.com/docs/28758/tnpw_e3.pdf),1210 range/ordering.",
       "bench": "T04 BOOTSTRAP-DC-HOLD. PASS measuredVGS−U≥10V under lowestDRV_HOLD andTS4.75…5.5V,0/5A,25°C/hot,10-minute settled hold; no continuing downwardBST/VGS trend. Repeat after input removal through disposal; verify physical series-off in T08. Measurement closes TS5V pump/leakage not guaranteed by theTS20V table."
+    },
+    {
+      "id": "R4A-05",
+      "status": "CORRECTED / BENCH REQUIRED",
+      "resolution": "C301 = GRM21BR71H105KA12L1µF50V0805X7R: PROT_BST(U301.9)→PROT_MID(U301.8). C302 = same1µF50V part REF_2V5(U302.6)→GND. R31231.9k,R31310k retained; D302BAS116,215 anodeDRV_HOLD,cathodePROT_BST,NC pad2. Do not assign reference bypass asbootstrap.",
+      "equations": "Qpair published test maximum82nC gives Ceff≥82nC/0.25V=328nF; declared measured floor330nF yields ΔV≤0.248485V at that charge. Additional leakage/driver charge is measured, not hidden in82nC.50V rating exceeds12V bootstrap differential/2.5Vreference, not a dynamic differential proof. MLCC effective-C and REF50 loop stability depend on bias/temperature/ESR; nominal1µF cannot guarantee either.",
+      "evidence": "Pinned PR15 completed.xml commit51d1c2ff1f7eca4f20eef137c1595e4b9e052a75; [Murata exact reference sheet GRM21BR71H105KA12-01,7-Mar-2016](https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H105KA12-01.pdf),30pages, SHA256 9921ee74a9703bfed89f091cba34075e54707b2487c428a984253470da53c52e; [TI REF50 SBOS410O](https://www.ti.com/lit/ds/symlink/ref50.pdf).",
+      "bench": "T05 BOOT-CAP-REFERENCE: C301 effective≥330nF at measuredBST−TS/temperature, actual gate-event droop≤0.25V whileVGS−U≥10V; C302 stable/reference within completeT06threshold budget. T04DCbudget still mandatory. Measurement closes bias and real charge/stability; refdes itself is closed by exportednet connectivity."
     }
   ]
 }
