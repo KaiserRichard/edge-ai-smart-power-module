@@ -867,7 +867,7 @@
         (size 1.524 1.524)) 
       (justify left top)) 
     (uuid "c2ee4493-c2c0-5aeb-86a8-f9c8612bb326")) 
-  (text "R2 ONLY: output path is OPEN at sheet03. Do not bridge it to power an SBC." 
+  (text "R2 ONLY: Sheet03 disconnect/crowbar is preliminary. Do not power an SBC." 
     (at 15.24 259.08 0) 
     (effects 
       (font 

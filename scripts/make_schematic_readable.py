@@ -294,6 +294,8 @@ class Drawing:
                         self.text(ln,6+col*107,yy);yy+=1.25
             return
         for s in texts:
+            if self.name=='05_IO_TEST':
+                s=s.replace('R2 ONLY: output path is OPEN at sheet03. Do not bridge it to power an SBC.', 'R2 ONLY: Sheet03 disconnect/crowbar is preliminary. Do not power an SBC.')
             for line in s.splitlines():
                 for ln in textwrap.wrap(line,width=min(width,110),break_long_words=False):y+=1.8;self.text(ln,6,y+2)
     def save(self):

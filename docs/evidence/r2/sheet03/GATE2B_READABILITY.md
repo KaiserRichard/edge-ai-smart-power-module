@@ -17,6 +17,8 @@ EVIDENCE: fresh recovered-source export matched the baseline canonical netlist (
 
 - Sheet 04: four-terminal shunt force path reads left to right, sense pins connect to the existing differential filter/INA228 block, telemetry LDO stays above right, and I2C domains occupy a separate lower block. Ground is at each block bottom. Notes wrapped to keep the title clear. Visual review completed; ERC zero.
 
+- Sheet 05: J501 DC input, J502 protected/measured load output, and J503 host I2C appear in left-to-right blocks with bench access below. Existing power flags stay connected; host supply reference remains host-owned. Corrected stale presentation note saying Sheet03 output path was open; the circuit itself is unchanged. Visual review completed; ERC zero.
+
 ## Remaining at this checkpoint
 
-Sheet 05 final review, hierarchy label spacing, final fresh netlist comparison/ERC/PDF, manager report and draft PR.
+Hierarchy label spacing, final fresh netlist comparison/ERC/PDF, manager report and draft PR.
