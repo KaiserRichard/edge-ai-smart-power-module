@@ -142,6 +142,60 @@ Would reduce B01 excitation only after intermediate voltage/store/current are qu
 
 Bench: each stage's high-side-short separately with dummy loads; intermediate overshoot/C/impedance bounds; coupled-loop stability and9 V startup/brownout; final Pi fault voltage and complete action delays; both stages'5 A efficiency/thermal/ripple at9/24 V; load release, ARM/prebias/inrush and recovery. No efficiency or transient behavior is validated here.
 
+## D — series disconnect with local output absorber
+
+**Topology proposal:** independent precision detector → latched opposed series FETs; protected-side active shunt clamp holds the local output during commutation; separate raw-side dump path accepts L201 current after opening. This avoids deliberately discharging the entire output bank as the principal protection mechanism. It still needs A's qualified source/store bound or an equally strong independent transient-current/energy contract.
+
+### Two different clamps; supplier candidates
+
+The protected-node clamp must keep the Pi below5.5 V. The raw-side clamp can use a higher voltage to force inductor current down, but must stay inside raw capacitor, regulator, MOSFET and driver ratings. It cannot bypass the opposed pair. A TVS across the raw side is not a Pi clamp.
+
+DATASHEET: [Vishay SMBJ Rev09-Jan-2024](https://www.vishay.com/docs/88392/smbj.pdf) SMBJ5.0A has5 V standoff,6.40–7.07 V breakdown at10 mA and9.2 V clamp maximum at65.2 A/10–1000 µs/25°C. [TI TVS0500 Rev C](https://www.ti.com/lit/ds/symlink/tvs0500.pdf), despite flat-clamp technology, has7.5 V minimum breakdown and9.2 V maximum clamp at43 A/8–20 µs/25°C. **Both are BLOCKING as5.5 V Pi protectors.** Flat clamp describes curve shape, not a5 V absolute peak.
+
+An integrated active surge stopper also needs enough accuracy. DATASHEET [LT4363 Rev C](https://www.analog.com/media/en/technical-documentation/data-sheets/4363fb.pdf) FB1.25/1.275/1.30 V yields CALCULATED5.254902–5.465098 V for a nominal5.36 V clamp before divider/leakage errors. Its low corner is below normal5.261614 V plus10 mV. The nominal required merely to clear that lower bound is>5.377046 V, whose high corner is>5.482479 V, leaving<17.521 mV for every other error/dynamic term. Actual overshoot is unbounded for this application; do not select it from its headline.
+
+Similarly [LTC4367 Rev D](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4367.pdf) ±1.5% comparator plus ASSUMED±0.2% divider arms gives CALCULATED5.226152–5.424504 V at5.325 V nominal; false-trip margin**−45.462 mV, BLOCKING**. Gate discharge maximum6 µs plus comparator maximum2 µs can be combined only under their specific capacitance/overdrive tests, not as the actual dual-FET isolation maximum. Its UV/OV auto-recovery needs an added manual-fault latch.
+
+Therefore D proposes a purpose-designed precision active absorber with its own qualified full error/overdrive/response budget; **no surveyed part is already shown to satisfy it**.
+
+### Conditional output screen and harness failure
+
+ASSUMED qualification targets: full static clamp5.34–5.38 V; total effective response≤0.5 µs from its upper-threshold crossing, including analog overdrive, amplifier/gate settling and useful conductance; incoming current≤60 A throughout (A's source bound); protected local C≥1 mF, ESR≤0.5 mΩ; local commutation ringing≤20 mV; series current isolation≤2 µs. These are separate from inherited detector trip tolerances, and no maximum is credited by assumption alone.
+
+CALCULATED module-node bound:
+
+`Vmodule <=5.38 +60×0.5µs/1mF +60×0.5mΩ +20mV =5.460 V`, reserve**+40 mV**.
+
+Its clamp low5.34 V is above normal5.261614 V+10 mV by68.386 mV; inherited disconnect nuisance margin remains+21.954 mV conditionally. The active-clamp control loop must remain inactive during permitted normal transients and not interact adversely with buck regulation.
+
+**That module result is not the Pi result.** ASSUMED harness≤2 µH, current≤10 A when opening, Pi effective C≥220 µF, no downstream damping credited and an extra10 mV Pi-local ringing allowance give the conservative energy-transfer screen:
+
+`VPi <=sqrt(Vmodule² + Lh Ih²/Cpi) +10mV =5.552625 V`.
+
+Margin**−52.625 mV: BLOCKING**. Harness current10 A is itself an unqualified bound, not inferred from the60 A source envelope. With only ASSUMED2 µF and5 A/2 µH, the corresponding undamped energy envelope reaches7.403486 V before extra ring—an illustration of why unknown Pi capacitance cannot be set to220 µF by convenience.
+
+For the10 A/2 µH box and10 mV extra ringing, CALCULATED Pi C must exceed**608.828 µF** just to make the strict inequality; target1 mF gives CALCULATED5.488285 V, only**+11.715 mV**. Effective capacitance/ESR/life, cable L/current/damping and ringing must all be guaranteed/qualified. If that cannot be obtained, move the absorber to the Pi as in E. No positive module-node number closes the existing harness blocker.
+
+### Current, energy and rated destination
+
+With A's source bound, source-side positive current≤60 A and total stores are finite. Increasing protected C to≤1.5 mF increases the all-store conservative energy screen to about**116.842 mJ**; all isolated-side initial voltage/capacitor corners must be included. A's existing upper-output ceiling only applies where the conditional clamp actually protects; raw input-side storage ratings must survive the isolated fault.
+
+CALCULATED protected clamp incoming energy≤`5.38×60×2µs =0.6456 mJ`, plus inductive/capacitive energy actually entering its node. Holding a rail need not dump its entire capacitor store, unlike a crowbar; deliberately discharging it adds that store explicitly. Allocate **ASSUMED0.01 J** qualified hot-event capacity for the protected absorber and **0.2 J** for the source/dump path, then compare real trajectories and event repetition against applicable curves. These budgets are requirements on selected parts, not existing ratings.
+
+A continuing source adds energy during current decay. For an ideal fixed raw clamp`Vc>Vin`, `td=L I/(Vc−Vin)` and `Edump=0.5 L I²×Vc/(Vc−Vin)`. ASSUMED raw clamp28.5–31.5 V gives multiplier6.333 at its low end against24 V; ASSUMED Lmax8.16 µH/60 A yields CALCULATED**93.024 mJ** for the sustained-source L-only decay example. This example must not be added blindly to the source-integral energy ceiling—those are different overlapping bounds—but it disproves budgeting only0.5LI² while24 V remains connected. Use maximum clamp for VDS and minimum clamp for decay/energy; raw35 V capacitors have only3.5 V before overshoot/derating at the31.5 V target. All those ratings remain OPEN.
+
+DATASHEET [Nexperia PSMN4R8-100YSE,25-Jun-2021](https://assets.nexperia.com/documents/data-sheet/PSMN4R8-100YSE.pdf) supplies actual125°C SOA curves, making it a research candidate for a shunt/dump device. Its325 mJ single-avalanche rating is only the stated52.6 A/95 µs/initial25°C test; it is not the proposed hot0.2 J acceptance. Determine VDS/ID/time, initial junction, mounting and repetition from the actual event and use hot SOA. As a replacement series pair its11 mΩ/device at175°C/VGS10 V would add42 mV relative to the inherited13.6 mΩ pair allowance, giving Pi4.719433 V/**−30.567 mV BLOCKING**. Strong SOA does not grant low enough normal resistance; no substitution is selected.
+
+### Timing, validity, complexity and tests
+
+Min/max for precision-clamp onset→effective conduction and detector→series current isolation are **OPEN/OPEN**; the0.5/2 µs figures are target maxima. Raw dump commutation/decay and source isolation add independent endpoints. LT4363's OV propagation typical0.25/max1 µs uses FB0→1.5 V, OUT0 andVCC12 V; it is not a small-overdrive5 V clamp bound. Do not count gate discharge as proven current interruption.
+
+Supply validity: detector/driver powered from qualified independent input-domain auxiliaries; default-off source-referenced gate paths; direct rail supervisor/hold-up through source isolation and dump. The active clamp must retain safe action during brownout; a raw-input dump path must remain effective even after series gate power disappears. Failure of the regulator/ref/clamp path itself needs a fail-off policy; a controller whose PG falls too late does not establish valid hot SOA/response.
+
+Normal DC margin can retain the inherited conditional11.433 mV only with no extra series loss or compensating resistance reduction. New protected C changes ARM inrush and control-loop/load-step behavior. Eliminates the main bulk-discharge ballast event and thus its95°C terminal premise if that network is removed by approved redesign; does not automatically close B01/B02/B03/M01/M03/M04/M06 or harness energy. Separate absorber thermal/SOA qualification replaces M05; it is not automatically CLOSED.
+
+ASSUMED incremental20–35 placements, absorbers/bulk/supervisors and some crowbar parts removed, **US$15–35**, plus common driver-supply fixes; exact BOM/thermal/cost OPEN. Bench: source-bound confirmation, zero/5 A injected short, both clamp nodes and individualFETVDS/current/gate trajectories, worst harnessL/C/initial current, local and Pi overshoot, hot/cold clamp accuracy and SOA/repetition; partial-rail/prebias/reset faults; normal ARM/startup/bulk loop interaction, ripple/load release and5 A connector drop/temperature.
+
 ## Checkpoint status
 
-A/B/C complete; D/E and final comparison/recommendation pending. No schematic change is authorized.
+A/B/C/D complete; E and final comparison/recommendation pending. No schematic change is authorized.
