@@ -16,7 +16,7 @@ module_spec.loader.exec_module(checker)
 class CaptureTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.tree = ET.parse(ROOT/'docs/evidence/r2/sheet03/readability/readable.net.xml').getroot()
+        cls.tree = ET.parse(ROOT/'docs/evidence/r2/footprints_complete/completed.xml').getroot()
         cls.specs = checker.load_specs(ROOT/'docs/evidence/r2')
 
     def move_pin(self, tree, ref, pin, target):

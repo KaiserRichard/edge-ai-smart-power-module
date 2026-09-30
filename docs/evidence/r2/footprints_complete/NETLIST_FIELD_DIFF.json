@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "baseline_commit": "1f4c2f821793506871b9abe6227b1deba419d27e",
+  "allowed_fields": [
+    "Footprint",
+    "MPN",
+    "Value"
+  ],
+  "changes": [
+    {
+      "ref": "C201",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C202",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C209",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C210",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C211",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C212",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C213",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C214",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C404",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "J301",
+      "field": "Footprint",
+      "before": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "after": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+    },
+    {
+      "ref": "J301",
+      "field": "MPN",
+      "before": "PinHeader_1x02",
+      "after": "B2B-XH-A(LF)(SN)"
+    },
+    {
+      "ref": "J302",
+      "field": "Footprint",
+      "before": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "after": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+    },
+    {
+      "ref": "J302",
+      "field": "MPN",
+      "before": "PinHeader_1x02",
+      "after": "B2B-XH-A(LF)(SN)"
+    },
+    {
+      "ref": "J501",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT"
+    },
+    {
+      "ref": "J501",
+      "field": "MPN",
+      "before": "",
+      "after": "B2P-VH-FB-B(LF)(SN)"
+    },
+    {
+      "ref": "J501",
+      "field": "Value",
+      "before": "DC INPUT - MPN OPEN",
+      "after": "DC INPUT"
+    },
+    {
+      "ref": "J502",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08"
+    },
+    {
+      "ref": "J502",
+      "field": "MPN",
+      "before": "",
+      "after": "1776508"
+    },
+    {
+      "ref": "J502",
+      "field": "Value",
+      "before": "LOAD OUTPUT - MPN OPEN",
+      "after": "LOAD OUTPUT"
+    },
+    {
+      "ref": "J503",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:JST_B4B_XH_A_P2.50_THT"
+    },
+    {
+      "ref": "J503",
+      "field": "MPN",
+      "before": "",
+      "after": "B4B-XH-A(LF)(SN)"
+    },
+    {
+      "ref": "J503",
+      "field": "Value",
+      "before": "HOST I2C - MPN OPEN",
+      "after": "HOST I2C"
+    },
+    {
+      "ref": "TP101",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP102",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP401",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP402",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP403",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP404",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP501",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP502",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP503",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP504",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    }
+  ],
+  "non_field_source_checks": [
+    {
+      "file": "hardware/kicad/01_INPUT_PROTECTION.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/02_BUCK_5V.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/04_POWER_MONITOR.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/05_IO_TEST.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/V1A.kicad_sch",
+      "non_field_bytes_identical": true
+    }
+  ],
+  "project_erc_settings_unchanged": true,
+  "baseline_xml_sha256": "ac7a8537eae152716fa0c5caf18b515e7b6bc88cd6bb7875669795668c18eaea",
+  "current_xml_sha256": "39318e12c26a93ff23c8bc54d6a9d210ae01f0a7a84d88af83f579ecbea4a263",
+  "errors": []
+}

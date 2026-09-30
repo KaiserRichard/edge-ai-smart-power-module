@@ -61,6 +61,37 @@ def check(root):
             if json.loads((evidence_dir / filename).read_text()) != expected:
                 errors.append(f'Gate2b canonical proof differs from XML: {filename}')
         integrity = reviewed
+    # Owner-authorized completion changes only instance Footprint/MPN/Value.
+    # Chain the prior hash record; retain the original electrical and drawing
+    # proofs and verify new evidence, instead of relaxing preservation globally.
+    completion = root / 'docs/evidence/r2/footprints_complete/FOOTPRINT_SCOPE.json'
+    if completion.is_file():
+        from check_footprint_completion import compare_netlists, check_sources
+        reviewed = json.loads(completion.read_text())
+        if reviewed['baseline_files'] != integrity['files']:
+            errors.append('Footprint completion does not chain the Gate2b preservation record')
+        directory = completion.parent
+        proof = json.loads((directory/'NETLIST_FIELD_DIFF.json').read_text())
+        for filename, field in [('baseline_1f4c2f8.xml','baseline_xml_sha256'),
+                                ('completed.xml','current_xml_sha256')]:
+            if hashlib.sha256((directory/filename).read_bytes()).hexdigest() != proof[field]:
+                errors.append(f'Footprint completion netlist hash mismatch: {filename}')
+        comparison, changes, _, _ = compare_netlists(directory/'baseline_1f4c2f8.xml', directory/'completed.xml')
+        errors.extend(comparison)
+        if changes != proof['changes'] or proof['status'] != 'PASS':
+            errors.append('Footprint field-change ledger does not match actual XML')
+        if canonical_netlist(directory/'baseline_1f4c2f8.xml') != canonical_netlist(gate2b.parent/'readable.net.xml'):
+            errors.append('Footprint baseline differs electrically from retained redraw export')
+        errors.extend(check_sources(root)[0])
+        added = set(reviewed['files']) - set(integrity['files'])
+        if added != set(reviewed['added_footprints']):
+            errors.append('Footprint completion hardware additions differ from the reviewed list')
+        if any(not n.startswith('hardware/kicad/V1A_Qualified.pretty/') or not n.endswith('.kicad_mod') for n in added):
+            errors.append('Footprint completion added hardware outside its footprint library')
+        for name, old_hash in integrity['files'].items():
+            if not name.endswith('.kicad_sch') and reviewed['files'].get(name) != old_hash:
+                errors.append(f'Footprint completion modified frozen hardware: {name}')
+        integrity = reviewed
     for name, expected in integrity['files'].items():
         path = root / name
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:

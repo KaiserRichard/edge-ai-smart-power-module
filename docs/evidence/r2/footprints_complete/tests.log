@@ -1,0 +1,36 @@
+test_all_nonexcluded_physical_footprints_present (test_footprint_completion.CompletionTests.test_all_nonexcluded_physical_footprints_present) ... ok
+test_each_nonexcluded_empty_and_placeholder_is_rejected (test_footprint_completion.CompletionTests.test_each_nonexcluded_empty_and_placeholder_is_rejected) ... ok
+test_exclusions_are_exact_not_a_prefix_wildcard (test_footprint_completion.CompletionTests.test_exclusions_are_exact_not_a_prefix_wildcard) ... ok
+test_held_parts_cannot_be_selected_through_field_allowlist (test_footprint_completion.CompletionTests.test_held_parts_cannot_be_selected_through_field_allowlist) ... ok
+test_jst_distinct_two_and_four_circuit_hole_diameters (test_footprint_completion.CompletionTests.test_jst_distinct_two_and_four_circuit_hole_diameters) ... ok
+test_nonallowed_properties_are_preserved (test_footprint_completion.CompletionTests.test_nonallowed_properties_are_preserved) ... ok
+test_phoenix_holes_do_not_create_extra_electrical_pins (test_footprint_completion.CompletionTests.test_phoenix_holes_do_not_create_extra_electrical_pins) ... ok
+test_pin_net_and_library_changes_cannot_hide_behind_fields (test_footprint_completion.CompletionTests.test_pin_net_and_library_changes_cannot_hide_behind_fields) ... ok
+test_source_position_and_wires_are_not_normalized_away (test_footprint_completion.CompletionTests.test_source_position_and_wires_are_not_normalized_away) ... ok
+test_tdk_b11_land_dimensions_and_nonpolar_numbering (test_footprint_completion.CompletionTests.test_tdk_b11_land_dimensions_and_nonpolar_numbering) ... ok
+test_vh_shrouded_boss_and_power_pins (test_footprint_completion.CompletionTests.test_vh_shrouded_boss_and_power_pins) ... ok
+test_q3_every_source_gate_drain_number_and_clearance (test_qualified_footprints.FootprintTests.test_q3_every_source_gate_drain_number_and_clearance) ... ok
+test_q3_stencil_is_not_full_drain_copper (test_qualified_footprints.FootprintTests.test_q3_stencil_is_not_full_drain_copper) ... ok
+test_rjr_all_fourteen_labelled_land_extents (test_qualified_footprints.FootprintTests.test_rjr_all_fourteen_labelled_land_extents) ... ok
+test_rjr_stencil_keeps_split_sw_apertures (test_qualified_footprints.FootprintTests.test_rjr_stencil_keeps_split_sw_apertures) ... ok
+test_vishay_kelvin_wide_force_narrow_sense_contract (test_qualified_footprints.FootprintTests.test_vishay_kelvin_wide_force_narrow_sense_contract) ... ok
+test_current_manufacturer_pin_identities (test_r2_capture.CaptureTests.test_current_manufacturer_pin_identities) ... ok
+test_host_pullup_to_live_local_rail_is_rejected (test_r2_capture.CaptureTests.test_host_pullup_to_live_local_rail_is_rejected) ... ok
+test_manufacturer_pin_identity_rejects_swapped_driver_outputs (test_r2_capture.CaptureTests.test_manufacturer_pin_identity_rejects_swapped_driver_outputs) ... ok
+test_output_boundary_cannot_be_shortened_even_in_both_contracts (test_r2_capture.CaptureTests.test_output_boundary_cannot_be_shortened_even_in_both_contracts) ... ok
+test_q102_source_must_follow_input_not_ground (test_r2_capture.CaptureTests.test_q102_source_must_follow_input_not_ground) ... ok
+test_reversed_kelvin_sense_is_rejected (test_r2_capture.CaptureTests.test_reversed_kelvin_sense_is_rejected) ... ok
+test_review_capture_matches_contracts (test_r2_capture.CaptureTests.test_review_capture_matches_contracts) ... ok
+test_series_fet_footprint_has_every_physical_terminal (test_r2_capture.CaptureTests.test_series_fet_footprint_has_every_physical_terminal) ... ok
+test_series_fet_source_reference_must_not_follow_output_drain (test_r2_capture.CaptureTests.test_series_fet_source_reference_must_not_follow_output_drain) ... ok
+test_ucc27511_input_pin_error_rejected_even_when_spec_agrees (test_r2_capture.CaptureTests.test_ucc27511_input_pin_error_rejected_even_when_spec_agrees) ... ok
+test_footprint_change_is_rejected (test_readability_identity.IdentityTests.test_footprint_change_is_rejected) ... ok
+test_only_export_order_and_codes_are_ignored (test_readability_identity.IdentityTests.test_only_export_order_and_codes_are_ignored) ... ok
+test_pin_membership_change_is_rejected (test_readability_identity.IdentityTests.test_pin_membership_change_is_rejected) ... ok
+test_power_flags_cannot_disappear_from_source_inventory (test_readability_identity.IdentityTests.test_power_flags_cannot_disappear_from_source_inventory) ... ok
+test_value_change_is_rejected (test_readability_identity.IdentityTests.test_value_change_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 8.313s
+
+OK

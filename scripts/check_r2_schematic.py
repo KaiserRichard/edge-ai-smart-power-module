@@ -220,14 +220,59 @@ def validate_sheet03_packages(tree, specs, footprints=None):
     return errors
 
 
+def validate_footprint_assignments(tree, footprints=None):
+    """All physical symbols need real footprints except the three owner holds.
+
+    Existing generic passive lands are real geometry, not full BOM qualification.
+    The exclusion does not authorize selection or a change of the held parts.
+    """
+    from check_footprint_completion import EXCLUSIONS
+    from build_sheet03_preliminary import children
+    libraries = {(c.get('lib'), c.get('part')): c for c in tree.findall('./libparts/libpart')}
+    errors = []
+    for c in tree.findall('./components/comp'):
+        ref, fp = c.get('ref'), c.findtext('footprint', '').strip()
+        placeholder = not fp or ':' not in fp or bool(re.search(r'(?i)(?:OPEN|TBD|PLACEHOLDER|UNASSIGNED)', fp))
+        if placeholder:
+            if ref not in EXCLUSIONS:
+                errors.append(f'{ref}: empty/placeholder footprint is not an authorized exclusion')
+            continue
+        if footprints is None:
+            continue
+        library, name = fp.split(':', 1)
+        path = (ROOT/'hardware/kicad/V1A_Qualified.pretty' if library == 'V1A_Qualified'
+                else footprints/(library+'.pretty'))/(name+'.kicad_mod')
+        if not path.is_file():
+            errors.append(f'{ref}: footprint file missing: {fp}')
+            continue
+        lib = c.find('libsource')
+        symbol = libraries.get((lib.get('lib'), lib.get('part')))
+        if symbol is None:
+            errors.append(f'{ref}: missing exported library definition')
+            continue
+        pins = {p.get('num') for p in symbol.findall('./pins/pin')}
+        pads = set()
+        for _, _, form in children(path.read_text()):
+            if not form.startswith('(pad '):
+                continue
+            n = re.match(r'\(pad "([^"]*)"', form)[1]
+            layers = re.search(r'\(layers ([^)]+)\)', form)[1]
+            if n and any(layer in layers for layer in ('F.Cu', 'B.Cu', '*.Cu')):
+                pads.add(n)
+        if pads != pins:
+            errors.append(f'{ref}: footprint copper numbers {sorted(pads)} != symbol pins {sorted(pins)}')
+    return errors
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--netlist', type=Path, required=True)
     parser.add_argument('--spec-dir', type=Path, default=ROOT / 'docs/evidence/r2')
-    parser.add_argument('--footprints', type=Path, help='KiCad installed footprint root; additionally verify all Sheet03 copper-pad numbers')
+    parser.add_argument('--footprints', type=Path, help='KiCad installed footprint root; additionally verify all physical copper-pad numbers')
     args = parser.parse_args()
     tree, specs = ET.parse(args.netlist).getroot(), load_specs(args.spec_dir)
-    errors = validate(tree, specs) + validate_sheet03_packages(tree, specs, args.footprints)
+    errors = (validate(tree, specs) + validate_sheet03_packages(tree, specs, args.footprints)
+              + validate_footprint_assignments(tree, args.footprints))
     if list((ROOT / 'hardware').rglob('*.kicad_pcb')):
         errors.append('R3 scope violation: authored PCB found')
     if errors:
