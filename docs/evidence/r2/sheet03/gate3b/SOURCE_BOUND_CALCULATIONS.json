@@ -1,13 +1,15 @@
 {
   "ASSUMED_source_contract": {
     "Cin_effective_max_F": 3e-05,
-    "Cin_effective_min_F": 1e-05,
+    "Cin_main_ceramic_effective_min_F": 1e-05,
     "Ldiff_max_H": 1.2e-05,
     "Ldiff_min_H": 5e-06,
     "Ldiff_qualified_domain_A": 100.0,
     "classification": "ASSUMED qualification contract, not selected/qualified implementation",
     "initial_L_current_A_max": 8.0,
     "initial_output_voltage_V_max": 5.5,
+    "mandatory_VIN_pair_bypasses_nominal_F_each": 1e-07,
+    "mandatory_bypass_count": 2,
     "physical_source_current_off_s_max": 1e-05,
     "raw_cap_bank_max_F": 0.0055965599999999996,
     "source_positive_charge_until_actual_current_isolation_C": 0.0001
@@ -132,18 +134,24 @@
     "E_Pi_5A_screen_V": 4.790207699219575,
     "E_REQUIRED_full_current_trip_max_A": 8.0,
     "E_application_Pi_peak_V": null,
+    "E_application_total_protected_charge_C": null,
     "E_breaker_threshold_A_at_35_45mV_and6mohm_pm1pct": [
       5.775577557755776,
       7.575757575757575
     ],
     "E_current_with35uH_2us_31p5V_A": 9.8,
     "E_existing_loop_plus_10mohm_Pi_V": 4.711432699219575,
+    "E_ideal_constant5p42V_choke_tail_charge_screen_C": 0.0004612546125461255,
+    "E_ideal_constant5p42V_choke_tail_duration_screen_s": 9.225092250922509e-05,
+    "E_initial_interval_received_charge_screen_C": 5e-05,
+    "E_initial_interval_series_screen_using_NEW5p34_target_V": 5.459999999999999,
+    "E_no_absorber_choke_tail_counterexample_V": 5.6316605011310825,
+    "E_no_absorber_choke_tail_margin_V": -0.13166050113108252,
     "E_normal_loop_target_ohm": 0.049612740501968504,
     "E_received_absorber_energy_screen_J": 0.002771,
     "E_required_Lfloor_H_at_31p5V": 3.15e-05,
     "E_required_physical_off_s": 2e-06,
-    "E_series_contract_screen_using_NEW5p34_target_V": 5.459999999999999,
-    "E_total_initial_pool_with1p5mF_Pi_J": 0.12255258344837353,
+    "E_source_raw_Pi_last_choke_initial_subtotal_J": 0.12415258344837353,
     "actual_trip_min_max_V": [
       null,
       null
