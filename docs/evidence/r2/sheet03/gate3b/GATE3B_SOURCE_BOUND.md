@@ -20,7 +20,7 @@ CALCULATED in the inherited ASSUMED resistor/leakage box: the requested 27.63 V 
 - Task 1a manufacturer curves and normal/fault arithmetic: complete; qualification OPEN. See [inductor comparison](INDUCTOR_CANDIDATES.md).
 - Task 1b limiter/local-input discharge and source recommendation: complete; source qualification BLOCKED. See [source contract and energy boundaries](INPUT_LIMITER_AND_ENERGY.md).
 - Task 2 common fixes/timing/supply: complete; proposed only. See [common fixes](COMMON_PROPOSED_FIXES.md).
-- Task 3 D/E re-score and resistance/current/independent-threshold contract: pending.
+- Task 3 D/E re-score and resistance/current/independent-threshold contract: complete; recommend neither yet. See [D/E re-score](D_E_RESCORE.md).
 - Final owner explanation, questions, validation and draft PR: pending.
 
 Each finished sub-step is committed and pushed before continuing. Interim verdict is BLOCKED; no electrical qualification is implied by a checkpoint.
