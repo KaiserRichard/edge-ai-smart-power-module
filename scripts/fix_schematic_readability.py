@@ -34,6 +34,12 @@ def fix_01():
     field(d,'C103','Value',363.22,157.48)
     write(d,name)
 
+def fix_02():
+    name='02_BUCK_5V';d=reviewed(name)
+    field(d,'C212','Value',307.34,165.608,'left')
+    field(d,'C213','Value',345.44,165.608,'left')
+    write(d,name)
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sheet',required=True,choices=['01'])
-    a=p.parse_args();fix_01()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sheet',required=True,choices=['01','02'])
+    a=p.parse_args();{'01':fix_01,'02':fix_02}[a.sheet]()

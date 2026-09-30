@@ -39,7 +39,7 @@
       "sheet": "05_IO_TEST"
     }
   ],
-  "readable_xml_sha256": "2f3445d27fdab6da48823e1854b3b650bc554287f48b3b5c042428bf8f5a1566",
+  "readable_xml_sha256": "e977f44dd6838f085a3b4ebdca0debc34cb3bb69cd960dbab64bde139cc9b359",
   "source_inventory_identical": true,
   "source_symbols_including_power_flags": 161,
   "status": "PASS"

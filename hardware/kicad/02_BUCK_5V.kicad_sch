@@ -1090,7 +1090,7 @@
           (size 1.524 1.524))
         (justify left)))
     (property "Value" "22uF 50V"
-      (at 294.64 165.608 0)
+      (at 307.34 165.608 0)
       (effects
         (font
           (size 1.524 1.524))
@@ -1154,7 +1154,7 @@
           (size 1.524 1.524))
         (justify left)))
     (property "Value" "22uF 50V"
-      (at 332.74 165.608 0)
+      (at 345.44 165.608 0)
       (effects
         (font
           (size 1.524 1.524))
