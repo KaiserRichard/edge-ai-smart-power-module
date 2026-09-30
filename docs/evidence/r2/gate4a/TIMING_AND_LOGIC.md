@@ -38,7 +38,7 @@ For the proposed parallel paths:
 
 Complete fault-onset min/max pairs are **OPEN/OPEN for all three paths**. A sum of partial maxima remains a partial sum, not a system bound. At valid table conditions the crowbar digital subtotal is CALCULATED 93.3 ns, before analog development, gate charging and commutation; the series digital subtotal is 134.2 ns, before those missing stages. Do not add the three parallel totals together.
 
-**ASSUMED allocation inherited from Gate3b:** arriving current ≤80 A, protected C≥1 mF, ESR≤0.5 mΩ, static useful clamp≤5.38 V, extra ringing≤20 mV. Then `tuseful < C(5.5−5.38−I·ESR−0.020)/I = 0.75 µs`. Proposed 0.5 µs yields CALCULATED 5.480 V at the module and 20 mV reserve. Neither 80 A protected arrival nor this capacitance/ESR is established by the selected BOM. Four PCH1V471MCL1GS have nominal 1.88 mF, and cannot inherit the old 1–1.5 mF/0.5 mΩ contract. More C trades rise rate against startup, stored energy and damping. Full harness/Pi peak remains OPEN.
+**WITHDRAWN current timing allocation:** historical80A/1mF/0.5mΩ/5.38V/20mV modelallowed0.75µs; itdoesnotapplytothe1.88mF/3.5mΩselectedbank. UsingCmin1.2032mF, staticscreen5.361687V andsame80A/20mV givesnegative−2.431776µsallowabledelay beforecomparatoroverdrive. Theold0.5µs hypothesis remainshistoricalevidenceonly. T08mustmeasureallphysicalendpoints andT10mustclosefullfar-endtrajectory.
 
 Currentdetector correction: historical1k/1Mtrip5.358575V and20mVoverdrive42.8686mV replace theincorrect5.35325V figure. ThecurrentnetworkR3019.88k/R30210k/R3031k/R36782k gives5.331829V nominal/42.654634mV rawoverdrive. RON,leakage,rails,settling andhysteresis remain inT06/T08. Fullsource-fault onsetmin/max areunmeasured. SeeS03-02/03pincontract andREVIEW_RESOLUTIONS.md.
 
