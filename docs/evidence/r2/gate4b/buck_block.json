@@ -1,0 +1,677 @@
+{
+  "sheet": "02_BUCK_5V",
+  "status": "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION",
+  "ports": {
+    "VIN_PROTECTED": "input",
+    "BUCK_INPUT_PGOOD": "input",
+    "VOUT_5V1": "output",
+    "BUCK_PGOOD": "output",
+    "GND": "passive"
+  },
+  "components": [
+    {
+      "ref": "U201",
+      "value": "LM61460AANRJRR",
+      "kind": "IC",
+      "part": "LM61460AANRJRR",
+      "pins": {
+        "1": {
+          "name": "BIAS",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "VCC",
+          "net": "BUCK_VCC",
+          "type": "power_out"
+        },
+        "3": {
+          "name": "AGND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "4": {
+          "name": "FB",
+          "net": "BUCK_FB",
+          "type": "input"
+        },
+        "5": {
+          "name": "PGOOD",
+          "net": "BUCK_PGOOD",
+          "type": "open_collector"
+        },
+        "6": {
+          "name": "RT",
+          "net": "BUCK_RT",
+          "type": "passive"
+        },
+        "7": {
+          "name": "EN/SYNC",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "input"
+        },
+        "8": {
+          "name": "VIN1",
+          "net": "VIN_PROTECTED",
+          "type": "power_in"
+        },
+        "9": {
+          "name": "PGND1",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "10": {
+          "name": "SW",
+          "net": "BUCK_SW",
+          "type": "power_out"
+        },
+        "11": {
+          "name": "PGND2",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "12": {
+          "name": "VIN2",
+          "net": "VIN_PROTECTED",
+          "type": "power_in"
+        },
+        "13": {
+          "name": "RBOOT",
+          "net": "BUCK_RBOOT",
+          "type": "passive"
+        },
+        "14": {
+          "name": "CBOOT",
+          "net": "BUCK_CBOOT",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TI_RJR0014A_LM61460",
+      "package": "RJR0014A VQFN-HR 14 pins 4.0x3.5mm; asymmetric HotRod; no exposed pad15",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1; package4223976/H06/2026 PDFpp55-57",
+      "rating": "3-36V operating,42V VINabs,6AICclass;module5Acontinuous only;RJR customfootprintreviewrequired"
+    },
+    {
+      "ref": "L201",
+      "value": "10uH DATASHEET",
+      "kind": "L",
+      "part": "74437636351002",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "L201_IN",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Wurth_74437636351002",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "R201",
+      "value": "33.2k0.1%25ppm0603",
+      "kind": "R",
+      "part": "TNPW060333K2BEEA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_RT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "R202",
+      "value": "100k",
+      "kind": "R",
+      "part": "TNPW0603100KBEEA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_FB",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "R203",
+      "value": "24.4k",
+      "kind": "R",
+      "part": "TNPW060324K4BEEA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_FB",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "R204",
+      "value": "zero-ohm0603",
+      "kind": "R",
+      "part": "CRCW06030000Z0EA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_CBOOT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_RBOOT",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "R205",
+      "value": "1k0.1%25ppm0603",
+      "kind": "R",
+      "part": "TNPW06031K00BEEA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_FF",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_FB",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "R206",
+      "value": "100k0.1%25ppm0603",
+      "kind": "R",
+      "part": "TNPW0603100KBEEA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "R207",
+      "value": "24.9k0.1%25ppm0603",
+      "kind": "R",
+      "part": "TNPW060324K9BEEA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "C201",
+      "value": "10uF 50V",
+      "kind": "C",
+      "part": "GRM32ER71H106KA12L",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "C202",
+      "value": "10uF 50V",
+      "kind": "C",
+      "part": "GRM32ER71H106KA12L",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "C203",
+      "value": "100nF 50V",
+      "kind": "C",
+      "part": "GRM188R71H104KA93D",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "C204",
+      "value": "100nF 50V",
+      "kind": "C",
+      "part": "GRM188R71H104KA93D",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "C205",
+      "value": "100nF50V",
+      "kind": "C",
+      "part": "GRM188R71H104KA93D",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_CBOOT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_SW",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "C206",
+      "value": "1uF25V",
+      "kind": "C",
+      "part": "GRM21BR71E105KA99L",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_VCC",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN"
+    },
+    {
+      "ref": "C207",
+      "value": "22pF 50V",
+      "kind": "C",
+      "part": "CGA3E2C0G1H220J080AA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_FF",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "TI EVM Table7-1anddatasheetTable9-2",
+      "rating": "C0G+/-5%;50V;inserieswithR205"
+    },
+    {
+      "ref": "C209",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C210",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C211",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C212",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C213",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C214",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "JP201",
+      "part": "CUSTOM-FX-CU-01 RevA",
+      "value": "REMOVABLE FORCE LINK",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": {
+          "name": "FORCE_A",
+          "net": "BUCK_SW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "FORCE_B",
+          "net": "L201_IN",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A FIX3_FIXTURE: C110 strap 2x15mm; 20mm pitch M4; absent for isolated tests; application rating OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP201",
+      "part": "N/A etched paired pads",
+      "value": "BUCK_SW",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "BUCK_SW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP202",
+      "part": "N/A etched paired pads",
+      "value": "L201_IN",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "L201_IN",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP203",
+      "part": "N/A etched paired pads",
+      "value": "VOUT_5V1",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    }
+  ],
+  "notes": [
+    "SOURCE: TI SNVSBD5D Fig 9-1, Tables 9-2/3; SNVU621D Fig 4-1 (Q1 EVM).",
+    "FUNCTION: VIN_PROTECTED -> 5.1 V nominal / 5 A. No 6 A peak rating.",
+    "MODIFICATION: 6.8 uH; 100k/24.4k FB; 50 V raw-rail caps; BIAS grounded; input PGOOD gates EN.",
+    "RATIONALE: input margin, ripple/tolerance headroom and buck-fault exposure. VCC is internal use only.",
+    "CRITICAL LOOP: C203 VIN1-PGND1 and C204 VIN2-PGND2 immediately at U201; join both PGND to AGND.",
+    "Feedback stays before disconnect. Keep SW away from FB and Kelvin routes. No physical layout exists.",
+    "OPEN: exact RJR footprint, guaranteed effective L/C, load transient and thermal validation. See BUCK_DESIGN.md."
+  ],
+  "source_document": "docs/evidence/r2/BUCK_DESIGN.md",
+  "schematic_notes": [
+    "DATASHEET: L201 = Wurth 74437636351002, 10uH; 2 plated slots per drawing001.000 (2025-02-07).",
+    "CALCULATED: 100k / 24.4k local feedback = 5.098361 V nominal. No remote sense or setpoint increase.",
+    "JP201 separates native BUCK_SW from L201_IN. Remove while unpowered for independent fixture isolation / injection.",
+    "C205 bootstrap return stays on native BUCK_SW. TP201 / TP202 paired return pads are sense only.",
+    "ASSUMED qualification box: total local input C 10–30uF; Ldiff 5–12uH through 100A. These are not manufacturer guarantees.",
+    "OPEN: nonlinear magnetic behavior, biased capacitance, startup/inrush, loop stability, ripple and thermal limits.",
+    "TEST HOOK — design proven on bench; evidence NOT RUN. Dummy load only; isolated coupons before integrated faults."
+  ],
+  "groups": [
+    [
+      "BUCK / NATIVE SWITCH NODE",
+      [
+        "U201",
+        "C201",
+        "C202",
+        "C203",
+        "C204",
+        "C205",
+        "C206",
+        "R201",
+        "R204",
+        "R206",
+        "R207"
+      ]
+    ],
+    [
+      "FAULT INJECTION / LOCAL REGULATION",
+      [
+        "JP201",
+        "L201",
+        "TP201",
+        "TP202",
+        "TP203",
+        "R202",
+        "R203",
+        "R205",
+        "C207",
+        "C209",
+        "C210",
+        "C211",
+        "C212",
+        "C213",
+        "C214"
+      ]
+    ]
+  ]
+}

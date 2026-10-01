@@ -1,0 +1,643 @@
+{
+  "status": "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION",
+  "components": [
+    {
+      "ref": "U101",
+      "value": "TPS26630RGER",
+      "part": "TPS26630RGER",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "IN",
+          "net": "VIN_EFUSE_IN",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "IN",
+          "net": "VIN_EFUSE_IN",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "B_GATE",
+          "net": "INPUT_BGATE",
+          "type": "output"
+        },
+        "4": {
+          "name": "DRV",
+          "net": "INPUT_DRV",
+          "type": "output"
+        },
+        "5": {
+          "name": "IN_SYS",
+          "net": "VIN_FUSED",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "UVLO",
+          "net": "INPUT_UVLO",
+          "type": "input"
+        },
+        "7": {
+          "name": "OVP",
+          "net": "INPUT_OVP",
+          "type": "input"
+        },
+        "8": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "9": {
+          "name": "dVdT",
+          "net": "INPUT_DVDT",
+          "type": "passive"
+        },
+        "10": {
+          "name": "ILIM",
+          "net": "INPUT_ILIM",
+          "type": "passive"
+        },
+        "11": {
+          "name": "MODE",
+          "net": null,
+          "type": "input"
+        },
+        "12": {
+          "name": "SHDN",
+          "net": "INPUT_SHDN",
+          "type": "input"
+        },
+        "13": {
+          "name": "IMON",
+          "net": null,
+          "type": "output"
+        },
+        "14": {
+          "name": "FLT",
+          "net": "INPUT_FLT",
+          "type": "open_collector"
+        },
+        "15": {
+          "name": "PGTH",
+          "net": "INPUT_PGTH",
+          "type": "input"
+        },
+        "16": {
+          "name": "PGOOD",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "open_collector"
+        },
+        "17": {
+          "name": "OUT",
+          "net": "VIN_PROTECTED",
+          "type": "power_out"
+        },
+        "18": {
+          "name": "OUT",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "19": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "20": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "21": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "22": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "23": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "24": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "25": {
+          "name": "EP",
+          "net": "GND",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+      "rating": "4.5-60 V; 67 V abs; adjustable OV cutoff, no pulse-current boost; MODE open=latch",
+      "source": "TI SLVSE94G Table 5-1/Fig 8-7; RGE0024H drawing 4219016/A",
+      "position": [
+        96.52,
+        96.52
+      ]
+    },
+    {
+      "ref": "Q101",
+      "value": "CSD19537Q3",
+      "part": "CSD19537Q3",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "4": {
+          "name": "G",
+          "net": "INPUT_BGATE",
+          "type": "input"
+        },
+        "5": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "6": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "7": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "8": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TI_Q3_CSD19537Q3",
+      "rating": "100 V VDS, +/-20 V VGS; 12.1 mOhm typical at VGS=10 V; custom SON land-pattern OPEN",
+      "source": "TI SLPS549B Fig 3-1 TOP VIEW; SLVSE94G Fig 8-7",
+      "position": [
+        226.06,
+        83.82
+      ]
+    },
+    {
+      "ref": "Q102",
+      "value": "BSS138",
+      "part": "BSS138",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "G",
+          "net": "INPUT_DRV",
+          "type": "input"
+        },
+        "2": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "3": {
+          "name": "D",
+          "net": "INPUT_BGATE",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "rating": "50 V VDS; +/-20 V VGS; driver relative to VIN_FUSED, NOT GND",
+      "source": "onsemi BSS138/D Rev7 Apr2024 p1; TI SLVSE94G Fig 8-7",
+      "position": [
+        337.82,
+        83.82
+      ]
+    },
+    {
+      "ref": "F101",
+      "value": "12.5A T / 125VDC",
+      "part": "3403.0285.23",
+      "kind": "F",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_RAW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Schurter_UMT_H_15.4x5.35",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "D101",
+      "value": "SMCJ36CA 36V bidirectional",
+      "part": "SMCJ36CA",
+      "kind": "TVS_BI",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Diode_SMD:D_SMC",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "D102",
+      "value": "STPS60H100CT",
+      "part": "STPS60H100CT",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "A1",
+          "net": "GND",
+          "type": "passive"
+        },
+        "2": {
+          "name": "K_TAB",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "3": {
+          "name": "A2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R101",
+      "value": "332k",
+      "part": "TNPW0603332KBEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_UVLO",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R102",
+      "value": "54.9k",
+      "part": "TNPW060354K9BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_UVLO",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R103",
+      "value": "348k",
+      "part": "TNPW0805348KBEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_OVP",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R104",
+      "value": "15.8k",
+      "part": "TNPW060315K8BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_OVP",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R105",
+      "value": "4.02k",
+      "part": "TNPW06034K02BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_ILIM",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R106",
+      "value": "56.2k0.1%25ppm0603",
+      "part": "TNPW060356K2BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_PGTH",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R107",
+      "value": "10k0.1%25ppm0603",
+      "part": "TNPW060310K0BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_PGTH",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R108",
+      "value": "100k0.1%25ppm0603",
+      "part": "TNPW0603100KBEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_FLT",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C101",
+      "value": "1uF 100V",
+      "part": "GRM32ER72A105KA01L",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C102",
+      "value": "1uF 100V",
+      "part": "GRM32ER72A105KA01L",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C103",
+      "value": "100nF50V",
+      "part": "GRM188R71H104KA93D",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_DVDT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "TP101",
+      "value": "INPUT_SHDN",
+      "part": "INPUT_SHDN",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "INPUT_SHDN",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP102",
+      "value": "INPUT_FLT",
+      "part": "INPUT_FLT",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "INPUT_FLT",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "#FLG101",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "VIN_FUSED",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "#FLG102",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "VIN_EFUSE_IN",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    }
+  ],
+  "schematic_notes": [
+    "REQUIREMENT: 9–26 V input. DATASHEET: fuse 12.5 A time lag / 125 VDC; SMCJ36CA bidirectional TVS.",
+    "CALCULATED: 28.33 W / 9 V = 3.15 A; at 12 V about 2.36 A. Keep input ratings and current limit unchanged.",
+    "U101 MODE pin 11 intentionally NC: latch-off. INPUT_SHDN driven from Sheet03 manual test control; no autonomous source-fault claim.",
+    "D102 pins 1/3 = GND anodes; pin 2 and tab = VIN_PROTECTED cathode. Tab isolation / hot commutation OPEN.",
+    "Power declarations follow fitted F101 and Q101 paths from J501; no control or fault input is forced valid.",
+    "OPEN: source surge envelope, fuse clearing/hold, TVS hot clamp, 12 V thermal behavior. No Pi before fault tests pass."
+  ],
+  "passive_start": 157.48,
+  "ports": {
+    "VIN_RAW": "input",
+    "VIN_FUSED": "output",
+    "VIN_PROTECTED": "output",
+    "BUCK_INPUT_PGOOD": "output",
+    "INPUT_SHDN": "input",
+    "GND": "passive"
+  },
+  "groups": [
+    [
+      "INPUT / REVERSE POLARITY",
+      [
+        "Q101",
+        "Q102",
+        "F101",
+        "D101",
+        "C101",
+        "C102"
+      ]
+    ],
+    [
+      "EFUSE / SOURCE DISCONNECT",
+      [
+        "U101",
+        "D102",
+        "R101",
+        "R102",
+        "R103",
+        "R104",
+        "R105",
+        "R106",
+        "R107",
+        "R108",
+        "C103",
+        "TP101",
+        "TP102",
+        "#FLG101",
+        "#FLG102"
+      ]
+    ]
+  ]
+}
