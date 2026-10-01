@@ -53,11 +53,11 @@ Replace the proposed Q305/Q306 bias-release network; Q305/Q306/R324/R325/R326/D3
 
 ## Equations and timing budget
 
-**ASSUMPTIONS explicitly requiring qualification:** SAFE5=4.75…5.25 V; reference/divider/offset allowance at REF1V25 is ±15 mV; independent resistors ±0.2625% (0.1% plus 25 ppm/K × 65 K); U640 output-low 0…0.2 V, output-high 4.55…5.25 V at its actual load; comparator/probe/PCB node capacitance ≤30 pF; healthy VIN_PROTECTED≥8.30 V after startup. These are test-board operating allocations, not changes to the owner’s 9–26 V connector requirement.
+**ASSUMPTIONS explicitly requiring qualification:** SAFE5=4.75…5.25 V; reference/divider/offset allowance at REF1V25 is ±15 mV; independent resistors ±0.2625% (0.1% plus 25 ppm/K × 65 K); U640 output-low 0…0.325 V, output-high 4.40…5.25 V at its actual load; comparator/probe/PCB node capacitance ≤100 pF; healthy VIN_PROTECTED≥8.30 V after startup. These are test-board operating allocations, not changes to the owner’s 9–26 V connector requirement.
 
 `VSW,trip = VTH[(1+Ron/R651)(1+R640/R641+R640/R642)+R640/R651] − VOUT·R640/R642`.
 
-Nominal rising/falling at ideal 0/5 V outputs and Ron=0 are **6.788368/1.788368 V**. Independent corner enumeration is in FIX3_CALCULATIONS.json. The external hysteresis must be tested including clamp leakage, overdrive, return bounce and the actual output drive. A 20 mV comparator overdrive needs approximately 109 mV additional SW voltage. U642's loaded nominal threshold is **8.11125 V**, rather than the unloaded-divider result. The maximum allowed normal SW_HIGH pulse is **3.50 µs including uncertainty**; every normal low interval must reset U640 and the qualifier. Do not use the 5.1 V DCM resting level as a reset pulse. U647 limits fully-off injection; its partial-power recovery and input capacitance remain T06F3 tests, not an assumed zero delay.
+Nominal rising/falling at ideal 0/5 V outputs and Ron=0 are **6.788368/1.788368 V**. Independent corner enumeration is in FIX3_CALCULATIONS.json. The earlier 30 pF allocation is withdrawn: ADG4612 Rev 0 p7 lists approximately 50 pF typical on-capacitance, before board/probe loading. The revised 100 pF ceiling and 1.00 µs sensing allocation require measurement; neither is a guaranteed maximum. The external hysteresis must be tested including clamp leakage, overdrive, return bounce and the actual output drive. A 20 mV comparator overdrive needs approximately 109 mV additional SW voltage. U642's loaded nominal threshold is **8.11125 V**, rather than the unloaded-divider result. The maximum allowed normal SW_HIGH pulse is **3.50 µs including uncertainty**; every normal low interval must reset U640 and the qualifier. Do not use the 5.1 V DCM resting level as a reset pulse. U647 limits fully-off injection; its partial-power recovery and input capacitance remain T06F3 tests, not an assumed zero delay.
 
 `tWD = (RSET/50 kΩ) × NDIV × 1 µs`.
 
@@ -65,16 +65,16 @@ Use the **full-temperature ±6.2%** table row, not the ±5.1% 25°C headline. Wi
 
 | Fault→source-current endpoint term | Minimum credited | Maximum used | Evidence status |
 |---|---:|---:|---|
-| SW transition, input network, overdrive and U640 | 0 | 0.40 µs | Qualification allocation T01F3, includes sensing slew; not a datasheet maximum |
+| SW transition, input network, overdrive and U640 | 0 | 1.00 µs | Qualification allocation T01F3, includes sensing slew; not a datasheet maximum |
 | U641 qualification | 3.742151 µs for a new pulse; **0 if already timing** | 4.259151 µs | ADI table plus resistor corners |
 | U646/U615/inversion/NOFAULT asynchronous action/permission logic | 0 | 0.10 µs | Conservative allocation; exact load/rail checked T01F3 |
 | Q304 and SHDN crossing | 0 | 0.25 µs | Measured allocation including node C |
 | TPS26630 shutdown | 0.8 µs table only | 1.5 µs table only | TI electrical timing at its stated conditions |
 | Physical input-current commutation | 0 | 0.40 µs | Measured allocation; includes leakage/current endpoint |
 | Timing uncertainty | — | 0.025 µs | Existing T13 target, must be substantiated |
-| **Conditional complete ceiling** | **No nonzero system minimum established** | **6.934151 µs** | **3.065849 µs reserve to 10 µs; not a guaranteed application result** |
+| **Conditional complete ceiling** | **No nonzero system minimum established** | **7.534151 µs** | **2.465849 µs reserve to 10 µs; not a guaranteed application result** |
 
-The full fault-onset lower bound is conservatively **0**, not 3.742151 µs: a fault can begin part-way through a legal high pulse, or the parallel collapse/OV detector can win. Source, series and dump actions are parallel. Source-trigger→useful raw dump uses the same sensing/qualifier plus latch/gate, UCC27511 and actual Q330 gate/current development; allocate **≤5.50 µs from fault onset**, measured at useful dump current, not a TTL edge. Fast OV retains T08's distinct post-overdrive path. The physical minimum/maximum remains unmeasured.
+The full fault-onset lower bound is conservatively **0**, not 3.742151 µs: a fault can begin part-way through a legal high pulse, or the parallel collapse/OV detector can win. Source, series and dump actions are parallel. Source-trigger→useful raw dump uses the same sensing/qualifier plus latch/gate, UCC27511 and actual Q330 gate/current development; allocate **≤6.10 µs from fault onset**, measured at useful dump current, not a TTL edge. Fast OV retains T08's distinct post-overdrive path. The physical minimum/maximum remains unmeasured.
 
 `Q+ = ∫ max(IMAIN,0)dt` remains a separate **whole-event** ≤100 µC condition. A nominal 4.48 A ILIM setting does not bound the transient. FIX3_FIXTURE.md supplies an external resistance/current/abort boundary; no fixture timing signal participates in this trigger.
 
@@ -94,3 +94,11 @@ The full fault-onset lower bound is conservatively **0**, not 3.742151 µs: a fa
 - Texas Instruments [TLV3201 SBOS561C](https://www.ti.com/lit/ds/symlink/tlv3201.pdf), p3 pins, pp4–6 limits/conditions, pp12–15 hysteresis. The 55 ns value is a 5 V/20 mV/load-conditioned result, not a whole-rail guarantee.
 - Texas Instruments [TPS2663 SLVSE94G](https://www.ti.com/lit/ds/symlink/tps2663.pdf), pp3–4 pins, p7 SHDN DC limits, timing table and pp27–28 SHDN/mode. [LM61460 SNVSBD5D](https://www.ti.com/lit/ds/symlink/lm61460.pdf), pp23–26 operating modes/dropout.
 - Texas Instruments SN74LVC1G74/08/14/32 and Vishay TNPW sources are pinned in the FIX3 source register. Manufacturer copyright applies. No upstream file or manufacturer CAD was modified/copied.
+
+## Resume audit — item 1
+
+**DECISION:** keep the selected circuit as a capturable test candidate, with the corrected sensing allocation above. A source-fault signature that repeatedly gives SW_HIGH=1 for 3 µs and 0 for 1 µs while VIN remains 9 V never satisfies the timer or collapse condition. This is a counterexample at the logic interface, not a claim that a particular damaged LM61460 generates it. The existing source requirement has not excluded that signature. Accordingly there is **no unconditional 10 µs maximum**, and no full-source closure from the conditional 7.534151 µs sum.
+
+**Exact closure:** T01F3-N measures normal SW/VIN at every stated corner; T01F3-F uses a separately bounded bridge emulator to determine whether the admitted failed-high-side class always supplies either a sufficiently long high interval or an input collapse within the remaining budget. Record timing from physical failure onset, including intervals before VIN_SEEN. If either detector can miss an admitted case, this circuit requires a further discriminator or an explicitly reviewed fault-scope change. A continuous-high injection alone cannot close it.
+
+**Capture boundary:** the SW/VIN inputs and source outputs can be captured with removable force links and evaluated on an isolated logic coupon. That construction remains useful despite unknown damaged-bridge waveforms. The complete Gate4a source-containment freeze remains BLOCKED by fault coverage; this is not a bench PASS or a reason to omit the circuit.

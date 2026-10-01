@@ -84,6 +84,7 @@ def calculate_legacy():
 
 from calculate_gate4a_fix import calculate_fix, render_fix_md
 from calculate_gate4a_fix2 import apply_fix2, render_fix2_md
+from calculate_gate4a_fix3 import calculate as calculate_fix3, render_md as render_fix3_md
 
 def calculate():
     d,curve=calculate_legacy()
@@ -93,6 +94,7 @@ def calculate():
     d['detector']['classification']='Historical1M proposal corrected; current100k detector in gate4a_fix.detector'
     d['auxiliary']['classification']='Historical aux/supervisor screens; current divider candidates in gate4a_fix.auxiliary'
     apply_fix2(d)
+    d['gate4a_fix3']=calculate_fix3()
     d['raw_node']['current_dump_ballast_ohm']=d['gate4a_fix']['raw_dump']['R_nom_ohm']
     d['raw_node']['historical_dump_hot_rating_target_J']=d['raw_node'].pop('raw_dump_hot_rating_target_J')
     return d,curve
@@ -109,7 +111,7 @@ def render_md(d):
     for r in d['OV_trigger_latency_sensitivity']:s+=f"|{r['ASSUMED_stiff_Vin_V']}|{r['Vraw_after10us_V']:.6f}|{r['time_to_nominal_OV_s']*1e6:.6f}|\n"
     s+=f"\nAux static limited output={au['static_limit_screen_V'][0]:.6f}…{au['static_limit_screen_V'][1]:.6f}V; buck-boost={au['static_12V_screen_V'][0]:.6f}…{au['static_12V_screen_V'][1]:.6f}V. Hold screen={au['hold_time_screen_s']*1000:.6f}ms at300µF/11.2→10.5V/40mA/2.036µC; lower buck-boost minus0.5V diode gives{au['hold_at_low_12V_minus_ASSUMED0p5V_s']*1000:.6f}ms. Nominal hold store31.68mJ, capacitor-only9ms average input{au['hold_cap_only_average_input_if9ms_A']:.6f}A at9V/80% efficiency. Historical261k/113k supervisor screens={au['driver_supervisor_screen_V'][0]:.6f}…{au['driver_supervisor_screen_V'][1]:.6f}V / {au['detector_supervisor_screen_V'][0]:.6f}…{au['detector_supervisor_screen_V'][1]:.6f}V. Actual dynamic clamp/usable supply/hold remain OPEN.\n"
     s+='\nCurrent sense: retain2mΩ ±1%,25ppm/K inherited shunt inputs. At5 A,10mV/50mW nominal; independent100°C/initial corners give maximum2.0237875mΩ,10.1189375mV/50.5946875mW. At80 A the nominal shunt screen is160mV/12.8W while it actually carries that current; pulse energy requires the measured integral and actual protected current can exceed L201 due to raw-bank bypass. INA228 full-scale ±163.84mV normal range (alternate ±40.96mV range) and input common-mode/absolute/pin limits must be checked at the fault and correct ADCRANGE. Normal full scale with2mΩ is81.92A or20.48A nominal, not a fault-survival guarantee. Kelvin force/sense, shunt tolerance/TCR/self-heating, monitor gain/offset/timebase/error and energy accuracy remain qualification items. Filter10Ω+10Ω/100nF gives79.577kHz; it is not the high-bandwidth fault current probe.\n\nNormal input-current screens use25.491803W buck output/ASSUMED90% buck efficiency plus0.480W controls/ASSUMED80% aux efficiency; main input3.147136/1.180176/1.089393A at9/24/26V, before input dropout/unmodeled loads. Efficiency is not qualified. Inrush current is `C*dV/dt`; large raw/protected/dummy banks and series-FET charging require measured startup/current/SOA. Nominal10µH/400kHz ripple at9V is0.552555App, below the manufacturer nominal0.6A guidance; control-loop/stability/load-release/thermal/core-loss checks remain OPEN. Retain manufacturer reference-loop layout, low-current reference/Kelvin returns separate from disposal currents, dual VIN bypass, raw/protected/local stored-C accounting, connector/contact conditioning and copper/thermal targets from pinned PATH. Input current, efficiency, ripple/startup/inrush/transient/stability/protection/thermal limits are conditional calculations or OPEN. kicad ERC/DRC not rerun: no native schematic or PCB changes.\n'
-    return s + render_fix_md(d) + render_fix2_md(d)
+    return s + render_fix_md(d) + render_fix2_md(d) + render_fix3_md(d["gate4a_fix3"])
 
 def write(plot=False):
     d,curve=calculate();(OUT/'CALCULATIONS.json').write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n');(OUT/'CALCULATIONS.md').write_text(render_md(d))

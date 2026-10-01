@@ -132,3 +132,43 @@ If all prior loads already use 40 mA, the PG and held-domain bleeds raise it to 
 F2-12 reconfirms the BSC034 pair: 6.8 mOhm at 10 V gate, 10.2 mOhm at 6 V gate at the 25 C table points; 82 nC pair gate charge at the specified test point gives 0.164 V on a 0.5 uF effective bootstrap. No hot or actual gate-charge transfer is guaranteed by these values.
 
 Q316 at separately qualified VDS<=58.1 V and ID<=0.20 A gives 11.62 W, 11.8524 mJ for 1.02 ms, and 91.1586 C bulk-junction sensitivity using fixed case85 C and 0.53 C/W. This is not a hot linear-SOA approval. Local input reservoirs can violate the branch-current target despite a 0.20 A source setting.
+
+## Round 3 — source and interlock circuit screens
+
+FIX3_SOURCE_TRIGGER.md and FIX3_INTERLOCK.md specify the circuits. These calculations allocate test limits; every physical result remains OPEN. The source interval applies only to a qualifying continuous high / input-collapse signature.
+
+|Quantity|Conditional result|
+|---|---|
+|Source: SW_rise_V|[6.355354335821618, 6.900875120196956]|
+|Source: SW_fall_V|[1.4351193277178904, 2.4942152560696638]|
+|Source: qualifier_s|[3.7421509999999996e-06, 4.259151e-06]|
+|Source: complete_conditional_interval_s|[0.0, 7.534151e-06]|
+|Source: reserve_to_10us_s|2.465849000000001e-06|
+|Source: useful_dump_allocation_s|6.1e-06|
+|Source: node_C_allocation_F|1e-10|
+|Source: actual_complete_interval_s|[null, null]|
+|Source: actual_positive_charge_C|null|
+|Source: internal_bridge_fault_coverage|null|
+|Source: counterexample|{"SW_high_s": 3e-06, "SW_low_s": 1e-06, "VIN_V": 9.0, "qualification_trips": false, "classification": "Logic counterexample only; not a measured damaged buck"}|
+|Interlock: threshold_intervals_V|{"SER_DRV": [10.667678103727713, 11.030524260180998], "DET5": [4.762118889789303, 4.916713547415094], "3V3_AUX": [3.086399570502431, 3.1819022696508554], "SAFE5": [4.599952504051864, 4.748828585050814], "DIAG_VIN": [3.6945235170178274, 3.81147087851691], "ZERO": [0.26691995571832067, 0.2782232138724906], "VIN_PROTECTED": [7.978418873581846, 8.246431967640005], "DRV_HOLD": [10.667678103727713, 11.030524260180998]}|
+|Interlock: LDO_min_max_V|[4.934070090486847, 5.183488170923049]|
+|Interlock: converter_min_max_V|[11.883849347858467, 12.593098582794244]|
+|Interlock: SER_DRV_start_V|11.183849347858468|
+|Interlock: aux_input_screen_A|0.12054307873031304|
+|Interlock: charger_flat_power_W|0.6422480277225064|
+|Interlock: charger_Tj_screen_C|117.84747806532673|
+|Interlock: held_cap_screen_s|0.0045137512079453405|
+|Interlock: driver_local_droop_V|0.043|
+|Interlock: READY_s|[0.0970066649088, 0.10354928762880002]|
+|Interlock: button_s|[0.0193379299328, 0.020642178252800004]|
+|Interlock: release_recovery_s|[0.00099067264, 0.00105748864]|
+|Interlock: diagnostic_current_max_A|0.0011199611746792776|
+|Interlock: rejected_DC_path_below_ohm|3050.373870436768|
+|Interlock: SHDN_off_screen_V|0.20052500000000004|
+|Interlock: SHDN_on_screen_V|3.4528931455056884|
+|Interlock: SAFE_input_start_V|9.623013|
+|Interlock: SAFE_cap_hold_s|0.0022643831250000004|
+|Interlock: fast_source_loss_allocation_s|3.2250000000000005e-06|
+|Interlock: actual_loss_interval_s|[null, null]|
+|Interlock: actual_hold_s|null|
+|Interlock: actual_persistent_short_rejection|null|
