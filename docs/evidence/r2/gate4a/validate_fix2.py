@@ -39,9 +39,10 @@ def validate():
     upstream = inputs['upstream_source_handoff_check']
     assert sha(git_object(upstream['commit'], upstream['path'])) == upstream['sha256']
     bom = inputs['optional_sheet03_qualification']
-    missing = subprocess.run(['git', 'cat-file', '-e', f"{bom['commit']}:{bom['path']}"],
-                             cwd=ROOT, capture_output=True)
-    assert missing.returncode != 0, 'BOM qualification is present: review the new handoff'
+    for record in bom['imports']:
+        raw = (ROOT / record['path']).read_bytes()
+        assert sha(raw) == record['sha256'], record
+        assert raw == git_object(bom['commit'], record['source_path']), record
     external_checked = []
     for record in inputs['briefs'] + [inputs['independent_check']]:
         path = Path(record['path'])
@@ -59,6 +60,12 @@ def validate():
     data, _ = calculate_gate4a.calculate()
     assert json.loads((HERE / 'CALCULATIONS.json').read_text()) == data
     assert (HERE / 'CALCULATIONS.md').read_text() == calculate_gate4a.render_md(data)
+    for group, keys in {
+        'pg_input_bias': ('actual_off_voltage_V', 'actual_loss_to_safe_off_s'),
+        'fixture_discharge': ('actual_connected_decay_s', 'actual_all_stores_discharged'),
+        'power_device_screen': ('actual_hot_SOA_margin', 'actual_branch_current_bound_A'),
+    }.items():
+        assert all(data['gate4a_fix2'][group][key] is None for key in keys), group
 
     cache_checked, cache_missing = [], []
     for record in json.loads((ROOT / 'third_party/gate4a_downloads.json').read_text()):
@@ -89,7 +96,7 @@ def validate():
         date='2026-10-01', resume_base_commit=inputs['resume_commit'],
         validation_command='python3 -B docs/evidence/r2/gate4a/validate_fix2.py --write',
         unit_tests_pass=result.testsRun,
-        baseline_test_result='At74d5b10:9/10 pass; CSV/manifest RUN mismatch failed',
+        baseline_test_result='Atcffb770:14/14 pass; earlier74d5b10 RUN register failure is historical',
         register_rows=len(rows), register_unique_reserved_refs=len(refs),
         checks=['Reproduced N1 skew counterexample and mandatory unknown-skew handling',
                 'Independent protected/raw resistor-energy integrals and connected-store sum',
@@ -97,6 +104,8 @@ def validate():
                 'All prior numerical, topology and unknown-bound checks',
                 'Exact generated CSV/Markdown/JSON; no cross-row refdes collisions',
                 'Pinned inputs/imports/archive bytes and available manufacturer-cache hashes',
+                'New Sheet03 qualification/source snapshots match BOM commit023e107',
+                'PG input-bias, passive discharge and power-device screens retain null actual bounds',
                 'Git diff whitespace; no native CAD changes'],
         pinned_inputs_verified=historical['pinned_inputs_verified'],
         connector_files_verified=inputs['connector_files'],
@@ -109,12 +118,12 @@ def validate():
         manufacturer_caches_unavailable=cache_missing,
         round2_web_only_sources=[s['id'] for s in round2_sources['sources'] if not s['cache_path']],
         owner_PDF='One page exported and visually reviewed; current owner section, no clipping',
-        plot_visual_review='No new physical/CAD plots; historical ideal-model CSV/SVG unchanged',
+        plot_visual_review='Q316 original datasheet p5 SOA/thermal page visually reviewed; no new physical/CAD plots; historical ideal-model CSV/SVG unchanged',
         native_CAD_changes=False, ERC_DRC_run=False, physical_tests_run=False,
         original_BLOCKING_findings_closed=4, original_BLOCKING_findings_total=12,
         actual_electrical_safety_verdict='BLOCKED',
         git=dict(pull='Not attempted; local remote-tracking refs pinned',
-                 local_item_checkpoints='FAILED: index.lock Operation not permitted; explicit brief fallback',
+                 local_item_checkpoints='F2-09/F2-10/F2-11/F2-12 staging FAILED: index.lock Operation not permitted; explicit brief fallback',
                  push='Not attempted; conductor publishes',
                  changes='This continuation uncommitted; supplied partial commits retained'),
         artifact_sha256=artifacts,

@@ -41,7 +41,79 @@ def apply_fix2(data):
                      reserve_after20mV_and15mV_uncertainty_V=selected['results']['0.02']['margin_to4p75_V']-.015,
                      actual_hot_loop_ohm=None), auxiliary=auxiliary_charger(),
         converter=converter_completion(), coupled_energy=coupled_energy(data),
-        bootstrap_load_test=bootstrap_load_test())
+        bootstrap_load_test=bootstrap_load_test(), pg_input_bias=pg_input_bias(),
+        fixture_discharge=fixture_discharge(data), power_device_screen=power_device_screen())
+
+
+def power_device_screen():
+    return dict(classification='Datasheet-conditioned screens; no hot SOA qualification',
+                series_pair_R25_at10V_ohm=2*.0034,
+                series_pair_R25_at6V_ohm=2*.0051,
+                series_pair_Qg_table_C=2*41e-9,
+                bootstrap_table_charge_droop_at0p5uF_V=2*41e-9/.5e-6,
+                pass_fet_VDS_target_V=58.1, pass_fet_ID_target_A=.2,
+                pass_fet_power_if_targets_met_W=58.1*.2,
+                pass_fet_energy_at1p02ms_J=58.1*.2*1.02e-3,
+                pass_fet_bulk_thermal_TJ_if_case85_C=85+58.1*.2*.53,
+                actual_hot_SOA_margin=None, actual_branch_current_bound_A=None)
+
+
+def fixture_discharge(data):
+    # Proposed test limits. RC times assume a separated reservoir, no replenishment.
+    specs = [
+        ('VIN_PROTECTED', 1e4, 28.289211046948948, 30e-6),
+        ('VOUT_5V1', 1e3, 6.9, 5.59656e-3),
+        ('VOUT_PROTECTED', 1e3, 6.9, 2.7072e-3),
+        ('FAR_5V', 1e3, 6.9, 2.64e-3),
+        ('DRV_HOLD', 1e4, 12.311325, 600e-6),
+        ('AUX_12V', 1e4, 12.311325, 26e-6),
+        ('AUX_PREHOLD', 1e4, 12.311325, 1.2e-6),
+        ('AUX_LIMITED', 47e3, 35., 10e-6),
+        ('VIN_AUX', 47e3, 58.1, 2.4e-6),
+        ('DET5', 1e4, 5.25, 10e-6),
+        ('3V3_AUX', 1e4, 3.4, 10e-6),
+        ('REF_2V5', 1e4, 2.525, 10e-6),
+    ]
+    rows = []
+    for n, (node, r, v, c) in enumerate(specs, 1):
+        rows.append(dict(ref=f'RFD{n:02d}', node=node, R_ohm=r,
+                         V_ceiling_assumed_V=v, C_ceiling_assumed_F=c,
+                         power_upper_screen_W=v*v/(r*.9975),
+                         current_upper_screen_A=v/(r*.9975),
+                         isolated_time_to0p3_screen_s=r*1.0025*c*math.log(v/.3)))
+    # Downstream LDO/reference bleeds are conservatively counted one-for-one at hold.
+    added_hold = sum(rows[i]['current_upper_screen_A'] for i in (4,9,10,11))
+    all_added_hold = added_hold + pg_input_bias()['added_pulldown_current_at3p4V_A']
+    # Far bleed is included in the specified terminal load; conservatively apply
+    # both other output bleeds through the entire loop (overstates their path loss).
+    extra_output = 2*5.5/(1e3*.9975)
+    extra_drop = extra_output*data['selected_path']['results']['0']['loop_mOhm']/1000
+    return dict(classification='Passive fixture selection; isolated RC screens, no abort or coupled-decay guarantee',
+                rows=rows, fixture_resistor_ambient_ceiling_C=70.,
+                review_power_ceiling_per_resistor_W=.125,
+                hold_domain_added_current_screen_A=added_hold,
+                prior40mA_plus_all_added_hold_current_A=.040+all_added_hold,
+                prior40mA_plus_all_added_hold_time_screen_s=(300e-6*(11.121343-10.5)-2.036e-6)/(.040+all_added_hold),
+                additional_output_path_drop_screen_V=extra_drop,
+                fixture_normal_min_after20mV_screen_V=data['selected_path']['results']['0.02']['Vfar_end_CALCULATED_V']-extra_drop,
+                actual_connected_decay_s=None, actual_all_stores_discharged=None)
+
+
+def pg_input_bias():
+    # DC table transfers and declared board/capacitance allocations only.
+    rmin, rmax = 10e3*.9975, 10e3*1.0025
+    leakage = (10+1+1)*1e-6  # LVC Ioff, AHCT II, board/probe allocation.
+    high_current = 2*3.4/rmin
+    return dict(classification='Fully-off DC screen; no brownout/transition guarantee',
+                input_off_screen_V=leakage*rmax,
+                margin_to_AHCT_VIL_screen_V=.8-leakage*rmax,
+                added_pulldown_current_at3p4V_A=high_current,
+                AHCT_two_device_delta_ICC_table_A=2*.0015,
+                AHCT_two_device_ICC_table_A=2*10e-6,
+                old_40mA_plus_new_pulldown_hold_s=(300e-6*(11.121343-10.5)-2.036e-6)/(.040+high_current),
+                RC_example_C_assumed_F=30e-12,
+                passive_2V_to0p8V_example_s=rmax*30e-12*math.log(2/.8),
+                actual_off_voltage_V=None, actual_loss_to_safe_off_s=None)
 
 
 def coupled_energy(data):
@@ -153,7 +225,7 @@ def auxiliary_charger():
 
 def render_fix2_md(data):
     path = data['selected_path']
-    return ('\n## Round 2 — completed connector handoff\n\n'
+    text = ('\n## Round 2 — completed connector handoff\n\n'
             'Solution A is imported unchanged from connector commit `41cb9e8`. '
             'The owner-selected BSC034 pair retains its **assumed** 13.6 mΩ hot allocation; '
             'the connector report\'s alternative 6 mΩ pair and architecture E are not adopted. '
@@ -201,6 +273,46 @@ def render_fix2_md(data):
             'do not add them as simultaneous dissipated energies. Missing fixture/cable stores and '
             'actual partition/SOA remain OPEN. A nominal 2.2 mF dummy at +20% raises the pool to '
             f"{data['gate4a_fix2']['coupled_energy']['scenarios'][1]['pool_assumed_J']*1e3:.6f} mJ.\n\n"
+            'F2-10 adds 10 kOhm pulldowns at both AHCT inputs. The fully-off DC screen is '
+            f"{data['gate4a_fix2']['pg_input_bias']['input_off_screen_V']:.6f} V; the extra load is "
+            f"{data['gate4a_fix2']['pg_input_bias']['added_pulldown_current_at3p4V_A']*1e3:.6f} mA. "
+            'This does not bound intermediate-rail behavior or input transition time. '
+            'Both AHCT parts also require the existing TTL-high delta-ICC load in the 40 mA ledger.\n\n'
             'T04L requires actual-TS pump margin after R305 plus all external leakage and probe load. '
             'The non-bleed 5 µA qualification allocation needs ≥10.012531 µA pump capability '
             'at 10 V, in the actual circuit; the TS=20 V table point is not substituted.\n')
+    text += ('\n## Round 2 — passive fixture discharge adapters\n\n'
+             'F2-11/SFX-01 selects independent bleeders; resistor local ambient is limited to 70 C '
+             'and review power to 0.125 W per 1206 part. These are external fixture limits. '
+             'Rows assume separated capacitances and zero replenishment. Connected decay remains OPEN.\n\n'
+             '|Ref / node|R (ohm)|V screen|C ceiling (uF)|P upper (mW)|Isolated time to 0.3 V (s)|\n'
+             '|---|---:|---:|---:|---:|---:|\n')
+    for r in data['gate4a_fix2']['fixture_discharge']['rows']:
+        text += (f"|{r['ref']} / {r['node']}|{r['R_ohm']:.0f}|{r['V_ceiling_assumed_V']:.6f}|"
+                 f"{r['C_ceiling_assumed_F']*1e6:.3f}|{r['power_upper_screen_W']*1e3:.6f}|"
+                 f"{r['isolated_time_to0p3_screen_s']:.6f}|\n")
+    text += ('\nAdded held-domain current (DRV_HOLD and downstream LDO/reference bleeds): '
+             f"{data['gate4a_fix2']['fixture_discharge']['hold_domain_added_current_screen_A']*1e3:.6f} mA. "
+             'Include it in the total control allocation; do not extend the old hold result unchanged. '
+             'Converter-input/prehold bleeds are additional upstream loads. '
+             'A far-end bleed returns only to FAR_GND and creates no local-ground bypass.\n')
+    f = data['gate4a_fix2']['fixture_discharge']
+    text += (f"\nIf all prior loads already use 40 mA, the PG and held-domain bleeds raise it to "
+             f"{f['prior40mA_plus_all_added_hold_current_A']*1e3:.6f} mA; the illustrative hold time falls to "
+             f"{f['prior40mA_plus_all_added_hold_time_screen_s']*1e3:.6f} ms. "
+             'This fails the existing total-current allocation; it must not be treated as an increased allowance. '
+             'For normal-load bookkeeping, conservatively applying the two additional output bleeds '
+             'at 5.5 V through the entire selected loop gives an extra '
+             f"{f['additional_output_path_drop_screen_V']*1e3:.6f} mV drop and "
+             f"{f['fixture_normal_min_after20mV_screen_V']:.9f} V far-end sensitivity after the 20 mV trough. "
+             'The far bleed is already included in the 5 A terminal load. Actual regulation/thermal margins remain OPEN.\n')
+    text += ('\n## Round 2 — manufacturer-conditioned power-device screens\n\n'
+             'F2-12 reconfirms the BSC034 pair: 6.8 mOhm at 10 V gate, '
+             '10.2 mOhm at 6 V gate at the 25 C table points; 82 nC pair gate charge '
+             'at the specified test point gives 0.164 V on a 0.5 uF effective bootstrap. '
+             'No hot or actual gate-charge transfer is guaranteed by these values.\n\n'
+             'Q316 at separately qualified VDS<=58.1 V and ID<=0.20 A gives '
+             '11.62 W, 11.8524 mJ for 1.02 ms, and 91.1586 C bulk-junction sensitivity '
+             'using fixed case85 C and 0.53 C/W. This is not a hot linear-SOA approval. '
+             'Local input reservoirs can violate the branch-current target despite a 0.20 A source setting.\n')
+    return text

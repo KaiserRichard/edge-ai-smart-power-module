@@ -100,4 +100,35 @@ Old/new conditional RUN rising ranges: [5.120075112219451, 8.531185263157894] / 
 
 F2-06 screens either dump against all initially connected output banks plus Enew. For effective dummy C≤2.2 mF, the conditional pool is 174.086483 mJ; one raw resistor receives at most 15.003120 mJ and one protected resistor 44.404903 mJ inside the fixed topology/tolerance model. These are separate worst allocations; do not add them as simultaneous dissipated energies. Missing fixture/cable stores and actual partition/SOA remain OPEN. A nominal 2.2 mF dummy at +20% raises the pool to 180.741483 mJ.
 
+F2-10 adds 10 kOhm pulldowns at both AHCT inputs. The fully-off DC screen is 0.120300 V; the extra load is 0.681704 mA. This does not bound intermediate-rail behavior or input transition time. Both AHCT parts also require the existing TTL-high delta-ICC load in the 40 mA ledger.
+
 T04L requires actual-TS pump margin after R305 plus all external leakage and probe load. The non-bleed 5 µA qualification allocation needs ≥10.012531 µA pump capability at 10 V, in the actual circuit; the TS=20 V table point is not substituted.
+
+## Round 2 — passive fixture discharge adapters
+
+F2-11/SFX-01 selects independent bleeders; resistor local ambient is limited to 70 C and review power to 0.125 W per 1206 part. These are external fixture limits. Rows assume separated capacitances and zero replenishment. Connected decay remains OPEN.
+
+|Ref / node|R (ohm)|V screen|C ceiling (uF)|P upper (mW)|Isolated time to 0.3 V (s)|
+|---|---:|---:|---:|---:|---:|
+|RFD01 / VIN_PROTECTED|10000|28.289211|30.000|80.228517|1.367346|
+|RFD02 / VOUT_5V1|1000|6.900000|5596.560|47.729323|17.591851|
+|RFD03 / VOUT_PROTECTED|1000|6.900000|2707.200|47.729323|8.509631|
+|RFD04 / FAR_5V|1000|6.900000|2640.000|47.729323|8.298399|
+|RFD05 / DRV_HOLD|10000|12.311325|600.000|15.194859|22.342672|
+|RFD06 / AUX_12V|10000|12.311325|26.000|15.194859|0.968182|
+|RFD07 / AUX_PREHOLD|10000|12.311325|1.200|15.194859|0.044685|
+|RFD08 / AUX_LIMITED|47000|35.000000|10.000|26.129153|2.242473|
+|RFD09 / VIN_AUX|47000|58.100000|2.400|72.001493|0.595505|
+|RFD10 / DET5|10000|5.250000|10.000|2.763158|0.286936|
+|RFD11 / 3V3_AUX|10000|3.400000|10.000|1.158897|0.243382|
+|RFD12 / REF_2V5|10000|2.525000|10.000|0.639160|0.213554|
+
+Added held-domain current (DRV_HOLD and downstream LDO/reference bleeds): 2.354519 mA. Include it in the total control allocation; do not extend the old hold result unchanged. Converter-input/prehold bleeds are additional upstream loads. A far-end bleed returns only to FAR_GND and creates no local-ground bypass.
+
+If all prior loads already use 40 mA, the PG and held-domain bleeds raise it to 43.036223 mA; the illustrative hold time falls to 4.283994 ms. This fails the existing total-current allocation; it must not be treated as an increased allowance. For normal-load bookkeeping, conservatively applying the two additional output bleeds at 5.5 V through the entire selected loop gives an extra 0.461565 mV drop and 4.796403959 V far-end sensitivity after the 20 mV trough. The far bleed is already included in the 5 A terminal load. Actual regulation/thermal margins remain OPEN.
+
+## Round 2 — manufacturer-conditioned power-device screens
+
+F2-12 reconfirms the BSC034 pair: 6.8 mOhm at 10 V gate, 10.2 mOhm at 6 V gate at the 25 C table points; 82 nC pair gate charge at the specified test point gives 0.164 V on a 0.5 uF effective bootstrap. No hot or actual gate-charge transfer is guaranteed by these values.
+
+Q316 at separately qualified VDS<=58.1 V and ID<=0.20 A gives 11.62 W, 11.8524 mJ for 1.02 ms, and 91.1586 C bulk-junction sensitivity using fixed case85 C and 0.53 C/W. This is not a hot linear-SOA approval. Local input reservoirs can violate the branch-current target despite a 0.20 A source setting.

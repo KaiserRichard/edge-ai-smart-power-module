@@ -1,12 +1,12 @@
 {
   "classification": "Numerical/documentary verification only; no electrical validation",
   "date": "2026-10-01",
-  "resume_base_commit": "74d5b104cc00bbf93251f0b51d28cfd0807ac83f",
+  "resume_base_commit": "cffb770222220d6313757332e6ba8836c146f3a5",
   "validation_command": "python3 -B docs/evidence/r2/gate4a/validate_fix2.py --write",
   "unit_tests_pass": 14,
-  "baseline_test_result": "At74d5b10:9/10 pass; CSV/manifest RUN mismatch failed",
-  "register_rows": 37,
-  "register_unique_reserved_refs": 251,
+  "baseline_test_result": "Atcffb770:14/14 pass; earlier74d5b10 RUN register failure is historical",
+  "register_rows": 38,
+  "register_unique_reserved_refs": 277,
   "checks": [
     "Reproduced N1 skew counterexample and mandatory unknown-skew handling",
     "Independent protected/raw resistor-energy integrals and connected-store sum",
@@ -14,6 +14,8 @@
     "All prior numerical, topology and unknown-bound checks",
     "Exact generated CSV/Markdown/JSON; no cross-row refdes collisions",
     "Pinned inputs/imports/archive bytes and available manufacturer-cache hashes",
+    "New Sheet03 qualification/source snapshots match BOM commit023e107",
+    "PG input-bias, passive discharge and power-device screens retain null actual bounds",
     "Git diff whitespace; no native CAD changes"
   ],
   "pinned_inputs_verified": [
@@ -180,9 +182,26 @@
   },
   "optional_BOM_handoff": {
     "ref": "origin/feat/r2-bom-draft",
-    "commit": "960a1a81ae7acf6e45e880fffb395f04a5c4c5d7",
+    "commit": "023e107b47570dc193f498787a86198730db57e8",
     "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
-    "status": "ABSENT in local remote-tracking object; no network fetch performed"
+    "status": "PRESENT; imported unchanged and reviewed; source evidence only, no hot application qualification",
+    "imports": [
+      {
+        "source_path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+        "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+        "sha256": "04e17058d613cdffc9b57e1c228d99ffd769beae7d6794213d5323bf7efa9668"
+      },
+      {
+        "source_path": "third_party/sheet03_source_register.json",
+        "path": "third_party/gate4a_fix2/handoffs/023e107/sheet03_source_register.json",
+        "sha256": "502e865481a12dd19894879f30f27470a56cfda944742a01b1e89be3bf541ca7"
+      },
+      {
+        "source_path": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md",
+        "path": "docs/evidence/r2/gate4a/handoffs/023e107/GATE1D_PULSE_REVIEW.md",
+        "sha256": "8d9c75a039e7f2800da993a1a2a85c32186d20576e7e64121f6d23c32a6b1a4e"
+      }
+    ]
   },
   "external_inputs_hash_checked": [
     "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX2_RESUME.md",
@@ -229,10 +248,16 @@
   "round2_web_only_sources": [
     "ADI-LTC3115",
     "ADI-LT4363",
-    "ADI-LTC7001"
+    "ADI-LTC7001",
+    "TI-LVC1G17-RECHECK",
+    "TI-AHCT1G125-RECHECK",
+    "NEXPERIA-AHCT1G17-COMPARISON",
+    "INFINEON-BSC034-RECHECK",
+    "TI-TLV3201-RECHECK",
+    "PHOENIX-DISCHARGE-ADAPTERS"
   ],
   "owner_PDF": "One page exported and visually reviewed; current owner section, no clipping",
-  "plot_visual_review": "No new physical/CAD plots; historical ideal-model CSV/SVG unchanged",
+  "plot_visual_review": "Q316 original datasheet p5 SOA/thermal page visually reviewed; no new physical/CAD plots; historical ideal-model CSV/SVG unchanged",
   "native_CAD_changes": false,
   "ERC_DRC_run": false,
   "physical_tests_run": false,
@@ -241,44 +266,44 @@
   "actual_electrical_safety_verdict": "BLOCKED",
   "git": {
     "pull": "Not attempted; local remote-tracking refs pinned",
-    "local_item_checkpoints": "FAILED: index.lock Operation not permitted; explicit brief fallback",
+    "local_item_checkpoints": "F2-09/F2-10/F2-11/F2-12 staging FAILED: index.lock Operation not permitted; explicit brief fallback",
     "push": "Not attempted; conductor publishes",
     "changes": "This continuation uncommitted; supplied partial commits retained"
   },
   "artifact_sha256": {
-    "AUX_BRANCH_FIX.md": "bba9f5fc6bc377472a19cc0570422e9b67e2e31d11c848357db8fa880ecf72ff",
+    "AUX_BRANCH_FIX.md": "1040f7b3fc35955d33cff9890704a6707815b94769c8433f71130f7bec7a4444",
     "BASIS.md": "fa391212f857fd65b96b7a50a18e3690cd32d399b7ef2db7856d3bd8a8a084f3",
-    "CALCULATIONS.json": "8668acbad28e15f75de10a9da174ca0c08c3a20f15d2f3b2da9cc369eec44199",
-    "CALCULATIONS.md": "bb49d2265d56d27de2368830210c0fdc976c0e5137a66d754f18f2f2904c851a",
-    "FIX2_INPUTS.json": "97dd14112b7d1e94246a1439cb8d1760c56a469e87d9b59294c8faea1e0fb11f",
-    "FIX2_RESOLUTIONS.md": "d14885dcb003b860b2b12db7c1ec3b8a9e7857fd3af831541011f688e00c3446",
+    "CALCULATIONS.json": "f22423bb328eafd857c4ef91d9ff14b6c88d894b4a62a2b9e4ef46e827c100fd",
+    "CALCULATIONS.md": "04e967449c07241f30d2ba5b4bbd0e95b80ba39a4d0f0715b5fbe878c9b5e655",
+    "FIX2_INPUTS.json": "779646ca206df745eda11d71ffd8c2fcaf90f501c5b5d0d243ba2f12b8d9c64b",
+    "FIX2_RESOLUTIONS.md": "ced0a5ea019145e57e15053448a68fccd9aca6a48b7accf4548ae784d9faa69c",
     "FIX_RESOLUTIONS.md": "0d89dcd8f5d248126b1033ceb882e09960979fec8c7a76cac440e5b57c0d0323",
-    "FREEZE_BOM.csv": "eac13a854e03737c5c65cf39f9f7e9cec9913a2d2726892bf12a8a651763dd3f",
-    "FREEZE_MANIFEST.json": "a42e352184914c3388041eae828581cd38a0af799e2a611ef6195170ae7f25e8",
-    "FREEZE_TABLE.md": "f884dc0a0233c6bf929454989474e996d86d413b60913da2871440f416bba271",
-    "GATE4A_FREEZE.md": "6a0e88f75e618f07405e338ce8792703513b6b57e541f755c2af5588f541d9a4",
+    "FREEZE_BOM.csv": "5075502b116d01006987415d07a861e17e7860cc3d29a44a31931734f819995a",
+    "FREEZE_MANIFEST.json": "c3afdad304ad8098f226880dc0bea2df48e03557bc10c285f7dd2ba42b1854fd",
+    "FREEZE_TABLE.md": "49e681e0224f3ceacb44a2b83f02830323642665a30f907446b6c724a4156d30",
+    "GATE4A_FREEZE.md": "d0a9f7bf9ed08ff104983c13d95c0a6b588fa24ef8055838f48bb53aa6f6cae2",
     "INPUT_PROVENANCE.json": "38be702d211800314d6b9555591f527444f0a377743bd887219b7187f296e1ff",
-    "OWNER_EXPLANATION.pdf": "aa2a65a5ea7fe066307fb2f2ac415d38e2d3d326effcb3bc657de54bd351704f",
+    "OWNER_EXPLANATION.pdf": "57334c83501ee739cdc1943d71cfae275d16c51feccb7ebf7cf4b4230f5d27e8",
     "PASSIVE_COMPLETION.csv": "7aedeb036ddb7902c4ac309b6777988582c3d9b5f0d8af77d06ccf0a18daf9aa",
     "PR15_INVENTORY.csv": "bdea1bb32cf45fe3db8a3925e228d920a49de81f6b819fa51764387468bde402",
     "RAW_IDEAL_TRANSFER.csv": "148af937b88845fe7657812f77161615636dc6728327e49300feede0d0410b7b",
     "RAW_IDEAL_TRANSFER.svg": "36e29fcd941dec542b0327769abdb216ec4ca1928e6adac1e840609d04c5a654",
-    "RAW_NODE_ENERGY.md": "b4c2b0e7f018ae8c09c488c90a87c1e2d1af064e0438482f7f068ad43649c533",
+    "RAW_NODE_ENERGY.md": "19185031ec6f2f0a0b9464ae32b2156bcfdadebf9325258fd5df7ba636c5cba9",
     "SOURCES.json": "cf253751ba8cd5e90c7c23b81c164db9ad121fa2de2aa1d84d9e3ac44c0058e8",
     "SOURCES.md": "59e5121b389de75faa028057bd83e5dade634b7b8ef7883b368163aa400fd2f8",
     "SOURCES_FIX.json": "870139f2ac3d1e334842f5d8e127808b9b747b27265eae0d92a0a99da0cedc4b",
-    "TASK_PROGRESS.md": "5dffd83fe95db5fb48d2ae2741c939d6c51ac379d6da30e93684242ca9e6343b",
-    "TEST_HOOKS.md": "3f613d7c28963444a38dfb935c601ac808dc5d2b6d0a11b0c5e2937bae5bfd79",
-    "TEST_PLAN.md": "1f0db90721a485ed1823533d8758078818c5aec7aedd79ed4d67d47223acd051",
-    "TIMING_AND_LOGIC.md": "a9820a733dcf2f748f6603fb27592b8261028d6af10ff67c51f5c23ea1ebfec9",
+    "TASK_PROGRESS.md": "af254b6c3c5b7b6973b6e8d90e7be6fb5b92ad17c6707f48549f40bbb8ea9c5d",
+    "TEST_HOOKS.md": "c20696320b5d1a24da9f957ee29c0ac0a674b711bc1cfbb724755afd2f45e948",
+    "TEST_PLAN.md": "92ab2b53da26aad5afb96d97a1945dce750d00032d1f00706242bcfeb08e98b7",
+    "TIMING_AND_LOGIC.md": "e649dd89d66337c0fd032f045563ef1a7ffbda994ab707efc777a6cbae39f3cc",
     "calculate_gate4a.py": "1d65d6661659397ca3411f2bd61eb1052d8b4ed95068ed9bd8d4130540369e57",
     "calculate_gate4a_fix.py": "53ca667b45ae54c5880a0dff121d52420b8ef03af71b7de2ffa4cae68c634edd",
-    "calculate_gate4a_fix2.py": "83f2aaf2e52badfcedfeb6ff464dbac716c7690f34e63993c9ae0988f885bb3e",
+    "calculate_gate4a_fix2.py": "d08458ad9b5e9f0d17cef48a776b05de697c6b513239080ffbec78161e67cc3c",
     "export_owner.py": "9747488192bf0ac6fb96238be7f12c0902e717456d3abe22cd17ffd181143f32",
     "render_freeze_register.py": "5d324ad3e991c779298f0764bfb0807161a768dcf1b182bef76ee007f6012bed",
     "test_gate4a_calculations.py": "1bd50cc875b205297bd0a6eed67874ea0dce21e268535f6f512e29be5e29b5a4",
-    "validate_fix2.py": "73c591a71c944599f34e6b57f70ae8c123ee8bc5923e1f3ec2f4e26e58b22926"
+    "validate_fix2.py": "d3ab0d24ba91e561adb3d3f1b4abe5127eacd58093c79e916f234f15a0aae9bf"
   },
-  "round2_source_register_sha256": "0ca2979656ef95819a9003e78b4d58640b487b1a1a483c80edbac51fbf470bea",
-  "manager_report_sha256": "c5518c6b745ef4d017140b16507af85fee19ea8d21f882540bcf61cbe0731938"
+  "round2_source_register_sha256": "ec061b2ea8b268f2b1f5c456cdeb20365d9caefa9d50c4734abc2d0c333ec523",
+  "manager_report_sha256": "0765763a53ac8f88a3d8637c88f4fc14eadc42743b77138ef0e2ea944cd7eee7"
 }

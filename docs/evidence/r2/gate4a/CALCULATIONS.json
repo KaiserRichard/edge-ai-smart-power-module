@@ -1426,6 +1426,167 @@
       "probe_loading_must_be_included": true,
       "actual_hot_pump_current_A": null,
       "actual_external_leakage_A": null
+    },
+    "pg_input_bias": {
+      "classification": "Fully-off DC screen; no brownout/transition guarantee",
+      "input_off_screen_V": 0.1203,
+      "margin_to_AHCT_VIL_screen_V": 0.6797000000000001,
+      "added_pulldown_current_at3p4V_A": 0.0006817042606516291,
+      "AHCT_two_device_delta_ICC_table_A": 0.003,
+      "AHCT_two_device_ICC_table_A": 2e-05,
+      "old_40mA_plus_new_pulldown_hold_s": 0.00453193648965007,
+      "RC_example_C_assumed_F": 3e-11,
+      "passive_2V_to0p8V_example_s": 2.7557443761115214e-07,
+      "actual_off_voltage_V": null,
+      "actual_loss_to_safe_off_s": null
+    },
+    "fixture_discharge": {
+      "classification": "Passive fixture selection; isolated RC screens, no abort or coupled-decay guarantee",
+      "rows": [
+        {
+          "ref": "RFD01",
+          "node": "VIN_PROTECTED",
+          "R_ohm": 10000.0,
+          "V_ceiling_assumed_V": 28.28921104694895,
+          "C_ceiling_assumed_F": 3e-05,
+          "power_upper_screen_W": 0.08022851745953068,
+          "current_upper_screen_A": 0.0028360111325262103,
+          "isolated_time_to0p3_screen_s": 1.3673458303348214
+        },
+        {
+          "ref": "RFD02",
+          "node": "VOUT_5V1",
+          "R_ohm": 1000.0,
+          "V_ceiling_assumed_V": 6.9,
+          "C_ceiling_assumed_F": 0.00559656,
+          "power_upper_screen_W": 0.047729323308270684,
+          "current_upper_screen_A": 0.006917293233082707,
+          "isolated_time_to0p3_screen_s": 17.591851462873194
+        },
+        {
+          "ref": "RFD03",
+          "node": "VOUT_PROTECTED",
+          "R_ohm": 1000.0,
+          "V_ceiling_assumed_V": 6.9,
+          "C_ceiling_assumed_F": 0.0027072,
+          "power_upper_screen_W": 0.047729323308270684,
+          "current_upper_screen_A": 0.006917293233082707,
+          "isolated_time_to0p3_screen_s": 8.509630966216802
+        },
+        {
+          "ref": "RFD04",
+          "node": "FAR_5V",
+          "R_ohm": 1000.0,
+          "V_ceiling_assumed_V": 6.9,
+          "C_ceiling_assumed_F": 0.00264,
+          "power_upper_screen_W": 0.047729323308270684,
+          "current_upper_screen_A": 0.006917293233082707,
+          "isolated_time_to0p3_screen_s": 8.298398991878088
+        },
+        {
+          "ref": "RFD05",
+          "node": "DRV_HOLD",
+          "R_ohm": 10000.0,
+          "V_ceiling_assumed_V": 12.311325,
+          "C_ceiling_assumed_F": 0.0006,
+          "power_upper_screen_W": 0.01519485947424812,
+          "current_upper_screen_A": 0.001234218045112782,
+          "isolated_time_to0p3_screen_s": 22.342671634411108
+        },
+        {
+          "ref": "RFD06",
+          "node": "AUX_12V",
+          "R_ohm": 10000.0,
+          "V_ceiling_assumed_V": 12.311325,
+          "C_ceiling_assumed_F": 2.6e-05,
+          "power_upper_screen_W": 0.01519485947424812,
+          "current_upper_screen_A": 0.001234218045112782,
+          "isolated_time_to0p3_screen_s": 0.968182437491148
+        },
+        {
+          "ref": "RFD07",
+          "node": "AUX_PREHOLD",
+          "R_ohm": 10000.0,
+          "V_ceiling_assumed_V": 12.311325,
+          "C_ceiling_assumed_F": 1.2e-06,
+          "power_upper_screen_W": 0.01519485947424812,
+          "current_upper_screen_A": 0.001234218045112782,
+          "isolated_time_to0p3_screen_s": 0.04468534326882222
+        },
+        {
+          "ref": "RFD08",
+          "node": "AUX_LIMITED",
+          "R_ohm": 47000.0,
+          "V_ceiling_assumed_V": 35.0,
+          "C_ceiling_assumed_F": 1e-05,
+          "power_upper_screen_W": 0.026129152668906308,
+          "current_upper_screen_A": 0.0007465472191116088,
+          "isolated_time_to0p3_screen_s": 2.242473008950548
+        },
+        {
+          "ref": "RFD09",
+          "node": "VIN_AUX",
+          "R_ohm": 47000.0,
+          "V_ceiling_assumed_V": 58.1,
+          "C_ceiling_assumed_F": 2.4e-06,
+          "power_upper_screen_W": 0.07200149309443822,
+          "current_upper_screen_A": 0.0012392683837252707,
+          "isolated_time_to0p3_screen_s": 0.5955054702591606
+        },
+        {
+          "ref": "RFD10",
+          "node": "DET5",
+          "R_ohm": 10000.0,
+          "V_ceiling_assumed_V": 5.25,
+          "C_ceiling_assumed_F": 1e-05,
+          "power_upper_screen_W": 0.002763157894736842,
+          "current_upper_screen_A": 0.0005263157894736842,
+          "isolated_time_to0p3_screen_s": 0.28693563831317925
+        },
+        {
+          "ref": "RFD11",
+          "node": "3V3_AUX",
+          "R_ohm": 10000.0,
+          "V_ceiling_assumed_V": 3.4,
+          "C_ceiling_assumed_F": 1e-05,
+          "power_upper_screen_W": 0.0011588972431077693,
+          "current_upper_screen_A": 0.00034085213032581453,
+          "isolated_time_to0p3_screen_s": 0.2433817606537922
+        },
+        {
+          "ref": "RFD12",
+          "node": "REF_2V5",
+          "R_ohm": 10000.0,
+          "V_ceiling_assumed_V": 2.525,
+          "C_ceiling_assumed_F": 1e-05,
+          "power_upper_screen_W": 0.0006391604010025062,
+          "current_upper_screen_A": 0.0002531328320802005,
+          "isolated_time_to0p3_screen_s": 0.2135539401720892
+        }
+      ],
+      "fixture_resistor_ambient_ceiling_C": 70.0,
+      "review_power_ceiling_per_resistor_W": 0.125,
+      "hold_domain_added_current_screen_A": 0.002354518796992481,
+      "prior40mA_plus_all_added_hold_current_A": 0.04303622305764411,
+      "prior40mA_plus_all_added_hold_time_screen_s": 0.004283993503636526,
+      "additional_output_path_drop_screen_V": 0.00046156492098027216,
+      "fixture_normal_min_after20mV_screen_V": 4.796403958532529,
+      "actual_connected_decay_s": null,
+      "actual_all_stores_discharged": null
+    },
+    "power_device_screen": {
+      "classification": "Datasheet-conditioned screens; no hot SOA qualification",
+      "series_pair_R25_at10V_ohm": 0.0068,
+      "series_pair_R25_at6V_ohm": 0.0102,
+      "series_pair_Qg_table_C": 8.2e-08,
+      "bootstrap_table_charge_droop_at0p5uF_V": 0.164,
+      "pass_fet_VDS_target_V": 58.1,
+      "pass_fet_ID_target_A": 0.2,
+      "pass_fet_power_if_targets_met_W": 11.620000000000001,
+      "pass_fet_energy_at1p02ms_J": 0.011852400000000003,
+      "pass_fet_bulk_thermal_TJ_if_case85_C": 91.1586,
+      "actual_hot_SOA_margin": null,
+      "actual_branch_current_bound_A": null
     }
   }
 }

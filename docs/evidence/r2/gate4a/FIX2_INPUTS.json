@@ -45,7 +45,7 @@
   ],
   "review": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md",
   "review_sha256": "21b1bde5968c13198b2772cd445c2ac3d318b7dc342669ca4c59c61cf7082e32",
-  "resume_commit": "74d5b104cc00bbf93251f0b51d28cfd0807ac83f",
+  "resume_commit": "cffb770222220d6313757332e6ba8836c146f3a5",
   "independent_check": {
     "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/CHECK_4AFIX.md",
     "sha256": "4a93b8a7546be8a899dc5467b37e1c70df57dc284678c25108ee5a8b07b82142",
@@ -53,14 +53,31 @@
   },
   "optional_sheet03_qualification": {
     "ref": "origin/feat/r2-bom-draft",
-    "commit": "960a1a81ae7acf6e45e880fffb395f04a5c4c5d7",
+    "commit": "023e107b47570dc193f498787a86198730db57e8",
     "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
-    "status": "ABSENT in local remote-tracking object; no network fetch performed"
+    "status": "PRESENT; imported unchanged and reviewed; source evidence only, no hot application qualification",
+    "imports": [
+      {
+        "source_path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+        "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+        "sha256": "04e17058d613cdffc9b57e1c228d99ffd769beae7d6794213d5323bf7efa9668"
+      },
+      {
+        "source_path": "third_party/sheet03_source_register.json",
+        "path": "third_party/gate4a_fix2/handoffs/023e107/sheet03_source_register.json",
+        "sha256": "502e865481a12dd19894879f30f27470a56cfda944742a01b1e89be3bf541ca7"
+      },
+      {
+        "source_path": "docs/evidence/r2/sheet03/GATE1D_PULSE_REVIEW.md",
+        "path": "docs/evidence/r2/gate4a/handoffs/023e107/GATE1D_PULSE_REVIEW.md",
+        "sha256": "8d9c75a039e7f2800da993a1a2a85c32186d20576e7e64121f6d23c32a6b1a4e"
+      }
+    ]
   },
   "briefs": [
     {
       "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX2_RESUME.md",
-      "sha256": "57f36366a2f23aca7c7a165975d6e234bac3bdf5b47f01085069c785be1e26b7",
+      "sha256": "6c530bcc3341a95be11e47408a2ce025e346ba7eb45253748bfe7c69ad6dd3b8",
       "read": "full"
     },
     {
@@ -81,5 +98,12 @@
     "sha256": "aac450017e8d54522310194cfb3286875ef089ee69465b0d57203cbf866c0b5a",
     "read_scope": "verdict, owner/buyer handoff and closure sections",
     "result": "NONE MEETS SPEC; no selected approved module or complete source-energy bound. Separate robot/old9-24V assumptions not imported."
-  }
+  },
+  "previous_optional_sheet03_qualification": {
+    "ref": "origin/feat/r2-bom-draft",
+    "commit": "960a1a81ae7acf6e45e880fffb395f04a5c4c5d7",
+    "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+    "status": "ABSENT in local remote-tracking object; no network fetch performed"
+  },
+  "prior_resume_commit": "74d5b104cc00bbf93251f0b51d28cfd0807ac83f"
 }

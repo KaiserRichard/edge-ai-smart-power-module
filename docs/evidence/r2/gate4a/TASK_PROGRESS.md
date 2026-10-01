@@ -23,10 +23,15 @@ Continued commits0a81d28 and2b99ac7; no restart. Reviewed the independent17-item
 The owner explanation, freeze table/CSV/manifest, calculations, test plan, source provenance, validation and FINAL_MANAGER_REPORT now reflect this state. Ten targeted calculation tests pass. No native CAD, ERC/DRC, physical testing, fabrication, sub-agents or push. Pull failed at FETCH_HEAD; each requested local checkpoint failed at index.lock. Latest changes are uncommitted. Earlier task commits/pushes above describe historical work only.
 
 
-## Gate4a-FIX2 continuation — 2026-10-01 (current)
+## Gate4a-FIX2 continuation through cffb770 — historical checkpoint
 
 Resumed 7098411, 81aac81 and 74d5b10. Read the full chain of briefs and the independent round-1 check. The optional Sheet 03 BOM qualification file is absent at the recorded ref; the source-interface study selects no fully compliant module. J502 imports match the pinned connector commit, including the two previously untracked provenance files.
 
 Completed F2-03 register reconciliation; F2-04 executable skew correction; F2-05 converter compensation/RUN leakage correction; F2-06 coupled-bank rating envelope; F2-07 isolated component tests/U301 pin audit; F2-08 eight-item closure accounting. The first baseline test run had one register mismatch; 14 tests now pass. All actual measurement fields remain OPEN/NOT RUN. Construction blockers and original closure count4/12 are retained. No sub-agents, native CAD edit, physical testing, fabrication or push.
 
 Local item checkpoints again fail creating index.lock; all new work remains uncommitted under the brief's explicit fallback. Earlier failure statements above are historical and do not mean the conductor's supplied commits are absent. Current evidence is in GATE4A_FREEZE.md and VALIDATION.json.
+
+
+## Gate4a-FIX2 resumed from cffb770 — current
+
+F2-09 imports the now-present Sheet03 qualification and its source snapshots; F2-10 specifies PG-input DC bias and remaining slew limits; F2-11 selects twelve passive discharge adapters; F2-12 verifies manufacturer test points and adds T07F; F2-13 records the remaining construction blockers. Current owner report/manager report/register/calculations/test plan are synchronized. Original closure remains 4/12, capture BLOCKED. Local staging after each completed subitem failed at index.lock; changes remain uncommitted under the brief fallback. No pull/push, native CAD edits, sub-agents, physical tests or gate advancement.

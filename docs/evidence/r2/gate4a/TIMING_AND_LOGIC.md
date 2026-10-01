@@ -67,3 +67,6 @@ Functional policy to be implemented and checked against actual pins:
 The retained parts and new candidates are listed by refdes in [FREEZE_TABLE.md](FREEZE_TABLE.md); exact package/pin/land checks are required for every MPN change. No native CAD was accessed, therefore no new ERC/DRC claim is made.
 
 **Round-2 current disposition:** F2-05 specifies converter compensation and the revised 383 kΩ RUN top; these do not add the missing fast rail-loss/state circuit. F2-07 makes U301's inherited grounded VCCUV explicit: its low UVLO is not a 10.5 V valid-drive detector. T04L/T06L are isolated component measurements; all three complete physical min/max pairs remain OPEN/OPEN until the real trigger, interlock and T12 fixture exist and T08 runs. Measurement-only timing uncertainty does not independently prohibit isolated hooks, but the absent circuits still block integrated capture.
+
+
+**Current resume supplement:** F2-10 adds R394/R395 at PG translator inputs. This defines fully-off DC bias but does not bound intermediate rails or meet the AHCT slew requirement in a passive collapse; T03A is required. The source and reset/ARM/fast-rail-loss circuits remain absent.

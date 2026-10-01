@@ -291,14 +291,16 @@
         "U325",
         "U326",
         "C362",
-        "C363"
+        "C363",
+        "R394",
+        "R395"
       ],
       "old": "R316: Resistor_specification / 10k; R317: Resistor_specification / 10k; U319: NEW",
-      "new_mpn": "TNPW060310K0BEEA x2; SN74AHCT1G125DBVR x2; GRM188R71H104KA93D x2; TNPW0603100KBEEA x2; SN74LVC1G17DBVR x2; GRM188R71H104KA93D x2",
-      "new_value_or_connection": "R316/R317 10k PG pull-ups to 3V3_AUX; U319/U324 separate DBV5 buffers: 1 OE=GND, 2 A=DET_PG_FAST / BUCK_PG_FAST, 3 GND, 4 Y=DET_PG_5 / BUCK_PG_5, 5 VCC=DET5; C360/C361 100nF pins5-3; R368/R369 100k output-to-GND. All output receivers powered by DET5; no external output pull-up; U325/U326 PG-edge conditioners at3V3_AUX, DBV5:1NC,2A=DET_PG/BUCK_PG,3GND,4Y=*_FAST,5VCC; C362/C363100nF local bypass; prevents slow10k PG pullup directly entering AHCT",
-      "reason": "TPS7A16 PG recommended ceiling5V; 3.3V not guaranteed LVC high at5V",
-      "governing_equation": "VIH=2V,VIL=0.8V; VCC valid 4.5..5.5V; Ioff NOT specified; partial-supply T03/T15",
-      "status": "R4A-03 identity/pins CORRECTED; sequence/logic closure T03/T15",
+      "new_mpn": "TNPW060310K0BEEA x2; SN74AHCT1G125DBVR x2; GRM188R71H104KA93D x2; TNPW0603100KBEEA x2; SN74LVC1G17DBVR x2; GRM188R71H104KA93D x2; R394/R395 TNPW060310K0BEEA",
+      "new_value_or_connection": "R316/R317 10k PG pull-ups to 3V3_AUX; U319/U324 separate DBV5 buffers: 1 OE=GND, 2 A=DET_PG_FAST / BUCK_PG_FAST, 3 GND, 4 Y=DET_PG_5 / BUCK_PG_5, 5 VCC=DET5; C360/C361 100nF pins5-3; R368/R369 100k output-to-GND. All output receivers powered by DET5; no external output pull-up; U325/U326 PG-edge conditioners at3V3_AUX, DBV5:1NC,2A=DET_PG/BUCK_PG,3GND,4Y=*_FAST,5VCC; C362/C363100nF local bypass; prevents slow10k PG pullup directly entering AHCT; R39410k U325.4/U319.2 DET_PG_FAST-to-GND; R39510k U326.4/U324.2 BUCK_PG_FAST-to-GND. AHCT INPUT pulldowns distinct from R368/R369 output pulldowns.",
+      "reason": "TPS7A16 PG recommended ceiling5V; 3.3V not guaranteed LVC high at5V; define AHCT input at AUX3V3=0 using LVC Ioff plus AHCT input leakage",
+      "governing_equation": "VIH=2V,VIL=0.8V; VCC valid 4.5..5.5V; Ioff NOT specified; partial-supply T03/T15; F2-10 Voff_screen=(10+1+1)uA*10k*1.0025=0.1203V; partial-rail/slow-edge action remains OPEN",
+      "status": "R4A-03 identity/pins corrected; F2-10 fully-off input DC bias selected; T03A slew/brownout and full T15 remain BLOCKED",
       "source": "FIX-AHCT / FIX_RESOLUTIONS R4A-03"
     },
     {
@@ -734,6 +736,43 @@
       "governing_equation": "SRnom=2000/Cdvd[pF] V/ms=2V/s; qualified SR<=10V/s and Ccharged<=600uF -> Icap<=6mA; Icontrols<=40mA; Iaux_screen=(12.311325*(.046+.00061))/(.75*7.5)+.005=107.014375mA",
       "status": "SELECTED test candidate; T07D measured slew/thermal/startup/hold qualification required; circuit values do not establish a hardware PASS",
       "source": "TPS25947 SLVSFC9C May2026 pp5-12,29-30,37; F2-02"
+    },
+    {
+      "id": "SFX-01",
+      "sheet": "external fixture only",
+      "refdes": [
+        "RFD01",
+        "RFD02",
+        "RFD03",
+        "RFD04",
+        "RFD05",
+        "RFD06",
+        "RFD07",
+        "RFD08",
+        "RFD09",
+        "RFD10",
+        "RFD11",
+        "RFD12",
+        "JFD01",
+        "JFD02",
+        "JFD03",
+        "JFD04",
+        "JFD05",
+        "JFD06",
+        "JFD07",
+        "JFD08",
+        "JFD09",
+        "JFD10",
+        "JFD11",
+        "JFD12"
+      ],
+      "old": "No independently selected passive discharge branches",
+      "new_mpn": "RFD02/03/04 TNPW12061K00BEEA; RFD08/09 TNPW120647K0BEEA; all other RFD TNPW120610K0BEEA; JFD01..12 Phoenix1776508 header+1777989 plug per pair",
+      "new_value_or_connection": "Each standalone two-terminal adapter: JFD.n.1 -> RFDn -> JFD.n.2. n1 VIN_PROTECTED/GND;2 VOUT_5V1/GND;3 VOUT_PROTECTED/GND;4 FAR_5V/FAR_GND;5 DRV_HOLD/GND;6 AUX_12V/GND;7 AUX_PREHOLD/GND;8 AUX_LIMITED/GND;9 VIN_AUX/GND;10 DET5/GND;11 3V3_AUX/GND;12 REF_2V5/GND. No common fixture bus, especially no far-return bypass. Normally present during characterized tests; physical source disconnect remains separate OPEN work.",
+      "reason": "Discharge separated reservoirs without logic power or a functioning dump FET; no pulse-abort credit",
+      "governing_equation": "Ppeak=Vmax^2/Rmin; tisolated=Rmax*Cmax*ln(Vmax/.3); maximum isolated screen22.342672s; measure all stores<=.3V after source isolation, do not trust elapsed time alone",
+      "status": "Selected passive discharge adapters for T12D; full fixture source limiter/abort/disconnect/force path still BLOCKED",
+      "source": "F2-11; Vishay28758 10-Apr-2026; pinned J502 connector selection"
     }
   ]
 }

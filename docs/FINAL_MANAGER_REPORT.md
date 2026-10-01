@@ -1,4 +1,22 @@
-# Gate4a-FIX2 continuation — 2026-10-01 (current)
+# Gate4a-FIX2 resumed from cffb770 — 2026-10-01 (current)
+
+**STATUS: BLOCKED for integrated test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Continued all supplied partial commits; did not restart or edit native CAD.
+
+**WHAT WAS DONE:** imported the newly present Sheet03 qualification handoff at `023e107b47570dc193f498787a86198730db57e8` with unchanged source snapshots/hashes; added R394/R395 PG-input pulldowns and explicit slow-edge/current limitations; selected twelve passive fixture discharge adapters with exact parts/pins, local returns and load/RC calculations; checked BSC034 and Q316 manufacturer conditions, including a visual Q316 SOA/thermal-page review; added T03A/T12D/T07F and refreshed all active registers and owner explanation. Prior charging/compensation/skew/coupled-energy work remains intact.
+
+**EVIDENCE:** [F2-09…13 decisions](evidence/r2/gate4a/FIX2_RESOLUTIONS.md), [current freeze/owner explanation](evidence/r2/gate4a/GATE4A_FREEZE.md), [calculations](evidence/r2/gate4a/CALCULATIONS.md), [tests and PASS criteria](evidence/r2/gate4a/TEST_PLAN.md), [validation](evidence/r2/gate4a/VALIDATION.json), [imported qualification](evidence/r2/SHEET03_PART_QUALIFICATION.md), [third-party provenance](../third_party/gate4a_fix2/SOURCES.json). Fourteen numerical tests pass; 38 proposed-change rows are synchronized. No electrical measurement, KiCad edit, ERC or DRC was performed.
+
+**DECISIONS:** all owner choices remain fixed. Original BLOCKING closure remains 4/12; source handoff, input bias and passive discharge are narrower completed subitems. Measurement-only uncertainties remain named tests and do not independently prohibit isolated hooks. Missing trigger, state circuitry and a full rated fixture still prevent integrated capture freeze. No Pi or fabrication release.
+
+**OPEN RISKS:** autonomous 10 µs/100 µC isolation; rail-loss/fault/reset/fresh-ARM and persistent-short lockout; slow AHCT input collapse; source-energy limiter/asynchronous abort/disconnect/high-current fixture; hot SOA/commutation; actual source and instrument envelopes; connected discharge and loaded bootstrap; strict protected/far-end peak and normal 5 A minimum. Do not transfer the old Gate1d hot/pulse/capacitance assumptions into this board.
+
+**NEXT GATE:** finish these constructions, review the rated source/component/fixture evidence, then proceed through R2 capture/ERC, R3 layout/DRC/visual, R4 fabrication review and staged R5 dummy-load tests. No gate skipped.
+
+**GIT:** local staging after F2-09, F2-10, F2-11 and F2-12 failed creating worktree index.lock (Operation not permitted). Under the brief's explicit fallback the new changes remain uncommitted; no permission bypass, pull or push. Supplied commits and historical evidence are retained. The old 01:20 cutoff predates the supplied resume checkpoint and is not claimed as met.
+
+---
+
+# Gate4a-FIX2 continuation through cffb770 — historical checkpoint
 
 **STATUS: BLOCKED for test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Continued the three supplied partial commits without restarting. This section supersedes earlier status/Git descriptions below; historical work is preserved.
 
