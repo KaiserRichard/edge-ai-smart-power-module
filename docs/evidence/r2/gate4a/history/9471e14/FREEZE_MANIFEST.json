@@ -1,0 +1,778 @@
+{
+  "classification": "PROPOSED capture deltas; not implemented",
+  "verdict": "BLOCKED",
+  "baseline_inventory": "PR15_INVENTORY.csv",
+  "changes": [
+    {
+      "id": "S01-01",
+      "sheet": "01",
+      "refdes": [
+        "D101"
+      ],
+      "old": "D101: SMBJ26CA / SMBJ26CA",
+      "new_mpn": "Littelfuse SMCJ36CA",
+      "new_value_or_connection": "36 V bidirectional SMC TVS; replace SMB package",
+      "reason": "Owner PR17 selection; retain upstream of eFuse",
+      "governing_equation": "Vclamp(test)=58.1 V; E=integral(VI dt)",
+      "status": "OWNER SELECTED; hot clamp/coordination OPEN",
+      "source": "PR17"
+    },
+    {
+      "id": "S01-02",
+      "sheet": "01",
+      "refdes": [
+        "F101"
+      ],
+      "old": "F101: OPEN / FUSE - OPEN",
+      "new_mpn": "Schurter 3403.0285.23",
+      "new_value_or_connection": "12.5 A time-lag, 125 VDC, 1000 A DC interruption",
+      "reason": "Owner PR17 selection; real fuse lands needed",
+      "governing_equation": "Iprospective<=1000 A; Ihold_screen=12.5*0.7*0.7=6.125 A",
+      "status": "OWNER SELECTED; installed hold/clearing OPEN",
+      "source": "PR17"
+    },
+    {
+      "id": "S01-03",
+      "sheet": "01",
+      "refdes": [
+        "U101"
+      ],
+      "old": "U101: TPS26630RGER / TPS26630RGER",
+      "new_mpn": "TPS26630RGER",
+      "new_value_or_connection": "retain; hardware latched SHDN, mode latch; no auto re-arm",
+      "reason": "Isolate replenishment; passive fail-off SHDN added on Sheet03",
+      "governing_equation": "Qsource=integral(max(Iin,0)dt)<=100 uC; toff<=10 us",
+      "status": "TARGET; full min/max OPEN",
+      "source": "G3B"
+    },
+    {
+      "id": "S01-04",
+      "sheet": "01",
+      "refdes": [
+        "Q101",
+        "Q102",
+        "D102"
+      ],
+      "old": "Q101: CSD19537Q3 / CSD19537Q3; Q102: BSS138 / BSS138; D102: B260-13-F / B260",
+      "new_mpn": "CSD19537Q3; BSS138; STPS60H100CT (D102 replaces B260-13-F)",
+      "new_value_or_connection": "Q101/Q102 retained; D102 TO-220AB pins1/3 anodes=GND, pin2/tab cathode=VIN_PROTECTED; new power loop/land/heatsink isolation required",
+      "reason": "Reverse protection is not positive OVP cutoff",
+      "governing_equation": "VDS,VGS,pin differentials and temperature within qualified limits",
+      "status": "R4A-09 commutation diode candidate selected; sharing/hot/negative waveform T09",
+      "source": "PR17"
+    },
+    {
+      "id": "S01-05",
+      "sheet": "01",
+      "refdes": [
+        "C101",
+        "C102"
+      ],
+      "old": "C101: OPEN / 1uF 100V; C102: OPEN / 1uF 100V",
+      "new_mpn": "Murata GRM32ER72A105KA01L",
+      "new_value_or_connection": "1 uF 100 V X7R 1210 each",
+      "reason": "Replace generic MPNs; raw-node bypass",
+      "governing_equation": "Vworking<=qualified derated 100 V; Ceff(V,T,age) OPEN",
+      "status": "CONDITIONAL exact order candidates; bias/lands OPEN",
+      "source": "PASSIVES"
+    },
+    {
+      "id": "S01-06",
+      "sheet": "01",
+      "refdes": [
+        "R101",
+        "R102",
+        "R103",
+        "R104",
+        "R105"
+      ],
+      "old": "R101: OPEN / 332k; R102: OPEN / 54.9k; R103: OPEN / 348k; R104: OPEN / 15.8k; R105: OPEN / 4.02k",
+      "new_mpn": "TNPW0603332KBEEA; TNPW060354K9BEEA; TNPW0805348KBEEA; TNPW060315K8BEEA; TNPW06034K02BEEA",
+      "new_value_or_connection": "332k/54.9k/348k/15.8k/4.02k, 0.1%, 25 ppm/K candidates; preserve thresholds",
+      "reason": "Real tolerance/TCR order candidates replace generic resistors",
+      "governing_equation": "OVPmin-26=0.973872559 V; ILIM=18/Rk; include independent R(T)",
+      "status": "CONDITIONAL; full hot corners OPEN",
+      "source": "PASSIVES"
+    },
+    {
+      "id": "S02-01",
+      "sheet": "02",
+      "refdes": [
+        "L201"
+      ],
+      "old": "L201: XAL8080-682MED / 6.8uH",
+      "new_mpn": "Wurth 74437636351002",
+      "new_value_or_connection": "10 uH large THT; replace XAL8080-682MED and create reviewed package",
+      "reason": "Selected qualification candidate for nonlinear fault domain",
+      "governing_equation": "5<=Ldiff<=12 uH through 100 A TARGET; deltaI=Vo(1-Vo/Vi)/(Lf)",
+      "status": "OWNER DIRECTION; magnetic/control qualification OPEN",
+      "source": "G3B"
+    },
+    {
+      "id": "S02-02",
+      "sheet": "02",
+      "refdes": [
+        "C201",
+        "C202"
+      ],
+      "old": "C201: C5750X7R1H226M250KB / 22uF 50V; C202: C5750X7R1H226M250KB / 22uF 50V",
+      "new_mpn": "Murata GRM32ER71H106KA12L",
+      "new_value_or_connection": "10 uF 50 V X7R 1210 each; replace 22 uF TDKs",
+      "reason": "20 uF nominal main input bank leaves upper-bound room",
+      "governing_equation": "Ctotal=C201+C202+C203+C204+all local reservoirs; 10<=Ceff<=30 uF",
+      "status": "CONDITIONAL; biased minimum/stability OPEN",
+      "source": "MURATA10"
+    },
+    {
+      "id": "S02-03",
+      "sheet": "02",
+      "refdes": [
+        "C203",
+        "C204"
+      ],
+      "old": "C203: OPEN / 100nF 50V; C204: OPEN / 100nF 50V",
+      "new_mpn": "Murata GRM188R71H104KA93D",
+      "new_value_or_connection": "100 nF 50 V 0603 at each VIN/PGND pair",
+      "reason": "Mandatory high-frequency input bypass; count both in energy",
+      "governing_equation": "Ecin=0.5*Ctotal*Vin^2",
+      "status": "CONDITIONAL; lands/effective C OPEN",
+      "source": "PASSIVES"
+    },
+    {
+      "id": "S02-04",
+      "sheet": "02",
+      "refdes": [
+        "U201",
+        "R202",
+        "R203"
+      ],
+      "old": "U201: LM61460AANRJRR / LM61460AANRJRR; R202: OPEN / 100k; R203: OPEN / 24.4k",
+      "new_mpn": "LM61460AANRJRR; TNPW0603100KBEEA; TNPW060324K4BEEA",
+      "new_value_or_connection": "retain local 100k/24.4k regulation and nominal 5.098361 V; real resistor candidates",
+      "reason": "No setpoint increase or remote-sense change",
+      "governing_equation": "Vout=Vfb(1+Rt/Rb)+Ifb*Rt; Ifb max OPEN",
+      "status": "RETAIN topology; full regulation bound OPEN",
+      "source": "PATH"
+    },
+    {
+      "id": "S02-05",
+      "sheet": "02",
+      "refdes": [
+        "C209",
+        "C210",
+        "C211",
+        "C212",
+        "C213",
+        "C214",
+        "C330",
+        "C331",
+        "C332",
+        "C333",
+        "C334",
+        "C335",
+        "C336",
+        "C337"
+      ],
+      "old": "C209: C5750X7R1H226M250KB / 22uF 50V; C210: C5750X7R1H226M250KB / 22uF 50V; C211: C5750X7R1H226M250KB / 22uF 50V; C212: C5750X7R1H226M250KB / 22uF 50V; C213: C5750X7R1H226M250KB / 22uF 50V; C214: C5750X7R1H226M250KB / 22uF 50V; C330: PCH1V471MCL1GS / 470uF 35V; C331: PCH1V471MCL1GS / 470uF 35V; C332: PCH1V471MCL1GS / 470uF 35V; C333: PCH1V471MCL1GS / 470uF 35V; C334: PCH1V471MCL1GS / 470uF 35V; C335: PCH1V471MCL1GS / 470uF 35V; C336: PCH1V471MCL1GS / 470uF 35V; C337: PCH1V471MCL1GS / 470uF 35V",
+      "new_mpn": "retain C5750X7R1H226M250KB and PCH1V471MCL1GS",
+      "new_value_or_connection": "all existing raw output banks remain on VOUT_5V1",
+      "reason": "PR15 identities preserved; count raw bank bypass of L201",
+      "governing_equation": "Eraw=0.5*(5.4144mF+182.16uF)*5.5^2=84.647970mJ screen",
+      "status": "RETAIN; hot ESR/effective C/stability OPEN",
+      "source": "PR15/G3B"
+    },
+    {
+      "id": "S02-06",
+      "sheet": "02",
+      "refdes": [
+        "TP201",
+        "TP202",
+        "JP201"
+      ],
+      "old": "TP201: NEW; TP202: NEW; JP201: NEW",
+      "new_mpn": "N/A etched Kelvin pads; fixture link MPN OPEN",
+      "new_value_or_connection": "VIN_PROTECTED and both L201 ends with paired GND; removable injection connection",
+      "reason": "Measure L voltage and current; inject actual high-side fault at buck switch node",
+      "governing_equation": "Ldiff=(VL-I*DCR)/(dI/dt)",
+      "status": "HOOK requirement; physical fixture OPEN",
+      "source": "HOOKS"
+    },
+    {
+      "id": "S03-01",
+      "sheet": "03",
+      "refdes": [
+        "Q301",
+        "Q302",
+        "U301"
+      ],
+      "old": "Q301: BSC034N06NSATMA1 / BSC034N06NSATMA1; Q302: BSC034N06NSATMA1 / BSC034N06NSATMA1; U301: LTC7001IMSE#PBF / LTC7001IMSE#PBF",
+      "new_mpn": "BSC034N06NSATMA1 x2; LTC7001IMSE#PBF",
+      "new_value_or_connection": "Retain common-source Q301/Q302 pair. U301 MSE10:1VCC=DRV_HOLD;2VCCUV=GND (inherited low UVLO, NOT a10.5V valid-rail monitor);3GND and EP11=GND;4INP=RUN_GATE;5OVLO=GND;6TGDN=PROT_GATE;7TGUP->R304100ohm->PROT_GATE;8TS=PROT_MID;9BST=PROT_BST;10NC. C301 BST-to-TS and D302 DRV_HOLD-to-BST per S03-17. Existing C30610uF/C3091uF bypass DRV_HOLD; local placement/decoupling reviewed at capture. F2-07 isolated test coupon straps drains toTS only for DC load-line testing.",
+      "reason": "Owner selected D series disconnect; retain raw/protected boundary",
+      "governing_equation": "Rpair_hot screen=13.6mOhm; VGS>=10 V TARGET",
+      "status": "Retained pin map explicit; T04L DC gate-load test, T04/T08 loaded interruption, T15 independent rail-loss ownership still required",
+      "source": "G3B/PATH"
+    },
+    {
+      "id": "S03-02",
+      "sheet": "03",
+      "refdes": [
+        "U302",
+        "U303",
+        "R301",
+        "R302",
+        "R303",
+        "R373"
+      ],
+      "old": "U302: REF5025IDGKR / REF5025 2.5V DATASHEET; U303: TLV3201AIDBVR / TLV3201AIDBVR; R301: Resistor_specification / 11.3k; R302: Resistor_specification / 10.0k; R303: Resistor_specification / 1.00k",
+      "new_mpn": "REF5025IDGKR; TLV3201AIDBVR; TNPW06039K88BEEA; TNPW060310K0BEEA; TNPW06031K00BEEA; R373 TNPW06031K00BEEA",
+      "new_value_or_connection": "R301 9.88k VOUT_5V1-to-OV_DIV; R302 10.0k OV_DIV-to-GND; U321 switch then R3031k to U303.4 SENSE; R373 1k REF_2V5-to-REF_SENSE; U303.3=REF_SENSE; R367100k SENSE-to-GND; nominal trip5.266700V before Ron/leakage",
+      "reason": "R4A-06 resume correction: 10k top resistor exceeded 5.38V conditional overdrive allocation; reduce R301 to 9.88k with the same 0.1%/25ppm screen; limit retained reference-capacitor injection into IN+ on DET5 loss",
+      "governing_equation": "G=(1+(R303+Ron)/R367)*(1+R301/R302)+R301/R367; Vtrip=(Vref+Vos+H)*G+Ileak*((R303+Ron)*(1+R301/R302)+R301); I_INplus<=2.525V/997.5ohm=2.53133mA; added bias error<=5nA*1002.5ohm",
+      "status": "R4A-06 arithmetic CORRECTED; detector pin/current/settling qualification T06",
+      "source": "G2C/PASSIVES"
+    },
+    {
+      "id": "S03-03",
+      "sheet": "03",
+      "refdes": [
+        "D301",
+        "U321",
+        "D321",
+        "D322",
+        "R361",
+        "R367",
+        "C364",
+        "R370"
+      ],
+      "old": "D301: BAS116,215 / BAS116,215; U321: NEW; D321: NEW; R361: NEW",
+      "new_mpn": "BAS116,215 x2; ADG4612BRUZ; LM4040A25IDBZR; TNPW060368K1BEEA; TNPW0603100KBEEA; GRM188R71H104KA93D; TNPW060310K0BEEA",
+      "new_value_or_connection": "D301 anode OV_DIV cathode CLAMP_2V5; D321 cathode CLAMP_2V5 anode GND; R36168.1k DRV_HOLD-to-CLAMP_2V5; U321 VDD=DET5, GND/VSS=GND, channel1 DIV-to-R303; R367100k SENSE-to-GND; D322 BAS116 anode GND cathode OV_DIV; C364100nF DET5-to-GND; R37010k DET5 bleed",
+      "reason": "Existing reference must not absorb fault current while off",
+      "governing_equation": "R367 fully-off DC bound=3uA*100.25k=0.30075V; R361 bias>80uA; negative pin current limited by R303, <=10mA device absolute limit",
+      "status": "Selected isolated detector candidate; T06L/T06 partial-power/settling acceptance before integrated use; 85C D321 ceiling; system interlock separate",
+      "source": "M03"
+    },
+    {
+      "id": "S03-04",
+      "sheet": "03",
+      "refdes": [
+        "U304",
+        "U309",
+        "U305",
+        "U310",
+        "U311",
+        "U312",
+        "U313",
+        "U314",
+        "U320",
+        "C371"
+      ],
+      "old": "U304: SN74LVC1G74DCTR / SN74LVC1G74DCTR; U309: SN74LVC1G74DCTR / SN74LVC1G74DCTR; U305: SN74LVC1G11DBVR / SN74LVC1G11DBVR; U310: SN74LVC1G11DBVR / SN74LVC1G11DBVR; U311: SN74LVC1G11DBVR / SN74LVC1G11DBVR; U312: SN74LVC1G08DBVR / SN74LVC1G08DBVR; U313: SN74LVC1G14DBVR / SN74LVC1G14DBVR; U314: SN74LVC1G17DBVR / SN74LVC1G17DBVR",
+      "new_mpn": "retain SN74LVC1G74DCTR and listed LVC logic; add independent fault latch U320 SN74LVC1G74DCTR; GRM188R71H104KA93D",
+      "new_value_or_connection": "split OV_FAULT from ARM/RUN and BUCK_PGOOD; manual reset cannot reconnect pre-existing fault; U320DCT8 pin1CLK=GND,2D=GND,3/Q=NC,4GND,5Q=FAULT,6/CLR=RESET_SAFE_N,7/PRE=FAULT_SET_N,8VCC=DET5; reset/set arbitration circuit remains OPEN; C371100nF U320.8-to-.4",
+      "reason": "PG loss only opens series path; true OV latches source-off/crowbar; fresh ARM edge required",
+      "governing_equation": "RUN=ARMED & RAILS_VALID & PG & !FAULT; CROWBAR=FAULT & DRIVE_VALID",
+      "status": "BLOCKED pin-level truth-table realization/races; functional truth table supplied",
+      "source": "COMMON"
+    },
+    {
+      "id": "S03-05",
+      "sheet": "03",
+      "refdes": [
+        "R316",
+        "R317",
+        "U319",
+        "U324",
+        "C360",
+        "C361",
+        "R368",
+        "R369",
+        "U325",
+        "U326",
+        "C362",
+        "C363",
+        "R394",
+        "R395"
+      ],
+      "old": "R316: Resistor_specification / 10k; R317: Resistor_specification / 10k; U319: NEW",
+      "new_mpn": "TNPW060310K0BEEA x2; SN74AHCT1G125DBVR x2; GRM188R71H104KA93D x2; TNPW0603100KBEEA x2; SN74LVC1G17DBVR x2; GRM188R71H104KA93D x2; R394/R395 TNPW060310K0BEEA",
+      "new_value_or_connection": "R316/R317 10k PG pull-ups to 3V3_AUX; U319/U324 separate DBV5 buffers: 1 OE=GND, 2 A=DET_PG_FAST / BUCK_PG_FAST, 3 GND, 4 Y=DET_PG_5 / BUCK_PG_5, 5 VCC=DET5; C360/C361 100nF pins5-3; R368/R369 100k output-to-GND. All output receivers powered by DET5; no external output pull-up; U325/U326 PG-edge conditioners at3V3_AUX, DBV5:1NC,2A=DET_PG/BUCK_PG,3GND,4Y=*_FAST,5VCC; C362/C363100nF local bypass; prevents slow10k PG pullup directly entering AHCT; R39410k U325.4/U319.2 DET_PG_FAST-to-GND; R39510k U326.4/U324.2 BUCK_PG_FAST-to-GND. AHCT INPUT pulldowns distinct from R368/R369 output pulldowns.",
+      "reason": "TPS7A16 PG recommended ceiling5V; 3.3V not guaranteed LVC high at5V; define AHCT input at AUX3V3=0 using LVC Ioff plus AHCT input leakage",
+      "governing_equation": "VIH=2V,VIL=0.8V; VCC valid 4.5..5.5V; Ioff NOT specified; partial-supply T03/T15; F2-10 Voff_screen=(10+1+1)uA*10k*1.0025=0.1203V; partial-rail/slow-edge action remains OPEN",
+      "status": "R4A-03 identity/pins corrected; F2-10 fully-off input DC bias selected; T03A slew/brownout and full T15 remain BLOCKED",
+      "source": "FIX-AHCT / FIX_RESOLUTIONS R4A-03"
+    },
+    {
+      "id": "S03-06",
+      "sheet": "03",
+      "refdes": [
+        "Q304",
+        "Q305",
+        "R324",
+        "R325",
+        "Q306",
+        "R326",
+        "D305"
+      ],
+      "old": "Q304: 2N7002,215 / 2N7002,215; Q305: NEW; R324: NEW; R325: NEW",
+      "new_mpn": "2N7002,215 x3; TNPW0603100KBEEA x3; BZT52H-C10,115",
+      "new_value_or_connection": "Q305 drainSHDN/sourceGND;gate100k toVIN_FUSED and100k toGND plus10V zener;Q306 pulls gate low only with valid latched MAIN_PERMISSION;Q304 independent fault sink retained;R326100k holds Q306 gate toGND when permission unpowered",
+      "reason": "Unpowered logic must not release main eFuse into a persistent failed buck",
+      "governing_equation": "Vg_unclamped=Vin/2; at9V=4.5V; SHDNlow<=VIL; zener, Ipin and partial supplies OPEN",
+      "status": "BLOCKED exact transistor polarity/loading proof",
+      "source": "COMMON"
+    },
+    {
+      "id": "S03-07",
+      "sheet": "03",
+      "refdes": [
+        "R305",
+        "R307",
+        "R321",
+        "R322"
+      ],
+      "old": "R305: Resistor_specification / 2.2M; R307: Resistor_specification / 10k; R321: Resistor_specification / 100k; R322: Resistor_specification / 100k",
+      "new_mpn": "TNPW12062M00BEEA; TNPW060310K0BEEA; TNPW0603100KBEEA x2",
+      "new_value_or_connection": "R305 2.00Mohm 0.1%25ppm 1206 between common series gate and PROT_MID/TS; R30710k protected crowbar gate-source; R321/R322100k command default-low",
+      "reason": "Passive gates default off without powered logic",
+      "governing_equation": "Ibleed_max=VGS/(2M*0.9975)=5.013uA at10V; 7.018uA at14V; active driver handles fast turn-off",
+      "status": "R4A-04 DC overload reduced; loaded continuous VGS and rail-loss turn-off T04 REQUIRED",
+      "source": "COMMON"
+    },
+    {
+      "id": "S03-08",
+      "sheet": "03",
+      "refdes": [
+        "Q303",
+        "U315",
+        "R306",
+        "R308",
+        "R309",
+        "R310",
+        "R311"
+      ],
+      "old": "Q303: CSD18540Q5B / CSD18540Q5B; U315: UCC27511DBVR / UCC27511DBVR; R306: Resistor_specification / 1.00; R308: WFMB2512R0330FEA / 0.033; R309: WFMB2512R0330FEA / 0.033; R310: WFMB2512R0330FEA / 0.033; R311: WFMB2512R0330FEA / 0.033",
+      "new_mpn": "CSD18540Q5B; UCC27511DBVR; CRCW06031R00FKEA; WFMB2512R0330FEA x4",
+      "new_value_or_connection": "retain protected-side drain ballast: two 66mOhm strings in parallel =33mOhm; change driver rail to held12V",
+      "reason": "Keep selected crowbar function; enforce <=85C terminals before pulse",
+      "governing_equation": "Rballast=(R308+R309)||(R310+R311); Ej=integral(ij^2 Rj dt)",
+      "status": "OWNER SELECTED; hot SOA/pulse/sharing OPEN; 95C terminal absolute design ceiling",
+      "source": "G1D/G3B"
+    },
+    {
+      "id": "S03-09",
+      "sheet": "03",
+      "refdes": [
+        "Q330",
+        "U330",
+        "R380",
+        "R381",
+        "R382",
+        "R383",
+        "R384",
+        "R385",
+        "D330",
+        "D331",
+        "C367",
+        "C368",
+        "R386",
+        "R387",
+        "R388",
+        "R389",
+        "R390",
+        "R391",
+        "R392",
+        "R393"
+      ],
+      "old": "Q330: NEW; D330: NEW; R380: NEW",
+      "new_mpn": "CSD18540Q5B; UCC27511DBVR; WFMB2512R0330FEA x12; CRCW06031R00FKEA; TNPW060310K0BEEA; STPS60H100CT x2; GRM21BR71E105KA99L; GRM188R71H104KA93D",
+      "new_value_or_connection": "Raw VOUT_5V1 -> R380 -> R381 -> R382 -> R383 -> R386 -> R387 -> Q330 drain, in parallel with VOUT_5V1 -> R388 -> R389 -> R390 -> R391 -> R392 -> R393 -> Q330 drain. Each ballast33mOhm1%; two198mOhm strings give99mOhm. Q330 sourceGND. U330DBV6:1VDD=DRV_HOLD,2OUTH->R3841ohm->Q330gate,3OUTL=Q330gate,4GND=Q330sourceKelvin,5IN-=GND,6IN+=DISPOSAL; R38510k gate-source; C3671uF/C368100nF pins1-4. D330 pins1/3 anodesGND pin2/tab cathodeVOUT_5V1; D331 identical to VOUT_PROTECTED.",
+      "reason": "Independent raw dump; published WFM pulse curves apply only to33mOhm; retire the100mOhm-element candidate",
+      "governing_equation": "Rdump=(6*33mOhm)||(6*33mOhm)=99mOhm; independent1%+50ppm/K*70K corners:97.6635..100.3365mOhm; Ej=Epool*(Rj/Sbranch^2)/(1/Sa+1/Sb), max8.606573mJ",
+      "status": "T09A/B/C required: coupled-bank pool174.086483mJ at effective dummyC<=2.2mF,15.003120mJ/raw resistor screen; hot pulse/SOA/negative waveform unqualified",
+      "source": "RAW_DUMP"
+    },
+    {
+      "id": "S03-10",
+      "sheet": "03",
+      "refdes": [
+        "C340",
+        "C341",
+        "C342",
+        "C343"
+      ],
+      "old": "C340: NEW; C341: NEW; C342: NEW; C343: NEW",
+      "new_mpn": "Nichicon PCH1V471MCL1GS x4, candidate only",
+      "new_value_or_connection": "C340..343 PCH1V471MCL1GS x4 from VOUT_PROTECTED(+) to GND(-), measurement candidate only; explicitly1.88mF nominal/3.5mOhm catalog parallel ESR, no inherited1.5mF/0.5mOhm claim",
+      "reason": "An actual protected receiving bank is absent from original export",
+      "governing_equation": "Ceff_min=4*470uF*0.8*0.8=1203.2uF sensitivity;Cmax=2707.2uF; published14mOhm/4=3.5mOhm20C100kHz",
+      "status": "Selected test candidate only; T10 full far-end test after T12/ratings; failed legacy sensitivity retained; actual peak and energy partition OPEN",
+      "source": "PR15/G3B"
+    },
+    {
+      "id": "S03-11",
+      "sheet": "03",
+      "refdes": [
+        "D303",
+        "U316",
+        "Q316",
+        "R330",
+        "R331",
+        "R332",
+        "R333",
+        "C350",
+        "C378"
+      ],
+      "old": "D303: BAT46W-E3-08 / BAT46W-E3-08; U316: NEW; Q316: NEW; R330: NEW; R331: NEW; R332: NEW; R333: NEW; C350: NEW",
+      "new_mpn": "BAT46W-E3-08; LT4363HMS-1#PBF; FDB33N25TM; TNPW0603100KBEEA; TNPW06034K32BEEA; WSL2512R3300FEA; CRCW060310R0FKEA; C1608C0G1H103J080AA; C378 GRM32ER72A105KA01L",
+      "new_value_or_connection": "VIN_FUSED -> D303 -> AUX_RAW -> Q316 drain/source AUX_SNS -> R332 0.33ohm -> AUX_LIMITED. U316 MS12:1 FB=R330/R331,2 OUT=AUX_LIMITED,3 SNS=AUX_SNS,4 GATE->R33310ohm->Q316G,5 VCC=AUX_RAW,6 SHDN=AUX_RAW,7/9 GND,8 UV=AUX_RAW,10 FLT NC,11 ENOUT=AUX_RUN,12 TMR=C35010nF toGND. R330100k AUX_LIMITED-to-FB;R3314.32k FB-toGND. C3781uF100V AUX_RAW-toGND.",
+      "reason": "Bound AUX <=35V before its existing LDO EN and cap; branch remains upstream of U101",
+      "governing_equation": "Vclamp=VFB*(1+100k/4.32k)+IFB*100k; current-limit nominal151.515mA; tOC=C350*(Voff-Vstart)/ITMR, NOT C350*Voff/ITMR",
+      "status": "10nF SELECTED for isolated test coupon with U327 slow hold charging; T07A startup/SOA and T14A surge are pre-energization acceptance; no whole-board release",
+      "source": "LT4363/ON"
+    },
+    {
+      "id": "S03-12",
+      "sheet": "03",
+      "refdes": [
+        "C307",
+        "R323",
+        "U306",
+        "U307",
+        "R314",
+        "R315"
+      ],
+      "old": "C307: Capacitor_specification / 1uF 50V; R323: Resistor_specification / 10k; U306: TPS7A1601DGNR / TPS7A1601DGNR; U307: TPS7A1601DGNR / TPS7A1601DGNR; R314: Resistor_specification / 53.9k; R315: Resistor_specification / 10.0k",
+      "new_mpn": "GRM21BR71H105KA12L; CRCW120610K0FKEA; TPS7A1601DGNR retained U306; U307 DNP",
+      "new_value_or_connection": "C3071uF50V and R32310k at AUX_LIMITED; U306 IN AND EN both from DRV_HOLD; U307/divider DNP in new driver path; EN must not exceed IN",
+      "reason": "58.1V raw branch violates EN/C307/R323; higher driver rail needed at9V",
+      "governing_equation": "P_R323=Vaux^2/Rmin; P_U306=(Vhold-5V)*I; dropout/thermal OPEN",
+      "status": "CONDITIONAL; U307 removed only in future capture",
+      "source": "TPS7A16"
+    },
+    {
+      "id": "S03-13",
+      "sheet": "03",
+      "refdes": [
+        "U317",
+        "L301",
+        "R340",
+        "R341",
+        "R342",
+        "R343",
+        "R344",
+        "C351",
+        "C352",
+        "C353",
+        "C354",
+        "C355",
+        "C356",
+        "C357",
+        "C377",
+        "C379",
+        "C380",
+        "R345",
+        "R346"
+      ],
+      "old": "U317: NEW; L301: NEW; R340: NEW; R341: NEW; R342: NEW; R343: NEW; R344: NEW; C351: NEW; C352: NEW; C353: NEW; C354: NEW; C355: NEW; C356: NEW",
+      "new_mpn": "LTC3115IFE-1#PBF; Wurth7447789004; TNPW08051M00BEEA; TNPW060390K9BEEA; TNPW060323K7BEEA; TNPW060315K0BEEA x2; C3216X7R1H475K160AB; GRM32ER71H106KA12L; GRM21BR71E475KA73L; GRM188R71H104KA93D x2; C1608C0G1H102J080AA; GRM1885C1H330JA01D; C377 GRM32ER71H106KA12L; C379 GRM21BR71E475KA73L; C380 GRM188R71H104KA93D; R345 TNPW0805383KBEEA; R346 TNPW0603100KBEEA",
+      "new_value_or_connection": "U317 FE20:1/10/11/20/EP21PGND,2RUN=AUX_RUN (R345383k from AUX_LIMITED, R346100k toGND, U316.11 ENOUT directly to AUX_RUN),3SW2=L301B,4PVOUT=AUX_12V,5/6signalGND,7VC,8FB,9RT viaR34223.7k toGND,12VCC=14PVCC,13VIN=17PVIN=AUX_LIMITED,15BST2 viaC355100nF toSW2,16BST1 viaC354100nF toSW1,18SW1=L301A,19PWM/SYNC=GND. C3514.7uF input; C352/C377 each10uF output; C353/C379 each4.7uF internalVCC-toGND; C380100nF VIN-toGND. R3401M AUX_12V-to-FB/R34190.9k FB-toGND. R34315k U317.7 VC-to-AUX_COMP; C3561nF AUX_COMP-to-U317.8 FB. R34415k AUX_12V-to-AUX_FF; C35733pF AUX_FF-to-U317.8 FB. Neither branch returns to GND. CPOLE not populated; compensation follows ADI RevE equations/TA07 values; full loop qualification T07E.",
+      "reason": "Buck-boost avoids failed9V cascaded LDO dropout; upstream eFuse independence",
+      "governing_equation": "RUNrise=VTH*(1+R345/R346)+Ileak*R345; +/-0.25% R and +/-3uA qualification allocation; Hcomp=-[R343+1/(s*C356)]/[R340||(R344+1/(s*C357))]; V12 and stability T07E",
+      "status": "RUN and compensation nets selected; T07E leakage/loop/startup qualification, effective Cout10..26uF/CVCC>=4.7uF; fast rail-loss construction remains OPEN",
+      "source": "ADI LTC3115-1 RevE pp3,16-17,24-25,38; LT4363 RevC p4; F2-05"
+    },
+    {
+      "id": "S03-14",
+      "sheet": "03",
+      "refdes": [
+        "D304",
+        "C358",
+        "C359",
+        "U318",
+        "C365",
+        "C366"
+      ],
+      "old": "D304: NEW; C358: NEW; C359: NEW; U318: NEW",
+      "new_mpn": "B260-13-F; Panasonic EEUFR1E221 x2; TPS70933DBVR; GRM21BR71E105KA99L; GRM21BR71E475KA73L",
+      "new_value_or_connection": "AUX_12V -> D304 A/K -> AUX_PREHOLD -> U327 IN/OUT -> DRV_HOLD; C358/C3592x220uF25V at DRV_HOLD. U318 DBV5:1IN=DRV_HOLD,2GND,3EN NC,4NC,5OUT=3V3_AUX; C3651uF input/C3664.7uF output. D304 is retained reverse-blocking, never bypassed.",
+      "reason": "Driver/detector survive input removal and main eFuse OFF; block reverse draining",
+      "governing_equation": "thold=(Ceff*(Vstart-Vfloor)-Qgate)/Icontrol; TARGET Ceff>=300uF,I<=40mA,>=1ms",
+      "status": "Slew-controlled hold charger selected in S03-18; T07 hold/loaded rails and T15 interlock required",
+      "source": "HOLD"
+    },
+    {
+      "id": "S03-15",
+      "sheet": "03",
+      "refdes": [
+        "U322",
+        "U323",
+        "R362",
+        "R363",
+        "R364",
+        "R365",
+        "R371",
+        "R372",
+        "C369",
+        "C370"
+      ],
+      "old": "U322: NEW; U323: NEW; R362: NEW; R363: NEW; R364: NEW; R365: NEW",
+      "new_mpn": "TPS3808G01DBVR x2; TNPW0603249KBEEA; TNPW060310K0BEEA; TNPW0603100KBEEA; TNPW060310K0BEEA; TNPW060310K0BEEA x2; GRM188R71H104KA93D x2",
+      "new_value_or_connection": "R362249k/R36310k DRV_HOLD-to-SENSE-to-GND; R364100k/R36510k DET5-to-SENSE-to-GND; each supervisor VDD=3V3_AUX; proposed startup qualification only, not fast power-loss action; DBV6 each:1RESET_N via10k toDET5,2GND,3MR=3V3_AUX,4CT=NC20ms mode,5SENSE divider,6VDD=3V3_AUX; C369/C370100nF local supply bypass",
+      "reason": "Actual loaded rails must meet detector/driver timing conditions; include maximum3% hysteresis in rising/startup threshold",
+      "governing_equation": "Vfall=VIT*(1+Rt/Rb) +/- Ibias*Rt; calculated corners in FIX_CALCULATIONS; TPS3808 sense delay maximum unspecified; Vrise_max<=1.03*Vfall_max=4.704333V for100k/10k; old110k gives5.132216V",
+      "status": "R4A-07 falling/rising threshold arithmetic corrected; monitors are startup/state only; fast rail-loss ownership T07/T15 BLOCKED",
+      "source": "TPS3808"
+    },
+    {
+      "id": "S03-16",
+      "sheet": "03",
+      "refdes": [
+        "TP306",
+        "TP307",
+        "TP308",
+        "TP309",
+        "TP310",
+        "TP311",
+        "TP312"
+      ],
+      "old": "TP306: NEW; TP307: NEW; TP308: NEW; TP309: NEW; TP310: NEW; TP311: NEW; TP312: NEW",
+      "new_mpn": "N/A etched paired sense pads",
+      "new_value_or_connection": "OV_DIV, comparator output, OV_FAULT, CROWBAR_GATE-SOURCE,DRV_HOLD,DET5,SHDN; current-probe force links separate",
+      "reason": "Measure complete B02 endpoints without ground-lead artifacts",
+      "governing_equation": "t=physical current/clamp endpoint - specified fault-onset threshold; deskew uncertainty",
+      "status": "HOOKS; probe-loading qualification OPEN",
+      "source": "HOOKS"
+    },
+    {
+      "id": "S04-01",
+      "sheet": "04",
+      "refdes": [
+        "R401",
+        "U401"
+      ],
+      "old": "R401: WSL27262L000FEA / 2mOhm KELVIN; U401: INA228AIDGSR / INA228AIDGSR",
+      "new_mpn": "WSL27262L000FEA; INA228AIDGSR",
+      "new_value_or_connection": "retain2mOhm Kelvin and monitor; annotate max current/energy fault waveform",
+      "reason": "No telemetry relocation or shunt value saving hidden in path",
+      "governing_equation": "Vshunt=I*0.002; P=I^2*0.002; E=integral(I^2 R dt)",
+      "status": "RETAIN; accuracy and pulse survival OPEN",
+      "source": "PR15"
+    },
+    {
+      "id": "S04-02",
+      "sheet": "04",
+      "refdes": [
+        "TP402",
+        "TP403",
+        "R402",
+        "R403",
+        "C401"
+      ],
+      "old": "TP402: N/A etched copper / SHUNT_KPLUS; TP403: N/A etched copper / SHUNT_KMINUS; R402: OPEN / 10; R403: OPEN / 10; C401: OPEN / 100nF 50V",
+      "new_mpn": "N/A etched; TNPW060310R0BEEA x2; GRM188R71H104KA93D",
+      "new_value_or_connection": "retain10ohm symmetric filter100nF differential and Kelvin pads; add force-node/GND sense pads TP405/406",
+      "reason": "Sense pairs carry no load current and must not become alternate fault power paths",
+      "governing_equation": "fc=1/(2*pi*(R402+R403)*C401)=79.6kHz; injection/leakage OPEN",
+      "status": "CONDITIONAL MPNs; check placement/currents at capture",
+      "source": "PR15"
+    },
+    {
+      "id": "S04-03",
+      "sheet": "04",
+      "refdes": [
+        "U402",
+        "U403",
+        "R404",
+        "R405",
+        "R406",
+        "R407",
+        "R408"
+      ],
+      "old": "U402: TPS70933DBVR / TPS70933DBVR; U403: TCA9517DGKR / TCA9517DGKR; R404: OPEN / 10k; R405: OPEN / 10k; R406: OPEN / 4.7k; R407: OPEN / 4.7k; R408: OPEN / 10k",
+      "new_mpn": "TPS70933DBVR; TCA9517DGKR; TNPW060310K0BEEA x3; TNPW06034K70BEEA x2",
+      "new_value_or_connection": "retain separate local/host domains; do not use3V3_LOCAL as protection-supply permission; host disconnected during first faults",
+      "reason": "No Pi/I2C backpower around output disconnect",
+      "governing_equation": "Ioff/Vpin across host-only/local-only states within datasheets",
+      "status": "RETAIN; domain bench tests OPEN",
+      "source": "PR15"
+    },
+    {
+      "id": "S04-04",
+      "sheet": "04/05 interface",
+      "refdes": [
+        "J502",
+        "J503",
+        "JP501"
+      ],
+      "old": "J502: 1776508 / LOAD OUTPUT; J503: B4B-XH-A(LF)(SN) / HOST I2C; JP501: NEW",
+      "new_mpn": "Phoenix 1776508 + 1777989 (J502); JST B4B-XH-A(LF)(SN) (J503)",
+      "new_value_or_connection": "J502.1 LOAD_5V1; J502.2 GND; solution A from connector commit 41cb9e8. J503 retains telemetry pin map; JP501 force-link selection remains separate.",
+      "reason": "Do not pre-empt separate J502 selection; its resistance is an allocation, not a selected-part bound",
+      "governing_equation": "Rloop=sum(Rsend+Rreturn); Vpi=Vbuck_min-I*Rloop-Vtrough",
+      "status": "SELECTED FOR TEST candidate; <=3.12 mOhm per complete hot pole is T11 acceptance, not catalog guarantee",
+      "source": "41cb9e8 docs/evidence/r2/J502_SELECTION.md solution A"
+    },
+    {
+      "id": "S04-05",
+      "sheet": "04/05 interface",
+      "refdes": [
+        "HARNESS"
+      ],
+      "old": "HARNESS: NEW",
+      "new_mpn": "TE 3-87456-6 housing; 10x TE 87309-9 sockets; Belden 8502 002100 / 010100 branches; Belden 8521 002100 / 010100 trunks",
+      "new_value_or_connection": "75 mm AWG16 trunks; 2x15 mm positive and 8x35 mm return AWG20 pigtails; Pi physical +2/4, GND6/9/14/20/25/30/34/39. Power-only full housing; reviewed indexed carrier and welded fanouts required.",
+      "reason": "Adopt completed J502 solution A; supersede Harwin/8503 proposal without importing E or 6 mOhm pair",
+      "governing_equation": "Rloop_D=34.255546+7.6=41.855546 mOhm; Vfar_20mV=4.796866 V; Imax=5r/(1+r), r<=1.05 gives 2.560976 A",
+      "status": "SELECTION COMPLETE; hot mixed-mate rating, <=20 mOhm combined pin block and <=0.5 mOhm/polarity splices T11; no Pi release",
+      "source": "41cb9e8 J502_SELECTION and third_party/j502_selection/SOURCES.json"
+    },
+    {
+      "id": "S03-17",
+      "sheet": "03",
+      "refdes": [
+        "R312",
+        "R313",
+        "C301",
+        "C302",
+        "D302"
+      ],
+      "old": "R312: generic31.9k; R313: generic10k; C302: generic1uF16V; D302:BAS116,215",
+      "new_mpn": "TNPW060331K9BEEA; TNPW060310K0BEEA; C301 GRM21BR71E105KA99L; C302 GRM21BR71E475KA73L; BAS116,215",
+      "new_value_or_connection": "C301 1uF25V BST-to-TS (U301.9-to-.8); C302 separate 4.7uF25V, effective 1..50uF required, REF_2V5-to-GND; R31231.9k/R31310k retain DET5 divider; D302 anode DRV_HOLD cathode PROT_BST, pin2 NC",
+      "reason": "Real passives and bootstrap voltage margin needed for M01; REF5025 output capacitance must remain within 1..50uF after bias/tolerance",
+      "governing_equation": "Cboot_eff>=Qg_pair/deltaV; for82nC/0.5uF,deltaV=0.164V; C302 is NOT bootstrap; old C302 initial minimum0.9uF<1uF; new initial minimum4.23uF, effective capacitance T06",
+      "status": "R4A-05 refdes CORRECTED; C301 DC-bias and loaded-bootstrap T04",
+      "source": "TPS7A16/HOLD"
+    },
+    {
+      "id": "S01-07",
+      "sheet": "01/03 interface",
+      "refdes": [
+        "FAULT_TRIGGER"
+      ],
+      "old": "No independently qualified high-side-short discriminator",
+      "new_mpn": "OPEN; no claimed selected part",
+      "new_value_or_connection": "require independent bounded fault-onset trigger for TPS26630 source isolation; fixture-timed cutoff is separate conditional test mode only",
+      "reason": "Bulk charging can delay raw OV beyond10us source contract",
+      "governing_equation": "tSRC=trigger+logic+SHDN+TPS+commutation<=10us; integral(Iin_positive)dt<=100uC",
+      "status": "BLOCKED R4A-01: no proved autonomous trigger. T01 is conditional on a reviewed implementation, not closure by itself",
+      "source": "FIX_RESOLUTIONS R4A-01 / T01"
+    },
+    {
+      "id": "SXX-01",
+      "sheet": "01-04",
+      "refdes": [
+        "C103",
+        "R106",
+        "R107",
+        "R108",
+        "C205",
+        "C206",
+        "R201",
+        "R204",
+        "R205",
+        "R206",
+        "R207",
+        "C303",
+        "C304",
+        "C305",
+        "C306",
+        "C308",
+        "C309",
+        "C310",
+        "C311",
+        "C312",
+        "C313",
+        "C314",
+        "C315",
+        "C316",
+        "C317",
+        "C318",
+        "C319",
+        "C320",
+        "C321",
+        "C322",
+        "C323",
+        "C324",
+        "C325",
+        "R304",
+        "R318",
+        "R319",
+        "R320",
+        "C402",
+        "C403",
+        "C405",
+        "C406"
+      ],
+      "old": "Remaining generic PR15 passives (exact old rows in PASSIVE_COMPLETION.csv)",
+      "new_mpn": "Per-refdes exact selections in PASSIVE_COMPLETION.csv",
+      "new_value_or_connection": "Retain stated values; upgraded capacitor voltage/package as listed; old DRV_7V5 bypasses move to DRV_HOLD; superseded delay logic population requires T15 reconciliation",
+      "reason": "Remove anonymous passive procurement placeholders without claiming blanket assembly qualification",
+      "governing_equation": "Ceff and rated differential voltage; P=V^2/R; RC delays and regulator stability must retain intended function",
+      "status": "R4A-16 identity selections completed; full assembly approval/lands/fixture still OPEN",
+      "source": "PASSIVE_COMPLETION.csv / FIX_RESOLUTIONS R4A-16"
+    },
+    {
+      "id": "S03-18",
+      "sheet": "03",
+      "refdes": [
+        "U327",
+        "C374",
+        "C375",
+        "C376",
+        "R374",
+        "R375",
+        "R376",
+        "R377",
+        "R378",
+        "R379"
+      ],
+      "old": "NEW controlled hold-bank charging stage",
+      "new_mpn": "TPS259470LRPWR; C374/C375 GRM21BR71E105KA99L; C376 GRM188R71H104KA93D; R374 CRCW0603100RFKEA; R375 TNPW06036K49BEEA; R376/R378 TNPW0805365KBEEA; R377 TNPW060348K7BEEA; R379 TNPW060333K2BEEA",
+      "new_value_or_connection": "U327 RPW10:1EN dividerR376365k AUX_PREHOLD-to-EN/R37748.7k EN-toGND;2OVLO dividerR378365k AUX_PREHOLD-to-OVLO/R37933.2k OVLO-toGND;3AUXOFF NC testpad;4FLT NC testpad;5IN=AUX_PREHOLD;6OUT=DRV_HOLD;7DVDT->R374100ohm->C3741uF->GND;8GND;9ILM->R3756.49k->GND;10ITIMER NC. C3751uF IN-toGND,C376100nF OUT-toGND. C374 effective>=0.5uF at up to17.312V; no fast bypass fitted.",
+      "reason": "Decouple440uF held bank from U317 fixed soft-start; retain latch-off thermal variant and independent main-eFuse-off controls",
+      "governing_equation": "SRnom=2000/Cdvd[pF] V/ms=2V/s; qualified SR<=10V/s and Ccharged<=600uF -> Icap<=6mA; Icontrols<=40mA; Iaux_screen=(12.311325*(.046+.00061))/(.75*7.5)+.005=107.014375mA",
+      "status": "SELECTED test candidate; T07D measured slew/thermal/startup/hold qualification required; circuit values do not establish a hardware PASS",
+      "source": "TPS25947 SLVSFC9C May2026 pp5-12,29-30,37; F2-02"
+    },
+    {
+      "id": "SFX-01",
+      "sheet": "external fixture only",
+      "refdes": [
+        "RFD01",
+        "RFD02",
+        "RFD03",
+        "RFD04",
+        "RFD05",
+        "RFD06",
+        "RFD07",
+        "RFD08",
+        "RFD09",
+        "RFD10",
+        "RFD11",
+        "RFD12",
+        "JFD01",
+        "JFD02",
+        "JFD03",
+        "JFD04",
+        "JFD05",
+        "JFD06",
+        "JFD07",
+        "JFD08",
+        "JFD09",
+        "JFD10",
+        "JFD11",
+        "JFD12"
+      ],
+      "old": "No independently selected passive discharge branches",
+      "new_mpn": "RFD02/03/04 TNPW12061K00BEEA; RFD08/09 TNPW120647K0BEEA; all other RFD TNPW120610K0BEEA; JFD01..12 Phoenix1776508 header+1777989 plug per pair",
+      "new_value_or_connection": "Each standalone two-terminal adapter: JFD.n.1 -> RFDn -> JFD.n.2. n1 VIN_PROTECTED/GND;2 VOUT_5V1/GND;3 VOUT_PROTECTED/GND;4 FAR_5V/FAR_GND;5 DRV_HOLD/GND;6 AUX_12V/GND;7 AUX_PREHOLD/GND;8 AUX_LIMITED/GND;9 VIN_AUX/GND;10 DET5/GND;11 3V3_AUX/GND;12 REF_2V5/GND. No common fixture bus, especially no far-return bypass. Normally present during characterized tests; physical source disconnect remains separate OPEN work.",
+      "reason": "Discharge separated reservoirs without logic power or a functioning dump FET; no pulse-abort credit",
+      "governing_equation": "Ppeak=Vmax^2/Rmin; tisolated=Rmax*Cmax*ln(Vmax/.3); maximum isolated screen22.342672s; measure all stores<=.3V after source isolation, do not trust elapsed time alone",
+      "status": "Selected passive discharge adapters for T12D; full fixture source limiter/abort/disconnect/force path still BLOCKED",
+      "source": "F2-11; Vishay28758 10-Apr-2026; pinned J502 connector selection"
+    }
+  ]
+}

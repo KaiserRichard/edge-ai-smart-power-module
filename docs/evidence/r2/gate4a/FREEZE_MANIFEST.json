@@ -207,7 +207,7 @@
       ],
       "old": "Q301: BSC034N06NSATMA1 / BSC034N06NSATMA1; Q302: BSC034N06NSATMA1 / BSC034N06NSATMA1; U301: LTC7001IMSE#PBF / LTC7001IMSE#PBF",
       "new_mpn": "BSC034N06NSATMA1 x2; LTC7001IMSE#PBF",
-      "new_value_or_connection": "Retain common-source Q301/Q302 pair. U301 MSE10:1VCC=DRV_HOLD;2VCCUV=GND (inherited low UVLO, NOT a10.5V valid-rail monitor);3GND and EP11=GND;4INP=RUN_GATE;5OVLO=GND;6TGDN=PROT_GATE;7TGUP->R304100ohm->PROT_GATE;8TS=PROT_MID;9BST=PROT_BST;10NC. C301 BST-to-TS and D302 DRV_HOLD-to-BST per S03-17. Existing C30610uF/C3091uF bypass DRV_HOLD; local placement/decoupling reviewed at capture. F2-07 isolated test coupon straps drains toTS only for DC load-line testing.",
+      "new_value_or_connection": "Retain common-source Q301/Q302 pair. U301 MSE10:1VCC=DRV_HOLD;2VCCUV via new R711143k toGND (nominal10.01V UVLO backup; fast U603 monitor is separate);3GND and EP11=GND;4INP=RUN_GATE;5OVLO=GND;6TGDN=PROT_GATE;7TGUP->R304100ohm->PROT_GATE;8TS=PROT_MID;9BST=PROT_BST;10NC. C301 BST-to-TS and D302 DRV_HOLD-to-BST per S03-17. Existing C30610uF/C3091uF bypass DRV_HOLD; local placement/decoupling reviewed at capture. F2-07 isolated test coupon straps drains toTS only for DC load-line testing.",
       "reason": "Owner selected D series disconnect; retain raw/protected boundary",
       "governing_equation": "Rpair_hot screen=13.6mOhm; VGS>=10 V TARGET",
       "status": "Retained pin map explicit; T04L DC gate-load test, T04/T08 loaded interruption, T15 independent rail-loss ownership still required",
@@ -270,11 +270,11 @@
       ],
       "old": "U304: SN74LVC1G74DCTR / SN74LVC1G74DCTR; U309: SN74LVC1G74DCTR / SN74LVC1G74DCTR; U305: SN74LVC1G11DBVR / SN74LVC1G11DBVR; U310: SN74LVC1G11DBVR / SN74LVC1G11DBVR; U311: SN74LVC1G11DBVR / SN74LVC1G11DBVR; U312: SN74LVC1G08DBVR / SN74LVC1G08DBVR; U313: SN74LVC1G14DBVR / SN74LVC1G14DBVR; U314: SN74LVC1G17DBVR / SN74LVC1G17DBVR",
       "new_mpn": "retain SN74LVC1G74DCTR and listed LVC logic; add independent fault latch U320 SN74LVC1G74DCTR; GRM188R71H104KA93D",
-      "new_value_or_connection": "split OV_FAULT from ARM/RUN and BUCK_PGOOD; manual reset cannot reconnect pre-existing fault; U320DCT8 pin1CLK=GND,2D=GND,3/Q=NC,4GND,5Q=FAULT,6/CLR=RESET_SAFE_N,7/PRE=FAULT_SET_N,8VCC=DET5; reset/set arbitration circuit remains OPEN; C371100nF U320.8-to-.4",
+      "new_value_or_connection": "Old U304/U309/U305/U310..314/U320 and C371 DNP. Full replacement memory and gate pin netlist is FIX3_INTERLOCK.md U610..U639/U653..U658. NOFAULT async clear only; reset clocks diagnostic result; released-then-pressed ARM; PG-seen dropout latch.",
       "reason": "PG loss only opens series path; true OV latches source-off/crowbar; fresh ARM edge required",
       "governing_equation": "RUN=ARMED & RAILS_VALID & PG & !FAULT; CROWBAR=FAULT & DRIVE_VALID",
-      "status": "BLOCKED pin-level truth-table realization/races; functional truth table supplied",
-      "source": "COMMON"
+      "status": "CONCRETE replacement selected; physical timing/partial-power T15F3 NOT RUN",
+      "source": "FIX3_INTERLOCK.md"
     },
     {
       "id": "S03-05",
@@ -297,11 +297,11 @@
       ],
       "old": "R316: Resistor_specification / 10k; R317: Resistor_specification / 10k; U319: NEW",
       "new_mpn": "TNPW060310K0BEEA x2; SN74AHCT1G125DBVR x2; GRM188R71H104KA93D x2; TNPW0603100KBEEA x2; SN74LVC1G17DBVR x2; GRM188R71H104KA93D x2; R394/R395 TNPW060310K0BEEA",
-      "new_value_or_connection": "R316/R317 10k PG pull-ups to 3V3_AUX; U319/U324 separate DBV5 buffers: 1 OE=GND, 2 A=DET_PG_FAST / BUCK_PG_FAST, 3 GND, 4 Y=DET_PG_5 / BUCK_PG_5, 5 VCC=DET5; C360/C361 100nF pins5-3; R368/R369 100k output-to-GND. All output receivers powered by DET5; no external output pull-up; U325/U326 PG-edge conditioners at3V3_AUX, DBV5:1NC,2A=DET_PG/BUCK_PG,3GND,4Y=*_FAST,5VCC; C362/C363100nF local bypass; prevents slow10k PG pullup directly entering AHCT; R39410k U325.4/U319.2 DET_PG_FAST-to-GND; R39510k U326.4/U324.2 BUCK_PG_FAST-to-GND. AHCT INPUT pulldowns distinct from R368/R369 output pulldowns.",
+      "new_value_or_connection": "R316/R317 remain 10k pull-ups to3V3_AUX. U319/U324/U325/U326/C360..363/R368/R369/R394/R395 DNP. U607 at SAFE5 plus U651 powered-off isolation receives BUCK_PGOOD; independent U605 monitors AUX3V3. See FIX3_INTERLOCK.md.",
       "reason": "TPS7A16 PG recommended ceiling5V; 3.3V not guaranteed LVC high at5V; define AHCT input at AUX3V3=0 using LVC Ioff plus AHCT input leakage",
       "governing_equation": "VIH=2V,VIL=0.8V; VCC valid 4.5..5.5V; Ioff NOT specified; partial-supply T03/T15; F2-10 Voff_screen=(10+1+1)uA*10k*1.0025=0.1203V; partial-rail/slow-edge action remains OPEN",
-      "status": "R4A-03 identity/pins corrected; F2-10 fully-off input DC bias selected; T03A slew/brownout and full T15 remain BLOCKED",
-      "source": "FIX-AHCT / FIX_RESOLUTIONS R4A-03"
+      "status": "AHCT slow-collapse dependency removed; comparator/isolation and state timing T15F3",
+      "source": "FIX3_INTERLOCK.md"
     },
     {
       "id": "S03-06",
@@ -316,11 +316,11 @@
         "D305"
       ],
       "old": "Q304: 2N7002,215 / 2N7002,215; Q305: NEW; R324: NEW; R325: NEW",
-      "new_mpn": "2N7002,215 x3; TNPW0603100KBEEA x3; BZT52H-C10,115",
-      "new_value_or_connection": "Q305 drainSHDN/sourceGND;gate100k toVIN_FUSED and100k toGND plus10V zener;Q306 pulls gate low only with valid latched MAIN_PERMISSION;Q304 independent fault sink retained;R326100k holds Q306 gate toGND when permission unpowered",
+      "new_mpn": "Q304 2N7002,215 retained; Q305/Q306/bias/Zener DNP; new R647..650 exact TNPW parts in FIX3 source circuit",
+      "new_value_or_connection": "Q305/Q306/R324/R325/R326/D305 DNP. Q304 2N7002:1G=FAULT_DRIVE,2S=GND,3D=INPUT_SHDN. R6471k MAIN_PERMISSION-to-SHDN; R64810k SHDN-to-GND; R6491k FAULT-to-FAULT_DRIVE; R650100k FAULT_DRIVE-to-GND. See FIX3_SOURCE_TRIGGER.",
       "reason": "Unpowered logic must not release main eFuse into a persistent failed buck",
       "governing_equation": "Vg_unclamped=Vin/2; at9V=4.5V; SHDNlow<=VIL; zener, Ipin and partial supplies OPEN",
-      "status": "BLOCKED exact transistor polarity/loading proof",
+      "status": "DC default-off circuit selected; partial-power/physical shutdown qualification T15F3",
       "source": "COMMON"
     },
     {
@@ -499,7 +499,7 @@
       "new_value_or_connection": "AUX_12V -> D304 A/K -> AUX_PREHOLD -> U327 IN/OUT -> DRV_HOLD; C358/C3592x220uF25V at DRV_HOLD. U318 DBV5:1IN=DRV_HOLD,2GND,3EN NC,4NC,5OUT=3V3_AUX; C3651uF input/C3664.7uF output. D304 is retained reverse-blocking, never bypassed.",
       "reason": "Driver/detector survive input removal and main eFuse OFF; block reverse draining",
       "governing_equation": "thold=(Ceff*(Vstart-Vfloor)-Qgate)/Icontrol; TARGET Ceff>=300uF,I<=40mA,>=1ms",
-      "status": "Slew-controlled hold charger selected in S03-18; T07 hold/loaded rails and T15 interlock required",
+      "status": "Hold candidate retained; FIX3 revised total control allocation45mA, conditional4.097ms; T07F3/T15F3 required",
       "source": "HOLD"
     },
     {
@@ -522,7 +522,7 @@
       "new_value_or_connection": "R362249k/R36310k DRV_HOLD-to-SENSE-to-GND; R364100k/R36510k DET5-to-SENSE-to-GND; each supervisor VDD=3V3_AUX; proposed startup qualification only, not fast power-loss action; DBV6 each:1RESET_N via10k toDET5,2GND,3MR=3V3_AUX,4CT=NC20ms mode,5SENSE divider,6VDD=3V3_AUX; C369/C370100nF local supply bypass",
       "reason": "Actual loaded rails must meet detector/driver timing conditions; include maximum3% hysteresis in rising/startup threshold",
       "governing_equation": "Vfall=VIT*(1+Rt/Rb) +/- Ibias*Rt; calculated corners in FIX_CALCULATIONS; TPS3808 sense delay maximum unspecified; Vrise_max<=1.03*Vfall_max=4.704333V for100k/10k; old110k gives5.132216V",
-      "status": "R4A-07 falling/rising threshold arithmetic corrected; monitors are startup/state only; fast rail-loss ownership T07/T15 BLOCKED",
+      "status": "U322/U323 OBSERVATION ONLY; permission wires removed. Fast SAFE5-powered U603..606 replace timing authority; T15F3",
       "source": "TPS3808"
     },
     {
@@ -653,12 +653,12 @@
         "FAULT_TRIGGER"
       ],
       "old": "No independently qualified high-side-short discriminator",
-      "new_mpn": "OPEN; no claimed selected part",
-      "new_value_or_connection": "require independent bounded fault-onset trigger for TPS26630 source isolation; fixture-timed cutoff is separate conditional test mode only",
+      "new_mpn": "TLV3201AIDBVR; LTC6994IS6-1#TRMPBF; SN74LVC1G74DCTR/08/14/32; ADG4612BRUZ; exact passives in FIX3_SOURCE_TRIGGER.md",
+      "new_value_or_connection": "U640..U647 hysteretic L201_IN watchdog, 200k/NDIV1 4us qualifier, VIN-collapse memory; R640..R652 and C640..C647 exact pin map in FIX3_SOURCE_TRIGGER.md. Independent SRC_TRIP, never injector sync.",
       "reason": "Bulk charging can delay raw OV beyond10us source contract",
       "governing_equation": "tSRC=trigger+logic+SHDN+TPS+commutation<=10us; integral(Iin_positive)dt<=100uC",
-      "status": "BLOCKED R4A-01: no proved autonomous trigger. T01 is conditional on a reviewed implementation, not closure by itself",
-      "source": "FIX_RESOLUTIONS R4A-01 / T01"
+      "status": "CIRCUIT SELECTED; conditional ceiling6.934151us; real internal-bridge coverage and normal dropout separation OPEN T01F3",
+      "source": "FIX3_SOURCE_TRIGGER.md; ADI LTC6994 RevC pp3-5,10,12-16; TI LM61460 p26"
     },
     {
       "id": "SXX-01",
@@ -734,7 +734,7 @@
       "new_value_or_connection": "U327 RPW10:1EN dividerR376365k AUX_PREHOLD-to-EN/R37748.7k EN-toGND;2OVLO dividerR378365k AUX_PREHOLD-to-OVLO/R37933.2k OVLO-toGND;3AUXOFF NC testpad;4FLT NC testpad;5IN=AUX_PREHOLD;6OUT=DRV_HOLD;7DVDT->R374100ohm->C3741uF->GND;8GND;9ILM->R3756.49k->GND;10ITIMER NC. C3751uF IN-toGND,C376100nF OUT-toGND. C374 effective>=0.5uF at up to17.312V; no fast bypass fitted.",
       "reason": "Decouple440uF held bank from U317 fixed soft-start; retain latch-off thermal variant and independent main-eFuse-off controls",
       "governing_equation": "SRnom=2000/Cdvd[pF] V/ms=2V/s; qualified SR<=10V/s and Ccharged<=600uF -> Icap<=6mA; Icontrols<=40mA; Iaux_screen=(12.311325*(.046+.00061))/(.75*7.5)+.005=107.014375mA",
-      "status": "SELECTED test candidate; T07D measured slew/thermal/startup/hold qualification required; circuit values do not establish a hardware PASS",
+      "status": "Retained charger; FIX3 total45mA control allocation gives117.958mA aux screen,116.777C thermal sensitivity; T07F3 required",
       "source": "TPS25947 SLVSFC9C May2026 pp5-12,29-30,37; F2-02"
     },
     {
@@ -773,6 +773,20 @@
       "governing_equation": "Ppeak=Vmax^2/Rmin; tisolated=Rmax*Cmax*ln(Vmax/.3); maximum isolated screen22.342672s; measure all stores<=.3V after source isolation, do not trust elapsed time alone",
       "status": "Selected passive discharge adapters for T12D; full fixture source limiter/abort/disconnect/force path still BLOCKED",
       "source": "F2-11; Vishay28758 10-Apr-2026; pinned J502 connector selection"
+    },
+    {
+      "id": "S06-01",
+      "sheet": "06 protection control reservation",
+      "refdes": [
+        "FIX3_INTERLOCK"
+      ],
+      "old": "Missing fast rail-loss, reset/ARM and persistent-short construction",
+      "new_mpn": "Per-refdes exact MPNs and all pins in FIX3_INTERLOCK.md",
+      "new_value_or_connection": "Separate SAFE5/LM4040/TPS3808 POR; nine fast monitored channels behind ADG4612; LVC clocked reset/ARM memory; LTC6994 readiness/debounce; <=1.120mA disabled-buck continuity diagnostic; DPDT DIAG/RUN service interlock. Source circuit separately listed S01-07.",
+      "reason": "Default-off through rail sequencing; preserve real fault memory; reject persistent VIN-SW short before reset",
+      "governing_equation": "Vrail=VTH*((1+Ron/Rp)*(1+Rt/Rb)+Rt/Rp); tREADY97.007..103.549ms; conditional loss-to-source-off2.425us; Iprobe<=1.120mA",
+      "status": "PIN-LEVEL CANDIDATE SELECTED; T06F3/T07F3/T15F3 measurement limits, no electrical PASS",
+      "source": "FIX3_INTERLOCK.md; FIX3_CALCULATIONS.json"
     }
   ]
 }
