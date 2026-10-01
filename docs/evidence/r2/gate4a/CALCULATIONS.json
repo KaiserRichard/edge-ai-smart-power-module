@@ -1592,6 +1592,36 @@
   "gate4a_fix3": {
     "classification": "CALCULATED conditional design screens; hardware NOT RUN",
     "precision_resistor_fraction": 0.002625,
+    "fixture": {
+      "classification": "External fixture design envelope; application qualification NOT RUN",
+      "limit_Rmin_ohm": 2.240875,
+      "resistor_current_max_A": 13.833881854186423,
+      "resistor_power_each_W": 107.21258436994478,
+      "resistor_allowable_screen_W": 200.0,
+      "dead_timer_s": [
+        1.8710754999999998e-06,
+        2.1295755e-06
+      ],
+      "abort_timer_s": [
+        1.5255847999999998e-05,
+        1.6747848e-05
+      ],
+      "abort_complete_max_s": 1.8772848000000002e-05,
+      "abort_earliest_after_fault_s": 1.26262725e-05,
+      "hardware_abort_acceptance_s": 2e-05,
+      "added_energy_J": 0.024031999999999998,
+      "coupled_energy_J": 0.18955637,
+      "inductor_current_screen_A": 98.04488767906258,
+      "raw_no_dump_peak_screen_V": 7.5068472719058335,
+      "force_FET_on_energy_each_J": 0.00136,
+      "source_FET_on_energy_each_J": 2.6656e-05,
+      "FET_overlap_energy_each_J": 0.005,
+      "contact_energy_each_J": 4e-05,
+      "actual_current_bound_A": null,
+      "actual_abort_s": null,
+      "actual_hot_SOA_margin": null,
+      "actual_all_stores_discharged": null
+    },
     "source": {
       "SW_rise_V": [
         6.355354335821618,
@@ -1687,8 +1717,22 @@
         0.00099067264,
         0.00105748864
       ],
-      "diagnostic_current_max_A": 0.0011199611746792776,
-      "rejected_DC_path_below_ohm": 3050.373870436768,
+      "diagnostic_feed": {
+        "Rfeed_ohm": 470,
+        "equivalent_load_min_ohm": 5285.513286954965,
+        "healthy_VIN_min_V": 3.8588390461256465,
+        "short_current_max_A": 0.011199611746792777,
+        "feed_power_max_W": 0.058797961670662084
+      },
+      "historical_4700ohm_feed": {
+        "Rfeed_ohm": 4700,
+        "equivalent_load_min_ohm": 5285.513286954965,
+        "healthy_VIN_min_V": 1.9977012708303339,
+        "short_current_max_A": 0.0011199611746792776,
+        "feed_power_max_W": 0.005879796167066208
+      },
+      "diagnostic_current_max_A": 0.011199611746792777,
+      "rejected_DC_path_below_ohm": 305.03738704367674,
       "SHDN_off_screen_V": 0.20052500000000004,
       "SHDN_on_screen_V": 3.4528931455056884,
       "SAFE_input_start_V": 9.623013,

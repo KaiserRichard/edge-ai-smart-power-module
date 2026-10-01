@@ -133,7 +133,7 @@ F2-12 reconfirms the BSC034 pair: 6.8 mOhm at 10 V gate, 10.2 mOhm at 6 V gate a
 
 Q316 at separately qualified VDS<=58.1 V and ID<=0.20 A gives 11.62 W, 11.8524 mJ for 1.02 ms, and 91.1586 C bulk-junction sensitivity using fixed case85 C and 0.53 C/W. This is not a hot linear-SOA approval. Local input reservoirs can violate the branch-current target despite a 0.20 A source setting.
 
-## Round 3 — source and interlock circuit screens
+## Round 3 — source, interlock and external fixture screens
 
 FIX3_SOURCE_TRIGGER.md and FIX3_INTERLOCK.md specify the circuits. These calculations allocate test limits; every physical result remains OPEN. The source interval applies only to a qualifying continuous high / input-collapse signature.
 
@@ -162,8 +162,10 @@ FIX3_SOURCE_TRIGGER.md and FIX3_INTERLOCK.md specify the circuits. These calcula
 |Interlock: READY_s|[0.0970066649088, 0.10354928762880002]|
 |Interlock: button_s|[0.0193379299328, 0.020642178252800004]|
 |Interlock: release_recovery_s|[0.00099067264, 0.00105748864]|
-|Interlock: diagnostic_current_max_A|0.0011199611746792776|
-|Interlock: rejected_DC_path_below_ohm|3050.373870436768|
+|Interlock: diagnostic_feed|{"Rfeed_ohm": 470, "equivalent_load_min_ohm": 5285.513286954965, "healthy_VIN_min_V": 3.8588390461256465, "short_current_max_A": 0.011199611746792777, "feed_power_max_W": 0.058797961670662084}|
+|Interlock: historical_4700ohm_feed|{"Rfeed_ohm": 4700, "equivalent_load_min_ohm": 5285.513286954965, "healthy_VIN_min_V": 1.9977012708303339, "short_current_max_A": 0.0011199611746792776, "feed_power_max_W": 0.005879796167066208}|
+|Interlock: diagnostic_current_max_A|0.011199611746792777|
+|Interlock: rejected_DC_path_below_ohm|305.03738704367674|
 |Interlock: SHDN_off_screen_V|0.20052500000000004|
 |Interlock: SHDN_on_screen_V|3.4528931455056884|
 |Interlock: SAFE_input_start_V|9.623013|
@@ -172,3 +174,25 @@ FIX3_SOURCE_TRIGGER.md and FIX3_INTERLOCK.md specify the circuits. These calcula
 |Interlock: actual_loss_interval_s|[null, null]|
 |Interlock: actual_hold_s|null|
 |Interlock: actual_persistent_short_rejection|null|
+|External fixture: classification|"External fixture design envelope; application qualification NOT RUN"|
+|External fixture: limit_Rmin_ohm|2.240875|
+|External fixture: resistor_current_max_A|13.833881854186423|
+|External fixture: resistor_power_each_W|107.21258436994478|
+|External fixture: resistor_allowable_screen_W|200.0|
+|External fixture: dead_timer_s|[1.8710754999999998e-06, 2.1295755e-06]|
+|External fixture: abort_timer_s|[1.5255847999999998e-05, 1.6747848e-05]|
+|External fixture: abort_complete_max_s|1.8772848000000002e-05|
+|External fixture: abort_earliest_after_fault_s|1.26262725e-05|
+|External fixture: hardware_abort_acceptance_s|2e-05|
+|External fixture: added_energy_J|0.024031999999999998|
+|External fixture: coupled_energy_J|0.18955637|
+|External fixture: inductor_current_screen_A|98.04488767906258|
+|External fixture: raw_no_dump_peak_screen_V|7.5068472719058335|
+|External fixture: force_FET_on_energy_each_J|0.00136|
+|External fixture: source_FET_on_energy_each_J|2.6656e-05|
+|External fixture: FET_overlap_energy_each_J|0.005|
+|External fixture: contact_energy_each_J|4e-05|
+|External fixture: actual_current_bound_A|null|
+|External fixture: actual_abort_s|null|
+|External fixture: actual_hot_SOA_margin|null|
+|External fixture: actual_all_stores_discharged|null|

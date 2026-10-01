@@ -41,8 +41,13 @@ class Fix3Screens(unittest.TestCase):
         self.assertGreater(d['SER_DRV_start_V'],d['threshold_intervals_V']['SER_DRV'][1])
         self.assertLess(d['aux_input_screen_A'],.045/(.33*1.01))
         self.assertLess(d['charger_Tj_screen_C'],125)
+        self.assertLess(d['historical_4700ohm_feed']['healthy_VIN_min_V'],
+                        d['threshold_intervals_V']['DIAG_VIN'][0])
+        self.assertGreater(d['diagnostic_feed']['healthy_VIN_min_V'],
+                           d['threshold_intervals_V']['DIAG_VIN'][1])
+        self.assertLess(d['diagnostic_feed']['feed_power_max_W'],.110)
         # A hard short cannot exhibit the simultaneous required voltage difference.
-        for r in [0,1,10,100,1000]:
+        for r in [0,1,10,100]:
             self.assertLess(r*d['diagnostic_current_max_A'],
                             d['threshold_intervals_V']['DIAG_VIN'][0]-
                             d['threshold_intervals_V']['ZERO'][1])

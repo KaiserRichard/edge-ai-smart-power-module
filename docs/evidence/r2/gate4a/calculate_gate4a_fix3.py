@@ -35,6 +35,20 @@ def timer(r, n, error):
     return [nominal*(1-RF)*(1-error), nominal*(1+RF)*(1+error)]
 
 
+def diagnostic_feed(rfeed):
+    # Healthy disabled-buck path. Include both new monitor dividers, RFD01,
+    # input PG divider R106/R107, EN pull-up R206 with Q601 on, and R108
+    # assuming FLT sinks. 100uA additionally covers semiconductor/PCB leakage.
+    bottom = 1/(1/10000 + 1/100000)
+    nominal_loads = [18200+bottom, 49900+bottom, 10000, 66200, 100000, 100000]
+    req_min = 1/sum(1/(r*(1-RF)) for r in nominal_loads)
+    rmax = rfeed*(1+RF)
+    vmin = (4.75-.5-.0001*rmax)/(1+rmax/req_min)
+    return dict(Rfeed_ohm=rfeed, equivalent_load_min_ohm=req_min,
+                healthy_VIN_min_V=vmin, short_current_max_A=5.25/(rfeed*(1-RF)),
+                feed_power_max_W=5.25**2/(rfeed*(1-RF)))
+
+
 def fixture():
     rmin = 9.1*(1-.01-50e-6*100)/4
     i = 31/rmin
@@ -108,9 +122,11 @@ def calculate():
             READY_s=timer(153e3, 32768, .03),
             button_s=timer(244e3, 4096, .03),
             release_recovery_s=timer(100e3, 512, .03),
-            diagnostic_current_max_A=5.25/(4700*(1-RF)),
+            diagnostic_feed=diagnostic_feed(470),
+            historical_4700ohm_feed=diagnostic_feed(4700),
+            diagnostic_current_max_A=diagnostic_feed(470)['short_current_max_A'],
             rejected_DC_path_below_ohm=(thresholds['DIAG_VIN'][0]-thresholds['ZERO'][1])/
-                                     (5.25/(4700*(1-RF))),
+                                     diagnostic_feed(470)['short_current_max_A'],
             SHDN_off_screen_V=20e-6*10000*(1+RF),
             SHDN_on_screen_V=3.8*10000*(1-RF)/(10000*(1-RF)+1000*(1+RF)),
             SAFE_input_start_V=10.5-.5-.008*47*(1+RF),
