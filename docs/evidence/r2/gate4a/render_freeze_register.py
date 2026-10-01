@@ -14,9 +14,9 @@ def render():
     writer.writeheader()
     for row in rows:
         writer.writerow({**row, 'refdes': ','.join(row['refdes'])})
-    table = ('# Gate4a-FIX2 required-change register\n\n'
+    table = ('# Gate4a-FIX3 required-change register\n\n'
              '**Analysis only; NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** '
-             '[FIX2_RESOLUTIONS.md](FIX2_RESOLUTIONS.md) controls round-2 deltas. '
+             '[GATE4A_FREEZE.md](GATE4A_FREEZE.md) and the three FIX3 circuit reports control current deltas. '
              'Earlier decisions remain in Git and [FIX_RESOLUTIONS.md](FIX_RESOLUTIONS.md). '
              'New refs are capture reservations. Generated from FREEZE_MANIFEST.json.\n\n'
              '|ID / sheet / refs|Old → proposed MPN/value or wiring|Reason / governing equation|Disposition / source|\n'

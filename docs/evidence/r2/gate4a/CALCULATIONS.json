@@ -1594,10 +1594,12 @@
     "precision_resistor_fraction": 0.002625,
     "fixture": {
       "classification": "External fixture design envelope; application qualification NOT RUN",
-      "limit_Rmin_ohm": 2.240875,
-      "resistor_current_max_A": 13.833881854186423,
-      "resistor_power_each_W": 107.21258436994478,
+      "limit_Rmin_ohm": 2.22665625,
+      "resistor_current_max_A": 13.922220818772542,
+      "resistor_power_each_W": 107.89721134548721,
       "resistor_allowable_screen_W": 200.0,
+      "load_power_max_at_9V_source_W": 9.09435392194013,
+      "source_voltage_for_26V_5A_ideal_V": 28.2786640625,
       "dead_timer_s": [
         1.8710754999999998e-06,
         2.1295755e-06
@@ -1612,6 +1614,8 @@
       "added_energy_J": 0.024031999999999998,
       "coupled_energy_J": 0.18955637,
       "inductor_current_screen_A": 98.04488767906258,
+      "coupled_reverse_inductor_screen_A": 275.3589439259237,
+      "classification_100A": "First positive source-driven interval only; reverse/coupled current not capped by this allocation",
       "raw_no_dump_peak_screen_V": 7.5068472719058335,
       "force_FET_on_energy_each_J": 0.00136,
       "source_FET_on_energy_each_J": 2.6656e-05,
@@ -1735,6 +1739,8 @@
       "rejected_DC_path_below_ohm": 305.03738704367674,
       "SHDN_off_screen_V": 0.20052500000000004,
       "SHDN_on_screen_V": 3.4528931455056884,
+      "POR_0p8V_sink_screen_A": 1.302105527008397e-05,
+      "POR_4p75V_high_screen_V": 4.21860875,
       "SAFE_input_start_V": 9.623013,
       "SAFE_cap_hold_s": 0.0022643831250000004,
       "fast_source_loss_allocation_s": 3.2250000000000005e-06,

@@ -4,6 +4,7 @@ import math
 from pathlib import Path
 import unittest
 from calculate_gate4a_fix3 import calculate, loaded_threshold
+from render_fix3_fixture import build, render
 
 
 class Fix3Screens(unittest.TestCase):
@@ -66,6 +67,44 @@ class Fix3Screens(unittest.TestCase):
         refs=[r for row in json.loads((here/'FREEZE_MANIFEST.json').read_text())['changes']
               for r in row['refdes']]
         self.assertEqual(len(refs),len(set(refs)))
+
+    def test_fixture_resistor_ranges_and_complete_pin_maps(self):
+        parts,pins=build()
+        byref={p['refdes']:p for p in parts}
+        self.assertEqual(len(parts),len(byref))
+        for n in (1,2,3):
+            self.assertEqual(byref[f'RF{20+n}']['manufacturer_part'],'TNPW12062M00BEEA')
+            self.assertEqual(byref[f'RF{10+n}']['manufacturer_part'],'TNPW06031R00FEEA')
+        for n in range(1,6):
+            self.assertEqual({p['pin'] for p in pins if p['refdes']==f'QF{n}'},
+                             set(map(str,range(1,9))))
+        self.assertEqual(len({(p['refdes'],p['pin']) for p in pins}),len(pins))
+        for name,expected in render().items():
+            self.assertEqual((Path(__file__).parent/name).read_text(),expected)
+
+    def test_fixture_winding_temperature_and_separate_emergency_box(self):
+        d=calculate()['fixture']
+        # Independent full-temperature TCR: winding, not 70C ambient.
+        r_one=9.1-9.1*.01-9.1*50e-6*(250-25)
+        self.assertAlmostEqual(d['resistor_current_max_A'],4*31/r_one)
+        self.assertLess(d['resistor_current_max_A'],14)
+        self.assertLess(d['resistor_power_each_W'],d['resistor_allowable_screen_W'])
+        self.assertGreater(d['abort_earliest_after_fault_s'],10e-6)
+        self.assertLess(d['abort_complete_max_s'],20e-6)
+        self.assertGreater(d['raw_no_dump_peak_screen_V'],6.9)
+        self.assertGreater(d['coupled_reverse_inductor_screen_A'],100)
+        self.assertIsNone(d['actual_hot_SOA_margin'])
+
+    def test_fixture_does_not_command_DUT_and_samples_real_permission(self):
+        _,pins=build()
+        self.assertFalse({'INPUT_SHDN','SRC_TRIP','FAULT'} & {p['net'] for p in pins})
+        net={(p['refdes'],p['pin']):p['net'] for p in pins}
+        self.assertEqual(net['UF33','1'],'DEAD_READY')
+        self.assertEqual(net['UF33','2'],'START_OK')
+        self.assertEqual(net['UF27','2'],'INJECT_ALLOWED')
+        # Only the far bleeder/connector touches FAR_GND; no fixture ground bypass.
+        self.assertEqual({p['refdes'] for p in pins if p['net']=='FAR_GND'},
+                         {'RFD04','JFD04'})
 
 
 if __name__=='__main__':

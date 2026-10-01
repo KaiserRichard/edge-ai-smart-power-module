@@ -1,5 +1,7 @@
 # TASK 2 — independent surge-limited control supply
 
+**FIX3 precedence:** retained round-1/2 analysis below is historical where superseded. Current source, interlock and external-fixture circuits/status are [GATE4A_FREEZE.md](GATE4A_FREEZE.md), [FIX3_SOURCE_TRIGGER.md](FIX3_SOURCE_TRIGGER.md), [FIX3_INTERLOCK.md](FIX3_INTERLOCK.md) and [FIX3_FIXTURE.md](FIX3_FIXTURE.md). Old missing-circuit statements and retired controls are not current wiring instructions.
+
 **ROUND-1 ANALYSIS — current charging circuit is F2-02 in [FIX2_RESOLUTIONS.md](FIX2_RESOLUTIONS.md). Retained findings below are historical where superseded. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Existing source exposure and proposed supply independence have been analyzed; startup, dynamic limiting, usable-rail thresholds and hold duration remain OPEN.
 
 **OBSERVATION:** pinned PR15 exported netlist has D303 anode on VIN_FUSED, cathode on VIN_AUX; VIN_AUX feeds both U306/U307 IN and EN, C307 and 10 kΩ R323. It is upstream of U101. A SMCJ36CA 58.1 V pulse clamp therefore reaches this branch despite main-eFuse shutdown. The TVS's 36 V standoff is not a 36 V regulated supply. See [pinned identities](INPUT_PROVENANCE.json) and [primary register](SOURCES.md).

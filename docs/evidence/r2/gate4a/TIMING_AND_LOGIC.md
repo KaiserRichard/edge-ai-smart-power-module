@@ -1,5 +1,7 @@
 # TASK 1 — common fixes and complete timing contract
 
+**FIX3 precedence:** retained round-1/2 analysis below is historical where superseded. Current source, interlock and external-fixture circuits/status are [GATE4A_FREEZE.md](GATE4A_FREEZE.md), [FIX3_SOURCE_TRIGGER.md](FIX3_SOURCE_TRIGGER.md), [FIX3_INTERLOCK.md](FIX3_INTERLOCK.md) and [FIX3_FIXTURE.md](FIX3_FIXTURE.md). Old missing-circuit statements and retired controls are not current wiring instructions.
+
 **Analysis only. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** The change register is complete as an engineering proposal; it is not a pin-level capture freeze. `OPEN` terms are not zero. Source IDs and revisions are in [SOURCES.md](SOURCES.md).
 
 **DECISION:** retain D, the two BSC034N06NSATMA1 devices, the protected crowbar and 2 mΩ telemetry shunt. Add a separately commanded raw-node dump; neither the protected crowbar nor the open opposed pair is an energy destination for L201. No avalanche rating is credited. Keep local regulation at 100 kΩ/24.4 kΩ; do not increase the setpoint to compensate for path loss.

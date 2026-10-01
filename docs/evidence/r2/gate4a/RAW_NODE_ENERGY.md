@@ -1,5 +1,7 @@
 # TASK 5 — where L201 and the raw-bank energy go
 
+**FIX3 precedence:** retained round-1/2 analysis below is historical where superseded. Current source, interlock and external-fixture circuits/status are [GATE4A_FREEZE.md](GATE4A_FREEZE.md), [FIX3_SOURCE_TRIGGER.md](FIX3_SOURCE_TRIGGER.md), [FIX3_INTERLOCK.md](FIX3_INTERLOCK.md) and [FIX3_FIXTURE.md](FIX3_FIXTURE.md). Old missing-circuit statements and retired controls are not current wiring instructions.
+
 **OBSERVATION:** the pinned PR15 exported netlist places C330…C337 (eight470 µF/35 V bulk capacitors), C209…C214 (six22 µF/50 V ceramics), L201 output, Q301 drain and both feedback/OV divider tops on **VOUT_5V1**. Q302 drain, R308/R310 ballast tops, R401 force input, TP302 and local telemetry-supply decoupling are on **VOUT_PROTECTED**. R308/309 and R310/311 connect through their ballast strings to Q303; Q303 source is GND. The protected node does not contain the eight bulk capacitors. Connectivity and exact netlist SHA are reproduced in [CALCULATIONS.json](CALCULATIONS.json), from commit51d1c2ff1f7eca4f20eef137c1595e4b9e052a75. No native CAD was accessed.
 
 **DECISION:** do not credit the protected crowbar with upstream energy after opposed Q301/Q302 stop conducting. Body diodes oppose one another; they do not provide a guaranteed raw→protected disposal path when the pair is off. Coss displacement/stray inductive current can still couple across the pair and needs measurement, but it is not a rated upstream energy sink.

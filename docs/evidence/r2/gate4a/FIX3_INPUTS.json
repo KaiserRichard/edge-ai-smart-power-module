@@ -1,10 +1,10 @@
 {
-  "resume_commit": "6caa8f9f497e1ba7f1efa4383f3cf03fdf30e882",
+  "resume_commit": "692d30f8f8dc5b9b5737cd78002d9ee4b5d05d0d",
   "branch": "feat/r2-testboard-freeze",
   "briefs": [
     {
       "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX3_RESUME.md",
-      "sha256": "e7bdb6517a33735287e45b2edcecd5e9204c4b9d1f1a96a7fca59eb939def50b",
+      "sha256": "dd7c99364771f20b4cfbc56f7c3d624e5fdc5ff2621a4a8a026ac6837a7515ea",
       "read": "full"
     },
     {
@@ -43,6 +43,32 @@
   },
   "partial_commits_inspected": [
     "a323a483150944dc2f37fb55cb45f2955751d6dc",
-    "6caa8f9f497e1ba7f1efa4383f3cf03fdf30e882"
-  ]
+    "6caa8f9f497e1ba7f1efa4383f3cf03fdf30e882",
+    "692d30f8f8dc5b9b5737cd78002d9ee4b5d05d0d"
+  ],
+  "prior_692d30f_resume_record": {
+    "resume_commit": "6caa8f9f497e1ba7f1efa4383f3cf03fdf30e882",
+    "briefs": [
+      {
+        "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX3_RESUME.md",
+        "sha256": "dd7c99364771f20b4cfbc56f7c3d624e5fdc5ff2621a4a8a026ac6837a7515ea",
+        "read": "full"
+      },
+      {
+        "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX3.md",
+        "sha256": "bcc045470d2b57d51af73bfc03d95036cfc4542ec814254affb877bd95316128",
+        "read": "full"
+      },
+      {
+        "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX.md",
+        "sha256": "98766c651e035b6dcde3331445983b9be32ee033062ba7305a6e962bb882473b",
+        "read": "full"
+      }
+    ],
+    "partial_commits_inspected": [
+      "a323a483150944dc2f37fb55cb45f2955751d6dc",
+      "6caa8f9f497e1ba7f1efa4383f3cf03fdf30e882",
+      "692d30f8f8dc5b9b5737cd78002d9ee4b5d05d0d"
+    ]
+  }
 }

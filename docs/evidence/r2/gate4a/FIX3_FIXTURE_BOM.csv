@@ -1,18 +1,18 @@
 refdes,manufacturer_part,value,scope,rating_or_gate
 PSF1,Rigol DP811A,Main isolated bench supply,EXTERNAL BENCH FIXTURE ONLY,0-40V/5A range; calibrated terminal ceiling30V; room <=40C; inventory OPEN
 PSF2,Rigol DP811A,Control supply set12V,EXTERNAL BENCH FIXTURE ONLY,Separate output; <=13V including error; room <=40C; inventory OPEN
-JF1A,Anderson 992G1,red SB50 housing,EXTERNAL BENCH FIXTURE ONLY,Dead disconnect; 5900 contacts/6AWG; <=14A; local <=40C
-JF1B,Anderson 992G1,red SB50 housing,EXTERNAL BENCH FIXTURE ONLY,Dead disconnect; 5900 contacts/6AWG; <=14A; local <=40C
-KF1,Anderson 5900,4 contacts for JF1A/B,EXTERNAL BENCH FIXTURE ONLY,Use 1309G4 hand tool; inspect/crimp pull test; DS-SB50 RevC7 p7
+JF1A,Anderson 992G1-BK,red SB50 housing,EXTERNAL BENCH FIXTURE ONLY,Dead disconnect; 5900 contacts/6AWG; <=14A; local <=40C
+JF1B,Anderson 992G1-BK,red SB50 housing,EXTERNAL BENCH FIXTURE ONLY,Dead disconnect; 5900 contacts/6AWG; <=14A; local <=40C
+KF1,Anderson 5900,4 contacts for JF1A/B,EXTERNAL BENCH FIXTURE ONLY,Use 1309G4 hand tool; inspect/crimp pull test; DS-SB50 Rev8 p7
 WF1,Belden 9906,6AWG 133x27 TC; cut/label red + and black -,EXTERNAL BENCH FIXTURE ONLY,600V/105C insulation; <=14A feeder; keep outside hot zone; paired route; length recorded
 TF1,Anderson 1309G4,SB50 crimp tool,EXTERNAL BENCH FIXTURE ONLY,Tool condition/die/strip length per assembly instructions; inventory OPEN
-RFL1,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; each separate 12x12x0.125in Al panel; <=70C ambient; verify mount
+RFL1,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; separate 12x12x0.125in Al panels; <=70C ambient; winding T<=250C; 200W derated screen
 HF1,CUSTOM-FX-AL-01 RevA,12x12x0.125in aluminum panel,EXTERNAL BENCH FIXTURE ONLY,Vishay30201 RH250 mounting geometry; flat thermal interface; no stacked panels
-RFL2,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; each separate 12x12x0.125in Al panel; <=70C ambient; verify mount
+RFL2,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; separate 12x12x0.125in Al panels; <=70C ambient; winding T<=250C; 200W derated screen
 HF2,CUSTOM-FX-AL-01 RevA,12x12x0.125in aluminum panel,EXTERNAL BENCH FIXTURE ONLY,Vishay30201 RH250 mounting geometry; flat thermal interface; no stacked panels
-RFL3,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; each separate 12x12x0.125in Al panel; <=70C ambient; verify mount
+RFL3,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; separate 12x12x0.125in Al panels; <=70C ambient; winding T<=250C; 200W derated screen
 HF3,CUSTOM-FX-AL-01 RevA,12x12x0.125in aluminum panel,EXTERNAL BENCH FIXTURE ONLY,Vishay30201 RH250 mounting geometry; flat thermal interface; no stacked panels
-RFL4,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; each separate 12x12x0.125in Al panel; <=70C ambient; verify mount
+RFL4,NH2509R100FE01,9.1ohm 1% 250W noninductive,EXTERNAL BENCH FIXTURE ONLY,Four parallel; separate 12x12x0.125in Al panels; <=70C ambient; winding T<=250C; 200W derated screen
 HF4,CUSTOM-FX-AL-01 RevA,12x12x0.125in aluminum panel,EXTERNAL BENCH FIXTURE ONLY,Vishay30201 RH250 mounting geometry; flat thermal interface; no stacked panels
 QF1,BSC034N06NSATMA1,60V N-channel,EXTERNAL BENCH FIXTURE ONLY,"VDS <=50V, |VGS|<20V, on VGS>=10V; hot SOA OPEN"
 QF2,BSC034N06NSATMA1,60V N-channel,EXTERNAL BENCH FIXTURE ONLY,"VDS <=50V, |VGS|<20V, on VGS>=10V; hot SOA OPEN"
@@ -25,56 +25,56 @@ CF1,GRM32ER71H106KA12L,10uF/50V effective>=5uF,EXTERNAL BENCH FIXTURE ONLY,Selec
 CF11,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF21,GRM21BR71E105KA99L,1uF/25V effective>=0.5uF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 DF21,"BAS116,215",bootstrap diode,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF1,TNPW0603143KBEEA,143k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF11,TNPW06031R00BEEA,1ohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF21,TNPW06032M00BEEA,2Mohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF31,TNPW06031K00BEEA,1kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF41,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF61,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF1,TNPW0603143KBEEA,143k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF11,TNPW06031R00FEEA,1ohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF21,TNPW12062M00BEEA,2Mohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF31,TNPW06031K00BEEA,1kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF41,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF61,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 UF2,LTC7001IMSE#PBF,high-side driver,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 DF12,B260-13-F,local reservoir isolation,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF2,GRM32ER71H106KA12L,10uF/50V effective>=5uF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF12,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF22,GRM21BR71E105KA99L,1uF/25V effective>=0.5uF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 DF22,"BAS116,215",bootstrap diode,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF2,TNPW0603143KBEEA,143k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF12,TNPW06031R00BEEA,1ohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF22,TNPW06032M00BEEA,2Mohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF32,TNPW06031K00BEEA,1kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF42,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF62,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF2,TNPW0603143KBEEA,143k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF12,TNPW06031R00FEEA,1ohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF22,TNPW12062M00BEEA,2Mohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF32,TNPW06031K00BEEA,1kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF42,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF62,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 UF3,LTC7001IMSE#PBF,high-side driver,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 DF13,B260-13-F,local reservoir isolation,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF3,GRM32ER71H106KA12L,10uF/50V effective>=5uF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF13,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF23,GRM21BR71E105KA99L,1uF/25V effective>=0.5uF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 DF23,"BAS116,215",bootstrap diode,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF3,TNPW0603143KBEEA,143k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF13,TNPW06031R00BEEA,1ohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF23,TNPW06032M00BEEA,2Mohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF33,TNPW06031K00BEEA,1kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF43,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF63,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF3,TNPW0603143KBEEA,143k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF13,TNPW06031R00FEEA,1ohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF23,TNPW12062M00BEEA,2Mohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF33,TNPW06031K00BEEA,1kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF43,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF63,TNPW060310K0BEEA,10kohm,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 DF1,STPS60H100CT,100V dual common cathode,EXTERNAL BENCH FIXTURE ONLY,Both anodes connected; local <=70C; actual hot commutation OPEN
 DF2,STPS60H100CT,100V dual common cathode,EXTERNAL BENCH FIXTURE ONLY,Both anodes connected; local <=70C; actual hot commutation OPEN
 DF3,SMCJ30CA,bidirectional source transient clamp,EXTERNAL BENCH FIXTURE ONLY,Littelfuse; 30V standoff/48.4V at31A 25C 10/1000us; hot/ringing <=50V must be measured
 DF4,B260-13-F,logic reservoir isolation,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF40,GRM32ER71H106KA12L,10uF/50V effective>=5uF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 UF10,TPS7A1601DGNR,5.05832V regulator,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF50,TNPW060332K4BEEA,32.4k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF51,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF50,TNPW060332K4BEEA,32.4k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF51,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 CF41,GRM32ER71H106KA12L,10uF/50V effective>=5uF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 UF11,TPS3808G50DBVR,POR,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF111,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF52,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF52,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 UF12,SN74LVC1G17DBVR,BUF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF112,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 DF40,LM4040A25IDBZR,2.5V shunt,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF53,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF53,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 CF42,C1608C0G1H103J080AA,10nF/50V,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF54,TNPW060330K1BEEA,30.1k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF55,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF56,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF54,TNPW060330K1BEEA,30.1k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF55,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF56,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 DF41,"BAS116,215",input clamp,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 DF42,"BAS116,215",input clamp,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 UF13,TLV3201AIDBVR,FX12 fast validity,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
@@ -100,13 +100,13 @@ CF122,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application
 UF23,SN74LVC1G08DBVR,AND,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF123,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 UF24,LTC6994IS6-1#TRMPBF,rising qualifier,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF124,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF124,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 CF124,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 UF25,LTC6994IS6-1#TRMPBF,rising qualifier,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF125,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF125,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 CF125,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF57,TNPW0603200KBEEA,200k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF58,TNPW060320K5BEEA,20.5k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF57,TNPW0603200KBEEA,200k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF58,TNPW060320K5BEEA,20.5k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 UF26,SN74LVC1G08DBVR,AND,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF126,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 UF27,SN74LVC1G08DBVR,AND,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
@@ -121,27 +121,53 @@ UF31,SN74LVC1G14DBVR,INV,EXTERNAL BENCH FIXTURE ONLY,Selected; application quali
 CF131,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 UF32,SN74LVC1G32DBVR,OR,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 CF132,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+UF33,SN74LVC1G74DCTR,DFF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+CF133,GRM188R71H104KA93D,100nF,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 SF1,7201SYZQE,C&K DPDT service toggle; one pole used,EXTERNAL BENCH FIXTURE ONLY,Dry low-current controls; validate wetting/continuity; no force current
 SF2,7201SYZQE,C&K DPDT service toggle; one pole used,EXTERNAL BENCH FIXTURE ONLY,Dry low-current controls; validate wetting/continuity; no force current
 SF3,7201SYZQE,C&K DPDT service toggle; one pole used,EXTERNAL BENCH FIXTURE ONLY,Dry low-current controls; validate wetting/continuity; no force current
 SF4,7201SYZQE,C&K DPDT service toggle; one pole used,EXTERNAL BENCH FIXTURE ONLY,Dry low-current controls; validate wetting/continuity; no force current
-RF70,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF71,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF72,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF73,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF80,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF82,TNPW06031K00BEEA,1k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF81,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
-RF83,TNPW06031K00BEEA,1k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF70,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF71,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF72,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF73,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF80,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF82,TNPW06031K00BEEA,1k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF81,TNPW060310K0BEEA,10k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
+RF83,TNPW06031K00BEEA,1k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 JF2,1776508 + 1777989,Phoenix signal header+plug,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 JF3,1776508 + 1777989,Phoenix signal header+plug,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
-RF91,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RFD01,TNPW120610K0BEEA,10K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD01,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD02,TNPW12061K00BEEA,1K00 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD02,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD03,TNPW12061K00BEEA,1K00 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD03,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD04,TNPW12061K00BEEA,1K00 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD04,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD05,TNPW120610K0BEEA,10K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD05,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD06,TNPW120610K0BEEA,10K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD06,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD07,TNPW120610K0BEEA,10K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD07,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD08,TNPW120647K0BEEA,47K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD08,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD09,TNPW120647K0BEEA,47K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD09,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD10,TNPW120610K0BEEA,10K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD10,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD11,TNPW120610K0BEEA,10K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD11,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RFD12,TNPW120610K0BEEA,10K0 discharge adapter,EXTERNAL BENCH FIXTURE ONLY,"F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass"
+JFD12,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+RF91,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 SFD1,7201SYZQE,C&K service discharge toggle,EXTERNAL BENCH FIXTURE ONLY,Open during run; close only after sources removed; insulated accessible actuator
-RF92,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF92,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 SFD2,7201SYZQE,C&K service discharge toggle,EXTERNAL BENCH FIXTURE ONLY,Open during run; close only after sources removed; insulated accessible actuator
-RF93,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF93,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 SFD3,7201SYZQE,C&K service discharge toggle,EXTERNAL BENCH FIXTURE ONLY,Open during run; close only after sources removed; insulated accessible actuator
-RF94,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,Vishay28758; <=0.125W development limit; local <=70C
+RF94,TNPW0603100KBEEA,100k,EXTERNAL BENCH FIXTURE ONLY,"Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3"
 SFD4,7201SYZQE,C&K service discharge toggle,EXTERNAL BENCH FIXTURE ONLY,Open during run; close only after sources removed; insulated accessible actuator
 RFD13,TNPW120610K0BEEA,10kohm discharge adapter,EXTERNAL BENCH FIXTURE ONLY,Permanent characterized load; <=0.125W at<=70C; local return
 JFD13,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
@@ -155,5 +181,12 @@ RFD17,TNPW120610K0BEEA,10kohm discharge adapter,EXTERNAL BENCH FIXTURE ONLY,Perm
 JFD17,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
 RFD18,TNPW120610K0BEEA,10kohm discharge adapter,EXTERNAL BENCH FIXTURE ONLY,Permanent characterized load; <=0.125W at<=70C; local return
 JFD18,1776508 + 1777989,Phoenix adapter connection,EXTERNAL BENCH FIXTURE ONLY,Selected; application qualification T12F3 OPEN
+PF1,CUSTOM-FX-CU-01 RevA,M4 insulated force pad,EXTERNAL BENCH FIXTURE ONLY,2x15mm C110 strap; <=30mm; <=0.2mohm per joint; no hot removal; T12F3
+PF2,CUSTOM-FX-CU-01 RevA,M4 insulated force pad,EXTERNAL BENCH FIXTURE ONLY,2x15mm C110 strap; <=30mm; <=0.2mohm per joint; no hot removal; T12F3
+PF3,CUSTOM-FX-CU-01 RevA,M4 insulated force pad,EXTERNAL BENCH FIXTURE ONLY,2x15mm C110 strap; <=30mm; <=0.2mohm per joint; no hot removal; T12F3
+PF4,CUSTOM-FX-CU-01 RevA,M4 insulated force pad,EXTERNAL BENCH FIXTURE ONLY,2x15mm C110 strap; <=30mm; <=0.2mohm per joint; no hot removal; T12F3
+PF5,CUSTOM-FX-CU-01 RevA,M4 insulated force pad,EXTERNAL BENCH FIXTURE ONLY,2x15mm C110 strap; <=30mm; <=0.2mohm per joint; no hot removal; T12F3
+RFD19,TNPW120610K0BEEA,10kohm permanent discharge,EXTERNAL BENCH FIXTURE ONLY,<=0.125W at <=70C for |V|<=31V; transient separately T12F3
+RFD20,TNPW120610K0BEEA,10kohm permanent discharge,EXTERNAL BENCH FIXTURE ONLY,<=0.125W at <=70C for |V|<=31V; transient separately T12F3
 BF1,CUSTOM-FX-CU-01 RevA,C110 force strap set,EXTERNAL BENCH FIXTURE ONLY,2mm x15mm; <=30mm span; 4.5mm holes20mm pitch; Kelvin joint<=0.2mohm; assembly L<=40nH
 MF1,CUSTOM-FX-M4-01 RevA,M4 hardware/insulated supports/cover set,EXTERNAL BENCH FIXTURE ONLY,"M4x12 A2-70 bolt, two4.3/9/0.8 washers, M4 all-metal locknut per joint; separate supports"

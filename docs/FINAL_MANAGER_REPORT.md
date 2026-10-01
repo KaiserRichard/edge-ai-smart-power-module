@@ -1,4 +1,22 @@
-# Gate4a-FIX2 resumed from cffb770 — 2026-10-01 (current)
+# Gate4a-FIX3 resumed from 692d30f — 2026-10-01 (current)
+
+**STATUS: BLOCKED for integrated test-board freeze. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Continued all three supplied partial commits; analysis only, no sub-agents, native CAD changes or physical tests.
+
+**WHAT WAS DONE:** audited the autonomous source candidate and retained its explicit pulsed-fault counterexample; corrected interlock POR loading to100k and recorded the precise remaining brownout/PG/hard-driver-loss cases; completed the separate external fixture wiring,191-entry BOM and557-pin netlist with corrected resistor identities, winding-temperature current bound, final genuine-PG check, physical disconnect/force/discharge maps and rating screens. Updated the40-row freeze register, test acceptance, calculations, one-page owner PDF, provenance and validation.
+
+**EVIDENCE:** [Current freeze/owner explanation](evidence/r2/gate4a/GATE4A_FREEZE.md), [source pin contract](evidence/r2/gate4a/FIX3_SOURCE_TRIGGER.md), [interlock/state contract](evidence/r2/gate4a/FIX3_INTERLOCK.md), [external fixture](evidence/r2/gate4a/FIX3_FIXTURE.md), [tests](evidence/r2/gate4a/TEST_PLAN.md), [validation](evidence/r2/gate4a/VALIDATION.json). Twenty-two numerical/connectivity tests pass; no electrical result or ERC/DRC is claimed.
+
+**DECISIONS:** preserve architecture D,9–26V,SMCJ36CA,3403.0285.23,BSC034 pair and isolated48→24V intent; retain J502 solution A. The source's7.534151µs and fixture's18.772848µs are distinct conditional budgets. External fixture qualification is a bench-use gate and does not block isolated board hooks. Original review closure remains4/12; no new measured closure or unconditional safety claim.
+
+**OPEN RISKS:** board source coverage for internal/pulsed faults; universal default-off through partial SAFE5, PG recovery/minimum clear width and direct SER_DRV loss. Fixture hot SOA/negative current, actual C/L/source boundaries and instruments remain unqualified. Bootstrap/auxiliary/thermal/coupled-bank/harness/far-end and58.1V aux/whole-input evidence retain named tests. A20µs emergency abort cannot supply the DUT10µs containment result.
+
+**NEXT GATE:** resolve the two board limitations using isolated coupons and circuit revisions where required, then review integrated R2 capture. R2 pin/ERC, R3 layout/DRC/visual, R4 fabrication review and R5 staged dummy-load bring-up remain sequential. Qualify the external fixture before energized connection. No Pi, purchases or fabrication approval.
+
+**GIT:** local commits attempted after items1/2/3; each failed creating worktree index.lock with Operation not permitted. Changes remain uncommitted under the brief's explicit fallback; no permission bypass, pull or push. Supplied commits and historical evidence are preserved.
+
+---
+
+# Gate4a-FIX2 resumed from cffb770 — 2026-10-01 (historical at 9471e14)
 
 **STATUS: BLOCKED for integrated test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Continued all supplied partial commits; did not restart or edit native CAD.
 

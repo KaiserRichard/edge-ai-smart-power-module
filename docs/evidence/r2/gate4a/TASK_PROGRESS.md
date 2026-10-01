@@ -32,6 +32,11 @@ Completed F2-03 register reconciliation; F2-04 executable skew correction; F2-05
 Local item checkpoints again fail creating index.lock; all new work remains uncommitted under the brief's explicit fallback. Earlier failure statements above are historical and do not mean the conductor's supplied commits are absent. Current evidence is in GATE4A_FREEZE.md and VALIDATION.json.
 
 
-## Gate4a-FIX2 resumed from cffb770 — current
+## Gate4a-FIX2 resumed from cffb770 — historical at 9471e14
 
 F2-09 imports the now-present Sheet03 qualification and its source snapshots; F2-10 specifies PG-input DC bias and remaining slew limits; F2-11 selects twelve passive discharge adapters; F2-12 verifies manufacturer test points and adds T07F; F2-13 records the remaining construction blockers. Current owner report/manager report/register/calculations/test plan are synchronized. Original closure remains 4/12, capture BLOCKED. Local staging after each completed subitem failed at index.lock; changes remain uncommitted under the brief fallback. No pull/push, native CAD edits, sub-agents, physical tests or gate advancement.
+
+
+## Gate4a-FIX3 resumed from 692d30f — current
+
+Continued a323a48/6caa8f9/692d30f. Item1 source coverage audited; item2 POR loading corrected and state limits retained; item3 external fixture BOM/netlist/wiring/rating screens completed. The current freeze, owner PDF,40-row register, calculation outputs, test plan, manager report and source/validation registers are synchronized.22 numerical/connectivity tests pass; every physical result remains NOT RUN. Two board limitations remain BLOCKED; fixture qualification is external and does not independently block isolated board hooks. All three local commit attempts failed at index.lock; no bypass/pull/push. No CAD, sub-agents, physical tests, fabrication or gate advancement.

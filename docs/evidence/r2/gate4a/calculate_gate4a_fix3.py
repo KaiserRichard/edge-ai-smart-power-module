@@ -50,7 +50,8 @@ def diagnostic_feed(rfeed):
 
 
 def fixture():
-    rmin = 9.1*(1-.01-50e-6*100)/4
+    # Winding may reach 250C; ambient-only TCR would understate current.
+    rmin = 9.1*(1-.01-50e-6*225)/4
     i = 31/rmin
     # Independent maximum stored capacitance; source work is counted for the
     # entire 20us interval. The bench abort is not credited to the DUT result.
@@ -58,18 +59,23 @@ def fixture():
          + .5*1e-6*14**2 + .5*40e-9*100**2 + .1e-3)
     abort = timer(100e3, 8, .044)
     dead = timer(100e3, 1, .062)
+    connected=e+.5*(5.59656e-3+2.7072e-3+2.64e-3)*5.5**2
     return dict(
         classification='External fixture design envelope; application qualification NOT RUN',
         limit_Rmin_ohm=rmin, resistor_current_max_A=i,
         resistor_power_each_W=31**2/(4*rmin),
         resistor_allowable_screen_W=250*(250-70)/(250-25),
+        load_power_max_at_9V_source_W=9**2/(4*rmin),
+        source_voltage_for_26V_5A_ideal_V=26+(25.5/26)*9.1*(1+.01+50e-6*225)/4,
         dead_timer_s=dead, abort_timer_s=abort,
         abort_complete_max_s=abort[1]+2e-6+.025e-6,
         abort_earliest_after_fault_s=abort[0]-(dead[1]+.5e-6),
         hardware_abort_acceptance_s=20e-6,
         added_energy_J=e,
-        coupled_energy_J=e+.5*(5.59656e-3+2.7072e-3+2.64e-3)*5.5**2,
+        coupled_energy_J=connected,
         inductor_current_screen_A=(2*e/5e-6)**.5,
+        coupled_reverse_inductor_screen_A=(2*connected/5e-6)**.5,
+        classification_100A='First positive source-driven interval only; reverse/coupled current not capped by this allocation',
         raw_no_dump_peak_screen_V=(5.5**2+2*e/2.4064e-3)**.5+.004*100+.020,
         force_FET_on_energy_each_J=100**2*.0068*20e-6,
         source_FET_on_energy_each_J=14**2*.0068*20e-6,
@@ -129,6 +135,8 @@ def calculate():
                                      diagnostic_feed(470)['short_current_max_A'],
             SHDN_off_screen_V=20e-6*10000*(1+RF),
             SHDN_on_screen_V=3.8*10000*(1-RF)/(10000*(1-RF)+1000*(1+RF)),
+            POR_0p8V_sink_screen_A=.8/(100e3*(1-RF))+5e-6,
+            POR_4p75V_high_screen_V=4.75-5.3e-6*100e3*(1+RF),
             SAFE_input_start_V=10.5-.5-.008*47*(1+RF),
             SAFE_cap_hold_s=5e-6*(10.5-.5-.008*47*(1+RF)-6)/.008,
             fast_source_loss_allocation_s=1e-6+.1e-6+.2e-6+1.5e-6+.4e-6+.025e-6,

@@ -168,6 +168,8 @@ FIX3_SOURCE_TRIGGER.md and FIX3_INTERLOCK.md specify the circuits. These calcula
 |Interlock: rejected_DC_path_below_ohm|305.03738704367674|
 |Interlock: SHDN_off_screen_V|0.20052500000000004|
 |Interlock: SHDN_on_screen_V|3.4528931455056884|
+|Interlock: POR_0p8V_sink_screen_A|1.302105527008397e-05|
+|Interlock: POR_4p75V_high_screen_V|4.21860875|
 |Interlock: SAFE_input_start_V|9.623013|
 |Interlock: SAFE_cap_hold_s|0.0022643831250000004|
 |Interlock: fast_source_loss_allocation_s|3.2250000000000005e-06|
@@ -175,10 +177,12 @@ FIX3_SOURCE_TRIGGER.md and FIX3_INTERLOCK.md specify the circuits. These calcula
 |Interlock: actual_hold_s|null|
 |Interlock: actual_persistent_short_rejection|null|
 |External fixture: classification|"External fixture design envelope; application qualification NOT RUN"|
-|External fixture: limit_Rmin_ohm|2.240875|
-|External fixture: resistor_current_max_A|13.833881854186423|
-|External fixture: resistor_power_each_W|107.21258436994478|
+|External fixture: limit_Rmin_ohm|2.22665625|
+|External fixture: resistor_current_max_A|13.922220818772542|
+|External fixture: resistor_power_each_W|107.89721134548721|
 |External fixture: resistor_allowable_screen_W|200.0|
+|External fixture: load_power_max_at_9V_source_W|9.09435392194013|
+|External fixture: source_voltage_for_26V_5A_ideal_V|28.2786640625|
 |External fixture: dead_timer_s|[1.8710754999999998e-06, 2.1295755e-06]|
 |External fixture: abort_timer_s|[1.5255847999999998e-05, 1.6747848e-05]|
 |External fixture: abort_complete_max_s|1.8772848000000002e-05|
@@ -187,6 +191,8 @@ FIX3_SOURCE_TRIGGER.md and FIX3_INTERLOCK.md specify the circuits. These calcula
 |External fixture: added_energy_J|0.024031999999999998|
 |External fixture: coupled_energy_J|0.18955637|
 |External fixture: inductor_current_screen_A|98.04488767906258|
+|External fixture: coupled_reverse_inductor_screen_A|275.3589439259237|
+|External fixture: classification_100A|"First positive source-driven interval only; reverse/coupled current not capped by this allocation"|
 |External fixture: raw_no_dump_peak_screen_V|7.5068472719058335|
 |External fixture: force_FET_on_energy_each_J|0.00136|
 |External fixture: source_FET_on_energy_each_J|2.6656e-05|

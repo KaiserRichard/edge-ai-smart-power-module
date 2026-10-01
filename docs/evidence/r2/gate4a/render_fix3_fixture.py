@@ -16,7 +16,11 @@ def build():
         for pin,net in nets.items():
             pins.append(dict(refdes=ref,pin=str(pin),net=net))
     def r(ref,code,value,a,b):
-        part(ref,'TNPW0603'+code+'BEEA',value,{1:a,2:b},'Vishay28758; <=0.125W development limit; local <=70C')
+        # 0.1%/25ppm 0603 is limited to 3.5ohm..332kohm (28758 p3).
+        size='1206' if code=='2M00' else '0603'
+        tolerance='F' if code=='1R00' else 'B'
+        part(ref,'TNPW'+size+code+tolerance+'EEA',value,{1:a,2:b},
+             'Vishay28758 pp2-4; general mode <=0.110W (0603), <=0.125W allocated (1206); <=70C; gate pulse separately T12F3')
     def c(ref,a,b,value='100nF',mpn='GRM188R71H104KA93D'):
         part(ref,mpn,value,{1:a,2:b})
     def gate(n,kind,a,b,y):
@@ -41,14 +45,14 @@ def build():
          'Separate output; <=13V including error; room <=40C; inventory OPEN')
     # The SB50 is used wire-to-wire; no busbar/PCB-contact current extrapolation.
     for ref,nets in [('JF1A',{'+':'PS_PLUS','-':'PS_MINUS'}),('JF1B',{'+':'FX_SOURCE','-':'FGND'})]:
-        part(ref,'Anderson 992G1','red SB50 housing',nets,'Dead disconnect; 5900 contacts/6AWG; <=14A; local <=40C')
-    part('KF1','Anderson 5900','4 contacts for JF1A/B',{},'Use 1309G4 hand tool; inspect/crimp pull test; DS-SB50 RevC7 p7')
+        part(ref,'Anderson 992G1-BK','red SB50 housing',nets,'Dead disconnect; 5900 contacts/6AWG; <=14A; local <=40C')
+    part('KF1','Anderson 5900','4 contacts for JF1A/B',{},'Use 1309G4 hand tool; inspect/crimp pull test; DS-SB50 Rev8 p7')
     part('WF1','Belden 9906','6AWG 133x27 TC; cut/label red + and black -',{},
          '600V/105C insulation; <=14A feeder; keep outside hot zone; paired route; length recorded')
     part('TF1','Anderson 1309G4','SB50 crimp tool',{},'Tool condition/die/strip length per assembly instructions; inventory OPEN')
     for n in range(1,5):
         part('RFL'+str(n),'NH2509R100FE01','9.1ohm 1% 250W noninductive',
-             {1:'FX_SOURCE',2:'FX_LIMITED'},'Four parallel; each separate 12x12x0.125in Al panel; <=70C ambient; verify mount')
+             {1:'FX_SOURCE',2:'FX_LIMITED'},'Four parallel; separate 12x12x0.125in Al panels; <=70C ambient; winding T<=250C; 200W derated screen')
         part('HF'+str(n),'CUSTOM-FX-AL-01 RevA','12x12x0.125in aluminum panel',{},
              'Vishay30201 RH250 mounting geometry; flat thermal interface; no stacked panels')
     # MOSFET terminal grouping follows the actual TDSON-8 pinout.
@@ -89,7 +93,7 @@ def build():
     c('CF41','FX5','FGND','10uF/50V effective>=5uF','GRM32ER71H106KA12L')
     part('UF11','TPS3808G50DBVR','POR',
          {1:'FX_POR_RAW_N',2:'FGND',3:'FX5',4:'NC',5:'FX5',6:'FX5'})
-    c('CF111','FX5','FGND'); r('RF52','10K0','10k','FX5','FX_POR_RAW_N')
+    c('CF111','FX5','FGND'); r('RF52','100K','100k','FX5','FX_POR_RAW_N')
     gate(12,'BUF','FX_POR_RAW_N',None,'FX_POR_N')
     part('DF40','LM4040A25IDBZR','2.5V shunt',{1:'FX_REF',2:'FGND',3:'FGND'})
     r('RF53','10K0','10k','FX5','FX_REF')
@@ -119,12 +123,15 @@ def build():
     timer(25,'SHOT','ABORT','ABORT_DIV')
     r('RF57','200K','200k','FX5','ABORT_DIV'); r('RF58','20K5','20.5k','ABORT_DIV','FGND')
     gate(26,'AND','FX_ARMED','NOT_SHOT','ISO_CMD')
-    gate(27,'AND','FX_ARMED','DEAD_READY','INJECT_CMD')
+    gate(27,'AND','FX_ARMED','INJECT_ALLOWED','INJECT_CMD')
     gate(28,'BUF','STOP_RAW',None,'STOP_OK')
     gate(29,'BUF','RESET_RAW_N',None,'RESET_N')
     gate(30,'INV','ARM_CONTACT',None,'ARM_EDGE')
     gate(31,'INV','FIRE_CONTACT',None,'FIRE_EDGE')
     gate(32,'OR','SHOT','START_OK','SHOT_OR_START')
+    # Recheck genuine PG/permission after dead time; no PG-induced rescue
+    # after injection starts. Reset requires a separate manual action.
+    ff(33,'DEAD_READY','START_OK','INJECT_ALLOWED','NC','CLR_A')
     for ref,node,kind in [('SF1','STOP_RAW','stop'),('SF2','RESET_RAW_N','reset'),
                           ('SF3','ARM_CONTACT','arm'),('SF4','FIRE_CONTACT','fire')]:
         # Toggle contacts, deliberately returned before a new cycle. No assumed button pinout.
@@ -140,6 +147,17 @@ def build():
         r('RF'+str(n+2),'1K00','1k','HOOK_'+net,net)
     part('JF2','1776508 + 1777989','Phoenix signal header+plug',{1:'HOOK_DUT_PG_OK',2:'FGND'})
     part('JF3','1776508 + 1777989','Phoenix signal header+plug',{1:'HOOK_DUT_PERMISSION',2:'FGND'})
+    # Round-2 adapters remain external fixture parts, with independent local returns.
+    for n,net,ret in [(1,'VIN_PROTECTED','FGND'),(2,'VOUT_5V1','FGND'),
+                      (3,'VOUT_PROTECTED','FGND'),(4,'FAR_5V','FAR_GND'),
+                      (5,'DRV_HOLD','FGND'),(6,'AUX_12V','FGND'),
+                      (7,'AUX_PREHOLD','FGND'),(8,'AUX_LIMITED','FGND'),
+                      (9,'VIN_AUX','FGND'),(10,'DET5','FGND'),
+                      (11,'3V3_AUX','FGND'),(12,'REF_2V5','FGND')]:
+        code='1K00' if n in (2,3,4) else '47K0' if n in (8,9) else '10K0'
+        part(f'RFD{n:02}','TNPW1206'+code+'BEEA',code+' discharge adapter',
+             {1:net,2:ret},'F2-11/T12D; <=0.125W at <=70C; local return, no FAR_GND bypass')
+        part(f'JFD{n:02}','1776508 + 1777989','Phoenix adapter connection',{1:net,2:ret})
     # Manual floating-cap discharge; open for operation. Separate returns, never a common bus.
     for n,bst,ts in [(1,'FBST1','L201_IN'),(2,'FBST2','FX_ISO_MID'),
                      (3,'FBST3','FX_SOURCE_MID'),(4,'PROT_BST','PROT_MID')]:
@@ -152,6 +170,13 @@ def build():
         part('RFD'+str(n),'TNPW120610K0BEEA','10kohm discharge adapter',{1:net,2:ret},
              'Permanent characterized load; <=0.125W at<=70C; local return')
         part('JFD'+str(n),'1776508 + 1777989','Phoenix adapter connection',{1:net,2:ret})
+    # Individually insulated bolt pads, not signal headers.
+    for n,net in enumerate(['DUT_IN','VIN_PROTECTED','NATIVE_SW','L201_IN','FGND'],1):
+        part('PF'+str(n),'CUSTOM-FX-CU-01 RevA','M4 insulated force pad',
+             {'M4':net},'2x15mm C110 strap; <=30mm; <=0.2mohm per joint; no hot removal; T12F3')
+    for n,net in [(19,'FX_LIMITED'),(20,'DUT_IN')]:
+        part('RFD'+str(n),'TNPW120610K0BEEA','10kohm permanent discharge',
+             {1:net,2:'FGND'},'<=0.125W at <=70C for |V|<=31V; transient separately T12F3')
     part('BF1','CUSTOM-FX-CU-01 RevA','C110 force strap set',{},
          '2mm x15mm; <=30mm span; 4.5mm holes20mm pitch; Kelvin joint<=0.2mohm; assembly L<=40nH')
     part('MF1','CUSTOM-FX-M4-01 RevA','M4 hardware/insulated supports/cover set',{},

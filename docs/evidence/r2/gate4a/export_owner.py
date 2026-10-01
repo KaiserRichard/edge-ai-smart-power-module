@@ -17,14 +17,14 @@ def export():
     if not font.is_file():
         raise RuntimeError('Supply an equivalent Unicode font before exporting this report')
     page.insert_font(fontname='Report', fontfile=str(font))
-    page.insert_text((42, 45), 'Gate4a-FIX2 | Owner handback', fontsize=17, fontname='Report')
+    page.insert_text((42, 45), 'Gate4a-FIX3 | Owner handback', fontsize=17, fontname='Report')
     page.insert_text((42, 66), '2026-10-01  |  Analysis only  |  NOT FOR FABRICATION',
                      fontsize=9, fontname='Report', color=(.55, .12, .10))
     remaining = page.insert_textbox(pymupdf.Rect(42, 86, 553, 799), body,
                                     fontsize=10.3, lineheight=1.17, fontname='Report')
     if remaining < 0:
         raise RuntimeError(f'Owner explanation exceeds one page by {-remaining:.1f} points')
-    doc.set_metadata({'title': 'Gate4a-FIX2 owner explanation',
+    doc.set_metadata({'title': 'Gate4a-FIX3 owner explanation',
                       'subject': 'Blocked test-board capture; no electrical validation',
                       'author': 'Edge AI Smart Power Module project'})
     doc.save(ROOT / 'OWNER_EXPLANATION.pdf', garbage=4, deflate=True)

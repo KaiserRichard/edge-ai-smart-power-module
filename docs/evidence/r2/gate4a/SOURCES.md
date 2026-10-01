@@ -62,3 +62,8 @@ Rechecked TNPW document 28758, 10-Apr-2026: 0805 348 kΩ/1 MΩ replacements and 
 [SOURCES_FIX.json](SOURCES_FIX.json) records the exact primary URLs/revisions, inspected sections, usage, manufacturer copyright and attribution for this resume, plus hashes of both briefs and the independent review. It distinguishes live rechecks from citations retained from the partial owners. Web-only sources have no fabricated local path/hash; no third-party material was copied into docs or upstream sources modified.
 
 New selection rationale: REF50 SBOS410O §9.4.1.1 governs C302 effective output capacitance; TLV3201 SBOS561C §6.1 governs R373 input-current limiting; TPS3808 SBVS050N §§6.5–6.6 governs rising hysteresis; Vishay WFM30387 p3 restricts pulse-curve applicability to33mΩ. The existing4.7µF Murata candidate is retained for C302, but attempts to retrieve its exact sheet again failed (product fallback403). Its exact approval/bias evidence remains OPEN; no new vendor approval is asserted.
+
+
+## Round-3 source register
+
+[third_party/gate4a_fix3/SOURCES.json](../../../../third_party/gate4a_fix3/SOURCES.json) pins the current source/interlock/fixture references and adaptations. Fixture resistor ranges, mounted thermal derating and connector revision were rechecked in the final resume; all application ratings remain qualified only as stated in FIX3_FIXTURE.md.
