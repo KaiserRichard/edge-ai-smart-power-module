@@ -44,5 +44,42 @@
     }
   ],
   "review": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md",
-  "review_sha256": "21b1bde5968c13198b2772cd445c2ac3d318b7dc342669ca4c59c61cf7082e32"
+  "review_sha256": "21b1bde5968c13198b2772cd445c2ac3d318b7dc342669ca4c59c61cf7082e32",
+  "resume_commit": "74d5b104cc00bbf93251f0b51d28cfd0807ac83f",
+  "independent_check": {
+    "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/CHECK_4AFIX.md",
+    "sha256": "4a93b8a7546be8a899dc5467b37e1c70df57dc284678c25108ee5a8b07b82142",
+    "reviewed_commit": "47c7c072e1bf3d984dca79f112e953500f21ab26"
+  },
+  "optional_sheet03_qualification": {
+    "ref": "origin/feat/r2-bom-draft",
+    "commit": "960a1a81ae7acf6e45e880fffb395f04a5c4c5d7",
+    "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+    "status": "ABSENT in local remote-tracking object; no network fetch performed"
+  },
+  "briefs": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX2_RESUME.md",
+      "sha256": "57f36366a2f23aca7c7a165975d6e234bac3bdf5b47f01085069c785be1e26b7",
+      "read": "full"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX2.md",
+      "sha256": "b8ca54b59ec4ba23f753b171654d90edc282cbeb85ff850883d0baf3131118d4",
+      "read": "full"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX.md",
+      "sha256": "98766c651e035b6dcde3331445983b9be32ee033062ba7305a6e962bb882473b",
+      "read": "full"
+    }
+  ],
+  "upstream_source_handoff_check": {
+    "ref": "origin/feat/aux-24v-interface",
+    "commit": "ab24d7377f5fd0e5f6e1857eb98e8b0c0ceae644",
+    "path": "docs/evidence/aux_converter/AUX24_INTERFACE.md",
+    "sha256": "aac450017e8d54522310194cfb3286875ef089ee69465b0d57203cbf866c0b5a",
+    "read_scope": "verdict, owner/buyer handoff and closure sections",
+    "result": "NONE MEETS SPEC; no selected approved module or complete source-energy bound. Separate robot/old9-24V assumptions not imported."
+  }
 }

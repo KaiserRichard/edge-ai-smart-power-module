@@ -77,13 +77,46 @@ class PhysicalCalculationChecks(unittest.TestCase):
         self.assertEqual(json.loads((p/'CALCULATIONS.json').read_text()),self.data)
 
     def test_measurement_error_cannot_discard_tail_or_additive_voltage_errors(self):
-        from calculate_gate4a_fix import charge_uncertainty, energy_uncertainty
+        from calculate_gate4a_fix import charge_uncertainty, energy_error_without_skew
         short=charge_uncertainty(100e-6,10e-6)
         tail=charge_uncertainty(100e-6,.002)
         self.assertAlmostEqual(short,1.65e-6,places=12)
         self.assertAlmostEqual(tail-short,.010*(.002-10e-6),places=12)
-        self.assertGreater(energy_uncertainty(.1,.2,.0138,.002),.00349)
+        self.assertGreater(energy_error_without_skew(.1,.2,.0138,.002),.00349)
         self.assertIsNone(self.data['gate4a_fix']['measurement']['calibration_records'])
+
+    def test_relative_skew_counterexample_exceeds_old_endpoint_only_budget(self):
+        from calculate_gate4a_fix import energy_error_without_skew, skew_total_variation_bound
+        # Integrate a single sinusoid period numerically, then repeat 10,000 times.
+        # This is the independent check's mathematical example, not a DUT trace.
+        frequency, duration, delta, samples = 5e6, .002, 4e-9, 4096
+        period = 1/frequency
+        def energy(shift):
+            terms = []
+            for k in range(samples):
+                t = (k+.5)*period/samples
+                v = 3.45*(1+math.cos(2*math.pi*frequency*t))
+                i = 10*(1+math.sin(2*math.pi*frequency*(t+shift)))
+                terms.append(v*i)
+            return math.fsum(terms)*duration/samples
+        actual_error = abs(energy(delta)-energy(0))
+        self.assertAlmostEqual(energy(0), .069, places=12)
+        self.assertAlmostEqual(actual_error, .0345*math.sin(2*math.pi*frequency*delta), places=12)
+        self.assertGreater(actual_error, energy_error_without_skew(.1,.2,.0138,.002))
+        variation = 40*frequency*duration
+        conservative = skew_total_variation_bound(6.9, delta, variation)
+        self.assertAlmostEqual(conservative, .01104, places=12)
+        self.assertGreater(conservative, actual_error)
+
+    def test_missing_skew_bound_cannot_be_reported_as_complete_energy_uncertainty(self):
+        from calculate_gate4a_fix import energy_uncertainty, energy_error_without_skew
+        self.assertIsNone(energy_uncertainty(.1,.2,.0138,.002))
+        self.assertIsNone(self.data['gate4a_fix']['measurement']['U_energy_example_J'])
+        base=energy_error_without_skew(.1,.2,.0138,.002)
+        self.assertAlmostEqual(energy_uncertainty(.1,.2,.0138,.002,u_skew=.01104),base+.01104)
+        for invalid in (-1., float('nan'), float('inf')):
+            with self.assertRaises(ValueError):
+                energy_uncertainty(.1,.2,.0138,.002,u_skew=invalid)
 
     def test_raw_dump_energy_sharing_by_independent_time_integration(self):
         # Integrate each resistor loss in a capacitor discharge; check the proposed
@@ -114,6 +147,34 @@ class PhysicalCalculationChecks(unittest.TestCase):
         self.assertLess(aux['new_detector_supervisor_min_max_V'][0],4.75)
         self.assertIsNone(aux['actual_startup_min_max_s'][0])
         # Startup monitor selection cannot silently become a fast rail-floor proof.
+
+    def test_RUN_divider_leakage_screen_at_low_line(self):
+        c=self.data['gate4a_fix2']['converter']
+        self.assertGreater(c['old464k_RUN_rising_screen_V'][1],7.5)
+        self.assertLess(c['RUN_rising_screen_V'][1],7.5)
+        # Independent Norton/KCL calculation at the least favorable high corner.
+        rt,rb=383e3*1.0025,100e3*.9975
+        run_voltage=(7.5/rt-3e-6)/(1/rt+1/rb)
+        self.assertGreater(run_voltage,1.26)
+        self.assertLess(c['ENOUT_sink_upper_at35V_screen_A'],.1e-3)
+        self.assertIsNone(c['actual_stability'])
+        self.assertIsNone(c['actual_RUN_release_V'])
+
+    def test_coupled_pool_and_protected_resistor_energy_by_independent_integral(self):
+        c=self.data['gate4a_fix2']['coupled_energy']
+        # Assemble the pool from physical stores, not the raw-only subtotal.
+        energy=(.5*(5.59656e-3+2.7072e-3+2.2e-3)*5.5**2
+                +.5*30e-6*28.289211046948948**2
+                +28.289211046948948*100e-6+.5*12e-6*8**2)
+        self.assertAlmostEqual(c['scenarios'][0]['pool_assumed_J'],energy,places=12)
+        self.assertGreater(energy,c['raw_only_pool_J'])
+        # A zero-source discharge tests sharing independently of corner enumeration.
+        rs=[.033*1.0135,.033*.9865,.033*1.0135,.033*1.0135]
+        a,b=sum(rs[:2]),sum(rs[2:]); req=1/(1/a+1/b)
+        cap=2*energy/5.5**2; tau=req*cap; steps=20000; dt=20*tau/steps
+        ej=math.fsum((5.5*math.exp(-(n+.5)*dt/tau)/a)**2*rs[0]*dt for n in range(steps))
+        self.assertAlmostEqual(ej/energy,c['protected_max_part_fraction'],places=6)
+        self.assertIsNone(c['actual_rating_margin'])
 
 
 if __name__ == '__main__':

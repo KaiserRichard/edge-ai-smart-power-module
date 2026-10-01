@@ -2,6 +2,8 @@
 import copy
 import hashlib
 import json
+import math
+from itertools import product
 from pathlib import Path
 
 
@@ -37,7 +39,83 @@ def apply_fix2(data):
                      current_loop_assumed_ohm=loop/1000,
                      max_positive_current_at_ratio1p05_A=5*1.05/2.05,
                      reserve_after20mV_and15mV_uncertainty_V=selected['results']['0.02']['margin_to4p75_V']-.015,
-                     actual_hot_loop_ohm=None), auxiliary=auxiliary_charger())
+                     actual_hot_loop_ohm=None), auxiliary=auxiliary_charger(),
+        converter=converter_completion(), coupled_energy=coupled_energy(data),
+        bootstrap_load_test=bootstrap_load_test())
+
+
+def coupled_energy(data):
+    """Screen either destination against the entire connected pool, no survival claim."""
+    raw = data['raw_node']['total_raw_dump_pool_upper_J']
+    protected = data['protected_node']['initial_protected_energy_upper_J']
+    voltage = data['raw_node']['terminal_screen_CALCULATED_V']
+    rerr = .0135
+    shares = []
+    resistances = []
+    for signs in product((-1, 1), repeat=4):
+        rs = [.033*(1+s*rerr) for s in signs]
+        a,b = sum(rs[:2]),sum(rs[2:])
+        conductance=1/a+1/b
+        shares.append(rs[0]/a**2/conductance)
+        resistances.append(1/conductance)
+    raw_fraction=data['gate4a_fix']['raw_dump']['worst_corner_part_energy_fraction']
+    scenarios=[]
+    for dummy_cap in (.0022,.00264):
+        pool=raw+protected+.5*dummy_cap*5.5**2
+        scenarios.append(dict(dummy_effective_C_upper_assumed_F=dummy_cap,
+                              pool_assumed_J=pool,
+                              one_raw_resistor_energy_screen_J=raw_fraction*pool,
+                              one_protected_resistor_energy_screen_J=max(shares)*pool))
+    return dict(classification='Conditional all-bank allocation; fixture/cable/other stores still OPEN',
+                raw_only_pool_J=raw, protected_initial_J=protected,
+                protected_max_part_fraction=max(shares),
+                protected_ballast_min_max_ohm=[min(resistances),max(resistances)],
+                protected_current_at_terminal_screen_A=voltage/min(resistances),
+                scenarios=scenarios, actual_total_energy_J=None,
+                actual_energy_partition=None, actual_rating_margin=None)
+
+
+def bootstrap_load_test():
+    # Test limits only. They deliberately do not reuse the TS=20V pump guarantee.
+    bleed=10/(2e6*.9975)
+    return dict(classification='T04L low-energy load-line qualification targets; NOT measured',
+                R305_bleed_at10V_screen_A=bleed,
+                other_external_leakage_ceiling_target_A=5e-6,
+                pump_at_actual_TS_required_min_A=bleed+5e-6,
+                external_load_emulator_R_test_ohm=2e6,
+                test_resistor_increment_at10V_screen_A=bleed,
+                probe_loading_must_be_included=True,
+                actual_hot_pump_current_A=None, actual_external_leakage_A=None)
+
+
+def converter_completion():
+    from calculate_gate4a import divider_screen
+    # Leakage and effective-capacitance limits are qualification allocations.
+    rt, rb, rfb, rff, cfb, cff = 383e3, 100e3, 15e3, 15e3, 1e-9, 33e-12
+    rerr, cerr = .0025, .0518  # resistor 0.1%+60K*25ppm; C0G 5%+60K*30ppm
+    z1 = 1/(2*math.pi*rfb*cfb)
+    z2 = 1/(2*math.pi*(1e6+rff)*cff)
+    pff = 1/(2*math.pi*rff*cff)
+    def corners(nominal):
+        return [nominal/((1+rerr)*(1+cerr)), nominal/((1-rerr)*(1-cerr))]
+    return dict(
+        classification='Circuit selection and conditional passive-network screens; no stability PASS',
+        R345_ohm=rt, R346_ohm=rb,
+        adverse_RUN_ENOUT_leakage_target_A=3e-6,
+        old464k_RUN_rising_screen_V=divider_screen(1.16,1.26,464e3,rb,rerr,3e-6),
+        RUN_rising_screen_V=divider_screen(1.16,1.26,rt,rb,rerr,3e-6),
+        ENOUT_sink_upper_at35V_screen_A=35/(rt*(1-rerr))+1e-6,
+        compensation=dict(R343_RFB_ohm=rfb, C356_CFB_F=cfb,
+                          R344_RFF_ohm=rff, C357_CFF_F=cff,
+                          zero1_nominal_Hz=z1, zero2_nominal_Hz=z2,
+                          feedforward_pole_nominal_Hz=pff,
+                          zero1_corner_Hz=corners(z1), zero2_corner_Hz=corners(z2),
+                          feedforward_pole_corner_Hz=corners(pff),
+                          actual_loop_phase_margin_deg=None),
+        output_Ceff_target_F=[10e-6,26e-6],
+        LC_resonance_sensitivity_Hz=[1/(2*math.pi*math.sqrt(5.64e-6*26e-6)),
+                                     1/(2*math.pi*math.sqrt(3.76e-6*10e-6))],
+        actual_RUN_release_V=None, actual_stability=None)
 
 
 def auxiliary_charger():
@@ -103,4 +181,26 @@ def render_fix2_md(data):
             '`tOC=C*(Voff−Vstart)/ITMR`. At 10 nF, 1.375 V and 310 µA, '
             'this is 28.226 µs, not the historical 43.065 µs zero-start screen. '
             'Initial timer voltage and stress-dependent charging are measured in T07; '
-            'the old calculation remains explicitly historical.\n')
+            'the old calculation remains explicitly historical.\n'
+            '\n## Round 2 — U317 RUN and compensation completion\n\n'
+            'F2-05 assigns the VC–FB and output–FB compensation branches. '
+            'R345 changes from 464 kΩ to 383 kΩ because the old divider fails '
+            'the declared 7.5 V low-line allocation with 3 µA adverse leakage.\n\n'
+            f"Old/new conditional RUN rising ranges: {data['gate4a_fix2']['converter']['old464k_RUN_rising_screen_V']} / "
+            f"{data['gate4a_fix2']['converter']['RUN_rising_screen_V']} V. "
+            'The 3 µA leakage ceiling must be qualified in T07E. '
+            'Selected passive-network zeros are 10.610330 / 4.751603 kHz and '
+            'the feedforward pole is 321.525138 kHz. These are network frequencies, '
+            'not loop crossover or stability margins. Actual margins remain OPEN.\n'
+            '\n## Round 2 — coupled-bank energy and bootstrap measurements\n\n'
+            'F2-06 screens either dump against all initially connected output banks plus Enew. '
+            f"For effective dummy C≤2.2 mF, the conditional pool is {data['gate4a_fix2']['coupled_energy']['scenarios'][0]['pool_assumed_J']*1e3:.6f} mJ; "
+            f"one raw resistor receives at most {data['gate4a_fix2']['coupled_energy']['scenarios'][0]['one_raw_resistor_energy_screen_J']*1e3:.6f} mJ "
+            f"and one protected resistor {data['gate4a_fix2']['coupled_energy']['scenarios'][0]['one_protected_resistor_energy_screen_J']*1e3:.6f} mJ "
+            'inside the fixed topology/tolerance model. These are separate worst allocations; '
+            'do not add them as simultaneous dissipated energies. Missing fixture/cable stores and '
+            'actual partition/SOA remain OPEN. A nominal 2.2 mF dummy at +20% raises the pool to '
+            f"{data['gate4a_fix2']['coupled_energy']['scenarios'][1]['pool_assumed_J']*1e3:.6f} mJ.\n\n"
+            'T04L requires actual-TS pump margin after R305 plus all external leakage and probe load. '
+            'The non-bleed 5 µA qualification allocation needs ≥10.012531 µA pump capability '
+            'at 10 V, in the actual circuit; the TS=20 V table point is not substituted.\n')

@@ -1,4 +1,22 @@
-# Gate4a-FIX final resume — 2026-10-01 (current)
+# Gate4a-FIX2 continuation — 2026-10-01 (current)
+
+**STATUS: BLOCKED for test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Continued the three supplied partial commits without restarting. This section supersedes earlier status/Git descriptions below; historical work is preserved.
+
+**WHAT WAS DONE:** reconciled the recovered CSV/Markdown/manifest and pinned J502 provenance; completed U317 compensation connections and revised R345 to 383 kΩ after a leakage corner failed; made interchannel-skew uncertainty mandatory in executable energy calculations; added coupled-bank energy/resistor screens, isolated bootstrap/detector tests and explicit U301 pins; mapped all eight remaining original findings and refreshed the one-page owner explanation.
+
+**EVIDENCE:** [Current verdict and owner explanation](evidence/r2/gate4a/GATE4A_FREEZE.md), [round-2 decisions F2-03…08](evidence/r2/gate4a/FIX2_RESOLUTIONS.md), [calculations](evidence/r2/gate4a/CALCULATIONS.md), [test plan](evidence/r2/gate4a/TEST_PLAN.md), [validation](evidence/r2/gate4a/VALIDATION.json), and [source provenance](../third_party/gate4a_fix2/SOURCES.json). Fourteen numerical tests pass, including the reviewer's skew counterexample and independent energy-sharing checks. No native CAD edit, ERC/DRC, physical measurement or electrical validation occurred.
+
+**DECISIONS:** retain architecture D, 9–26 V, SMCJ36CA, Schurter 3403.0285.23, BSC034 pair and isolated upstream 48→24 V intent. J502 solution A is selected; hot assembly remains unqualified. Measurement-only application limits belong to named tests and need not independently block isolated hooks. Complete board capture remains blocked by missing trigger, rail-loss/reset/ARM and fixture circuits. Original-finding closure remains 4/12; no physical PASS is implied.
+
+**OPEN RISKS:** 10 µs/100 µC autonomous isolation; fault-priority/persistent-short lockout; rated source limiter/abort/discharge/force fixture; actual source and instruments/calibrations; hot SOA/pulse/negative commutation; full coupled far-end voltage and normal 5 A delivery. The source-interface branch approves no compliant module; the optional Sheet 03 qualification file is absent at its pinned BOM ref. The coupled 174.086/180.741 mJ screens do not establish component ratings.
+
+**NEXT GATE:** finish the missing constructions and their bounds, then proceed through authorized R2 capture/pin review/ERC, R3 layout/DRC/visual, R4 fabrication-readiness and R5 staged dummy-load bring-up. No Pi or manufacturing release.
+
+**GIT:** local item staging/commit attempts failed creating the worktree index.lock. Under the brief's explicit fallback the continuation remains uncommitted. No pull, push, lock deletion or permission bypass was attempted. The older committed partial work remains at 7098411, 81aac81 and 74d5b10.
+
+---
+
+# Gate4a-FIX prior resume — 2026-10-01 (historical at 74d5b10)
 
 **STATUS: BLOCKED for test-board capture. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Round-2 continuation reviewed the prior partial commits and independent check. No KiCad edits, physical tests, ERC/DRC or fabrication release occurred.
 

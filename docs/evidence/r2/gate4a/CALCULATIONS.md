@@ -68,7 +68,8 @@ The sections above preserve the original energy/path screens, with the detector 
 |Source-off measured current ceiling with1%+2mA error,A|0.007920792079207921|
 |Charge example uncertainty,C|1.6500000000000003e-06|
 |Whole2ms charge example uncertainty,C|2.1550000000000002e-05|
-|Energy example uncertainty,J|0.0034948223999999996|
+|Energy partial error WITHOUT relative skew,J|0.0034948223999999996|
+|Complete energy uncertainty (OPEN without measured skew),J|null|
 |Aux-only pulse source energy screen,J|0.013540205000000003|
 
 Detector equation: `Ip=Vs/R367+Ileak; Vdiv=Vs+(R303+Ron)Ip; Vraw=Vdiv(1+R301/R302)+R301Ip`. Corners enumerate four independently±0.25% resistors, Ron0…17Ω, inherited reference error0.12125%, comparator offset±4mV, **assumed** hysteresis±2mV, transferred PSRR/CMRR, additional R373 input-bias error±5.0125µV, and **assumed**1µA diode/PCB leakage plus125nA switch/comparator allowance. This conditional bound is not a guaranteed5.38V overdrive PASS; the missing hysteresis/dynamic/leakage transfer is T06.
@@ -88,3 +89,15 @@ U327 TPS259470LRPWR follows D304 and drives DRV_HOLD. C374 1 µF / R374 100 Ω s
 Aux input screen: 107.014375 mA at 7.5 V after branch loss and 75% efficiency, including 5 mA overhead; the transferred stopper floor is 135.014 mA at its datasheet test condition. The actual 9 V transfer and the converter's own local-capacitor startup remain T07A/C. U327 worst flat power sensitivity is 0.566321 W; with 85°C ambient and 74.5°C/W it gives 127.191°C, above the 125°C operating ceiling. Therefore the added charger requires local ambient ≤70°C for the initial coupon (112.191°C sensitivity), plus measured junction/board correlation; no hot PASS is inferred.
 
 LT4363 TMR starts around 0.5 V in regulated operation: `tOC=C*(Voff−Vstart)/ITMR`. At 10 nF, 1.375 V and 310 µA, this is 28.226 µs, not the historical 43.065 µs zero-start screen. Initial timer voltage and stress-dependent charging are measured in T07; the old calculation remains explicitly historical.
+
+## Round 2 — U317 RUN and compensation completion
+
+F2-05 assigns the VC–FB and output–FB compensation branches. R345 changes from 464 kΩ to 383 kΩ because the old divider fails the declared 7.5 V low-line allocation with 3 µA adverse leakage.
+
+Old/new conditional RUN rising ranges: [5.120075112219451, 8.531185263157894] / [4.428768896508728, 7.26186197368421] V. The 3 µA leakage ceiling must be qualified in T07E. Selected passive-network zeros are 10.610330 / 4.751603 kHz and the feedforward pole is 321.525138 kHz. These are network frequencies, not loop crossover or stability margins. Actual margins remain OPEN.
+
+## Round 2 — coupled-bank energy and bootstrap measurements
+
+F2-06 screens either dump against all initially connected output banks plus Enew. For effective dummy C≤2.2 mF, the conditional pool is 174.086483 mJ; one raw resistor receives at most 15.003120 mJ and one protected resistor 44.404903 mJ inside the fixed topology/tolerance model. These are separate worst allocations; do not add them as simultaneous dissipated energies. Missing fixture/cable stores and actual partition/SOA remain OPEN. A nominal 2.2 mF dummy at +20% raises the pool to 180.741483 mJ.
+
+T04L requires actual-TS pump margin after R305 plus all external leakage and probe load. The non-bleed 5 µA qualification allocation needs ≥10.012531 µA pump capability at 10 V, in the actual circuit; the TS=20 V table point is not substituted.

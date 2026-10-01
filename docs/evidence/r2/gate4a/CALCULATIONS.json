@@ -846,7 +846,9 @@
       "source_nominal_SW_timeout_plus_TPS_s": 1.0500000000000001e-05,
       "U_charge_example_C": 1.6500000000000003e-06,
       "U_charge_2ms_example_C": 2.1550000000000002e-05,
-      "U_energy_example_J": 0.0034948223999999996,
+      "U_energy_example_J": null,
+      "U_energy_without_skew_example_J": 0.0034948223999999996,
+      "U_skew_actual_J": null,
       "energy_additive_voltage_error_V": 0.0106,
       "measured_peak_ceiling_if15mV_V": 5.485,
       "measured_min_floor_if15mV_V": 4.765,
@@ -1338,6 +1340,92 @@
       "slew_actual_V_per_s": null,
       "hold_actual_s": null,
       "Q316_hot_SOA_qualification": null
+    },
+    "converter": {
+      "classification": "Circuit selection and conditional passive-network screens; no stability PASS",
+      "R345_ohm": 383000.0,
+      "R346_ohm": 100000.0,
+      "adverse_RUN_ENOUT_leakage_target_A": 3e-06,
+      "old464k_RUN_rising_screen_V": [
+        5.120075112219451,
+        8.531185263157894
+      ],
+      "RUN_rising_screen_V": [
+        4.428768896508728,
+        7.26186197368421
+      ],
+      "ENOUT_sink_upper_at35V_screen_A": 9.261284412074573e-05,
+      "compensation": {
+        "R343_RFB_ohm": 15000.0,
+        "C356_CFB_F": 1e-09,
+        "R344_RFF_ohm": 15000.0,
+        "C357_CFF_F": 3.3e-11,
+        "zero1_nominal_Hz": 10610.32953945969,
+        "zero2_nominal_Hz": 4751.6030181189835,
+        "feedforward_pole_nominal_Hz": 321525.1375593845,
+        "zero1_corner_Hz": [
+          10062.625845976132,
+          11218.015022220907
+        ],
+        "zero2_corner_Hz": [
+          4506.325949832572,
+          5023.741613175507
+        ],
+        "feedforward_pole_corner_Hz": [
+          304928.05593867064,
+          339939.8491582093
+        ],
+        "actual_loop_phase_margin_deg": null
+      },
+      "output_Ceff_target_F": [
+        1e-05,
+        2.6e-05
+      ],
+      "LC_resonance_sensitivity_Hz": [
+        13142.981774709111,
+        25955.309336016584
+      ],
+      "actual_RUN_release_V": null,
+      "actual_stability": null
+    },
+    "coupled_energy": {
+      "classification": "Conditional all-bank allocation; fixture/cable/other stores still OPEN",
+      "raw_only_pool_J": 0.09986508302957715,
+      "protected_initial_J": 0.040946399999999994,
+      "protected_max_part_fraction": 0.25507381425378695,
+      "protected_ballast_min_max_ohm": [
+        0.0325545,
+        0.0334455
+      ],
+      "protected_current_at_terminal_screen_A": 211.38916214988092,
+      "scenarios": [
+        {
+          "dummy_effective_C_upper_assumed_F": 0.0022,
+          "pool_assumed_J": 0.17408648302957713,
+          "one_raw_resistor_energy_screen_J": 0.015003120319753803,
+          "one_protected_resistor_energy_screen_J": 0.04440490323638139
+        },
+        {
+          "dummy_effective_C_upper_assumed_F": 0.00264,
+          "pool_assumed_J": 0.18074148302957713,
+          "one_raw_resistor_energy_screen_J": 0.015576661493027995,
+          "one_protected_resistor_energy_screen_J": 0.04610241947024034
+        }
+      ],
+      "actual_total_energy_J": null,
+      "actual_energy_partition": null,
+      "actual_rating_margin": null
+    },
+    "bootstrap_load_test": {
+      "classification": "T04L low-energy load-line qualification targets; NOT measured",
+      "R305_bleed_at10V_screen_A": 5.012531328320802e-06,
+      "other_external_leakage_ceiling_target_A": 5e-06,
+      "pump_at_actual_TS_required_min_A": 1.0012531328320803e-05,
+      "external_load_emulator_R_test_ohm": 2000000.0,
+      "test_resistor_increment_at10V_screen_A": 5.012531328320802e-06,
+      "probe_loading_must_be_included": true,
+      "actual_hot_pump_current_A": null,
+      "actual_external_leakage_A": null
     }
   }
 }

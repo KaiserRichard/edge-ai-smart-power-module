@@ -1,6 +1,6 @@
 # Gate4a-FIX review dispositions — 2026-09-30
 
-**Analysis only. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+**Round-1 record; current deltas and dispositions are in [FIX2_RESOLUTIONS.md](FIX2_RESOLUTIONS.md). Analysis only. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 Basis: starting commit `931e36907c00683a409cd33cc6bba2f95d843b29`; independent review `/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md`, read in full. That report contains 12 BLOCKING, four MAJOR and one MINOR numbered findings; the brief calls these 14 blockers. All 17 IDs and the original freeze blockers are in scope. Historical proposals/calculations are preserved in [history/931e369](history/931e369/README.md).
 
@@ -14,7 +14,7 @@ Disposition vocabulary: **CORRECTED** is a documentary/circuit-selection defect 
 
 **EVIDENCE:** Vishay TNPW e3 document 28758, 10-Apr-2026, pp1–4, supports 0805 through 1 MΩ at 0.1%/25 ppm/K; 0603 ends at 332 kΩ. [Primary source](https://www.vishay.com/docs/28758/tnpw_e3.pdf). Referenced only; manufacturer copyright; no circuit/source copy or upstream edits.
 
-**CALCULATION:** Values and resistance tolerances are unchanged, so the prior initial-only OVP screen 26.973873–28.289211 V and 12 V feedback screen 11.621343–12.311325 V remain conditional. Use `Rmin=Rnom(1−0.001−25e−6×60)=0.9975Rnom` as the declared 25→85°C screen. Conservatively assigning the entire 58.1 V to R103 gives `P≤58.1²/(348k×0.9975)=9.724 mW`; R340 at 12.311325 V gives ≤0.151949 mW. Current R367 is the 0603 100 kΩ selection: at the 2.5 V screen `P=2.5²/(100k×0.9975)=62.656642 µW`, using the 0603 rating; the old 6.266 µW value belongs only to the superseded 1 MΩ candidate and is historical. All active values remain below their applicable package power screens, conditional on the specified PCB thermal construction. 150 V package working voltage exceeds these drops. Larger-pad parasitic effects are not assumed zero; detector settling and converter loop measurements remain T06/T07. No missing max IFB or hot threshold is invented.
+**CALCULATION:** Values and resistance tolerances are unchanged, so the prior initial-only OVP screen 26.973873–28.289211 V and 12 V feedback screen 11.621343–12.311325 V remain conditional. Use `Rmin=Rnom(1−0.001−25e−6×60)=0.9975Rnom` as the declared 25→85°C screen. Conservatively assigning the entire 58.1 V to R103 gives `P≤58.1²/(348k×0.9975)=9.724 mW`; R340 at 12.311325 V gives ≤0.151949 mW. Current R367 is the 0603 100 kΩ selection: at the 2.5 V screen `P=2.5²/(100k×0.9975)=62.656642 µW`, using the 0603 rating; the old 6.266 µW value belongs only to the superseded 1 MΩ candidate and is historical. All active values remain below their applicable package power screens, conditional on the specified PCB thermal construction. The 0805 working-voltage limit is 150 V; current R367 uses the 0603 100 V limit. Both exceed the respective screened drops. Larger-pad parasitic effects are not assumed zero; detector settling and converter loop measurements remain T06/T07. No missing max IFB or hot threshold is invented.
 
 ## R4A-03 — buffer identity: CORRECTED; sequencing BENCH REQUIRED
 

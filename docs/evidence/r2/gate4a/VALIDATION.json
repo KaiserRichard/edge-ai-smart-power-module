@@ -1,21 +1,20 @@
 {
   "classification": "Numerical/documentary verification only; no electrical validation",
-  "date": "2026-09-30",
-  "resume_base_commit": "2b99ac7bd60d352a4b418cd75e0fc8f66e345b4d",
-  "unit_test_command": "python3 -B -m unittest discover -s docs/evidence/r2/gate4a -p test_gate4a_calculations.py",
-  "unit_tests_pass": 10,
+  "date": "2026-10-01",
+  "resume_base_commit": "74d5b104cc00bbf93251f0b51d28cfd0807ac83f",
+  "validation_command": "python3 -B docs/evidence/r2/gate4a/validate_fix2.py --write",
+  "unit_tests_pass": 14,
+  "baseline_test_result": "At74d5b10:9/10 pass; CSV/manifest RUN mismatch failed",
+  "register_rows": 37,
+  "register_unique_reserved_refs": 251,
   "checks": [
-    "Ideal local-store energy conservation and independent KCL/inductor derivatives",
-    "Pinned raw/protected netlist boundary",
-    "Unknown electrical limits remain null; failed protected-bank screens retained",
-    "Loaded-divider independent Thevenin solution",
-    "CSV/manifest and deterministic calculation JSON/Markdown consistency",
-    "Whole-tail charge and additive voltage-energy uncertainty",
-    "Independent time integral confirms raw-resistor energy sharing",
-    "Rising supervisor hysteresis rejects the superseded110k choice",
-    "All pinned input hashes match;931e369 archive bytes preserved",
-    "No reference collisions across36 change-register rows",
-    "Git diff whitespace and Markdown table columns checked"
+    "Reproduced N1 skew counterexample and mandatory unknown-skew handling",
+    "Independent protected/raw resistor-energy integrals and connected-store sum",
+    "RUN leakage KCL, preserved failed old-divider screen and null actual stability",
+    "All prior numerical, topology and unknown-bound checks",
+    "Exact generated CSV/Markdown/JSON; no cross-row refdes collisions",
+    "Pinned inputs/imports/archive bytes and available manufacturer-cache hashes",
+    "Git diff whitespace; no native CAD changes"
   ],
   "pinned_inputs_verified": [
     {
@@ -129,6 +128,69 @@
       "sha256": "ac45b1f5f3878e878b478b6423825dce71d460c0a3fa886ace7c0f5dfc373ee5"
     }
   ],
+  "connector_files_verified": [
+    {
+      "path": "docs/evidence/r2/J502_SELECTION.md",
+      "sha256": "2584ea47c26c10830a0da4e7015d47de560fbbaa37014f0cf23cd83b8bd8879f"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/CALCULATIONS.json",
+      "sha256": "109ddd96518cb71ad3070ac59fb8c1aeb4eec15740c5944a05c9c20f9651668c"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/INPUT_PROVENANCE.json",
+      "sha256": "7d02a90aea5612af1ada5f808524ecad1549ace9f2aec3ea34b945cb0cf136c6"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/OWNER_EXPLANATION.pdf",
+      "sha256": "3f417732e7df69644a9aca46e7199d057088b54f5d9bd9f406960455ba885a90"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/VALIDATION.md",
+      "sha256": "588a23247ecc2ef0cdefd3e57ae2f28e654de5b6a534afc27fe9b6b6ca89b273"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/calculate.py",
+      "sha256": "be96d0c0869a941788e9cd4c7e242e0d920d3e90ef58f2722932d44bf2b4e3ae"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/export_owner.py",
+      "sha256": "aebc45145dfc9b0a0751abf7c61a8c1373332fba4c137f518dcddcd675850126"
+    },
+    {
+      "path": "docs/evidence/r2/j502_selection/validate.py",
+      "sha256": "116a6f224c1932761be295138d7b937453753ceb339bb02cdb4b2418370a89e7"
+    },
+    {
+      "path": "third_party/j502_selection/README.md",
+      "sha256": "fec9cd8cb296396ab1a580b0a973a3c817e87aca8ac4f3702f870127ce89d234"
+    },
+    {
+      "path": "third_party/j502_selection/SOURCES.json",
+      "sha256": "bdd2536d40a12ecaaa2bec2b35e92d01b6b7e3d4415f134826603c7e1336a28c"
+    }
+  ],
+  "source_handoff_verified": {
+    "ref": "origin/feat/aux-24v-interface",
+    "commit": "ab24d7377f5fd0e5f6e1857eb98e8b0c0ceae644",
+    "path": "docs/evidence/aux_converter/AUX24_INTERFACE.md",
+    "sha256": "aac450017e8d54522310194cfb3286875ef089ee69465b0d57203cbf866c0b5a",
+    "read_scope": "verdict, owner/buyer handoff and closure sections",
+    "result": "NONE MEETS SPEC; no selected approved module or complete source-energy bound. Separate robot/old9-24V assumptions not imported."
+  },
+  "optional_BOM_handoff": {
+    "ref": "origin/feat/r2-bom-draft",
+    "commit": "960a1a81ae7acf6e45e880fffb395f04a5c4c5d7",
+    "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+    "status": "ABSENT in local remote-tracking object; no network fetch performed"
+  },
+  "external_inputs_hash_checked": [
+    "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX2_RESUME.md",
+    "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX2.md",
+    "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4A_FIX.md",
+    "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/CHECK_4AFIX.md",
+    "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_GATE4A.md"
+  ],
   "historical_archive_files_preserved": [
     "TEST_HOOKS.md",
     "CALCULATIONS.json",
@@ -144,6 +206,7 @@
     "FREEZE_MANIFEST.json",
     "calculate_gate4a.py"
   ],
+  "round1_validation_archive": "history/47c7c07/VALIDATION.json",
   "manufacturer_cache_hashes_verified": [
     "third_party/documents/gate4a/tps7a16.pdf",
     "third_party/documents/gate4a/tps3808.pdf",
@@ -163,46 +226,59 @@
     "third_party/documents/gate4a/ina228.pdf"
   ],
   "manufacturer_caches_unavailable": [],
-  "local_link_issues": [],
-  "plot_visual_review": "No new plot generation or visual review in this resume; unchanged ideal-model CSV/SVG remain historical numerical illustrations",
-  "native_CAD_access": false,
-  "schematic_changes": false,
-  "PCB_changes": false,
+  "round2_web_only_sources": [
+    "ADI-LTC3115",
+    "ADI-LT4363",
+    "ADI-LTC7001"
+  ],
+  "owner_PDF": "One page exported and visually reviewed; current owner section, no clipping",
+  "plot_visual_review": "No new physical/CAD plots; historical ideal-model CSV/SVG unchanged",
+  "native_CAD_changes": false,
   "ERC_DRC_run": false,
   "physical_tests_run": false,
+  "original_BLOCKING_findings_closed": 4,
+  "original_BLOCKING_findings_total": 12,
   "actual_electrical_safety_verdict": "BLOCKED",
   "git": {
-    "pull": "FAILED: Operation not permitted writing FETCH_HEAD",
-    "local_item_checkpoints": "FAILED: Operation not permitted creating index.lock",
+    "pull": "Not attempted; local remote-tracking refs pinned",
+    "local_item_checkpoints": "FAILED: index.lock Operation not permitted; explicit brief fallback",
     "push": "Not attempted; conductor publishes",
-    "changes": "Latest resume uncommitted; both earlier partial commits retained"
+    "changes": "This continuation uncommitted; supplied partial commits retained"
   },
   "artifact_sha256": {
-    "AUX_BRANCH_FIX.md": "33b0d71ffbcfdc0c7014bfa5f2daf7f7a9089f84c44c8ab18f05f8d0635f2414",
-    "BASIS.md": "c4c4a8f2457299573140f02f99a9e08f1178e711c0c0d6830598a62d84d04afa",
-    "CALCULATIONS.json": "0a1b2f78c2190421bd9ad0925871b28fcb929d52688ed008960e825e4c86c1b0",
-    "CALCULATIONS.md": "31da945be0897e5bf4b39cbdf7e69b510cdf52580fc71424ad93cf3c42116b1b",
-    "FIX_RESOLUTIONS.md": "4cac4b6f2fc2de89cb87d657b0d929d84c0f644110c4f4f8d4e453ca7a9f93b4",
-    "FREEZE_BOM.csv": "bfc2906741f9039b59d8c2a319ee0cfff04f822e41e893dbb1878fa83526162d",
-    "FREEZE_MANIFEST.json": "a95491c549f192221e0aafcca4e78b235e9b8f9fa7d1f6a67fb8a3ca0852f970",
-    "FREEZE_TABLE.md": "252e29981f35dd44017710ddc94515e3f2478d01327a52cdd795d27db4ae824d",
-    "GATE4A_FREEZE.md": "a87e5296f5d7943df9e0b43cf993d91b4c8de16286a3825e078a7cf12e74a2d7",
+    "AUX_BRANCH_FIX.md": "bba9f5fc6bc377472a19cc0570422e9b67e2e31d11c848357db8fa880ecf72ff",
+    "BASIS.md": "fa391212f857fd65b96b7a50a18e3690cd32d399b7ef2db7856d3bd8a8a084f3",
+    "CALCULATIONS.json": "8668acbad28e15f75de10a9da174ca0c08c3a20f15d2f3b2da9cc369eec44199",
+    "CALCULATIONS.md": "bb49d2265d56d27de2368830210c0fdc976c0e5137a66d754f18f2f2904c851a",
+    "FIX2_INPUTS.json": "97dd14112b7d1e94246a1439cb8d1760c56a469e87d9b59294c8faea1e0fb11f",
+    "FIX2_RESOLUTIONS.md": "d14885dcb003b860b2b12db7c1ec3b8a9e7857fd3af831541011f688e00c3446",
+    "FIX_RESOLUTIONS.md": "0d89dcd8f5d248126b1033ceb882e09960979fec8c7a76cac440e5b57c0d0323",
+    "FREEZE_BOM.csv": "eac13a854e03737c5c65cf39f9f7e9cec9913a2d2726892bf12a8a651763dd3f",
+    "FREEZE_MANIFEST.json": "a42e352184914c3388041eae828581cd38a0af799e2a611ef6195170ae7f25e8",
+    "FREEZE_TABLE.md": "f884dc0a0233c6bf929454989474e996d86d413b60913da2871440f416bba271",
+    "GATE4A_FREEZE.md": "6a0e88f75e618f07405e338ce8792703513b6b57e541f755c2af5588f541d9a4",
     "INPUT_PROVENANCE.json": "38be702d211800314d6b9555591f527444f0a377743bd887219b7187f296e1ff",
+    "OWNER_EXPLANATION.pdf": "aa2a65a5ea7fe066307fb2f2ac415d38e2d3d326effcb3bc657de54bd351704f",
     "PASSIVE_COMPLETION.csv": "7aedeb036ddb7902c4ac309b6777988582c3d9b5f0d8af77d06ccf0a18daf9aa",
     "PR15_INVENTORY.csv": "bdea1bb32cf45fe3db8a3925e228d920a49de81f6b819fa51764387468bde402",
     "RAW_IDEAL_TRANSFER.csv": "148af937b88845fe7657812f77161615636dc6728327e49300feede0d0410b7b",
     "RAW_IDEAL_TRANSFER.svg": "36e29fcd941dec542b0327769abdb216ec4ca1928e6adac1e840609d04c5a654",
-    "RAW_NODE_ENERGY.md": "822d217d544341ab640a0a3baf1de511531fc19a3a1c29c871d43c93dbd7fb06",
+    "RAW_NODE_ENERGY.md": "b4c2b0e7f018ae8c09c488c90a87c1e2d1af064e0438482f7f068ad43649c533",
     "SOURCES.json": "cf253751ba8cd5e90c7c23b81c164db9ad121fa2de2aa1d84d9e3ac44c0058e8",
     "SOURCES.md": "59e5121b389de75faa028057bd83e5dade634b7b8ef7883b368163aa400fd2f8",
     "SOURCES_FIX.json": "870139f2ac3d1e334842f5d8e127808b9b747b27265eae0d92a0a99da0cedc4b",
-    "TASK_PROGRESS.md": "b0a1113991eb598bcf501231c159c4f8bec8f07dbe2dd8b77581ed98536f1946",
-    "TEST_HOOKS.md": "f6a7046ea31baf7f6d6f7d527876173b827128f0633d779496c730b22db74f84",
-    "TEST_PLAN.md": "c03e850086ea96a910d2320c8dca4bc029fc55026a9cf846e2fafeae0e4c3f02",
-    "TIMING_AND_LOGIC.md": "cece716034afb620bdd5dbd2be737a2f47ad69850d621ef3244fc71156a2b01f",
-    "calculate_gate4a.py": "8bf99e53e2cd84825e9f84c53f40cc219532281d51e45519ecb396902ac0606b",
-    "calculate_gate4a_fix.py": "f87133f3c58a18ce58fedea0b955f4d3e3ae7d493703e8643ddadbf9be4ec3a0",
-    "test_gate4a_calculations.py": "a3981d4467da738af9349c12859c78f990ad473030de3a56352ae3f0eb1c3a06"
+    "TASK_PROGRESS.md": "5dffd83fe95db5fb48d2ae2741c939d6c51ac379d6da30e93684242ca9e6343b",
+    "TEST_HOOKS.md": "3f613d7c28963444a38dfb935c601ac808dc5d2b6d0a11b0c5e2937bae5bfd79",
+    "TEST_PLAN.md": "1f0db90721a485ed1823533d8758078818c5aec7aedd79ed4d67d47223acd051",
+    "TIMING_AND_LOGIC.md": "a9820a733dcf2f748f6603fb27592b8261028d6af10ff67c51f5c23ea1ebfec9",
+    "calculate_gate4a.py": "1d65d6661659397ca3411f2bd61eb1052d8b4ed95068ed9bd8d4130540369e57",
+    "calculate_gate4a_fix.py": "53ca667b45ae54c5880a0dff121d52420b8ef03af71b7de2ffa4cae68c634edd",
+    "calculate_gate4a_fix2.py": "83f2aaf2e52badfcedfeb6ff464dbac716c7690f34e63993c9ae0988f885bb3e",
+    "export_owner.py": "9747488192bf0ac6fb96238be7f12c0902e717456d3abe22cd17ffd181143f32",
+    "render_freeze_register.py": "5d324ad3e991c779298f0764bfb0807161a768dcf1b182bef76ee007f6012bed",
+    "test_gate4a_calculations.py": "1bd50cc875b205297bd0a6eed67874ea0dce21e268535f6f512e29be5e29b5a4",
+    "validate_fix2.py": "73c591a71c944599f34e6b57f70ae8c123ee8bc5923e1f3ec2f4e26e58b22926"
   },
-  "manager_report_sha256": "de331da477c1f6ce7001580b1d6d91e881d932f1f7455d69683c55d1fb4b8aaf"
+  "round2_source_register_sha256": "0ca2979656ef95819a9003e78b4d58640b487b1a1a483c80edbac51fbf470bea",
+  "manager_report_sha256": "c5518c6b745ef4d017140b16507af85fee19ea8d21f882540bcf61cbe0731938"
 }
