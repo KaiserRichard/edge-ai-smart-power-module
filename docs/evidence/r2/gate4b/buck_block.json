@@ -104,7 +104,7 @@
         },
         "2": {
           "name": "2",
-          "net": "VOUT_5V1",
+          "net": "L201_OUT",
           "type": "passive"
         }
       },
@@ -114,7 +114,7 @@
     },
     {
       "ref": "R201",
-      "value": "33.2k0.1%25ppm0603",
+      "value": "33.2k",
       "kind": "R",
       "part": "TNPW060333K2BEEA",
       "pins": {
@@ -177,7 +177,7 @@
     },
     {
       "ref": "R204",
-      "value": "zero-ohm0603",
+      "value": "0",
       "kind": "R",
       "part": "CRCW06030000Z0EA",
       "pins": {
@@ -198,7 +198,7 @@
     },
     {
       "ref": "R205",
-      "value": "1k0.1%25ppm0603",
+      "value": "1k",
       "kind": "R",
       "part": "TNPW06031K00BEEA",
       "pins": {
@@ -219,7 +219,7 @@
     },
     {
       "ref": "R206",
-      "value": "100k0.1%25ppm0603",
+      "value": "100k",
       "kind": "R",
       "part": "TNPW0603100KBEEA",
       "pins": {
@@ -240,7 +240,7 @@
     },
     {
       "ref": "R207",
-      "value": "24.9k0.1%25ppm0603",
+      "value": "24.9k",
       "kind": "R",
       "part": "TNPW060324K9BEEA",
       "pins": {
@@ -345,7 +345,7 @@
     },
     {
       "ref": "C205",
-      "value": "100nF50V",
+      "value": "100nF 50V",
       "kind": "C",
       "part": "GRM188R71H104KA93D",
       "pins": {
@@ -366,7 +366,7 @@
     },
     {
       "ref": "C206",
-      "value": "1uF25V",
+      "value": "1uF 25V",
       "kind": "C",
       "part": "GRM21BR71E105KA99L",
       "pins": {
@@ -554,6 +554,96 @@
       "rating": "DATASHEET nominal; application limits OPEN"
     },
     {
+      "ref": "JP202",
+      "part": "CUSTOM-FX-CU-01 RevA",
+      "value": "REMOVABLE FORCE LINK",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": {
+          "name": "FORCE_A",
+          "net": "L201_OUT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "FORCE_B",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A FIX3_FIXTURE: C110 strap 2x15mm; 20mm pitch M4; absent for isolated tests; application rating OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "PF2",
+      "part": "CUSTOM-FX-PAD-M4 RevA",
+      "value": "VIN_PROTECTED",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": {
+          "name": "FORCE",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        }
+      },
+      "kind": "TP",
+      "source": "FIX3 fixture PF1..5; 4.5mm M4 hole; R3 geometry/current/parasitics OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "PF3",
+      "part": "CUSTOM-FX-PAD-M4 RevA",
+      "value": "BUCK_SW",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": {
+          "name": "FORCE",
+          "net": "BUCK_SW",
+          "type": "passive"
+        }
+      },
+      "kind": "TP",
+      "source": "FIX3 fixture PF1..5; 4.5mm M4 hole; R3 geometry/current/parasitics OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "PF4",
+      "part": "CUSTOM-FX-PAD-M4 RevA",
+      "value": "L201_IN",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": {
+          "name": "FORCE",
+          "net": "L201_IN",
+          "type": "passive"
+        }
+      },
+      "kind": "TP",
+      "source": "FIX3 fixture PF1..5; 4.5mm M4 hole; R3 geometry/current/parasitics OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP204",
+      "part": "N/A etched paired pads",
+      "value": "L201_OUT",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "L201_OUT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
       "ref": "TP201",
       "part": "N/A etched paired pads",
       "value": "BUCK_SW",
@@ -631,6 +721,7 @@
     "DATASHEET: L201 = Wurth 74437636351002, 10uH; 2 plated slots per drawing001.000 (2025-02-07).",
     "CALCULATED: 100k / 24.4k local feedback = 5.098361 V nominal. No remote sense or setpoint increase.",
     "JP201 separates native BUCK_SW from L201_IN. Remove while unpowered for independent fixture isolation / injection.",
+    "JP202 = IL201_FORCE after the winding, before all raw capacitance. PF2 VIN_PROTECTED / PF3 BUCK_SW / PF4 L201_IN = M4 force pads.",
     "C205 bootstrap return stays on native BUCK_SW. TP201 / TP202 paired return pads are sense only.",
     "ASSUMED qualification box: total local input C 10–30uF; Ldiff 5–12uH through 100A. These are not manufacturer guarantees.",
     "OPEN: nonlinear magnetic behavior, biased capacitance, startup/inrush, loop stability, ripple and thermal limits.",
@@ -657,10 +748,15 @@
       "FAULT INJECTION / LOCAL REGULATION",
       [
         "JP201",
+        "JP202",
         "L201",
+        "PF2",
+        "PF3",
+        "PF4",
         "TP201",
         "TP202",
         "TP203",
+        "TP204",
         "R202",
         "R203",
         "R205",

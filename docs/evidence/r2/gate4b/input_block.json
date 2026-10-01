@@ -89,12 +89,12 @@
         },
         "17": {
           "name": "OUT",
-          "net": "VIN_PROTECTED",
+          "net": "EFUSE_OUT",
           "type": "power_out"
         },
         "18": {
           "name": "OUT",
-          "net": "VIN_PROTECTED",
+          "net": "EFUSE_OUT",
           "type": "passive"
         },
         "19": {
@@ -401,7 +401,7 @@
     },
     {
       "ref": "R106",
-      "value": "56.2k0.1%25ppm0603",
+      "value": "56.2k",
       "part": "TNPW060356K2BEEA",
       "kind": "R",
       "pins": {
@@ -422,7 +422,7 @@
     },
     {
       "ref": "R107",
-      "value": "10k0.1%25ppm0603",
+      "value": "10k",
       "part": "TNPW060310K0BEEA",
       "kind": "R",
       "pins": {
@@ -443,7 +443,7 @@
     },
     {
       "ref": "R108",
-      "value": "100k0.1%25ppm0603",
+      "value": "100k",
       "part": "TNPW0603100KBEEA",
       "kind": "R",
       "pins": {
@@ -506,7 +506,7 @@
     },
     {
       "ref": "C103",
-      "value": "100nF50V",
+      "value": "100nF 50V",
       "part": "GRM188R71H104KA93D",
       "kind": "C",
       "pins": {
@@ -588,6 +588,64 @@
       "footprint": "",
       "rating": "Not a physical component",
       "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "JP101",
+      "part": "CUSTOM-FX-CU-01 RevA",
+      "value": "REMOVABLE FORCE LINK",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": {
+          "name": "FORCE_A",
+          "net": "EFUSE_OUT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "FORCE_B",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A FIX3_FIXTURE: C110 strap 2x15mm; 20mm pitch M4; absent for isolated tests; application rating OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP103",
+      "part": "N/A etched paired pads",
+      "value": "EFUSE_OUT",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "EFUSE_OUT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "CONNECTOR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "#FLG103",
+      "part": "N/A ERC declaration",
+      "value": "PWR_FLAG",
+      "footprint": "",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "VIN_PROTECTED",
+          "type": "power_out"
+        }
+      },
+      "kind": "FLAG",
+      "source": "U101 OUT -> fitted removable JP101 -> VIN_PROTECTED; physical source only",
+      "rating": "DATASHEET nominal; application limits OPEN"
     }
   ],
   "schematic_notes": [
@@ -595,6 +653,7 @@
     "CALCULATED: 28.33 W / 9 V = 3.15 A; at 12 V about 2.36 A. Keep input ratings and current limit unchanged.",
     "U101 MODE pin 11 intentionally NC: latch-off. INPUT_SHDN driven from Sheet03 manual test control; no autonomous source-fault claim.",
     "D102 pins 1/3 = GND anodes; pin 2 and tab = VIN_PROTECTED cathode. Tab isolation / hot commutation OPEN.",
+    "JP101 is IMAIN_FORCE before all main local input capacitors. Remove for auxiliary-only coupon tests; include link parasitics.",
     "Power declarations follow fitted F101 and Q101 paths from J501; no control or fault input is forced valid.",
     "OPEN: source surge envelope, fuse clearing/hold, TVS hot clamp, 12 V thermal behavior. No Pi before fault tests pass."
   ],
@@ -637,6 +696,14 @@
         "TP102",
         "#FLG101",
         "#FLG102"
+      ]
+    ],
+    [
+      "MAIN CURRENT / COUPON ISOLATION",
+      [
+        "JP101",
+        "TP103",
+        "#FLG103"
       ]
     ]
   ]

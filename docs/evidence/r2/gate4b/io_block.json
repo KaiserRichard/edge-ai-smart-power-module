@@ -1,0 +1,323 @@
+{
+  "status": "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION",
+  "components": [
+    {
+      "ref": "J501",
+      "value": "DC INPUT",
+      "part": "B2P-VH-FB-B(LF)(SN)",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "+",
+          "net": "VIN_RAW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT",
+      "rating": "9-24 V normal;>=5 A candidate;keying/wire/contact/interrupt coordination OPEN",
+      "source": "Frozen V1A functional input boundary",
+      "position": [
+        83.82,
+        83.82
+      ]
+    },
+    {
+      "ref": "J502",
+      "value": "LOAD OUTPUT / mate1777989",
+      "part": "1776508",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "+",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08",
+      "rating": "DATASHEET 12A nominal; CALCULATED acceptance <=3.12mOhm per complete hot pole is NOT a catalog guarantee.",
+      "source": "J502 solution A, commit41cb9e889418d50d2f5f24467e66ac7f15a90476; PR15 qualified Phoenix land retained",
+      "position": [
+        208.28,
+        83.82
+      ]
+    },
+    {
+      "ref": "J503",
+      "value": "HOST I2C",
+      "part": "B4B-XH-A(LF)(SN)",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        "2": {
+          "name": "VREF",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "3": {
+          "name": "SDA",
+          "net": "SDA_HOST",
+          "type": "passive"
+        },
+        "4": {
+          "name": "SCL",
+          "net": "SCL_HOST",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:JST_B4B_XH_A_P2.50_THT",
+      "rating": "3.3 V host reference input;not a host power supply;100 kHz;pinout review draft",
+      "source": "Frozen telemetry requirement; power-domain interface review",
+      "position": [
+        337.82,
+        83.82
+      ]
+    },
+    {
+      "ref": "TP501",
+      "value": "VIN_RAW",
+      "part": "VIN_RAW",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "VIN_RAW",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP502",
+      "value": "VIN_PROTECTED",
+      "part": "VIN_PROTECTED",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP503",
+      "value": "LOAD_5V1",
+      "part": "LOAD_5V1",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP504",
+      "value": "GND",
+      "part": "GND",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "#FLG501",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "VIN_RAW",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "#FLG502",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "GND",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "#FLG503",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "3V3_HOST",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "JP501",
+      "part": "CUSTOM-FX-CU-01 RevA",
+      "value": "REMOVABLE FORCE LINK",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": {
+          "name": "FORCE_A",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "FORCE_B",
+          "net": "LOAD_FIXTURE",
+          "type": "passive"
+        }
+      },
+      "kind": "FORCELINK",
+      "source": "Gate4A FIX3_FIXTURE: C110 strap 2x15mm; 20mm pitch M4; absent for isolated tests; application rating OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "PF1",
+      "part": "CUSTOM-FX-PAD-M4 RevA",
+      "value": "VIN_RAW",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": {
+          "name": "FORCE",
+          "net": "VIN_RAW",
+          "type": "passive"
+        }
+      },
+      "kind": "TP",
+      "source": "FIX3 fixture PF1..5; 4.5mm M4 hole; R3 geometry/current/parasitics OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "PF5",
+      "part": "CUSTOM-FX-PAD-M4 RevA",
+      "value": "GND",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": {
+          "name": "FORCE",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "TP",
+      "source": "FIX3 fixture PF1..5; 4.5mm M4 hole; R3 geometry/current/parasitics OPEN",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP505",
+      "part": "N/A etched paired pads",
+      "value": "LOAD_FIXTURE",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "LOAD_FIXTURE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "SENSEPAIR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    }
+  ],
+  "schematic_notes": [
+    "REQUIREMENT: 9–26V DC input. J502 Phoenix1776508 + cable plug1777989, solutionA. Contact1=LOAD_5V1; contact2=GND.",
+    "JP501 feeds a local dummy fixture from LOAD_5V1; unplug J502 when using it. For isolation remove JP501 AND unplug J502; change only discharged.",
+    "PF1=VIN_RAW before F101; PF5=powerGND. PF2/3/4 onSheet02 complete the external fixture interfaces. No return bypass at far end.",
+    "HARNESS: TE3-87456-6 full40-position housing +10x87309-9. Belden8521 AWG16 trunks75mm;8502 AWG20 send2x15mm / return8x35mm.",
+    "Pi physical +2/4; GND6/9/14/20/25/30/34/39. Power-only harness; all other cavities empty. No Pi before fault tests pass.",
+    "DATASHEET J50212A nominal; <=3.12mOhm per complete hot pole is a TEST acceptance allocation. Hot mixed-mate/current/assembly OPEN.",
+    "J503:1GND /2host3.3V reference /3SDA /4SCL. Remove during first faults; external power-only Pi housing does not yet carry telemetry.",
+    "TEST HOOK — design proven on bench; evidence NOT RUN. Dry-contact manual trigger/reset and rail/driver-loss links are onSheet03.",
+    "OPEN: force-link/contact/copper/parasitic budgets, indexed harness/tooling, hot sharing, single-contact loss and telemetry housing integration."
+  ],
+  "passive_start": 132.08,
+  "ports": {
+    "VIN_RAW": "output",
+    "VIN_PROTECTED": "input",
+    "LOAD_5V1": "bidirectional",
+    "3V3_HOST": "output",
+    "SDA_HOST": "bidirectional",
+    "SCL_HOST": "bidirectional",
+    "GND": "passive"
+  },
+  "groups": [
+    [
+      "DC INPUT / FIXTURE POWER RETURN",
+      [
+        "J501",
+        "PF1",
+        "PF5",
+        "TP501",
+        "TP502",
+        "#FLG501",
+        "#FLG502"
+      ]
+    ],
+    [
+      "PROTECTED LOAD / HOST TELEMETRY",
+      [
+        "JP501",
+        "J502",
+        "J503",
+        "TP503",
+        "TP504",
+        "TP505",
+        "#FLG503"
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,473 @@
+{
+  "baseline": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+  "partial": "b640c2c601645ed2cef8e1d2d7dbbb7ca62177a6",
+  "removed_refs": [],
+  "added_refs": [
+    "JP201",
+    "TP201",
+    "TP202",
+    "TP203"
+  ],
+  "component_changes": [
+    {
+      "ref": "C101",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "GRM32ER72A105KA01L"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C102",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "GRM32ER72A105KA01L"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C103",
+      "fields": {
+        "value": [
+          "100nF 16V",
+          "100nF50V"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "GRM188R71H104KA93D"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C201",
+      "fields": {
+        "value": [
+          "22uF 50V",
+          "10uF 50V"
+        ],
+        "footprint": [
+          "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+          "Capacitor_SMD:C_1210_3225Metric"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "C5750X7R1H226M250KB",
+          "GRM32ER71H106KA12L"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C202",
+      "fields": {
+        "value": [
+          "22uF 50V",
+          "10uF 50V"
+        ],
+        "footprint": [
+          "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+          "Capacitor_SMD:C_1210_3225Metric"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "C5750X7R1H226M250KB",
+          "GRM32ER71H106KA12L"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C203",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "GRM188R71H104KA93D"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C204",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "GRM188R71H104KA93D"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C205",
+      "fields": {
+        "value": [
+          "100nF 16V",
+          "100nF50V"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "GRM188R71H104KA93D"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "C206",
+      "fields": {
+        "value": [
+          "1uF 16V",
+          "1uF25V"
+        ],
+        "footprint": [
+          "Capacitor_SMD:C_0603_1608Metric",
+          "Capacitor_SMD:C_0805_2012Metric"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "GRM21BR71E105KA99L"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "D101",
+      "fields": {
+        "value": [
+          "SMBJ26CA",
+          "SMCJ36CA 36V bidirectional"
+        ],
+        "footprint": [
+          "Diode_SMD:D_SMB",
+          "Diode_SMD:D_SMC"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "SMBJ26CA",
+          "SMCJ36CA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "D102",
+      "fields": {
+        "value": [
+          "B260",
+          "STPS60H100CT"
+        ],
+        "footprint": [
+          "Diode_SMD:D_SMB",
+          "Package_TO_SOT_THT:TO-220-3_Vertical"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "B260-13-F",
+          "STPS60H100CT"
+        ]
+      },
+      "pins": {
+        "3": [
+          null,
+          "GND"
+        ],
+        "2": [
+          "GND",
+          "VIN_PROTECTED"
+        ],
+        "1": [
+          "VIN_PROTECTED",
+          "GND"
+        ]
+      }
+    },
+    {
+      "ref": "F101",
+      "fields": {
+        "value": [
+          "FUSE - OPEN",
+          "12.5A T / 125VDC"
+        ],
+        "footprint": [
+          null,
+          "V1A_Qualified:Schurter_UMT_H_15.4x5.35"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "3403.0285.23"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "L201",
+      "fields": {
+        "value": [
+          "6.8uH",
+          "10uH DATASHEET"
+        ],
+        "footprint": [
+          null,
+          "V1A_Qualified:Wurth_74437636351002"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "XAL8080-682MED",
+          "74437636351002"
+        ]
+      },
+      "pins": {
+        "1": [
+          "BUCK_SW",
+          "L201_IN"
+        ]
+      }
+    },
+    {
+      "ref": "R101",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW0603332KBEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R102",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW060354K9BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R103",
+      "fields": {
+        "footprint": [
+          "Resistor_SMD:R_0603_1608Metric",
+          "Resistor_SMD:R_0805_2012Metric"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW0805348KBEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R104",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW060315K8BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R105",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW06034K02BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R106",
+      "fields": {
+        "value": [
+          "56.2k",
+          "56.2k0.1%25ppm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW060356K2BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R107",
+      "fields": {
+        "value": [
+          "10k",
+          "10k0.1%25ppm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW060310K0BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R108",
+      "fields": {
+        "value": [
+          "100k",
+          "100k0.1%25ppm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW0603100KBEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R201",
+      "fields": {
+        "value": [
+          "33.2k",
+          "33.2k0.1%25ppm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW060333K2BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R202",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW0603100KBEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R203",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW060324K4BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R204",
+      "fields": {
+        "value": [
+          "0",
+          "zero-ohm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "CRCW06030000Z0EA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R205",
+      "fields": {
+        "value": [
+          "1k",
+          "1k0.1%25ppm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW06031K00BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R206",
+      "fields": {
+        "value": [
+          "100k",
+          "100k0.1%25ppm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW0603100KBEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "R207",
+      "fields": {
+        "value": [
+          "24.9k",
+          "24.9k0.1%25ppm0603"
+        ],
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "TNPW060324K9BEEA"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "TP101",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "INPUT_SHDN"
+        ]
+      },
+      "pins": {}
+    },
+    {
+      "ref": "TP102",
+      "fields": {
+        "fields/field[@name=\"MPN\"]": [
+          "",
+          "INPUT_FLT"
+        ]
+      },
+      "pins": {}
+    }
+  ],
+  "native_review": {
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": {
+      "before_lines": 5067,
+      "after_lines": 1,
+      "before_symbols": 21,
+      "after_symbols": 21,
+      "removed_refs": [],
+      "added_refs": [],
+      "hierarchy_preserved": true
+    },
+    "hardware/kicad/02_BUCK_5V.kicad_sch": {
+      "before_lines": 5217,
+      "after_lines": 1,
+      "before_symbols": 22,
+      "after_symbols": 26,
+      "removed_refs": [],
+      "added_refs": [
+        "JP201",
+        "TP201",
+        "TP202",
+        "TP203"
+      ],
+      "hierarchy_preserved": true
+    },
+    "hardware/kicad/V1A.kicad_sym": {
+      "before_lines": 12273,
+      "after_lines": 9035,
+      "before_symbols": 161,
+      "after_symbols": 165,
+      "removed_refs": [],
+      "added_refs": [
+        "JP201",
+        "TP201",
+        "TP202",
+        "TP203"
+      ],
+      "unrelated_symbol_changes": []
+    }
+  },
+  "all_existing_project_footprints_byte_identical": true,
+  "pr15_footprints_checked": 14,
+  "status": "PASS \u2014 no PR15 electrical content or footprint file lost; authorized regenerated presentation"
+}

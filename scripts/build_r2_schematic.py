@@ -79,6 +79,13 @@ def library_symbol(c):
         else:
             geometry += [line(-1.27, 2.54, 0, 3.81), line(0, 3.81, 1.27, 2.54), line(1.27, 2.54, -1.27, 2.54)]
         c["half_height"] = 3.81
+    elif c["kind"] in ("SENSEPAIR", "FORCELINK", "HEADER2"):
+        # Two independent contacts; no drawn copper short between a sense pair
+        # or a removable force-link footprint. Specific to Gate4B hook symbols.
+        locations = {"1": (-5.08, 0, 0), "2": (5.08, 0, 180)}
+        for px in (-1.905, 1.905):
+            geometry.append(f'(circle (center {px} 0) (radius 0.635) (stroke (width 0.254) (type default)) (fill (type none)))')
+        c["half_height"] = 3.81
     elif c["kind"] == "SHUNT":
         # Separate external force and sense terminals; connection is within the shunt.
         locations = {"1": (-12.7, 2.54, 0), "2": (-12.7, -5.08, 0),
@@ -131,7 +138,7 @@ def library_symbol(c):
         pin_text.append(f"(pin {pin['type']} line (at {x:g} {y:g} {angle}) (length 2.54)"
                         f" (name {q(pin['name'])} {fx(1.016)}) (number {q(number)} {fx(1.016)}))")
     physical = "no" if c["kind"] == "FLAG" else "yes"
-    return (f"(symbol {q(name)} (pin_names (offset 0.762){' (hide yes)' if simple or c['kind'] in ('TP', 'FLAG') else ''})"
+    return (f"(symbol {q(name)} (pin_names (offset 0.762){' (hide yes)' if simple or c['kind'] in ('TP', 'FLAG', 'SENSEPAIR', 'FORCELINK', 'HEADER2') else ''})"
             f" (exclude_from_sim no) (in_bom {physical}) (on_board {physical})"
             f" {prop('Reference', re.sub('[0-9]', '', c['ref']))} {prop('Value', c['value'])}"
             f" {prop('Footprint', c['footprint'], hide=True)}"

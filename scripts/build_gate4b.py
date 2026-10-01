@@ -5,6 +5,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 from build_r2_schematic import Sheet, normalize, library_symbol, q, fx, uid
 from build_sheet03_preliminary import children
+from make_schematic_readable import parse, dump
 
 ROOT=Path(__file__).resolve().parents[1]
 HW=ROOT/'hardware/kicad'
@@ -52,7 +53,9 @@ def apply_passives(d):
         r=rows.get(c['ref'])
         if not r:continue
         mpn=r['new_mpn'];fp=passive_fp(mpn,c['kind'])
-        update(c,mpn,r['value'].split(' X')[0],fp)
+        value=re.sub(r'(0\.1%.*|0603|0805|1206)$', '', r['value'].split(' X')[0]).strip()
+        value=value.replace('zero-ohm','0').replace('nF50V','nF 50V').replace('uF25V','uF 25V').replace('uF50V','uF 50V')
+        update(c,mpn,value,fp)
 
 
 def passive_fp(mpn,kind):
@@ -70,11 +73,15 @@ def input_spec():
     cs['D102']['pins']={'1':pin('A1','GND'),'2':pin('K_TAB','VIN_PROTECTED'),'3':pin('A2','GND')}
     for ref in ('C101','C102'):update(cs[ref],'GRM32ER72A105KA01L','1uF 100V',passive_fp('GRM32ER72A105KA01L','C'))
     for ref,mpn in {'R101':'TNPW0603332KBEEA','R102':'TNPW060354K9BEEA','R103':'TNPW0805348KBEEA','R104':'TNPW060315K8BEEA','R105':'TNPW06034K02BEEA'}.items():update(cs[ref],mpn,footprint=passive_fp(mpn,'R'))
-    d['groups']=[('INPUT / REVERSE POLARITY', ['Q101','Q102','F101','D101','C101','C102']),('EFUSE / SOURCE DISCONNECT',['U101','D102','R101','R102','R103','R104','R105','R106','R107','R108','C103','TP101','TP102','#FLG101','#FLG102'])]
+    for n in ('17','18'):cs['U101']['pins'][n]['net']='EFUSE_OUT'
+    d['components'] += [force_link('JP101','EFUSE_OUT','VIN_PROTECTED'), tp('TP103','EFUSE_OUT'),
+      part('#FLG103','N/A ERC declaration','PWR_FLAG','',{'1':pin('PWR','VIN_PROTECTED','power_out')},'FLAG','U101 OUT -> fitted removable JP101 -> VIN_PROTECTED; physical source only')]
+    d['groups']=[('INPUT / REVERSE POLARITY', ['Q101','Q102','F101','D101','C101','C102']),('EFUSE / SOURCE DISCONNECT',['U101','D102','R101','R102','R103','R104','R105','R106','R107','R108','C103','TP101','TP102','#FLG101','#FLG102']),('MAIN CURRENT / COUPON ISOLATION',['JP101','TP103','#FLG103'])]
     d['schematic_notes']=['REQUIREMENT: 9–26 V input. DATASHEET: fuse 12.5 A time lag / 125 VDC; SMCJ36CA bidirectional TVS.',
       'CALCULATED: 28.33 W / 9 V = 3.15 A; at 12 V about 2.36 A. Keep input ratings and current limit unchanged.',
       'U101 MODE pin 11 intentionally NC: latch-off. INPUT_SHDN driven from Sheet03 manual test control; no autonomous source-fault claim.',
       'D102 pins 1/3 = GND anodes; pin 2 and tab = VIN_PROTECTED cathode. Tab isolation / hot commutation OPEN.',
+      'JP101 is IMAIN_FORCE before all main local input capacitors. Remove for auxiliary-only coupon tests; include link parasitics.',
       'Power declarations follow fitted F101 and Q101 paths from J501; no control or fault input is forced valid.',
       'OPEN: source surge envelope, fuse clearing/hold, TVS hot clamp, 12 V thermal behavior. No Pi before fault tests pass.']
     return d
@@ -82,27 +89,34 @@ def input_spec():
 
 
 def tp(ref,net,return_net='GND'):
-    return part(ref,'N/A etched paired pads',net,'V1A_Qualified:SensePair_P2.54',{'1':pin('SIGNAL',net),'2':pin('RETURN',return_net)},'CONNECTOR')
+    return part(ref,'N/A etched paired pads',net,'V1A_Qualified:SensePair_P2.54',{'1':pin('SIGNAL',net),'2':pin('RETURN',return_net)},'SENSEPAIR')
 
 
 def force_link(ref,a,b):
-    return part(ref,'CUSTOM-FX-CU-01 RevA','REMOVABLE FORCE LINK','V1A_Qualified:ForceLink_M4_P20',{'1':pin('FORCE_A',a),'2':pin('FORCE_B',b)},'CONNECTOR',
+    return part(ref,'CUSTOM-FX-CU-01 RevA','REMOVABLE FORCE LINK','V1A_Qualified:ForceLink_M4_P20',{'1':pin('FORCE_A',a),'2':pin('FORCE_B',b)},'FORCELINK',
       'Gate4A FIX3_FIXTURE: C110 strap 2x15mm; 20mm pitch M4; absent for isolated tests; application rating OPEN')
+
+
+def force_pad(ref,net):
+    return part(ref,'CUSTOM-FX-PAD-M4 RevA',net,'V1A_Qualified:ForcePad_M4',{'1':pin('FORCE',net)},'TP','FIX3 fixture PF1..5; 4.5mm M4 hole; R3 geometry/current/parasitics OPEN')
 
 
 def buck_spec():
     d=baseline('buck');apply_passives(d);cs={c['ref']:c for c in d['components']}
     update(cs['L201'],'74437636351002','10uH DATASHEET','V1A_Qualified:Wurth_74437636351002')
     cs['L201']['pins']['1']['net']='L201_IN'
+    cs['L201']['pins']['2']['net']='L201_OUT'
     for ref in ('C201','C202'):update(cs[ref],'GRM32ER71H106KA12L','10uF 50V',passive_fp('GRM32ER71H106KA12L','C'))
     for ref in ('C203','C204'):update(cs[ref],'GRM188R71H104KA93D','100nF 50V',passive_fp('GRM188R71H104KA93D','C'))
     for ref,mpn in [('R202','TNPW0603100KBEEA'),('R203','TNPW060324K4BEEA')]:update(cs[ref],mpn)
-    d['components'] += [force_link('JP201','BUCK_SW','L201_IN'),tp('TP201','BUCK_SW'),tp('TP202','L201_IN'),tp('TP203','VOUT_5V1')]
+    d['components'] += [force_link('JP201','BUCK_SW','L201_IN'),force_link('JP202','L201_OUT','VOUT_5V1'),
+      force_pad('PF2','VIN_PROTECTED'),force_pad('PF3','BUCK_SW'),force_pad('PF4','L201_IN'),tp('TP204','L201_OUT'),tp('TP201','BUCK_SW'),tp('TP202','L201_IN'),tp('TP203','VOUT_5V1')]
     d['groups']=[('BUCK / NATIVE SWITCH NODE', ['U201','C201','C202','C203','C204','C205','C206','R201','R204','R206','R207']),
-      ('FAULT INJECTION / LOCAL REGULATION',['JP201','L201','TP201','TP202','TP203','R202','R203','R205','C207','C209','C210','C211','C212','C213','C214'])]
+      ('FAULT INJECTION / LOCAL REGULATION',['JP201','JP202','L201','PF2','PF3','PF4','TP201','TP202','TP203','TP204','R202','R203','R205','C207','C209','C210','C211','C212','C213','C214'])]
     d['schematic_notes']=['DATASHEET: L201 = Wurth 74437636351002, 10uH; 2 plated slots per drawing001.000 (2025-02-07).',
       'CALCULATED: 100k / 24.4k local feedback = 5.098361 V nominal. No remote sense or setpoint increase.',
       'JP201 separates native BUCK_SW from L201_IN. Remove while unpowered for independent fixture isolation / injection.',
+      'JP202 = IL201_FORCE after the winding, before all raw capacitance. PF2 VIN_PROTECTED / PF3 BUCK_SW / PF4 L201_IN = M4 force pads.',
       'C205 bootstrap return stays on native BUCK_SW. TP201 / TP202 paired return pads are sense only.',
       'ASSUMED qualification box: total local input C 10–30uF; Ldiff 5–12uH through 100A. These are not manufacturer guarantees.',
       'OPEN: nonlinear magnetic behavior, biased capacitance, startup/inrush, loop stability, ripple and thermal limits.',
@@ -140,7 +154,7 @@ def output_spec():
         types=['input','passive','passive','power_in','power_in','passive','passive','input','input','passive','passive','no_connect','power_in','passive','passive','input']
         return ic(ref,'ADG4612BRUZ','Package_SO:TSSOP-16_4.4x5mm_P0.65mm',names,nets,types)
     def connector(ref,value,a,b):
-        return add(part(ref,'B2B-XH-A(LF)(SN)',value,'V1A_Qualified:JST_B2B_XH_A_P2.50_THT',{'1':pin('CONTACT',a),'2':pin('RETURN',b)},'CONNECTOR'))
+        return add(part(ref,'B2B-XH-A(LF)(SN)',value,'V1A_Qualified:JST_B2B_XH_A_P2.50_THT',{'1':pin('CONTACT',a),'2':pin('RETURN',b)},'HEADER2'))
 
     for r in ['U301','U302','U303','U306','U315','Q301','Q302','Q303','Q304','D301','D302','D303']+[f'R{i}' for i in range(301,314)]+['R316','R317','R321','R322','R323']+[f'C{i}' for i in range(301,310)]+[f'C{i}' for i in range(330,338)]+[f'TP{i}' for i in range(301,306)]:keep(r)
     for c in cs.values():
@@ -176,6 +190,11 @@ def output_spec():
     for r,n in [('D330','VOUT_5V1'),('D331','VOUT_PROTECTED')]:
         add(part(r,'STPS60H100CT','STPS60H100CT','Package_TO_SOT_THT:TO-220-3_Vertical',{'1':pin('A1','GND'),'2':pin('K_TAB',n),'3':pin('A2','GND')},'D'))
     for n in range(340,344):cap('C'+str(n),'PCH1V471MCL1GS','470uF 35V','VOUT_PROTECTED',fp='V1A_Qualified:Nichicon_PCH_10x16',polar=True)
+
+    # Removable dump-force links: independent branch current measurement, no bypass.
+    for r in ('R309','R311'):net(r,2,'CB_BALLAST_OUT')
+    for r in ('R387','R393'):net(r,2,'RAW_BALLAST_OUT')
+    add(force_link('JP330','CB_BALLAST_OUT','CB_DRAIN'));add(force_link('JP331','RAW_BALLAST_OUT','RAW_DUMP_DRAIN'))
 
     # Aux surge stopper remains upstream of main eFuse.
     net('D303',2,'AUX_RAW');net('C307',1,'AUX_LIMITED');net('R323',1,'AUX_LIMITED')
@@ -296,6 +315,14 @@ def output_spec():
       ('TP315','RAW_DUMP_GATE','GND'),('TP316','SAFE5','GND'),('TP317','BUCK_PGOOD','GND'),('TP318','MANUAL_RAILS_VALID','GND'),
       ('TP319','RUN_GATE','GND'),('TP320','SRC_TRIP','GND'),('TP321','CORE_POR_N','GND')]:add(tp(ref,n,ret))
 
+    for ref,n,ret in [('TP329','AUX_RAW','GND'),('TP330','AUX_LIMITED','GND'),('TP331','AUX_12V','GND'),
+                       ('TP332','AUX_PREHOLD','GND'),('TP333','3V3_AUX','GND'),('TP334','PROT_BST','PROT_MID'),
+                       ('TP335','CB_BALLAST_OUT','CB_DRAIN'),('TP336','RAW_BALLAST_OUT','RAW_DUMP_DRAIN')]:add(tp(ref,n,ret))
+    resistor('R730','TNPW06031K00BEEA','1k','PG_GOOD','PG_FIXTURE')
+    resistor('R731','TNPW06031K00BEEA','1k','MAIN_PERMISSION','MAIN_FIXTURE')
+    connector('J605','REAL PG / guarded output','PG_FIXTURE','GND')
+    connector('J606','MAIN PERMISSION / guarded output','MAIN_FIXTURE','GND')
+
     # All omitted historical controls are explicitly retired in the delta report.
     d['retired_refs']=sorted(set(old)-set(cs));d['components']=list(cs.values())
     groups=[];done=set()
@@ -305,13 +332,13 @@ def output_spec():
     group('2 AUX 12 V BUCK-BOOST / COMPENSATION TO FB',['U317','L301']+[f'R{i}' for i in range(340,347)]+[f'C{i}' for i in range(351,358)]+['C377','C379','C380'])
     group('3 HELD DRIVER SUPPLY / CONTROLLED IN-RUSH',['D304','U327']+[f'R{i}' for i in range(374,380)]+[f'C{i}' for i in range(374,377)]+['C358','C359','TP327','TP328','#FLG305'])
     group('4 OPPOSED SERIES PAIR / REMOVABLE FORCE LINK',['Q301','Q302','U301','D302','D660','JP301','JP660','R304','R305','R711','R723','C301','C306','C309','C660','#FLG302','#FLG304'])
-    group('5 PROTECTED CROWBAR / 33 mOhm BALLAST',['Q303','U315','D331','R306','R307','R308','R309','R310','R311','C308']+[f'C{i}' for i in range(340,344)])
-    group('6 RAW DUMP / 99 mOhm / TWO SIX-PART STRINGS',['Q330','U330','D330']+[f'R{i}' for i in range(380,394)]+['C367','C368']+[f'C{i}' for i in range(330,338)])
+    group('5 PROTECTED CROWBAR / 33 mOhm BALLAST',['Q303','U315','D331','JP330','R306','R307','R308','R309','R310','R311','C308']+[f'C{i}' for i in range(340,344)])
+    group('6 RAW DUMP / 99 mOhm / TWO SIX-PART STRINGS',['Q330','U330','D330','JP331']+[f'R{i}' for i in range(380,394)]+['C367','C368']+[f'C{i}' for i in range(330,338)])
     group('7 DETECTOR SUPPLY / PG OBSERVATION ONLY',['U306','U318','U322','U323','R312','R313','R316','R317','R362','R363','R364','R365','R371','R372','C305','C365','C366','C369','C370','TP322','TP323','TP324'])
     group('8 OV DETECTOR / ISOLATION / SEPARATE SHUNT CLAMP',['U302','U303','U321','D301','D321','D322','R301','R302','R303','R361','R367','R370','R373','R717','R718','C302','C303','C304','C364'])
     group('9 SAFE5 / MEMORY SUPPLY / REAL PG RECEIVER',['U600','U602','U662','U607','U651','D600','D601','D618','D619','R600','R601','R602','R603','R604','R605','R606','R609','R622','R623','C600','C601','C602','C603','C604','C609','C651','C762','#FLG306'])
     group('10 MANUAL SOURCE TRIGGER / RESET / FAULT LATCH',['U610','U614','U615','U616','U617','U628','U633','U644','U656','J302','J603','R708','R727','C710','C714','C715','C716','C717','C728','C733','C644','C756'])
-    group('11 MANUAL RAIL VALID / ARM / COMMAND DEFAULTS',['U611','U612','U623','U630','U631','U632','U654','U661','Q304','J301','J604','JP600','R707','R728','R729','R709','R710','R712','R713','R321','R322','R647','R648','R649','R650','C711','C712','C723','C730','C731','C732','C754','C761'])
+    group('11 MANUAL RAIL VALID / ARM / COMMAND DEFAULTS',['U611','U612','U623','U630','U631','U632','U654','U661','Q304','J301','J604','JP600','R707','R728','R729','R709','R710','R712','R713','R321','R322','R647','R648','R649','R650','C711','C712','C723','C730','C731','C732','C754','C761','R730','R731','J605','J606'])
     group('12 PAIRED SENSE TEST POINTS / NO FORCE CURRENT',[r for r in cs if r.startswith('TP')])
     assert done==set(cs),set(cs)-done
     d['groups']=groups
@@ -323,10 +350,55 @@ def output_spec():
       'A fault asynchronously clears NOFAULT and commands both dumps. PG loss clears SERIES_ARMED; recovery alone has no clock edge.',
       'MANUAL RESET has no persistent-short diagnostic: disconnect source and verify repair before reset. Partial-rail / held-contact behavior OPEN.',
       'JP301 removes series force path. JP660 isolates SER_DRV for supply-loss tests. U322/U323 are observation only, never timing authorities.',
+      'JP330 / JP331 measure individual dump current; open links DISABLE disposal. Fit only after fixture review. J605/606 are guarded observations.',
       'DATASHEET nominal: protected bank4x470uF =1.88mF. CALCULATED: raw ballast99mOhm / protected33mOhm. Hot pulse/SOA OPEN.',
       'ASSUMED qualification box: Ccharged<=600uF, total held load<=45mA, effective hold C>=300uF. No timing/hold validation claimed.',
       'OPEN: T04 bootstrap; T06 detector; T07 aux startup/loop/thermal; T09 energy/negative returns; T10 far-end peak; T11 harness; T12 fixture; T15 rail loss.',
       'No Pi before dummy-load and fault tests pass. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.']
+    return d
+
+
+def monitor_spec():
+    d=baseline('monitor');apply_passives(d);cs={c['ref']:c for c in d['components']}
+    for r in ('R402','R403'):update(cs[r],'TNPW060310R0BEEA','10')
+    for r in ('R404','R405','R408'):update(cs[r],'TNPW060310K0BEEA','10k')
+    for r in ('R406','R407'):update(cs[r],'TNPW06034K70BEEA','4.7k')
+    update(cs['C401'],'GRM188R71H104KA93D','100nF 50V')
+    cs['R401']['rating']='DATASHEET: 2mOhm +/-1%, 25ppm/K; PR15 Kelvin land retained. Pulse survival/thermal/accuracy OPEN.'
+    cs['C404']['rating']='DATASHEET: 22uF 50V X7R +/-20%; qualified PR15 TDK land. Effective C / local regulator stability OPEN.'
+    d['components'] += [tp('TP405','VOUT_PROTECTED'),tp('TP406','LOAD_5V1')]
+    d['groups']=[('KELVIN SHUNT / LOAD-SIDE BUS SENSE',['R401','U401','R402','R403','C401','C402','R408','TP401','TP402','TP403','TP405','TP406']),
+      ('LOCAL REGULATOR / HOST DOMAIN BOUNDARY',['U402','U403','C403','C404','C405','C406','R404','R405','R406','R407','TP404'])]
+    d['schematic_notes']=[
+      'DATASHEET: R401 = 2mOhm, +/-1%, 25ppm/K. INA228 address0x40; retain independent Kelvin pads2/3, force pads1/4.',
+      'CALCULATED at5A: Vshunt10mV; dissipation50mW. Full scale81.92A at163.84mV range; alternate40.96mV gives20.48A nominal.',
+      'CALCULATED: 10ohm + 10ohm / 100nF differential filter pole79.6kHz. Telemetry is not the fast fault-current probe.',
+      'CALCULATED: 80A would produce160mV and12.8W while flowing. Use measured integral(I^2 R dt); pulse survival OPEN.',
+      'TP402/403 are Kelvin-only; TP405/406 expose force rails with paired local GND. No sense trace may carry load current.',
+      'Host/local3.3V domains remain separate. 3V3_LOCAL is never protection permission. Disconnect J503 during initial faults.',
+      'OPEN: shunt self-heating/tolerance/TCR, fault common-mode/pin stress, V/I/P/E accuracy, host-only/local-only Ioff and bus timing.',
+      'No Pi before prior dummy-load/fault/telemetry gates pass. PRELIMINARY TEST BOARD / NOT FOR FABRICATION.']
+    return d
+
+
+def io_spec():
+    d=baseline('io');cs={c['ref']:c for c in d['components']}
+    update(cs['J502'],'1776508','LOAD OUTPUT / mate1777989')
+    cs['J502']['rating']='DATASHEET 12A nominal; CALCULATED acceptance <=3.12mOhm per complete hot pole is NOT a catalog guarantee.'
+    cs['J502']['source']='J502 solution A, commit41cb9e889418d50d2f5f24467e66ac7f15a90476; PR15 qualified Phoenix land retained'
+    d['components'] += [force_link('JP501','LOAD_5V1','LOAD_FIXTURE'),force_pad('PF1','VIN_RAW'),force_pad('PF5','GND'),tp('TP505','LOAD_FIXTURE')]
+    d['groups']=[('DC INPUT / FIXTURE POWER RETURN',['J501','PF1','PF5','TP501','TP502','#FLG501','#FLG502']),
+      ('PROTECTED LOAD / HOST TELEMETRY',['JP501','J502','J503','TP503','TP504','TP505','#FLG503'])]
+    d['schematic_notes']=[
+      'REQUIREMENT: 9–26V DC input. J502 Phoenix1776508 + cable plug1777989, solutionA. Contact1=LOAD_5V1; contact2=GND.',
+      'JP501 feeds a local dummy fixture from LOAD_5V1; unplug J502 when using it. For isolation remove JP501 AND unplug J502; change only discharged.',
+      'PF1=VIN_RAW before F101; PF5=powerGND. PF2/3/4 onSheet02 complete the external fixture interfaces. No return bypass at far end.',
+      'HARNESS: TE3-87456-6 full40-position housing +10x87309-9. Belden8521 AWG16 trunks75mm;8502 AWG20 send2x15mm / return8x35mm.',
+      'Pi physical +2/4; GND6/9/14/20/25/30/34/39. Power-only harness; all other cavities empty. No Pi before fault tests pass.',
+      'DATASHEET J50212A nominal; <=3.12mOhm per complete hot pole is a TEST acceptance allocation. Hot mixed-mate/current/assembly OPEN.',
+      'J503:1GND /2host3.3V reference /3SDA /4SCL. Remove during first faults; external power-only Pi housing does not yet carry telemetry.',
+      'TEST HOOK — design proven on bench; evidence NOT RUN. Dry-contact manual trigger/reset and rail/driver-loss links are onSheet03.',
+      'OPEN: force-link/contact/copper/parasitic budgets, indexed harness/tooling, hot sharing, single-contact loss and telemetry housing integration.']
     return d
 
 
@@ -335,45 +407,46 @@ def draw(d,block):
     sh=Sheet(name,name.replace('_',' '),d['ports']);sh.serial=40000
     sh.text(STATUS,12.7,10.16,1.778);sh.add_ports()
     # Functional groups, generous physical spacing; each wire terminates in a named net.
-    wide=block=='output';paper='A0' if wide else 'A2'
-    columns=3 if wide else 2;gw=381 if wide else 279.4
+    wide=block=='output';paper='A0' if wide else 'A1' if block=='input' else 'A2'
+    columns=3 if wide else 2;gw=269.24 if wide else 279.4
     cursors=[55.88]*columns
     placed=set()
     for title,refs in d['groups']:
         refs=[r for r in refs if r in byref]
         if not refs:continue
         col=min(range(columns),key=lambda c:cursors[c]);x=12.7+col*gw;y=cursors[col]
-        sh.text(title,x,y,2.032);y+=12.7
+        sh.text(title,x,y,1.778);y+=10.16 if wide else 12.7
         large=[byref[r] for r in refs if len(byref[r]['pins'])>2]
         small=[byref[r] for r in refs if len(byref[r]['pins'])<=2]
-        per=3 if wide else 2;step=116.84 if wide else 132.08
+        per=2;step=124.46 if wide else 132.08
         for start in range(0,len(large),per):
             row=large[start:start+per]
             heights=[max(7.62,(((len(c['pins'])+1)//2)+1)*2.54) for c in row]
-            h=max(heights);cy=y+h+7.62
+            h=max(heights);cy=y+h+(5.08 if wide else 7.62)
             for i,c in enumerate(row):sh.component(c,x+60.96+i*step,cy);placed.add(c['ref'])
-            y=cy+h+12.7
+            y=cy+h+(7.62 if wide else 12.7)
+        per=3 if wide else 2;step=86.36 if wide else 132.08;pitch=(17.78 if title.startswith('12 ') else 20.32) if wide else 25.4
         for i,c in enumerate(small):
-            sh.component(c,x+60.96+(i%per)*step,y+(i//per)*25.4+10.16);placed.add(c['ref'])
-        y+=math.ceil(len(small)/per)*25.4+12.7
+            sh.component(c,x+45.72+(i%per)*step,y+(i//per)*pitch+10.16);placed.add(c['ref'])
+        y+=math.ceil(len(small)/per)*pitch+(10.16 if wide else 12.7)
         cursors[col]=y
     assert placed==set(byref),(placed^set(byref))
     y=max(cursors)+2.54
     for note in d['schematic_notes']:
         sh.text(note,12.7,y,1.27);y+=5.08
-    limit=790 if wide else 385
+    limit=1135 if wide else 545 if block=='input' else 385
     if y>limit:raise ValueError(f'{block}: layout height {y} exceeds {limit}')
     sh.save(HW);path=HW/(name+'.kicad_sch')
-    s=path.read_text().replace('(paper "A3")',f'(paper "{paper}")').replace('2026-09-12','2026-10-01')
+    s=path.read_text().replace('(paper "A3")',f'(paper "{paper}"'+(' portrait)' if wide else ')')).replace('2026-09-12','2026-10-01')
     s=s.replace('(comment 2 "R3 PCB LAYOUT BLOCKED")',f'(comment 2 {q(STATUS)})')
-    path.write_text(s)
+    path.write_text(dump(parse(s))+"\n")
     lib=HW/'V1A.kicad_sym';old=lib.read_text().rstrip()
     refs=set(byref)
     for a,b,t in reversed(list(children(old))):
         if t.startswith('(symbol '):
             ref=re.match(r'\(symbol\s+"([^_]+)_',t)
             if ref and ref[1] in refs:old=old[:a]+old[b:]
-    lib.write_text(old[:-1]+'\n'+'\n'.join(library_symbol(c) for c in cs)+'\n)\n')
+    lib.write_text(dump(parse(old[:-1]+'\n'+'\n'.join(library_symbol(c) for c in cs)+'\n)'))+'\n')
     # Native definitions/specs use a stable, explicitly reviewable source of truth.
     (EV/f'{block}_block.json').write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
     print(f'{name}: {len(cs)} symbols; {paper}; drawing bottom {y:g} mm')

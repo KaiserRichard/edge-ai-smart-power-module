@@ -17,7 +17,7 @@ def load_specs(spec_dir):
             for c in json.loads((spec_dir / f'{block}_block.json').read_text())['components']}
 
 
-def validate(tree, specs):
+def validate(tree, specs, profile="gate2"):
     errors = []
     nets = {}
     for net in tree.findall('./nets/net'):
@@ -73,6 +73,10 @@ def validate(tree, specs):
     for key, wanted in critical.items():
         if nets.get(key, '').rsplit('/', 1)[-1] != wanted:
             errors.append(f'Critical boundary violation: {key} must be on {wanted}')
+
+    if profile == "gate4b":
+        from check_gate4b_contracts import validate as validate_gate4b
+        return errors + validate_gate4b(tree, specs)
 
     # Gate2 authorizes this concrete capture, not arbitrary replacement of the
     # old open stub. These invariants are independent of the editable pin JSON.
@@ -170,13 +174,14 @@ def validate(tree, specs):
     return errors
 
 
-def validate_sheet03_packages(tree, specs, footprints=None):
+def validate_sheet03_packages(tree, specs, footprints=None, profile="gate2"):
     """Verify manufacturer pin identities and every copper pad independently.
 
     Manufacturer ledger is separate from the connection specification, so a
     corrupted symbol and connection JSON cannot quietly agree on a bad pinout.
     """
-    ledger = json.loads((ROOT/'docs/evidence/r2/sheet03/PIN_CONTRACTS.json').read_text())
+    ledger_dir = 'gate4b' if profile == 'gate4b' else 'sheet03'
+    ledger = json.loads((ROOT/f'docs/evidence/r2/{ledger_dir}/PIN_CONTRACTS.json').read_text())
     libraries = {(c.get('lib'),c.get('part')): c for c in tree.findall('./libparts/libpart')}
     errors=[]
     for c in tree.findall('./components/comp'):
@@ -220,13 +225,14 @@ def validate_sheet03_packages(tree, specs, footprints=None):
     return errors
 
 
-def validate_footprint_assignments(tree, footprints=None):
+def validate_footprint_assignments(tree, footprints=None, exclusions=None):
     """All physical symbols need real footprints except the three owner holds.
 
     Existing generic passive lands are real geometry, not full BOM qualification.
     The exclusion does not authorize selection or a change of the held parts.
     """
     from check_footprint_completion import EXCLUSIONS
+    if exclusions is None: exclusions = EXCLUSIONS
     from build_sheet03_preliminary import children
     libraries = {(c.get('lib'), c.get('part')): c for c in tree.findall('./libparts/libpart')}
     errors = []
@@ -234,7 +240,7 @@ def validate_footprint_assignments(tree, footprints=None):
         ref, fp = c.get('ref'), c.findtext('footprint', '').strip()
         placeholder = not fp or ':' not in fp or bool(re.search(r'(?i)(?:OPEN|TBD|PLACEHOLDER|UNASSIGNED)', fp))
         if placeholder:
-            if ref not in EXCLUSIONS:
+            if ref not in exclusions:
                 errors.append(f'{ref}: empty/placeholder footprint is not an authorized exclusion')
             continue
         if footprints is None:
@@ -267,12 +273,14 @@ def validate_footprint_assignments(tree, footprints=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--netlist', type=Path, required=True)
-    parser.add_argument('--spec-dir', type=Path, default=ROOT / 'docs/evidence/r2')
+    parser.add_argument('--spec-dir', type=Path)
+    parser.add_argument('--profile', choices=('gate2','gate4b'), default='gate4b', help='Gate2 preserves historical PR15 evidence; Gate4B checks current capture')
     parser.add_argument('--footprints', type=Path, help='KiCad installed footprint root; additionally verify all physical copper-pad numbers')
     args = parser.parse_args()
-    tree, specs = ET.parse(args.netlist).getroot(), load_specs(args.spec_dir)
-    errors = (validate(tree, specs) + validate_sheet03_packages(tree, specs, args.footprints)
-              + validate_footprint_assignments(tree, args.footprints))
+    spec_dir=args.spec_dir or ROOT/('docs/evidence/r2/gate4b' if args.profile=='gate4b' else 'docs/evidence/r2')
+    tree, specs = ET.parse(args.netlist).getroot(), load_specs(spec_dir)
+    errors = (validate(tree, specs, args.profile) + validate_sheet03_packages(tree, specs, args.footprints, args.profile)
+              + validate_footprint_assignments(tree, args.footprints, set() if args.profile=="gate4b" else None))
     if list((ROOT / 'hardware').rglob('*.kicad_pcb')):
         errors.append('R3 scope violation: authored PCB found')
     if errors:
