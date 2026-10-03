@@ -23,21 +23,22 @@ A building entrance has a guard who checks visitors, a barrier that closes, an e
 
 ## 2. Picture walkthrough: where current actually travels
 
-Open **PDF page 2, “01 INPUT PROTECTION”** using the [schematic reading guide](SCHEMATIC_READING_GUIDE.md). Page 1 is the hierarchy, so “Sheet 01” is **not** PDF page 1. The snapshot still says `FUSE - OPEN`, `SMBJ26CA` and 9–24 V; read those as historical labels, with the owner choices stated below.
+Open **PDF page 2, “01 INPUT PROTECTION”** in [V1A_GATE4B_WIP_2026-10-03.pdf](/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_GATE4B_WIP_2026-10-03.pdf#page=2). Page 1 is the hierarchy, so “Sheet 01” is **not** PDF page 1. The schematic walks below use this WIP PDF: Sheets 01–02 are redrawn to the frozen design; Sheets 03–05 retain their earlier drawings. Page 2 now labels F101 `12.5A T / 125VDC`, D101 `SMCJ36CA 36V bidirectional` and the input requirement 9–26 V. The [schematic reading guide](SCHEMATIC_READING_GUIDE.md) and embedded page image still describe the older review PDF.
 
 ![[v2-review-p02.png|1000]]
-*Unchanged review-PDF page 2. Start at the upper-left power path, then read the lower-left dividers and the right-hand eFuse controls.*
+*Historical review-PDF page 2, retained for context. For the current walk, open the WIP PDF linked above: INPUT / REVERSE POLARITY is upper left, EFUSE / SOURCE DISCONNECT is to its right, and MAIN CURRENT / COUPON ISOLATION is below the input block.*
 
 ![[b2-conceptual-input-protection-placement.png|850]]
 *Existing B2 image: conceptual placement only. Current owner selections are D101 **SMCJ36CA** and F101 **Schurter 3403.0285.23**, regardless of older labels. No PCB is routed.*
 
 Read the paths in this order:
 
-1. **Enter — page 6, DC INPUT / J501 pins 1 (+), 2 (RETURN); page 2, INPUT / REVERSE PROTECTION, F101 pins 1→2.** `VIN_RAW` joins those pages. Follow F101 to `VIN_FUSED`: the fuse is in series with the positive supply, not across it.
-2. **Divert — page 2, same block, D101 pins 1/2.** Its upper pin joins `VIN_FUSED` and its lower pin joins GND. This branch leaves before Q101 and U101, so surge current through D101 passes through F101 but **does not pass through the downstream eFuse**. The bidirectional device has no ordinary single-anode direction to infer from “pin 1.”
-3. **Block reverse paths — page 2, Q101 S pins 1/2/3, D pins 5/6/7/8 and G pin 4.** Read the grouped pins as terminals of one power transistor. Q102 S pin 2 is tied to `VIN_FUSED`, **not GND**; D pin 3 joins Q101's gate, and G pin 1 follows U101 DRV pin 4. Q102 helps discharge that gate relative to the source. The shown power body-diode direction is source-to-drain, from `VIN_FUSED` toward `VIN_EFUSE_IN`; do not equate an OFF transistor with two-way blocking in every power state.
-4. **Admit — page 2, EFUSE / SUPERVISION, U101 IN pins 1/2 → OUT pins 17/18.** Its internal switch is inside the IC rectangle. Follow OUT to `VIN_PROTECTED`, then page 3 U201 VIN pins 8/12. This is the protected **buck input**, not the protected 5 V output.
-5. **Return — page 2, U101 GND pin 8 / EP pin 25, and page 6 J501 RETURN pin 2.** The ground symbols express common connectivity. They do not specify zero-resistance copper, a short physical return or the eventual probe connection.
+1. **Enter — page 6, DC INPUT / FIXTURE POWER RETURN, J501 pins 1 (+), 2 (RETURN); page 2, INPUT / REVERSE POLARITY, F101 pins 1→2.** `VIN_RAW` joins those pages. Follow F101 to `VIN_FUSED`: the fuse is in series with the positive supply, not across it.
+2. **Divert — page 2, same block, D101 pins 1/2.** Pin 1 joins `VIN_FUSED` and pin 2 joins GND. This branch leaves before Q101 and U101, so surge current through D101 passes through F101 but **does not pass through the downstream eFuse**. The bidirectional device has no ordinary single-anode direction to infer from “pin 1.”
+3. **Block reverse paths — page 2, Q101 S pins 1/2/3, D pins 5/6/7/8 and G pin 4.** Read the grouped pins as terminals of one power transistor. Q102 S pin 2 is tied to `VIN_FUSED`, **not GND**; D pin 3 joins Q101's gate, and G pin 1 follows U101 DRV pin 4. Q102 helps discharge that gate relative to the source. The power body-diode direction is source-to-drain, from `VIN_FUSED` toward `VIN_EFUSE_IN`; the WIP pin rectangle does not draw that diode. Do not equate an OFF transistor with two-way blocking in every power state.
+4. **Admit — page 2, EFUSE / SOURCE DISCONNECT, U101 IN pins 1/2 → OUT pins 17/18.** Its internal switch is inside the IC rectangle. Follow OUT to `EFUSE_OUT`, then **MAIN CURRENT / COUPON ISOLATION, JP101 FORCE_A pin 1 → FORCE_B pin 2**, to reach `VIN_PROTECTED` when the removable force link is fitted. JP101 is before all main local input capacitors; **TP103 SIGNAL pin 1** observes `EFUSE_OUT`, with **RETURN pin 2** at GND. Continue to page 3 U201 VIN pins 8/12. This is the protected **buck input**, not the protected 5 V output.
+5. **Locate D102 — page 2, EFUSE / SOURCE DISCONNECT, STPS60H100CT.** Its **A1 pin 1 / A2 pin 3** join GND; **K_TAB pin 2 and the tab** join `VIN_PROTECTED`. This is a separate branch from D101 at `VIN_FUSED`.
+6. **Return — page 2, U101 GND pin 8 / EP pin 25, and page 6 J501 RETURN pin 2.** The ground symbols express common connectivity. They do not specify zero-resistance copper, a short physical return or the eventual probe connection.
 
 | Guard | Selected device / arrangement | What must be established |
 |---|---|---|
@@ -50,7 +51,7 @@ The fuse is a **12.5 A time-lag** part, with **125 VDC / 1000 A DC interruption*
 
 ## 3. TVS: three voltage labels, three meanings
 
-**Look at page 2, INPUT / REVERSE PROTECTION, D101 pins 1/2 and F101 pin 2.** The curve is voltage **across D101** versus current **through its branch**. It is not the voltage at U101 OUT or the Pi. The replacement SMCJ36CA is an owner selection; its old PDF label has not been recaptured here.
+**Look at page 2, INPUT / REVERSE POLARITY, D101 pins 1/2 and F101 pin 2.** The curve is voltage **across D101** versus current **through its branch**. It is not the voltage at U101 OUT or the Pi. The owner-selected SMCJ36CA is now labelled on this WIP page; the embedded historical page image retains the old label.
 
 ![[v2-01-tvs-iv.png|850]]
 
@@ -66,7 +67,7 @@ The higher standoff avoids the old 26 V device conducting during some studied up
 
 ## 4. eFuse: read the window, then read its uncertainty
 
-**Read page 2, UVLO / OVP DIVIDERS:** R101 pin 2 / R102 pin 1 form `INPUT_UVLO`, which reaches **U101 UVLO pin 6**; R103 pin 2 / R104 pin 1 form `INPUT_OVP`, which reaches **U101 OVP pin 7**. Both divider tops watch `VIN_FUSED`; both bottoms return to GND. Equal net labels join the divider to the IC without a long wire crossing the page.
+**Read page 2, EFUSE / SOURCE DISCONNECT, the divider resistors below U101:** R101 pin 2 / R102 pin 1 form `INPUT_UVLO`, which reaches **U101 UVLO pin 6**; R103 pin 2 / R104 pin 1 form `INPUT_OVP`, which reaches **U101 OVP pin 7**. R101/R103 pin 1 watch `VIN_FUSED`; R102/R104 pin 2 return to GND. Equal net labels join the divider to the IC without a long wire crossing the page.
 
 ![[v2-01-circuit-dividers.png|950]]
 *Exact sensing subset. Follow each divider midpoint to its named U101 pin. The two midpoint wires are separate nets.*
@@ -89,13 +90,13 @@ Now read the enlarged lower ruler:
 
 Startup control reduces the rate at which the downstream voltage rises. It is not a promise of a particular inrush current: capacitor current also depends on effective capacitance through $I=C\,dV/dt$.
 
-Find **U101 dVdT pin 9 → C103 pin 1; C103 pin 2 → GND** in the page-2 EFUSE block. This capacitor programs a voltage-ramp behavior. Separately, **ILIM pin 10 → R105 pin 1; R105 pin 2 → GND** programs the input current-limit screen. They are two different control pins, not two names for one limit.
+Find **U101 dVdT pin 9 → C103 pin 1; C103 pin 2 → GND** in the page-2 EFUSE / SOURCE DISCONNECT block. This capacitor programs a voltage-ramp behavior. Separately, **ILIM pin 10 → R105 pin 1; R105 pin 2 → GND** programs the input current-limit screen. They are two different control pins, not two names for one limit.
 
 ## 5. Worked example: why the input limit can be below 5 A
 
 ![[v2-01-input-current.png|800]]
 
-**Calculation boundary — page 2 U101 OUT pins 17/18 to page 3 U201 VIN pins 8/12; output at L201 pin 2.** The example compares power on opposite sides of the buck. It does not compare the input current with a current through the same series wire.
+**Calculation boundary — page 2 U101 OUT pins 17/18 (`EFUSE_OUT`) → fitted JP101 pins 1→2 (`VIN_PROTECTED`) → page 3 U201 VIN pins 8/12; raw output at JP202 pin 2 (`VOUT_5V1`), after L201 pin 2 (`L201_OUT`) and fitted JP202 pins 1→2.** The example compares power on opposite sides of the buck. It does not compare the input current with a current through the same series wire.
 
 **ASSUMED:** local output 5.1 V at 5 A, buck efficiency 90%, and **9 V at the buck input**. Ignore input-path and auxiliary losses for this example.
 
