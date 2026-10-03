@@ -812,7 +812,7 @@
         (font 
           (size 1.27 1.27)) 
         (hide yes))) 
-    (property "Rating" "9-24 V normal;>=5 A candidate;keying/wire/contact/interrupt coordination OPEN" 
+    (property "Rating" "REQUIREMENT: 9-26 V input; PR15 JST VH land retained. Installed wire/contact/fuse coordination OPEN." 
       (at 58.42 78.74 0) 
       (effects 
         (font 
@@ -1993,7 +1993,7 @@
         (size 1.27 1.27)) 
       (justify left top)) 
     (uuid "f3b006e2-b2e6-50c0-b2e6-0e71f7c6b780")) 
-  (text "JP501 feeds a local dummy fixture from LOAD_5V1; unplug J502 when using it. For isolation remove JP501 AND unplug J502; change only discharged." 
+  (text "Dummy force takeoff = JP501 pad2 / PF5 return; TP505 is sense only. Unplug J502 for this mode. Isolate: remove JP501 AND unplug J502." 
     (at 12.7 200.66 0) 
     (effects 
       (font 

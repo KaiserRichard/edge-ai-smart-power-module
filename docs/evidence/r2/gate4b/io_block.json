@@ -19,7 +19,7 @@
         }
       },
       "footprint": "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT",
-      "rating": "9-24 V normal;>=5 A candidate;keying/wire/contact/interrupt coordination OPEN",
+      "rating": "REQUIREMENT: 9-26 V input; PR15 JST VH land retained. Installed wire/contact/fuse coordination OPEN.",
       "source": "Frozen V1A functional input boundary",
       "position": [
         83.82,
@@ -275,7 +275,7 @@
   ],
   "schematic_notes": [
     "REQUIREMENT: 9–26V DC input. J502 Phoenix1776508 + cable plug1777989, solutionA. Contact1=LOAD_5V1; contact2=GND.",
-    "JP501 feeds a local dummy fixture from LOAD_5V1; unplug J502 when using it. For isolation remove JP501 AND unplug J502; change only discharged.",
+    "Dummy force takeoff = JP501 pad2 / PF5 return; TP505 is sense only. Unplug J502 for this mode. Isolate: remove JP501 AND unplug J502.",
     "PF1=VIN_RAW before F101; PF5=powerGND. PF2/3/4 onSheet02 complete the external fixture interfaces. No return bypass at far end.",
     "HARNESS: TE3-87456-6 full40-position housing +10x87309-9. Belden8521 AWG16 trunks75mm;8502 AWG20 send2x15mm / return8x35mm.",
     "Pi physical +2/4; GND6/9/14/20/25/30/34/39. Power-only harness; all other cavities empty. No Pi before fault tests pass.",

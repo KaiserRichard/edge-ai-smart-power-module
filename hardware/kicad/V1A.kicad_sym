@@ -7736,16 +7736,7 @@
     (symbol "D303_BAT46W_E3_08_0_1" 
       (polyline 
         (pts 
-          (xy -2.54 -2.54) 
-          (xy -2.54 2.54)) 
-        (stroke 
-          (width 0.254) 
-          (type default)) 
-        (fill 
-          (type none))) 
-      (polyline 
-        (pts 
-          (xy -2.54 0) 
+          (xy 2.54 -2.54) 
           (xy 2.54 2.54)) 
         (stroke 
           (width 0.254) 
@@ -7754,8 +7745,8 @@
           (type none))) 
       (polyline 
         (pts 
-          (xy 2.54 2.54) 
-          (xy 2.54 -2.54)) 
+          (xy 2.54 0) 
+          (xy -2.54 2.54)) 
         (stroke 
           (width 0.254) 
           (type default)) 
@@ -7763,8 +7754,17 @@
           (type none))) 
       (polyline 
         (pts 
-          (xy 2.54 -2.54) 
-          (xy -2.54 0)) 
+          (xy -2.54 2.54) 
+          (xy -2.54 -2.54)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy -2.54 -2.54) 
+          (xy 2.54 0)) 
         (stroke 
           (width 0.254) 
           (type default)) 
@@ -16023,7 +16023,7 @@
       (effects 
         (font 
           (size 1.27 1.27)))) 
-    (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" 
+    (property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" 
       (at 0 0 0) 
       (effects 
         (font 
@@ -16124,7 +16124,7 @@
       (effects 
         (font 
           (size 1.27 1.27)))) 
-    (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" 
+    (property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" 
       (at 0 0 0) 
       (effects 
         (font 

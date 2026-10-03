@@ -237,7 +237,7 @@ def output_spec():
       ('R376','TNPW0805365KBEEA','365k','AUX_PREHOLD','HOLD_EN'),('R377','TNPW060348K7BEEA','48.7k','HOLD_EN','GND'),
       ('R378','TNPW0805365KBEEA','365k','AUX_PREHOLD','HOLD_OVLO'),('R379','TNPW060333K2BEEA','33.2k','HOLD_OVLO','GND')]:resistor(r,m,v,a,b)
     cap('C374','GRM21BR71E105KA99L','1uF 25V','HOLD_SLEW_C');cap('C375','GRM21BR71E105KA99L','1uF 25V','AUX_PREHOLD');bypass('C376','DRV_HOLD')
-    for r in ('C358','C359'):cap(r,'EEUFR1E221','220uF 25V','DRV_HOLD',fp='Capacitor_THT:CP_Radial_D6.3mm_P2.50mm',polar=True)
+    for r in ('C358','C359'):cap(r,'EEUFR1E221','220uF 25V','DRV_HOLD',fp='Capacitor_THT:CP_Radial_D8.0mm_P3.50mm',polar=True)
     powerflag('#FLG305','AUX_PREHOLD','U317 PVOUT -> fitted D304; reverse blocking retained')
     add(tp('TP327','HOLD_AUXOFF'));add(tp('TP328','HOLD_FLT'))
 
@@ -371,11 +371,11 @@ def monitor_spec():
       ('LOCAL REGULATOR / HOST DOMAIN BOUNDARY',['U402','U403','C403','C404','C405','C406','R404','R405','R406','R407','TP404'])]
     d['schematic_notes']=[
       'DATASHEET: R401 = 2mOhm, +/-1%, 25ppm/K. INA228 address0x40; retain independent Kelvin pads2/3, force pads1/4.',
-      'CALCULATED at5A: Vshunt10mV; dissipation50mW. Full scale81.92A at163.84mV range; alternate40.96mV gives20.48A nominal.',
+      'CALCULATED at5A: Vshunt10mV; dissipation50mW. ADC ranges +/-163.84mV or +/-40.96mV give +/-81.92A or +/-20.48A nominal.',
       'CALCULATED: 10ohm + 10ohm / 100nF differential filter pole79.6kHz. Telemetry is not the fast fault-current probe.',
       'CALCULATED: 80A would produce160mV and12.8W while flowing. Use measured integral(I^2 R dt); pulse survival OPEN.',
       'TP402/403 are Kelvin-only; TP405/406 expose force rails with paired local GND. No sense trace may carry load current.',
-      'Host/local3.3V domains remain separate. 3V3_LOCAL is never protection permission. Disconnect J503 during initial faults.',
+      'Host/local3.3V domains remain separate; TCA9517 EN follows local rail. No protection permission from 3V3_LOCAL. Remove J503 for first faults.',
       'OPEN: shunt self-heating/tolerance/TCR, fault common-mode/pin stress, V/I/P/E accuracy, host-only/local-only Ioff and bus timing.',
       'No Pi before prior dummy-load/fault/telemetry gates pass. PRELIMINARY TEST BOARD / NOT FOR FABRICATION.']
     return d
@@ -383,6 +383,7 @@ def monitor_spec():
 
 def io_spec():
     d=baseline('io');cs={c['ref']:c for c in d['components']}
+    cs['J501']['rating']='REQUIREMENT: 9-26 V input; PR15 JST VH land retained. Installed wire/contact/fuse coordination OPEN.'
     update(cs['J502'],'1776508','LOAD OUTPUT / mate1777989')
     cs['J502']['rating']='DATASHEET 12A nominal; CALCULATED acceptance <=3.12mOhm per complete hot pole is NOT a catalog guarantee.'
     cs['J502']['source']='J502 solution A, commit41cb9e889418d50d2f5f24467e66ac7f15a90476; PR15 qualified Phoenix land retained'
@@ -391,7 +392,7 @@ def io_spec():
       ('PROTECTED LOAD / HOST TELEMETRY',['JP501','J502','J503','TP503','TP504','TP505','#FLG503'])]
     d['schematic_notes']=[
       'REQUIREMENT: 9–26V DC input. J502 Phoenix1776508 + cable plug1777989, solutionA. Contact1=LOAD_5V1; contact2=GND.',
-      'JP501 feeds a local dummy fixture from LOAD_5V1; unplug J502 when using it. For isolation remove JP501 AND unplug J502; change only discharged.',
+      'Dummy force takeoff = JP501 pad2 / PF5 return; TP505 is sense only. Unplug J502 for this mode. Isolate: remove JP501 AND unplug J502.',
       'PF1=VIN_RAW before F101; PF5=powerGND. PF2/3/4 onSheet02 complete the external fixture interfaces. No return bypass at far end.',
       'HARNESS: TE3-87456-6 full40-position housing +10x87309-9. Belden8521 AWG16 trunks75mm;8502 AWG20 send2x15mm / return8x35mm.',
       'Pi physical +2/4; GND6/9/14/20/25/30/34/39. Power-only harness; all other cavities empty. No Pi before fault tests pass.',
@@ -441,12 +442,18 @@ def draw(d,block):
     s=s.replace('(comment 2 "R3 PCB LAYOUT BLOCKED")',f'(comment 2 {q(STATUS)})')
     path.write_text(dump(parse(s))+"\n")
     lib=HW/'V1A.kicad_sym';old=lib.read_text().rstrip()
-    refs=set(byref)
+    replacements={c['ref']:parse(library_symbol(c)) for c in cs}
+    # Replace definitions in place. Re-appending an entire sheet needlessly
+    # reorders thousands of unrelated library lines at every checkpoint.
     for a,b,t in reversed(list(children(old))):
         if t.startswith('(symbol '):
             ref=re.match(r'\(symbol\s+"([^_]+)_',t)
-            if ref and ref[1] in refs:old=old[:a]+old[b:]
-    lib.write_text(dump(parse(old[:-1]+'\n'+'\n'.join(library_symbol(c) for c in cs)+'\n)'))+'\n')
+            if ref and ref[1] in replacements:
+                replacement=replacements.pop(ref[1])
+                if parse(t)!=replacement:
+                    old=old[:a]+dump(replacement,1)+old[b:]
+    additions='\n'.join('  '+dump(t,1) for t in replacements.values())
+    lib.write_text(old[:-1]+('\n'+additions+'\n' if additions else '')+')\n')
     # Native definitions/specs use a stable, explicitly reviewable source of truth.
     (EV/f'{block}_block.json').write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
     print(f'{name}: {len(cs)} symbols; {paper}; drawing bottom {y:g} mm')

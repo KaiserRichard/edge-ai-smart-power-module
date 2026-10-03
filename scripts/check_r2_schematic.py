@@ -75,6 +75,17 @@ def validate(tree, specs, profile="gate2"):
             errors.append(f'Critical boundary violation: {key} must be on {wanted}')
 
     if profile == "gate4b":
+        for c in tree.findall('./components/comp'):
+            ref = c.get('ref')
+            spec = specs.get(ref)
+            if spec is None:
+                continue
+            for name, actual, wanted in (
+                    ('MPN', c.findtext('fields/field[@name="MPN"]'), spec['part']),
+                    ('value', c.findtext('value'), spec['value']),
+                    ('footprint', c.findtext('footprint'), spec['footprint'])):
+                if actual != wanted:
+                    errors.append(f'{ref}: captured {name} differs from Gate4B specification')
         from check_gate4b_contracts import validate as validate_gate4b
         return errors + validate_gate4b(tree, specs)
 

@@ -106,8 +106,13 @@ def library_symbol(c):
                 geometry += [line(-3.175, 2.54, -1.905, 2.54),
                              line(-2.54, 1.905, -2.54, 3.175)]
         elif c["kind"] in ("D", "TVS"):
-            geometry += [line(-2.54, -2.54, -2.54, 2.54), line(-2.54, 0, 2.54, 2.54),
-                         line(2.54, 2.54, 2.54, -2.54), line(2.54, -2.54, -2.54, 0)]
+            # Draw the cathode bar on the actual K terminal. BAT46W's pin1
+            # is A, while the SMB rectifier's pin1 is K.
+            polarity = -1 if pins[nums[0]]["name"] == "A" else 1
+            def diode_line(x1, y1, x2, y2):
+                return line(polarity*x1, y1, polarity*x2, y2)
+            geometry += [diode_line(-2.54, -2.54, -2.54, 2.54), diode_line(-2.54, 0, 2.54, 2.54),
+                         diode_line(2.54, 2.54, 2.54, -2.54), diode_line(2.54, -2.54, -2.54, 0)]
             if c["kind"] == "TVS":
                 geometry += [line(-2.54, 2.54, -1.27, 2.54), line(-2.54, -2.54, -3.81, -2.54)]
         elif c["kind"] == "L":

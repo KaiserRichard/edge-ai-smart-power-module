@@ -6,11 +6,11 @@
   (paper "A3")
   (title_block
     (title "00 TOP - V1A Smart DC Power Module")
-    (date "2026-09-12")
+    (date "2026-10-03")
     (rev "R2-BLOCKED")
     (company "Edge AI Smart Power Module")
     (comment 1 "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED")
-    (comment 2 "R3 PCB LAYOUT BLOCKED"))
+    (comment 2 "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION"))
   (sheet_instances
     (path "/"
       (page "1")))
@@ -21,7 +21,7 @@
         (size 2.54 2.54))
       (justify left top))
     (uuid "bbf726ad-4200-53b5-a22d-8ac85a562e8f"))
-  (text "PRELIMINARY / R2 BLOCKED / NOT FOR FABRICATION"
+  (text "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION"
     (at 15.24 25.4 0)
     (effects
       (font
@@ -35,7 +35,7 @@
         (size 3.048 3.048))
       (justify left top))
     (uuid "c379f2cb-07b8-561d-97e4-7c3a7a2c1830"))
-  (text "9-24 V DC input     |     5.1 V nominal / 5 A     |     I2C: 3.3 V, 100 kHz"
+  (text "9-26 V DC input     |     5.1 V nominal / 5 A     |     I2C: 3.3 V, 100 kHz"
     (at 25.4 73.66 0)
     (effects
       (font

@@ -3959,7 +3959,7 @@
         (size 1.27 1.27)) 
       (justify left top)) 
     (uuid "2eba0503-e6dd-5f68-8f45-01a999f0141c")) 
-  (text "CALCULATED at5A: Vshunt10mV; dissipation50mW. Full scale81.92A at163.84mV range; alternate40.96mV gives20.48A nominal." 
+  (text "CALCULATED at5A: Vshunt10mV; dissipation50mW. ADC ranges +/-163.84mV or +/-40.96mV give +/-81.92A or +/-20.48A nominal." 
     (at 12.7 266.7 0) 
     (effects 
       (font 
@@ -3987,7 +3987,7 @@
         (size 1.27 1.27)) 
       (justify left top)) 
     (uuid "21b622d1-44be-54ee-91b3-0673bdd69324")) 
-  (text "Host/local3.3V domains remain separate. 3V3_LOCAL is never protection permission. Disconnect J503 during initial faults." 
+  (text "Host/local3.3V domains remain separate; TCA9517 EN follows local rail. No protection permission from 3V3_LOCAL. Remove J503 for first faults." 
     (at 12.7 287.02 0) 
     (effects 
       (font 

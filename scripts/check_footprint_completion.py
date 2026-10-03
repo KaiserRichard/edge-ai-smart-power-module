@@ -89,12 +89,13 @@ def normalized_source(text):
     return text
 
 
-def check_sources(root=ROOT):
+def check_sources(root=ROOT, source_revision=None):
     errors, evidence = [], []
     for path in sorted((root / 'hardware/kicad').glob('*.kicad_sch')):
         rel = path.relative_to(root).as_posix()
         before = subprocess.check_output(['git', 'show', f'{BASE}:{rel}'], cwd=root, text=True)
-        after = path.read_text()
+        after = (subprocess.check_output(['git', 'show', f'{source_revision}:{rel}'], cwd=root, text=True)
+                 if source_revision else path.read_text())
         same = normalized_source(before) == normalized_source(after)
         if not same:
             errors.append(f'Non-field schematic source change: {rel}')
@@ -102,7 +103,9 @@ def check_sources(root=ROOT):
     for rel in ['hardware/kicad/V1A.kicad_pro', 'hardware/kicad/V1A.kicad_sym',
                 'hardware/kicad/fp-lib-table', 'hardware/kicad/sym-lib-table']:
         before = subprocess.check_output(['git', 'show', f'{BASE}:{rel}'], cwd=root)
-        if before != (root / rel).read_bytes():
+        after = (subprocess.check_output(['git', 'show', f'{source_revision}:{rel}'], cwd=root)
+                 if source_revision else (root / rel).read_bytes())
+        if before != after:
             errors.append(f'Frozen project/library settings changed: {rel}')
     return errors, evidence
 

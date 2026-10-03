@@ -53,6 +53,13 @@ def validate(tree, specs):
       'U654':[None,'ARM_CONTACT','GND','ARM_DOWN','SAFE5'],
       'U656':[None,'RESET_CONTACT','GND','RESET_DOWN','SAFE5'],
       'U661':[None,'SERIES_CONTACT','GND','SERIES_DOWN','SAFE5'],
+      'U401':['GND','GND','ALERT_LOCAL','SDA_LOCAL','SCL_LOCAL','3V3_LOCAL','GND','LOAD_5V1','INA_IN_MINUS','INA_IN_PLUS'],
+      'U402':['VOUT_PROTECTED','GND',None,None,'3V3_LOCAL'],
+      'U403':['3V3_HOST','SCL_HOST','SDA_HOST','GND','3V3_LOCAL','SDA_LOCAL','SCL_LOCAL','3V3_LOCAL'],
+      'J501':['VIN_RAW','GND'], 'J502':['LOAD_5V1','GND'],
+      'J503':['GND','3V3_HOST','SDA_HOST','SCL_HOST'],
+      'JP501':['LOAD_5V1','LOAD_FIXTURE'], 'TP505':['LOAD_FIXTURE','GND'],
+      'PF1':['VIN_RAW'], 'PF2':['VIN_PROTECTED'], 'PF3':['BUCK_SW'], 'PF4':['L201_IN'], 'PF5':['GND'],
     }
     for ref,nn in contracts.items():pins(ref,nn)
     for ref,source,gate,drain in [('Q301','PROT_MID','PROT_GATE','VOUT_5V1'),('Q302','PROT_MID','PROT_GATE','SERIES_OUT'),('Q303','GND','CB_GATE','CB_DRAIN'),('Q330','GND','RAW_DUMP_GATE','RAW_DUMP_DRAIN')]:
@@ -78,6 +85,8 @@ def validate(tree, specs):
       ('R717','MANUAL_RAILS_VALID','DET_SWITCH_EN'),('R718','DET_SWITCH_EN','GND'),('R729','MANUAL_RAILS_VALID','GND'),
       ('J301','ARM_CONTACT','GND'),('J302','RESET_CONTACT','GND'),('J603','SOURCE_CONTACT','GND'),('J604','SERIES_CONTACT','GND'),
       ('R730','PG_GOOD','PG_FIXTURE'),('R731','MAIN_PERMISSION','MAIN_FIXTURE'),('J605','PG_FIXTURE','GND'),('J606','MAIN_FIXTURE','GND')]:pair(ref,a,b)
+    for ref,a,b in [('R402','SHUNT_KPLUS','INA_IN_PLUS'),('R403','SHUNT_KMINUS','INA_IN_MINUS'),
+                    ('C401','INA_IN_PLUS','INA_IN_MINUS'),('TP405','VOUT_PROTECTED','GND'),('TP406','LOAD_5V1','GND')]:pair(ref,a,b)
     for n in ('17','18'):
         if ns.get(('U101',n))!='EFUSE_OUT':errors.append('U101 must feed the main-current link upstream of local input C')
     if not ns.get(('U101','11'),'unconnected-').startswith('unconnected-'):errors.append('U101 MODE must be NC latch-off')
@@ -99,6 +108,10 @@ def validate(tree, specs):
     for ref,mpn in selected.items():
         c=parts.get(ref)
         if c is None or c.findtext('fields/field[@name="MPN"]')!=mpn:errors.append(f'{ref}: independent frozen MPN requires {mpn}')
+    for ref in ('C358','C359'):
+        c=parts.get(ref)
+        if c is None or c.findtext('fields/field[@name="MPN"]')!='EEUFR1E221' or c.findtext('footprint')!='Capacitor_THT:CP_Radial_D8.0mm_P3.50mm':
+            errors.append(f'{ref}: Panasonic EEUFR1E221 requires 8mm body / 3.5mm pitch')
     flags={'#FLG101':'VIN_FUSED','#FLG102':'VIN_EFUSE_IN','#FLG103':'VIN_PROTECTED',
       '#FLG301':'AUX_RAW','#FLG302':'VOUT_PROTECTED','#FLG303':'AUX_LIMITED','#FLG304':'SER_DRV','#FLG305':'AUX_PREHOLD','#FLG306':'SAFE_IN',
       '#FLG501':'VIN_RAW','#FLG502':'GND','#FLG503':'3V3_HOST'}

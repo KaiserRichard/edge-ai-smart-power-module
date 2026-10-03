@@ -3162,7 +3162,7 @@
       "ref": "C358",
       "part": "EEUFR1E221",
       "value": "220uF 25V",
-      "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
       "pins": {
         "1": {
           "name": "+",
@@ -3184,7 +3184,7 @@
       "ref": "C359",
       "part": "EEUFR1E221",
       "value": "220uF 25V",
-      "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
       "pins": {
         "1": {
           "name": "+",
