@@ -240,3 +240,68 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **OPEN RISKS:** J502 module complete pole/clamp ≤3.12 mΩ hot and Pi complete contact ≤20 mΩ hot/conditioned are acceptance targets, not guaranteed by the inspected datasheets. Exact Pi male-header identity/rating, contact current sharing, indexed carrier/engagement, assembly tolerances and hot tests remain OPEN. Existing source/fault containment, capacitor/inductor, thermal and physical bring-up blockers remain. ERC and pad consistency do not establish electrical safety.
 
 **NEXT GATE:** review the footprint PR and obtain the held component decisions and connector/assembly qualification. Complete R2 electrical review before authorizing R3. Follow the existing dummy-load-first R5 sequence before SBC integration.
+
+## Gate 4b — resumed test-board capture, 2026-10-03
+
+**STATUS: CONDITIONAL PASS for schematic capture; R2 electrical release BLOCKED.**
+
+**PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION**
+
+**WHAT WAS DONE:** continued the supplied partial commits through 74b9dc8, one sheet at a time. Sheet01 input protection and Sheet04 Kelvin telemetry were retained and rechecked. Sheet02 now exports L201_IN through the hierarchy. Sheet03 adds the frozen SW/VIN sensing front end as an observation circuit, preserving option-A manual source triggering/reset and rail/driver-loss hooks. Sheet05 retains Phoenix J5021776508 with1777989 mate. Sheets02/03/05 now explicitly quote bench proof as a future acceptance requirement, with all hardware evidence NOT RUN. This addresses the two independent Sheet01/02 review findings within the owner-authorized test-hook scope.
+
+**EVIDENCE:** [capture handback](evidence/r2/gate4b/GATE4B_CAPTURE.md), [review resolutions](evidence/r2/gate4b/REVIEW_RESOLUTIONS.md), per-sheet ERC/checkpoints, [final ERC](evidence/r2/gate4b/ERC_FINAL.json), [full marked PDF](evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf), [native netlist](evidence/r2/gate4b/captured.xml), [366-reference inventory](evidence/r2/gate4b/CAPTURED_BOM.csv), [40-row freeze reconciliation](evidence/r2/gate4b/FREEZE_RECONCILIATION.json), [final validation](evidence/r2/gate4b/FINAL_VALIDATION.json). KiCad9.0.6 reports zero violations at all severities; all50 regression tests pass. Every physical symbol has an assigned, pad-number-consistent footprint. No existing PR15 project footprint was modified. The six-page schematic PDF was visually reviewed.
+
+**DECISIONS:** retain architecture D,9–26V input, SMCJ36CA, Schurter3403.0285.23, local5.098361V regulation, opposed series pair and no bypass to the protected load. New source sensors are observation-only; the autonomous qualifier/collapse memory is absent under option A. Net classes cover29 high-current,4 switching,4 Kelvin and121 signal nets; editor widths are ASSUMED, not copper ratings. The raw KiCad XML still reports Default on144 local nets despite correct PDF/project resolution; verify actual PCB inheritance during an authorized R3.
+
+**OPEN RISKS:** autonomous source coverage/10µs/100µC; brownout/PG recovery/SER_DRV loss and persistent-short reset policy; bootstrap/auxiliary/reference/clamp loading and hold; hot power-device/ballast/diode stress and energy partition; source/fuse/TVS coordination; regulator/inrush/ripple/stability/thermal performance; fixture ratings/calibration; complete hot J502/Pi harness and Kelvin/telemetry accuracy. The possible DDR-60L-12 source does not change the input protection/current-limit/trace basis:28.33W/9V≈3.15A, at12V≈2.36A. V1A thermal behavior at12V remains OPEN. All physical tests are NOT RUN.
+
+**NEXT GATE:** engineering review of the completed R2 test-board capture and bounded isolated-coupon/fixture plan. R3 layout and R4 fabrication remain unreleased. Follow visual/continuity → current-limited no-load startup → rail verification → dummy-load steps → thermal/ripple/transient → fault/protection → telemetry → SBC only after all preceding gates pass. No Pi as first load.
+
+**Git handback:** local per-sheet checkpoint attempts failed because Git could not create index.lock (Operation not permitted). Per the brief, this resume remains uncommitted for Claude. No lock/permission changes, push, merge, PCB layout, purchase or manufacturing action.
+
+## Gate 4b — C1–C3 pinout check, 2026-10-03
+
+**STATUS: PASS for the checked pinout items; R2 electrical release BLOCKED.**
+
+**WHAT WAS DONE:** independently checked U316 LT4363HMS-1#PBF against ADI Rev. C pp. 2, 3 and 8. Its MSOP pinout is correct: pin 7 GND, pin 8 UV, pin 9 GND; OV belongs to the -2 variant. Recorded the brief's prior C1/C3 verification and retained the capture.
+
+**EVIDENCE:** [C1–C3 report](evidence/r2/gate4b/CHECK_C1C3.md) and [source provenance](../third_party/check_c1c3/SOURCE.md). All 50 existing tests and the capture checker pass. Hardware and existing PDF/netlist are unchanged; no fresh ERC or export was required by the brief's PASS branch.
+
+**DECISIONS:** C2 PASS; no symbol, wiring, divider or FLT change.
+
+**OPEN RISKS:** physical performance remains untested. The official PDF was read through the web tool; direct local-download attempts failed. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.
+
+**NEXT GATE:** continue the existing R2 engineering review; this check does not release R3 or fabrication.
+
+**Git handback:** the authorized local commit attempt failed because Git could not create `index.lock` (`Operation not permitted`). These documentation changes remain uncommitted under the brief's explicit fallback; nothing was pushed.
+
+
+## Layout preparation — unplaced PCB import, 2026-10-03
+
+**STATUS: CONDITIONAL PASS for import/net-class checks; guide installation BLOCKED by filesystem permissions. R2 electrical release and R3 layout release remain BLOCKED.**
+
+**WHAT WAS DONE:** followed `v1a-lab/briefs/LAYOUT_PREP.md` after U316 review without sub-agents. Created `hardware/kicad/V1A.kicad_pcb` from a fresh schematic export using KiCad 9.0.6's board API. All 366 footprints remain at the origin and unplaced; no tracks, vias, zones or outline. Prepared manufacturer-backed critical-placement guidance for every sheet and a patch for the separate guide worktree.
+
+**EVIDENCE:** [layout-prep report](evidence/r3/layout_prep/LAYOUT_PREP.md), [board/net-class audit](evidence/r3/layout_prep/IMPORT_CHECK.json), and [source provenance](../third_party/layout_prep/SOURCES.md). All 1,027 numbered pads match the capture. All five net-class dimensions and all 158 named-net assignments resolve correctly in the board; no project change was needed. Native DRC has zero schematic-parity issues, but physical DRC fails with 2,191 reported violations and 213 unconnected items on the deliberately unplaced board. Fifty existing tests and independent capture/footprint checks pass. Visual output confirms the origin pile only. The older blanket no-PCB checks report a scope failure; their functional validators pass and those guards were not weakened.
+
+**DECISIONS:** preserve schematic connectivity, values, assembly attributes and UUID links. Retain the existing project rules as provisional editor defaults. No footprint placement, routing, electrical redesign, fabrication release or push.
+
+**OPEN RISKS:** the guide worktree is outside this session's writable roots; its file open for writing returned `Operation not permitted`. The [prepared patch](evidence/r3/layout_prep/layout-guide.patch) passes `git apply --check`, but was not installed or committed there. Placement review also flags U315 local bypass, U306 input-bypass allocation and U327 output-ceramic questions. Existing R2 electrical/thermal/fault risks persist. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.
+
+**NEXT GATE:** apply/review the guide patch in a writable session, resolve R2 review items, and authorize owner placement. This handoff does not close R3. Follow the established current-limited/dummy-load bring-up sequence before any SBC integration.
+
+**Git handback:** the authorized local commit stopped at `git add` because creating the capture worktree `index.lock` returned `Operation not permitted`. Per the brief, leave capture changes uncommitted. The guide target could not be written, so its prepared patch is also uncommitted. No push or lock/permission changes.
+
+## Layout preparation — resume, 2026-10-03
+
+**STATUS: CONDITIONAL PASS for unplaced import/net-class verification; guide installation BLOCKED by filesystem scope. R2 electrical release and R3 layout release remain BLOCKED.**
+
+**WHAT WAS DONE:** continued the supplied `566b00e` and `56e9837` work without rebuilding the board or using sub-agents. Added an evidence-directory option to preserve prior reports, reran the import verification and native DRC, reviewed the retained image, and completed the prepared guide's root-sheet and local-grounding notes. No hardware file changed.
+
+**EVIDENCE:** [resumed handoff](evidence/r3/layout_prep/resume/RESUME.md), [resumed checks](evidence/r3/layout_prep/resume/RESUME_CHECK.json), [board/net-class audit](evidence/r3/layout_prep/resume/IMPORT_CHECK.json), [DRC](evidence/r3/layout_prep/resume/DRC.json), [prepared guide patch](evidence/r3/layout_prep/layout-guide.patch). All 366 footprints, 1,027 numbered pads, 158 named nets and five classes pass the import check. The fresh netlist differs only by export timestamp. DRC has zero schematic-parity issues, but physical DRC still fails with 2,191 violations and 213 unconnected items. All 283 guide refdes including ranges exist. The patch applies cleanly and reproduces the prepared guide in a temporary copy; the target worktree is unchanged.
+
+**DECISIONS:** keep every footprint unplaced at the origin and retain provisional project rules. No routing, placement, electrical changes, gate release or push. Earlier evidence remains available. The prior uncommitted capture status is historical: the two supplied commits contain that work. This resume's authorized local commit stopped at `git add` because creating `index.lock` returned `Operation not permitted` (exit 128); leave these changes uncommitted under the brief's fallback. See the [Git attempt log](evidence/r3/layout_prep/resume/git_commit.log).
+
+**OPEN RISKS:** the guide worktree remains outside current writable roots, so installation and its requested local commit cannot be completed here. Existing electrical/thermal/fault risks and local-bypass/return questions persist. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**NEXT GATE:** install and review the prepared guide patch from a session with the required filesystem access, resolve R2 items and authorize placement before R3 work. Follow the established current-limited/dummy-load-first bring-up sequence before SBC use.

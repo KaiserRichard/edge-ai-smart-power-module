@@ -1,0 +1,82 @@
+[
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/GATE4A_FREEZE.md",
+    "sha256": "31421eb713cef4563a4fb109f8140534967e2200e1c61a780555beec143412d1"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FREEZE_TABLE.md",
+    "sha256": "6728ce0acd681609214723e1f6e31a191574366d0844d3ab7b373a1f2c5ed0c0"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FREEZE_BOM.csv",
+    "sha256": "200dbfa2b42daf9629a5c726c993127138386402b62cabc8c108cdc20dcaeb6c"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FIX_RESOLUTIONS.md",
+    "sha256": "0d89dcd8f5d248126b1033ceb882e09960979fec8c7a76cac440e5b57c0d0323"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/TEST_PLAN.md",
+    "sha256": "363d0c401521686b1f4ae577964d97ed0591f405281343f7e4442b9430ade4d4"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/CALCULATIONS.md",
+    "sha256": "893a23ca4094f904bfe869ce983e447277660ce65ddbd9a11fbc5a0f0d3b2af5"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/CALCULATIONS.json",
+    "sha256": "0ecdbad8f7c3295c6833a4dc141c67f6686c0aa56f0a4ad1dca3180a1b9ecab4"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FIX3_CALCULATIONS.json",
+    "sha256": "c6342bc0a3f26a4ce3a72a2308fe5372e6dbe5d6139424c1e28bd2e727d27e2d"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FIX3_SOURCE_TRIGGER.md",
+    "sha256": "ac8a901bec32df8d683715c5932cddabc9ee9206523a058649ce08116a6f6c22"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FIX3_INTERLOCK.md",
+    "sha256": "a60a9f95d21db6a642926baff8ca504740bae93c1f6e4f300a67b1ae671ae8dc"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FIX3_FIXTURE.md",
+    "sha256": "fee8739ba6dbe830fbff2be1b26deed36a91403a068bfc2ae74e61dcc751a949"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/FREEZE_MANIFEST.json",
+    "sha256": "1aa5745bdb043a77c81a4dce6e9fc8f0086363d76b200884428ba65be212c43b"
+  },
+  {
+    "commit": "898759e45578f3767721d19eb313312b7d7733a9",
+    "path": "docs/evidence/r2/gate4a/PASSIVE_COMPLETION.csv",
+    "sha256": "7aedeb036ddb7902c4ac309b6777988582c3d9b5f0d8af77d06ccf0a18daf9aa"
+  },
+  {
+    "commit": "41cb9e889418d50d2f5f24467e66ac7f15a90476",
+    "path": "docs/evidence/r2/J502_SELECTION.md",
+    "sha256": "2584ea47c26c10830a0da4e7015d47de560fbbaa37014f0cf23cd83b8bd8879f"
+  },
+  {
+    "commit": "6e5017c9bf61b59a65a6a45a9f8cec0686fcb3f6",
+    "path": "docs/evidence/r2/BOM_DRAFT.md",
+    "sha256": "2a89344c7f010fd6cdb30899ed90a15a048d41d24ef13e221359a5581ca9990a"
+  },
+  {
+    "commit": "6e5017c9bf61b59a65a6a45a9f8cec0686fcb3f6",
+    "path": "docs/evidence/r2/SHEET03_PART_QUALIFICATION.md",
+    "sha256": "04e17058d613cdffc9b57e1c228d99ffd769beae7d6794213d5323bf7efa9668"
+  }
+]

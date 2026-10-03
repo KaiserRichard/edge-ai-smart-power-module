@@ -1,0 +1,14 @@
+{
+  "status": "PASS: all named nets resolve to assigned classes in native KiCad PDF",
+  "named_nets": 158,
+  "counts": {
+    "HighCurrent": 29,
+    "Signal": 121,
+    "Switching": 4,
+    "Kelvin": 4
+  },
+  "raw_xml_class_mismatches": 144,
+  "limitation": "KiCad 9.0.6 XML emits Default for local child-sheet nets; raw export retained. Recheck PCB import in authorized R3.",
+  "project_sha256": "adfaca18079528832a6c60750591cc31221b27f3f1d1384ebe63c091f1e5c0c3",
+  "pdf_sha256": "602271b03b7e11cc281ff7483e38a701fe9f85a4242eab3e5633af6c8869617c"
+}

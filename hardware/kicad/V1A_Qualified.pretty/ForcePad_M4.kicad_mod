@@ -1,0 +1,8 @@
+(footprint "ForcePad_M4" (version 20241229) (generator "gate4b")
+  (layer "F.Cu") (attr through_hole)
+  (descr "FIX3 CUSTOM-FX-PAD-M4 RevA; M4 force landing, 4.5mm hole; current/bolt/copper/parasitic qualification OPEN")
+  (fp_text reference "REF**" (at 0 -6) (layer "F.SilkS") (effects (font (size 1 1) (thickness .15))))
+  (fp_text value "M4 FORCE PAD" (at 0 6) (layer "F.Fab") (effects (font (size 1 1) (thickness .15))))
+  (fp_circle (center 0 0) (end 5.25 0) (stroke (width .05) (type default)) (fill none) (layer "F.CrtYd"))
+  (pad "1" thru_hole circle (at 0 0) (size 10 10) (drill 4.5) (layers "*.Cu" "*.Mask"))
+)

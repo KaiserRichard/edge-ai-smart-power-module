@@ -1,0 +1,2 @@
+./src/common/stdpbase.cpp(59): assert ""traits"" failed in Get(): create wxApp before calling this
+Verified 366 unplaced footprints; 1027 numbered pads; 158 named nets; all 5 classes match.

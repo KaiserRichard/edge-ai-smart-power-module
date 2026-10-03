@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 from urllib.parse import unquote, urlsplit
 
 from check_r0_r1_docs import heading_slug
@@ -65,6 +66,7 @@ def check(root):
     # Chain the prior hash record; retain the original electrical and drawing
     # proofs and verify new evidence, instead of relaxing preservation globally.
     completion = root / 'docs/evidence/r2/footprints_complete/FOOTPRINT_SCOPE.json'
+    gate4b = root / 'docs/evidence/r2/gate4b/GATE4B_SCOPE.json'
     if completion.is_file():
         from check_footprint_completion import compare_netlists, check_sources
         reviewed = json.loads(completion.read_text())
@@ -82,7 +84,11 @@ def check(root):
             errors.append('Footprint field-change ledger does not match actual XML')
         if canonical_netlist(directory/'baseline_1f4c2f8.xml') != canonical_netlist(gate2b.parent/'readable.net.xml'):
             errors.append('Footprint baseline differs electrically from retained redraw export')
-        errors.extend(check_sources(root)[0])
+        # Later authorized electrical capture must not be tested as a
+        # footprint-only edit. Check that historical proof at its pinned commit.
+        historical_revision = (json.loads(gate4b.read_text())['baseline_commit']
+                               if gate4b.is_file() else None)
+        errors.extend(check_sources(root, source_revision=historical_revision)[0])
         added = set(reviewed['files']) - set(integrity['files'])
         if added != set(reviewed['added_footprints']):
             errors.append('Footprint completion hardware additions differ from the reviewed list')
@@ -91,6 +97,41 @@ def check(root):
         for name, old_hash in integrity['files'].items():
             if not name.endswith('.kicad_sch') and reviewed['files'].get(name) != old_hash:
                 errors.append(f'Footprint completion modified frozen hardware: {name}')
+        integrity = reviewed
+    if gate4b.is_file():
+        import xml.etree.ElementTree as ET
+        from check_r2_schematic import load_specs, validate, validate_sheet03_packages, validate_footprint_assignments
+        reviewed = json.loads(gate4b.read_text())
+        if reviewed['baseline_files'] != integrity['files']:
+            errors.append('Gate4b does not chain the PR15 preservation record')
+        for name, old_hash in integrity['files'].items():
+            historical = subprocess.check_output(['git', 'show', f'{reviewed["baseline_commit"]}:{name}'], cwd=root)
+            if hashlib.sha256(historical).hexdigest() != old_hash:
+                errors.append(f'Gate4b pinned baseline differs from retained PR15 evidence: {name}')
+            if not name.endswith(('.kicad_sch', '.kicad_sym', '.kicad_pro')) and reviewed['files'].get(name) != old_hash:
+                errors.append(f'Gate4b modified an existing footprint/library table: {name}')
+        added = set(reviewed['files']) - set(integrity['files'])
+        if added != set(reviewed['added_footprints']):
+            errors.append('Gate4b additions differ from the reviewed footprint list')
+        if any(not n.startswith('hardware/kicad/V1A_Qualified.pretty/') or not n.endswith('.kicad_mod') for n in added):
+            errors.append('Gate4b added hardware outside its footprint library')
+        project = json.loads((root/'hardware/kicad/V1A.kicad_pro').read_text())
+        old_project = json.loads(subprocess.check_output(['git', 'show',
+            f'{reviewed["baseline_commit"]}:hardware/kicad/V1A.kicad_pro'], cwd=root))
+        project.pop('net_settings', None)
+        old_project.pop('net_settings', None)
+        if project != old_project:
+            errors.append('Gate4b changed project settings beyond authorized net classes')
+        for name, expected in reviewed['evidence_files'].items():
+            path = root/name
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+                errors.append(f'Gate4b reviewed evidence differs or is missing: {name}')
+        directory = gate4b.parent
+        tree = ET.parse(directory/'captured.xml').getroot()
+        specs = load_specs(directory)
+        errors.extend(validate(tree, specs, 'gate4b'))
+        errors.extend(validate_sheet03_packages(tree, specs, profile='gate4b'))
+        errors.extend(validate_footprint_assignments(tree, exclusions=set()))
         integrity = reviewed
     for name, expected in integrity['files'].items():
         path = root / name

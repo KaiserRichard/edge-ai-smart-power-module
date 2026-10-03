@@ -1,0 +1,5044 @@
+{
+  "baseline_commit": "51d1c2ff1f7eca4f20eef137c1595e4b9e052a75",
+  "changed": {
+    "C101": {
+      "before": {
+        "value": "1uF 100V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "1uF 100V",
+        "mpn": "GRM32ER72A105KA01L",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "C102": {
+      "before": {
+        "value": "1uF 100V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "1": "VIN_EFUSE_IN",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "1uF 100V",
+        "mpn": "GRM32ER72A105KA01L",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "1": "VIN_EFUSE_IN",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "C103": {
+      "before": {
+        "value": "100nF 16V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_DVDT",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_DVDT",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "C201": {
+      "before": {
+        "value": "22uF 50V",
+        "mpn": "C5750X7R1H226M250KB",
+        "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "10uF 50V",
+        "mpn": "GRM32ER71H106KA12L",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "C202": {
+      "before": {
+        "value": "22uF 50V",
+        "mpn": "C5750X7R1H226M250KB",
+        "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "10uF 50V",
+        "mpn": "GRM32ER71H106KA12L",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "C203": {
+      "before": {
+        "value": "100nF 50V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "C204": {
+      "before": {
+        "value": "100nF 50V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "C205": {
+      "before": {
+        "value": "100nF 16V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_CBOOT",
+          "2": "BUCK_SW"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_CBOOT",
+          "2": "BUCK_SW"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "C206": {
+      "before": {
+        "value": "1uF 16V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_VCC",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "1uF 25V",
+        "mpn": "GRM21BR71E105KA99L",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "BUCK_VCC",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "C301": {
+      "before": {
+        "value": "220nF 50V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "PROT_BST",
+          "2": "PROT_MID"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "1uF 25V",
+        "mpn": "GRM21BR71E105KA99L",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "PROT_BST",
+          "2": "PROT_MID"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C302": {
+      "before": {
+        "value": "1uF 16V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "REF_2V5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "4.7uF 25V",
+        "mpn": "GRM21BR71E475KA73L",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "REF_2V5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C303": {
+      "before": {
+        "value": "100nF 25V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "DET_5V",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "DET5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C304": {
+      "before": {
+        "value": "100nF 25V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "DET_5V",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "DET5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C305": {
+      "before": {
+        "value": "10uF 25V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "DET_5V",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10uF 50V",
+        "mpn": "GRM32ER71H106KA12L",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "1": "DET5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C306": {
+      "before": {
+        "value": "10uF 25V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "DRV_7V5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10uF 50V",
+        "mpn": "GRM32ER71H106KA12L",
+        "footprint": "Capacitor_SMD:C_1210_3225Metric",
+        "pins": {
+          "1": "SER_DRV",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C307": {
+      "before": {
+        "value": "1uF 50V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "VIN_AUX",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "1uF 50V",
+        "mpn": "GRM21BR71H105KA12L",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "AUX_LIMITED",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C308": {
+      "before": {
+        "value": "100nF 25V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "DRV_7V5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "DRV_HOLD",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C309": {
+      "before": {
+        "value": "1uF 25V",
+        "mpn": "Capacitor_specification",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "DRV_7V5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "1uF 25V",
+        "mpn": "GRM21BR71E105KA99L",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "1": "SER_DRV",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "C401": {
+      "before": {
+        "value": "100nF 50V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "2": "INA_IN_MINUS",
+          "1": "INA_IN_PLUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "2": "INA_IN_MINUS",
+          "1": "INA_IN_PLUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "C402": {
+      "before": {
+        "value": "100nF 16V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "GND"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "GND"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "C403": {
+      "before": {
+        "value": "1uF 50V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VOUT_PROTECTED"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "1uF 50V",
+        "mpn": "GRM21BR71H105KA12L",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "pins": {
+          "2": "GND",
+          "1": "VOUT_PROTECTED"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "C405": {
+      "before": {
+        "value": "100nF 16V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "3V3_HOST",
+          "2": "GND"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "3V3_HOST",
+          "2": "GND"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "C406": {
+      "before": {
+        "value": "100nF 16V",
+        "mpn": "",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "GND"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "100nF 50V",
+        "mpn": "GRM188R71H104KA93D",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "GND"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "D101": {
+      "before": {
+        "value": "SMBJ26CA",
+        "mpn": "SMBJ26CA",
+        "footprint": "Diode_SMD:D_SMB",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "SMCJ36CA 36V bidirectional",
+        "mpn": "SMCJ36CA",
+        "footprint": "Diode_SMD:D_SMC",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "D102": {
+      "before": {
+        "value": "B260",
+        "mpn": "B260-13-F",
+        "footprint": "Diode_SMD:D_SMB",
+        "pins": {
+          "2": "GND",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "STPS60H100CT",
+        "mpn": "STPS60H100CT",
+        "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+        "pins": {
+          "1": "GND",
+          "3": "GND",
+          "2": "VIN_PROTECTED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "D301": {
+      "before": {
+        "value": "BAS116,215",
+        "mpn": "BAS116,215",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "1": "OV_DIV",
+          "3": "REF_2V5",
+          "2": "unconnected-(D301-NC-Pad2)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "BAS116,215",
+        "mpn": "BAS116,215",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "3": "CLAMP_2V5",
+          "1": "OV_DIV",
+          "2": "unconnected-(D301-NC-Pad2)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "D302": {
+      "before": {
+        "value": "BAS116,215",
+        "mpn": "BAS116,215",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "1": "DRV_7V5",
+          "3": "PROT_BST",
+          "2": "unconnected-(D302-NC-Pad2)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "BAS116,215",
+        "mpn": "BAS116,215",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "3": "PROT_BST",
+          "1": "SER_DRV",
+          "2": "unconnected-(D302-NC-Pad2)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "D303": {
+      "before": {
+        "value": "BAT46W-E3-08",
+        "mpn": "BAT46W-E3-08",
+        "footprint": "V1A_Qualified:Vishay_BAT46W_A1_K2",
+        "pins": {
+          "2": "VIN_AUX",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "BAT46W-E3-08",
+        "mpn": "BAT46W-E3-08",
+        "footprint": "V1A_Qualified:Vishay_BAT46W_A1_K2",
+        "pins": {
+          "2": "AUX_RAW",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "F101": {
+      "before": {
+        "value": "FUSE - OPEN",
+        "mpn": "",
+        "footprint": null,
+        "pins": {
+          "2": "VIN_FUSED",
+          "1": "VIN_RAW"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "12.5A T / 125VDC",
+        "mpn": "3403.0285.23",
+        "footprint": "V1A_Qualified:Schurter_UMT_H_15.4x5.35",
+        "pins": {
+          "2": "VIN_FUSED",
+          "1": "VIN_RAW"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "J301": {
+      "before": {
+        "value": "ARM button",
+        "mpn": "B2B-XH-A(LF)(SN)",
+        "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+        "pins": {
+          "1": "ARM_N",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "MAIN ARM / dry contact",
+        "mpn": "B2B-XH-A(LF)(SN)",
+        "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+        "pins": {
+          "1": "ARM_CONTACT",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "J302": {
+      "before": {
+        "value": "RESET button",
+        "mpn": "B2B-XH-A(LF)(SN)",
+        "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+        "pins": {
+          "1": "RESET_N",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "MANUAL RESET / dry contact",
+        "mpn": "B2B-XH-A(LF)(SN)",
+        "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+        "pins": {
+          "1": "RESET_CONTACT",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "J502": {
+      "before": {
+        "value": "LOAD OUTPUT",
+        "mpn": "1776508",
+        "footprint": "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08",
+        "pins": {
+          "2": "GND",
+          "1": "LOAD_5V1"
+        },
+        "sheet": "/05_IO_TEST/"
+      },
+      "after": {
+        "value": "LOAD OUTPUT / mate1777989",
+        "mpn": "1776508",
+        "footprint": "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08",
+        "pins": {
+          "2": "GND",
+          "1": "LOAD_5V1"
+        },
+        "sheet": "/05_IO_TEST/"
+      }
+    },
+    "L201": {
+      "before": {
+        "value": "6.8uH",
+        "mpn": "XAL8080-682MED",
+        "footprint": null,
+        "pins": {
+          "1": "BUCK_SW",
+          "2": "VOUT_5V1"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "10uH DATASHEET",
+        "mpn": "74437636351002",
+        "footprint": "V1A_Qualified:Wurth_74437636351002",
+        "pins": {
+          "2": "L201_OUT",
+          "1": "L201_IN"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "Q302": {
+      "before": {
+        "value": "BSC034N06NSATMA1",
+        "mpn": "BSC034N06NSATMA1",
+        "footprint": "V1A_Qualified:Infineon_BSC034N06NS_8pin",
+        "pins": {
+          "4": "PROT_GATE",
+          "1": "PROT_MID",
+          "2": "PROT_MID",
+          "3": "PROT_MID",
+          "5": "VOUT_PROTECTED",
+          "6": "VOUT_PROTECTED",
+          "7": "VOUT_PROTECTED",
+          "8": "VOUT_PROTECTED"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "BSC034N06NSATMA1",
+        "mpn": "BSC034N06NSATMA1",
+        "footprint": "V1A_Qualified:Infineon_BSC034N06NS_8pin",
+        "pins": {
+          "4": "PROT_GATE",
+          "1": "PROT_MID",
+          "2": "PROT_MID",
+          "3": "PROT_MID",
+          "5": "SERIES_OUT",
+          "6": "SERIES_OUT",
+          "7": "SERIES_OUT",
+          "8": "SERIES_OUT"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "Q304": {
+      "before": {
+        "value": "2N7002,215",
+        "mpn": "2N7002,215",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "1": "CROWBAR_ON",
+          "2": "GND",
+          "3": "INPUT_SHDN"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "2N7002,215",
+        "mpn": "2N7002,215",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "1": "FAULT_DRIVE",
+          "2": "GND",
+          "3": "INPUT_SHDN"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R101": {
+      "before": {
+        "value": "332k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INPUT_UVLO",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "332k",
+        "mpn": "TNPW0603332KBEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INPUT_UVLO",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R102": {
+      "before": {
+        "value": "54.9k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_UVLO",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "54.9k",
+        "mpn": "TNPW060354K9BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_UVLO",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R103": {
+      "before": {
+        "value": "348k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INPUT_OVP",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "348k",
+        "mpn": "TNPW0805348KBEEA",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "pins": {
+          "2": "INPUT_OVP",
+          "1": "VIN_FUSED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R104": {
+      "before": {
+        "value": "15.8k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_OVP",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "15.8k",
+        "mpn": "TNPW060315K8BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_OVP",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R105": {
+      "before": {
+        "value": "4.02k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_ILIM",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "4.02k",
+        "mpn": "TNPW06034K02BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_ILIM",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R106": {
+      "before": {
+        "value": "56.2k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INPUT_PGTH",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "56.2k",
+        "mpn": "TNPW060356K2BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INPUT_PGTH",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R107": {
+      "before": {
+        "value": "10k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_PGTH",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "INPUT_PGTH",
+          "2": "GND"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R108": {
+      "before": {
+        "value": "100k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INPUT_FLT",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100k",
+        "mpn": "TNPW0603100KBEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INPUT_FLT",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "R201": {
+      "before": {
+        "value": "33.2k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_RT",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "33.2k",
+        "mpn": "TNPW060333K2BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_RT",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "R202": {
+      "before": {
+        "value": "100k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "BUCK_FB",
+          "1": "VOUT_5V1"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "100k",
+        "mpn": "TNPW0603100KBEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "BUCK_FB",
+          "1": "VOUT_5V1"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "R203": {
+      "before": {
+        "value": "24.4k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_FB",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "24.4k",
+        "mpn": "TNPW060324K4BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_FB",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "R204": {
+      "before": {
+        "value": "0",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_CBOOT",
+          "2": "BUCK_RBOOT"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "0",
+        "mpn": "CRCW06030000Z0EA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_CBOOT",
+          "2": "BUCK_RBOOT"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "R205": {
+      "before": {
+        "value": "1k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "BUCK_FB",
+          "1": "BUCK_FF"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "1k",
+        "mpn": "TNPW06031K00BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "BUCK_FB",
+          "1": "BUCK_FF"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "R206": {
+      "before": {
+        "value": "100k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "BUCK_INPUT_PGOOD",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "100k",
+        "mpn": "TNPW0603100KBEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "BUCK_INPUT_PGOOD",
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "R207": {
+      "before": {
+        "value": "24.9k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_INPUT_PGOOD",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      },
+      "after": {
+        "value": "24.9k",
+        "mpn": "TNPW060324K9BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "BUCK_INPUT_PGOOD",
+          "2": "GND"
+        },
+        "sheet": "/02_BUCK_5V/"
+      }
+    },
+    "R301": {
+      "before": {
+        "value": "11.3k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "OV_DIV",
+          "1": "VOUT_5V1"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "9.88k",
+        "mpn": "TNPW06039K88BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "OV_DIV",
+          "1": "VOUT_5V1"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R302": {
+      "before": {
+        "value": "10.0k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "OV_DIV",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "OV_DIV",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R303": {
+      "before": {
+        "value": "1.00k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "OV_DIV",
+          "2": "OV_SENSE"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "1k",
+        "mpn": "TNPW06031K00BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "OV_SENSE",
+          "1": "OV_SWITCHED"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R304": {
+      "before": {
+        "value": "100",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "PROT_GATE",
+          "1": "TGUP_SLOW"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100ohm",
+        "mpn": "TNPW0603100RBEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "PROT_GATE",
+          "1": "TGUP_SLOW"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R305": {
+      "before": {
+        "value": "2.2M",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "PROT_GATE",
+          "2": "PROT_MID"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "2.00M",
+        "mpn": "TNPW12062M00BEEA",
+        "footprint": "Resistor_SMD:R_1206_3216Metric",
+        "pins": {
+          "1": "PROT_GATE",
+          "2": "PROT_MID"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R306": {
+      "before": {
+        "value": "1.00",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "CB_GATE",
+          "1": "CB_GATE_UP"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "1.00",
+        "mpn": "CRCW06031R00FKEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "CB_GATE",
+          "1": "CB_GATE_UP"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R307": {
+      "before": {
+        "value": "10k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "CB_GATE",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "CB_GATE",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R309": {
+      "before": {
+        "value": "0.033",
+        "mpn": "WFMB2512R0330FEA",
+        "footprint": "V1A_Qualified:Vishay_WFM2512",
+        "pins": {
+          "2": "CB_DRAIN",
+          "1": "CB_R_A"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "0.033",
+        "mpn": "WFMB2512R0330FEA",
+        "footprint": "V1A_Qualified:Vishay_WFM2512",
+        "pins": {
+          "2": "CB_BALLAST_OUT",
+          "1": "CB_R_A"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R311": {
+      "before": {
+        "value": "0.033",
+        "mpn": "WFMB2512R0330FEA",
+        "footprint": "V1A_Qualified:Vishay_WFM2512",
+        "pins": {
+          "2": "CB_DRAIN",
+          "1": "CB_R_B"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "0.033",
+        "mpn": "WFMB2512R0330FEA",
+        "footprint": "V1A_Qualified:Vishay_WFM2512",
+        "pins": {
+          "2": "CB_BALLAST_OUT",
+          "1": "CB_R_B"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R312": {
+      "before": {
+        "value": "31.9k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "DET_5V",
+          "2": "DET_FB"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "32.4k",
+        "mpn": "TNPW060332K4BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "DET5",
+          "2": "DET_FB"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R313": {
+      "before": {
+        "value": "10.0k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "DET_FB",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "DET_FB",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R316": {
+      "before": {
+        "value": "10k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "DET_5V",
+          "2": "SUPPLY_OK"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_AUX",
+          "2": "DET_PG"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R317": {
+      "before": {
+        "value": "10k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "DET_5V",
+          "2": "BUCK_PGOOD"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_AUX",
+          "2": "BUCK_PGOOD"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R321": {
+      "before": {
+        "value": "100k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "RUN_GATE",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100k",
+        "mpn": "TNPW0603100KBEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "DISPOSAL",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R322": {
+      "before": {
+        "value": "100k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "CROWBAR_ON",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "100k",
+        "mpn": "TNPW0603100KBEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "RUN_GATE",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R323": {
+      "before": {
+        "value": "10k",
+        "mpn": "Resistor_specification",
+        "footprint": "Resistor_SMD:R_1206_3216Metric",
+        "pins": {
+          "1": "VIN_AUX",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "10k 0.25W",
+        "mpn": "CRCW120610K0FKEA",
+        "footprint": "Resistor_SMD:R_1206_3216Metric",
+        "pins": {
+          "1": "AUX_LIMITED",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "R402": {
+      "before": {
+        "value": "10",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INA_IN_PLUS",
+          "1": "SHUNT_KPLUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "10",
+        "mpn": "TNPW060310R0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INA_IN_PLUS",
+          "1": "SHUNT_KPLUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "R403": {
+      "before": {
+        "value": "10",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INA_IN_MINUS",
+          "1": "SHUNT_KMINUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "10",
+        "mpn": "TNPW060310R0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "2": "INA_IN_MINUS",
+          "1": "SHUNT_KMINUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "R404": {
+      "before": {
+        "value": "10k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "SDA_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "SDA_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "R405": {
+      "before": {
+        "value": "10k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "SCL_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "SCL_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "R406": {
+      "before": {
+        "value": "4.7k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_HOST",
+          "2": "SDA_HOST"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "4.7k",
+        "mpn": "TNPW06034K70BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_HOST",
+          "2": "SDA_HOST"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "R407": {
+      "before": {
+        "value": "4.7k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_HOST",
+          "2": "SCL_HOST"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "4.7k",
+        "mpn": "TNPW06034K70BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_HOST",
+          "2": "SCL_HOST"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "R408": {
+      "before": {
+        "value": "10k",
+        "mpn": "",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "ALERT_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "10k",
+        "mpn": "TNPW060310K0BEEA",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": "3V3_LOCAL",
+          "2": "ALERT_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "TP101": {
+      "before": {
+        "value": "INPUT_SHDN",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "INPUT_SHDN"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "INPUT_SHDN",
+        "mpn": "INPUT_SHDN",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "INPUT_SHDN"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "TP102": {
+      "before": {
+        "value": "INPUT_FLT",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "INPUT_FLT"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "INPUT_FLT",
+        "mpn": "INPUT_FLT",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "INPUT_FLT"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "TP401": {
+      "before": {
+        "value": "ALERT_LOCAL",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "ALERT_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "ALERT_LOCAL",
+        "mpn": "ALERT_LOCAL",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "ALERT_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "TP402": {
+      "before": {
+        "value": "SHUNT_KPLUS",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "SHUNT_KPLUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "SHUNT_KPLUS",
+        "mpn": "SHUNT_KPLUS",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "SHUNT_KPLUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "TP403": {
+      "before": {
+        "value": "SHUNT_KMINUS",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "SHUNT_KMINUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "SHUNT_KMINUS",
+        "mpn": "SHUNT_KMINUS",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "SHUNT_KMINUS"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "TP404": {
+      "before": {
+        "value": "3V3_LOCAL",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "3V3_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      },
+      "after": {
+        "value": "3V3_LOCAL",
+        "mpn": "3V3_LOCAL",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "3V3_LOCAL"
+        },
+        "sheet": "/04_POWER_MONITOR/"
+      }
+    },
+    "TP501": {
+      "before": {
+        "value": "VIN_RAW",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "VIN_RAW"
+        },
+        "sheet": "/05_IO_TEST/"
+      },
+      "after": {
+        "value": "VIN_RAW",
+        "mpn": "VIN_RAW",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "VIN_RAW"
+        },
+        "sheet": "/05_IO_TEST/"
+      }
+    },
+    "TP502": {
+      "before": {
+        "value": "VIN_PROTECTED",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/05_IO_TEST/"
+      },
+      "after": {
+        "value": "VIN_PROTECTED",
+        "mpn": "VIN_PROTECTED",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "VIN_PROTECTED"
+        },
+        "sheet": "/05_IO_TEST/"
+      }
+    },
+    "TP503": {
+      "before": {
+        "value": "LOAD_5V1",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "LOAD_5V1"
+        },
+        "sheet": "/05_IO_TEST/"
+      },
+      "after": {
+        "value": "LOAD_5V1",
+        "mpn": "LOAD_5V1",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "LOAD_5V1"
+        },
+        "sheet": "/05_IO_TEST/"
+      }
+    },
+    "TP504": {
+      "before": {
+        "value": "GND",
+        "mpn": "",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "GND"
+        },
+        "sheet": "/05_IO_TEST/"
+      },
+      "after": {
+        "value": "GND",
+        "mpn": "GND",
+        "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+        "pins": {
+          "1": "GND"
+        },
+        "sheet": "/05_IO_TEST/"
+      }
+    },
+    "U101": {
+      "before": {
+        "value": "TPS26630RGER",
+        "mpn": "TPS26630RGER",
+        "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+        "pins": {
+          "3": "INPUT_BGATE",
+          "4": "INPUT_DRV",
+          "9": "INPUT_DVDT",
+          "14": "INPUT_FLT",
+          "10": "INPUT_ILIM",
+          "7": "INPUT_OVP",
+          "15": "INPUT_PGTH",
+          "6": "INPUT_UVLO",
+          "1": "VIN_EFUSE_IN",
+          "2": "VIN_EFUSE_IN",
+          "16": "BUCK_INPUT_PGOOD",
+          "25": "GND",
+          "8": "GND",
+          "12": "INPUT_SHDN",
+          "5": "VIN_FUSED",
+          "17": "VIN_PROTECTED",
+          "18": "VIN_PROTECTED",
+          "13": "unconnected-(U101-IMON-Pad13)",
+          "11": "unconnected-(U101-MODE-Pad11)",
+          "19": "unconnected-(U101-NC-Pad19)",
+          "20": "unconnected-(U101-NC-Pad20)",
+          "21": "unconnected-(U101-NC-Pad21)",
+          "22": "unconnected-(U101-NC-Pad22)",
+          "23": "unconnected-(U101-NC-Pad23)",
+          "24": "unconnected-(U101-NC-Pad24)"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "TPS26630RGER",
+        "mpn": "TPS26630RGER",
+        "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+        "pins": {
+          "17": "EFUSE_OUT",
+          "18": "EFUSE_OUT",
+          "3": "INPUT_BGATE",
+          "4": "INPUT_DRV",
+          "9": "INPUT_DVDT",
+          "14": "INPUT_FLT",
+          "10": "INPUT_ILIM",
+          "7": "INPUT_OVP",
+          "15": "INPUT_PGTH",
+          "6": "INPUT_UVLO",
+          "1": "VIN_EFUSE_IN",
+          "2": "VIN_EFUSE_IN",
+          "16": "BUCK_INPUT_PGOOD",
+          "25": "GND",
+          "8": "GND",
+          "12": "INPUT_SHDN",
+          "5": "VIN_FUSED",
+          "13": "unconnected-(U101-IMON-Pad13)",
+          "11": "unconnected-(U101-MODE-Pad11)",
+          "19": "unconnected-(U101-NC-Pad19)",
+          "20": "unconnected-(U101-NC-Pad20)",
+          "21": "unconnected-(U101-NC-Pad21)",
+          "22": "unconnected-(U101-NC-Pad22)",
+          "23": "unconnected-(U101-NC-Pad23)",
+          "24": "unconnected-(U101-NC-Pad24)"
+        },
+        "sheet": "/01_INPUT_PROTECTION/"
+      }
+    },
+    "U301": {
+      "before": {
+        "value": "LTC7001IMSE#PBF",
+        "mpn": "LTC7001IMSE#PBF",
+        "footprint": "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm",
+        "pins": {
+          "1": "DRV_7V5",
+          "9": "PROT_BST",
+          "6": "PROT_GATE",
+          "8": "PROT_MID",
+          "4": "RUN_GATE",
+          "7": "TGUP_SLOW",
+          "11": "GND",
+          "2": "GND",
+          "3": "GND",
+          "5": "GND",
+          "10": "unconnected-(U301-NC-Pad10)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "LTC7001IMSE#PBF",
+        "mpn": "LTC7001IMSE#PBF",
+        "footprint": "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm",
+        "pins": {
+          "9": "PROT_BST",
+          "6": "PROT_GATE",
+          "8": "PROT_MID",
+          "4": "RUN_GATE",
+          "1": "SER_DRV",
+          "2": "SER_UVLO",
+          "7": "TGUP_SLOW",
+          "11": "GND",
+          "3": "GND",
+          "5": "GND",
+          "10": "unconnected-(U301-NC-Pad10)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "U302": {
+      "before": {
+        "value": "REF5025 2.5V DATASHEET",
+        "mpn": "REF5025IDGKR",
+        "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+        "pins": {
+          "2": "DET_5V",
+          "6": "REF_2V5",
+          "4": "GND",
+          "1": "unconnected-(U302-DNC-Pad1)",
+          "8": "unconnected-(U302-DNC-Pad8)",
+          "7": "unconnected-(U302-NC-Pad7)",
+          "3": "unconnected-(U302-TEMP-Pad3)",
+          "5": "unconnected-(U302-TRIM_NR-Pad5)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "REF5025 2.5V DATASHEET",
+        "mpn": "REF5025IDGKR",
+        "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+        "pins": {
+          "2": "DET5",
+          "6": "REF_2V5",
+          "4": "GND",
+          "1": "unconnected-(U302-DNC-Pad1)",
+          "8": "unconnected-(U302-DNC-Pad8)",
+          "7": "unconnected-(U302-NC-Pad7)",
+          "3": "unconnected-(U302-TEMP-Pad3)",
+          "5": "unconnected-(U302-TRIM_NR-Pad5)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "U303": {
+      "before": {
+        "value": "TLV3201AIDBVR",
+        "mpn": "TLV3201AIDBVR",
+        "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "pins": {
+          "5": "DET_5V",
+          "1": "OV_OK",
+          "4": "OV_SENSE",
+          "3": "REF_2V5",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "TLV3201AIDBVR",
+        "mpn": "TLV3201AIDBVR",
+        "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "pins": {
+          "5": "DET5",
+          "1": "OV_COMPARATOR",
+          "4": "OV_SENSE",
+          "3": "REF_SENSE",
+          "2": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "U306": {
+      "before": {
+        "value": "TPS7A1601DGNR",
+        "mpn": "TPS7A1601DGNR",
+        "footprint": "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm",
+        "pins": {
+          "1": "DET_5V",
+          "7": "DET_DELAY",
+          "2": "DET_FB",
+          "3": "SUPPLY_OK",
+          "5": "VIN_AUX",
+          "8": "VIN_AUX",
+          "4": "GND",
+          "9": "GND",
+          "6": "unconnected-(U306-NC-Pad6)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "TPS7A1601DGNR",
+        "mpn": "TPS7A1601DGNR",
+        "footprint": "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm",
+        "pins": {
+          "1": "DET5",
+          "2": "DET_FB",
+          "3": "DET_PG",
+          "5": "DRV_HOLD",
+          "8": "DRV_HOLD",
+          "4": "GND",
+          "9": "GND",
+          "7": "unconnected-(U306-DELAY-Pad7)",
+          "6": "unconnected-(U306-NC-Pad6)"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    },
+    "U315": {
+      "before": {
+        "value": "UCC27511DBVR",
+        "mpn": "UCC27511DBVR",
+        "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+        "pins": {
+          "3": "CB_GATE",
+          "2": "CB_GATE_UP",
+          "6": "CROWBAR_ON",
+          "1": "DRV_7V5",
+          "4": "GND",
+          "5": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      },
+      "after": {
+        "value": "UCC27511DBVR",
+        "mpn": "UCC27511DBVR",
+        "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+        "pins": {
+          "3": "CB_GATE",
+          "2": "CB_GATE_UP",
+          "6": "DISPOSAL",
+          "1": "DRV_HOLD",
+          "4": "GND",
+          "5": "GND"
+        },
+        "sheet": "/03_OUTPUT_PROTECTION/"
+      }
+    }
+  },
+  "added": {
+    "C340": {
+      "value": "470uF 35V",
+      "mpn": "PCH1V471MCL1GS",
+      "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
+      "pins": {
+        "2": "GND",
+        "1": "VOUT_PROTECTED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C341": {
+      "value": "470uF 35V",
+      "mpn": "PCH1V471MCL1GS",
+      "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
+      "pins": {
+        "2": "GND",
+        "1": "VOUT_PROTECTED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C342": {
+      "value": "470uF 35V",
+      "mpn": "PCH1V471MCL1GS",
+      "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
+      "pins": {
+        "2": "GND",
+        "1": "VOUT_PROTECTED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C343": {
+      "value": "470uF 35V",
+      "mpn": "PCH1V471MCL1GS",
+      "footprint": "V1A_Qualified:Nichicon_PCH_10x16",
+      "pins": {
+        "2": "GND",
+        "1": "VOUT_PROTECTED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C350": {
+      "value": "10nF 50V C0G",
+      "mpn": "C1608C0G1H103J080AA",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "AUX_TMR",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C351": {
+      "value": "4.7uF 50V",
+      "mpn": "C3216X7R1H475K160AB",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pins": {
+        "1": "AUX_LIMITED",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C352": {
+      "value": "10uF 50V",
+      "mpn": "GRM32ER71H106KA12L",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C353": {
+      "value": "4.7uF 25V",
+      "mpn": "GRM21BR71E475KA73L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "AUX_VCC",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C354": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "AUX_BST1",
+        "2": "AUX_SW1"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C355": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "AUX_BST2",
+        "2": "AUX_SW2"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C356": {
+      "value": "1nF 50V C0G",
+      "mpn": "C1608C0G1H102J080AA",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "2": "AUX_BB_FB",
+        "1": "AUX_COMP"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C357": {
+      "value": "33pF 50V C0G",
+      "mpn": "GRM1885C1H330JA01D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "2": "AUX_BB_FB",
+        "1": "AUX_FF"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C358": {
+      "value": "220uF 25V",
+      "mpn": "EEUFR1E221",
+      "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C359": {
+      "value": "220uF 25V",
+      "mpn": "EEUFR1E221",
+      "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C364": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "DET5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C365": {
+      "value": "1uF 25V",
+      "mpn": "GRM21BR71E105KA99L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C366": {
+      "value": "4.7uF 25V",
+      "mpn": "GRM21BR71E475KA73L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "3V3_AUX",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C367": {
+      "value": "1uF 25V",
+      "mpn": "GRM21BR71E105KA99L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C368": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C369": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "3V3_AUX",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C370": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "3V3_AUX",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C374": {
+      "value": "1uF 25V",
+      "mpn": "GRM21BR71E105KA99L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "HOLD_SLEW_C",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C375": {
+      "value": "1uF 25V",
+      "mpn": "GRM21BR71E105KA99L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "AUX_PREHOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C376": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C377": {
+      "value": "10uF 50V",
+      "mpn": "GRM32ER71H106KA12L",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C378": {
+      "value": "1uF 100V",
+      "mpn": "GRM32ER72A105KA01L",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C379": {
+      "value": "4.7uF 25V",
+      "mpn": "GRM21BR71E475KA73L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "AUX_VCC",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C380": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "AUX_LIMITED",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C600": {
+      "value": "1uF 25V",
+      "mpn": "GRM21BR71E105KA99L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "SAFE_FEED",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C601": {
+      "value": "10uF 50V",
+      "mpn": "GRM32ER71H106KA12L",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C602": {
+      "value": "10uF 50V",
+      "mpn": "GRM32ER71H106KA12L",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "SAFE_IN",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C603": {
+      "value": "10nF 50V C0G",
+      "mpn": "C1608C0G1H103J080AA",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "REF_SAFE_2V5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C604": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C609": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C640": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C642": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C644": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C647": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C651": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C660": {
+      "value": "10uF 50V",
+      "mpn": "GRM32ER71H106KA12L",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "SER_DRV",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C710": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C711": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C712": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C714": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C715": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C716": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C717": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C723": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C728": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C730": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C731": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C732": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C733": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C754": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C756": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C761": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C762": {
+      "value": "100nF 50V",
+      "mpn": "GRM188R71H104KA93D",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D304": {
+      "value": "B260-13-F",
+      "mpn": "B260-13-F",
+      "footprint": "Diode_SMD:D_SMB",
+      "pins": {
+        "2": "AUX_12V",
+        "1": "AUX_PREHOLD"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D321": {
+      "value": "LM4040A25IDBZR",
+      "mpn": "LM4040A25IDBZR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "CLAMP_2V5",
+        "2": "GND",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D322": {
+      "value": "BAS116,215",
+      "mpn": "BAS116,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "3": "OV_DIV",
+        "1": "GND",
+        "2": "unconnected-(D322-NC-Pad2)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D330": {
+      "value": "STPS60H100CT",
+      "mpn": "STPS60H100CT",
+      "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+      "pins": {
+        "1": "GND",
+        "3": "GND",
+        "2": "VOUT_5V1"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D331": {
+      "value": "STPS60H100CT",
+      "mpn": "STPS60H100CT",
+      "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+      "pins": {
+        "1": "GND",
+        "3": "GND",
+        "2": "VOUT_PROTECTED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D600": {
+      "value": "B260-13-F",
+      "mpn": "B260-13-F",
+      "footprint": "Diode_SMD:D_SMB",
+      "pins": {
+        "2": "DRV_HOLD",
+        "1": "SAFE_FEED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D601": {
+      "value": "LM4040A25IDBZR",
+      "mpn": "LM4040A25IDBZR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "REF_SAFE_2V5",
+        "2": "GND",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D618": {
+      "value": "BAS116,215",
+      "mpn": "BAS116,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "PG_DIV",
+        "3": "REF_SAFE_2V5",
+        "2": "unconnected-(D618-NC-Pad2)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D619": {
+      "value": "BAS116,215",
+      "mpn": "BAS116,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "3": "PG_DIV",
+        "1": "GND",
+        "2": "unconnected-(D619-NC-Pad2)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D640": {
+      "value": "BAS116,215",
+      "mpn": "BAS116,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "3": "REF_SAFE_2V5",
+        "1": "SW_HYS",
+        "2": "unconnected-(D640-NC-Pad2)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D641": {
+      "value": "BAS116,215",
+      "mpn": "BAS116,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "3": "SW_HYS",
+        "1": "GND",
+        "2": "unconnected-(D641-NC-Pad2)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D642": {
+      "value": "BAS116,215",
+      "mpn": "BAS116,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "3": "REF_SAFE_2V5",
+        "1": "VIN_MON",
+        "2": "unconnected-(D642-NC-Pad2)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D643": {
+      "value": "BAS116,215",
+      "mpn": "BAS116,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "3": "VIN_MON",
+        "1": "GND",
+        "2": "unconnected-(D643-NC-Pad2)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "D660": {
+      "value": "B260-13-F",
+      "mpn": "B260-13-F",
+      "footprint": "Diode_SMD:D_SMB",
+      "pins": {
+        "2": "DRV_HOLD",
+        "1": "SER_FEED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "J603": {
+      "value": "SOURCE FAULT / dry contact",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+      "pins": {
+        "1": "SOURCE_CONTACT",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "J604": {
+      "value": "SERIES ARM / dry contact",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+      "pins": {
+        "1": "SERIES_CONTACT",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "J605": {
+      "value": "REAL PG / guarded output",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+      "pins": {
+        "1": "PG_FIXTURE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "J606": {
+      "value": "MAIN PERMISSION / guarded output",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+      "pins": {
+        "1": "MAIN_FIXTURE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "JP101": {
+      "value": "REMOVABLE FORCE LINK",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": "EFUSE_OUT",
+        "2": "VIN_PROTECTED"
+      },
+      "sheet": "/01_INPUT_PROTECTION/"
+    },
+    "JP201": {
+      "value": "REMOVABLE FORCE LINK",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": "BUCK_SW",
+        "2": "L201_IN"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "JP202": {
+      "value": "REMOVABLE FORCE LINK",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": "L201_OUT",
+        "2": "VOUT_5V1"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "JP301": {
+      "value": "REMOVABLE FORCE LINK",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": "SERIES_OUT",
+        "2": "VOUT_PROTECTED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "JP330": {
+      "value": "REMOVABLE FORCE LINK",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": "CB_BALLAST_OUT",
+        "2": "CB_DRAIN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "JP331": {
+      "value": "REMOVABLE FORCE LINK",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "1": "RAW_BALLAST_OUT",
+        "2": "RAW_DUMP_DRAIN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "JP501": {
+      "value": "REMOVABLE FORCE LINK",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "footprint": "V1A_Qualified:ForceLink_M4_P20",
+      "pins": {
+        "2": "LOAD_FIXTURE",
+        "1": "LOAD_5V1"
+      },
+      "sheet": "/05_IO_TEST/"
+    },
+    "JP600": {
+      "value": "MANUAL RAIL VALID LINK",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+      "pins": {
+        "2": "MANUAL_RAILS_VALID",
+        "1": "SAFE5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "JP660": {
+      "value": "SER_DRV SUPPLY LINK",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+      "pins": {
+        "2": "SER_DRV",
+        "1": "SER_FEED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "L301": {
+      "value": "4.7uH DATASHEET",
+      "mpn": "7447789004",
+      "footprint": "V1A_Qualified:Wurth_7447789004",
+      "pins": {
+        "1": "AUX_SW1",
+        "2": "AUX_SW2"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "PF1": {
+      "value": "VIN_RAW",
+      "mpn": "CUSTOM-FX-PAD-M4 RevA",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": "VIN_RAW"
+      },
+      "sheet": "/05_IO_TEST/"
+    },
+    "PF2": {
+      "value": "VIN_PROTECTED",
+      "mpn": "CUSTOM-FX-PAD-M4 RevA",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": "VIN_PROTECTED"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "PF3": {
+      "value": "BUCK_SW",
+      "mpn": "CUSTOM-FX-PAD-M4 RevA",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": "BUCK_SW"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "PF4": {
+      "value": "L201_IN",
+      "mpn": "CUSTOM-FX-PAD-M4 RevA",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": "L201_IN"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "PF5": {
+      "value": "GND",
+      "mpn": "CUSTOM-FX-PAD-M4 RevA",
+      "footprint": "V1A_Qualified:ForcePad_M4",
+      "pins": {
+        "1": "GND"
+      },
+      "sheet": "/05_IO_TEST/"
+    },
+    "Q316": {
+      "value": "FDB33N25TM",
+      "mpn": "FDB33N25TM",
+      "footprint": "Package_TO_SOT_SMD:TO-263-3_TabPin2",
+      "pins": {
+        "1": "AUX_GATE",
+        "2": "AUX_RAW",
+        "3": "AUX_SNS"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "Q330": {
+      "value": "CSD18540Q5B",
+      "mpn": "CSD18540Q5B",
+      "footprint": "V1A_Qualified:TI_Q5B_CSD18540Q5B",
+      "pins": {
+        "5": "RAW_DUMP_DRAIN",
+        "6": "RAW_DUMP_DRAIN",
+        "7": "RAW_DUMP_DRAIN",
+        "8": "RAW_DUMP_DRAIN",
+        "4": "RAW_DUMP_GATE",
+        "1": "GND",
+        "2": "GND",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R330": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "AUX_FB",
+        "1": "AUX_LIMITED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R331": {
+      "value": "4.32k",
+      "mpn": "TNPW06034K32BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "AUX_FB",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R332": {
+      "value": "0.33",
+      "mpn": "WSL2512R3300FEA",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "pins": {
+        "2": "AUX_LIMITED",
+        "1": "AUX_SNS"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R333": {
+      "value": "10",
+      "mpn": "CRCW060310R0FKEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "AUX_GATE",
+        "1": "AUX_GATE_DRIVE"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R340": {
+      "value": "1.00M",
+      "mpn": "TNPW08051M00BEEA",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "AUX_12V",
+        "2": "AUX_BB_FB"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R341": {
+      "value": "88.7k",
+      "mpn": "TNPW060388K7BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "AUX_BB_FB",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R342": {
+      "value": "23.7k",
+      "mpn": "TNPW060323K7BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "AUX_RT",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R343": {
+      "value": "15k",
+      "mpn": "TNPW060315K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "AUX_COMP",
+        "1": "AUX_VC"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R344": {
+      "value": "15k",
+      "mpn": "TNPW060315K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "AUX_12V",
+        "2": "AUX_FF"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R345": {
+      "value": "383k",
+      "mpn": "TNPW0805383KBEEA",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "AUX_LIMITED",
+        "2": "AUX_RUN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R346": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "AUX_RUN",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R361": {
+      "value": "68.1k",
+      "mpn": "TNPW060368K1BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "CLAMP_2V5",
+        "1": "DRV_HOLD"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R362": {
+      "value": "249k",
+      "mpn": "TNPW0603249KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "DRV_OBS_DIV"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R363": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DRV_OBS_DIV",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R364": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DET5",
+        "2": "DET_OBS_DIV"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R365": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DET_OBS_DIV",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R367": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "OV_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R370": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DET5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R371": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DET5",
+        "2": "DRV_OBS_N"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R372": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DET5",
+        "2": "DET_OBS_N"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R373": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "REF_2V5",
+        "2": "REF_SENSE"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R374": {
+      "value": "100",
+      "mpn": "CRCW0603100RFKEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "HOLD_DVDT",
+        "2": "HOLD_SLEW_C"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R375": {
+      "value": "6.49k",
+      "mpn": "TNPW06036K49BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "HOLD_ILM",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R376": {
+      "value": "365k",
+      "mpn": "TNPW0805365KBEEA",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "AUX_PREHOLD",
+        "2": "HOLD_EN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R377": {
+      "value": "48.7k",
+      "mpn": "TNPW060348K7BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "HOLD_EN",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R378": {
+      "value": "365k",
+      "mpn": "TNPW0805365KBEEA",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "AUX_PREHOLD",
+        "2": "HOLD_OVLO"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R379": {
+      "value": "33.2k",
+      "mpn": "TNPW060333K2BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "HOLD_OVLO",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R380": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "2": "RAW_A1",
+        "1": "VOUT_5V1"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R381": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_A1",
+        "2": "RAW_A2"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R382": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_A2",
+        "2": "RAW_A3"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R383": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_A3",
+        "2": "RAW_A4"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R384": {
+      "value": "1.00",
+      "mpn": "CRCW06031R00FKEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "RAW_DUMP_GATE",
+        "1": "RAW_DUMP_UP"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R385": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "RAW_DUMP_GATE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R386": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_A4",
+        "2": "RAW_A5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R387": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_A5",
+        "2": "RAW_BALLAST_OUT"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R388": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "2": "RAW_B1",
+        "1": "VOUT_5V1"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R389": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_B1",
+        "2": "RAW_B2"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R390": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_B2",
+        "2": "RAW_B3"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R391": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_B3",
+        "2": "RAW_B4"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R392": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_B4",
+        "2": "RAW_B5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R393": {
+      "value": "33mOhm",
+      "mpn": "WFMB2512R0330FEA",
+      "footprint": "V1A_Qualified:Vishay_WFM2512",
+      "pins": {
+        "1": "RAW_B5",
+        "2": "RAW_BALLAST_OUT"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R600": {
+      "value": "32.4k",
+      "mpn": "TNPW060332K4BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "SAFE_FB"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R601": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SAFE_FB",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R602": {
+      "value": "47",
+      "mpn": "TNPW060347R0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SAFE_FEED",
+        "2": "SAFE_IN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R603": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R604": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "REF_SAFE_2V5",
+        "1": "SAFE5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R605": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "REF1V25",
+        "1": "REF_SAFE_2V5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R606": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "REF1V25",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R609": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "CORE_POR_RAW_N",
+        "1": "SAFE5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R622": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "PG_DIV",
+        "1": "BUCK_PGOOD"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R623": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "PG_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R640": {
+      "value": "20.0k",
+      "mpn": "TNPW060320K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "SW_HYS",
+        "1": "L201_IN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R641": {
+      "value": "6.19k",
+      "mpn": "TNPW06036K19BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SW_HYS",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R642": {
+      "value": "20.0k",
+      "mpn": "TNPW060320K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SW_HIGH",
+        "2": "SW_HYS"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R644": {
+      "value": "49.9k",
+      "mpn": "TNPW060349K9BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "VIN_MON",
+        "1": "VIN_PROTECTED"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R645": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "VIN_MON",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R647": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "MAIN_PERMISSION",
+        "2": "INPUT_SHDN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R648": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "GND",
+        "1": "INPUT_SHDN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R649": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "FAULT",
+        "2": "FAULT_DRIVE"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R650": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "FAULT_DRIVE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R651": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SW_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R652": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "VIN_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R707": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "ARM_CONTACT",
+        "1": "SAFE5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R708": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "RESET_CONTACT",
+        "1": "SAFE5"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R709": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "RUN_GATE",
+        "1": "RUN_GATE_LOGIC"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R710": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "RUN_GATE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R711": {
+      "value": "143k",
+      "mpn": "TNPW0603143KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SER_UVLO",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R712": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "DISPOSAL",
+        "1": "DISPOSAL_LOGIC"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R713": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DISPOSAL",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R717": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "DET_SWITCH_EN",
+        "1": "MANUAL_RAILS_VALID"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R718": {
+      "value": "100k",
+      "mpn": "TNPW0603100KBEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DET_SWITCH_EN",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R723": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SER_DRV",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R727": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "SOURCE_CONTACT"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R728": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SAFE5",
+        "2": "SERIES_CONTACT"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R729": {
+      "value": "10k",
+      "mpn": "TNPW060310K0BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "MANUAL_RAILS_VALID",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R730": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "PG_FIXTURE",
+        "1": "PG_GOOD"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R731": {
+      "value": "1k",
+      "mpn": "TNPW06031K00BEEA",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "MAIN_FIXTURE",
+        "1": "MAIN_PERMISSION"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP103": {
+      "value": "EFUSE_OUT",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "EFUSE_OUT",
+        "2": "GND"
+      },
+      "sheet": "/01_INPUT_PROTECTION/"
+    },
+    "TP201": {
+      "value": "BUCK_SW",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "BUCK_SW",
+        "2": "GND"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "TP202": {
+      "value": "L201_IN",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "2": "GND",
+        "1": "L201_IN"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "TP203": {
+      "value": "VOUT_5V1",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "2": "GND",
+        "1": "VOUT_5V1"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "TP204": {
+      "value": "L201_OUT",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "L201_OUT",
+        "2": "GND"
+      },
+      "sheet": "/02_BUCK_5V/"
+    },
+    "TP306": {
+      "value": "OV_DIV",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "OV_DIV",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP307": {
+      "value": "OV_COMPARATOR",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "OV_COMPARATOR",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP308": {
+      "value": "FAULT",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "FAULT",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP309": {
+      "value": "CB_GATE",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "CB_GATE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP310": {
+      "value": "DRV_HOLD",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "DRV_HOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP311": {
+      "value": "DET5",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "DET5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP312": {
+      "value": "INPUT_SHDN",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "2": "GND",
+        "1": "INPUT_SHDN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP313": {
+      "value": "SER_DRV",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "SER_DRV",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP314": {
+      "value": "PROT_GATE",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "PROT_GATE",
+        "2": "PROT_MID"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP315": {
+      "value": "RAW_DUMP_GATE",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "RAW_DUMP_GATE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP316": {
+      "value": "SAFE5",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP317": {
+      "value": "BUCK_PGOOD",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "BUCK_PGOOD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP318": {
+      "value": "MANUAL_RAILS_VALID",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "MANUAL_RAILS_VALID",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP319": {
+      "value": "RUN_GATE",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "RUN_GATE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP320": {
+      "value": "SRC_TRIP",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "SRC_TRIP",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP321": {
+      "value": "CORE_POR_N",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "CORE_POR_N",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP322": {
+      "value": "DRV_OBS_N",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "DRV_OBS_N",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP323": {
+      "value": "DET_OBS_N",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "DET_OBS_N",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP324": {
+      "value": "DET_PG",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "DET_PG",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP327": {
+      "value": "HOLD_AUXOFF",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "HOLD_AUXOFF",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP328": {
+      "value": "HOLD_FLT",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "HOLD_FLT",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP329": {
+      "value": "AUX_RAW",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP330": {
+      "value": "AUX_LIMITED",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "AUX_LIMITED",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP331": {
+      "value": "AUX_12V",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP332": {
+      "value": "AUX_PREHOLD",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "AUX_PREHOLD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP333": {
+      "value": "3V3_AUX",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "3V3_AUX",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP334": {
+      "value": "PROT_BST",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "PROT_BST",
+        "2": "PROT_MID"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP335": {
+      "value": "CB_BALLAST_OUT",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "CB_BALLAST_OUT",
+        "2": "CB_DRAIN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP336": {
+      "value": "RAW_BALLAST_OUT",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "RAW_BALLAST_OUT",
+        "2": "RAW_DUMP_DRAIN"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP337": {
+      "value": "SW_HIGH",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "SW_HIGH",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP338": {
+      "value": "VIN_GOOD_FAST",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "VIN_GOOD_FAST",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP339": {
+      "value": "SW_SENSE",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "SW_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP340": {
+      "value": "VIN_SENSE",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "VIN_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "TP405": {
+      "value": "VOUT_PROTECTED",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "2": "GND",
+        "1": "VOUT_PROTECTED"
+      },
+      "sheet": "/04_POWER_MONITOR/"
+    },
+    "TP406": {
+      "value": "LOAD_5V1",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "2": "GND",
+        "1": "LOAD_5V1"
+      },
+      "sheet": "/04_POWER_MONITOR/"
+    },
+    "TP505": {
+      "value": "LOAD_FIXTURE",
+      "mpn": "N/A etched paired pads",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": "LOAD_FIXTURE",
+        "2": "GND"
+      },
+      "sheet": "/05_IO_TEST/"
+    },
+    "U316": {
+      "value": "LT4363HMS-1#PBF",
+      "mpn": "LT4363HMS-1#PBF",
+      "footprint": "Package_SO:MSOP-12_3x4.039mm_P0.65mm",
+      "pins": {
+        "1": "AUX_FB",
+        "4": "AUX_GATE_DRIVE",
+        "2": "AUX_LIMITED",
+        "5": "AUX_RAW",
+        "6": "AUX_RAW",
+        "8": "AUX_RAW",
+        "11": "AUX_RUN",
+        "3": "AUX_SNS",
+        "12": "AUX_TMR",
+        "7": "GND",
+        "9": "GND",
+        "10": "unconnected-(U316-FLT-Pad10)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U317": {
+      "value": "LTC3115IFE-1#PBF",
+      "mpn": "LTC3115IFE-1#PBF",
+      "footprint": "V1A_Qualified:ADI_FE20_EP2.74x4.95",
+      "pins": {
+        "4": "AUX_12V",
+        "8": "AUX_BB_FB",
+        "16": "AUX_BST1",
+        "15": "AUX_BST2",
+        "13": "AUX_LIMITED",
+        "17": "AUX_LIMITED",
+        "9": "AUX_RT",
+        "2": "AUX_RUN",
+        "18": "AUX_SW1",
+        "3": "AUX_SW2",
+        "7": "AUX_VC",
+        "12": "AUX_VCC",
+        "14": "AUX_VCC",
+        "1": "GND",
+        "10": "GND",
+        "11": "GND",
+        "19": "GND",
+        "20": "GND",
+        "21": "GND",
+        "5": "GND",
+        "6": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U318": {
+      "value": "TPS70933DBVR",
+      "mpn": "TPS70933DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "5": "3V3_AUX",
+        "1": "DRV_HOLD",
+        "2": "GND",
+        "3": "unconnected-(U318-EN-Pad3)",
+        "4": "unconnected-(U318-NC-Pad4)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U321": {
+      "value": "ADG4612BRUZ",
+      "mpn": "ADG4612BRUZ",
+      "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+      "pins": {
+        "13": "DET5",
+        "1": "DET_SWITCH_EN",
+        "2": "OV_DIV",
+        "3": "OV_SWITCHED",
+        "10": "GND",
+        "11": "GND",
+        "14": "GND",
+        "15": "GND",
+        "16": "GND",
+        "4": "GND",
+        "5": "GND",
+        "6": "GND",
+        "7": "GND",
+        "8": "GND",
+        "9": "GND",
+        "12": "unconnected-(U321-NC-Pad12)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U322": {
+      "value": "TPS3808G01DBVR",
+      "mpn": "TPS3808G01DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "3": "3V3_AUX",
+        "6": "3V3_AUX",
+        "5": "DRV_OBS_DIV",
+        "1": "DRV_OBS_N",
+        "2": "GND",
+        "4": "unconnected-(U322-CT-Pad4)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U323": {
+      "value": "TPS3808G01DBVR",
+      "mpn": "TPS3808G01DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "3": "3V3_AUX",
+        "6": "3V3_AUX",
+        "5": "DET_OBS_DIV",
+        "1": "DET_OBS_N",
+        "2": "GND",
+        "4": "unconnected-(U323-CT-Pad4)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U327": {
+      "value": "TPS259470LRPWR",
+      "mpn": "TPS259470LRPWR",
+      "footprint": "V1A_Qualified:TI_RPW0010A_TPS25947",
+      "pins": {
+        "5": "AUX_PREHOLD",
+        "6": "DRV_HOLD",
+        "3": "HOLD_AUXOFF",
+        "7": "HOLD_DVDT",
+        "1": "HOLD_EN",
+        "4": "HOLD_FLT",
+        "9": "HOLD_ILM",
+        "2": "HOLD_OVLO",
+        "8": "GND",
+        "10": "unconnected-(U327-ITIMER-Pad10)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U330": {
+      "value": "UCC27511DBVR",
+      "mpn": "UCC27511DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "6": "DISPOSAL",
+        "1": "DRV_HOLD",
+        "3": "RAW_DUMP_GATE",
+        "2": "RAW_DUMP_UP",
+        "4": "GND",
+        "5": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U600": {
+      "value": "TPS7A1601DGNR",
+      "mpn": "TPS7A1601DGNR",
+      "footprint": "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm",
+      "pins": {
+        "1": "SAFE5",
+        "2": "SAFE_FB",
+        "5": "SAFE_IN",
+        "8": "SAFE_IN",
+        "4": "GND",
+        "9": "GND",
+        "7": "unconnected-(U600-DELAY-Pad7)",
+        "6": "unconnected-(U600-NC-Pad6)",
+        "3": "unconnected-(U600-PG-Pad3)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U602": {
+      "value": "TPS3808G50DBVR",
+      "mpn": "TPS3808G50DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "CORE_POR_RAW_N",
+        "3": "SAFE5",
+        "5": "SAFE5",
+        "6": "SAFE5",
+        "2": "GND",
+        "4": "unconnected-(U602-CT-Pad4)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U607": {
+      "value": "TLV3201AIDBVR",
+      "mpn": "TLV3201AIDBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": "PG_GOOD",
+        "3": "PG_SENSE",
+        "4": "REF1V25",
+        "5": "SAFE5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U610": {
+      "value": "SN74LVC1G74DCTR",
+      "mpn": "SN74LVC1G74DCTR",
+      "footprint": "V1A_Qualified:TI_DCT0008A_SN74LVC1G74",
+      "pins": {
+        "3": "FAULT",
+        "6": "FAULT_CLEAR_N",
+        "5": "NOFAULT",
+        "1": "RESET_DOWN",
+        "2": "SAFE5",
+        "7": "SAFE5",
+        "8": "SAFE5",
+        "4": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U611": {
+      "value": "SN74LVC1G74DCTR",
+      "mpn": "SN74LVC1G74DCTR",
+      "footprint": "V1A_Qualified:TI_DCT0008A_SN74LVC1G74",
+      "pins": {
+        "2": "SAFE5",
+        "7": "SAFE5",
+        "8": "SAFE5",
+        "5": "SERIES_ARMED",
+        "6": "SERIES_CLEAR_N",
+        "1": "SERIES_DOWN",
+        "4": "GND",
+        "3": "unconnected-(U611-nQ-Pad3)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U612": {
+      "value": "SN74LVC1G74DCTR",
+      "mpn": "SN74LVC1G74DCTR",
+      "footprint": "V1A_Qualified:TI_DCT0008A_SN74LVC1G74",
+      "pins": {
+        "5": "ARMED",
+        "1": "ARM_DOWN",
+        "6": "MANUAL_VALID_NOFAULT",
+        "2": "SAFE5",
+        "7": "SAFE5",
+        "8": "SAFE5",
+        "4": "GND",
+        "3": "unconnected-(U612-nQ-Pad3)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U614": {
+      "value": "SN74LVC1G14DBVR",
+      "mpn": "SN74LVC1G14DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "2": "OV_COMPARATOR",
+        "4": "OV_RAW",
+        "5": "SAFE5",
+        "3": "GND",
+        "1": "unconnected-(U614-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U615": {
+      "value": "SN74LVC1G32DBVR",
+      "mpn": "SN74LVC1G32DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "2": "OV_VALID",
+        "5": "SAFE5",
+        "1": "SRC_TRIP",
+        "4": "TRUE_FAULT",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U616": {
+      "value": "SN74LVC1G14DBVR",
+      "mpn": "SN74LVC1G14DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "NO_TRUE_FAULT",
+        "5": "SAFE5",
+        "2": "TRUE_FAULT",
+        "3": "GND",
+        "1": "unconnected-(U616-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U617": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": "CORE_POR_N",
+        "4": "FAULT_CLEAR_N",
+        "2": "NO_TRUE_FAULT",
+        "5": "SAFE5",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U623": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "2": "MANUAL_RAILS_VALID",
+        "4": "MANUAL_VALID_NOFAULT",
+        "1": "NOFAULT",
+        "5": "SAFE5",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U628": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "2": "MANUAL_RAILS_VALID",
+        "1": "OV_RAW",
+        "4": "OV_VALID",
+        "5": "SAFE5",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U630": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": "ARMED",
+        "4": "MAIN_PERMISSION",
+        "2": "MANUAL_VALID_NOFAULT",
+        "5": "SAFE5",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U631": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": "MAIN_PERMISSION",
+        "2": "PG_GOOD",
+        "5": "SAFE5",
+        "4": "SERIES_CLEAR_N",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U632": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "RUN_GATE_LOGIC",
+        "5": "SAFE5",
+        "1": "SERIES_ARMED",
+        "2": "SERIES_CLEAR_N",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U633": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "2": "CORE_POR_N",
+        "4": "DISPOSAL_LOGIC",
+        "1": "FAULT",
+        "5": "SAFE5",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U640": {
+      "value": "TLV3201AIDBVR",
+      "mpn": "TLV3201AIDBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "REF1V25",
+        "5": "SAFE5",
+        "1": "SW_HIGH",
+        "3": "SW_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U642": {
+      "value": "TLV3201AIDBVR",
+      "mpn": "TLV3201AIDBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "REF1V25",
+        "5": "SAFE5",
+        "1": "VIN_GOOD_FAST",
+        "3": "VIN_SENSE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U644": {
+      "value": "SN74LVC1G14DBVR",
+      "mpn": "SN74LVC1G14DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "5": "SAFE5",
+        "2": "SOURCE_CONTACT",
+        "4": "SRC_TRIP",
+        "3": "GND",
+        "1": "unconnected-(U644-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U647": {
+      "value": "ADG4612BRUZ",
+      "mpn": "ADG4612BRUZ",
+      "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+      "pins": {
+        "1": "SAFE5",
+        "13": "SAFE5",
+        "16": "SAFE5",
+        "2": "SW_HYS",
+        "3": "SW_SENSE",
+        "15": "VIN_MON",
+        "14": "VIN_SENSE",
+        "10": "GND",
+        "11": "GND",
+        "4": "GND",
+        "5": "GND",
+        "6": "GND",
+        "7": "GND",
+        "8": "GND",
+        "9": "GND",
+        "12": "unconnected-(U647-NC-Pad12)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U651": {
+      "value": "ADG4612BRUZ",
+      "mpn": "ADG4612BRUZ",
+      "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+      "pins": {
+        "2": "PG_DIV",
+        "3": "PG_SENSE",
+        "1": "SAFE5",
+        "13": "SAFE5",
+        "10": "GND",
+        "11": "GND",
+        "14": "GND",
+        "15": "GND",
+        "16": "GND",
+        "4": "GND",
+        "5": "GND",
+        "6": "GND",
+        "7": "GND",
+        "8": "GND",
+        "9": "GND",
+        "12": "unconnected-(U651-NC-Pad12)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U654": {
+      "value": "SN74LVC1G14DBVR",
+      "mpn": "SN74LVC1G14DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "2": "ARM_CONTACT",
+        "4": "ARM_DOWN",
+        "5": "SAFE5",
+        "3": "GND",
+        "1": "unconnected-(U654-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U656": {
+      "value": "SN74LVC1G14DBVR",
+      "mpn": "SN74LVC1G14DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "2": "RESET_CONTACT",
+        "4": "RESET_DOWN",
+        "5": "SAFE5",
+        "3": "GND",
+        "1": "unconnected-(U656-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U661": {
+      "value": "SN74LVC1G14DBVR",
+      "mpn": "SN74LVC1G14DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "5": "SAFE5",
+        "2": "SERIES_CONTACT",
+        "4": "SERIES_DOWN",
+        "3": "GND",
+        "1": "unconnected-(U661-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U662": {
+      "value": "SN74LVC1G17DBVR",
+      "mpn": "SN74LVC1G17DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "CORE_POR_N",
+        "2": "CORE_POR_RAW_N",
+        "5": "SAFE5",
+        "3": "GND",
+        "1": "unconnected-(U662-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    }
+  },
+  "retired": {
+    "C310": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DRV_7V5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C311": {
+      "value": "1uF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DRV_7V5",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C312": {
+      "value": "10nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_DELAY",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C313": {
+      "value": "10nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DRV_DELAY",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C314": {
+      "value": "220nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "REF_DELAY",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C315": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C316": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "ARM_N",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C317": {
+      "value": "10nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "ARM_RC",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C318": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C319": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C320": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C321": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C322": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C323": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C324": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "C325": {
+      "value": "100nF 25V",
+      "mpn": "Capacitor_specification",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R314": {
+      "value": "53.9k",
+      "mpn": "Resistor_specification",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DRV_7V5",
+        "2": "DRV_FB"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R315": {
+      "value": "10.0k",
+      "mpn": "Resistor_specification",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DRV_FB",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R318": {
+      "value": "47k",
+      "mpn": "Resistor_specification",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "DET_5V",
+        "2": "RESET_N"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R319": {
+      "value": "100k",
+      "mpn": "Resistor_specification",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "2": "ARM_N",
+        "1": "DET_5V"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "R320": {
+      "value": "10k",
+      "mpn": "Resistor_specification",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "ARM_CLOCK",
+        "2": "ARM_RC"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U304": {
+      "value": "SN74LVC1G74DCTR",
+      "mpn": "SN74LVC1G74DCTR",
+      "footprint": "V1A_Qualified:TI_DCT0008A_SN74LVC1G74",
+      "pins": {
+        "1": "ARM_CLOCK",
+        "5": "ARM_LATCH",
+        "3": "ARM_LATCH_N",
+        "2": "DET_5V",
+        "7": "DET_5V",
+        "8": "DET_5V",
+        "6": "QUALIFIED",
+        "4": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U305": {
+      "value": "SN74LVC1G11DBVR",
+      "mpn": "SN74LVC1G11DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "3": "ARM_HISTORY",
+        "1": "ARM_LATCH",
+        "5": "DET_5V",
+        "6": "QUALIFIED",
+        "4": "RUN_GATE",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U307": {
+      "value": "TPS7A1601DGNR",
+      "mpn": "TPS7A1601DGNR",
+      "footprint": "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm",
+      "pins": {
+        "1": "DRV_7V5",
+        "7": "DRV_DELAY",
+        "2": "DRV_FB",
+        "3": "SUPPLY_OK",
+        "5": "VIN_AUX",
+        "8": "VIN_AUX",
+        "4": "GND",
+        "9": "GND",
+        "6": "unconnected-(U307-NC-Pad6)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U308": {
+      "value": "TPS3808G25DBVR",
+      "mpn": "TPS3808G25DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "6": "DET_5V",
+        "5": "REF_2V5",
+        "4": "REF_DELAY",
+        "3": "RESET_N",
+        "1": "SUPPLY_OK",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U309": {
+      "value": "SN74LVC1G74DCTR",
+      "mpn": "SN74LVC1G74DCTR",
+      "footprint": "V1A_Qualified:TI_DCT0008A_SN74LVC1G74",
+      "pins": {
+        "1": "ARM_DELAYED",
+        "5": "ARM_HISTORY",
+        "2": "ARM_LATCH",
+        "6": "CTRL_ENABLE",
+        "7": "DET_5V",
+        "8": "DET_5V",
+        "4": "GND",
+        "3": "unconnected-(U309-nQ-Pad3)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U310": {
+      "value": "SN74LVC1G11DBVR",
+      "mpn": "SN74LVC1G11DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "CTRL_ENABLE",
+        "5": "DET_5V",
+        "3": "OV_OK",
+        "4": "QUALIFIED",
+        "6": "BUCK_PGOOD",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U311": {
+      "value": "SN74LVC1G11DBVR",
+      "mpn": "SN74LVC1G11DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "ARM_HISTORY",
+        "3": "ARM_LATCH_N",
+        "4": "CROWBAR_ON",
+        "6": "CTRL_ENABLE",
+        "5": "DET_5V",
+        "2": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U312": {
+      "value": "SN74LVC1G08DBVR",
+      "mpn": "SN74LVC1G08DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "CTRL_ENABLE",
+        "5": "DET_5V",
+        "2": "RESET_N",
+        "1": "SUPPLY_OK",
+        "3": "GND"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U313": {
+      "value": "SN74LVC1G14DBVR",
+      "mpn": "SN74LVC1G14DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "ARM_CLOCK",
+        "2": "ARM_N",
+        "5": "DET_5V",
+        "3": "GND",
+        "1": "unconnected-(U313-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    },
+    "U314": {
+      "value": "SN74LVC1G17DBVR",
+      "mpn": "SN74LVC1G17DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "4": "ARM_DELAYED",
+        "2": "ARM_RC",
+        "5": "DET_5V",
+        "3": "GND",
+        "1": "unconnected-(U314-NC-Pad1)"
+      },
+      "sheet": "/03_OUTPUT_PROTECTION/"
+    }
+  }
+}

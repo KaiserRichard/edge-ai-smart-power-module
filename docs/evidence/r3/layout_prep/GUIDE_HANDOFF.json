@@ -1,0 +1,10 @@
+{
+  "target": "/Users/quockaiser/Desktop/Research/wt-layoutguide/docs/pcb/LAYOUT_GUIDE.md",
+  "target_branch": "docs/pcb-layout-guide",
+  "target_head": "8f9ebe5576a8aa177948b5e772ae4e815ec85446",
+  "original_sha256": "8aa9bf37bf86cca6f1c373de96c995c2d709c1fdb6535efe95f73855c3d758f7",
+  "proposed_sha256": "713ff39285c28430a0018a59a1774bde4106b74d05654e4b2e959a4f2abf3fde",
+  "status": "WRITE BLOCKED: Operation not permitted; prepared full document and patch; no target change or second-worktree commit",
+  "previous_proposed_sha256": "ded70e6ba4122ea582aa7dcdc900f695d5c8be25aa93eba3b15acf9c711a4a3d",
+  "resume_note": "Resumed from 566b00e and 56e9837; added root-sheet scope and explicit U317 ground/thermal and UCC27511 local-ground review notes. Target remains outside writable roots; not modified."
+}
