@@ -1,5 +1,5 @@
 {
-  "source_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+  "source_commit": "56e9837e522c01bd680aca602f9f471d38d6039f",
   "first_commit": "838a8a45d8939f9b57af4715724bc71afc0134fc",
   "source_repository": "https://github.com/KaiserRichard/edge-ai-smart-power-module",
   "source_branch": "origin/feat/r2-testboard-capture",
@@ -384,5 +384,28 @@
     "U656": "/03_OUTPUT_PROTECTION/",
     "U661": "/03_OUTPUT_PROTECTION/",
     "U662": "/03_OUTPUT_PROTECTION/"
+  },
+  "previous_order_bom_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+  "resume_verification": {
+    "date": "2026-10-03",
+    "fetched_branch": "origin/feat/r2-testboard-capture",
+    "fetch_location": "/tmp/v1a-bom-order.aC9fug",
+    "detached_head": "56e9837e522c01bd680aca602f9f471d38d6039f",
+    "previous_source_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+    "export_filename": "export-resume.csv",
+    "export_sha256": "b2e57ccf9cfd4251d297d6e2bb6b422f2bfc0aead7b5d0fec14f03fad456acae",
+    "identical_to_previous_export": true,
+    "six_schematic_sha256_unchanged": true,
+    "tracked_source_checkout_clean_after_export": true,
+    "source_delta": "PCB preparation files and documentation only; six source schematics unchanged",
+    "log": "resume-export.log"
+  },
+  "u316_disposition": {
+    "status": "CONFIRMED",
+    "mpn": "LT4363HMS-1#PBF",
+    "authority": "BOM_ORDER_RESUME.md explicitly confirms correct, no longer pending; supersedes original brief marker",
+    "review_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+    "review_file": "docs/evidence/r2/gate4b/CHECK_C1C3.md",
+    "evidence": "ADI LT4363 Rev. C pp. 2, 3, 8 reviewed in CHECK_C1C3: -1 MSOP 12 pins; retain exact MPN."
   }
 }
