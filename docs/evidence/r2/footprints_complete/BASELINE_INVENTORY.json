@@ -1,0 +1,159 @@
+{
+  "baseline_commit": "1f4c2f821793506871b9abe6227b1deba419d27e",
+  "physical_count": 154,
+  "empty_footprint_count": 24,
+  "empty_footprints": [
+    {
+      "ref": "F101",
+      "value": "FUSE - OPEN",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP101",
+      "value": "INPUT_SHDN",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP102",
+      "value": "INPUT_FLT",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "C201",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "C202",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "C209",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "C210",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "C211",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "C212",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "C213",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "C214",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "L201",
+      "value": "6.8uH",
+      "footprint": "",
+      "mpn": "XAL8080-682MED"
+    },
+    {
+      "ref": "C404",
+      "value": "22uF 50V",
+      "footprint": "",
+      "mpn": "C5750X7R1H226M250KB"
+    },
+    {
+      "ref": "TP401",
+      "value": "ALERT_LOCAL",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP402",
+      "value": "SHUNT_KPLUS",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP403",
+      "value": "SHUNT_KMINUS",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP404",
+      "value": "3V3_LOCAL",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "J501",
+      "value": "DC INPUT - MPN OPEN",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "J502",
+      "value": "LOAD OUTPUT - MPN OPEN",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "J503",
+      "value": "HOST I2C - MPN OPEN",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP501",
+      "value": "VIN_RAW",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP502",
+      "value": "VIN_PROTECTED",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP503",
+      "value": "LOAD_5V1",
+      "footprint": "",
+      "mpn": ""
+    },
+    {
+      "ref": "TP504",
+      "value": "GND",
+      "footprint": "",
+      "mpn": ""
+    }
+  ],
+  "additional_placeholder_mpn_refs": [
+    "J301",
+    "J302"
+  ],
+  "excluded_existing_assignment": [
+    "D101"
+  ],
+  "nonphysical_flags": "excluded by KiCad XML exporter"
+}

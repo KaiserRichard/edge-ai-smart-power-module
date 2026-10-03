@@ -1,0 +1,14 @@
+{
+  "id": "TDK-C5750",
+  "manufacturer": "TDK",
+  "url": "https://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_B11.pdf",
+  "revision": "US catalog B11, April 2011, printed p72 / PDF page70",
+  "local_file": "tdk_B11.pdf",
+  "sha256": "c72913b45e8cd5162ef25ace45f32989e2641d025bc6cd3e24710a1ea71ca3c5",
+  "corroboration_url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C5750X7R1H226M250KB",
+  "corroboration_revision": "unversioned live record accessed 2026-09-30",
+  "license": "TDK copyright; local review only, document not redistributed",
+  "use": "ADAPTED numerical land geometry, independently authored footprint; no PCB copied",
+  "modifications": "upstream unchanged; select midpoints of permitted A/B/C ranges; project mask/paste/courtyard",
+  "attribution": "TDK Corporation, C Series General Application, B11 April 2011 p72 and exact current product record"
+}

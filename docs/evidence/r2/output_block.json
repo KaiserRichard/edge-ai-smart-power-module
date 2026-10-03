@@ -2108,7 +2108,7 @@
     },
     {
       "ref": "J301",
-      "part": "PinHeader_1x02",
+      "part": "B2B-XH-A(LF)(SN)",
       "value": "ARM button",
       "kind": "CONNECTOR",
       "pins": {
@@ -2123,13 +2123,13 @@
           "type": "passive"
         }
       },
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
       "source": "ASSUMED external momentary button to GND; signal only",
       "rating": "DATASHEET rating; preliminary review only"
     },
     {
       "ref": "J302",
-      "part": "PinHeader_1x02",
+      "part": "B2B-XH-A(LF)(SN)",
       "value": "RESET button",
       "kind": "CONNECTOR",
       "pins": {
@@ -2144,7 +2144,7 @@
           "type": "passive"
         }
       },
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "footprint": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
       "source": "ASSUMED external momentary button to GND; signal only",
       "rating": "DATASHEET rating; preliminary review only"
     },

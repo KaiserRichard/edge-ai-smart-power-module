@@ -115,7 +115,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 35.56 101.6 0)
       (effects
         (font
@@ -179,7 +179,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 63.5 101.6 0)
       (effects
         (font
@@ -903,7 +903,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 289.56 132.08 0)
       (effects
         (font
@@ -967,7 +967,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 327.66 132.08 0)
       (effects
         (font
@@ -1031,7 +1031,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 365.76 132.08 0)
       (effects
         (font
@@ -1095,7 +1095,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 289.56 165.1 0)
       (effects
         (font
@@ -1159,7 +1159,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 327.66 165.1 0)
       (effects
         (font
@@ -1223,7 +1223,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 365.76 165.1 0)
       (effects
         (font

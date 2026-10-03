@@ -573,7 +573,7 @@
       (effects
         (font
           (size 1.524 1.524))))
-    (property "Footprint" ""
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 172.72 162.56 0)
       (effects
         (font
@@ -633,7 +633,7 @@
       (effects
         (font
           (size 1.524 1.524))))
-    (property "Footprint" ""
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 25.4 111.76 0)
       (effects
         (font
@@ -693,7 +693,7 @@
       (effects
         (font
           (size 1.524 1.524))))
-    (property "Footprint" ""
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 101.6 104.14 0)
       (effects
         (font
@@ -893,7 +893,7 @@
         (font
           (size 1.524 1.524))
         (justify left)))
-    (property "Footprint" ""
+    (property "Footprint" "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
       (at 350.52 132.08 0)
       (effects
         (font
@@ -955,7 +955,7 @@
       (effects
         (font
           (size 1.524 1.524))))
-    (property "Footprint" ""
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
       (at 378.46 101.6 0)
       (effects
         (font

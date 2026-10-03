@@ -1,0 +1,81 @@
+[
+  {
+    "id": "JST-VH",
+    "file": "jst_vh.pdf",
+    "url": "https://www.jst-mfg.com/product/pdf/eng/eVH.pdf",
+    "revision": "No controlled issue printed; PDF metadata2026-01-09; retrieved2026-09-30",
+    "sections": "pp1-4 ratings, contact/housing, shrouded header holes",
+    "sha256": "d51e669c597988b20c0963daf5bef7356cbd2104c1f867e9107c6fa6cd2b899c",
+    "use": "REFERENCED to qualify KiCad package adaptation",
+    "modifications": "Upstream unchanged; engineering adaptations described in report",
+    "license": "Manufacturer copyright; local review only, not redistributed",
+    "attribution": "JST-VH manufacturer title/revision/source URL retained here"
+  },
+  {
+    "id": "PHOENIX-DRAWING",
+    "file": "phoenix1776508_old.pdf",
+    "url": "https://asset.conrad.com/media10/add/160267/c1/-/en/000569050DS03/datasheet-569050-base-strip-mstb-25-2-gf-508-1776508-phoenix-contact.pdf",
+    "revision": "Phoenix Contact generated datasheet Nov12,2013",
+    "sections": "p6 drilling/dimensional drawing, p1 part1776508",
+    "sha256": "2bd7862fd37d75c826e81efe367dbd26d015b690fbcea9c350fd75a43f442985",
+    "use": "ADAPTED drilling geometry into authored footprint; corroborated current pitch/hole/body dimensions",
+    "modifications": "Upstream unchanged; engineering adaptations described in report",
+    "license": "Manufacturer copyright; local review only, not redistributed",
+    "attribution": "PHOENIX-DRAWING manufacturer title/revision/source URL retained here"
+  },
+  {
+    "id": "HARWIN-HOUSING",
+    "file": "Harwin_M20-107.pdf",
+    "url": "https://content.harwin.com/asset/b4f1d83e-6b34-4617-ba41-3cc2c2450892/DRG-00377-Technical-Drawing-Datasheet-M20-107-pdf.pdf",
+    "revision": "M20-107XX00 issue8 2021-02-15 sheet2/2",
+    "sections": "dimensions, pin1, mating length, supported02\u201312 contacts per row",
+    "sha256": "7513566cebc528557216c6ae7c62ef6b3fa0aed6053fee02690e33d4172b0731",
+    "use": "REFERENCED harness candidates M20-1071000 and M20-1070800; no board footprint",
+    "modifications": "Upstream unchanged; engineering adaptations described in report",
+    "license": "Manufacturer copyright; local review only, not redistributed",
+    "attribution": "HARWIN-HOUSING manufacturer title/revision/source URL retained here"
+  },
+  {
+    "id": "HARWIN-CONTACT",
+    "file": "Harwin_M20-118.pdf",
+    "url": "https://content.harwin.com/asset/d742d022-1905-41c8-b996-8feb2ed262c8/DRG-00379-Technical-Drawing-Datasheet-M20-118-pdf.pdf",
+    "revision": "M20-11800XX issue13 2012-07-30 sheet2/2",
+    "sections": "contact M20-1180042 wire/insulation/plating",
+    "sha256": "979e855cdbbca9692c5eaff306cb775658cefeb24303ba21f640e210f1021ca9",
+    "use": "REFERENCED harness crimp",
+    "modifications": "Upstream unchanged; engineering adaptations described in report",
+    "license": "Manufacturer copyright; local review only, not redistributed",
+    "attribution": "HARWIN-CONTACT manufacturer title/revision/source URL retained here"
+  },
+  {
+    "id": "HARWIN-RATING",
+    "file": "Harwin_C00120.pdf",
+    "url": "https://content.harwin.com/asset/92486137-0a45-4017-9b78-1edaa8709008/C001-C001XX-Component-Specification-M20-Series-2-54mm-pitch-PCB-connectors.pdf",
+    "revision": "C00120 issue20 2022-11-28",
+    "sections": "pp2\u20134 3A, initial20/conditioned30mOhm, tests",
+    "sha256": "886a13d7e7e8d0b1546a685b321fdaeeca5a596eafe4769e2911d8af88fab403",
+    "use": "REFERENCED; does not prove hot Pi-mated20mOhm",
+    "modifications": "Upstream unchanged; engineering adaptations described in report",
+    "license": "Manufacturer copyright; local review only, not redistributed",
+    "attribution": "HARWIN-RATING manufacturer title/revision/source URL retained here"
+  },
+  {
+    "id": "PHOENIX-LIVE",
+    "url": "https://www.phoenixcontact.com/en-sg/products/pcb-header-mstb-25-2-gf-508-1776508",
+    "mate_url": "https://www.phoenixcontact.com/en-nl/products/pcb-connector-mstb-25-2-stf-508-1777989",
+    "revision": "Unversioned live pages accessed2026-09-30 via web",
+    "use": "REFERENCED current mating, dimensions, resistance and ratings",
+    "modifications": "none",
+    "license": "Phoenix Contact copyright; no page copied",
+    "attribution": "Phoenix Contact product pages1776508/1777989"
+  },
+  {
+    "id": "SAMTEC-COMPARISON",
+    "url": "https://suddendocs.samtec.com/productspecs/tsw-ssw.pdf",
+    "revision": "RevB 2018-11-15 pp2\u20133",
+    "use": "REFERENCED alternative; delta15mOhm is not absolute hot bound; 4.7A test one powered pin per row; not selected",
+    "modifications": "none",
+    "license": "Samtec copyright; no source redistributed",
+    "attribution": "Samtec SSW/TSW product specification RevB"
+  }
+]
