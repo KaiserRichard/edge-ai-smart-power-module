@@ -258,3 +258,19 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **NEXT GATE:** engineering review of the completed R2 test-board capture and bounded isolated-coupon/fixture plan. R3 layout and R4 fabrication remain unreleased. Follow visual/continuity → current-limited no-load startup → rail verification → dummy-load steps → thermal/ripple/transient → fault/protection → telemetry → SBC only after all preceding gates pass. No Pi as first load.
 
 **Git handback:** local per-sheet checkpoint attempts failed because Git could not create index.lock (Operation not permitted). Per the brief, this resume remains uncommitted for Claude. No lock/permission changes, push, merge, PCB layout, purchase or manufacturing action.
+
+## Gate 4b — C1–C3 pinout check, 2026-10-03
+
+**STATUS: PASS for the checked pinout items; R2 electrical release BLOCKED.**
+
+**WHAT WAS DONE:** independently checked U316 LT4363HMS-1#PBF against ADI Rev. C pp. 2, 3 and 8. Its MSOP pinout is correct: pin 7 GND, pin 8 UV, pin 9 GND; OV belongs to the -2 variant. Recorded the brief's prior C1/C3 verification and retained the capture.
+
+**EVIDENCE:** [C1–C3 report](evidence/r2/gate4b/CHECK_C1C3.md) and [source provenance](../third_party/check_c1c3/SOURCE.md). All 50 existing tests and the capture checker pass. Hardware and existing PDF/netlist are unchanged; no fresh ERC or export was required by the brief's PASS branch.
+
+**DECISIONS:** C2 PASS; no symbol, wiring, divider or FLT change.
+
+**OPEN RISKS:** physical performance remains untested. The official PDF was read through the web tool; direct local-download attempts failed. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.
+
+**NEXT GATE:** continue the existing R2 engineering review; this check does not release R3 or fabrication.
+
+**Git handback:** the authorized local commit attempt failed because Git could not create `index.lock` (`Operation not permitted`). These documentation changes remain uncommitted under the brief's explicit fallback; nothing was pushed.
