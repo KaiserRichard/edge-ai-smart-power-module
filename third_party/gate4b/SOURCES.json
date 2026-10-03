@@ -252,5 +252,41 @@
     "modifications": "None to source; independently authored 3.75 x 5.6 mm lands with 10 mm inner gap",
     "attribution": "SCHURTER UMT-H manufacturer drawing; retained in PIN_REVIEW.md and this register",
     "finding": "12.5 A / 125 VDC / 1000 A interruption via footnote4. Package drawing agrees with existing captured footprint. PDF is ignored local review input."
+  },
+  {
+    "id": "resume2-tlv3201",
+    "url": "https://www.ti.com/lit/ds/symlink/tlv3201.pdf",
+    "revision": "SBOS561C, May 2024, p3",
+    "retrieved": "2026-10-03",
+    "status": "Read from official PDF via web; no local file/hash claimed",
+    "relevant_source": "U640/U642 DBV5 pins; no EP; frozen observation front end",
+    "license": "Manufacturer copyright; no redistribution license asserted",
+    "use": "Referenced pin/package data; authored capture follows pinned Gate4a circuit, observation only under option A",
+    "modifications": "No upstream source/CAD changes",
+    "attribution": "Named manufacturer, document revision and URL retained in PIN_REVIEW.md"
+  },
+  {
+    "id": "resume2-adg4612",
+    "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf",
+    "revision": "Rev0 (2010), p10 Table8 and TSSOP drawing",
+    "retrieved": "2026-10-03",
+    "status": "Read from official PDF via web; no local file/hash claimed",
+    "relevant_source": "U647 BRUZ TSSOP16 pin map, NC12 and no EP; two input channels",
+    "license": "Manufacturer copyright; no redistribution license asserted",
+    "use": "Referenced pin/package data; authored capture follows pinned Gate4a circuit, observation only under option A",
+    "modifications": "No upstream source/CAD changes",
+    "attribution": "Named manufacturer, document revision and URL retained in PIN_REVIEW.md"
+  },
+  {
+    "id": "resume2-bas116",
+    "url": "https://assets.nexperia.com/documents/data-sheet/BAS116.pdf",
+    "revision": "Rev5, 5 August 2020, p1 Table2",
+    "retrieved": "2026-10-03",
+    "status": "Read from official PDF via web; no local file/hash claimed",
+    "relevant_source": "D640…643 A1/NC2/K3 and SOT23 package",
+    "license": "Manufacturer copyright; no redistribution license asserted",
+    "use": "Referenced pin/package data; authored capture follows pinned Gate4a circuit, observation only under option A",
+    "modifications": "No upstream source/CAD changes",
+    "attribution": "Named manufacturer, document revision and URL retained in PIN_REVIEW.md"
   }
 ]

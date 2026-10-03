@@ -50,6 +50,11 @@ def validate(tree, specs):
       'U632':['SERIES_ARMED','SERIES_CLEAR_N','GND','RUN_GATE_LOGIC','SAFE5'],
       'U633':['FAULT','CORE_POR_N','GND','DISPOSAL_LOGIC','SAFE5'],
       'U644':[None,'SOURCE_CONTACT','GND','SRC_TRIP','SAFE5'],
+      'U640':['SW_HIGH','GND','SW_SENSE','REF1V25','SAFE5'],
+      'U642':['VIN_GOOD_FAST','GND','VIN_SENSE','REF1V25','SAFE5'],
+      'U647':['SAFE5','SW_HYS','SW_SENSE','GND','GND','GND','GND','GND','GND','GND','GND',None,'SAFE5','VIN_SENSE','VIN_MON','SAFE5'],
+      'D640':['SW_HYS',None,'REF_SAFE_2V5'], 'D641':['GND',None,'SW_HYS'],
+      'D642':['VIN_MON',None,'REF_SAFE_2V5'], 'D643':['GND',None,'VIN_MON'],
       'U654':[None,'ARM_CONTACT','GND','ARM_DOWN','SAFE5'],
       'U656':[None,'RESET_CONTACT','GND','RESET_DOWN','SAFE5'],
       'U661':[None,'SERIES_CONTACT','GND','SERIES_DOWN','SAFE5'],
@@ -79,6 +84,12 @@ def validate(tree, specs):
       ('R301','VOUT_5V1','OV_DIV'),('R302','OV_DIV','GND'),('R303','OV_SWITCHED','OV_SENSE'),('R373','REF_2V5','REF_SENSE'),
       ('R361','DRV_HOLD','CLAMP_2V5'),('R367','OV_SENSE','GND'),('R316','3V3_AUX','DET_PG'),('R317','3V3_AUX','BUCK_PGOOD'),
       ('R622','BUCK_PGOOD','PG_DIV'),('R623','PG_SENSE','GND'),('R609','SAFE5','CORE_POR_RAW_N'),
+      ('R640','L201_IN','SW_HYS'),('R641','SW_HYS','GND'),('R642','SW_HIGH','SW_HYS'),
+      ('R644','VIN_PROTECTED','VIN_MON'),('R645','VIN_MON','GND'),
+      ('R651','SW_SENSE','GND'),('R652','VIN_SENSE','GND'),
+      ('C640','SAFE5','GND'),('C642','SAFE5','GND'),('C647','SAFE5','GND'),
+      ('TP337','SW_HIGH','GND'),('TP338','VIN_GOOD_FAST','GND'),
+      ('TP339','SW_SENSE','GND'),('TP340','VIN_SENSE','GND'),
       ('C301','PROT_BST','PROT_MID'),('C302','REF_2V5','GND'),('R305','PROT_GATE','PROT_MID'),('R711','SER_UVLO','GND'),
       ('R709','RUN_GATE_LOGIC','RUN_GATE'),('R710','RUN_GATE','GND'),('R712','DISPOSAL_LOGIC','DISPOSAL'),('R713','DISPOSAL','GND'),
       ('R647','MAIN_PERMISSION','INPUT_SHDN'),('R648','INPUT_SHDN','GND'),('R649','FAULT','FAULT_DRIVE'),('R650','FAULT_DRIVE','GND'),
@@ -108,6 +119,24 @@ def validate(tree, specs):
     for ref,mpn in selected.items():
         c=parts.get(ref)
         if c is None or c.findtext('fields/field[@name="MPN"]')!=mpn:errors.append(f'{ref}: independent frozen MPN requires {mpn}')
+    source_mpns={'R640':'TNPW060320K0BEEA','R641':'TNPW06036K19BEEA','R642':'TNPW060320K0BEEA',
+      'R644':'TNPW060349K9BEEA','R645':'TNPW060310K0BEEA','R651':'TNPW0603100KBEEA','R652':'TNPW0603100KBEEA',
+      'U640':'TLV3201AIDBVR','U642':'TLV3201AIDBVR','U647':'ADG4612BRUZ'}
+    for ref,mpn in source_mpns.items():
+        c=parts.get(ref)
+        if c is None or c.findtext('fields/field[@name="MPN"]')!=mpn:errors.append(f'{ref}: frozen source sensing MPN requires {mpn}')
+    # Compare complete hierarchical identities: matching local text on two
+    # child sheets is not an electrical connection (S01-07 review failure).
+    full={(n.get('ref'),n.get('pin')):net.get('name')
+          for net in tree.findall('./nets/net') for n in net.findall('node')}
+    for a,b in [(('R640','1'),('L201','1')),(('R640','1'),('JP201','2')),
+                (('R644','1'),('U201','8'))]:
+        if a not in full or b not in full or full[a]!=full[b]:
+            errors.append(f'Source sensing hierarchy split: {a} must share the actual net with {b}')
+    for net,expected in [('SW_HIGH',{('U640','1'),('R642','1'),('TP337','1')}),
+                         ('VIN_GOOD_FAST',{('U642','1'),('TP338','1')})]:
+        if {p for p,n in ns.items() if n==net}!=expected:
+            errors.append(f'{net}: observation-only source sensing must not drive manual fault/permission logic')
     for ref in ('C358','C359'):
         c=parts.get(ref)
         if c is None or c.findtext('fields/field[@name="MPN"]')!='EEUFR1E221' or c.findtext('footprint')!='Capacitor_THT:CP_Radial_D8.0mm_P3.50mm':

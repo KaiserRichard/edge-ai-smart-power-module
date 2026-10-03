@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A.kicad_sch</source>
-    <date>2026-10-03T16:13:48+0700</date>
+    <date>2026-10-03T17:01:29+0700</date>
     <tool>Eeschema 9.0.6</tool>
     <textvar name="RELEASE_STATUS">NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -2175,6 +2175,46 @@
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>7a86c18b-71b8-5cf2-9d74-ac44b03ebb9f</tstamps>
     </comp>
+    <comp ref="C640">
+      <value>100nF 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="C640_GRM188R71H104KA93D" description=""/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>62ee80c9-08f7-55e3-a8d9-bad33aae7b5c</tstamps>
+    </comp>
+    <comp ref="C642">
+      <value>100nF 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="C642_GRM188R71H104KA93D" description=""/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>2d848f7a-8e2b-546b-85c0-df7e1f02967c</tstamps>
+    </comp>
     <comp ref="C644">
       <value>100nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
@@ -2194,6 +2234,26 @@
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>a4bdcf1f-1139-58ca-ba2b-b06034c50791</tstamps>
+    </comp>
+    <comp ref="C647">
+      <value>100nF 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="C647_GRM188R71H104KA93D" description=""/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>25cfe67f-9665-554e-b258-88565b290d2d</tstamps>
     </comp>
     <comp ref="C651">
       <value>100nF 50V</value>
@@ -2814,6 +2874,86 @@
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>87621360-829c-5f71-9fd8-a72bb69d4459</tstamps>
+    </comp>
+    <comp ref="D640">
+      <value>BAS116,215</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">BAS116,215</field>
+        <field name="Source">Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge</field>
+        <field name="Rating">DATASHEET rating; preliminary review only</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="D640_BAS116_215" description=""/>
+      <property name="MPN" value="BAS116,215"/>
+      <property name="Source" value="Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge"/>
+      <property name="Rating" value="DATASHEET rating; preliminary review only"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>d568ee53-8ffd-55e8-b984-01325d32925d</tstamps>
+    </comp>
+    <comp ref="D641">
+      <value>BAS116,215</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">BAS116,215</field>
+        <field name="Source">Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge</field>
+        <field name="Rating">DATASHEET rating; preliminary review only</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="D641_BAS116_215" description=""/>
+      <property name="MPN" value="BAS116,215"/>
+      <property name="Source" value="Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge"/>
+      <property name="Rating" value="DATASHEET rating; preliminary review only"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>44ae984c-4844-587e-927a-1853a471917d</tstamps>
+    </comp>
+    <comp ref="D642">
+      <value>BAS116,215</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">BAS116,215</field>
+        <field name="Source">Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge</field>
+        <field name="Rating">DATASHEET rating; preliminary review only</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="D642_BAS116_215" description=""/>
+      <property name="MPN" value="BAS116,215"/>
+      <property name="Source" value="Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge"/>
+      <property name="Rating" value="DATASHEET rating; preliminary review only"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>d5fc0907-7d0a-503c-b28a-25dd8ee9c1ee</tstamps>
+    </comp>
+    <comp ref="D643">
+      <value>BAS116,215</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">BAS116,215</field>
+        <field name="Source">Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge</field>
+        <field name="Rating">DATASHEET rating; preliminary review only</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="D643_BAS116_215" description=""/>
+      <property name="MPN" value="BAS116,215"/>
+      <property name="Source" value="Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge"/>
+      <property name="Rating" value="DATASHEET rating; preliminary review only"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>8ddfe331-f2f8-5681-bf0e-bc0f00aa1245</tstamps>
     </comp>
     <comp ref="D660">
       <value>B260-13-F</value>
@@ -4575,6 +4715,106 @@
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>77cf0807-c1d2-5f13-9a4c-3a45d0431f24</tstamps>
     </comp>
+    <comp ref="R640">
+      <value>20.0k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">TNPW060320K0BEEA</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R640_TNPW060320K0BEEA" description=""/>
+      <property name="MPN" value="TNPW060320K0BEEA"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>bf9afb69-d139-553b-be6b-249b8c26befe</tstamps>
+    </comp>
+    <comp ref="R641">
+      <value>6.19k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">TNPW06036K19BEEA</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R641_TNPW06036K19BEEA" description=""/>
+      <property name="MPN" value="TNPW06036K19BEEA"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>9b626b72-a66d-580f-8218-061b0e224e3c</tstamps>
+    </comp>
+    <comp ref="R642">
+      <value>20.0k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">TNPW060320K0BEEA</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R642_TNPW060320K0BEEA" description=""/>
+      <property name="MPN" value="TNPW060320K0BEEA"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>6cc69487-d332-505b-a888-99649af268cd</tstamps>
+    </comp>
+    <comp ref="R644">
+      <value>49.9k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">TNPW060349K9BEEA</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R644_TNPW060349K9BEEA" description=""/>
+      <property name="MPN" value="TNPW060349K9BEEA"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>2d58eab6-9d74-537e-94ce-e413348d8e0c</tstamps>
+    </comp>
+    <comp ref="R645">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">TNPW060310K0BEEA</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R645_TNPW060310K0BEEA" description=""/>
+      <property name="MPN" value="TNPW060310K0BEEA"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>56856130-afc9-58f2-a7f9-75ff42cead24</tstamps>
+    </comp>
     <comp ref="R647">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
@@ -4654,6 +4894,46 @@
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>40e6a561-86e8-5a6f-a24f-7df9019ff7c7</tstamps>
+    </comp>
+    <comp ref="R651">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">TNPW0603100KBEEA</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R651_TNPW0603100KBEEA" description=""/>
+      <property name="MPN" value="TNPW0603100KBEEA"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>74dcfe58-cf7b-5997-9137-521338d8ede6</tstamps>
+    </comp>
+    <comp ref="R652">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">TNPW0603100KBEEA</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="R652_TNPW0603100KBEEA" description=""/>
+      <property name="MPN" value="TNPW0603100KBEEA"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>923ee8ad-2574-556f-9e6e-8c6b3d128a10</tstamps>
     </comp>
     <comp ref="R707">
       <value>10k</value>
@@ -5635,6 +5915,86 @@
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>99fad5ea-e4c5-5eaf-b758-58e8748b50b1</tstamps>
     </comp>
+    <comp ref="TP337">
+      <value>SW_HIGH</value>
+      <footprint>V1A_Qualified:SensePair_P2.54</footprint>
+      <fields>
+        <field name="MPN">N/A etched paired pads</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="TP337_N_A_etched_paired_pads" description=""/>
+      <property name="MPN" value="N/A etched paired pads"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>8211e427-36a8-590f-ad5d-0d4c249637a8</tstamps>
+    </comp>
+    <comp ref="TP338">
+      <value>VIN_GOOD_FAST</value>
+      <footprint>V1A_Qualified:SensePair_P2.54</footprint>
+      <fields>
+        <field name="MPN">N/A etched paired pads</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="TP338_N_A_etched_paired_pads" description=""/>
+      <property name="MPN" value="N/A etched paired pads"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>bfff98d3-df9f-512b-8d31-ddb95312bb7c</tstamps>
+    </comp>
+    <comp ref="TP339">
+      <value>SW_SENSE</value>
+      <footprint>V1A_Qualified:SensePair_P2.54</footprint>
+      <fields>
+        <field name="MPN">N/A etched paired pads</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="TP339_N_A_etched_paired_pads" description=""/>
+      <property name="MPN" value="N/A etched paired pads"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>ce4be891-5e12-552b-b0b5-3069d7e11ce8</tstamps>
+    </comp>
+    <comp ref="TP340">
+      <value>VIN_SENSE</value>
+      <footprint>V1A_Qualified:SensePair_P2.54</footprint>
+      <fields>
+        <field name="MPN">N/A etched paired pads</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="TP340_N_A_etched_paired_pads" description=""/>
+      <property name="MPN" value="N/A etched paired pads"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>2bcaf6b4-83f5-5f80-948e-3f1762da30f1</tstamps>
+    </comp>
     <comp ref="U301">
       <value>LTC7001IMSE#PBF</value>
       <footprint>Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm</footprint>
@@ -6215,6 +6575,46 @@
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>046e3b4a-2d00-5d81-a9ef-794635f2262b</tstamps>
     </comp>
+    <comp ref="U640">
+      <value>TLV3201AIDBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <fields>
+        <field name="MPN">TLV3201AIDBVR</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="U640_TLV3201AIDBVR" description=""/>
+      <property name="MPN" value="TLV3201AIDBVR"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>74e6c732-d9a1-5a50-aee1-84f2de6cb629</tstamps>
+    </comp>
+    <comp ref="U642">
+      <value>TLV3201AIDBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <fields>
+        <field name="MPN">TLV3201AIDBVR</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="U642_TLV3201AIDBVR" description=""/>
+      <property name="MPN" value="TLV3201AIDBVR"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>d050eeef-0425-50a4-a332-ae551ab8a4fc</tstamps>
+    </comp>
     <comp ref="U644">
       <value>SN74LVC1G14DBVR</value>
       <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
@@ -6234,6 +6634,26 @@
       <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
       <tstamps>dd976047-d9a3-552b-bc7c-503260f7b28d</tstamps>
+    </comp>
+    <comp ref="U647">
+      <value>ADG4612BRUZ</value>
+      <footprint>Package_SO:TSSOP-16_4.4x5mm_P0.65mm</footprint>
+      <fields>
+        <field name="MPN">ADG4612BRUZ</field>
+        <field name="Source">Gate4A 898759e freeze; Gate4B pin review</field>
+        <field name="Rating">DATASHEET nominal; application limits OPEN</field>
+        <field name="Footprint">Package_SO:TSSOP-16_4.4x5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="V1A" part="U647_ADG4612BRUZ" description=""/>
+      <property name="MPN" value="ADG4612BRUZ"/>
+      <property name="Source" value="Gate4A 898759e freeze; Gate4B pin review"/>
+      <property name="Rating" value="DATASHEET nominal; application limits OPEN"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/75179989-af4b-5de8-b22b-4510e541985c/"/>
+      <tstamps>770bcd69-779f-59fc-bc3a-3c5857ba8e27</tstamps>
     </comp>
     <comp ref="U651">
       <value>ADG4612BRUZ</value>
@@ -7966,7 +8386,46 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="V1A" part="C640_GRM188R71H104KA93D">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 50V</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="C642_GRM188R71H104KA93D">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 50V</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="V1A" part="C644_GRM188R71H104KA93D">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 50V</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="C647_GRM188R71H104KA93D">
       <fields>
         <field name="Reference">C</field>
         <field name="Value">100nF 50V</field>
@@ -8405,6 +8864,62 @@
       </pins>
     </libpart>
     <libpart lib="V1A" part="D619_BAS116_215">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAS116,215</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="D640_BAS116_215">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAS116,215</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="D641_BAS116_215">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAS116,215</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="D642_BAS116_215">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAS116,215</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="D643_BAS116_215">
       <fields>
         <field name="Reference">D</field>
         <field name="Value">BAS116,215</field>
@@ -10101,6 +10616,71 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="V1A" part="R640_TNPW060320K0BEEA">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">20.0k</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="R641_TNPW06036K19BEEA">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">6.19k</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="R642_TNPW060320K0BEEA">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">20.0k</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="R644_TNPW060349K9BEEA">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">49.9k</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="R645_TNPW060310K0BEEA">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="V1A" part="R647_TNPW06031K00BEEA">
       <fields>
         <field name="Reference">R</field>
@@ -10141,6 +10721,32 @@
       </pins>
     </libpart>
     <libpart lib="V1A" part="R650_TNPW0603100KBEEA">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="R651_TNPW0603100KBEEA">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="R652_TNPW0603100KBEEA">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">100k</field>
@@ -10865,6 +11471,58 @@
       <fields>
         <field name="Reference">TP</field>
         <field name="Value">RAW_BALLAST_OUT</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SIGNAL" type="passive"/>
+        <pin num="2" name="RETURN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="TP337_N_A_etched_paired_pads">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">SW_HIGH</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SIGNAL" type="passive"/>
+        <pin num="2" name="RETURN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="TP338_N_A_etched_paired_pads">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VIN_GOOD_FAST</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SIGNAL" type="passive"/>
+        <pin num="2" name="RETURN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="TP339_N_A_etched_paired_pads">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">SW_SENSE</field>
+        <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SIGNAL" type="passive"/>
+        <pin num="2" name="RETURN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="TP340_N_A_etched_paired_pads">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VIN_SENSE</field>
         <field name="Footprint">V1A_Qualified:SensePair_P2.54</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -11660,6 +12318,38 @@
         <pin num="5" name="VCC" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="V1A" part="U640_TLV3201AIDBVR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV3201AIDBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="output"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="IN+" type="input"/>
+        <pin num="4" name="IN-" type="input"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="U642_TLV3201AIDBVR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV3201AIDBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="output"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="IN+" type="input"/>
+        <pin num="4" name="IN-" type="input"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="V1A" part="U644_SN74LVC1G14DBVR">
       <fields>
         <field name="Reference">U</field>
@@ -11674,6 +12364,33 @@
         <pin num="3" name="GND" type="power_in"/>
         <pin num="4" name="Y" type="output"/>
         <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="V1A" part="U647_ADG4612BRUZ">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADG4612BRUZ</field>
+        <field name="Footprint">Package_SO:TSSOP-16_4.4x5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN1" type="input"/>
+        <pin num="2" name="D1" type="passive"/>
+        <pin num="3" name="S1" type="passive"/>
+        <pin num="4" name="VSS" type="power_in"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="S4" type="passive"/>
+        <pin num="7" name="D4" type="passive"/>
+        <pin num="8" name="IN4" type="input"/>
+        <pin num="9" name="IN3" type="input"/>
+        <pin num="10" name="D3" type="passive"/>
+        <pin num="11" name="S3" type="passive"/>
+        <pin num="12" name="NC" type="no_connect"/>
+        <pin num="13" name="VDD" type="power_in"/>
+        <pin num="14" name="S2" type="passive"/>
+        <pin num="15" name="D2" type="passive"/>
+        <pin num="16" name="IN2" type="input"/>
       </pins>
     </libpart>
     <libpart lib="V1A" part="U651_ADG4612BRUZ">
@@ -11860,25 +12577,19 @@
       <node ref="C206" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U201" pin="2" pinfunction="VCC" pintype="power_out"/>
     </net>
-    <net code="18" name="/02_BUCK_5V/L201_IN" class="Default">
-      <node ref="JP201" pin="2" pinfunction="FORCE_B" pintype="passive"/>
-      <node ref="L201" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="PF4" pin="1" pinfunction="FORCE" pintype="passive"/>
-      <node ref="TP202" pin="1" pinfunction="SIGNAL" pintype="passive"/>
-    </net>
-    <net code="19" name="/02_BUCK_5V/L201_OUT" class="Default">
+    <net code="18" name="/02_BUCK_5V/L201_OUT" class="Default">
       <node ref="JP202" pin="1" pinfunction="FORCE_A" pintype="passive"/>
       <node ref="L201" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP204" pin="1" pinfunction="SIGNAL" pintype="passive"/>
     </net>
-    <net code="20" name="/3V3_HOST" class="Signal">
+    <net code="19" name="/3V3_HOST" class="Signal">
       <node ref="C405" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J503" pin="2" pinfunction="VREF" pintype="passive"/>
       <node ref="R406" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R407" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U403" pin="1" pinfunction="VCCA" pintype="power_in"/>
     </net>
-    <net code="21" name="/03_OUTPUT_PROTECTION/3V3_AUX" class="Default">
+    <net code="20" name="/03_OUTPUT_PROTECTION/3V3_AUX" class="Default">
       <node ref="C366" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C369" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C370" pin="1" pinfunction="1" pintype="passive"/>
@@ -11891,20 +12602,20 @@
       <node ref="U323" pin="3" pinfunction="nMR" pintype="input"/>
       <node ref="U323" pin="6" pinfunction="VDD" pintype="power_in"/>
     </net>
-    <net code="22" name="/03_OUTPUT_PROTECTION/ARMED" class="Default">
+    <net code="21" name="/03_OUTPUT_PROTECTION/ARMED" class="Default">
       <node ref="U612" pin="5" pinfunction="Q" pintype="output"/>
       <node ref="U630" pin="1" pinfunction="A" pintype="input"/>
     </net>
-    <net code="23" name="/03_OUTPUT_PROTECTION/ARM_CONTACT" class="Default">
+    <net code="22" name="/03_OUTPUT_PROTECTION/ARM_CONTACT" class="Default">
       <node ref="J301" pin="1" pinfunction="CONTACT" pintype="passive"/>
       <node ref="R707" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U654" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="24" name="/03_OUTPUT_PROTECTION/ARM_DOWN" class="Default">
+    <net code="23" name="/03_OUTPUT_PROTECTION/ARM_DOWN" class="Default">
       <node ref="U612" pin="1" pinfunction="CLK" pintype="input"/>
       <node ref="U654" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="25" name="/03_OUTPUT_PROTECTION/AUX_12V" class="Default">
+    <net code="24" name="/03_OUTPUT_PROTECTION/AUX_12V" class="Default">
       <node ref="C352" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C377" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D304" pin="2" pinfunction="A" pintype="passive"/>
@@ -11913,43 +12624,43 @@
       <node ref="TP331" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U317" pin="4" pinfunction="PVOUT" pintype="power_out"/>
     </net>
-    <net code="26" name="/03_OUTPUT_PROTECTION/AUX_BB_FB" class="Default">
+    <net code="25" name="/03_OUTPUT_PROTECTION/AUX_BB_FB" class="Default">
       <node ref="C356" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C357" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R340" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R341" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U317" pin="8" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="27" name="/03_OUTPUT_PROTECTION/AUX_BST1" class="Default">
+    <net code="26" name="/03_OUTPUT_PROTECTION/AUX_BST1" class="Default">
       <node ref="C354" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U317" pin="16" pinfunction="BST1" pintype="passive"/>
     </net>
-    <net code="28" name="/03_OUTPUT_PROTECTION/AUX_BST2" class="Default">
+    <net code="27" name="/03_OUTPUT_PROTECTION/AUX_BST2" class="Default">
       <node ref="C355" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U317" pin="15" pinfunction="BST2" pintype="passive"/>
     </net>
-    <net code="29" name="/03_OUTPUT_PROTECTION/AUX_COMP" class="Default">
+    <net code="28" name="/03_OUTPUT_PROTECTION/AUX_COMP" class="Default">
       <node ref="C356" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R343" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="30" name="/03_OUTPUT_PROTECTION/AUX_FB" class="Default">
+    <net code="29" name="/03_OUTPUT_PROTECTION/AUX_FB" class="Default">
       <node ref="R330" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R331" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U316" pin="1" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="31" name="/03_OUTPUT_PROTECTION/AUX_FF" class="Default">
+    <net code="30" name="/03_OUTPUT_PROTECTION/AUX_FF" class="Default">
       <node ref="C357" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R344" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="32" name="/03_OUTPUT_PROTECTION/AUX_GATE" class="Default">
+    <net code="31" name="/03_OUTPUT_PROTECTION/AUX_GATE" class="Default">
       <node ref="Q316" pin="1" pinfunction="G" pintype="input"/>
       <node ref="R333" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="33" name="/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE" class="Default">
+    <net code="32" name="/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE" class="Default">
       <node ref="R333" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U316" pin="4" pinfunction="GATE" pintype="output"/>
     </net>
-    <net code="34" name="/03_OUTPUT_PROTECTION/AUX_LIMITED" class="Default">
+    <net code="33" name="/03_OUTPUT_PROTECTION/AUX_LIMITED" class="Default">
       <node ref="C307" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="C351" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C380" pin="1" pinfunction="1" pintype="passive"/>
@@ -11962,7 +12673,7 @@
       <node ref="U317" pin="13" pinfunction="VIN" pintype="power_in"/>
       <node ref="U317" pin="17" pinfunction="PVIN" pintype="power_in"/>
     </net>
-    <net code="35" name="/03_OUTPUT_PROTECTION/AUX_PREHOLD" class="Default">
+    <net code="34" name="/03_OUTPUT_PROTECTION/AUX_PREHOLD" class="Default">
       <node ref="C375" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D304" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R376" pin="1" pinfunction="1" pintype="passive"/>
@@ -11970,7 +12681,7 @@
       <node ref="TP332" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U327" pin="5" pinfunction="IN" pintype="power_in"/>
     </net>
-    <net code="36" name="/03_OUTPUT_PROTECTION/AUX_RAW" class="Default">
+    <net code="35" name="/03_OUTPUT_PROTECTION/AUX_RAW" class="Default">
       <node ref="C378" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D303" pin="2" pinfunction="K" pintype="passive"/>
       <node ref="Q316" pin="2" pinfunction="D_TAB" pintype="passive"/>
@@ -11979,52 +12690,52 @@
       <node ref="U316" pin="6" pinfunction="SHDN" pintype="input"/>
       <node ref="U316" pin="8" pinfunction="UV" pintype="input"/>
     </net>
-    <net code="37" name="/03_OUTPUT_PROTECTION/AUX_RT" class="Default">
+    <net code="36" name="/03_OUTPUT_PROTECTION/AUX_RT" class="Default">
       <node ref="R342" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U317" pin="9" pinfunction="RT" pintype="passive"/>
     </net>
-    <net code="38" name="/03_OUTPUT_PROTECTION/AUX_RUN" class="Default">
+    <net code="37" name="/03_OUTPUT_PROTECTION/AUX_RUN" class="Default">
       <node ref="R345" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R346" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U316" pin="11" pinfunction="ENOUT" pintype="open_collector"/>
       <node ref="U317" pin="2" pinfunction="RUN" pintype="input"/>
     </net>
-    <net code="39" name="/03_OUTPUT_PROTECTION/AUX_SNS" class="Default">
+    <net code="38" name="/03_OUTPUT_PROTECTION/AUX_SNS" class="Default">
       <node ref="Q316" pin="3" pinfunction="S" pintype="passive"/>
       <node ref="R332" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U316" pin="3" pinfunction="SNS" pintype="input"/>
     </net>
-    <net code="40" name="/03_OUTPUT_PROTECTION/AUX_SW1" class="Default">
+    <net code="39" name="/03_OUTPUT_PROTECTION/AUX_SW1" class="Default">
       <node ref="C354" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L301" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U317" pin="18" pinfunction="SW1" pintype="output"/>
     </net>
-    <net code="41" name="/03_OUTPUT_PROTECTION/AUX_SW2" class="Default">
+    <net code="40" name="/03_OUTPUT_PROTECTION/AUX_SW2" class="Default">
       <node ref="C355" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L301" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U317" pin="3" pinfunction="SW2" pintype="output"/>
     </net>
-    <net code="42" name="/03_OUTPUT_PROTECTION/AUX_TMR" class="Default">
+    <net code="41" name="/03_OUTPUT_PROTECTION/AUX_TMR" class="Default">
       <node ref="C350" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U316" pin="12" pinfunction="TMR" pintype="passive"/>
     </net>
-    <net code="43" name="/03_OUTPUT_PROTECTION/AUX_VC" class="Default">
+    <net code="42" name="/03_OUTPUT_PROTECTION/AUX_VC" class="Default">
       <node ref="R343" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U317" pin="7" pinfunction="VC" pintype="passive"/>
     </net>
-    <net code="44" name="/03_OUTPUT_PROTECTION/AUX_VCC" class="Default">
+    <net code="43" name="/03_OUTPUT_PROTECTION/AUX_VCC" class="Default">
       <node ref="C353" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C379" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U317" pin="12" pinfunction="VCC" pintype="power_out"/>
       <node ref="U317" pin="14" pinfunction="PVCC" pintype="power_in"/>
     </net>
-    <net code="45" name="/03_OUTPUT_PROTECTION/CB_BALLAST_OUT" class="Default">
+    <net code="44" name="/03_OUTPUT_PROTECTION/CB_BALLAST_OUT" class="Default">
       <node ref="JP330" pin="1" pinfunction="FORCE_A" pintype="passive"/>
       <node ref="R309" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R311" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP335" pin="1" pinfunction="SIGNAL" pintype="passive"/>
     </net>
-    <net code="46" name="/03_OUTPUT_PROTECTION/CB_DRAIN" class="Default">
+    <net code="45" name="/03_OUTPUT_PROTECTION/CB_DRAIN" class="Default">
       <node ref="JP330" pin="2" pinfunction="FORCE_B" pintype="passive"/>
       <node ref="Q303" pin="5" pinfunction="D" pintype="passive"/>
       <node ref="Q303" pin="6" pinfunction="D" pintype="passive"/>
@@ -12032,42 +12743,42 @@
       <node ref="Q303" pin="8" pinfunction="D" pintype="passive"/>
       <node ref="TP335" pin="2" pinfunction="RETURN" pintype="passive"/>
     </net>
-    <net code="47" name="/03_OUTPUT_PROTECTION/CB_GATE" class="Default">
+    <net code="46" name="/03_OUTPUT_PROTECTION/CB_GATE" class="Default">
       <node ref="Q303" pin="4" pinfunction="G" pintype="input"/>
       <node ref="R306" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R307" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP309" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U315" pin="3" pinfunction="OUTL" pintype="output"/>
     </net>
-    <net code="48" name="/03_OUTPUT_PROTECTION/CB_GATE_UP" class="Default">
+    <net code="47" name="/03_OUTPUT_PROTECTION/CB_GATE_UP" class="Default">
       <node ref="R306" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U315" pin="2" pinfunction="OUTH" pintype="output"/>
     </net>
-    <net code="49" name="/03_OUTPUT_PROTECTION/CB_R_A" class="Default">
+    <net code="48" name="/03_OUTPUT_PROTECTION/CB_R_A" class="Default">
       <node ref="R308" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R309" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="50" name="/03_OUTPUT_PROTECTION/CB_R_B" class="Default">
+    <net code="49" name="/03_OUTPUT_PROTECTION/CB_R_B" class="Default">
       <node ref="R310" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R311" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="51" name="/03_OUTPUT_PROTECTION/CLAMP_2V5" class="Default">
+    <net code="50" name="/03_OUTPUT_PROTECTION/CLAMP_2V5" class="Default">
       <node ref="D301" pin="3" pinfunction="K" pintype="passive"/>
       <node ref="D321" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R361" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="52" name="/03_OUTPUT_PROTECTION/CORE_POR_N" class="Default">
+    <net code="51" name="/03_OUTPUT_PROTECTION/CORE_POR_N" class="Default">
       <node ref="TP321" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U617" pin="1" pinfunction="A" pintype="input"/>
       <node ref="U633" pin="2" pinfunction="B" pintype="input"/>
       <node ref="U662" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="53" name="/03_OUTPUT_PROTECTION/CORE_POR_RAW_N" class="Default">
+    <net code="52" name="/03_OUTPUT_PROTECTION/CORE_POR_RAW_N" class="Default">
       <node ref="R609" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U602" pin="1" pinfunction="nRESET" pintype="open_collector"/>
       <node ref="U662" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="54" name="/03_OUTPUT_PROTECTION/DET5" class="Default">
+    <net code="53" name="/03_OUTPUT_PROTECTION/DET5" class="Default">
       <node ref="C303" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="C304" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="C305" pin="1" pinfunction="+_/_1" pintype="passive"/>
@@ -12083,43 +12794,43 @@
       <node ref="U306" pin="1" pinfunction="OUT" pintype="power_out"/>
       <node ref="U321" pin="13" pinfunction="VDD" pintype="power_in"/>
     </net>
-    <net code="55" name="/03_OUTPUT_PROTECTION/DET_FB" class="Default">
+    <net code="54" name="/03_OUTPUT_PROTECTION/DET_FB" class="Default">
       <node ref="R312" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R313" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U306" pin="2" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="56" name="/03_OUTPUT_PROTECTION/DET_OBS_DIV" class="Default">
+    <net code="55" name="/03_OUTPUT_PROTECTION/DET_OBS_DIV" class="Default">
       <node ref="R364" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R365" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U323" pin="5" pinfunction="SENSE" pintype="input"/>
     </net>
-    <net code="57" name="/03_OUTPUT_PROTECTION/DET_OBS_N" class="Default">
+    <net code="56" name="/03_OUTPUT_PROTECTION/DET_OBS_N" class="Default">
       <node ref="R372" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP323" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U323" pin="1" pinfunction="nRESET" pintype="open_collector"/>
     </net>
-    <net code="58" name="/03_OUTPUT_PROTECTION/DET_PG" class="Default">
+    <net code="57" name="/03_OUTPUT_PROTECTION/DET_PG" class="Default">
       <node ref="R316" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP324" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U306" pin="3" pinfunction="PG" pintype="open_collector"/>
     </net>
-    <net code="59" name="/03_OUTPUT_PROTECTION/DET_SWITCH_EN" class="Default">
+    <net code="58" name="/03_OUTPUT_PROTECTION/DET_SWITCH_EN" class="Default">
       <node ref="R717" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R718" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U321" pin="1" pinfunction="IN1" pintype="input"/>
     </net>
-    <net code="60" name="/03_OUTPUT_PROTECTION/DISPOSAL" class="Default">
+    <net code="59" name="/03_OUTPUT_PROTECTION/DISPOSAL" class="Default">
       <node ref="R321" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R712" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R713" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U315" pin="6" pinfunction="IN+" pintype="input"/>
       <node ref="U330" pin="6" pinfunction="IN+" pintype="input"/>
     </net>
-    <net code="61" name="/03_OUTPUT_PROTECTION/DISPOSAL_LOGIC" class="Default">
+    <net code="60" name="/03_OUTPUT_PROTECTION/DISPOSAL_LOGIC" class="Default">
       <node ref="R712" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U633" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="62" name="/03_OUTPUT_PROTECTION/DRV_HOLD" class="Default">
+    <net code="61" name="/03_OUTPUT_PROTECTION/DRV_HOLD" class="Default">
       <node ref="C308" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="C358" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="C359" pin="1" pinfunction="+" pintype="passive"/>
@@ -12139,72 +12850,72 @@
       <node ref="U327" pin="6" pinfunction="OUT" pintype="power_out"/>
       <node ref="U330" pin="1" pinfunction="VDD" pintype="power_in"/>
     </net>
-    <net code="63" name="/03_OUTPUT_PROTECTION/DRV_OBS_DIV" class="Default">
+    <net code="62" name="/03_OUTPUT_PROTECTION/DRV_OBS_DIV" class="Default">
       <node ref="R362" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R363" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U322" pin="5" pinfunction="SENSE" pintype="input"/>
     </net>
-    <net code="64" name="/03_OUTPUT_PROTECTION/DRV_OBS_N" class="Default">
+    <net code="63" name="/03_OUTPUT_PROTECTION/DRV_OBS_N" class="Default">
       <node ref="R371" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP322" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U322" pin="1" pinfunction="nRESET" pintype="open_collector"/>
     </net>
-    <net code="65" name="/03_OUTPUT_PROTECTION/FAULT" class="Default">
+    <net code="64" name="/03_OUTPUT_PROTECTION/FAULT" class="Default">
       <node ref="R649" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP308" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U610" pin="3" pinfunction="nQ" pintype="output"/>
       <node ref="U633" pin="1" pinfunction="A" pintype="input"/>
     </net>
-    <net code="66" name="/03_OUTPUT_PROTECTION/FAULT_CLEAR_N" class="Default">
+    <net code="65" name="/03_OUTPUT_PROTECTION/FAULT_CLEAR_N" class="Default">
       <node ref="U610" pin="6" pinfunction="nCLR" pintype="input"/>
       <node ref="U617" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="67" name="/03_OUTPUT_PROTECTION/FAULT_DRIVE" class="Default">
+    <net code="66" name="/03_OUTPUT_PROTECTION/FAULT_DRIVE" class="Default">
       <node ref="Q304" pin="1" pinfunction="G" pintype="input"/>
       <node ref="R649" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R650" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="68" name="/03_OUTPUT_PROTECTION/HOLD_AUXOFF" class="Default">
+    <net code="67" name="/03_OUTPUT_PROTECTION/HOLD_AUXOFF" class="Default">
       <node ref="TP327" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U327" pin="3" pinfunction="AUXOFF" pintype="open_collector"/>
     </net>
-    <net code="69" name="/03_OUTPUT_PROTECTION/HOLD_DVDT" class="Default">
+    <net code="68" name="/03_OUTPUT_PROTECTION/HOLD_DVDT" class="Default">
       <node ref="R374" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U327" pin="7" pinfunction="DVDT" pintype="passive"/>
     </net>
-    <net code="70" name="/03_OUTPUT_PROTECTION/HOLD_EN" class="Default">
+    <net code="69" name="/03_OUTPUT_PROTECTION/HOLD_EN" class="Default">
       <node ref="R376" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R377" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U327" pin="1" pinfunction="EN_UVLO" pintype="input"/>
     </net>
-    <net code="71" name="/03_OUTPUT_PROTECTION/HOLD_FLT" class="Default">
+    <net code="70" name="/03_OUTPUT_PROTECTION/HOLD_FLT" class="Default">
       <node ref="TP328" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U327" pin="4" pinfunction="FLT" pintype="open_collector"/>
     </net>
-    <net code="72" name="/03_OUTPUT_PROTECTION/HOLD_ILM" class="Default">
+    <net code="71" name="/03_OUTPUT_PROTECTION/HOLD_ILM" class="Default">
       <node ref="R375" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U327" pin="9" pinfunction="ILM" pintype="passive"/>
     </net>
-    <net code="73" name="/03_OUTPUT_PROTECTION/HOLD_OVLO" class="Default">
+    <net code="72" name="/03_OUTPUT_PROTECTION/HOLD_OVLO" class="Default">
       <node ref="R378" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R379" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U327" pin="2" pinfunction="OVLO" pintype="input"/>
     </net>
-    <net code="74" name="/03_OUTPUT_PROTECTION/HOLD_SLEW_C" class="Default">
+    <net code="73" name="/03_OUTPUT_PROTECTION/HOLD_SLEW_C" class="Default">
       <node ref="C374" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R374" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="75" name="/03_OUTPUT_PROTECTION/MAIN_FIXTURE" class="Default">
+    <net code="74" name="/03_OUTPUT_PROTECTION/MAIN_FIXTURE" class="Default">
       <node ref="J606" pin="1" pinfunction="CONTACT" pintype="passive"/>
       <node ref="R731" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="76" name="/03_OUTPUT_PROTECTION/MAIN_PERMISSION" class="Default">
+    <net code="75" name="/03_OUTPUT_PROTECTION/MAIN_PERMISSION" class="Default">
       <node ref="R647" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R731" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U630" pin="4" pinfunction="Y" pintype="output"/>
       <node ref="U631" pin="1" pinfunction="A" pintype="input"/>
     </net>
-    <net code="77" name="/03_OUTPUT_PROTECTION/MANUAL_RAILS_VALID" class="Default">
+    <net code="76" name="/03_OUTPUT_PROTECTION/MANUAL_RAILS_VALID" class="Default">
       <node ref="JP600" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="R717" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R729" pin="1" pinfunction="1" pintype="passive"/>
@@ -12212,25 +12923,25 @@
       <node ref="U623" pin="2" pinfunction="B" pintype="input"/>
       <node ref="U628" pin="2" pinfunction="B" pintype="input"/>
     </net>
-    <net code="78" name="/03_OUTPUT_PROTECTION/MANUAL_VALID_NOFAULT" class="Default">
+    <net code="77" name="/03_OUTPUT_PROTECTION/MANUAL_VALID_NOFAULT" class="Default">
       <node ref="U612" pin="6" pinfunction="nCLR" pintype="input"/>
       <node ref="U623" pin="4" pinfunction="Y" pintype="output"/>
       <node ref="U630" pin="2" pinfunction="B" pintype="input"/>
     </net>
-    <net code="79" name="/03_OUTPUT_PROTECTION/NOFAULT" class="Default">
+    <net code="78" name="/03_OUTPUT_PROTECTION/NOFAULT" class="Default">
       <node ref="U610" pin="5" pinfunction="Q" pintype="output"/>
       <node ref="U623" pin="1" pinfunction="A" pintype="input"/>
     </net>
-    <net code="80" name="/03_OUTPUT_PROTECTION/NO_TRUE_FAULT" class="Default">
+    <net code="79" name="/03_OUTPUT_PROTECTION/NO_TRUE_FAULT" class="Default">
       <node ref="U616" pin="4" pinfunction="Y" pintype="output"/>
       <node ref="U617" pin="2" pinfunction="B" pintype="input"/>
     </net>
-    <net code="81" name="/03_OUTPUT_PROTECTION/OV_COMPARATOR" class="Default">
+    <net code="80" name="/03_OUTPUT_PROTECTION/OV_COMPARATOR" class="Default">
       <node ref="TP307" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U303" pin="1" pinfunction="OUT" pintype="output"/>
       <node ref="U614" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="82" name="/03_OUTPUT_PROTECTION/OV_DIV" class="Default">
+    <net code="81" name="/03_OUTPUT_PROTECTION/OV_DIV" class="Default">
       <node ref="D301" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="D322" pin="3" pinfunction="K" pintype="passive"/>
       <node ref="R301" pin="2" pinfunction="2" pintype="passive"/>
@@ -12238,50 +12949,50 @@
       <node ref="TP306" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U321" pin="2" pinfunction="D1" pintype="passive"/>
     </net>
-    <net code="83" name="/03_OUTPUT_PROTECTION/OV_RAW" class="Default">
+    <net code="82" name="/03_OUTPUT_PROTECTION/OV_RAW" class="Default">
       <node ref="U614" pin="4" pinfunction="Y" pintype="output"/>
       <node ref="U628" pin="1" pinfunction="A" pintype="input"/>
     </net>
-    <net code="84" name="/03_OUTPUT_PROTECTION/OV_SENSE" class="Default">
+    <net code="83" name="/03_OUTPUT_PROTECTION/OV_SENSE" class="Default">
       <node ref="R303" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R367" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U303" pin="4" pinfunction="IN-" pintype="input"/>
     </net>
-    <net code="85" name="/03_OUTPUT_PROTECTION/OV_SWITCHED" class="Default">
+    <net code="84" name="/03_OUTPUT_PROTECTION/OV_SWITCHED" class="Default">
       <node ref="R303" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U321" pin="3" pinfunction="S1" pintype="passive"/>
     </net>
-    <net code="86" name="/03_OUTPUT_PROTECTION/OV_VALID" class="Default">
+    <net code="85" name="/03_OUTPUT_PROTECTION/OV_VALID" class="Default">
       <node ref="U615" pin="2" pinfunction="B" pintype="input"/>
       <node ref="U628" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="87" name="/03_OUTPUT_PROTECTION/PG_DIV" class="Default">
+    <net code="86" name="/03_OUTPUT_PROTECTION/PG_DIV" class="Default">
       <node ref="D618" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="D619" pin="3" pinfunction="K" pintype="passive"/>
       <node ref="R622" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U651" pin="2" pinfunction="D1" pintype="passive"/>
     </net>
-    <net code="88" name="/03_OUTPUT_PROTECTION/PG_FIXTURE" class="Default">
+    <net code="87" name="/03_OUTPUT_PROTECTION/PG_FIXTURE" class="Default">
       <node ref="J605" pin="1" pinfunction="CONTACT" pintype="passive"/>
       <node ref="R730" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="89" name="/03_OUTPUT_PROTECTION/PG_GOOD" class="Default">
+    <net code="88" name="/03_OUTPUT_PROTECTION/PG_GOOD" class="Default">
       <node ref="R730" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U607" pin="1" pinfunction="OUT" pintype="output"/>
       <node ref="U631" pin="2" pinfunction="B" pintype="input"/>
     </net>
-    <net code="90" name="/03_OUTPUT_PROTECTION/PG_SENSE" class="Default">
+    <net code="89" name="/03_OUTPUT_PROTECTION/PG_SENSE" class="Default">
       <node ref="R623" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U607" pin="3" pinfunction="IN+" pintype="input"/>
       <node ref="U651" pin="3" pinfunction="S1" pintype="passive"/>
     </net>
-    <net code="91" name="/03_OUTPUT_PROTECTION/PROT_BST" class="Default">
+    <net code="90" name="/03_OUTPUT_PROTECTION/PROT_BST" class="Default">
       <node ref="C301" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="D302" pin="3" pinfunction="K" pintype="passive"/>
       <node ref="TP334" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U301" pin="9" pinfunction="BST" pintype="passive"/>
     </net>
-    <net code="92" name="/03_OUTPUT_PROTECTION/PROT_GATE" class="Default">
+    <net code="91" name="/03_OUTPUT_PROTECTION/PROT_GATE" class="Default">
       <node ref="Q301" pin="4" pinfunction="G" pintype="input"/>
       <node ref="Q302" pin="4" pinfunction="G" pintype="input"/>
       <node ref="R304" pin="2" pinfunction="2" pintype="passive"/>
@@ -12290,7 +13001,7 @@
       <node ref="TP314" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U301" pin="6" pinfunction="TGDN" pintype="output"/>
     </net>
-    <net code="93" name="/03_OUTPUT_PROTECTION/PROT_MID" class="Default">
+    <net code="92" name="/03_OUTPUT_PROTECTION/PROT_MID" class="Default">
       <node ref="C301" pin="2" pinfunction="-_/_2" pintype="passive"/>
       <node ref="Q301" pin="1" pinfunction="S" pintype="passive"/>
       <node ref="Q301" pin="2" pinfunction="S" pintype="passive"/>
@@ -12304,53 +13015,53 @@
       <node ref="TP334" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="U301" pin="8" pinfunction="TS" pintype="passive"/>
     </net>
-    <net code="94" name="/03_OUTPUT_PROTECTION/RAW_A1" class="Default">
+    <net code="93" name="/03_OUTPUT_PROTECTION/RAW_A1" class="Default">
       <node ref="R380" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R381" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="95" name="/03_OUTPUT_PROTECTION/RAW_A2" class="Default">
+    <net code="94" name="/03_OUTPUT_PROTECTION/RAW_A2" class="Default">
       <node ref="R381" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R382" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="96" name="/03_OUTPUT_PROTECTION/RAW_A3" class="Default">
+    <net code="95" name="/03_OUTPUT_PROTECTION/RAW_A3" class="Default">
       <node ref="R382" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R383" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="97" name="/03_OUTPUT_PROTECTION/RAW_A4" class="Default">
+    <net code="96" name="/03_OUTPUT_PROTECTION/RAW_A4" class="Default">
       <node ref="R383" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R386" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="98" name="/03_OUTPUT_PROTECTION/RAW_A5" class="Default">
+    <net code="97" name="/03_OUTPUT_PROTECTION/RAW_A5" class="Default">
       <node ref="R386" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R387" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="99" name="/03_OUTPUT_PROTECTION/RAW_B1" class="Default">
+    <net code="98" name="/03_OUTPUT_PROTECTION/RAW_B1" class="Default">
       <node ref="R388" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R389" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="100" name="/03_OUTPUT_PROTECTION/RAW_B2" class="Default">
+    <net code="99" name="/03_OUTPUT_PROTECTION/RAW_B2" class="Default">
       <node ref="R389" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R390" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="101" name="/03_OUTPUT_PROTECTION/RAW_B3" class="Default">
+    <net code="100" name="/03_OUTPUT_PROTECTION/RAW_B3" class="Default">
       <node ref="R390" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R391" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="102" name="/03_OUTPUT_PROTECTION/RAW_B4" class="Default">
+    <net code="101" name="/03_OUTPUT_PROTECTION/RAW_B4" class="Default">
       <node ref="R391" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R392" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="103" name="/03_OUTPUT_PROTECTION/RAW_B5" class="Default">
+    <net code="102" name="/03_OUTPUT_PROTECTION/RAW_B5" class="Default">
       <node ref="R392" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R393" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="104" name="/03_OUTPUT_PROTECTION/RAW_BALLAST_OUT" class="Default">
+    <net code="103" name="/03_OUTPUT_PROTECTION/RAW_BALLAST_OUT" class="Default">
       <node ref="JP331" pin="1" pinfunction="FORCE_A" pintype="passive"/>
       <node ref="R387" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R393" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP336" pin="1" pinfunction="SIGNAL" pintype="passive"/>
     </net>
-    <net code="105" name="/03_OUTPUT_PROTECTION/RAW_DUMP_DRAIN" class="Default">
+    <net code="104" name="/03_OUTPUT_PROTECTION/RAW_DUMP_DRAIN" class="Default">
       <node ref="JP331" pin="2" pinfunction="FORCE_B" pintype="passive"/>
       <node ref="Q330" pin="5" pinfunction="D" pintype="passive"/>
       <node ref="Q330" pin="6" pinfunction="D" pintype="passive"/>
@@ -12358,64 +13069,71 @@
       <node ref="Q330" pin="8" pinfunction="D" pintype="passive"/>
       <node ref="TP336" pin="2" pinfunction="RETURN" pintype="passive"/>
     </net>
-    <net code="106" name="/03_OUTPUT_PROTECTION/RAW_DUMP_GATE" class="Default">
+    <net code="105" name="/03_OUTPUT_PROTECTION/RAW_DUMP_GATE" class="Default">
       <node ref="Q330" pin="4" pinfunction="G" pintype="input"/>
       <node ref="R384" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R385" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP315" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U330" pin="3" pinfunction="OUTL" pintype="output"/>
     </net>
-    <net code="107" name="/03_OUTPUT_PROTECTION/RAW_DUMP_UP" class="Default">
+    <net code="106" name="/03_OUTPUT_PROTECTION/RAW_DUMP_UP" class="Default">
       <node ref="R384" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U330" pin="2" pinfunction="OUTH" pintype="output"/>
     </net>
-    <net code="108" name="/03_OUTPUT_PROTECTION/REF1V25" class="Default">
+    <net code="107" name="/03_OUTPUT_PROTECTION/REF1V25" class="Default">
       <node ref="R605" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R606" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U607" pin="4" pinfunction="IN-" pintype="input"/>
+      <node ref="U640" pin="4" pinfunction="IN-" pintype="input"/>
+      <node ref="U642" pin="4" pinfunction="IN-" pintype="input"/>
     </net>
-    <net code="109" name="/03_OUTPUT_PROTECTION/REF_2V5" class="Default">
+    <net code="108" name="/03_OUTPUT_PROTECTION/REF_2V5" class="Default">
       <node ref="C302" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="R373" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP303" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U302" pin="6" pinfunction="VOUT" pintype="power_out"/>
     </net>
-    <net code="110" name="/03_OUTPUT_PROTECTION/REF_SAFE_2V5" class="Default">
+    <net code="109" name="/03_OUTPUT_PROTECTION/REF_SAFE_2V5" class="Default">
       <node ref="C603" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D601" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="D618" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="D640" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="D642" pin="3" pinfunction="K" pintype="passive"/>
       <node ref="R604" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R605" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="111" name="/03_OUTPUT_PROTECTION/REF_SENSE" class="Default">
+    <net code="110" name="/03_OUTPUT_PROTECTION/REF_SENSE" class="Default">
       <node ref="R373" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U303" pin="3" pinfunction="IN+" pintype="input"/>
     </net>
-    <net code="112" name="/03_OUTPUT_PROTECTION/RESET_CONTACT" class="Default">
+    <net code="111" name="/03_OUTPUT_PROTECTION/RESET_CONTACT" class="Default">
       <node ref="J302" pin="1" pinfunction="CONTACT" pintype="passive"/>
       <node ref="R708" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U656" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="113" name="/03_OUTPUT_PROTECTION/RESET_DOWN" class="Default">
+    <net code="112" name="/03_OUTPUT_PROTECTION/RESET_DOWN" class="Default">
       <node ref="U610" pin="1" pinfunction="CLK" pintype="input"/>
       <node ref="U656" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="114" name="/03_OUTPUT_PROTECTION/RUN_GATE" class="Default">
+    <net code="113" name="/03_OUTPUT_PROTECTION/RUN_GATE" class="Default">
       <node ref="R322" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R709" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R710" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP319" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U301" pin="4" pinfunction="INP" pintype="input"/>
     </net>
-    <net code="115" name="/03_OUTPUT_PROTECTION/RUN_GATE_LOGIC" class="Default">
+    <net code="114" name="/03_OUTPUT_PROTECTION/RUN_GATE_LOGIC" class="Default">
       <node ref="R709" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U632" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="116" name="/03_OUTPUT_PROTECTION/SAFE5" class="Default">
+    <net code="115" name="/03_OUTPUT_PROTECTION/SAFE5" class="Default">
       <node ref="C601" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C604" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C609" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C640" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C642" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C644" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C647" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C651" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C710" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C711" pin="1" pinfunction="1" pintype="passive"/>
@@ -12468,7 +13186,12 @@
       <node ref="U631" pin="5" pinfunction="VCC" pintype="power_in"/>
       <node ref="U632" pin="5" pinfunction="VCC" pintype="power_in"/>
       <node ref="U633" pin="5" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U640" pin="5" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U642" pin="5" pinfunction="VCC" pintype="power_in"/>
       <node ref="U644" pin="5" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U647" pin="1" pinfunction="IN1" pintype="input"/>
+      <node ref="U647" pin="13" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U647" pin="16" pinfunction="IN2" pintype="input"/>
       <node ref="U651" pin="1" pinfunction="IN1" pintype="input"/>
       <node ref="U651" pin="13" pinfunction="VDD" pintype="power_in"/>
       <node ref="U654" pin="5" pinfunction="VCC" pintype="power_in"/>
@@ -12476,48 +13199,48 @@
       <node ref="U661" pin="5" pinfunction="VCC" pintype="power_in"/>
       <node ref="U662" pin="5" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="117" name="/03_OUTPUT_PROTECTION/SAFE_FB" class="Default">
+    <net code="116" name="/03_OUTPUT_PROTECTION/SAFE_FB" class="Default">
       <node ref="R600" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R601" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U600" pin="2" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="118" name="/03_OUTPUT_PROTECTION/SAFE_FEED" class="Default">
+    <net code="117" name="/03_OUTPUT_PROTECTION/SAFE_FEED" class="Default">
       <node ref="C600" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D600" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R602" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="119" name="/03_OUTPUT_PROTECTION/SAFE_IN" class="Default">
+    <net code="118" name="/03_OUTPUT_PROTECTION/SAFE_IN" class="Default">
       <node ref="C602" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R602" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U600" pin="5" pinfunction="EN" pintype="input"/>
       <node ref="U600" pin="8" pinfunction="IN" pintype="power_in"/>
     </net>
-    <net code="120" name="/03_OUTPUT_PROTECTION/SERIES_ARMED" class="Default">
+    <net code="119" name="/03_OUTPUT_PROTECTION/SERIES_ARMED" class="Default">
       <node ref="U611" pin="5" pinfunction="Q" pintype="output"/>
       <node ref="U632" pin="1" pinfunction="A" pintype="input"/>
     </net>
-    <net code="121" name="/03_OUTPUT_PROTECTION/SERIES_CLEAR_N" class="Default">
+    <net code="120" name="/03_OUTPUT_PROTECTION/SERIES_CLEAR_N" class="Default">
       <node ref="U611" pin="6" pinfunction="nCLR" pintype="input"/>
       <node ref="U631" pin="4" pinfunction="Y" pintype="output"/>
       <node ref="U632" pin="2" pinfunction="B" pintype="input"/>
     </net>
-    <net code="122" name="/03_OUTPUT_PROTECTION/SERIES_CONTACT" class="Default">
+    <net code="121" name="/03_OUTPUT_PROTECTION/SERIES_CONTACT" class="Default">
       <node ref="J604" pin="1" pinfunction="CONTACT" pintype="passive"/>
       <node ref="R728" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U661" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="123" name="/03_OUTPUT_PROTECTION/SERIES_DOWN" class="Default">
+    <net code="122" name="/03_OUTPUT_PROTECTION/SERIES_DOWN" class="Default">
       <node ref="U611" pin="1" pinfunction="CLK" pintype="input"/>
       <node ref="U661" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="124" name="/03_OUTPUT_PROTECTION/SERIES_OUT" class="Default">
+    <net code="123" name="/03_OUTPUT_PROTECTION/SERIES_OUT" class="Default">
       <node ref="JP301" pin="1" pinfunction="FORCE_A" pintype="passive"/>
       <node ref="Q302" pin="5" pinfunction="D" pintype="passive"/>
       <node ref="Q302" pin="6" pinfunction="D" pintype="passive"/>
       <node ref="Q302" pin="7" pinfunction="D" pintype="passive"/>
       <node ref="Q302" pin="8" pinfunction="D" pintype="passive"/>
     </net>
-    <net code="125" name="/03_OUTPUT_PROTECTION/SER_DRV" class="Default">
+    <net code="124" name="/03_OUTPUT_PROTECTION/SER_DRV" class="Default">
       <node ref="C306" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="C309" pin="1" pinfunction="+_/_1" pintype="passive"/>
       <node ref="C660" pin="1" pinfunction="1" pintype="passive"/>
@@ -12527,33 +13250,69 @@
       <node ref="TP313" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U301" pin="1" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="126" name="/03_OUTPUT_PROTECTION/SER_FEED" class="Default">
+    <net code="125" name="/03_OUTPUT_PROTECTION/SER_FEED" class="Default">
       <node ref="D660" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="JP660" pin="1" pinfunction="CONTACT" pintype="passive"/>
     </net>
-    <net code="127" name="/03_OUTPUT_PROTECTION/SER_UVLO" class="Default">
+    <net code="126" name="/03_OUTPUT_PROTECTION/SER_UVLO" class="Default">
       <node ref="R711" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U301" pin="2" pinfunction="VCCUV" pintype="input"/>
     </net>
-    <net code="128" name="/03_OUTPUT_PROTECTION/SOURCE_CONTACT" class="Default">
+    <net code="127" name="/03_OUTPUT_PROTECTION/SOURCE_CONTACT" class="Default">
       <node ref="J603" pin="1" pinfunction="CONTACT" pintype="passive"/>
       <node ref="R727" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U644" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="129" name="/03_OUTPUT_PROTECTION/SRC_TRIP" class="Default">
+    <net code="128" name="/03_OUTPUT_PROTECTION/SRC_TRIP" class="Default">
       <node ref="TP320" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U615" pin="1" pinfunction="A" pintype="input"/>
       <node ref="U644" pin="4" pinfunction="Y" pintype="output"/>
     </net>
-    <net code="130" name="/03_OUTPUT_PROTECTION/TGUP_SLOW" class="Default">
+    <net code="129" name="/03_OUTPUT_PROTECTION/SW_HIGH" class="Default">
+      <node ref="R642" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP337" pin="1" pinfunction="SIGNAL" pintype="passive"/>
+      <node ref="U640" pin="1" pinfunction="OUT" pintype="output"/>
+    </net>
+    <net code="130" name="/03_OUTPUT_PROTECTION/SW_HYS" class="Default">
+      <node ref="D640" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D641" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="R640" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R641" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R642" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U647" pin="2" pinfunction="D1" pintype="passive"/>
+    </net>
+    <net code="131" name="/03_OUTPUT_PROTECTION/SW_SENSE" class="Default">
+      <node ref="R651" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP339" pin="1" pinfunction="SIGNAL" pintype="passive"/>
+      <node ref="U640" pin="3" pinfunction="IN+" pintype="input"/>
+      <node ref="U647" pin="3" pinfunction="S1" pintype="passive"/>
+    </net>
+    <net code="132" name="/03_OUTPUT_PROTECTION/TGUP_SLOW" class="Default">
       <node ref="R304" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U301" pin="7" pinfunction="TGUP" pintype="output"/>
     </net>
-    <net code="131" name="/03_OUTPUT_PROTECTION/TRUE_FAULT" class="Default">
+    <net code="133" name="/03_OUTPUT_PROTECTION/TRUE_FAULT" class="Default">
       <node ref="U615" pin="4" pinfunction="Y" pintype="output"/>
       <node ref="U616" pin="2" pinfunction="A" pintype="input"/>
     </net>
-    <net code="132" name="/04_POWER_MONITOR/3V3_LOCAL" class="Default">
+    <net code="134" name="/03_OUTPUT_PROTECTION/VIN_GOOD_FAST" class="Default">
+      <node ref="TP338" pin="1" pinfunction="SIGNAL" pintype="passive"/>
+      <node ref="U642" pin="1" pinfunction="OUT" pintype="output"/>
+    </net>
+    <net code="135" name="/03_OUTPUT_PROTECTION/VIN_MON" class="Default">
+      <node ref="D642" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D643" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="R644" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R645" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U647" pin="15" pinfunction="D2" pintype="passive"/>
+    </net>
+    <net code="136" name="/03_OUTPUT_PROTECTION/VIN_SENSE" class="Default">
+      <node ref="R652" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP340" pin="1" pinfunction="SIGNAL" pintype="passive"/>
+      <node ref="U642" pin="3" pinfunction="IN+" pintype="input"/>
+      <node ref="U647" pin="14" pinfunction="S2" pintype="passive"/>
+    </net>
+    <net code="137" name="/04_POWER_MONITOR/3V3_LOCAL" class="Default">
       <node ref="C402" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C404" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C406" pin="1" pinfunction="1" pintype="passive"/>
@@ -12566,58 +13325,58 @@
       <node ref="U403" pin="5" pinfunction="EN" pintype="input"/>
       <node ref="U403" pin="8" pinfunction="VCCB" pintype="power_in"/>
     </net>
-    <net code="133" name="/04_POWER_MONITOR/ALERT_LOCAL" class="Default">
+    <net code="138" name="/04_POWER_MONITOR/ALERT_LOCAL" class="Default">
       <node ref="R408" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="TP401" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U401" pin="3" pinfunction="ALERT" pintype="open_collector"/>
     </net>
-    <net code="134" name="/04_POWER_MONITOR/INA_IN_MINUS" class="Default">
+    <net code="139" name="/04_POWER_MONITOR/INA_IN_MINUS" class="Default">
       <node ref="C401" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R403" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="9" pinfunction="IN-" pintype="input"/>
     </net>
-    <net code="135" name="/04_POWER_MONITOR/INA_IN_PLUS" class="Default">
+    <net code="140" name="/04_POWER_MONITOR/INA_IN_PLUS" class="Default">
       <node ref="C401" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R402" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="10" pinfunction="IN+" pintype="input"/>
     </net>
-    <net code="136" name="/04_POWER_MONITOR/SCL_LOCAL" class="Default">
+    <net code="141" name="/04_POWER_MONITOR/SCL_LOCAL" class="Default">
       <node ref="R405" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="5" pinfunction="SCL" pintype="input"/>
       <node ref="U403" pin="7" pinfunction="SCLB" pintype="bidirectional"/>
     </net>
-    <net code="137" name="/04_POWER_MONITOR/SDA_LOCAL" class="Default">
+    <net code="142" name="/04_POWER_MONITOR/SDA_LOCAL" class="Default">
       <node ref="R404" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U401" pin="4" pinfunction="SDA" pintype="bidirectional"/>
       <node ref="U403" pin="6" pinfunction="SDAB" pintype="bidirectional"/>
     </net>
-    <net code="138" name="/04_POWER_MONITOR/SHUNT_KMINUS" class="Default">
+    <net code="143" name="/04_POWER_MONITOR/SHUNT_KMINUS" class="Default">
       <node ref="R401" pin="3" pinfunction="S-" pintype="passive"/>
       <node ref="R403" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP403" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="139" name="/04_POWER_MONITOR/SHUNT_KPLUS" class="Default">
+    <net code="144" name="/04_POWER_MONITOR/SHUNT_KPLUS" class="Default">
       <node ref="R401" pin="2" pinfunction="S+" pintype="passive"/>
       <node ref="R402" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP402" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="140" name="/05_IO_TEST/LOAD_FIXTURE" class="Default">
+    <net code="145" name="/05_IO_TEST/LOAD_FIXTURE" class="Default">
       <node ref="JP501" pin="2" pinfunction="FORCE_B" pintype="passive"/>
       <node ref="TP505" pin="1" pinfunction="SIGNAL" pintype="passive"/>
     </net>
-    <net code="141" name="/BUCK_INPUT_PGOOD" class="Signal">
+    <net code="146" name="/BUCK_INPUT_PGOOD" class="Signal">
       <node ref="R206" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R207" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="16" pinfunction="PGOOD" pintype="open_collector"/>
       <node ref="U201" pin="7" pinfunction="EN/SYNC" pintype="input"/>
     </net>
-    <net code="142" name="/BUCK_PGOOD" class="Signal">
+    <net code="147" name="/BUCK_PGOOD" class="Signal">
       <node ref="R317" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R622" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP317" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U201" pin="5" pinfunction="PGOOD" pintype="open_collector"/>
     </net>
-    <net code="143" name="/GND" class="HighCurrent">
+    <net code="148" name="/GND" class="HighCurrent">
       <node ref="C101" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C102" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C103" pin="2" pinfunction="2" pintype="passive"/>
@@ -12683,7 +13442,10 @@
       <node ref="C603" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C604" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C609" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C640" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C642" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C644" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C647" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C651" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C660" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="C710" pin="2" pinfunction="2" pintype="passive"/>
@@ -12716,6 +13478,8 @@
       <node ref="D601" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D601" pin="3" pinfunction="NC_GND" pintype="passive"/>
       <node ref="D619" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D641" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D643" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="J301" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="J302" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="J501" pin="2" pinfunction="RETURN" pintype="passive"/>
@@ -12762,8 +13526,12 @@
       <node ref="R603" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R606" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R623" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R641" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R645" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R648" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R650" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R651" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R652" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R710" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R711" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R713" pin="2" pinfunction="2" pintype="passive"/>
@@ -12800,6 +13568,10 @@
       <node ref="TP331" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="TP332" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="TP333" pin="2" pinfunction="RETURN" pintype="passive"/>
+      <node ref="TP337" pin="2" pinfunction="RETURN" pintype="passive"/>
+      <node ref="TP338" pin="2" pinfunction="RETURN" pintype="passive"/>
+      <node ref="TP339" pin="2" pinfunction="RETURN" pintype="passive"/>
+      <node ref="TP340" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="TP405" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="TP406" pin="2" pinfunction="RETURN" pintype="passive"/>
       <node ref="TP504" pin="1" pinfunction="TP" pintype="passive"/>
@@ -12868,7 +13640,17 @@
       <node ref="U631" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U632" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U633" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U640" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U642" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U644" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U647" pin="10" pinfunction="D3" pintype="passive"/>
+      <node ref="U647" pin="11" pinfunction="S3" pintype="passive"/>
+      <node ref="U647" pin="4" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U647" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="U647" pin="6" pinfunction="S4" pintype="passive"/>
+      <node ref="U647" pin="7" pinfunction="D4" pintype="passive"/>
+      <node ref="U647" pin="8" pinfunction="IN4" pintype="input"/>
+      <node ref="U647" pin="9" pinfunction="IN3" pintype="input"/>
       <node ref="U651" pin="10" pinfunction="D3" pintype="passive"/>
       <node ref="U651" pin="11" pinfunction="S3" pintype="passive"/>
       <node ref="U651" pin="14" pinfunction="S2" pintype="passive"/>
@@ -12885,7 +13667,7 @@
       <node ref="U661" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U662" pin="3" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="144" name="/INPUT_SHDN" class="Signal">
+    <net code="149" name="/INPUT_SHDN" class="Signal">
       <node ref="Q304" pin="3" pinfunction="D" pintype="open_collector"/>
       <node ref="R647" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R648" pin="1" pinfunction="1" pintype="passive"/>
@@ -12893,7 +13675,14 @@
       <node ref="TP312" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U101" pin="12" pinfunction="SHDN" pintype="input"/>
     </net>
-    <net code="145" name="/LOAD_5V1" class="HighCurrent">
+    <net code="150" name="/L201_IN" class="Switching">
+      <node ref="JP201" pin="2" pinfunction="FORCE_B" pintype="passive"/>
+      <node ref="L201" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="PF4" pin="1" pinfunction="FORCE" pintype="passive"/>
+      <node ref="R640" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP202" pin="1" pinfunction="SIGNAL" pintype="passive"/>
+    </net>
+    <net code="151" name="/LOAD_5V1" class="HighCurrent">
       <node ref="J502" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="JP501" pin="1" pinfunction="FORCE_A" pintype="passive"/>
       <node ref="R401" pin="4" pinfunction="I-" pintype="passive"/>
@@ -12901,17 +13690,17 @@
       <node ref="TP503" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U401" pin="8" pinfunction="VBUS" pintype="input"/>
     </net>
-    <net code="146" name="/SCL_HOST" class="Signal">
+    <net code="152" name="/SCL_HOST" class="Signal">
       <node ref="J503" pin="4" pinfunction="SCL" pintype="passive"/>
       <node ref="R407" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U403" pin="2" pinfunction="SCLA" pintype="bidirectional"/>
     </net>
-    <net code="147" name="/SDA_HOST" class="Signal">
+    <net code="153" name="/SDA_HOST" class="Signal">
       <node ref="J503" pin="3" pinfunction="SDA" pintype="passive"/>
       <node ref="R406" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U403" pin="3" pinfunction="SDAA" pintype="bidirectional"/>
     </net>
-    <net code="148" name="/VIN_FUSED" class="HighCurrent">
+    <net code="154" name="/VIN_FUSED" class="HighCurrent">
       <node ref="C101" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D101" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="D303" pin="1" pinfunction="A" pintype="passive"/>
@@ -12924,7 +13713,7 @@
       <node ref="R103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="5" pinfunction="IN_SYS" pintype="power_in"/>
     </net>
-    <net code="149" name="/VIN_PROTECTED" class="HighCurrent">
+    <net code="155" name="/VIN_PROTECTED" class="HighCurrent">
       <node ref="C201" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C202" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C203" pin="1" pinfunction="1" pintype="passive"/>
@@ -12935,17 +13724,18 @@
       <node ref="R106" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R108" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R206" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R644" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP502" pin="1" pinfunction="TP" pintype="passive"/>
       <node ref="U201" pin="12" pinfunction="VIN2" pintype="power_in"/>
       <node ref="U201" pin="8" pinfunction="VIN1" pintype="power_in"/>
     </net>
-    <net code="150" name="/VIN_RAW" class="HighCurrent">
+    <net code="156" name="/VIN_RAW" class="HighCurrent">
       <node ref="F101" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J501" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="PF1" pin="1" pinfunction="FORCE" pintype="passive"/>
       <node ref="TP501" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="151" name="/VOUT_5V1" class="HighCurrent">
+    <net code="157" name="/VOUT_5V1" class="HighCurrent">
       <node ref="C207" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C209" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="C210" pin="1" pinfunction="1" pintype="passive"/>
@@ -12974,7 +13764,7 @@
       <node ref="TP203" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="TP301" pin="1" pinfunction="TP" pintype="passive"/>
     </net>
-    <net code="152" name="/VOUT_PROTECTED" class="HighCurrent">
+    <net code="158" name="/VOUT_PROTECTED" class="HighCurrent">
       <node ref="C340" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="C341" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="C342" pin="1" pinfunction="+" pintype="passive"/>
@@ -12989,136 +13779,151 @@
       <node ref="TP405" pin="1" pinfunction="SIGNAL" pintype="passive"/>
       <node ref="U402" pin="1" pinfunction="IN" pintype="power_in"/>
     </net>
-    <net code="153" name="unconnected-(D301-NC-Pad2)" class="Default">
+    <net code="159" name="unconnected-(D301-NC-Pad2)" class="Default">
       <node ref="D301" pin="2" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="154" name="unconnected-(D302-NC-Pad2)" class="Default">
+    <net code="160" name="unconnected-(D302-NC-Pad2)" class="Default">
       <node ref="D302" pin="2" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="155" name="unconnected-(D322-NC-Pad2)" class="Default">
+    <net code="161" name="unconnected-(D322-NC-Pad2)" class="Default">
       <node ref="D322" pin="2" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="156" name="unconnected-(D618-NC-Pad2)" class="Default">
+    <net code="162" name="unconnected-(D618-NC-Pad2)" class="Default">
       <node ref="D618" pin="2" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="157" name="unconnected-(D619-NC-Pad2)" class="Default">
+    <net code="163" name="unconnected-(D619-NC-Pad2)" class="Default">
       <node ref="D619" pin="2" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="158" name="unconnected-(U101-IMON-Pad13)" class="Default">
+    <net code="164" name="unconnected-(D640-NC-Pad2)" class="Default">
+      <node ref="D640" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="165" name="unconnected-(D641-NC-Pad2)" class="Default">
+      <node ref="D641" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="166" name="unconnected-(D642-NC-Pad2)" class="Default">
+      <node ref="D642" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="167" name="unconnected-(D643-NC-Pad2)" class="Default">
+      <node ref="D643" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="168" name="unconnected-(U101-IMON-Pad13)" class="Default">
       <node ref="U101" pin="13" pinfunction="IMON" pintype="output+no_connect"/>
     </net>
-    <net code="159" name="unconnected-(U101-MODE-Pad11)" class="Default">
+    <net code="169" name="unconnected-(U101-MODE-Pad11)" class="Default">
       <node ref="U101" pin="11" pinfunction="MODE" pintype="input+no_connect"/>
     </net>
-    <net code="160" name="unconnected-(U101-NC-Pad19)" class="Default">
+    <net code="170" name="unconnected-(U101-NC-Pad19)" class="Default">
       <node ref="U101" pin="19" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="161" name="unconnected-(U101-NC-Pad20)" class="Default">
+    <net code="171" name="unconnected-(U101-NC-Pad20)" class="Default">
       <node ref="U101" pin="20" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="162" name="unconnected-(U101-NC-Pad21)" class="Default">
+    <net code="172" name="unconnected-(U101-NC-Pad21)" class="Default">
       <node ref="U101" pin="21" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="163" name="unconnected-(U101-NC-Pad22)" class="Default">
+    <net code="173" name="unconnected-(U101-NC-Pad22)" class="Default">
       <node ref="U101" pin="22" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="164" name="unconnected-(U101-NC-Pad23)" class="Default">
+    <net code="174" name="unconnected-(U101-NC-Pad23)" class="Default">
       <node ref="U101" pin="23" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="165" name="unconnected-(U101-NC-Pad24)" class="Default">
+    <net code="175" name="unconnected-(U101-NC-Pad24)" class="Default">
       <node ref="U101" pin="24" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="166" name="unconnected-(U301-NC-Pad10)" class="Default">
+    <net code="176" name="unconnected-(U301-NC-Pad10)" class="Default">
       <node ref="U301" pin="10" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="167" name="unconnected-(U302-DNC-Pad1)" class="Default">
+    <net code="177" name="unconnected-(U302-DNC-Pad1)" class="Default">
       <node ref="U302" pin="1" pinfunction="DNC" pintype="no_connect"/>
     </net>
-    <net code="168" name="unconnected-(U302-DNC-Pad8)" class="Default">
+    <net code="178" name="unconnected-(U302-DNC-Pad8)" class="Default">
       <node ref="U302" pin="8" pinfunction="DNC" pintype="no_connect"/>
     </net>
-    <net code="169" name="unconnected-(U302-NC-Pad7)" class="Default">
+    <net code="179" name="unconnected-(U302-NC-Pad7)" class="Default">
       <node ref="U302" pin="7" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="170" name="unconnected-(U302-TEMP-Pad3)" class="Default">
+    <net code="180" name="unconnected-(U302-TEMP-Pad3)" class="Default">
       <node ref="U302" pin="3" pinfunction="TEMP" pintype="output+no_connect"/>
     </net>
-    <net code="171" name="unconnected-(U302-TRIM_NR-Pad5)" class="Default">
+    <net code="181" name="unconnected-(U302-TRIM_NR-Pad5)" class="Default">
       <node ref="U302" pin="5" pinfunction="TRIM_NR" pintype="passive+no_connect"/>
     </net>
-    <net code="172" name="unconnected-(U306-DELAY-Pad7)" class="Default">
+    <net code="182" name="unconnected-(U306-DELAY-Pad7)" class="Default">
       <node ref="U306" pin="7" pinfunction="DELAY" pintype="passive+no_connect"/>
     </net>
-    <net code="173" name="unconnected-(U306-NC-Pad6)" class="Default">
+    <net code="183" name="unconnected-(U306-NC-Pad6)" class="Default">
       <node ref="U306" pin="6" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="174" name="unconnected-(U316-FLT-Pad10)" class="Default">
+    <net code="184" name="unconnected-(U316-FLT-Pad10)" class="Default">
       <node ref="U316" pin="10" pinfunction="FLT" pintype="open_collector+no_connect"/>
     </net>
-    <net code="175" name="unconnected-(U318-EN-Pad3)" class="Default">
+    <net code="185" name="unconnected-(U318-EN-Pad3)" class="Default">
       <node ref="U318" pin="3" pinfunction="EN" pintype="input+no_connect"/>
     </net>
-    <net code="176" name="unconnected-(U318-NC-Pad4)" class="Default">
+    <net code="186" name="unconnected-(U318-NC-Pad4)" class="Default">
       <node ref="U318" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="177" name="unconnected-(U321-NC-Pad12)" class="Default">
+    <net code="187" name="unconnected-(U321-NC-Pad12)" class="Default">
       <node ref="U321" pin="12" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="178" name="unconnected-(U322-CT-Pad4)" class="Default">
+    <net code="188" name="unconnected-(U322-CT-Pad4)" class="Default">
       <node ref="U322" pin="4" pinfunction="CT" pintype="passive+no_connect"/>
     </net>
-    <net code="179" name="unconnected-(U323-CT-Pad4)" class="Default">
+    <net code="189" name="unconnected-(U323-CT-Pad4)" class="Default">
       <node ref="U323" pin="4" pinfunction="CT" pintype="passive+no_connect"/>
     </net>
-    <net code="180" name="unconnected-(U327-ITIMER-Pad10)" class="Default">
+    <net code="190" name="unconnected-(U327-ITIMER-Pad10)" class="Default">
       <node ref="U327" pin="10" pinfunction="ITIMER" pintype="passive+no_connect"/>
     </net>
-    <net code="181" name="unconnected-(U402-EN-Pad3)" class="Default">
+    <net code="191" name="unconnected-(U402-EN-Pad3)" class="Default">
       <node ref="U402" pin="3" pinfunction="EN" pintype="input+no_connect"/>
     </net>
-    <net code="182" name="unconnected-(U402-NC-Pad4)" class="Default">
+    <net code="192" name="unconnected-(U402-NC-Pad4)" class="Default">
       <node ref="U402" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="183" name="unconnected-(U600-DELAY-Pad7)" class="Default">
+    <net code="193" name="unconnected-(U600-DELAY-Pad7)" class="Default">
       <node ref="U600" pin="7" pinfunction="DELAY" pintype="passive+no_connect"/>
     </net>
-    <net code="184" name="unconnected-(U600-NC-Pad6)" class="Default">
+    <net code="194" name="unconnected-(U600-NC-Pad6)" class="Default">
       <node ref="U600" pin="6" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="185" name="unconnected-(U600-PG-Pad3)" class="Default">
+    <net code="195" name="unconnected-(U600-PG-Pad3)" class="Default">
       <node ref="U600" pin="3" pinfunction="PG" pintype="open_collector+no_connect"/>
     </net>
-    <net code="186" name="unconnected-(U602-CT-Pad4)" class="Default">
+    <net code="196" name="unconnected-(U602-CT-Pad4)" class="Default">
       <node ref="U602" pin="4" pinfunction="CT" pintype="passive+no_connect"/>
     </net>
-    <net code="187" name="unconnected-(U611-nQ-Pad3)" class="Default">
+    <net code="197" name="unconnected-(U611-nQ-Pad3)" class="Default">
       <node ref="U611" pin="3" pinfunction="nQ" pintype="output+no_connect"/>
     </net>
-    <net code="188" name="unconnected-(U612-nQ-Pad3)" class="Default">
+    <net code="198" name="unconnected-(U612-nQ-Pad3)" class="Default">
       <node ref="U612" pin="3" pinfunction="nQ" pintype="output+no_connect"/>
     </net>
-    <net code="189" name="unconnected-(U614-NC-Pad1)" class="Default">
+    <net code="199" name="unconnected-(U614-NC-Pad1)" class="Default">
       <node ref="U614" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="190" name="unconnected-(U616-NC-Pad1)" class="Default">
+    <net code="200" name="unconnected-(U616-NC-Pad1)" class="Default">
       <node ref="U616" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="191" name="unconnected-(U644-NC-Pad1)" class="Default">
+    <net code="201" name="unconnected-(U644-NC-Pad1)" class="Default">
       <node ref="U644" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="192" name="unconnected-(U651-NC-Pad12)" class="Default">
+    <net code="202" name="unconnected-(U647-NC-Pad12)" class="Default">
+      <node ref="U647" pin="12" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="203" name="unconnected-(U651-NC-Pad12)" class="Default">
       <node ref="U651" pin="12" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="193" name="unconnected-(U654-NC-Pad1)" class="Default">
+    <net code="204" name="unconnected-(U654-NC-Pad1)" class="Default">
       <node ref="U654" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="194" name="unconnected-(U656-NC-Pad1)" class="Default">
+    <net code="205" name="unconnected-(U656-NC-Pad1)" class="Default">
       <node ref="U656" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="195" name="unconnected-(U661-NC-Pad1)" class="Default">
+    <net code="206" name="unconnected-(U661-NC-Pad1)" class="Default">
       <node ref="U661" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="196" name="unconnected-(U662-NC-Pad1)" class="Default">
+    <net code="207" name="unconnected-(U662-NC-Pad1)" class="Default">
       <node ref="U662" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>

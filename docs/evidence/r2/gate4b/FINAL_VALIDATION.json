@@ -1,0 +1,90 @@
+{
+  "status": "PASS for schematic capture checks; R2 electrical release BLOCKED",
+  "date": "2026-10-03T17:09:01.468746+07:00",
+  "resume_baseline": "74b9dc8998142c659ca14becdf095eb463035fbc",
+  "kicad_version": "9.0.6",
+  "erc": {
+    "command": "kicad-cli sch erc --format json --severity-all --exit-code-violations",
+    "exit_code": 0,
+    "violations": 0,
+    "sheets": 6,
+    "new_exclusions": 0,
+    "severity_reductions": 0,
+    "added_power_flags_this_resume": 0
+  },
+  "unit_tests": {
+    "command": "python3 -B -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "tests_run": 50,
+    "elapsed_seconds": 9.195,
+    "result": "OK",
+    "new_boundary_mutations": 3
+  },
+  "capture_and_footprints": {
+    "command": "python3 -B scripts/check_r2_schematic.py --netlist docs/evidence/r2/gate4b/captured.xml",
+    "exit_code": 0,
+    "status": "PASS: independent pins, MPNs, footprints/pad numbers, hierarchy, Kelvin/host/control/force boundaries"
+  },
+  "freeze_reconciliation": {
+    "command": "python3 -B scripts/audit_gate4b_capture.py --write",
+    "exit_code": 0,
+    "status": "PASS",
+    "physical_references": 366,
+    "freeze_rows": 40
+  },
+  "net_classes": {
+    "status": "PASS: all named nets resolve to assigned classes in native KiCad PDF",
+    "named_nets": 158,
+    "counts": {
+      "HighCurrent": 29,
+      "Signal": 121,
+      "Switching": 4,
+      "Kelvin": 4
+    },
+    "raw_xml_class_mismatches": 144,
+    "limitation": "KiCad 9.0.6 XML emits Default for local child-sheet nets; raw export retained. Recheck PCB import in authorized R3.",
+    "project_sha256": "adfaca18079528832a6c60750591cc31221b27f3f1d1384ebe63c091f1e5c0c3",
+    "pdf_sha256": "602271b03b7e11cc281ff7483e38a701fe9f85a4242eab3e5633af6c8869617c"
+  },
+  "repository_integrity": {
+    "command": "python3 -B scripts/check_repository.py",
+    "exit_code": 0,
+    "status": "PASS",
+    "hardware_files_verified": 32,
+    "errors": [],
+    "output_recording": "Captured stdout before writing report; direct shell redirection to a scanned JSON file causes self-truncation and is not used for final result."
+  },
+  "visual_review": {
+    "pdf_pages": 6,
+    "full_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "detail": "Sheet03 frozen source sensing; corrected root hierarchy; future-acceptance annotations on Sheets02/03/05",
+    "result": "No clipping found; each page carries preliminary/not-for-fabrication warning",
+    "limitation": "Mixed A3/A1/A2/A0 portrait pages; native size or zoom needed. Not a PCB visual review."
+  },
+  "git": {
+    "commit_status": "UNCOMMITTED",
+    "reason": "Per-sheet attempts denied creating .git/worktrees/wt-gate4b/index.lock: Operation not permitted",
+    "fallback": "Explicit GATE4B brief fallback; Claude commits/pushes; no locks or permissions changed",
+    "push_performed": false
+  },
+  "physical_tests": "NOT RUN",
+  "pcb_layout": "NOT PERFORMED; R3 not authorized",
+  "fabrication_release": "NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED",
+  "artifacts_sha256": {
+    "V1A_GATE4B_REVIEW.pdf": "602271b03b7e11cc281ff7483e38a701fe9f85a4242eab3e5633af6c8869617c",
+    "captured.xml": "5ceade5e4e1f0cd67961edc2a604161fbe71c7f8a32363a7b9f4c819421711f1",
+    "ERC_FINAL.json": "616138cb3a7776ef61a303ff21aafa64a4622450b5d64f61bcf60d071039beed",
+    "NET_CLASSES.json": "70e4c5ea7531ef3ca9bc5ef6cbde64962a03a1ba689033bc265e9bd983ea4f9d",
+    "GATE4B_SCOPE.json": "39b591cadb54e18046104e0497016c87f0a7ec2e1e15739a610923a1b80b6948",
+    "REVIEW_RESOLUTIONS.json": "eb5c072474b8105d6d02ba817fc0a6e09ed5ec2986a840debe09051fecc2cd35",
+    "REPOSITORY_CHECK.json": "531a640a66939fb82daf53a0b3a14293ca82bfac900432f844f573dee2d8aeb6",
+    "CAPTURED_BOM.csv": "c1e1dd991e309f6ff23d5f40a482fdc9084748c1d8972f7be613b506fa9e468e"
+  }
+}

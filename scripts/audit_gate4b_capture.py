@@ -34,7 +34,7 @@ EXCEPTIONS = {
     'S03-05': ('FIX3 SUPERSEDED', 'Only R316/R317 retained from row; real PG uses U607/U651. AHCT chain is absent.'),
     'S03-06': ('FIX3 SUPERSEDED', 'Q304 retained; R647–R650 implement resistive SHDN permission/default and fault sink.'),
     'S03-12': ('FIX3 SUPERSEDED', 'U307/R314/R315 absent; U306 IN/EN on DRV_HOLD; C307/R323 on AUX_LIMITED.'),
-    'S01-07': ('OWNER OPTION A', 'J603/U644 manual source trigger; autonomous watchdog/collapse discriminator absent. No 10 us/100 uC claim.'),
+    'S01-07': ('SENSING CAPTURED / OWNER OPTION A', 'Frozen R640/R644 SW/VIN front end with U640/U642/U647 captured for observation; J603/U644 remains manual source trigger. Autonomous qualifier/collapse memory absent; no 10 us/100 uC claim.'),
     'S06-01': ('OWNER OPTION A', 'SAFE5/real PG/manual reset and arm captured on Sheet03. Fast interlock/diagnostic reservation superseded by JP600/JP660 hooks.'),
     'SXX-01': ('RETAINED / RETIRED', 'Exact MPNs for retained passives; 19 capacitors/resistors belonging to retired logic absent.'),
     'S04-05': ('EXTERNAL HARNESS', 'Selected TE/Belden solution A documented on Sheet05; no fictitious PCB harness component.'),
@@ -42,6 +42,7 @@ EXCEPTIONS = {
     'SFX-02': ('EXTERNAL FIXTURE', 'Only DUT PF1–PF5 captured; full fixture stays in its separate pinned BOM/netlist.'),
 }
 EXPECTED_MISSING = {
+    'S01-07': set('FAULT_TRIGGER U641 U643 U645 U646 R643 C641 C643 C645 C646'.split()),
     'S03-04': set('U304 U309 U305 U310 U311 U312 U313 U314 U320 C371'.split()),
     'S03-05': set('U319 U324 C360 C361 R368 R369 U325 U326 C362 C363 R394 R395'.split()),
     'S03-06': set('Q305 R324 R325 Q306 R326 D305'.split()),
@@ -148,6 +149,7 @@ def main():
         for revision, names in [
             (FREEZE, ['GATE4A_FREEZE.md','FREEZE_TABLE.md','FREEZE_BOM.csv','FIX_RESOLUTIONS.md',
                       'TEST_PLAN.md','CALCULATIONS.md','CALCULATIONS.json','FIX3_CALCULATIONS.json',
+                      'FIX3_SOURCE_TRIGGER.md','FIX3_INTERLOCK.md','FIX3_FIXTURE.md',
                       'FREEZE_MANIFEST.json','PASSIVE_COMPLETION.csv']),
             (J502, ['J502_SELECTION.md']), (BOM, ['BOM_DRAFT.md','SHEET03_PART_QUALIFICATION.md'])]:
             for name in names:

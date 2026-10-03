@@ -47,6 +47,26 @@ class Gate4BCaptureTests(unittest.TestCase):
         self.move(tree, specs, 'U615', '1', 'PG_GOOD')
         self.assertTrue(any('U615.1' in e for e in self.validate(tree, specs)))
 
+    def test_source_sense_must_follow_inductor_side_of_isolation(self):
+        tree, specs = copy.deepcopy(self.tree), copy.deepcopy(self.specs)
+        self.move(tree, specs, 'R640', '1', 'BUCK_SW')
+        self.assertTrue(any('R640' in e for e in self.validate(tree, specs)))
+
+    def test_same_named_local_source_net_is_not_a_connection(self):
+        tree = copy.deepcopy(self.tree)
+        source = next(n for n in tree.findall('./nets/net')
+                      if any(p.get('ref') == 'R640' and p.get('pin') == '1' for p in n))
+        node = next(p for p in source if p.get('ref') == 'R640' and p.get('pin') == '1')
+        source.remove(node)
+        split = ET.SubElement(tree.find('nets'), 'net', name='/03_OUTPUT_PROTECTION/L201_IN')
+        split.append(node)
+        self.assertTrue(any('Source sensing hierarchy split' in e for e in self.validate(tree, self.specs)))
+
+    def test_observation_detector_cannot_replace_manual_source_hook(self):
+        tree, specs = copy.deepcopy(self.tree), copy.deepcopy(self.specs)
+        self.move(tree, specs, 'U615', '1', 'SW_HIGH')
+        self.assertTrue(any('observation-only' in e for e in self.validate(tree, specs)))
+
     def test_pg_loss_cannot_fire_disposal(self):
         tree, specs = copy.deepcopy(self.tree), copy.deepcopy(self.specs)
         self.move(tree, specs, 'U633', '1', 'PG_GOOD')

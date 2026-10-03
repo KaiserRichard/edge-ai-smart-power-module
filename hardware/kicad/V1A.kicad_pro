@@ -413,10 +413,6 @@
         "netclass": "Signal"
       },
       {
-        "pattern": "/02_BUCK_5V/L201_IN",
-        "netclass": "Switching"
-      },
-      {
         "pattern": "/02_BUCK_5V/L201_OUT",
         "netclass": "HighCurrent"
       },
@@ -857,11 +853,35 @@
         "netclass": "Signal"
       },
       {
+        "pattern": "/03_OUTPUT_PROTECTION/SW_HIGH",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SW_HYS",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SW_SENSE",
+        "netclass": "Signal"
+      },
+      {
         "pattern": "/03_OUTPUT_PROTECTION/TGUP_SLOW",
         "netclass": "Signal"
       },
       {
         "pattern": "/03_OUTPUT_PROTECTION/TRUE_FAULT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/VIN_GOOD_FAST",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/VIN_MON",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/VIN_SENSE",
         "netclass": "Signal"
       },
       {
@@ -919,6 +939,10 @@
       {
         "pattern": "/INPUT_SHDN",
         "netclass": "Signal"
+      },
+      {
+        "pattern": "/L201_IN",
+        "netclass": "Switching"
       },
       {
         "pattern": "/LOAD_5V1",

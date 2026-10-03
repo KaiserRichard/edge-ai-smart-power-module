@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 HW=ROOT/'hardware/kicad'
 EV=ROOT/'docs/evidence/r2/gate4b'
 STATUS='PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION'
+HOOK_REQUIREMENT='FUTURE ACCEPTANCE REQUIRED: "TEST HOOK — design proven on bench". UNTESTED CANDIDATE; evidence NOT RUN.'
 NAMES={'input':'01_INPUT_PROTECTION','buck':'02_BUCK_5V','output':'03_OUTPUT_PROTECTION','monitor':'04_POWER_MONITOR','io':'05_IO_TEST'}
 
 
@@ -103,6 +104,7 @@ def force_pad(ref,net):
 
 def buck_spec():
     d=baseline('buck');apply_passives(d);cs={c['ref']:c for c in d['components']}
+    d['ports']['L201_IN']='passive'
     update(cs['L201'],'74437636351002','10uH DATASHEET','V1A_Qualified:Wurth_74437636351002')
     cs['L201']['pins']['1']['net']='L201_IN'
     cs['L201']['pins']['2']['net']='L201_OUT'
@@ -115,17 +117,19 @@ def buck_spec():
       ('FAULT INJECTION / LOCAL REGULATION',['JP201','JP202','L201','PF2','PF3','PF4','TP201','TP202','TP203','TP204','R202','R203','R205','C207','C209','C210','C211','C212','C213','C214'])]
     d['schematic_notes']=['DATASHEET: L201 = Wurth 74437636351002, 10uH; 2 plated slots per drawing001.000 (2025-02-07).',
       'CALCULATED: 100k / 24.4k local feedback = 5.098361 V nominal. No remote sense or setpoint increase.',
-      'JP201 separates native BUCK_SW from L201_IN. Remove while unpowered for independent fixture isolation / injection.',
+      'JP201 isolates native BUCK_SW. L201_IN exports to Sheet03 R640; VIN_PROTECTED feeds R644. Remove force links only while unpowered.',
       'JP202 = IL201_FORCE after the winding, before all raw capacitance. PF2 VIN_PROTECTED / PF3 BUCK_SW / PF4 L201_IN = M4 force pads.',
       'C205 bootstrap return stays on native BUCK_SW. TP201 / TP202 paired return pads are sense only.',
       'ASSUMED qualification box: total local input C 10–30uF; Ldiff 5–12uH through 100A. These are not manufacturer guarantees.',
       'OPEN: nonlinear magnetic behavior, biased capacitance, startup/inrush, loop stability, ripple and thermal limits.',
-      'TEST HOOK — design proven on bench; evidence NOT RUN. Dummy load only; isolated coupons before integrated faults.']
+      HOOK_REQUIREMENT,
+      'Dummy load only; isolated coupons before integrated faults. Source-fault triggering remains MANUAL under option A.']
     return d
 
 
 def output_spec():
     d=baseline('output');apply_passives(d);old={c['ref']:c for c in d['components']};cs={}
+    d['ports'].update(L201_IN='passive',VIN_PROTECTED='input')
     def keep(ref):
         cs[ref]=copy.deepcopy(old[ref]);return cs[ref]
     def add(c):cs[c['ref']]=c;return c
@@ -283,6 +287,30 @@ def output_spec():
     switch('U651',['SAFE5','PG_DIV','PG_SENSE','GND','GND','GND','GND','GND','GND','GND','GND',None,'SAFE5','GND','GND','GND']);bypass('C651')
     bas('D618','PG_DIV','REF_SAFE_2V5');bas('D619','GND','PG_DIV')
 
+    # Frozen sensing front end, observation only under owner option A.
+    # The autonomous qualifier/collapse memory is not connected to SRC_TRIP.
+    ic('U640','TLV3201AIDBVR','Package_TO_SOT_SMD:SOT-23-5',
+       ['OUT','GND','IN+','IN-','VCC'],['SW_HIGH','GND','SW_SENSE','REF1V25','SAFE5'],
+       ['output','power_in','input','input','power_in'])
+    ic('U642','TLV3201AIDBVR','Package_TO_SOT_SMD:SOT-23-5',
+       ['OUT','GND','IN+','IN-','VCC'],['VIN_GOOD_FAST','GND','VIN_SENSE','REF1V25','SAFE5'],
+       ['output','power_in','input','input','power_in'])
+    for r,m,v,a,b in [
+      ('R640','TNPW060320K0BEEA','20.0k','L201_IN','SW_HYS'),
+      ('R641','TNPW06036K19BEEA','6.19k','SW_HYS','GND'),
+      ('R642','TNPW060320K0BEEA','20.0k','SW_HIGH','SW_HYS'),
+      ('R644','TNPW060349K9BEEA','49.9k','VIN_PROTECTED','VIN_MON'),
+      ('R645','TNPW060310K0BEEA','10k','VIN_MON','GND'),
+      ('R651','TNPW0603100KBEEA','100k','SW_SENSE','GND'),
+      ('R652','TNPW0603100KBEEA','100k','VIN_SENSE','GND')]:resistor(r,m,v,a,b)
+    for ref,a,k in [('D640','SW_HYS','REF_SAFE_2V5'),('D641','GND','SW_HYS'),
+                    ('D642','VIN_MON','REF_SAFE_2V5'),('D643','GND','VIN_MON')]:bas(ref,a,k)
+    switch('U647',['SAFE5','SW_HYS','SW_SENSE','GND','GND','GND','GND','GND',
+                   'GND','GND','GND',None,'SAFE5','VIN_SENSE','VIN_MON','SAFE5'])
+    for ref in ('C640','C642','C647'):bypass(ref)
+    for ref,n in [('TP337','SW_HIGH'),('TP338','VIN_GOOD_FAST'),
+                   ('TP339','SW_SENSE'),('TP340','VIN_SENSE')]:add(tp(ref,n))
+
     # Option A: manual source trigger, manual reset and manual rail qualification.
     # A fault always asynchronously clears NOFAULT; reset is a clocked transfer.
     for ref,val,a in [('J301','MAIN ARM / dry contact','ARM_CONTACT'),('J302','MANUAL RESET / dry contact','RESET_CONTACT'),
@@ -339,15 +367,18 @@ def output_spec():
     group('9 SAFE5 / MEMORY SUPPLY / REAL PG RECEIVER',['U600','U602','U662','U607','U651','D600','D601','D618','D619','R600','R601','R602','R603','R604','R605','R606','R609','R622','R623','C600','C601','C602','C603','C604','C609','C651','C762','#FLG306'])
     group('10 MANUAL SOURCE TRIGGER / RESET / FAULT LATCH',['U610','U614','U615','U616','U617','U628','U633','U644','U656','J302','J603','R708','R727','C710','C714','C715','C716','C717','C728','C733','C644','C756'])
     group('11 MANUAL RAIL VALID / ARM / COMMAND DEFAULTS',['U611','U612','U623','U630','U631','U632','U654','U661','Q304','J301','J604','JP600','R707','R728','R729','R709','R710','R712','R713','R321','R322','R647','R648','R649','R650','C711','C712','C723','C730','C731','C732','C754','C761','R730','R731','J605','J606'])
-    group('12 PAIRED SENSE TEST POINTS / NO FORCE CURRENT',[r for r in cs if r.startswith('TP')])
+    group('12 SOURCE SENSING / OBSERVATION ONLY / NO AUTO TRIP',
+          ['U640','U642','U647','R640','R641','R642','R644','R645','R651','R652',
+           'D640','D641','D642','D643','C640','C642','C647','TP337','TP338','TP339','TP340'])
+    group('13 PAIRED SENSE TEST POINTS / NO FORCE CURRENT',[r for r in cs if r.startswith('TP')])
     assert done==set(cs),set(cs)-done
     d['groups']=groups
     d['schematic_notes']=[
-      'TEST HOOK — design proven on bench. This is the owner-required hook label; ALL hardware evidence is NOT RUN.',
-      'Option A: J603 manual source trigger; J302 manual reset. Autonomous source coverage is NOT CAPTURED / OPEN (T01F3).',
+      HOOK_REQUIREMENT,
+      'Option A: J603 manual source trigger; J302 manual reset. U640/U642/U647 sense SW/VIN for observation ONLY; autonomous trip absent / OPEN.',
+      'R640 senses hierarchical L201_IN after JP201; R644 senses VIN_PROTECTED. TP337/338 observe outputs; TP339/340 sense inputs. T01F3 NOT RUN.',
       'JP600 manual rail-valid link replaces unproved brownout / PG-recovery interlock. Remove by default; verify rails before fitting.',
-      'Sequence: force links absent; inspect / measure rails; fit JP600; reset J302; MAIN ARM J301; genuine PG; separate SERIES ARM J604.',
-      'A fault asynchronously clears NOFAULT and commands both dumps. PG loss clears SERIES_ARMED; recovery alone has no clock edge.',
+      'Sequence: force links absent; measure rails; fit JP600; reset J302; MAIN ARM J301; genuine PG; SERIES ARM J604. PG loss clears SERIES_ARMED.',
       'MANUAL RESET has no persistent-short diagnostic: disconnect source and verify repair before reset. Partial-rail / held-contact behavior OPEN.',
       'JP301 removes series force path. JP660 isolates SER_DRV for supply-loss tests. U322/U323 are observation only, never timing authorities.',
       'JP330 / JP331 measure individual dump current; open links DISABLE disposal. Fit only after fixture review. J605/606 are guarded observations.',
@@ -398,7 +429,7 @@ def io_spec():
       'Pi physical +2/4; GND6/9/14/20/25/30/34/39. Power-only harness; all other cavities empty. No Pi before fault tests pass.',
       'DATASHEET J50212A nominal; <=3.12mOhm per complete hot pole is a TEST acceptance allocation. Hot mixed-mate/current/assembly OPEN.',
       'J503:1GND /2host3.3V reference /3SDA /4SCL. Remove during first faults; external power-only Pi housing does not yet carry telemetry.',
-      'TEST HOOK — design proven on bench; evidence NOT RUN. Dry-contact manual trigger/reset and rail/driver-loss links are onSheet03.',
+      HOOK_REQUIREMENT+' Manual trigger/reset and rail/driver-loss links are onSheet03.',
       'OPEN: force-link/contact/copper/parasitic budgets, indexed harness/tooling, hot sharing, single-contact loss and telemetry housing integration.']
     return d
 
@@ -426,7 +457,7 @@ def draw(d,block):
             h=max(heights);cy=y+h+(5.08 if wide else 7.62)
             for i,c in enumerate(row):sh.component(c,x+60.96+i*step,cy);placed.add(c['ref'])
             y=cy+h+(7.62 if wide else 12.7)
-        per=3 if wide else 2;step=86.36 if wide else 132.08;pitch=(17.78 if title.startswith('12 ') else 20.32) if wide else 25.4
+        per=3 if wide else 2;step=86.36 if wide else 132.08;pitch=17.78 if wide else 25.4
         for i,c in enumerate(small):
             sh.component(c,x+45.72+(i%per)*step,y+(i//per)*pitch+10.16);placed.add(c['ref'])
         y+=math.ceil(len(small)/per)*pitch+(10.16 if wide else 12.7)
@@ -456,7 +487,31 @@ def draw(d,block):
     lib.write_text(old[:-1]+('\n'+additions+'\n' if additions else '')+')\n')
     # Native definitions/specs use a stable, explicitly reviewable source of truth.
     (EV/f'{block}_block.json').write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+    sync_root_ports(block)
     print(f'{name}: {len(cs)} symbols; {paper}; drawing bottom {y:g} mm')
+
+
+def sync_root_ports(block):
+    """Add only this sheet's reviewed interface; retain the existing root drawing."""
+    additions={
+      'buck':[('L201_IN','passive',175.26,180.34,270)],
+      'output':[('L201_IN','passive',284.48,180.34,270),
+                ('VIN_PROTECTED','input',233.68,109.22,90)],
+    }.get(block,[])
+    if not additions:return
+    path=HW/'V1A.kicad_sch';text=path.read_text().rstrip()
+    start,stop,raw=next((a,b,t) for a,b,t in children(text) if re.match(r'\(sheet\s',t)
+                       and any(isinstance(p,list) and p[:3]==['property','"Sheetname"',q(NAMES[block])] for p in parse(t)))
+    target=parse(raw);new_pins=[];graphics=[]
+    for net,direction,x,y,angle in additions:
+        if any(isinstance(p,list) and p[:2]==['pin',q(net)] for p in target):continue
+        new_pins.append(f'(pin {q(net)} {direction} (at {x:g} {y:g} {angle}) {fx(1.016,"left")} (uuid {q(uid(NAMES[block]+":"+net))}))')
+        end=y+(7.62 if angle==270 else -20.32)
+        graphics.append(f'(wire (pts (xy {x:g} {y:g}) (xy {x:g} {end:g})) (stroke (width 0) (type default)) (uuid {q(uid(NAMES[block]+":"+net+":wire"))}))')
+        graphics.append(f'(label {q(net)} (at {x:g} {end:g} 0) {fx(1.016,"left")} (uuid {q(uid(NAMES[block]+":"+net+":label"))}))')
+    if new_pins:
+        text=text[:start]+raw[:-1]+'\n    '+'\n    '.join(new_pins)+')'+text[stop:]
+        path.write_text(text[:-1]+'\n  '+'\n  '.join(graphics)+'\n)\n')
 
 
 def main():

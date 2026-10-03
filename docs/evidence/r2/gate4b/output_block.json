@@ -7,7 +7,9 @@
     "BUCK_PGOOD": "input",
     "INPUT_SHDN": "output",
     "VOUT_PROTECTED": "passive",
-    "GND": "passive"
+    "GND": "passive",
+    "L201_IN": "passive",
+    "VIN_PROTECTED": "input"
   },
   "components": [
     {
@@ -4708,6 +4710,570 @@
       "rating": "DATASHEET rating; preliminary review only"
     },
     {
+      "ref": "U640",
+      "part": "TLV3201AIDBVR",
+      "value": "TLV3201AIDBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": {
+          "name": "OUT",
+          "net": "SW_HIGH",
+          "type": "output"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "IN+",
+          "net": "SW_SENSE",
+          "type": "input"
+        },
+        "4": {
+          "name": "IN-",
+          "net": "REF1V25",
+          "type": "input"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "SAFE5",
+          "type": "power_in"
+        }
+      },
+      "kind": "IC",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "U642",
+      "part": "TLV3201AIDBVR",
+      "value": "TLV3201AIDBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": {
+          "name": "OUT",
+          "net": "VIN_GOOD_FAST",
+          "type": "output"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "IN+",
+          "net": "VIN_SENSE",
+          "type": "input"
+        },
+        "4": {
+          "name": "IN-",
+          "net": "REF1V25",
+          "type": "input"
+        },
+        "5": {
+          "name": "VCC",
+          "net": "SAFE5",
+          "type": "power_in"
+        }
+      },
+      "kind": "IC",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "R640",
+      "part": "TNPW060320K0BEEA",
+      "value": "20.0k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "L201_IN",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SW_HYS",
+          "type": "passive"
+        }
+      },
+      "kind": "R",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "R641",
+      "part": "TNPW06036K19BEEA",
+      "value": "6.19k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SW_HYS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "R",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "R642",
+      "part": "TNPW060320K0BEEA",
+      "value": "20.0k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SW_HIGH",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SW_HYS",
+          "type": "passive"
+        }
+      },
+      "kind": "R",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "R644",
+      "part": "TNPW060349K9BEEA",
+      "value": "49.9k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "VIN_MON",
+          "type": "passive"
+        }
+      },
+      "kind": "R",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "R645",
+      "part": "TNPW060310K0BEEA",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_MON",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "R",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "R651",
+      "part": "TNPW0603100KBEEA",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SW_SENSE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "R",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "R652",
+      "part": "TNPW0603100KBEEA",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_SENSE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "R",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "D640",
+      "part": "BAS116,215",
+      "value": "BAS116,215",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "SW_HYS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "3": {
+          "name": "K",
+          "net": "REF_SAFE_2V5",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source": "Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "D641",
+      "part": "BAS116,215",
+      "value": "BAS116,215",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "GND",
+          "type": "passive"
+        },
+        "2": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "3": {
+          "name": "K",
+          "net": "SW_HYS",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source": "Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "D642",
+      "part": "BAS116,215",
+      "value": "BAS116,215",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "VIN_MON",
+          "type": "passive"
+        },
+        "2": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "3": {
+          "name": "K",
+          "net": "REF_SAFE_2V5",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source": "Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "D643",
+      "part": "BAS116,215",
+      "value": "BAS116,215",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "A",
+          "net": "GND",
+          "type": "passive"
+        },
+        "2": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "3": {
+          "name": "K",
+          "net": "VIN_MON",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "source": "Nexperia BAS116 Rev2020-08-05 p1 A1/NC2/K3; clamp sink in REF50, low-leakage bootstrap precharge",
+      "rating": "DATASHEET rating; preliminary review only"
+    },
+    {
+      "ref": "U647",
+      "part": "ADG4612BRUZ",
+      "value": "ADG4612BRUZ",
+      "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+      "pins": {
+        "1": {
+          "name": "IN1",
+          "net": "SAFE5",
+          "type": "input"
+        },
+        "2": {
+          "name": "D1",
+          "net": "SW_HYS",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S1",
+          "net": "SW_SENSE",
+          "type": "passive"
+        },
+        "4": {
+          "name": "VSS",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "S4",
+          "net": "GND",
+          "type": "passive"
+        },
+        "7": {
+          "name": "D4",
+          "net": "GND",
+          "type": "passive"
+        },
+        "8": {
+          "name": "IN4",
+          "net": "GND",
+          "type": "input"
+        },
+        "9": {
+          "name": "IN3",
+          "net": "GND",
+          "type": "input"
+        },
+        "10": {
+          "name": "D3",
+          "net": "GND",
+          "type": "passive"
+        },
+        "11": {
+          "name": "S3",
+          "net": "GND",
+          "type": "passive"
+        },
+        "12": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "13": {
+          "name": "VDD",
+          "net": "SAFE5",
+          "type": "power_in"
+        },
+        "14": {
+          "name": "S2",
+          "net": "VIN_SENSE",
+          "type": "passive"
+        },
+        "15": {
+          "name": "D2",
+          "net": "VIN_MON",
+          "type": "passive"
+        },
+        "16": {
+          "name": "IN2",
+          "net": "SAFE5",
+          "type": "input"
+        }
+      },
+      "kind": "IC",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "C640",
+      "part": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SAFE5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "C",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN",
+      "polarized": false
+    },
+    {
+      "ref": "C642",
+      "part": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SAFE5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "C",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN",
+      "polarized": false
+    },
+    {
+      "ref": "C647",
+      "part": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SAFE5",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "C",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN",
+      "polarized": false
+    },
+    {
+      "ref": "TP337",
+      "part": "N/A etched paired pads",
+      "value": "SW_HIGH",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "SW_HIGH",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "SENSEPAIR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP338",
+      "part": "N/A etched paired pads",
+      "value": "VIN_GOOD_FAST",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "VIN_GOOD_FAST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "SENSEPAIR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP339",
+      "part": "N/A etched paired pads",
+      "value": "SW_SENSE",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "SW_SENSE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "SENSEPAIR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP340",
+      "part": "N/A etched paired pads",
+      "value": "VIN_SENSE",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "VIN_SENSE",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "SENSEPAIR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
       "ref": "J301",
       "part": "B2B-XH-A(LF)(SN)",
       "value": "MAIN ARM / dry contact",
@@ -6706,11 +7272,11 @@
     }
   ],
   "schematic_notes": [
-    "TEST HOOK — design proven on bench. This is the owner-required hook label; ALL hardware evidence is NOT RUN.",
-    "Option A: J603 manual source trigger; J302 manual reset. Autonomous source coverage is NOT CAPTURED / OPEN (T01F3).",
+    "FUTURE ACCEPTANCE REQUIRED: \"TEST HOOK — design proven on bench\". UNTESTED CANDIDATE; evidence NOT RUN.",
+    "Option A: J603 manual source trigger; J302 manual reset. U640/U642/U647 sense SW/VIN for observation ONLY; autonomous trip absent / OPEN.",
+    "R640 senses hierarchical L201_IN after JP201; R644 senses VIN_PROTECTED. TP337/338 observe outputs; TP339/340 sense inputs. T01F3 NOT RUN.",
     "JP600 manual rail-valid link replaces unproved brownout / PG-recovery interlock. Remove by default; verify rails before fitting.",
-    "Sequence: force links absent; inspect / measure rails; fit JP600; reset J302; MAIN ARM J301; genuine PG; separate SERIES ARM J604.",
-    "A fault asynchronously clears NOFAULT and commands both dumps. PG loss clears SERIES_ARMED; recovery alone has no clock edge.",
+    "Sequence: force links absent; measure rails; fit JP600; reset J302; MAIN ARM J301; genuine PG; SERIES ARM J604. PG loss clears SERIES_ARMED.",
     "MANUAL RESET has no persistent-short diagnostic: disconnect source and verify repair before reset. Partial-rail / held-contact behavior OPEN.",
     "JP301 removes series force path. JP660 isolates SER_DRV for supply-loss tests. U322/U323 are observation only, never timing authorities.",
     "JP330 / JP331 measure individual dump current; open links DISABLE disposal. Fit only after fixture review. J605/606 are guarded observations.",
@@ -7049,7 +7615,33 @@
       ]
     ],
     [
-      "12 PAIRED SENSE TEST POINTS / NO FORCE CURRENT",
+      "12 SOURCE SENSING / OBSERVATION ONLY / NO AUTO TRIP",
+      [
+        "U640",
+        "U642",
+        "U647",
+        "R640",
+        "R641",
+        "R642",
+        "R644",
+        "R645",
+        "R651",
+        "R652",
+        "D640",
+        "D641",
+        "D642",
+        "D643",
+        "C640",
+        "C642",
+        "C647",
+        "TP337",
+        "TP338",
+        "TP339",
+        "TP340"
+      ]
+    ],
+    [
+      "13 PAIRED SENSE TEST POINTS / NO FORCE CURRENT",
       [
         "TP301",
         "TP302",

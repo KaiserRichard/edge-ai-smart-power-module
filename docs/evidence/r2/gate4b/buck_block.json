@@ -6,7 +6,8 @@
     "BUCK_INPUT_PGOOD": "input",
     "VOUT_5V1": "output",
     "BUCK_PGOOD": "output",
-    "GND": "passive"
+    "GND": "passive",
+    "L201_IN": "passive"
   },
   "components": [
     {
@@ -549,7 +550,7 @@
           "type": "passive"
         }
       },
-      "kind": "CONNECTOR",
+      "kind": "FORCELINK",
       "source": "Gate4A FIX3_FIXTURE: C110 strap 2x15mm; 20mm pitch M4; absent for isolated tests; application rating OPEN",
       "rating": "DATASHEET nominal; application limits OPEN"
     },
@@ -570,7 +571,7 @@
           "type": "passive"
         }
       },
-      "kind": "CONNECTOR",
+      "kind": "FORCELINK",
       "source": "Gate4A FIX3_FIXTURE: C110 strap 2x15mm; 20mm pitch M4; absent for isolated tests; application rating OPEN",
       "rating": "DATASHEET nominal; application limits OPEN"
     },
@@ -639,7 +640,7 @@
           "type": "passive"
         }
       },
-      "kind": "CONNECTOR",
+      "kind": "SENSEPAIR",
       "source": "Gate4A 898759e freeze; Gate4B pin review",
       "rating": "DATASHEET nominal; application limits OPEN"
     },
@@ -660,7 +661,7 @@
           "type": "passive"
         }
       },
-      "kind": "CONNECTOR",
+      "kind": "SENSEPAIR",
       "source": "Gate4A 898759e freeze; Gate4B pin review",
       "rating": "DATASHEET nominal; application limits OPEN"
     },
@@ -681,7 +682,7 @@
           "type": "passive"
         }
       },
-      "kind": "CONNECTOR",
+      "kind": "SENSEPAIR",
       "source": "Gate4A 898759e freeze; Gate4B pin review",
       "rating": "DATASHEET nominal; application limits OPEN"
     },
@@ -702,7 +703,7 @@
           "type": "passive"
         }
       },
-      "kind": "CONNECTOR",
+      "kind": "SENSEPAIR",
       "source": "Gate4A 898759e freeze; Gate4B pin review",
       "rating": "DATASHEET nominal; application limits OPEN"
     }
@@ -720,12 +721,13 @@
   "schematic_notes": [
     "DATASHEET: L201 = Wurth 74437636351002, 10uH; 2 plated slots per drawing001.000 (2025-02-07).",
     "CALCULATED: 100k / 24.4k local feedback = 5.098361 V nominal. No remote sense or setpoint increase.",
-    "JP201 separates native BUCK_SW from L201_IN. Remove while unpowered for independent fixture isolation / injection.",
+    "JP201 isolates native BUCK_SW. L201_IN exports to Sheet03 R640; VIN_PROTECTED feeds R644. Remove force links only while unpowered.",
     "JP202 = IL201_FORCE after the winding, before all raw capacitance. PF2 VIN_PROTECTED / PF3 BUCK_SW / PF4 L201_IN = M4 force pads.",
     "C205 bootstrap return stays on native BUCK_SW. TP201 / TP202 paired return pads are sense only.",
     "ASSUMED qualification box: total local input C 10–30uF; Ldiff 5–12uH through 100A. These are not manufacturer guarantees.",
     "OPEN: nonlinear magnetic behavior, biased capacitance, startup/inrush, loop stability, ripple and thermal limits.",
-    "TEST HOOK — design proven on bench; evidence NOT RUN. Dummy load only; isolated coupons before integrated faults."
+    "FUTURE ACCEPTANCE REQUIRED: \"TEST HOOK — design proven on bench\". UNTESTED CANDIDATE; evidence NOT RUN.",
+    "Dummy load only; isolated coupons before integrated faults. Source-fault triggering remains MANUAL under option A."
   ],
   "groups": [
     [

@@ -230,7 +230,8 @@
         (font
           (size 1.524 1.524))
         (justify left))
-      (uuid "3d6a1750-f0f3-54b4-beac-c4b5d0e7551d")))
+      (uuid "3d6a1750-f0f3-54b4-beac-c4b5d0e7551d"))
+    (pin "L201_IN" passive (at 175.26 180.34 270) (effects (font (size 1.016 1.016)) (justify left)) (uuid "6e5c1a34-f5c0-519e-a6ce-28240796b2a6")))
   (text "Buck: LM61460 / 400 kHz"
     (at 129.54 142.24 0)
     (effects
@@ -335,7 +336,9 @@
         (font
           (size 1.524 1.524))
         (justify left))
-      (uuid "72b62d6f-3d53-5d96-904d-a2c4f20cbc70")))
+      (uuid "72b62d6f-3d53-5d96-904d-a2c4f20cbc70"))
+    (pin "L201_IN" passive (at 284.48 180.34 270) (effects (font (size 1.016 1.016)) (justify left)) (uuid "4ec82165-cead-5c39-978c-bd37258eb6fa"))
+    (pin "VIN_PROTECTED" input (at 233.68 109.22 90) (effects (font (size 1.016 1.016)) (justify left)) (uuid "acba11b6-d691-5207-9aff-28329ed20c43")))
   (text "Disconnect + crowbar"
     (at 223.52 142.24 0)
     (effects
@@ -917,4 +920,12 @@
       (width 0)
       (type default))
     (uuid "3ae60704-4210-54e4-b1fc-38fcf750c9aa"))
-  (lib_symbols))
+  (lib_symbols)
+  (wire (pts (xy 175.26 180.34) (xy 175.26 187.96)) (stroke (width 0) (type default)) (uuid "6960cb2e-2a43-56f1-9da0-65338f998130"))
+  (label "L201_IN" (at 175.26 187.96 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "4d942b3e-e289-5b0e-a65e-d4579e1afa86"))
+
+  (wire (pts (xy 284.48 180.34) (xy 284.48 187.96)) (stroke (width 0) (type default)) (uuid "e8f20577-8be2-5cac-a57f-b4a79038183c"))
+  (label "L201_IN" (at 284.48 187.96 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "591e1f58-8903-5915-b2b7-631e7ea00308"))
+  (wire (pts (xy 233.68 109.22) (xy 233.68 88.9)) (stroke (width 0) (type default)) (uuid "9e572a73-a367-5a7c-9498-6563e48b3bc4"))
+  (label "VIN_PROTECTED" (at 233.68 88.9 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "4ee6383c-c00b-5da4-b43f-02a06b03fc51"))
+)

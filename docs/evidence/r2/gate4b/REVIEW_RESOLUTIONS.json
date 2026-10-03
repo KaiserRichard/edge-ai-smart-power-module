@@ -1,0 +1,69 @@
+{
+  "status": "PASS for option-A capture findings; autonomous behavior OPEN",
+  "inputs": [
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4B_RESUME.md",
+      "sha256": "9e767ec84238f1ae41373aa9e1a59160e7f3ff23e7ea118ec30fc6d61a5257ae"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/GATE4B.md",
+      "sha256": "f5de7083e99bd2d74cf6e1565bdacf1bd5c2589579a403195ca9568088d1e312"
+    },
+    {
+      "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/REVIEW_4B_S0102.md",
+      "sha256": "44fd1d7e0d7b74a625a2be19bf320e55c973e6834d9f5d8a78cf58390cb0a9c8"
+    }
+  ],
+  "reviewed_commit": "634dfa319139a4bfe98202cd0a888fb71319074f",
+  "resume_baseline": "74b9dc8998142c659ca14becdf095eb463035fbc",
+  "actual_connected_nets": {
+    "L201_IN": {
+      "net": "/L201_IN",
+      "pins": [
+        "L201.1",
+        "JP201.2",
+        "PF4.1",
+        "TP202.1",
+        "R640.1"
+      ]
+    },
+    "VIN_PROTECTED": {
+      "net": "/VIN_PROTECTED",
+      "pins": [
+        "U201.8",
+        "U201.12",
+        "C201.1",
+        "R644.1"
+      ]
+    }
+  },
+  "native_switch_boundary_preserved": true,
+  "physical_reference_additions": [
+    "C640",
+    "C642",
+    "C647",
+    "D640",
+    "D641",
+    "D642",
+    "D643",
+    "R640",
+    "R641",
+    "R642",
+    "R644",
+    "R645",
+    "R651",
+    "R652",
+    "TP337",
+    "TP338",
+    "TP339",
+    "TP340",
+    "U640",
+    "U642",
+    "U647"
+  ],
+  "physical_reference_retirements": [],
+  "existing_component_field_or_leaf_net_changes": {},
+  "annotation": "FUTURE ACCEPTANCE REQUIRED: \"TEST HOOK — design proven on bench\". UNTESTED CANDIDATE; evidence NOT RUN.",
+  "autonomous_qualifier_and_collapse_memory": "Not fitted; J603/U644 manual trigger retained under option A",
+  "physical_tests": "NOT RUN"
+}

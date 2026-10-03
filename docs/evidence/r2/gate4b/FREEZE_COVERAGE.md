@@ -4,7 +4,7 @@
 
 **DECISION:** Gate4a `898759e45578f3767721d19eb313312b7d7733a9` governs circuit selections; the owner's 2026-10-01 option A supersedes its two unresolved autonomous circuit reservations with manual hooks. J502 follows `41cb9e889418d50d2f5f24467e66ac7f15a90476`. No architecture E stage or lower-resistance replacement series pair is imported.
 
-**EVIDENCE:** [machine reconciliation](FREEZE_RECONCILIATION.json) enumerates present and absent reserved references for all 40 freeze rows. [Captured assembly inventory](CAPTURED_BOM.csv) lists all 345 physical references, including etched features and project-defined force interfaces; it is not a procurement BOM. [PR15 delta](CAPTURE_DELTA.json) records every added/retired reference and changed value, MPN, footprint or pin/net assignment. Independent pin/net checks supplement this inventory; presence alone does not prove a circuit correct.
+**EVIDENCE:** [machine reconciliation](FREEZE_RECONCILIATION.json) enumerates present and absent reserved references for all 40 freeze rows. [Captured assembly inventory](CAPTURED_BOM.csv) lists all 366 physical references, including etched features and project-defined force interfaces; it is not a procurement BOM. [PR15 delta](CAPTURE_DELTA.json) records every added/retired reference and changed value, MPN, footprint or pin/net assignment. Independent pin/net checks supplement this inventory; presence alone does not prove a circuit correct.
 
 | Freeze row | Capture disposition / evidence |
 |---|---|
@@ -14,7 +14,7 @@
 | S01-04 | Q101/Q102 retained; D102 STPS60H100CT A1/A3 to GND, K2/tab to VIN_PROTECTED. |
 | S01-05 | C101/C102 exact Murata 1 µF/100 V/1210 selections. |
 | S01-06 | Exact five precision resistor codes; R103 348 kΩ uses 0805. |
-| S01-07 | **OWNER OPTION A:** J603/U644 manual source trigger; R647–650/Q304 source command/default retained. Autonomous SW/VIN discriminator is absent. Reused U644/C644 refs now denote manual-hook parts, not FIX3 timer logic. |
+| S01-07 | **OWNER OPTION A:** J603/U644 manual source trigger; R647–650/Q304 source command/default retained. Frozen U640/U642/U647 SW/VIN sensing front end and R640/R644 real hierarchical inputs are captured for observation; autonomous qualifier/collapse memory is absent. Reused U644/C644 refs now denote manual-hook parts, not FIX3 timer logic. |
 | S02-01 | L201 Wurth 74437636351002, 10 µH, project THT slot land. Magnetic qualification OPEN. |
 | S02-02 | C201/C202 Murata 10 µF/50 V/1210. |
 | S02-03 | C203/C204 100 nF/50 V/0603. |

@@ -19,3 +19,9 @@ INA228 DGS10 has A1/A0 grounded for address 0x40, IN+10/IN−9, VBUS8 on LOAD_5V
 **EVIDENCE:** continued `f2e80c2` without additional native Sheet04 edits. The 23 physical references, symmetric differential filter, four-terminal shunt and separate host/local domains were rechecked against the export and freeze. Fresh [all-severity ERC](sheet04_final_erc.json): zero violations. Native PDF page5 visually reviewed; A2, complete title/warning and Kelvin annotations present. The 47-test suite includes independent Kelvin/filter/host-domain regressions.
 
 **DECISION:** capture checkpoint conditionally complete. The preceding local checkpoint failed because Git denied creation of `index.lock`; under the brief's fallback this checkpoint remains uncommitted. Continue Sheet05; measurement accuracy and electrical release remain OPEN/BLOCKED.
+
+## Second resume checkpoint
+
+**EVIDENCE:** retained all 23 physical references without native Sheet04 changes. Fresh independent netlist checks pass four-terminal shunt polarity, symmetric differential filtering, load-side VBUS and separate host/local supplies. [Fresh project ERC](sheet04_resume2_erc.json): zero violations at all severities. The earlier pin/land review remains applicable because no pin, MPN or footprint changed.
+
+**DECISION:** capture checkpoint remains CONDITIONAL PASS, R2 electrical release BLOCKED. Shunt pulse/thermal/calibration and bus partial-power tests remain NOT RUN. Next: Sheet05 hook annotation and final exports. Local commits remain unavailable because index.lock creation is denied; authorized fallback applies.

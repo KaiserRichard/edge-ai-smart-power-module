@@ -281,7 +281,7 @@
     "Pi physical +2/4; GND6/9/14/20/25/30/34/39. Power-only harness; all other cavities empty. No Pi before fault tests pass.",
     "DATASHEET J50212A nominal; <=3.12mOhm per complete hot pole is a TEST acceptance allocation. Hot mixed-mate/current/assembly OPEN.",
     "J503:1GND /2host3.3V reference /3SDA /4SCL. Remove during first faults; external power-only Pi housing does not yet carry telemetry.",
-    "TEST HOOK — design proven on bench; evidence NOT RUN. Dry-contact manual trigger/reset and rail/driver-loss links are onSheet03.",
+    "FUTURE ACCEPTANCE REQUIRED: \"TEST HOOK — design proven on bench\". UNTESTED CANDIDATE; evidence NOT RUN. Manual trigger/reset and rail/driver-loss links are onSheet03.",
     "OPEN: force-link/contact/copper/parasitic budgets, indexed harness/tooling, hot sharing, single-contact loss and telemetry housing integration."
   ],
   "passive_start": 132.08,

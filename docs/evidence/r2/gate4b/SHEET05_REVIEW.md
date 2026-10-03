@@ -26,3 +26,11 @@ Next: project net classes, complete marked PDF/netlist, freeze coverage and mana
 **EVIDENCE:** continued `f2e80c2` without additional native Sheet05 edits. J502's exact Phoenix selection, J503's host-reference map, M4 dummy-load path and separate sense pads were rechecked against the connector handoff and export. Fresh [all-severity ERC](sheet05_final_erc.json): zero violations. Native PDF page6 visually reviewed; A2, complete warnings and connector/harness notes present. The 47-test suite includes independent connector-before-protection and native/injection force-pad regressions.
 
 **DECISION:** capture checkpoint conditionally complete. Git's earlier `index.lock` denial invokes the brief's uncommitted fallback. Proceed to the complete freeze/inventory/preservation handback; no PCB, fabrication or Pi authorization follows.
+
+## Second resume checkpoint
+
+**WHAT WAS DONE:** changed the hook annotation to quote the required phrase as **FUTURE ACCEPTANCE REQUIRED**, followed by **UNTESTED CANDIDATE; evidence NOT RUN**. Retained all 11 physical references, Phoenix1776508/1777989 selection, host-reference connector and dummy-load isolation instructions. No connector, pin or power-path change.
+
+**EVIDENCE:** [fresh whole-project ERC](sheet05_resume2_erc.json): zero violations at all severities. Existing package review remains applicable; the final six-page PDF and netlist are regenerated after this checkpoint.
+
+**DECISION:** CONDITIONAL PASS for capture; electrical release BLOCKED. No Pi before prior dummy-load/fault/telemetry gates pass. Current/contact/fixture/harness qualification remains NOT RUN. Next: final reconciliation and manager handback. Git index.lock denial leaves this checkpoint uncommitted under the brief fallback.

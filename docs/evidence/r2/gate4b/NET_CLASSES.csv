@@ -16,7 +16,6 @@ net,project_class,kicad_pdf_resolved_class,raw_kicad_xml_class
 /02_BUCK_5V/BUCK_RT,Signal,Signal,Default
 /02_BUCK_5V/BUCK_SW,Switching,Switching,Default
 /02_BUCK_5V/BUCK_VCC,Signal,Signal,Default
-/02_BUCK_5V/L201_IN,Switching,Switching,Default
 /02_BUCK_5V/L201_OUT,HighCurrent,HighCurrent,Default
 /03_OUTPUT_PROTECTION/3V3_AUX,Signal,Signal,Default
 /03_OUTPUT_PROTECTION/ARMED,Signal,Signal,Default
@@ -127,8 +126,14 @@ net,project_class,kicad_pdf_resolved_class,raw_kicad_xml_class
 /03_OUTPUT_PROTECTION/SER_UVLO,Signal,Signal,Default
 /03_OUTPUT_PROTECTION/SOURCE_CONTACT,Signal,Signal,Default
 /03_OUTPUT_PROTECTION/SRC_TRIP,Signal,Signal,Default
+/03_OUTPUT_PROTECTION/SW_HIGH,Signal,Signal,Default
+/03_OUTPUT_PROTECTION/SW_HYS,Signal,Signal,Default
+/03_OUTPUT_PROTECTION/SW_SENSE,Signal,Signal,Default
 /03_OUTPUT_PROTECTION/TGUP_SLOW,Signal,Signal,Default
 /03_OUTPUT_PROTECTION/TRUE_FAULT,Signal,Signal,Default
+/03_OUTPUT_PROTECTION/VIN_GOOD_FAST,Signal,Signal,Default
+/03_OUTPUT_PROTECTION/VIN_MON,Signal,Signal,Default
+/03_OUTPUT_PROTECTION/VIN_SENSE,Signal,Signal,Default
 /04_POWER_MONITOR/3V3_LOCAL,Signal,Signal,Default
 /04_POWER_MONITOR/ALERT_LOCAL,Signal,Signal,Default
 /04_POWER_MONITOR/INA_IN_MINUS,Kelvin,Kelvin,Default
@@ -143,6 +148,7 @@ net,project_class,kicad_pdf_resolved_class,raw_kicad_xml_class
 /BUCK_PGOOD,Signal,Signal,Signal
 /GND,HighCurrent,HighCurrent,HighCurrent
 /INPUT_SHDN,Signal,Signal,Signal
+/L201_IN,Switching,Switching,Switching
 /LOAD_5V1,HighCurrent,HighCurrent,HighCurrent
 /SCL_HOST,Signal,Signal,Signal
 /SDA_HOST,Signal,Signal,Signal

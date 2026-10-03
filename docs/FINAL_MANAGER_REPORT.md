@@ -240,3 +240,21 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **OPEN RISKS:** J502 module complete pole/clamp ≤3.12 mΩ hot and Pi complete contact ≤20 mΩ hot/conditioned are acceptance targets, not guaranteed by the inspected datasheets. Exact Pi male-header identity/rating, contact current sharing, indexed carrier/engagement, assembly tolerances and hot tests remain OPEN. Existing source/fault containment, capacitor/inductor, thermal and physical bring-up blockers remain. ERC and pad consistency do not establish electrical safety.
 
 **NEXT GATE:** review the footprint PR and obtain the held component decisions and connector/assembly qualification. Complete R2 electrical review before authorizing R3. Follow the existing dummy-load-first R5 sequence before SBC integration.
+
+## Gate 4b — resumed test-board capture, 2026-10-03
+
+**STATUS: CONDITIONAL PASS for schematic capture; R2 electrical release BLOCKED.**
+
+**PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION**
+
+**WHAT WAS DONE:** continued the supplied partial commits through 74b9dc8, one sheet at a time. Sheet01 input protection and Sheet04 Kelvin telemetry were retained and rechecked. Sheet02 now exports L201_IN through the hierarchy. Sheet03 adds the frozen SW/VIN sensing front end as an observation circuit, preserving option-A manual source triggering/reset and rail/driver-loss hooks. Sheet05 retains Phoenix J5021776508 with1777989 mate. Sheets02/03/05 now explicitly quote bench proof as a future acceptance requirement, with all hardware evidence NOT RUN. This addresses the two independent Sheet01/02 review findings within the owner-authorized test-hook scope.
+
+**EVIDENCE:** [capture handback](evidence/r2/gate4b/GATE4B_CAPTURE.md), [review resolutions](evidence/r2/gate4b/REVIEW_RESOLUTIONS.md), per-sheet ERC/checkpoints, [final ERC](evidence/r2/gate4b/ERC_FINAL.json), [full marked PDF](evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf), [native netlist](evidence/r2/gate4b/captured.xml), [366-reference inventory](evidence/r2/gate4b/CAPTURED_BOM.csv), [40-row freeze reconciliation](evidence/r2/gate4b/FREEZE_RECONCILIATION.json), [final validation](evidence/r2/gate4b/FINAL_VALIDATION.json). KiCad9.0.6 reports zero violations at all severities; all50 regression tests pass. Every physical symbol has an assigned, pad-number-consistent footprint. No existing PR15 project footprint was modified. The six-page schematic PDF was visually reviewed.
+
+**DECISIONS:** retain architecture D,9–26V input, SMCJ36CA, Schurter3403.0285.23, local5.098361V regulation, opposed series pair and no bypass to the protected load. New source sensors are observation-only; the autonomous qualifier/collapse memory is absent under option A. Net classes cover29 high-current,4 switching,4 Kelvin and121 signal nets; editor widths are ASSUMED, not copper ratings. The raw KiCad XML still reports Default on144 local nets despite correct PDF/project resolution; verify actual PCB inheritance during an authorized R3.
+
+**OPEN RISKS:** autonomous source coverage/10µs/100µC; brownout/PG recovery/SER_DRV loss and persistent-short reset policy; bootstrap/auxiliary/reference/clamp loading and hold; hot power-device/ballast/diode stress and energy partition; source/fuse/TVS coordination; regulator/inrush/ripple/stability/thermal performance; fixture ratings/calibration; complete hot J502/Pi harness and Kelvin/telemetry accuracy. The possible DDR-60L-12 source does not change the input protection/current-limit/trace basis:28.33W/9V≈3.15A, at12V≈2.36A. V1A thermal behavior at12V remains OPEN. All physical tests are NOT RUN.
+
+**NEXT GATE:** engineering review of the completed R2 test-board capture and bounded isolated-coupon/fixture plan. R3 layout and R4 fabrication remain unreleased. Follow visual/continuity → current-limited no-load startup → rail verification → dummy-load steps → thermal/ripple/transient → fault/protection → telemetry → SBC only after all preceding gates pass. No Pi as first load.
+
+**Git handback:** local per-sheet checkpoint attempts failed because Git could not create index.lock (Operation not permitted). Per the brief, this resume remains uncommitted for Claude. No lock/permission changes, push, merge, PCB layout, purchase or manufacturing action.

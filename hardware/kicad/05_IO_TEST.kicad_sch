@@ -2035,7 +2035,7 @@
         (size 1.27 1.27)) 
       (justify left top)) 
     (uuid "77bae66f-d56f-5c69-816e-8e736b752af7")) 
-  (text "TEST HOOK — design proven on bench; evidence NOT RUN. Dry-contact manual trigger/reset and rail/driver-loss links are onSheet03." 
+  (text "FUTURE ACCEPTANCE REQUIRED: \"TEST HOOK — design proven on bench\". UNTESTED CANDIDATE; evidence NOT RUN. Manual trigger/reset and rail/driver-loss links are onSheet03." 
     (at 12.7 231.14 0) 
     (effects 
       (font 

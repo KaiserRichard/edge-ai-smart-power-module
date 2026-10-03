@@ -58,3 +58,11 @@ JP101 now separates U101 OUT17/18 (`EFUSE_OUT`) from every main local input capa
 ## Sheet 04
 
 R401/INA228 retain the PR15 four-terminal Kelvin contract and qualified WSL2726 lands. Force1→VOUT_PROTECTED and force4→LOAD_5V1 remain distinct; sense2/3 feed the symmetric10Ω/100nF filter. TPS70933/TCA9517 pin maps and host/local domains are unchanged. The exact freeze MPNs complete R402…408/C401 and remaining bypasses; C404 retains the PR15 TDK2220 land. TP405/406 use the same reviewed paired etched1.5mm/2.54mm pads as other sense hooks, pin1 force-node observation/pin2 GND. These are not load connectors. Calculated10mV/50mW at5A and nominal ADC ranges are annotated; accuracy, pulse stress and thermal behavior remain OPEN.
+
+## Second resume — source sensing observation circuit
+
+**EVIDENCE:** U640/U642 use TLV3201AIDBVR, [TI SBOS561C, revised May 2024, p3](https://www.ti.com/lit/ds/symlink/tlv3201.pdf): OUT1, GND2, IN+3, IN−4, VCC5; DBV5 has no exposed pad. U647 uses the **TSSOP** ADG4612BRUZ column of [ADI Rev0, p10](https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf): the existing independent 16-pin ledger applies; no LFCSP exposed pad is invented. D640…643 use [Nexperia BAS116, Rev5, 5 August 2020, p1](https://assets.nexperia.com/documents/data-sheet/BAS116.pdf), A1/NC2/K3, no EP. Sources were reopened during this resume; footprints use the already reviewed SOT-23-5, TSSOP16 and SOT-23 libraries. All pins/lands are checked against the independent ledger and fresh XML.
+
+R640/641/642/644/645/651/652 and C640/642/647 retain the exact FIX3_SOURCE_TRIGGER selections and 0603 nonpolar lands. TP337…340 use the reviewed paired sense pads, signal1/GND2, with no force-current role. The front end is connected to the real hierarchical L201_IN and VIN_PROTECTED, not duplicated local labels. R640 is after JP201; C205 remains before JP201. No power declaration was added.
+
+**DECISION:** the frozen analog sensing circuit is captured for observation. U641/643/645/646 and their autonomous qualifier/memory function remain absent under owner option A; U644 retains its documented manual-source role. Observed SW_HIGH/VIN_GOOD_FAST never drive SRC_TRIP or permission. Shared reference loading/injection, threshold/hysteresis, probe capacitance, SAFE5 current/hold and partial-power recovery remain OPEN.

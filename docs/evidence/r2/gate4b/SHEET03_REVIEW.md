@@ -56,3 +56,17 @@ Next: Sheet 04 Kelvin monitoring, then Sheet 05 connectors/hooks, net classes an
 **EVIDENCE:** continued `f2e80c2`; no additional native Sheet 03 edits were needed. The 259 physical references match the freeze selections and owner option A, with the retired controls enumerated above. Fresh [all-severity ERC](sheet03_final_erc.json) has zero violations. The current 47-test suite passes, including independent bypass, bootstrap, compensation, PG/fault/reset and hold-capacitor package regressions. The native PDF page and its functional-group placement were visually reviewed. It is an A0 portrait drawing with named-net connections; review at native scale or zoom, not reduced A4 print.
 
 **DECISION:** capture checkpoint accepted conditionally; the autonomous trigger and interlock behavior remain bench/design closures. Preserve all earlier review/ERC evidence. Continue Sheet 04, without advancing R2 electrical release.
+
+## Second resume checkpoint — review failures addressed
+
+**Current evidence supersedes the earlier 259-reference/no-sensing description above.** Continued 74b9dc8 and added 21 physical references: U640/U642/U647, R640/641/642/644/645/651/652, D640…643, C640/642/647 and TP337…340. Sheet03 now has **280 physical references plus six existing source declarations**.
+
+**WHAT WAS DONE:** restored the exact frozen SW/VIN analog front end as an observation circuit. R640.1 shares the actual exported L201_IN net with JP201.2/L201.1/PF4.1/TP202.1; R644.1 shares VIN_PROTECTED with U201 VIN and its input bank. U647 isolates both inputs when off; U640 has the frozen feedback hysteresis network. The native-SW isolation and manual source trigger remain distinct. No autonomous qualifier/collapse-memory claim is made. The required hook phrase is now quoted after **FUTURE ACCEPTANCE REQUIRED**, followed by **UNTESTED CANDIDATE; evidence NOT RUN**.
+
+**EVIDENCE:** [fresh ERC](sheet03_resume2_erc.json), all severities: zero violations; independent pin/footprint/hierarchy/control/no-bypass checker passes. Native six-page export was visually inspected at Sheet03 full-page and source-front-end detail; groups and notes fit A0 portrait. Passive-row pitch is 17.78 mm. Root interface labels were subsequently made horizontal to avoid duplicate vertical text; final PDF review covers that presentation correction.
+
+**DECISION:** source-interface capture finding repaired; autonomous behavior remains explicitly outside option-A capture. New regressions reject native-SW substitution, a same-named disconnected local net and an observation output substituted for the manual fault input.
+
+**OPEN:** all earlier physical qualifications remain; include the restored front end in SAFE5 current, shared-clamp injection, reference settling, probe capacitance and held-load measurements. No frozen power rating/limit changed.
+
+**NEXT:** Sheet04 telemetry checkpoint. Git index.lock denial invokes the authorized uncommitted fallback; no permissions or locks changed.

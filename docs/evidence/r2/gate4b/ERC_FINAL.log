@@ -1,3 +1,5 @@
+Found 0 violations
+Saved ERC Report to docs/evidence/r2/gate4b/ERC_FINAL.json
 Fontconfig warning: "/usr/local/etc/fonts/conf.d/48-guessfamily.conf", line 19: invalid attribute 'xsi:nil'
 Fontconfig warning: "/usr/local/etc/fonts/conf.d/48-guessfamily.conf", line 20: invalid constant used : 
 Fontconfig warning: "/usr/local/etc/fonts/conf.d/48-guessfamily.conf", line 23: invalid constant used : monospace
@@ -43,5 +45,3 @@ Fontconfig warning: "/usr/local/etc/fonts/conf.d/49-sansserif.conf", line 18: in
 Fontconfig warning: "/usr/local/etc/fonts/conf.d/49-sansserif.conf", line 26: invalid constant used : monospace
 Fontconfig warning: "/usr/local/etc/fonts/conf.d/49-sansserif.conf", line 34: invalid constant used : emoji
 Fontconfig warning: "/usr/local/etc/fonts/conf.d/49-sansserif.conf", line 42: invalid constant used : math
-Found 0 violations
-Saved ERC Report to docs/evidence/r2/gate4b/ERC_FINAL.json

@@ -398,7 +398,7 @@
         "1": "+",
         "2": "-"
       },
-      "source_id": "Panasonic FR radial 220uF25V; positive pad1, stripe negative pad2; D6.3 P2.5",
+      "source_id": "Panasonic exact EEUFR1E221 record (2026-10-03): D8.0mm, L11.5mm, P3.50mm; positive pad1, negative stripe pad2. Corrects stale D6.3/P2.5 text; footprint was already corrected in f2e80c2.",
       "classification": "DATASHEET physical identity; capture aliases for active-low and EP names"
     }
   },

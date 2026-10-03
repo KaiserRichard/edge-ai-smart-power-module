@@ -6112,7 +6112,8 @@
               (size 1.016 1.016))))))) 
   (symbol "JP201_CUSTOM_FX_CU_01_RevA" 
     (pin_names 
-      (offset 0.762)) 
+      (offset 0.762) 
+      (hide yes)) 
     (exclude_from_sim no) 
     (in_bom yes) 
     (on_board yes) 
@@ -6133,17 +6134,25 @@
           (size 1.27 1.27)) 
         (hide yes))) 
     (symbol "JP201_CUSTOM_FX_CU_01_RevA_0_1" 
-      (rectangle 
-        (start -20.32 7.62) 
-        (end 20.32 -7.62) 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
         (stroke 
           (width 0.254) 
           (type default)) 
         (fill 
-          (type background)))) 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
     (symbol "JP201_CUSTOM_FX_CU_01_RevA_1_1" 
       (pin passive line 
-        (at -22.86 0 0) 
+        (at -5.08 0 0) 
         (length 2.54) 
         (name "FORCE_A" 
           (effects 
@@ -6154,7 +6163,7 @@
             (font 
               (size 1.016 1.016))))) 
       (pin passive line 
-        (at 22.86 0 180) 
+        (at 5.08 0 180) 
         (length 2.54) 
         (name "FORCE_B" 
           (effects 
@@ -6166,7 +6175,8 @@
               (size 1.016 1.016))))))) 
   (symbol "JP202_CUSTOM_FX_CU_01_RevA" 
     (pin_names 
-      (offset 0.762)) 
+      (offset 0.762) 
+      (hide yes)) 
     (exclude_from_sim no) 
     (in_bom yes) 
     (on_board yes) 
@@ -6187,17 +6197,25 @@
           (size 1.27 1.27)) 
         (hide yes))) 
     (symbol "JP202_CUSTOM_FX_CU_01_RevA_0_1" 
-      (rectangle 
-        (start -20.32 7.62) 
-        (end 20.32 -7.62) 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
         (stroke 
           (width 0.254) 
           (type default)) 
         (fill 
-          (type background)))) 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
     (symbol "JP202_CUSTOM_FX_CU_01_RevA_1_1" 
       (pin passive line 
-        (at -22.86 0 0) 
+        (at -5.08 0 0) 
         (length 2.54) 
         (name "FORCE_A" 
           (effects 
@@ -6208,7 +6226,7 @@
             (font 
               (size 1.016 1.016))))) 
       (pin passive line 
-        (at 22.86 0 180) 
+        (at 5.08 0 180) 
         (length 2.54) 
         (name "FORCE_B" 
           (effects 
@@ -6352,7 +6370,8 @@
               (size 1.016 1.016))))))) 
   (symbol "TP204_N_A_etched_paired_pads" 
     (pin_names 
-      (offset 0.762)) 
+      (offset 0.762) 
+      (hide yes)) 
     (exclude_from_sim no) 
     (in_bom yes) 
     (on_board yes) 
@@ -6373,17 +6392,25 @@
           (size 1.27 1.27)) 
         (hide yes))) 
     (symbol "TP204_N_A_etched_paired_pads_0_1" 
-      (rectangle 
-        (start -20.32 7.62) 
-        (end 20.32 -7.62) 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
         (stroke 
           (width 0.254) 
           (type default)) 
         (fill 
-          (type background)))) 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
     (symbol "TP204_N_A_etched_paired_pads_1_1" 
       (pin passive line 
-        (at -22.86 0 0) 
+        (at -5.08 0 0) 
         (length 2.54) 
         (name "SIGNAL" 
           (effects 
@@ -6394,7 +6421,7 @@
             (font 
               (size 1.016 1.016))))) 
       (pin passive line 
-        (at 22.86 0 180) 
+        (at 5.08 0 180) 
         (length 2.54) 
         (name "RETURN" 
           (effects 
@@ -6406,7 +6433,8 @@
               (size 1.016 1.016))))))) 
   (symbol "TP201_N_A_etched_paired_pads" 
     (pin_names 
-      (offset 0.762)) 
+      (offset 0.762) 
+      (hide yes)) 
     (exclude_from_sim no) 
     (in_bom yes) 
     (on_board yes) 
@@ -6427,17 +6455,25 @@
           (size 1.27 1.27)) 
         (hide yes))) 
     (symbol "TP201_N_A_etched_paired_pads_0_1" 
-      (rectangle 
-        (start -20.32 7.62) 
-        (end 20.32 -7.62) 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
         (stroke 
           (width 0.254) 
           (type default)) 
         (fill 
-          (type background)))) 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
     (symbol "TP201_N_A_etched_paired_pads_1_1" 
       (pin passive line 
-        (at -22.86 0 0) 
+        (at -5.08 0 0) 
         (length 2.54) 
         (name "SIGNAL" 
           (effects 
@@ -6448,7 +6484,7 @@
             (font 
               (size 1.016 1.016))))) 
       (pin passive line 
-        (at 22.86 0 180) 
+        (at 5.08 0 180) 
         (length 2.54) 
         (name "RETURN" 
           (effects 
@@ -6460,7 +6496,8 @@
               (size 1.016 1.016))))))) 
   (symbol "TP202_N_A_etched_paired_pads" 
     (pin_names 
-      (offset 0.762)) 
+      (offset 0.762) 
+      (hide yes)) 
     (exclude_from_sim no) 
     (in_bom yes) 
     (on_board yes) 
@@ -6481,17 +6518,25 @@
           (size 1.27 1.27)) 
         (hide yes))) 
     (symbol "TP202_N_A_etched_paired_pads_0_1" 
-      (rectangle 
-        (start -20.32 7.62) 
-        (end 20.32 -7.62) 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
         (stroke 
           (width 0.254) 
           (type default)) 
         (fill 
-          (type background)))) 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
     (symbol "TP202_N_A_etched_paired_pads_1_1" 
       (pin passive line 
-        (at -22.86 0 0) 
+        (at -5.08 0 0) 
         (length 2.54) 
         (name "SIGNAL" 
           (effects 
@@ -6502,7 +6547,7 @@
             (font 
               (size 1.016 1.016))))) 
       (pin passive line 
-        (at 22.86 0 180) 
+        (at 5.08 0 180) 
         (length 2.54) 
         (name "RETURN" 
           (effects 
@@ -6514,7 +6559,8 @@
               (size 1.016 1.016))))))) 
   (symbol "TP203_N_A_etched_paired_pads" 
     (pin_names 
-      (offset 0.762)) 
+      (offset 0.762) 
+      (hide yes)) 
     (exclude_from_sim no) 
     (in_bom yes) 
     (on_board yes) 
@@ -6535,17 +6581,25 @@
           (size 1.27 1.27)) 
         (hide yes))) 
     (symbol "TP203_N_A_etched_paired_pads_0_1" 
-      (rectangle 
-        (start -20.32 7.62) 
-        (end 20.32 -7.62) 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
         (stroke 
           (width 0.254) 
           (type default)) 
         (fill 
-          (type background)))) 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
     (symbol "TP203_N_A_etched_paired_pads_1_1" 
       (pin passive line 
-        (at -22.86 0 0) 
+        (at -5.08 0 0) 
         (length 2.54) 
         (name "SIGNAL" 
           (effects 
@@ -6556,7 +6610,7 @@
             (font 
               (size 1.016 1.016))))) 
       (pin passive line 
-        (at 22.86 0 180) 
+        (at 5.08 0 180) 
         (length 2.54) 
         (name "RETURN" 
           (effects 
@@ -28641,4 +28695,1533 @@
         (number "2" 
           (effects 
             (font 
-              (size 1.016 1.016))))))))
+              (size 1.016 1.016)))))))
+  (symbol "U640_TLV3201AIDBVR" 
+    (pin_names 
+      (offset 0.762)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "U" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "TLV3201AIDBVR" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "U640_TLV3201AIDBVR_0_1" 
+      (rectangle 
+        (start -20.32 10.16) 
+        (end 20.32 -10.16) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type background)))) 
+    (symbol "U640_TLV3201AIDBVR_1_1" 
+      (pin output line 
+        (at -22.86 5.08 0) 
+        (length 2.54) 
+        (name "OUT" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin power_in line 
+        (at -22.86 0 0) 
+        (length 2.54) 
+        (name "GND" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin input line 
+        (at -22.86 -5.08 0) 
+        (length 2.54) 
+        (name "IN+" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "3" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin input line 
+        (at 22.86 5.08 180) 
+        (length 2.54) 
+        (name "IN-" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "4" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin power_in line 
+        (at 22.86 0 180) 
+        (length 2.54) 
+        (name "VCC" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "5" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "U642_TLV3201AIDBVR" 
+    (pin_names 
+      (offset 0.762)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "U" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "TLV3201AIDBVR" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "U642_TLV3201AIDBVR_0_1" 
+      (rectangle 
+        (start -20.32 10.16) 
+        (end 20.32 -10.16) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type background)))) 
+    (symbol "U642_TLV3201AIDBVR_1_1" 
+      (pin output line 
+        (at -22.86 5.08 0) 
+        (length 2.54) 
+        (name "OUT" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin power_in line 
+        (at -22.86 0 0) 
+        (length 2.54) 
+        (name "GND" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin input line 
+        (at -22.86 -5.08 0) 
+        (length 2.54) 
+        (name "IN+" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "3" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin input line 
+        (at 22.86 5.08 180) 
+        (length 2.54) 
+        (name "IN-" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "4" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin power_in line 
+        (at 22.86 0 180) 
+        (length 2.54) 
+        (name "VCC" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "5" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "R640_TNPW060320K0BEEA" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "R" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "20.0k" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "R640_TNPW060320K0BEEA_0_1" 
+      (rectangle 
+        (start -2.54 1.016) 
+        (end 2.54 -1.016) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "R640_TNPW060320K0BEEA_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "R641_TNPW06036K19BEEA" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "R" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "6.19k" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "R641_TNPW06036K19BEEA_0_1" 
+      (rectangle 
+        (start -2.54 1.016) 
+        (end 2.54 -1.016) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "R641_TNPW06036K19BEEA_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "R642_TNPW060320K0BEEA" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "R" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "20.0k" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "R642_TNPW060320K0BEEA_0_1" 
+      (rectangle 
+        (start -2.54 1.016) 
+        (end 2.54 -1.016) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "R642_TNPW060320K0BEEA_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "R644_TNPW060349K9BEEA" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "R" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "49.9k" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "R644_TNPW060349K9BEEA_0_1" 
+      (rectangle 
+        (start -2.54 1.016) 
+        (end 2.54 -1.016) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "R644_TNPW060349K9BEEA_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "R645_TNPW060310K0BEEA" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "R" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "10k" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "R645_TNPW060310K0BEEA_0_1" 
+      (rectangle 
+        (start -2.54 1.016) 
+        (end 2.54 -1.016) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "R645_TNPW060310K0BEEA_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "R651_TNPW0603100KBEEA" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "R" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "100k" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "R651_TNPW0603100KBEEA_0_1" 
+      (rectangle 
+        (start -2.54 1.016) 
+        (end 2.54 -1.016) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "R651_TNPW0603100KBEEA_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "R652_TNPW0603100KBEEA" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "R" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "100k" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "R652_TNPW0603100KBEEA_0_1" 
+      (rectangle 
+        (start -2.54 1.016) 
+        (end 2.54 -1.016) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "R652_TNPW0603100KBEEA_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "D640_BAS116_215" 
+    (pin_names 
+      (offset 0.762)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "D" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "BAS116,215" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "D640_BAS116_215_0_1" 
+      (rectangle 
+        (start -20.32 7.62) 
+        (end 20.32 -7.62) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type background)))) 
+    (symbol "D640_BAS116_215_1_1" 
+      (pin passive line 
+        (at -22.86 2.54 0) 
+        (length 2.54) 
+        (name "A" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin no_connect line 
+        (at -22.86 -2.54 0) 
+        (length 2.54) 
+        (name "NC" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 2.54 180) 
+        (length 2.54) 
+        (name "K" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "3" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "D641_BAS116_215" 
+    (pin_names 
+      (offset 0.762)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "D" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "BAS116,215" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "D641_BAS116_215_0_1" 
+      (rectangle 
+        (start -20.32 7.62) 
+        (end 20.32 -7.62) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type background)))) 
+    (symbol "D641_BAS116_215_1_1" 
+      (pin passive line 
+        (at -22.86 2.54 0) 
+        (length 2.54) 
+        (name "A" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin no_connect line 
+        (at -22.86 -2.54 0) 
+        (length 2.54) 
+        (name "NC" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 2.54 180) 
+        (length 2.54) 
+        (name "K" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "3" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "D642_BAS116_215" 
+    (pin_names 
+      (offset 0.762)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "D" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "BAS116,215" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "D642_BAS116_215_0_1" 
+      (rectangle 
+        (start -20.32 7.62) 
+        (end 20.32 -7.62) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type background)))) 
+    (symbol "D642_BAS116_215_1_1" 
+      (pin passive line 
+        (at -22.86 2.54 0) 
+        (length 2.54) 
+        (name "A" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin no_connect line 
+        (at -22.86 -2.54 0) 
+        (length 2.54) 
+        (name "NC" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 2.54 180) 
+        (length 2.54) 
+        (name "K" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "3" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "D643_BAS116_215" 
+    (pin_names 
+      (offset 0.762)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "D" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "BAS116,215" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "D643_BAS116_215_0_1" 
+      (rectangle 
+        (start -20.32 7.62) 
+        (end 20.32 -7.62) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type background)))) 
+    (symbol "D643_BAS116_215_1_1" 
+      (pin passive line 
+        (at -22.86 2.54 0) 
+        (length 2.54) 
+        (name "A" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin no_connect line 
+        (at -22.86 -2.54 0) 
+        (length 2.54) 
+        (name "NC" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 2.54 180) 
+        (length 2.54) 
+        (name "K" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "3" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "U647_ADG4612BRUZ" 
+    (pin_names 
+      (offset 0.762)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "U" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "ADG4612BRUZ" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "U647_ADG4612BRUZ_0_1" 
+      (rectangle 
+        (start -20.32 22.86) 
+        (end 20.32 -22.86) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type background)))) 
+    (symbol "U647_ADG4612BRUZ_1_1" 
+      (pin input line 
+        (at -22.86 17.78 0) 
+        (length 2.54) 
+        (name "IN1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at -22.86 12.7 0) 
+        (length 2.54) 
+        (name "D1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at -22.86 7.62 0) 
+        (length 2.54) 
+        (name "S1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "3" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin power_in line 
+        (at -22.86 2.54 0) 
+        (length 2.54) 
+        (name "VSS" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "4" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin power_in line 
+        (at -22.86 -2.54 0) 
+        (length 2.54) 
+        (name "GND" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "5" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at -22.86 -7.62 0) 
+        (length 2.54) 
+        (name "S4" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "6" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at -22.86 -12.7 0) 
+        (length 2.54) 
+        (name "D4" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "7" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin input line 
+        (at -22.86 -17.78 0) 
+        (length 2.54) 
+        (name "IN4" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "8" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin input line 
+        (at 22.86 17.78 180) 
+        (length 2.54) 
+        (name "IN3" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "9" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 12.7 180) 
+        (length 2.54) 
+        (name "D3" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "10" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 7.62 180) 
+        (length 2.54) 
+        (name "S3" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "11" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin no_connect line 
+        (at 22.86 2.54 180) 
+        (length 2.54) 
+        (name "NC" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "12" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin power_in line 
+        (at 22.86 -2.54 180) 
+        (length 2.54) 
+        (name "VDD" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "13" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 -7.62 180) 
+        (length 2.54) 
+        (name "S2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "14" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 22.86 -12.7 180) 
+        (length 2.54) 
+        (name "D2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "15" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin input line 
+        (at 22.86 -17.78 180) 
+        (length 2.54) 
+        (name "IN2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "16" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "C640_GRM188R71H104KA93D" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "C" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "100nF 50V" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "C640_GRM188R71H104KA93D_0_1" 
+      (polyline 
+        (pts 
+          (xy -0.635 -2.54) 
+          (xy -0.635 2.54)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy 0.635 -2.54) 
+          (xy 0.635 2.54)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy -2.54 0) 
+          (xy -0.635 0)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy 0.635 0) 
+          (xy 2.54 0)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "C640_GRM188R71H104KA93D_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "C642_GRM188R71H104KA93D" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "C" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "100nF 50V" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "C642_GRM188R71H104KA93D_0_1" 
+      (polyline 
+        (pts 
+          (xy -0.635 -2.54) 
+          (xy -0.635 2.54)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy 0.635 -2.54) 
+          (xy 0.635 2.54)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy -2.54 0) 
+          (xy -0.635 0)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy 0.635 0) 
+          (xy 2.54 0)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "C642_GRM188R71H104KA93D_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "C647_GRM188R71H104KA93D" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "C" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "100nF 50V" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "C647_GRM188R71H104KA93D_0_1" 
+      (polyline 
+        (pts 
+          (xy -0.635 -2.54) 
+          (xy -0.635 2.54)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy 0.635 -2.54) 
+          (xy 0.635 2.54)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy -2.54 0) 
+          (xy -0.635 0)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (polyline 
+        (pts 
+          (xy 0.635 0) 
+          (xy 2.54 0)) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "C647_GRM188R71H104KA93D_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "TP337_N_A_etched_paired_pads" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "TP" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "SW_HIGH" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "V1A_Qualified:SensePair_P2.54" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "TP337_N_A_etched_paired_pads_0_1" 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "TP337_N_A_etched_paired_pads_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "SIGNAL" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "RETURN" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "TP338_N_A_etched_paired_pads" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "TP" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "VIN_GOOD_FAST" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "V1A_Qualified:SensePair_P2.54" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "TP338_N_A_etched_paired_pads_0_1" 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "TP338_N_A_etched_paired_pads_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "SIGNAL" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "RETURN" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "TP339_N_A_etched_paired_pads" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "TP" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "SW_SENSE" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "V1A_Qualified:SensePair_P2.54" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "TP339_N_A_etched_paired_pads_0_1" 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "TP339_N_A_etched_paired_pads_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "SIGNAL" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "RETURN" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+  (symbol "TP340_N_A_etched_paired_pads" 
+    (pin_names 
+      (offset 0.762) 
+      (hide yes)) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (property "Reference" "TP" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "VIN_SENSE" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "V1A_Qualified:SensePair_P2.54" 
+      (at 0 0 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (symbol "TP340_N_A_etched_paired_pads_0_1" 
+      (circle 
+        (center -1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none))) 
+      (circle 
+        (center 1.905 0) 
+        (radius 0.635) 
+        (stroke 
+          (width 0.254) 
+          (type default)) 
+        (fill 
+          (type none)))) 
+    (symbol "TP340_N_A_etched_paired_pads_1_1" 
+      (pin passive line 
+        (at -5.08 0 0) 
+        (length 2.54) 
+        (name "SIGNAL" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "1" 
+          (effects 
+            (font 
+              (size 1.016 1.016))))) 
+      (pin passive line 
+        (at 5.08 0 180) 
+        (length 2.54) 
+        (name "RETURN" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))) 
+        (number "2" 
+          (effects 
+            (font 
+              (size 1.016 1.016)))))))
+)
