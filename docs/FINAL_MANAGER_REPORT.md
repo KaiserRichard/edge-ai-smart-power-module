@@ -274,3 +274,20 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **NEXT GATE:** continue the existing R2 engineering review; this check does not release R3 or fabrication.
 
 **Git handback:** the authorized local commit attempt failed because Git could not create `index.lock` (`Operation not permitted`). These documentation changes remain uncommitted under the brief's explicit fallback; nothing was pushed.
+
+
+## Layout preparation — unplaced PCB import, 2026-10-03
+
+**STATUS: CONDITIONAL PASS for import/net-class checks; guide installation BLOCKED by filesystem permissions. R2 electrical release and R3 layout release remain BLOCKED.**
+
+**WHAT WAS DONE:** followed `v1a-lab/briefs/LAYOUT_PREP.md` after U316 review without sub-agents. Created `hardware/kicad/V1A.kicad_pcb` from a fresh schematic export using KiCad 9.0.6's board API. All 366 footprints remain at the origin and unplaced; no tracks, vias, zones or outline. Prepared manufacturer-backed critical-placement guidance for every sheet and a patch for the separate guide worktree.
+
+**EVIDENCE:** [layout-prep report](evidence/r3/layout_prep/LAYOUT_PREP.md), [board/net-class audit](evidence/r3/layout_prep/IMPORT_CHECK.json), and [source provenance](../third_party/layout_prep/SOURCES.md). All 1,027 numbered pads match the capture. All five net-class dimensions and all 158 named-net assignments resolve correctly in the board; no project change was needed. Native DRC has zero schematic-parity issues, but physical DRC fails with 2,191 reported violations and 213 unconnected items on the deliberately unplaced board. Fifty existing tests and independent capture/footprint checks pass. Visual output confirms the origin pile only. The older blanket no-PCB checks report a scope failure; their functional validators pass and those guards were not weakened.
+
+**DECISIONS:** preserve schematic connectivity, values, assembly attributes and UUID links. Retain the existing project rules as provisional editor defaults. No footprint placement, routing, electrical redesign, fabrication release or push.
+
+**OPEN RISKS:** the guide worktree is outside this session's writable roots; its file open for writing returned `Operation not permitted`. The [prepared patch](evidence/r3/layout_prep/layout-guide.patch) passes `git apply --check`, but was not installed or committed there. Placement review also flags U315 local bypass, U306 input-bypass allocation and U327 output-ceramic questions. Existing R2 electrical/thermal/fault risks persist. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.
+
+**NEXT GATE:** apply/review the guide patch in a writable session, resolve R2 review items, and authorize owner placement. This handoff does not close R3. Follow the established current-limited/dummy-load bring-up sequence before any SBC integration.
+
+**Git handback:** the authorized local commit stopped at `git add` because creating the capture worktree `index.lock` returned `Operation not permitted`. Per the brief, leave capture changes uncommitted. The guide target could not be written, so its prepared patch is also uncommitted. No push or lock/permission changes.
