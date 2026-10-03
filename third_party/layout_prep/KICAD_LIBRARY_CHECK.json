@@ -1,0 +1,175 @@
+{
+  "repository": "https://gitlab.com/kicad/libraries/kicad-footprints",
+  "tag": "9.0.6",
+  "commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+  "files": [
+    {
+      "file": "Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+      "installed_sha256": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88",
+      "upstream_sha256": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88",
+      "matches": true
+    },
+    {
+      "file": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "installed_sha256": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419",
+      "upstream_sha256": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419",
+      "matches": true
+    },
+    {
+      "file": "Diode_SMD.pretty/D_SMC.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Diode_SMD.pretty/D_SMC.kicad_mod",
+      "installed_sha256": "27d6a82f606544b92f552e8553603bf7a9953c48b32288661478bd77be661d4b",
+      "upstream_sha256": "27d6a82f606544b92f552e8553603bf7a9953c48b32288661478bd77be661d4b",
+      "matches": true
+    },
+    {
+      "file": "Package_TO_SOT_THT.pretty/TO-220-3_Vertical.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_TO_SOT_THT.pretty/TO-220-3_Vertical.kicad_mod",
+      "installed_sha256": "6b833c0eb0487be34d2a77aac4eeb30814b709a8ee52fa8d958820204ae3d48b",
+      "upstream_sha256": "6b833c0eb0487be34d2a77aac4eeb30814b709a8ee52fa8d958820204ae3d48b",
+      "matches": true
+    },
+    {
+      "file": "Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod",
+      "installed_sha256": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d",
+      "upstream_sha256": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d",
+      "matches": true
+    },
+    {
+      "file": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "installed_sha256": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4",
+      "upstream_sha256": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4",
+      "matches": true
+    },
+    {
+      "file": "Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod",
+      "installed_sha256": "54fd6e17158e15e5a591053f905fbd5bd9a1aa7008c73cccd391b192a3b1a09d",
+      "upstream_sha256": "54fd6e17158e15e5a591053f905fbd5bd9a1aa7008c73cccd391b192a3b1a09d",
+      "matches": true
+    },
+    {
+      "file": "TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "installed_sha256": "b863253216b04db5519fae21af9390e330c8fc62dee105cab1cf015166eeb2fd",
+      "upstream_sha256": "b863253216b04db5519fae21af9390e330c8fc62dee105cab1cf015166eeb2fd",
+      "matches": true
+    },
+    {
+      "file": "Package_DFN_QFN.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_DFN_QFN.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod",
+      "installed_sha256": "a99b712ecc5976476fd117aca0e789096f71dfb9cf1a9983ba2a996d3a19b0e5",
+      "upstream_sha256": "a99b712ecc5976476fd117aca0e789096f71dfb9cf1a9983ba2a996d3a19b0e5",
+      "matches": true
+    },
+    {
+      "file": "Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+      "installed_sha256": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc",
+      "upstream_sha256": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc",
+      "matches": true
+    },
+    {
+      "file": "Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod",
+      "installed_sha256": "9343c2f817fd00cce4d60eb82049bd305d87ee6a856d04895b6c546aceac317b",
+      "upstream_sha256": "9343c2f817fd00cce4d60eb82049bd305d87ee6a856d04895b6c546aceac317b",
+      "matches": true
+    },
+    {
+      "file": "Capacitor_THT.pretty/CP_Radial_D8.0mm_P3.50mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Capacitor_THT.pretty/CP_Radial_D8.0mm_P3.50mm.kicad_mod",
+      "installed_sha256": "a408de9854a71cfd369e8d996c82712decfe96402c4331e1233c3ee62cc94653",
+      "upstream_sha256": "a408de9854a71cfd369e8d996c82712decfe96402c4331e1233c3ee62cc94653",
+      "matches": true
+    },
+    {
+      "file": "Diode_SMD.pretty/D_SMB.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Diode_SMD.pretty/D_SMB.kicad_mod",
+      "installed_sha256": "fcfd409e5167499f325224f41c3e556c23e3de23eeeea48137ea55075e4630d8",
+      "upstream_sha256": "fcfd409e5167499f325224f41c3e556c23e3de23eeeea48137ea55075e4630d8",
+      "matches": true
+    },
+    {
+      "file": "Package_TO_SOT_SMD.pretty/TO-263-3_TabPin2.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_TO_SOT_SMD.pretty/TO-263-3_TabPin2.kicad_mod",
+      "installed_sha256": "a75cd3e2ead578ef35f692f8af72aacc2a473ac1b6e6655b3e203b5cc374a7dd",
+      "upstream_sha256": "a75cd3e2ead578ef35f692f8af72aacc2a473ac1b6e6655b3e203b5cc374a7dd",
+      "matches": true
+    },
+    {
+      "file": "Resistor_SMD.pretty/R_1206_3216Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Resistor_SMD.pretty/R_1206_3216Metric.kicad_mod",
+      "installed_sha256": "3671ca6038d43f4aa571edc854129ee383e8ae11a7ba61c67a44707b29eb7e3b",
+      "upstream_sha256": "3671ca6038d43f4aa571edc854129ee383e8ae11a7ba61c67a44707b29eb7e3b",
+      "matches": true
+    },
+    {
+      "file": "Resistor_SMD.pretty/R_2512_6332Metric.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Resistor_SMD.pretty/R_2512_6332Metric.kicad_mod",
+      "installed_sha256": "e6c8e0ff63a631cbc022921a9d7f63a78c54176ad7aca6dae41ab9f5b4f95138",
+      "upstream_sha256": "e6c8e0ff63a631cbc022921a9d7f63a78c54176ad7aca6dae41ab9f5b4f95138",
+      "matches": true
+    },
+    {
+      "file": "Package_SO.pretty/MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm.kicad_mod",
+      "installed_sha256": "1cdbb97c13cf3065b83379e9a0b4551f20b22834a82bc7c545e43e1e8b04284f",
+      "upstream_sha256": "1cdbb97c13cf3065b83379e9a0b4551f20b22834a82bc7c545e43e1e8b04284f",
+      "matches": true
+    },
+    {
+      "file": "Package_SO.pretty/VSSOP-8_3x3mm_P0.65mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/VSSOP-8_3x3mm_P0.65mm.kicad_mod",
+      "installed_sha256": "158512ca5921f79f03ab2171af707bdfdcc39ffcba866c675a21addce0234cec",
+      "upstream_sha256": "158512ca5921f79f03ab2171af707bdfdcc39ffcba866c675a21addce0234cec",
+      "matches": true
+    },
+    {
+      "file": "Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
+      "installed_sha256": "7dd62023ad614b9337b62dc6332bdd83c04e6c471118b102709dddae0241abed",
+      "upstream_sha256": "7dd62023ad614b9337b62dc6332bdd83c04e6c471118b102709dddae0241abed",
+      "matches": true
+    },
+    {
+      "file": "Package_SO.pretty/HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm.kicad_mod",
+      "installed_sha256": "4bb3901e412c4f86257b61162636d18b442028dbe5906aed854f9832cd7b9b7b",
+      "upstream_sha256": "4bb3901e412c4f86257b61162636d18b442028dbe5906aed854f9832cd7b9b7b",
+      "matches": true
+    },
+    {
+      "file": "Package_TO_SOT_SMD.pretty/SOT-23-6.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_TO_SOT_SMD.pretty/SOT-23-6.kicad_mod",
+      "installed_sha256": "602125b8f14e0119ce6e808989d7ae7b5c99b37401d399b561ac1938f9aa5e45",
+      "upstream_sha256": "602125b8f14e0119ce6e808989d7ae7b5c99b37401d399b561ac1938f9aa5e45",
+      "matches": true
+    },
+    {
+      "file": "Package_SO.pretty/MSOP-12_3x4.039mm_P0.65mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/MSOP-12_3x4.039mm_P0.65mm.kicad_mod",
+      "installed_sha256": "1c2c9d61e15bef840e591670a246735267c06f69e4af2e6417542943f375997a",
+      "upstream_sha256": "1c2c9d61e15bef840e591670a246735267c06f69e4af2e6417542943f375997a",
+      "matches": true
+    },
+    {
+      "file": "Package_SO.pretty/TSSOP-16_4.4x5mm_P0.65mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/TSSOP-16_4.4x5mm_P0.65mm.kicad_mod",
+      "installed_sha256": "c0016b3582642de61cdd94f64593862d6f9b27db9f0b27194dc79452f08dda8a",
+      "upstream_sha256": "c0016b3582642de61cdd94f64593862d6f9b27db9f0b27194dc79452f08dda8a",
+      "matches": true
+    },
+    {
+      "file": "Package_SO.pretty/VSSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Package_SO.pretty/VSSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "installed_sha256": "930d7346a8b6e8833ddaf4846df842051074ca166e1a5bdb577134730bf7dd8d",
+      "upstream_sha256": "930d7346a8b6e8833ddaf4846df842051074ca166e1a5bdb577134730bf7dd8d",
+      "matches": true
+    }
+  ]
+}
