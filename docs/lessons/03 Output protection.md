@@ -11,7 +11,7 @@ tags: [v1a, lesson, pilot]
 
 > [!warning] Status (read once, then enjoy the lesson)
 > **PRELIMINARY V1A SHEET-03 ARCHITECTURE (TEST BOARD) · NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
-> Gate 4a-FIX is still open (verdict BLOCKED; work in progress on `feat/r2-testboard-freeze`). Every number here is labelled **CALCULATED** (arithmetic under stated assumptions), **ASSUMED** (an allocation we chose) or **OPEN** (unknown). Waveforms come from an *ideal* model ([fault_model.py](fault_model.py)) that reproduces the Gate 4a numbers. They teach the mechanism. They are not measurements. On R2 a dummy load stands in for the Pi. **The Pi is never connected until the bench fault tests pass.**
+> Gate 4b schematic capture is **CONDITIONAL PASS**; R2 electrical release remains **BLOCKED**, and all physical tests are **NOT RUN**. Architecture D, both dumps, the auxiliary supply and manual test hooks are now drawn. Every number here is labelled **CALCULATED** (arithmetic under stated assumptions), **ASSUMED** (an allocation we chose) or **OPEN** (unknown). Waveforms come from an *ideal* model ([fault_model.py](fault_model.py)) that reproduces the Gate 4a numbers. They teach the mechanism; they are not measurements or timing predictions for the final manual-hook capture. On R2 a dummy load stands in for the Pi. **The Pi is never connected until the bench fault tests pass.**
 
 **What you will be able to do after this lesson**
 
@@ -50,7 +50,7 @@ To save the house you need four separate moves. The analogy is only a hook: the 
 1. **Stop new water arriving** → turn the input eFuse **U101** off.
 2. **Close a gate between the bucket and the house** → open the series switch **Q301 + Q302**.
 3. **Empty the water already in the house** → turn on the crowbar **Q303**.
-4. **Empty the bucket** → the "raw dump" (frozen on paper only, see 2b).
+4. **Empty the bucket** → the raw dump **Q330 + U330**, now drawn on page 4; see 2b.
 
 The "water still rushing through the pipe" is the important subtle bit. Moving water has momentum (động lượng). Closing the main valve does not stop it at once. In the circuit, that momentum is the **current in inductor L201**, and its energy is ½LI².
 
@@ -58,7 +58,7 @@ The "water still rushing through the pipe" is the important subtle bit. Moving w
 
 ## 2b. Read it on the schematic (open the PDF next to this lesson)
 
-Open `~/Desktop/Research/V1A_review_2026-09-29/V1A_REVIEW_READABLE.pdf`. It has 6 pages: page 1 is the top-level sheet, then one page per sub-sheet in order. Each page's title block names the sheet, so check the title if the page numbers ever shift.
+Open the final [V1A_GATE4B_SCHEMATIC_2026-10-03.pdf](/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_GATE4B_SCHEMATIC_2026-10-03.pdf#page=4). It matches `docs/evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf` at `origin/feat/r2-testboard-capture`, commit `838a8a4`. It has 6 pages: page 1 is the hierarchy, pages 2–6 are Sheets 01–05. Sheet 03 is **PDF page 4**, an A0 portrait page with 13 numbered functional blocks; zoom to a block and follow its net labels. Older lesson illustrations and the schematic reading guide use earlier snapshots; this walkthrough uses the final PDF.
 
 > [!tip] How to read a KiCad schematic page
 > - A **refdes** (reference designator) like `U101` names one part: U = IC, Q = transistor, L = inductor, R = resistor, C = capacitor, D = diode.
@@ -66,46 +66,83 @@ Open `~/Desktop/Research/V1A_review_2026-09-29/V1A_REVIEW_READABLE.pdf`. It has 
 > - Wires with the **same net label** are connected, even on different pages. So `VOUT_5V1` on page 3 and `VOUT_5V1` on page 4 are one piece of copper.
 > - Follow a net by searching its name in the PDF (Cmd+F). That is the fastest way to trace a signal.
 
-**Step 1: where the dangerous current comes from. Page 3, sheet `02_BUCK_5V`.**
+![[Pasted image 20261002194508.png]]
+![[Pasted image 20261002194517.png]]
+**Step 1: where the dangerous current comes from. Page 3, sheet `02_BUCK_5V`, BUCK / NATIVE SWITCH NODE and FAULT INJECTION / LOCAL REGULATION.**
 - Find **U201** (LM61460, the buck). Its **pin 10 `SW`** is the switch node, net `BUCK_SW`.
-- Follow `BUCK_SW` to **L201** (the inductor): L201 pin 1 is on `BUCK_SW`, and L201 pin 2 is on **`VOUT_5V1`**, the raw 5 V output.
+- Follow `BUCK_SW` through fitted **JP201 pins 1→2** to `L201_IN` and **L201 pin 1**. **L201 pin 2** is `L201_OUT`; fitted **JP202 pins 1→2** then reaches **`VOUT_5V1`**, the raw 5 V output. These removable force links are part of the captured path.
 - The fault in this lesson is U201's internal high-side switch failing short. Then `VIN_PROTECTED` (U201 pins 8 and 12, `VIN1`/`VIN2`) connects straight through the switch to `BUCK_SW`, and L201 feeds whatever current it has into `VOUT_5V1`. That current is the "water still moving".
+![[Pasted image 20261002194521.png]]
+![[Pasted image 20261002194540.png]]
+![[Pasted image 20261002194601.png]]
+![[Pasted image 20261002204824.png]]
+![[Pasted image 20261003161334.png]]
+![[Pasted image 20261003161342.png]]
+![[Pasted image 20261003165930.png]]
+![[Pasted image 20261003172612.png]]
+![[Pasted image 20261003172620.png]]
+![[Pasted image 20261003172634.png]]
+![[Pasted image 20261003172643.png]]
+![[Pasted image 20261003172657.png]]
+![[Pasted image 20261003172706.png]]
+![[Pasted image 20261003172714.png]]
+![[Pasted image 20261002194651.png]]
+![[Pasted image 20261002194658.png]]
+![[Pasted image 20261002194713.png]]
 
-**Step 2: stop new energy. Page 2, sheet `01_INPUT_PROTECTION`.**
+**Step 2: stop new energy. Page 2, sheet `01_INPUT_PROTECTION`, EFUSE / SOURCE DISCONNECT and MAIN CURRENT / COUPON ISOLATION.**
 - Find **U101** (TPS26630, the input eFuse). Its **pin 12 `SHDN`** sits on net `INPUT_SHDN`. Pulling this net low turns the eFuse off, which stops new energy from the 24 V side.
-- Pins 17–18 `OUT` feed `VIN_PROTECTED`, the net you met on U201 in step 1. So "turn off U101" really means "starve U201's input".
-- Also here: **D101**, the input TVS on `VIN_FUSED`. The schematic still shows **SMBJ26CA**. Your decision is **SMCJ36CA**, which is frozen on paper and not yet drawn (it will change in the Gate 4b capture).
+- Pins 17–18 `OUT` feed **`EFUSE_OUT`**, then fitted **JP101 pins 1→2** reaches `VIN_PROTECTED`, the net you met on U201 in step 1. The link sits before the buck's local input capacitance.
+- On page 4, block **11 MANUAL RAIL VALID / ARM / COMMAND DEFAULTS**, **Q304 drain pin 3** joins `INPUT_SHDN`, **source pin 2** joins GND and **gate pin 1** receives `FAULT_DRIVE`. This is the shutdown sink; its command does not establish physical cutoff timing.
+- Also on page 2, INPUT / REVERSE POLARITY: **D101 is now SMCJ36CA**, connected between `VIN_FUSED` and GND.
 
-**Step 3: detect the overvoltage. Page 4, sheet `03_OUTPUT_PROTECTION`.**
-- **R301 (11.3 kΩ) and R302 (10.0 kΩ)** divide `VOUT_5V1` down to net `OV_DIV`, then R303 (1 kΩ) feeds `OV_SENSE`.
-- **U303** (TLV3201 comparator) compares **pin 4 `IN−` = `OV_SENSE`** with **pin 3 `IN+` = `REF_2V5`**. `REF_2V5` comes from **U302** (REF5025) **pin 6 `VOUT`**.
-- The trip point on this drawing is $2.5\ \text{V}\times\frac{11.3+10.0}{10.0}=5.325\ \text{V}$ (CALCULATED from the drawn values). Gate 4a-FIX proposes about **5.267 V**. That is frozen on paper only, so the drawn resistor values will change in Gate 4b.
-- U303 **pin 1 `OUT`** (net `OV_OK`) feeds the latch logic around **U304** (74LVC1G74 flip-flop). Once the latch sets, the fault stays remembered until a person resets it.
+**Step 3: detect and remember the overvoltage. Page 4, sheet `03_OUTPUT_PROTECTION`, blocks 8 and 10.**
+- In **8 OV DETECTOR / ISOLATION / SEPARATE SHUNT CLAMP**, **R301 is now 9.88 kΩ** and **R302 is 10.0 kΩ**. Their midpoint `OV_DIV` reaches **U321 D1 pin 2 → S1 pin 3**, net `OV_SWITCHED`, then **R303 1 kΩ pins 1→2** to `OV_SENSE`. **R367 100 kΩ** pulls `OV_SENSE` to GND; it loads this divider. U321's **IN1 pin 1** receives `DET_SWITCH_EN` from the manual rail-valid path.
+- **U303** (TLV3201 comparator) compares **pin 4 `IN−` = `OV_SENSE`** with **pin 3 `IN+` = `REF_SENSE`**. **U302** (REF5025) **pin 6 `VOUT`** supplies `REF_2V5` through **R373 1 kΩ** to `REF_SENSE`. Both ICs use `DET5`. Read the loaded divider and isolation/clamp network together; the old two-resistor 5.325 V calculation no longer describes the drawing. The retained approximately **5.267 V** screen remains conditional.
+- **U303 pin 1 `OUT`** is now **`OV_COMPARATOR`**. Follow it into **10 MANUAL SOURCE TRIGGER / RESET / FAULT LATCH** through **U614**, the enabled-OV/source-fault logic and **U617** to **U610 pin 6 `nCLR`**, net `FAULT_CLEAR_N`.
+- **U610**, the current SN74LVC1G74 fault memory, replaces the old U304 walkthrough: **Q pin 5 = `NOFAULT`**, **nQ pin 3 = `FAULT`**, **CLK pin 1 = `RESET_DOWN`**. J302 provides manual reset. Fault priority is documented for valid supplies; persistent-short diagnosis and partial-power behavior remain OPEN.
 
-**Step 4: cut the path to the Pi. Same page 4.**
+**Step 4: cut the path to the Pi. Page 4, block 4 OPPOSED SERIES PAIR / REMOVABLE FORCE LINK.**
 - Find **Q301** and **Q302** (BSC034N06). Both have their **sources (pins 1–3)** on net `PROT_MID` and their **gates (pin 4)** on `PROT_GATE`.
-- Q301's **drain (pins 5–8)** is on `VOUT_5V1` (raw side), and Q302's drain is on `VOUT_PROTECTED` (the Pi side). This is the back-to-back pair: the two body diodes face each other, so "off" blocks both directions.
-- **U301** (LTC7001 driver) drives them: **pin 6 `TGDN`** pulls `PROT_GATE` down to turn the pair off. **Pin 8 `TS`** watches `PROT_MID`. **Pin 1 `VCC`** is on `DRV_7V5`, a separate driver supply, so the driver keeps working while the 5 V rail collapses.
+- Q301's **drain (pins 5–8)** is on `VOUT_5V1` (raw side), and Q302's drain is on **`SERIES_OUT`**. Fitted **JP301 pins 1→2** joins `SERIES_OUT` to `VOUT_PROTECTED` (the Pi side). This is the back-to-back pair, with no passive bypass between its outer rails.
+- **U301** (LTC7001 driver) has **pin 6 `TGDN`** on `PROT_GATE`, **pin 7 `TGUP`** feeding that gate through **R304 100 Ω**, **pin 8 `TS`** on `PROT_MID`, and **pin 4 `INP`** on `RUN_GATE`. **Pin 1 `VCC`** now uses **`SER_DRV`**, supplied through **D660 and removable JP660** from `DRV_HOLD`. Actual hold-up and supply-loss behavior remain untested.
 
-**Step 5: drain the Pi side. Same page 4.**
+**Step 5: drain the Pi side. Page 4, block 5 PROTECTED CROWBAR / 33 mOhm BALLAST.**
 - Find **Q303** (CSD18540Q5B, the crowbar MOSFET): **source pins 1–3 on `GND`**, **gate pin 4 on `CB_GATE`**, **drain pins 5–8 on `CB_DRAIN`**. `CB_DRAIN` reaches the protected rail through the 33 mΩ ballast resistors.
-- **U315** (UCC27511 gate driver) turns it on: **pin 6 `IN+` = `CROWBAR_ON`**, **pin 3 `OUTL`** drives `CB_GATE` directly, and **pin 2 `OUTH`** drives it through R306 (1 Ω).
+- Trace **`VOUT_PROTECTED` → R308+R309 in parallel with R310+R311 → `CB_BALLAST_OUT` → JP330 pins 1→2 → `CB_DRAIN`**. Each resistor is 33 mΩ; the two 66 mΩ strings give 33 mΩ nominal. **C340–C343** are the four protected 470 µF capacitors.
+- **U315** (UCC27511 gate driver) now has **pin 6 `IN+` = `DISPOSAL`**, **pin 1 `VDD` = `DRV_HOLD`**, **pin 3 `OUTL`** directly on `CB_GATE`, and **pin 2 `OUTH`** feeding it through R306 (1 Ω).
 
-**Step 6: drain the raw side. Frozen on paper only.**
-- Gate 4a found that once Q301/Q302 open, energy on `VOUT_5V1` and in L201 cannot reach the crowbar. It proposes a **raw dump** (a second switched ballast, about 100 mΩ, on `VOUT_5V1`) and an **independent auxiliary supply** for the detector and drivers.
-- **Neither is drawn yet.** You will not find them in this PDF. They arrive in the Gate 4b KiCad capture.
+**Step 6: drain the raw side. Page 4, block 6 RAW DUMP / 99 mOhm / TWO SIX-PART STRINGS.**
+- The raw dump is now drawn: **`VOUT_5V1` → two ballast strings → `RAW_BALLAST_OUT` → JP331 pins 1→2 → `RAW_DUMP_DRAIN` → Q330 → GND**. The strings are **R380/R381/R382/R383/R386/R387** and **R388–R393**: six 33 mΩ parts per string, 99 mΩ nominal in parallel. **C330–C337** are the eight raw 470 µF capacitors.
+- **Q330** is CSD18540Q5B: **source pins 1–3 = GND**, **gate pin 4 = `RAW_DUMP_GATE`**, **drains 5–8 = `RAW_DUMP_DRAIN`**. **U330** is UCC27511: **IN+ pin 6 = `DISPOSAL`**, **VDD pin 1 = `DRV_HOLD`**, **OUTL pin 3 = `RAW_DUMP_GATE`** and **OUTH pin 2** reaches the gate through **R384 1 Ω**. Opening JP331 disables this disposal path; opening JP330 disables the protected dump.
 
-| What | Where in the PDF | Drawn today? |
+**Step 7: find the independent protection supply. Page 4, blocks 1–3, 7 and 9.**
+- **1 AUX SURGE STOPPER / UPSTREAM OF MAIN EFUSE:** `VIN_FUSED` feeds **D303 → U316 LT4363-1 / Q316 / R332**, producing `AUX_LIMITED` upstream of the main eFuse's switched output.
+- **2 AUX 12 V BUCK-BOOST / COMPENSATION TO FB:** **U317 LTC3115-1 VIN pin 13 / PVIN pin 17** use `AUX_LIMITED`; **PVOUT pin 4** supplies `AUX_12V`.
+- **3 HELD DRIVER SUPPLY / CONTROLLED IN-RUSH:** **D304** feeds `AUX_PREHOLD`; **U327 TPS259470L IN pin 5 → OUT pin 6** charges `DRV_HOLD`, with **C358/C359, 220 µF each**, returning to GND. That rail feeds both dump drivers and the isolated `SER_DRV` branch.
+- **7 DETECTOR SUPPLY / PG OBSERVATION ONLY:** **U306 OUT pin 1** supplies `DET5`; **U318 OUT pin 5** supplies `3V3_AUX`. **9 SAFE5 / MEMORY SUPPLY / REAL PG RECEIVER:** **U600 OUT pin 1** supplies `SAFE5`. Drawn supply paths do not establish startup, hold-up or brownout performance.
+
+**Step 8: distinguish drawn test hooks from autonomous protection. Page 4, blocks 10–13.**
+- **J603 pins 1/2 = `SOURCE_CONTACT` / GND** is the manual source-fault contact. **U644 A pin 2 → Y pin 4** turns it into `SRC_TRIP`; **TP320 pin 1** observes that command. It cannot prove the autonomous ≤10 µs source-off requirement.
+- **J302** is manual RESET, **J301** MAIN ARM and **J604** SERIES ARM; each has **contact pin 1 / GND pin 2**. **JP600 pins 1/2 = `SAFE5` / `MANUAL_RAILS_VALID`** is absent by default; the sheet requires verified rails before fitting it. It cannot detect a later brownout. Genuine PG qualifies series permission, and PG loss clears series memory; recovery alone supplies no arm clock.
+- **12 SOURCE SENSING / OBSERVATION ONLY / NO AUTO TRIP:** **R640 pin 1** senses exported `L201_IN`, and **R644 pin 1** senses `VIN_PROTECTED`. **U647** isolates the inputs; **U640 OUT pin 1 = `SW_HIGH`** and **U642 OUT pin 1 = `VIN_GOOD_FAST`** reach **TP337/338 pin 1**. **TP339/340 pin 1** observe `SW_SENSE` / `VIN_SENSE`. These outputs do not command `SRC_TRIP` or permission.
+- **13 PAIRED SENSE TEST POINTS / NO FORCE CURRENT:** paired pads are observations, not force-current terminals. **TP314 pin 1 = `PROT_GATE`** and **TP334 pin 1 = `PROT_BST`** both return on **pin 2 to `PROT_MID`**, not instrument earth. **JP660** removes the `SER_DRV` feed for characterization; local capacitors can remain charged. Reconfigure force links only with sources isolated and all stores verified discharged.
+
+| What | Where in the final PDF | Capture status |
 | --- | --- | --- |
-| Buck U201, L201, `VOUT_5V1` | page 3, `02_BUCK_5V` | Yes |
-| eFuse U101 `SHDN`, TVS D101 | page 2, `01_INPUT_PROTECTION` | Yes (D101 still the old SMBJ26CA) |
-| Detector U302/U303, latch U304 | page 4, `03_OUTPUT_PROTECTION` | Yes (trip values change in 4b) |
-| Series pair Q301/Q302 + U301 | page 4 | Yes |
-| Crowbar Q303 + U315 | page 4 | Yes |
-| Raw dump, auxiliary supply | nowhere yet | **No, frozen on paper only** |
+| Buck U201, L201, JP201/JP202 | page 3 | Drawn |
+| eFuse U101, JP101, SMCJ36CA D101 | page 2 | Drawn |
+| Detector U302/U303/U321, latch U610 | page 4, blocks 8/10 | Drawn |
+| Series Q301/Q302 + U301/JP301 | page 4, block 4 | Drawn |
+| Crowbar Q303/U315/JP330 | page 4, block 5 | Drawn |
+| Raw dump Q330/U330/JP331 | page 4, block 6 | Drawn |
+| Auxiliary and held supplies | page 4, blocks 1–3/7/9 | Drawn |
+| Manual hooks and SW/VIN observations | page 4, blocks 10–13 | Drawn; autonomous trigger/interlock remain OPEN |
 
 ![[f3-05-schematic-walk-circuit.png|900]]
 *(Circuit picture to generate: BATCH_F prompt F3.5. A code-drawn version is in `code/draw_sheet03_simplified.py` in this vault. Run `python3 -m pip install schemdraw` once, then `python3 code/draw_sheet03_simplified.py` to make `p03-12-simplified-circuit.png`.)*
+
+*Historical illustration/generator instructions retained. Their earlier labels are not the final Gate 4b pin map; use the PDF walkthrough above.*
 
 ![[p03-12-simplified-circuit.png|900]]
 
@@ -142,7 +179,7 @@ Every capacitor stores $E=\tfrac12CV^2$. Every inductor stores $E=\tfrac12LI^2$.
 Two lessons hide in this bar chart:
 
 1. **The biggest stores are the 5 V banks, not the 24 V source.** The raw bank (8 × 470 µF) holds up to about 85 mJ just by sitting at 5.5 V. Big capacitors are good for normal ripple and load steps. In a fault they are a loaded spring.
-2. **Each side needs its own drain.** Once the series switch opens, energy on the orange side *cannot* reach the crowbar on the blue side. So the raw side needs its own raw dump. Gate 4a found this gap and proposed the 100 mΩ raw dump. Its hot pulse rating is still **OPEN**.
+2. **Each side needs its own drain.** Once the series switch opens, energy on the orange side *cannot* reach the crowbar on the blue side. So the raw side needs its own raw dump. Gate 4a found this gap and proposed the approximately 100 mΩ raw dump; Gate 4b now draws the 99 mΩ nominal network in block 6. Its hot pulse rating is still **OPEN**.
 
 ---
 
@@ -170,7 +207,7 @@ flowchart LR
 - The **comparator** gives a fast yes/no answer.
 - The **latch** (a D flip-flop) turns a short "yes" into a permanent "FAULT". This matters because the crowbar pulls the voltage *down*. Without a latch, the comparator would un-trip, the switch would close again, the fault would push the voltage back up… and the board would chatter on and off. The latch says: *once is enough; a human decides when to try again.*
 
-**CALCULATED (Gate 4a-FIX, work in progress):** nominal trip **5.267 V**. The tolerance window is **5.220–5.315 V** after resistor, reference, comparator-offset and leakage corners. Adding the 20 mV comparator overdrive at the top corner gives **5.357 V**.
+**CALCULATED (inherited Gate 4a-FIX teaching screen):** nominal trip **5.267 V**. The tolerance window is **5.220–5.315 V** after resistor, reference, comparator-offset and leakage corners. Adding the 20 mV comparator overdrive at the top corner gives **5.357 V**. These retained analysis numbers are not bench validation of Gate 4b's detector or manual controls.
 
 ### 5b. Cut: why the switch is two MOSFETs back-to-back
 
@@ -185,10 +222,10 @@ The chosen parts are **2 × BSC034N06NSATMA1**: 3.4 mΩ maximum each at 25 °C w
 ![[f3-03-two-sides-two-drains.png|750]]
 *(BATCH_F prompt F3.3.)*
 
-A **crowbar** is a deliberate short to ground, like throwing a steel bar across two terminals. Here it is a *controlled* short: a CSD18540Q5B MOSFET plus a 33 mΩ ballast resistor limits the current. The UCC27511 gate driver turns it on hard and fast. The raw dump is the same idea on the orange side, with a 100 mΩ ballast.
+A **crowbar** is a deliberate short to ground, like throwing a steel bar across two terminals. Here it is a *controlled* short: a CSD18540Q5B MOSFET plus a 33 mΩ nominal ballast network limits the current. The UCC27511 gate driver commands it on. The raw dump is the same idea on the orange side, now drawn with a 99 mΩ nominal ballast network. Switching speed and hot pulse survival remain OPEN.
 
 > [!info] Who powers the protection during the fault?
-> The detector and drivers must keep working while the main 5 V collapses. Gate 4a therefore proposes an **independent auxiliary supply** upstream of the main eFuse: a surge limiter, a 12 V buck-boost and a hold-up capacitor. Its conditional hold-up screen is about **4.6 ms** (CALCULATED). Startup and rail-loss behaviour are still **OPEN**.
+> The detector and drivers must keep working while the main 5 V collapses. Gate 4b now draws the **independent auxiliary supply** upstream of the main eFuse: U316/Q316 surge stopper, U317 12 V buck-boost, U327 controlled charger and C358/C359 held bank. The inherited conditional hold-up screen is about **4.6 ms** (CALCULATED). Startup and rail-loss behaviour are still **OPEN**.
 
 ---
 
@@ -318,7 +355,7 @@ That leaves **43 mV** above the 4.75 V minimum. The two red giants are the **ser
 
 ![[p03-08-detector-latency.png|850]]
 
-The large raw bank makes the voltage rise *slowly*. That is good for the Pi. But it means a voltage detector cannot see the fault for **16–30 µs** (CALCULATED, Gate 4a-FIX), while the source-energy contract needs the source **off within 10 µs** of the short. So Sheet 03 needs a *second, independent* trigger that sees the fault itself, for example from current. In Gate 4a-FIX that circuit is **not yet designed**. This is the top blocker (R4A-01).
+The large raw bank makes the voltage rise *slowly*. That is good for the Pi. But it means a voltage detector cannot see the fault for **16–30 µs** (CALCULATED, Gate 4a-FIX), while the source-energy contract needs the source **off within 10 µs** of the short. Gate 4b now draws **U640/U642/U647 SW/VIN sensing for observation** and the **J603 manual source trigger**. The autonomous qualifier/trip function is still absent, so these drawn hooks do not close the timing blocker (R4A-01).
 
 ### Trap 2: the cable can ring above the module
 
@@ -346,6 +383,8 @@ stateDiagram-v2
 ```
 
 The subtle part is the last arrow. With power off and the capacitors empty, a healthy buck and a buck with a *still-shorted* switch look identical to the detector. So "the voltage is low now" is **not** proof that it is safe to re-arm. Gate 4a requires a diagnostic check or a documented repair lockout. That circuit is also **OPEN**.
+
+The diagram above remains the required policy, not a claim that every check is autonomous in Gate 4b. The final drawing uses J302 manual reset, JP600 manual rail validity and separate J301/J604 arm contacts. It has no persistent-short diagnostic; the operator must isolate/discharge sources and verify repair before reset. Brownout, held-contact and driver-supply-loss behavior remain OPEN.
 
 ---
 
@@ -394,6 +433,8 @@ flowchart TB
 | Top blockers | independent source trigger, aux startup, reset/re-arm, rated fault fixture | OPEN |
 
 ---
+![[Pasted image 20261002194231.png]]![[Pasted image 20261002194236.png]]![[Pasted image 20261002194240.png]]![[Pasted image 20261002194246.png]]![[Pasted image 20261002194250.png]]![[Pasted image 20261002194254.png]]![[Pasted image 20261002194301.png]]![[Pasted image 20261002194305.png]]![[Pasted image 20261002194310.png]]![[Pasted image 20261002194315.png]]
+
 
 ## 12. Check yourself
 
@@ -419,6 +460,7 @@ flowchart TB
 ---
 
 > [!info]- Sources and reproducibility
+> - Current schematic walk: [final Gate 4b PDF, `838a8a4`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/838a8a45d8939f9b57af4715724bc71afc0134fc/docs/evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf), checked against the same commit's `captured.xml` and `SHEET03_REVIEW.md`. The Gate 4a calculations and illustrations below remain historical teaching evidence.
 > - Gate 4a / Gate 4a-FIX (WIP): `feat/r2-testboard-freeze` at `2b99ac7`, `docs/evidence/r2/gate4a/` (GATE4A_FREEZE.md, TIMING_AND_LOGIC.md, CALCULATIONS.md, calculate_gate4a.py).
 > - Gate 3b source bound: `0a853c7`, `docs/evidence/r2/sheet03/gate3b/GATE3B_SOURCE_BOUND.md` (5.542 V counterexample, 15.217 mJ packet).
 > - Gate 3 options A–E: `65a8698`, `docs/evidence/r2/sheet03/GATE3_ARCHITECTURE_OPTIONS.md`.

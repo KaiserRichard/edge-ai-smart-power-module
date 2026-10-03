@@ -21,17 +21,17 @@ At a nominal 5.10 V starting point and a 4.75 V minimum, the entire allowance is
 **Learning goals:** identify the intended power pins; calculate the complete loop drop; explain unequal sharing; distinguish a proposed connector from a qualified hot assembly.
 
 > [!warning] Status and boundaries
-> **REQUIREMENT:** at the loaded Pi header, at least **4.75 V at 5 A**, and peak **strictly below 5.5 V**, including overshoot. Compliance and any Pi damage-versus-time curve are **(still open)**; no higher brief pulse is allowed. **Gate 4a-FIX BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** No Pi before required fault and other qualification gates pass.
+> **REQUIREMENT:** at the loaded Pi header, at least **4.75 V at 5 A**, and peak **strictly below 5.5 V**, including overshoot. Compliance and any Pi damage-versus-time curve are **(still open)**; no higher brief pulse is allowed. **Gate 4b capture CONDITIONAL PASS; R2 electrical release BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** All physical tests are NOT RUN. No Pi before required fault and other qualification gates pass.
 
 ## 2. Picture walkthrough: power pins are not signal pins
 
-Start with **PDF page 6, LOAD OUTPUT / J502 pins 1 (+) and 2 (RETURN)**. The V1A drawing ends at this two-terminal module connector; it does **not** contain a Raspberry Pi 40-pin header or a released external harness pinout. Use the [schematic reading guide](SCHEMATIC_READING_GUIDE.md) to keep PDF pages, connector pin numbers and Pi physical pin numbers separate.
+Start with **PDF page 6, “05 IO TEST”, PROTECTED LOAD / HOST TELEMETRY, J502 pins 1 (+) and 2 (RETURN)** in the final [V1A_GATE4B_SCHEMATIC_2026-10-03.pdf](/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_GATE4B_SCHEMATIC_2026-10-03.pdf#page=6). It matches `docs/evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf` at `origin/feat/r2-testboard-capture`, commit `838a8a4`. Pages remain 1 hierarchy, 2 input, 3 buck, 4 output protection, 5 monitor and 6 interfaces. The sheet now records the selected Phoenix connector and TE power-harness notes; it still has no Pi-header symbol or released mating-face assembly drawing. The [schematic reading guide](SCHEMATIC_READING_GUIDE.md) and embedded page image use the older PDF.
 
 ![[v2-review-p06.png|1000]]
-*Unchanged PDF page 6. J501 is the input, J502 the load-power output, and J503 the host-reference/I2C interface.*
+*Historical review-PDF page 6. The final page linked above retains J501/J502/J503 pin roles and adds the force/sense fixture interfaces and selected harness notes.*
 
 ![[v2-05-circuit-connectors.png|950]]
-*Exact connector subset. J502 pin 1 is load power; **J503 pin 1 is GND**. Reusing a pin number on different connectors does not join those pins or give them the same function.*
+*Earlier connector subset; these pin roles are retained in Gate 4b. J502 pin 1 is load power; **J503 pin 1 is GND**. Reusing a pin number on different connectors does not join those pins or give them the same function.*
 
 ![[f5-04-output-connectors-circuit.png|900]]
 *Circuit companion F5.4 in [BATCH_F](../illustrations/BATCH_F.md). Run `python3 -B docs/lessons/figures/src/circuit_05.py` for the exact excerpt.*
@@ -48,7 +48,7 @@ Start with **PDF page 6, LOAD OUTPUT / J502 pins 1 (+) and 2 (RETURN)**. The V1A
 
 These currents are calculations, not contact ratings. A wire-entry view can mirror the mating-face view; verify indexing, orientation and continuity with power removed. Both positive connections and all eight grounds are the intended arrangement.
 
-Read the intended external mapping as **J502 pin 1 → Pi physical pins 2 and 4**, and **J502 pin 2 → the eight physical GND pins above**. That mapping is a reviewed requirement/proposal outside the PDF, not a newly drawn connector in it. **Pi physical pin 1 is a 3.3 V pin, not J502's positive pin.** The early fixture uses a representative dummy header in place of the Pi.
+Read the intended external mapping as **J502 pin 1 → Pi physical pins 2 and 4**, and **J502 pin 2 → the eight physical GND pins above**. This mapping is now written in the page-6 harness notes. It identifies Pi physical pins, not TE housing cavity numbers; an indexed mating-face drawing and continuity verification remain required. **Pi physical pin 1 is a 3.3 V pin, not J502's positive pin.** The early fixture uses a representative dummy header in place of the Pi.
 
 ## 3. Trace both halves of the loop
 
@@ -61,13 +61,15 @@ Use these stops in the PDF while tracing that sentence:
 
 | Stop | Page, block and pins | How to read it |
 |---|---|---|
-| Local regulation | Page 3, OUTPUT / FEEDBACK: **L201 pin 2; R202 pin 1** | Both join raw `VOUT_5V1`. The buck senses this node, before downstream drops. |
-| Series pair | Page 4, OPPOSED SERIES FETS: **Q301 drains 5–8 → sources 1–3 → Q302 sources 1–3 → drains 5–8** | Shared sources are `PROT_MID`; the outer output is `VOUT_PROTECTED`. No bypass wire joins the outer rails. |
-| Current shunt | Page 5, KELVIN SHUNT: **R401 force pin 1→4** | This is a further series drop; output becomes `LOAD_5V1`. Sense pins 2/3 carry no load current. |
-| Module exit | Page 6, LOAD OUTPUT: **J502 pin 1→external harness** | The harness and Pi contacts are outside the captured sheet. A net label cannot specify their resistance. |
-| Return | Page 6, **J502 pin 2 GND**, back to page 3 **U201 PGND pins 9/11** | The common net still needs actual copper, connector and wire resistance in the loop budget. |
+| Local regulation | Page 3, FAULT INJECTION / LOCAL REGULATION: **L201 pin 2 → JP202 pins 1→2; R202 pin 1** | L201 pin 2 is `L201_OUT`; fitted JP202 reaches raw `VOUT_5V1`, sensed by R202 before downstream drops. |
+| Series pair | Page 4, **4 OPPOSED SERIES PAIR / REMOVABLE FORCE LINK**: **Q301 drains 5–8 → sources 1–3 → Q302 sources 1–3 → drains 5–8 → JP301 pins 1→2** | Shared sources are `PROT_MID`; Q302 drains are `SERIES_OUT`; fitted JP301 reaches `VOUT_PROTECTED`. No passive bypass joins the outer rails. |
+| Current shunt | Page 5, KELVIN SHUNT / LOAD-SIDE BUS SENSE: **R401 force pin 1→4** | This is a further series drop; output becomes `LOAD_5V1`. Sense pins 2/3 carry no load current. |
+| Module exit | Page 6, PROTECTED LOAD / HOST TELEMETRY: **J502 pin 1→external harness** | The Phoenix connector and external harness selection are recorded; actual harness/Pi contact resistance remains unqualified. |
+| Return | Page 6, **J502 pin 2 GND**, back to page 3 BUCK / NATIVE SWITCH NODE, **U201 PGND pins 9/11** | The common net still needs actual copper, connector and wire resistance in the loop budget. |
 
-Page 4 shows the earlier preliminary pair/crowbar. The **revised architecture D series/crowbar/control arrangement is frozen on paper, not yet in the schematic**; its later resistor/driver assumptions cannot be inferred from the old drawing. The raw dump is also absent from this snapshot.
+Page 4 now draws **architecture D**: the series path in block 4, protected crowbar **Q303/U315/JP330** in block 5, raw dump **Q330/U330/JP331** in block 6, auxiliary supplies and manual control/test hooks. The hooks replace unresolved autonomous trigger/interlock functions under owner option A; their presence does not qualify fault containment. Lesson 03 gives the current pin walkthrough.
+
+For the dummy-load branch on **page 6**, trace **JP501 pin 1 `LOAD_5V1` → pin 2 `LOAD_FIXTURE`**, with the force return at **PF5 GND**. **TP505 pin 1 `LOAD_FIXTURE` / pin 2 GND** is sense-only. The sheet requires J502 unplugged for this fixture mode; isolating the load requires both removing JP501 and unplugging J502. Change force connections only after sources are isolated and all stores are verified discharged.
 
 $$
 V_{Pi}=V_{buck}-I(R_{send}+R_{return})-V_{dynamic\ trough}
@@ -79,7 +81,7 @@ The INA228 bus-voltage tap is before this external harness. Its reading cannot s
 
 ## 4. Worked example: build the drop budget
 
-**Endpoints for this calculation:** begin at **page 3 L201 pin 2** against local GND; pass **page 6 J502 pins 1/2**; end across the **external dummy/Pi power and return contacts**. The far-end voltage is not a node drawn in this PDF. Every resistance allocation below refers to that complete trip, including the return.
+**Endpoints for this inherited calculation:** begin at **page 3 JP202 pin 2, `VOUT_5V1`**, against local GND, after L201 pin 2 and fitted JP202; pass **page 4 JP301**, **page 5 R401** and **page 6 J502 pins 1/2**; end across the **external dummy/Pi power and return contacts**. The far-end voltage is not a node drawn in this PDF. The retained allocation describes that complete trip, including the return; newly drawn force-link/contact parasitics still require qualification.
 
 ![[v2-05-full-drop-budget.png|900]]
 
@@ -106,7 +108,7 @@ For comparison, a simple **ASSUMED 50 mΩ loop** at exactly 5.10 V gives $5.10-5
 
 ## 5. Contacts: resistance decides how current shares
 
-**Page 6 J502 pin 1 is one electrical net before the external positive fan-out; pin 2 is the collected return.** The two positive branches and eight ground branches appear only in the proposed harness map. The PDF's single wire does not prove equal branch resistance or sharing.
+**Page 6 J502 pin 1 is one electrical net before the external positive fan-out; pin 2 is the collected return.** The two positive branches and eight ground branches are specified in the page-6 harness notes. The PDF's single wire does not prove equal branch resistance or sharing.
 
 ![[f5-03-current-sharing-lanes.png|850]]
 *BATCH_F F5.3. The inset shows a positive contact opening. “Doubles” assumes the two original branches shared equally.*
@@ -129,27 +131,27 @@ $$
 
 At **20 mΩ each**, this is 12.5 mΩ, or **62.5 mV at 5 A**. At **30 mΩ each**, it becomes **93.75 mV**—an extra **31.25 mV**. These examples exclude separate wire/crimp differences and are not measured hot resistance.
 
-## 6. Selection status: keep the old failure and new proposals distinct
+## 6. Selection status: selected hardware still needs qualification
 
 **EVIDENCE — documentary FAIL:** Harwin **M20-1180042** permits **30 mΩ after conditioning**, exceeding the specified **≤20 mΩ hot/conditioned mating-contact target**. That is a failure of the documented criterion, not proof that a measured specimen failed. The proposed two housings spanning **1–20 and 25–40** were needed because one 2×10 housing cannot reach all eight grounds.
 
-The inherited path uses **American Wire Gauge (AWG)16 trunks with AWG22 fan-outs** and retains **Phoenix 1776508 header + 1777989 plug** as the J502 proposal. The **≤3.12 mΩ per complete hot pole** allocation remains **(still open)**; footprint geometry and a catalogue current rating cannot establish it.
+The inherited calculation above used **American Wire Gauge (AWG)16 trunks with AWG22 fan-outs**. The final Gate 4b capture now records owner-selected **solution A: Phoenix 1776508 header + 1777989 cable plug**, with the **TE/AWG20** power harness below. The **≤3.12 mΩ per complete hot pole** allocation remains **(still open)**; footprint geometry and a catalogue current rating cannot establish it.
 
-**Snapshot check — page 6 J502 pins 1/2:** the generic symbol specifies the two nets, not the eventual mating geometry. In the later Gate 4a-FIX record at `2b99ac7`, **J502 is PENDING** its separate handoff. “Retained Phoenix” above names the inherited budget/proposal; it is not a completed current connector freeze.
+**Final snapshot check — page 6 J502 pins 1/2:** **pin 1 = `LOAD_5V1`, pin 2 = GND**. The page identifies **Phoenix 1776508 / mate 1777989, solution A**. The older `2b99ac7` “J502 PENDING” statement is historical; component selection is now captured, while hot assembly qualification remains OPEN.
 
-The separately requested connector report, pinned at **`4ff92f3`**, proposes a new external assembly. It is useful new evidence, not an automatically accepted change to the inherited budget:
+The connector report at **`4ff92f3`** records the alternatives; the owner solution-A selection at **`41cb9e8`** is carried into final page 6. Keep the inherited arithmetic and selected assembly distinct:
 
 | Version | Pi end / fan-outs | Module side | Meaning of its numbers |
 |---|---|---|---|
 | Inherited Gate 4a screen used above | Harwin criterion unresolved; AWG22 | Phoenix proposal; retained BSC034 pair | **42.673 mΩ / 4.793 V**, conditional |
-| Connector proposal A | **TE 3-87456-6** full 2×20 housing, ten **87309-9** sockets; **AWG20** fan-outs | Retain Phoenix | With retained 13.6 mΩ pair and D: **41.856 mΩ / 4.797 V**, conditional |
-| Connector proposal B | Same proposed TE Pi assembly | **Molex 42819-2213 + 42816-0212 + 42815-0042** | Larger interface; new footprint/assembly review needed; unqualified |
+| Selected solution A, captured in Gate 4b | **TE 3-87456-6** full 2×20 housing, ten **87309-9** sockets; **AWG20** fan-outs | Phoenix **1776508 / 1777989** | With retained 13.6 mΩ pair and D: **41.856 mΩ / 4.797 V**, inherited conditional screen |
+| Historical proposal B, not the captured selection | Same TE Pi assembly proposal | **Molex 42819-2213 + 42816-0212 + 42815-0042** | Larger interface; new footprint/assembly review needed; unqualified |
 
-Proposal A's small improvement also relies on a **redefined combined contact-plus-female-crimp acceptance block**. It is not a measured gain and cannot be mixed term-by-term with the older mating-only allocation. TE's published system data does not guarantee the actual Pi male header's hot mate. Mixed mating, loaded adjacent pins, indexing, cooler clearance, wire fit, crimps and retention remain open.
+Solution A's conditional small improvement also relies on a **redefined combined contact-plus-female-crimp acceptance block**. It is not a measured gain and cannot be mixed term-by-term with the older mating-only allocation. TE's published system data does not guarantee the actual Pi male header's hot mate. Mixed mating, loaded adjacent pins, indexing, cooler clearance, wire fit, crimps and retention remain open.
 
-The new full housing also occupies the header. Telemetry contacts would need an integrated reviewed map; an added stacking adapter would add contacts and losses. Keep these as proposals until the connector handoff is reconciled. The old Harwin FAIL remains historical evidence.
+**Read the page-6 HARNESS notes:** **Belden 8521 AWG16 trunks, 75 mm maximum**, and **Belden 8502 AWG20 pigtails, 2×15 mm positive / 8×35 mm return**. The selected full housing is power-only; all other cavities remain empty. Telemetry contacts still need an integrated reviewed map, and an added stacking adapter would add contacts and losses. The old Harwin FAIL remains historical evidence.
 
-For telemetry, find **page 6 HOST I2C / J503 pins 1 GND, 2 VREF, 3 SDA and 4 SCL**. These are separate from J502's power terminals. Page 5 **U403 VCCA pin 1** expects the host reference from J503 pin 2; the lesson does not invent how extra contacts would fit into the proposed full Pi housing.
+For telemetry, find **page 6 PROTECTED LOAD / HOST TELEMETRY, J503 pins 1 GND, 2 VREF, 3 SDA and 4 SCL**. These are separate from J502's power terminals. Page 5 **U403 VCCA pin 1** expects the host reference from J503 pin 2. J503 is disconnected during initial fault tests; telemetry integration into the selected full Pi housing remains OPEN.
 
 ## 7. What goes wrong: the module looks good while the endpoint fails
 
@@ -176,13 +178,13 @@ D keeps protection on V1A and avoids E's additional Pi-end stage. E observes the
 1. Why must return resistance be included?
 2. How much voltage does each extra 1 mΩ cost at 5 A?
 3. What happens when one positive contact opens?
-4. Did the new TE proposal erase the Harwin FAIL or qualify the Pi interface?
+4. Did selecting the TE assembly erase the Harwin FAIL or qualify the Pi interface?
 
 > [!question]- Answers
 > 1. The load sees its positive voltage minus its own ground; return current creates a ground rise.
 > 2. 5 mV, so apparently small resistances consume useful margin.
 > 3. The surviving path can carry all 5 A; its rating and fault response cannot be assumed adequate.
-> 4. No. It is a proposed replacement with its own unresolved hot mixed-mate and assembly evidence.
+> 4. No. It is a selected replacement with its own unresolved hot mixed-mate and assembly evidence.
 
 ## 10. One-page visual summary
 
@@ -194,10 +196,10 @@ D keeps protection on V1A and avoids E's additional Pi-end stage. E observes the
 | Normal / fault voltage | **≥4.75 V at 5 A / strictly <5.5 V peak** at the actual endpoint |
 | Inherited selected-pair screen | **42.673 mΩ → 4.793 V** with assumed 20 mV trough |
 | Harwin finding | **30 mΩ allowed >20 mΩ target: documentary FAIL** |
-| New connector work | TE/AWG20 proposals require reconciliation and qualification |
+| Captured connector/harness | Phoenix solution A + TE/AWG20 power harness; hot assembly and telemetry integration remain OPEN |
 | Test load | Representative **dummy header first; Pi disconnected** |
 
 > [!info]- Sources and reproducibility
-> [Fact-check register](FACTCHECK_LOG.md#sources): PATH, PI, VERIFY, BASIS and G4. Later proposals: [J502 selection, `4ff92f3`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/4ff92f3ef68822007642a0e2cbb09b351d043222/docs/evidence/r2/J502_SELECTION.md); inherited owner choice remains D with BSC034. [BATCH_F](../illustrations/BATCH_F.md) F5.1–F5.3. Charts: `python3 -B docs/lessons/figures/src/lesson_charts.py 05`; detailed allocation reused from the pilot generator.
+> Current walk/status: [final Gate 4b PDF, `838a8a4`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/838a8a45d8939f9b57af4715724bc71afc0134fc/docs/evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf), checked against that commit's `captured.xml` and `SHEET05_REVIEW.md`. Owner selection: [J502 solution A, `41cb9e8`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/41cb9e889418d50d2f5f24467e66ac7f15a90476/docs/evidence/r2/J502_SELECTION.md). [Fact-check register](FACTCHECK_LOG.md#sources): PATH, PI, VERIFY, BASIS and G4; [earlier connector proposals, `4ff92f3`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/4ff92f3ef68822007642a0e2cbb09b351d043222/docs/evidence/r2/J502_SELECTION.md). Owner choice remains D with BSC034. [BATCH_F](../illustrations/BATCH_F.md) F5.1–F5.3. Charts: `python3 -B docs/lessons/figures/src/lesson_charts.py 05`; detailed allocation reused from the pilot generator.
 
 Previous: [[04 Monitoring]] · Next: [[06 PCB concepts]] · Terms: [[99-Glossary]]

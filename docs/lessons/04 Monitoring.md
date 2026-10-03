@@ -21,24 +21,26 @@ A shunt is a deliberately small resistance. Current makes a small voltage across
 **Learning goals:** follow force and sense connections; calculate signal and heating; distinguish range from accuracy; explain the I2C supply boundary and an energy-log reset gap.
 
 > [!warning] Status
-> Architecture D remains a preliminary test board. **Gate 4a-FIX freeze BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Application margins remain **(still open)**. No measured monitoring accuracy is claimed.
+> Architecture D is now captured in the final Gate 4b schematic, with **CONDITIONAL PASS for capture; R2 electrical release BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.** Application margins remain **(still open)**. All physical tests are NOT RUN; no measured monitoring accuracy is claimed.
 
 ## 2. Picture walkthrough: two power terminals and two sense terminals
 
-Open **PDF page 5, “04 POWER MONITOR”** using the [schematic reading guide](SCHEMATIC_READING_GUIDE.md). Read the top-left KELVIN SHUNT / MEASUREMENT block before the local supply at top right or the I2C interface along the bottom.
+Open **PDF page 5, “04 POWER MONITOR”** in the final [V1A_GATE4B_SCHEMATIC_2026-10-03.pdf](/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_GATE4B_SCHEMATIC_2026-10-03.pdf#page=5), identical to `docs/evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf` at `origin/feat/r2-testboard-capture`, commit `838a8a4`. The six-page order is unchanged: page 1 hierarchy, pages 2–6 Sheets 01–05. Read **KELVIN SHUNT / LOAD-SIDE BUS SENSE** on the left, then **LOCAL REGULATOR / HOST DOMAIN BOUNDARY** on the right, including U403. The [schematic reading guide](SCHEMATIC_READING_GUIDE.md) and embedded page image refer to the earlier PDF.
 
 ![[v2-review-p05.png|1000]]
-*Unchanged PDF page 5. The shunt, its two filtered sense connections and the separate VBUS connection can all be followed on this page.*
+*Historical review-PDF page 5. The final page linked above retains the Kelvin/filter/VBUS connections, redraws the blocks and includes paired force-rail observations TP405/TP406.*
 
 ![[f4-01-kelvin-sense-3d.png|900]]
 *BATCH_F F4.1. The package and chip geometry are generic. Use the reviewed footprint mapping below, not the drawing, for actual pad identity.*
 
 Read the picture in four passes:
 
-1. **Power — page 5, KELVIN SHUNT / MEASUREMENT, R401 force pins 1→4.** Read the line through the resistor from `VOUT_PROTECTED` to `LOAD_5V1`. This carries the load current; it continues to **page 6 J502 pin 1**. R401's four numbers are the project's symbol/footprint convention, not pin numbers printed by Vishay on the resistor.
+1. **Power — page 5, KELVIN SHUNT / LOAD-SIDE BUS SENSE, R401 force pins 1→4.** Read the line through the resistor from `VOUT_PROTECTED` to `LOAD_5V1`. The input comes from **page 4 JP301 pin 2**, after the series pair. The load current continues to **page 6 J502 pin 1**; a separate **JP501 pins 1→2** branch reaches `LOAD_FIXTURE` for the dummy load. R401's four numbers are the project's symbol/footprint convention, not pin numbers printed by Vishay on the resistor.
 2. **Sense — page 5, R401 sense pins 2/3 → R402/R403 pin 1.** `SHUNT_KPLUS` starts on the source side; `SHUNT_KMINUS` starts on the load side. The thin sense pair reads across the intended resistor element. It does not carry load current, although small input bias currents exist.
 3. **Filter — page 5, R402/R403 pin 2 → U401 IN+ pin 10 / IN− pin 9.** The two 10 Ω resistors lead to the measurement inputs. **C401 pin 1 joins IN+ and pin 2 joins IN−**: it is a differential capacitor, not a capacitor to ground. Track junction dots rather than treating every crossing wire as connected.
 4. **Bus voltage — page 5, U401 VBUS pin 8 and GND pin 7.** Follow the separate VBUS wire back to `LOAD_5V1` at R401 force pin 4. It measures load-side voltage relative to module ground; it is neither a third shunt-sense input nor a far-end Pi measurement.
+
+For test access in that same left block, **TP402/TP403 pin 1** observe `SHUNT_KPLUS` / `SHUNT_KMINUS` and carry only sense current. **TP405/TP406 pin 1** observe the force rails `VOUT_PROTECTED` / `LOAD_5V1`, with **pin 2 GND** on each. These paired observation pads are not load-current terminals.
 
 The selected R401 is **WSL27262L000FEA**, nominal **2 mΩ**, with four-terminal **Kelvin sensing**.
 
@@ -52,7 +54,7 @@ The selected R401 is **WSL27262L000FEA**, nominal **2 mΩ**, with four-terminal 
 Separate sense taps exclude the intended high-current connection drops. They must begin at the dedicated sense terminals, run together and avoid switching noise. A copper pour around the resistor must not create a second load-current path that bypasses it.
 
 ![[v2-04-circuit-sense-filter.png|950]]
-*Exact filter and VBUS excerpt from page 5. The high-current force path is omitted here so the three measurement connections remain easy to distinguish.*
+*Earlier filter/VBUS excerpt; these connections are retained on final page 5. The high-current force path is omitted here so the three measurement connections remain easy to distinguish.*
 
 ![[f4-04-kelvin-filter-circuit.png|900]]
 *Circuit companion F4.4 in [BATCH_F](../illustrations/BATCH_F.md). Run `python3 -B docs/lessons/figures/src/circuit_04.py` for the exact excerpt.*
@@ -114,13 +116,15 @@ For perspective, an **assumed 40°C shunt rise** with a 25 ppm/°C coefficient m
 
 Read this part of **PDF page 5** in three short steps:
 
-1. **LOCAL TELEMETRY SUPPLY, U402 IN pin 1 → OUT pin 5; GND pin 2.** IN branches from `VOUT_PROTECTED` **before R401**. OUT is `3V3_LOCAL`, which reaches **U401 VS pin 6**. The host does not supply that rail through J503.
-2. **I2C DOMAIN SEPARATION, U403 local B side.** **VCCB pin 8 and EN pin 5** use `3V3_LOCAL`; **SDAB pin 6 / SCLB pin 7** reach U401 SDA 4 / SCL 5. R404/R405 are the 10 kΩ local pull-ups. The B-side supply and enable are not host pins.
-3. **U403 host A side, VCCA pin 1, SDAA pin 3 / SCLA pin 2; GND pin 4.** Follow `3V3_HOST`, `SDA_HOST` and `SCL_HOST` to **page 6 HOST I2C / J503 pins 2, 3 and 4**, with **pin 1 GND**. R406/R407 pull up to the host reference. The two 3.3 V labels are different nets; the GND net is shared.
+1. **LOCAL REGULATOR / HOST DOMAIN BOUNDARY, U402 IN pin 1 → OUT pin 5; GND pin 2.** IN branches from `VOUT_PROTECTED` **before R401**. OUT is `3V3_LOCAL`, which reaches **U401 VS pin 6**. U402 **EN pin 3 and NC pin 4** are unconnected. The host does not supply that rail through J503.
+2. **Same block, U403 local B side.** **VCCB pin 8 and EN pin 5** use `3V3_LOCAL`; **SDAB pin 6 / SCLB pin 7** reach U401 SDA 4 / SCL 5. R404/R405 are the 10 kΩ local pull-ups. The B-side supply and enable are not host pins.
+3. **Same block, U403 host A side, VCCA pin 1, SDAA pin 3 / SCLA pin 2; GND pin 4.** Follow `3V3_HOST`, `SDA_HOST` and `SCL_HOST` to **page 6 PROTECTED LOAD / HOST TELEMETRY, J503 pins 2, 3 and 4**, with **pin 1 GND**. R406/R407 are the **4.7 kΩ** host pull-ups. The two 3.3 V labels are different nets; the GND net is shared.
 
 **U401 ALERT pin 3** stays local at **TP401 pin 1**, with R408 as its local pull-up. There is no direct ALERT wire to J503. Do not read a local test point as an implemented host interrupt.
 
 The buffer does not power the host. Existing host pull-ups must be counted in the bus design; adding another set blindly changes the loading. Powered-off behavior and signal timing remain **(still open)**. Supply order matters: the host can remain powered when V1A's monitor rail disappears.
+
+The final schematic requires **J503 disconnected during initial fault tests**. `3V3_LOCAL` supplies telemetry; it provides no protection permission to the page-4 controls.
 
 ```mermaid
 flowchart LR
@@ -179,6 +183,6 @@ The 2 mΩ shunt gives a small delivery-path drop and a measurable current signal
 | I2C data through a **shared-ground buffer** | Isolation or hardware protection |
 
 > [!info]- Sources and reproducibility
-> [Fact-check register](FACTCHECK_LOG.md#sources): MON, INA, FP and G4; Gate 4a-FIX `2b99ac7` for status. The old empty-Sheet-03 statement in MON is historical. [BATCH_F](../illustrations/BATCH_F.md) F4.1–F4.3 owns the illustrations. Charts: `python3 -B docs/lessons/figures/src/lesson_charts.py 04`.
+> Current walk/status: [final Gate 4b PDF, `838a8a4`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/838a8a45d8939f9b57af4715724bc71afc0134fc/docs/evidence/r2/gate4b/V1A_GATE4B_REVIEW.pdf), checked against that commit's `captured.xml` and `SHEET04_REVIEW.md`. [Fact-check register](FACTCHECK_LOG.md#sources): MON, INA, FP and G4 retain earlier analysis; the old empty-Sheet-03 statement in MON is historical. [BATCH_F](../illustrations/BATCH_F.md) F4.1–F4.3 owns the illustrations. Charts: `python3 -B docs/lessons/figures/src/lesson_charts.py 04`.
 
 Previous: [[03b Output protection margins and proof]] · Next: [[05 Powering the Pi 5 through GPIO]] · Terms: [[99-Glossary]]
