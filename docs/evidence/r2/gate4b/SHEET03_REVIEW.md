@@ -50,3 +50,9 @@ Gate4a’s reserved autonomous U640…647 and full fast interlock/diagnostic cir
 Autonomous source coverage, interlock brownout/PG recovery, direct SER_DRV loss, persistent-short lockout, held/bouncing contacts, bootstrap leakage, auxiliary startup/compensation/thermal/hold, detector partial power, hot dump/diode/FET ratings, negative return, protected/far-end peak, source envelope, fixture ratings and calibration remain OPEN. Review of current pins/lands does not close these tests.
 
 Next: Sheet 04 Kelvin monitoring, then Sheet 05 connectors/hooks, net classes and final exports. R3 is not authorized by this capture review.
+
+## Final resume checkpoint — 2026-10-03
+
+**EVIDENCE:** continued `f2e80c2`; no additional native Sheet 03 edits were needed. The 259 physical references match the freeze selections and owner option A, with the retired controls enumerated above. Fresh [all-severity ERC](sheet03_final_erc.json) has zero violations. The current 47-test suite passes, including independent bypass, bootstrap, compensation, PG/fault/reset and hold-capacitor package regressions. The native PDF page and its functional-group placement were visually reviewed. It is an A0 portrait drawing with named-net connections; review at native scale or zoom, not reduced A4 print.
+
+**DECISION:** capture checkpoint accepted conditionally; the autonomous trigger and interlock behavior remain bench/design closures. Preserve all earlier review/ERC evidence. Continue Sheet 04, without advancing R2 electrical release.

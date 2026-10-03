@@ -20,3 +20,9 @@
 **OPEN RISKS:** input contact/fuse/wire coordination; bolt torque, plating, copper, contact resistance and fixture parasitics; conditioned hot J502 and Pi current sharing; single-positive-contact loss; indexed housing/tooling/welded fanouts and bend geometry; final telemetry harness; actual Pi input behavior. No Pi before dummy-load/fault/telemetry gates pass. All force connections are changed only with sources isolated and every store verified discharged.
 
 Next: project net classes, complete marked PDF/netlist, freeze coverage and manager handback. No PCB layout or fabrication release.
+
+## Final resume checkpoint — 2026-10-03
+
+**EVIDENCE:** continued `f2e80c2` without additional native Sheet05 edits. J502's exact Phoenix selection, J503's host-reference map, M4 dummy-load path and separate sense pads were rechecked against the connector handoff and export. Fresh [all-severity ERC](sheet05_final_erc.json): zero violations. Native PDF page6 visually reviewed; A2, complete warnings and connector/harness notes present. The 47-test suite includes independent connector-before-protection and native/injection force-pad regressions.
+
+**DECISION:** capture checkpoint conditionally complete. Git's earlier `index.lock` denial invokes the brief's uncommitted fallback. Proceed to the complete freeze/inventory/preservation handback; no PCB, fabrication or Pi authorization follows.

@@ -13,3 +13,9 @@ INA228 DGS10 has A1/A0 grounded for address 0x40, IN+10/IN−9, VBUS8 on LOAD_5V
 **DECISION:** retain local and host pull-ups on their respective 3.3 V supplies, local-controlled repeater EN and load-side VBUS sensing. Telemetry cannot provide fast fault timing or protection permission. J503 is disconnected during initial fault testing.
 
 **OPEN RISKS:** self-heating and pulse survival; tolerance/TCR and calibration; current/voltage/power/energy/timebase accuracy across temperature; negative fault pin/common-mode stress; local-regulator stability/effective output capacitance; host-only/local-only/partial-rail bus leakage and timing. No physical results are claimed. Next: Sheet 05 connector and fixture interfaces.
+
+## Final resume checkpoint — 2026-10-03
+
+**EVIDENCE:** continued `f2e80c2` without additional native Sheet04 edits. The 23 physical references, symmetric differential filter, four-terminal shunt and separate host/local domains were rechecked against the export and freeze. Fresh [all-severity ERC](sheet04_final_erc.json): zero violations. Native PDF page5 visually reviewed; A2, complete title/warning and Kelvin annotations present. The 47-test suite includes independent Kelvin/filter/host-domain regressions.
+
+**DECISION:** capture checkpoint conditionally complete. The preceding local checkpoint failed because Git denied creation of `index.lock`; under the brief's fallback this checkpoint remains uncommitted. Continue Sheet05; measurement accuracy and electrical release remain OPEN/BLOCKED.

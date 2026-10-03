@@ -238,5 +238,19 @@
     "attribution": "Panasonic Industry",
     "status": "read via web; remote-only",
     "datasheet_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1259.pdf"
+  },
+  {
+    "id": "umt_h",
+    "url": "https://www.schurter.com/en/datasheet/typ_UMT-H.pdf",
+    "path": "third_party/gate4b/umt_h.pdf",
+    "revision": "21.07.2026, pages 2, 4 and 5",
+    "retrieved": "2026-10-03",
+    "status": "downloaded and visually reviewed in final resume",
+    "sha256": "bac65726cd086e794288aa169ef2349664e674520019839b234b3a90f7c06ec7",
+    "license": "SCHURTER manufacturer copyright; reference only; no open redistribution license asserted",
+    "use": "F101 3403.0285.23 exact row/footnote4 and two-terminal land dimensions; referenced, independently authored project footprint",
+    "modifications": "None to source; independently authored 3.75 x 5.6 mm lands with 10 mm inner gap",
+    "attribution": "SCHURTER UMT-H manufacturer drawing; retained in PIN_REVIEW.md and this register",
+    "finding": "12.5 A / 125 VDC / 1000 A interruption via footnote4. Package drawing agrees with existing captured footprint. PDF is ignored local review input."
   }
 ]
