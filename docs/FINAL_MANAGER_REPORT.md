@@ -291,3 +291,17 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **NEXT GATE:** apply/review the guide patch in a writable session, resolve R2 review items, and authorize owner placement. This handoff does not close R3. Follow the established current-limited/dummy-load bring-up sequence before any SBC integration.
 
 **Git handback:** the authorized local commit stopped at `git add` because creating the capture worktree `index.lock` returned `Operation not permitted`. Per the brief, leave capture changes uncommitted. The guide target could not be written, so its prepared patch is also uncommitted. No push or lock/permission changes.
+
+## Layout preparation — resume, 2026-10-03
+
+**STATUS: CONDITIONAL PASS for unplaced import/net-class verification; guide installation BLOCKED by filesystem scope. R2 electrical release and R3 layout release remain BLOCKED.**
+
+**WHAT WAS DONE:** continued the supplied `566b00e` and `56e9837` work without rebuilding the board or using sub-agents. Added an evidence-directory option to preserve prior reports, reran the import verification and native DRC, reviewed the retained image, and completed the prepared guide's root-sheet and local-grounding notes. No hardware file changed.
+
+**EVIDENCE:** [resumed handoff](evidence/r3/layout_prep/resume/RESUME.md), [resumed checks](evidence/r3/layout_prep/resume/RESUME_CHECK.json), [board/net-class audit](evidence/r3/layout_prep/resume/IMPORT_CHECK.json), [DRC](evidence/r3/layout_prep/resume/DRC.json), [prepared guide patch](evidence/r3/layout_prep/layout-guide.patch). All 366 footprints, 1,027 numbered pads, 158 named nets and five classes pass the import check. The fresh netlist differs only by export timestamp. DRC has zero schematic-parity issues, but physical DRC still fails with 2,191 violations and 213 unconnected items. All 283 guide refdes including ranges exist. The patch applies cleanly and reproduces the prepared guide in a temporary copy; the target worktree is unchanged.
+
+**DECISIONS:** keep every footprint unplaced at the origin and retain provisional project rules. No routing, placement, electrical changes, gate release or push. Earlier evidence remains available. The prior uncommitted capture status is historical: the two supplied commits contain that work. This resume's authorized local commit stopped at `git add` because creating `index.lock` returned `Operation not permitted` (exit 128); leave these changes uncommitted under the brief's fallback. See the [Git attempt log](evidence/r3/layout_prep/resume/git_commit.log).
+
+**OPEN RISKS:** the guide worktree remains outside current writable roots, so installation and its requested local commit cannot be completed here. Existing electrical/thermal/fault risks and local-bypass/return questions persist. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**NEXT GATE:** install and review the prepared guide patch from a session with the required filesystem access, resolve R2 items and authorize placement before R3 work. Follow the established current-limited/dummy-load-first bring-up sequence before SBC use.

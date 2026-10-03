@@ -41,14 +41,17 @@ def main():
     parser.add_argument('--kicad-cli', required=True, type=Path)
     parser.add_argument('--footprints', required=True, type=Path,
                         help='Installed KiCad standard footprint directory')
+    parser.add_argument('--evidence-dir', type=Path, default=EV,
+                        help='Output directory; use a new directory to retain earlier evidence')
     args = parser.parse_args()
-    EV.mkdir(parents=True, exist_ok=True)
+    evidence = args.evidence_dir
+    evidence.mkdir(parents=True, exist_ok=True)
     original_project = PROJECT.read_bytes()
-    netlist = EV / 'fresh.xml'
+    netlist = evidence / 'fresh.xml'
     result = subprocess.run([str(args.kicad_cli), 'sch', 'export', 'netlist',
                              '--format', 'kicadxml', '-o', str(netlist),
                              str(CAD / 'V1A.kicad_sch')], capture_output=True, text=True)
-    (EV / 'netlist_export.log').write_text(result.stdout + result.stderr)
+    (evidence / 'netlist_export.log').write_text(result.stdout + result.stderr)
     result.check_returncode()
     root = ET.parse(netlist).getroot()
     components = {c.get('ref'): c for c in root.findall('./components/comp')}
@@ -193,7 +196,7 @@ def main():
         'schematic_sha256': {p.name: sha(p) for p in sorted(CAD.glob('*.kicad_sch'))},
         'netlist_sha256': sha(netlist), 'footprint_sources': source_libraries,
     }
-    (EV / 'IMPORT_CHECK.json').write_text(json.dumps(report, indent=2) + '\n')
+    (evidence / 'IMPORT_CHECK.json').write_text(json.dumps(report, indent=2) + '\n')
     print(f'{"Created" if created else "Verified"} {len(fps)} unplaced footprints; '
           f'{checked_pads} numbered pads; {len(named_nets)} named nets; all {len(rules)} classes match.')
 

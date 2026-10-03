@@ -47,3 +47,7 @@ The official documents were opened through the web tool. Existing local TI LM614
 - [PCB Editor manual](https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html), manual 9.0, documentation revision `152cd19e`, based on 9.0.9: shared net-class settings and forward annotation.
 - [Library license page](https://www.kicad.org/libraries/license/), accessed 2026-10-03; no page revision published.
 - Documentation license: KiCad Documentation Contributors, GPL-3.0-or-later or CC-BY-3.0-or-later. Referenced, not copied. Retain links and contributor attribution; upstream changes: none.
+
+## Resume review, 2026-10-03
+
+Reopened the official P3 LTC7001 Rev. G p14, P4 UCC27511 SLUSAW9F §§11–12 pp27–28 and P6 LTC3115-1 Rev. E pp30–32 sources above. Rechecked compact driver/bypass paths and FE-package grounding against the current netlist. Clarified the guide's U317 PGND pins/thermal path and continuous local shield, and flagged the UCC27511 shield/star-return arrangement for reconciliation with the system ground plan before routing. These sections give qualitative proximity constraints, not numeric part-to-part distances. Use remains REFERENCED; no upstream modifications, new PDF redistribution or circuit changes. The manufacturer, revision, URL, licensing and attribution records above continue to apply.

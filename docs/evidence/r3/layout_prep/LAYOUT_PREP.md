@@ -1,5 +1,7 @@
 # V1A layout preparation
 
+**Resume update:** see the [resumed handoff](resume/RESUME.md) for fresh checks, the revised guide patch and current installation/Git status. The report below records the earlier worker's outcome; its uncommitted capture status was superseded by the supplied `566b00e` and `56e9837` commits.
+
 2026-10-03. Baseline: `6d25cf28c4d246417c0a89ec89574c702850e069`, after the U316 check.
 
 **STATUS: CONDITIONAL PASS for the unplaced PCB import. Guide installation is BLOCKED by filesystem permissions. R2 electrical release / R3 layout release remain BLOCKED.**
