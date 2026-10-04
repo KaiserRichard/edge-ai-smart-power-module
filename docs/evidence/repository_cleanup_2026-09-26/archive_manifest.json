@@ -1,0 +1,169 @@
+{
+  "date": "2026-09-26",
+  "archive_directory_name": "edge-ai-smart-power-module-local-archive-20260926-152745",
+  "restoration": "Original relative paths are under snapshot/. Full snapshot hashes and initial Git diff are kept in the local archive. Copy selected files; do not reset the repository.",
+  "retained_exception": "third_party/documents/ti_converters/download_manifest.json retained byte-for-byte",
+  "categories": [
+    {
+      "original_path": "third_party/repos",
+      "archive_relative_path": "snapshot/third_party/repos",
+      "files": 518,
+      "bytes": 685975587,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "third_party/review",
+      "archive_relative_path": "snapshot/third_party/review",
+      "files": 3193,
+      "bytes": 198588363,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "third_party/documents",
+      "archive_relative_path": "snapshot/third_party/documents",
+      "files": 41,
+      "bytes": 55004791,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "tmp",
+      "archive_relative_path": "snapshot/tmp",
+      "files": 116,
+      "bytes": 14996298,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "hardware/kicad/V1A-backups",
+      "archive_relative_path": "snapshot/hardware/kicad/V1A-backups",
+      "files": 2,
+      "bytes": 104122,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": ".venv",
+      "archive_relative_path": "snapshot/.venv",
+      "files": 153,
+      "bytes": 62249168,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "pcb-r0-r1-review.zip",
+      "archive_relative_path": "snapshot/pcb-r0-r1-review.zip",
+      "files": 1,
+      "bytes": 25409,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "tests/__pycache__",
+      "archive_relative_path": "snapshot/tests/__pycache__",
+      "files": 2,
+      "bytes": 19088,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "scripts/__pycache__",
+      "archive_relative_path": "snapshot/scripts/__pycache__",
+      "files": 2,
+      "bytes": 15294,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": ".DS_Store",
+      "archive_relative_path": "snapshot/.DS_Store",
+      "files": 1,
+      "bytes": 8196,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "hardware/.DS_Store",
+      "archive_relative_path": "snapshot/hardware/.DS_Store",
+      "files": 1,
+      "bytes": 6148,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "hardware/kicad/V1A.kicad_prl",
+      "archive_relative_path": "snapshot/hardware/kicad/V1A.kicad_prl",
+      "files": 1,
+      "bytes": 2078,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "docs/.DS_Store",
+      "archive_relative_path": "snapshot/docs/.DS_Store",
+      "files": 1,
+      "bytes": 6148,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "docs/evidence/.DS_Store",
+      "archive_relative_path": "snapshot/docs/evidence/.DS_Store",
+      "files": 1,
+      "bytes": 6148,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "fabrication/.DS_Store",
+      "archive_relative_path": "snapshot/fabrication/.DS_Store",
+      "files": 1,
+      "bytes": 6148,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "third_party/.DS_Store",
+      "archive_relative_path": "snapshot/third_party/.DS_Store",
+      "files": 1,
+      "bytes": 6148,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    },
+    {
+      "original_path": "third_party/wbr_hat/.DS_Store",
+      "archive_relative_path": "snapshot/third_party/wbr_hat/.DS_Store",
+      "files": 1,
+      "bytes": 6148,
+      "reason": "Local cache, backup, scratch output, or historical packet; preserved outside Git"
+    }
+  ],
+  "archived_document_files": {
+    "third_party/documents/TI_INA228_EVM_SBOU241E.pdf": "05419823933b71973aa76825e70156ee1d8af6ee18322aca6a31243c5bf36040",
+    "third_party/documents/.DS_Store": "03d269187dfc793b2c86c9126df97a0116118616c81f4ea4ceea243e901c7a21",
+    "third_party/documents/raspberry-pi-hat-plus.pdf": "3a0932253767147038383162ac9f4b5aac3adb048c30bd1f9177a462a054ca1e",
+    "third_party/documents/RT6365_DS6365-02.pdf": "2f4c854bd9b625c757705fa4fc390934a6e9207bae9198416caeebce6ce239d6",
+    "third_party/documents/TI_TPS2663_SLVSE94G.pdf": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+    "third_party/documents/raspberry-pi-power-supplies.adoc": "49f6478c1c0164237ebcf1d28aac4709e843d2b5c06442539bacae05e49eafb1",
+    "third_party/documents/Vishay_WSL2726_30131_2026-06-29.pdf": "583946079d110ac74dc7987e1f1d2c5a170253b03f123b993c414761c6b89373",
+    "third_party/documents/TI_DIGITAL_POWER_MONITORS_SBOA511A.pdf": "b0e36f2e90d0ad451a1c67ed677e92a76fae21f713f3c8d2514ffaab9098b756",
+    "third_party/documents/TI_INA226_SBOS547C.pdf": "c9b67f886d4a5241a5e070723f7b61867409eeb27eed768b9cdd9cb17e03ca2d",
+    "third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf": "38ea1e89cc677020c8a10096649fa7933d2aeff8c0cd97ca9a78c1f8f5b9b500",
+    "third_party/documents/raspberry-pi-legacy-hat-designguide.md": "3f63eba24fa05e389e50cc31e5e96a614a58da55a3d3bfe5308a79b6c04b6c13",
+    "third_party/documents/raspberry-pi-usb-pd-release1.pdf": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e",
+    "third_party/documents/TI_LMP8646.pdf": "83c84321496ead0397d613d2613c4b2cce41acd7d4000d3f17efa64ab4cd936d",
+    "third_party/documents/TI_INA228_SLYS021A.pdf": "a138d39eeee04f8388426fed204c2f4012e75d36e95b60b0751ef003cd277447",
+    "third_party/documents/ti_converters/tps56837_evm.pdf": "333f3e215361a6dad88c37697275457f379bef80d192d3b672f4ae3c51b28929",
+    "third_party/documents/ti_converters/tps56837.pdf": "6d47e6df4508ca271bfb67ba72e4d7f84d19e64fda3f89a5fe0fb616e7f4b5a8",
+    "third_party/documents/ti_converters/tps56528.pdf": "1107e136b78ea52e6ca72dd165a4cc4a202c00c5b194b4a7b03f7ebd8119b45d",
+    "third_party/documents/ti_converters/lm61460_evm.pdf": "b11f7b7cd9e336f32824738c3859b9ef836840a4e8b0550018aa05fc178fdfff",
+    "third_party/documents/ti_converters/tps56637.pdf": "18edaff6769b0d5c3d0cdef66df1232538cd357bbaac214df138969f9b0d6745",
+    "third_party/documents/ti_converters/tps56637_evm.pdf": "9128f18013449a9dc10398243ce615a477f4972641a9f8cd5c3613b14aacba7c",
+    "third_party/documents/r2_qualification_2026-09-14/JST_PH.pdf": "447624f4f2f7d37c58c1eaa7ee314ad757fe7aff48f6186491ef6f69fbc00b96",
+    "third_party/documents/r2_qualification_2026-09-14/Belden_8522.pdf": "dd85d09556c61b4a7eafe02b80d4783d590b8cfb2d6f546eb8cd93ea119f040a",
+    "third_party/documents/r2_qualification_2026-09-14/SCHURTER_UMT250.pdf": "0d3996fc6f13305feb3ec9db7d9cf83690695745f7345e0bdb471206c1e1b57e",
+    "third_party/documents/r2_qualification_2026-09-14/JST_VH.pdf": "d51e669c597988b20c0963daf5bef7356cbd2104c1f867e9107c6fa6cd2b899c",
+    "third_party/documents/r2_qualification_2026-09-14/Vishay_SMBJ.pdf": "1b65b57a4311128068c1dec747bbb99f6846ae932d77fcfd39904cb2d7a5cd50",
+    "third_party/documents/r2_qualification_2026-09-14/JST_XH.pdf": "9426b136902f11900825077535e5c65032b7fbc31ffb59c5e9e1f463bb20fb90",
+    "third_party/documents/r2_qualification_2026-09-14/SCHURTER_UMTH.pdf": "bac65726cd086e794288aa169ef2349664e674520019839b234b3a90f7c06ec7",
+    "third_party/documents/forensic_2026-09-14/TI_TPS3700.pdf": "8475322a39f31bdfedcaf114c748d133e2572ff1b63d12c1c304778909431eab",
+    "third_party/documents/forensic_2026-09-14/TI_TPS25947.pdf": "8f96de389903091650d4f462dcfad3210071c3ae7093623a7978f34baf8a65b4",
+    "third_party/documents/r2/TI_TPS26630-33EVM_SLVUBI8A.pdf": "b05d9ea2ee56f0b4439f318c4456985c3a11a40566c38b91f32d5ffcde63bb18",
+    "third_party/documents/r2/TI_CSD19537Q3_SLPS549B.pdf": "d74d65b7815d46d642a11c89834ee71245ae6d3541595df2b4fcfa21dfbd4903",
+    "third_party/documents/r2/TI_LM61460_SNVSBD5D.pdf": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d",
+    "third_party/documents/r2/TDK_C3225X7R1E106K250AC_characterization.pdf": "be3080238e6836ec6214f8f4aeabba161ef900129bb4dd70a35fa0440fec3c4c",
+    "third_party/documents/r2/TDK_C5750X7R1H226M250KB_mirror.pdf": "b32be691c9267eef582ab049657b79aac42bae2fd9a586b9a5ef39bc5527d53e",
+    "third_party/documents/r2/TDK_C3225X7R1E106K250AC_dc_bias_model.zip": "96c69364790de8f1ff62aba559be7707b9c1d6052124ee97369a02fe34806086",
+    "third_party/documents/r2/TI_TPS709_SBVS186H.pdf": "f37b072c265ba83cf6e484bf03c81a72b624cdc09680d90e018e6c97c044049c",
+    "third_party/documents/r2/Diodes_B260_DS13004.pdf": "19ab27e98e717e7012275062b715964897882f3ce95eab846f71d5f2b485ab5b",
+    "third_party/documents/r2/TDK_C3225X7R1E106K250AC_product.html": "747979617988968233bf81d50c6dee97cfcee3534cd92b485275da5a82c200be",
+    "third_party/documents/r2/TI_TCA9517_SCPS242D.pdf": "fde93fd601168d6f457bbf38377f8ee5eb14ab2589ed52974fdf9c847163f22c",
+    "third_party/documents/r2/onsemi_BSS138.pdf": "f315b0eb0ff600a2f3231cf403951bb12cd02c70119c668629b1b2665c2b058d"
+  }
+}

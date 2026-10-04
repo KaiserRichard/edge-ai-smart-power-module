@@ -1,0 +1,1137 @@
+{
+  "board": {
+    "3dviewports": [],
+    "ipc2581": {
+      "dist": "",
+      "distpn": "",
+      "internal_id": "",
+      "mfg": "",
+      "mpn": ""
+    },
+    "layer_pairs": [],
+    "layer_presets": [],
+    "viewports": []
+  },
+  "boards": [],
+  "cvpcb": {
+    "equivalence_files": []
+  },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
+      "extra_units": "error",
+      "footprint_filter": "ignore",
+      "footprint_link_issues": "warning",
+      "four_way_junction": "ignore",
+      "global_label_dangling": "warning",
+      "hier_label_mismatch": "error",
+      "label_dangling": "error",
+      "label_multiple_wires": "warning",
+      "lib_symbol_issues": "warning",
+      "lib_symbol_mismatch": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "same_local_global_label": "warning",
+      "similar_label_and_power": "warning",
+      "similar_labels": "warning",
+      "similar_power": "warning",
+      "simulation_model_issue": "ignore",
+      "single_global_label": "ignore",
+      "unannotated": "error",
+      "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
+  },
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "meta": {
+    "filename": "V1A.kicad_pro",
+    "version": 3
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "HighCurrent",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 2.0,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Switching",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Kelvin",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      }
+    ],
+    "meta": {
+      "version": 4
+    },
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": [
+      {
+        "pattern": "/01_INPUT_PROTECTION/EFUSE_OUT",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_BGATE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_DRV",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_DVDT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_FLT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_ILIM",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_OVP",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_PGTH",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/INPUT_UVLO",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/01_INPUT_PROTECTION/VIN_EFUSE_IN",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/02_BUCK_5V/BUCK_CBOOT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/02_BUCK_5V/BUCK_FB",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/02_BUCK_5V/BUCK_FF",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/02_BUCK_5V/BUCK_RBOOT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/02_BUCK_5V/BUCK_RT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/02_BUCK_5V/BUCK_SW",
+        "netclass": "Switching"
+      },
+      {
+        "pattern": "/02_BUCK_5V/BUCK_VCC",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/02_BUCK_5V/L201_OUT",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/3V3_AUX",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/ARMED",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/ARM_CONTACT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/ARM_DOWN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_12V",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_BB_FB",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_BST1",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_BST2",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_COMP",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_FB",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_FF",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_GATE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_LIMITED",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_PREHOLD",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_RAW",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_RT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_RUN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_SNS",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_SW1",
+        "netclass": "Switching"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_SW2",
+        "netclass": "Switching"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_TMR",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_VC",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/AUX_VCC",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CB_BALLAST_OUT",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CB_DRAIN",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CB_GATE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CB_GATE_UP",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CB_R_A",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CB_R_B",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CLAMP_2V5",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CORE_POR_N",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/CORE_POR_RAW_N",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DET5",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DET_FB",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DET_OBS_DIV",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DET_OBS_N",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DET_PG",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DET_SWITCH_EN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DISPOSAL",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DISPOSAL_LOGIC",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DRV_HOLD",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DRV_OBS_DIV",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/DRV_OBS_N",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/FAULT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/FAULT_CLEAR_N",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/FAULT_DRIVE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/HOLD_AUXOFF",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/HOLD_DVDT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/HOLD_EN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/HOLD_FLT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/HOLD_ILM",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/HOLD_OVLO",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/HOLD_SLEW_C",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/MAIN_FIXTURE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/MAIN_PERMISSION",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/MANUAL_RAILS_VALID",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/MANUAL_VALID_NOFAULT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/NOFAULT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/NO_TRUE_FAULT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/OV_COMPARATOR",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/OV_DIV",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/OV_RAW",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/OV_SENSE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/OV_SWITCHED",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/OV_VALID",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/PG_DIV",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/PG_FIXTURE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/PG_GOOD",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/PG_SENSE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/PROT_BST",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/PROT_GATE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/PROT_MID",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_A1",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_A2",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_A3",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_A4",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_A5",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_B1",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_B2",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_B3",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_B4",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_B5",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_BALLAST_OUT",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_DUMP_DRAIN",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_DUMP_GATE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RAW_DUMP_UP",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/REF1V25",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/REF_2V5",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/REF_SAFE_2V5",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/REF_SENSE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RESET_CONTACT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RESET_DOWN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RUN_GATE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/RUN_GATE_LOGIC",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SAFE5",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SAFE_FB",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SAFE_FEED",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SAFE_IN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SERIES_ARMED",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SERIES_CLEAR_N",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SERIES_CONTACT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SERIES_DOWN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SERIES_OUT",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SER_DRV",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SER_FEED",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SER_UVLO",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SOURCE_CONTACT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SRC_TRIP",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SW_HIGH",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SW_HYS",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/SW_SENSE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/TGUP_SLOW",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/TRUE_FAULT",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/VIN_GOOD_FAST",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/VIN_MON",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/03_OUTPUT_PROTECTION/VIN_SENSE",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/3V3_LOCAL",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/ALERT_LOCAL",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/INA_IN_MINUS",
+        "netclass": "Kelvin"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/INA_IN_PLUS",
+        "netclass": "Kelvin"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/SCL_LOCAL",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/SDA_LOCAL",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/SHUNT_KMINUS",
+        "netclass": "Kelvin"
+      },
+      {
+        "pattern": "/04_POWER_MONITOR/SHUNT_KPLUS",
+        "netclass": "Kelvin"
+      },
+      {
+        "pattern": "/05_IO_TEST/LOAD_FIXTURE",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/3V3_HOST",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/BUCK_INPUT_PGOOD",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/BUCK_PGOOD",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/GND",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/INPUT_SHDN",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/L201_IN",
+        "netclass": "Switching"
+      },
+      {
+        "pattern": "/LOAD_5V1",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/SCL_HOST",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/SDA_HOST",
+        "netclass": "Signal"
+      },
+      {
+        "pattern": "/VIN_FUSED",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/VIN_PROTECTED",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/VIN_RAW",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/VOUT_5V1",
+        "netclass": "HighCurrent"
+      },
+      {
+        "pattern": "/VOUT_PROTECTED",
+        "netclass": "HighCurrent"
+      }
+    ]
+  },
+  "pcbnew": {
+    "last_paths": {
+      "gencad": "",
+      "idf": "",
+      "netlist": "",
+      "plot": "",
+      "pos_files": "",
+      "specctra_dsn": "",
+      "step": "",
+      "svg": "",
+      "vrml": ""
+    },
+    "page_layout_descr_file": ""
+  },
+  "schematic": {
+    "annotate_start_num": 0,
+    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_fmt_presets": [],
+    "bom_fmt_settings": {
+      "field_delimiter": ",",
+      "keep_line_breaks": false,
+      "keep_tabs": false,
+      "name": "CSV",
+      "ref_delimiter": ",",
+      "ref_range_delimiter": "",
+      "string_delimiter": "\""
+    },
+    "bom_presets": [],
+    "bom_settings": {
+      "exclude_dnp": false,
+      "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "Reference",
+          "name": "Reference",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "DNP",
+          "name": "${DNP}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from BOM",
+          "name": "${EXCLUDE_FROM_BOM}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Board",
+          "name": "${EXCLUDE_FROM_BOARD}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": true
+        }
+      ],
+      "filter_string": "",
+      "group_symbols": true,
+      "include_excluded_from_bom": true,
+      "name": "Default Editing",
+      "sort_asc": true,
+      "sort_field": "Reference"
+    },
+    "connection_grid_size": 50.0,
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "intersheets_ref_suffix": "",
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.375,
+      "operating_point_overlay_i_precision": 3,
+      "operating_point_overlay_i_range": "~A",
+      "operating_point_overlay_v_precision": 3,
+      "operating_point_overlay_v_range": "~V",
+      "overbar_offset_ratio": 1.23,
+      "pin_symbol_size": 25.0,
+      "text_offset_ratio": 0.15
+    },
+    "legacy_lib_dir": "",
+    "legacy_lib_list": [],
+    "meta": {
+      "version": 1
+    },
+    "net_format_name": "",
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "space_save_all_events": true,
+    "spice_current_sheet_as_root": false,
+    "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_dissipations": false,
+    "spice_save_all_voltages": false,
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0
+  },
+  "sheets": [
+    [
+      "576b2f55-cbc6-5266-8df6-9cffc8340346",
+      "Root"
+    ],
+    [
+      "37852ec5-fee5-5973-89ae-3cd309e38c33",
+      "01_INPUT_PROTECTION"
+    ],
+    [
+      "5dffa0bc-750e-519f-9b00-1681dc612371",
+      "02_BUCK_5V"
+    ],
+    [
+      "75179989-af4b-5de8-b22b-4510e541985c",
+      "03_OUTPUT_PROTECTION"
+    ],
+    [
+      "6055d333-b195-5ef3-b19f-42ca0fee65c8",
+      "04_POWER_MONITOR"
+    ],
+    [
+      "8d9c57c5-d3a6-5649-afb2-3a00633471f3",
+      "05_IO_TEST"
+    ]
+  ],
+  "text_variables": {
+    "RELEASE_STATUS": "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED"
+  }
+}

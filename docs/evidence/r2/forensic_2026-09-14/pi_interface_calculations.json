@@ -1,0 +1,70 @@
+{
+  "classification": "ASSUMPTION / sensitivity study; not a qualified harness, Pi rating, or approved acceptance specification",
+  "wire_loop_mOhm": 9.265091863517059,
+  "wire_hot_loop_mOhm": 10.72156430446194,
+  "parallel_pi_contact_loop_mOhm_assumed": 10.0,
+  "external_loop_mOhm": 29.265091863517064,
+  "external_hot_loop_mOhm": 30.721564304461943,
+  "internal_loop_mOhm_allocated": 17.0,
+  "raw_buck_nominal_V": 5.098360655737705,
+  "raw_buck_static_screen_V": [
+    5.038271401729418,
+    5.158632237795172
+  ],
+  "rows": [
+    {
+      "current_A": 1,
+      "external_drop_V": 0.029265091863517063,
+      "pi_V_if_connector_is_exact_5p1": 5.070734908136482,
+      "pi_V_from_nominal_buck_with_allocated_internal_loss": 5.052095563874188,
+      "pi_V_static_low_source_hot_wire_screen": 4.990549837424956,
+      "remaining_drop_to_screen_floor_V": 0.24054983742495573,
+      "pi_V_with_additional_dynamic_droop_example": 4.890549837424956,
+      "external_loss_W": 0.029265091863517063
+    },
+    {
+      "current_A": 3,
+      "external_drop_V": 0.0877952755905512,
+      "pi_V_if_connector_is_exact_5p1": 5.0122047244094485,
+      "pi_V_from_nominal_buck_with_allocated_internal_loss": 4.959565380147153,
+      "pi_V_static_low_source_hot_wire_screen": 4.895106708816032,
+      "remaining_drop_to_screen_floor_V": 0.14510670881603183,
+      "pi_V_with_additional_dynamic_droop_example": 4.795106708816032,
+      "external_loss_W": 0.26338582677165356
+    },
+    {
+      "current_A": 5,
+      "external_drop_V": 0.1463254593175853,
+      "pi_V_if_connector_is_exact_5p1": 4.953674540682415,
+      "pi_V_from_nominal_buck_with_allocated_internal_loss": 4.867035196420119,
+      "pi_V_static_low_source_hot_wire_screen": 4.799663580207108,
+      "remaining_drop_to_screen_floor_V": 0.04966358020710793,
+      "pi_V_with_additional_dynamic_droop_example": 4.699663580207108,
+      "external_loss_W": 0.7316272965879266
+    }
+  ],
+  "external_loop_budget_at_5A_static_mOhm": 40.65428034588353,
+  "external_loop_budget_at_5A_with_dynamic_reserve_mOhm": 20.654280345883535,
+  "poor_harness_sensitivity_at_5A": [
+    {
+      "external_loop_mOhm": 60,
+      "pi_V_if_connector_is_exact_5p1": 4.8,
+      "pi_V_low_buck_including_internal": 4.653271401729418
+    },
+    {
+      "external_loop_mOhm": 100,
+      "pi_V_if_connector_is_exact_5p1": 4.6,
+      "pi_V_low_buck_including_internal": 4.453271401729418
+    }
+  ],
+  "startup_example_capacitor_current_A": 1.0199999999999998,
+  "capacitor_only_step_droop_example_V": 0.23454357819682894,
+  "limitations": [
+    "Contact resistance, disconnect resistance, copper and temperatures are assumptions, not guaranteed maxima.",
+    "The connector-only table assumes 5.1 V at J502; the captured buck regulates before the switch and shunt.",
+    "The static low-source calculation does not bound all regulator, contact, aging or transient errors.",
+    "The 4.75-5.25 V window is a review screen, not an official Pi 5 voltage-time rating.",
+    "The current schematic has no output disconnect and cannot deliver power from VIN to J502."
+  ],
+  "config_sha256": "da77a21d04fd63204eaa2c9189fac2a0e26e6aee93bfa1a5c28c681cecc7712b"
+}

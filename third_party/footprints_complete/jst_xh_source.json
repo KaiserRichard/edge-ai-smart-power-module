@@ -1,0 +1,13 @@
+{
+  "id": "JST-XH",
+  "manufacturer": "JST",
+  "url": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+  "revision": "No controlled issue printed; PDF creation/modification 2025-07-30; retrieved 2026-09-30",
+  "local_file": "jst_xh.pdf",
+  "sha256": "9426b136902f11900825077535e5c65032b7fbc31ffb59c5e9e1f463bb20fb90",
+  "relevant_pages": "2 mounting-surface layout, 3 contacts, 4 housings, 5 header dimensions/MPNs",
+  "license": "JST copyright; local review only, PDF not redistributed",
+  "use": "ADAPTED manufacturer numeric geometry into independently authored project footprints",
+  "modifications": "upstream unchanged; drawing rotated180 degrees (not mirrored); project copper1.7x2.0 mm and courtyard0.5 mm; no boss variant",
+  "attribution": "JST XH connector catalogue eXH.pdf, snapshot and SHA256 above"
+}

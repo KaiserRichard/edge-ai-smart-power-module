@@ -1,0 +1,318 @@
+# Independent verification — Gate 2b / PR #8
+
+Date: 2026-09-30 (Asia/Ho_Chi_Minh). Role: independent verifier; this review did not author or modify the implementation.
+
+**Result: FAIL — the electrical identity checks pass, but the A3 review PDF still has readable-layout defects.** Required fixes are listed under Check 5. No repository source, test, design, or historical evidence files were edited; no commit or push was performed. The requested fetch and detached worktree were created. Only this report and its supporting verification artifacts were written outside the repository.
+
+| Check | Result | Evidence summary |
+|---|---|---|
+| 1. Scope / symbol library | PASS | All 25 non-schematic paths listed; 161 symbols / 457 pins; zero electrical library changes. |
+| 2. Fresh netlists | PASS | 154 components, 94 nets, 450 pin memberships at both commits; exact canonical equality. |
+| 3. ERC / settings | PASS | Fresh KiCad 9.0.6 ERC: 0 violations; project settings byte-identical. |
+| 4. Tests / weakening audit | PASS | 10 capture tests pass, also against fresh HEAD export; schematic checker passes; existing assertions preserved. |
+| 5. A3 PDF readability | FAIL | Visible text collisions and frame/panel crossings; Sheet 03 control flow is not consistently left to right. |
+| 6. Common-drain text audit | PASS | 18 hits, all historical/candidate discussion or package terminology; current series pair is COMMON SOURCE. |
+
+## Review identity and reproducibility
+
+- Baseline: `c47409fb2637c94ccaa685c3ac4cbbd10681d5a2` (`origin/feat/sheet03-output-protection` after fetch).
+- HEAD: `2cd138f77190be0871c4b7bc9863db48079f5b74` (`origin/feat/sheet03-readable` after fetch).
+- Merge base of baseline and HEAD: exactly the baseline above; the requested triple-dot diff therefore covers the intended branch changes.
+- HEAD detached worktree: `/Users/quockaiser/Desktop/Research/wt-verify2b`.
+- Baseline detached worktree: `/private/tmp/verify-gate2b.uZ4zCh/baseline`.
+- KiCad CLI: `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, version `9.0.6`.
+- PDF reviewed: `/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_REVIEW_READABLE.pdf`; six A3 landscape pages, approximately 419.989 × 297.002 mm.
+- PDF SHA-256: `6be9579340f1dc097ee18d646bf2031820fa2a72e6656cd710b3237773050ae7`. It is byte-identical to HEAD's `docs/evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf`.
+- HEAD and baseline verification worktrees remained clean. The main workspace has no tracked modifications; its two existing `.claude/worktrees/` entries were left untouched.
+
+Supporting files are retained in [VERIFY_GATE2B_EVIDENCE](VERIFY_GATE2B_EVIDENCE/). Fresh exports, the independently written comparator, complete diffs, test logs, measurements and crops are included; the implementation's retained identity report was not used as the basis of Check 2.
+
+## 1. Scope — PASS
+
+Command: `git diff --stat c47409f...HEAD` in the HEAD verification worktree.
+
+```text
+ docs/FINAL_MANAGER_REPORT.md                       |    15 +
+ docs/evidence/r2/sheet03/GATE2B_READABILITY.md     |    88 +
+ docs/evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf   |   Bin 0 -> 1396749 bytes
+ docs/evidence/r2/sheet03/readability/ERC.json      |    39 +
+ .../r2/sheet03/readability/GATE2B_SCOPE.json       |    52 +
+ .../r2/sheet03/readability/NETLIST_IDENTITY.json   |    46 +
+ .../r2/sheet03/readability/PDF_VALIDATION.json     |   101 +
+ .../r2/sheet03/readability/baseline.canonical.json | 42597 +++++++++++++++++++
+ .../r2/sheet03/readability/baseline.net.xml        |  5966 +++
+ docs/evidence/r2/sheet03/readability/netlist.diff  |     0
+ .../r2/sheet03/readability/page_01_V1A_100pct.png  |   Bin 0 -> 108937 bytes
+ .../page_02_01_INPUT_PROTECTION_100pct.png         |   Bin 0 -> 151287 bytes
+ .../readability/page_03_02_BUCK_5V_100pct.png      |   Bin 0 -> 137254 bytes
+ .../page_04_03_OUTPUT_PROTECTION_100pct.png        |   Bin 0 -> 290988 bytes
+ .../page_05_04_POWER_MONITOR_100pct.png            |   Bin 0 -> 146925 bytes
+ .../readability/page_06_05_IO_TEST_100pct.png      |   Bin 0 -> 115709 bytes
+ .../r2/sheet03/readability/readable.canonical.json | 42597 +++++++++++++++++++
+ .../r2/sheet03/readability/readable.net.xml        |  5966 +++
+ hardware/kicad/01_INPUT_PROTECTION.kicad_sch       | 11336 +++--
+ hardware/kicad/02_BUCK_5V.kicad_sch                | 11566 +++--
+ hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch      | 19039 ++++++++-
+ hardware/kicad/04_POWER_MONITOR.kicad_sch          | 11100 +++--
+ hardware/kicad/05_IO_TEST.kicad_sch                |  4506 +-
+ hardware/kicad/V1A.kicad_sch                       |  1949 +-
+ hardware/kicad/V1A.kicad_sym                       | 12699 +++++-
+ scripts/check_repository.py                        |    33 +
+ scripts/check_schematic_readability.py             |   111 +
+ scripts/export_readable_review.py                  |    51 +
+ scripts/make_schematic_readable.py                 |   546 +
+ tests/test_r2_capture.py                           |     2 +-
+ tests/test_readability_identity.py                 |    43 +
+ 31 files changed, 147836 insertions(+), 22612 deletions(-)
+```
+
+Every changed non-`.kicad_sch` file (25 total; `A` = added, `M` = modified):
+
+```text
+M	docs/FINAL_MANAGER_REPORT.md
+A	docs/evidence/r2/sheet03/GATE2B_READABILITY.md
+A	docs/evidence/r2/sheet03/V1A_REVIEW_READABLE.pdf
+A	docs/evidence/r2/sheet03/readability/ERC.json
+A	docs/evidence/r2/sheet03/readability/GATE2B_SCOPE.json
+A	docs/evidence/r2/sheet03/readability/NETLIST_IDENTITY.json
+A	docs/evidence/r2/sheet03/readability/PDF_VALIDATION.json
+A	docs/evidence/r2/sheet03/readability/baseline.canonical.json
+A	docs/evidence/r2/sheet03/readability/baseline.net.xml
+A	docs/evidence/r2/sheet03/readability/netlist.diff
+A	docs/evidence/r2/sheet03/readability/page_01_V1A_100pct.png
+A	docs/evidence/r2/sheet03/readability/page_02_01_INPUT_PROTECTION_100pct.png
+A	docs/evidence/r2/sheet03/readability/page_03_02_BUCK_5V_100pct.png
+A	docs/evidence/r2/sheet03/readability/page_04_03_OUTPUT_PROTECTION_100pct.png
+A	docs/evidence/r2/sheet03/readability/page_05_04_POWER_MONITOR_100pct.png
+A	docs/evidence/r2/sheet03/readability/page_06_05_IO_TEST_100pct.png
+A	docs/evidence/r2/sheet03/readability/readable.canonical.json
+A	docs/evidence/r2/sheet03/readability/readable.net.xml
+M	hardware/kicad/V1A.kicad_sym
+M	scripts/check_repository.py
+A	scripts/check_schematic_readability.py
+A	scripts/export_readable_review.py
+A	scripts/make_schematic_readable.py
+M	tests/test_r2_capture.py
+A	tests/test_readability_identity.py
+```
+
+The non-schematic changes are the local symbol library, review documentation/evidence, presentation tooling, and check/test updates. No PCB, footprint, project-settings, library-table, component-specification or third-party-source changes occur in this diff. The checker/test changes are audited in Check 4.
+
+### V1A.kicad_sym: complete diff and classification
+
+The [complete, unabridged unified diff](VERIFY_GATE2B_EVIDENCE/symbol-library.full.diff) is retained, including the large whitespace reformat. An independent S-expression comparison removes that formatting noise; its [per-symbol classification](VERIFY_GATE2B_EVIDENCE/symbol-library-classification.md) and [structured audit](VERIFY_GATE2B_EVIDENCE/symbol-library.audit.json) record all changed fields. The [audit code](VERIFY_GATE2B_EVIDENCE/audit_symbol_library.py) imports no Gate 2b implementation code.
+
+All **161 symbols**, **322 common-graphics/unit-body records** and **457 pins** are present at both commits. All symbols retain `_0_1` common graphics and `_1_1` unit 1/body style 1. There are **zero electrical changes**.
+
+| Changed field/category | Extent | Classification |
+|---|---:|---|
+| Body coordinates/radius | 327 primitives across 141 symbols: 246 polylines, 76 rectangles, 5 circles | Graphic-only |
+| Body fill | D101: `background` → `none` | Graphic-only |
+| Body primitive ordering | R401 | Graphic-only |
+| Pin XY placement / rotation | 421 moved pins; 317 changed angles | Graphic-only geometry; resulting connectivity separately verified |
+| Pin line length | 261: 2.54 mm → approximately 1.778 mm | Graphic-only geometry |
+| Pin name font effects | All 457: 1.016 mm → 1.524 mm (196 pins) or 1.27 mm (261 pins) | Graphic-only |
+| Pin number font effects | Same 457 changes | Graphic-only |
+| Pin-name display offset | 64 hidden-name offsets 0.762→0.5334 mm; 23 visible offsets 0.762→approximately 0.7112 mm; 10 visible offsets 0.762→1.016 mm | Graphic-only |
+| Pin-name visibility | D101: visible → hidden; actual names remain `1` and `2` | Graphic-only |
+| Whitespace/serialization | Whole-file reformat; raw diff 12,273 insertions / 426 deletions | Formatting only |
+| Pin number, name, electrical type, addition/removal, unit assignment | **0 changes** | Electrical comparison: PASS |
+| Reference/value/footprint property data or placement/visibility; simulation/BOM/board metadata; pin shape; stroke width | **0 changes** | Unchanged |
+
+Displayed normalized excerpts of the library diff (the full raw patch and the [complete normalized diff](VERIFY_GATE2B_EVIDENCE/symbol-library.normalized.diff) are linked above/below; these excerpts omit unrelated context):
+
+```diff
+# D101_SMBJ26CA: pin-name DISPLAY, not a pin-name identity change
+-(pin_names (offset 0.762))
++(pin_names (offset 0.762) (hide yes))
+
+# D101_SMBJ26CA_0_1: body rectangle fill
+-(fill (type background))
++(fill (type none))
+
+# D101 pin-name and pin-number font effects (both pins)
+-(effects (font (size 1.016 1.016)))
++(effects (font (size 1.524 1.524)))
+```
+
+Each of these displayed changes is **graphic-only**. The exhaustive [161-row classification table](VERIFY_GATE2B_EVIDENCE/symbol-library-classification.md) identifies every symbol and changed category, and [exact classified old/new records](VERIFY_GATE2B_EVIDENCE/symbol-library.audit.json) cover all remaining geometry changes. [Exhaustive field counts](VERIFY_GATE2B_EVIDENCE/symbol-library.field-counts.json).
+
+Moving symbol pins changes their drawing coordinates and is therefore only classified as presentation here **in conjunction with** the independent fresh netlist proof below. Pin identities/types/unit assignments were compared separately; no changed pin position is being assumed harmless without checking resulting connectivity.
+
+## 2. Independent netlists — PASS
+
+Fresh commands, each exit code 0:
+
+```sh
+/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch export netlist --format kicadxml --output /private/tmp/verify-gate2b.uZ4zCh/baseline.net.xml /private/tmp/verify-gate2b.uZ4zCh/baseline/hardware/kicad/V1A.kicad_sch
+/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch export netlist --format kicadxml --output /private/tmp/verify-gate2b.uZ4zCh/head.net.xml /Users/quockaiser/Desktop/Research/wt-verify2b/hardware/kicad/V1A.kicad_sch
+python3 /private/tmp/verify-gate2b.uZ4zCh/independent_compare.py /private/tmp/verify-gate2b.uZ4zCh/baseline.net.xml /private/tmp/verify-gate2b.uZ4zCh/head.net.xml /private/tmp/verify-gate2b.uZ4zCh
+```
+
+The new [independent comparator](VERIFY_GATE2B_EVIDENCE/independent_compare.py) uses only Python's standard library. It builds exactly:
+
+- `refdes → {value, footprint, lib_id}`, with `lib_id = libsource.lib + ':' + libsource.part`.
+- `full net name → sorted set of refdes:pin`.
+
+It rejects duplicate references, duplicate net names, repeated pin memberships and unknown component references before comparing dictionaries. It preserves hierarchical net names and intentional unconnected nets. Export date/path/order/numeric net codes are outside the requested canonical data. No Gate 2b script or canonical JSON was reused.
+
+| Measurement | Baseline | HEAD | Difference |
+|---|---:|---:|---:|
+| Exported physical components | 154 | 154 | 0 |
+| Nets, including intentional unconnected nets | 94 | 94 | 0 |
+| Pin memberships | 450 | 450 | 0 |
+| Added / removed / changed components | — | — | 0 / 0 / 0 |
+| Added / removed / changed nets | — | — | 0 / 0 / 0 |
+
+Both canonical JSON files have SHA-256 `d05d276d194f8cb69ad2c79aea422a650e8037c4adcff2d8d348e041d564da0b`. There are **no value, footprint, lib_id, net-name or membership differences**. Seven nonphysical power flags account for the difference between 161 library symbols and 154 exported components; Check 1 also audits those library symbols.
+
+Evidence: [comparison result](VERIFY_GATE2B_EVIDENCE/independent.netlist-comparison.json), [baseline XML](VERIFY_GATE2B_EVIDENCE/baseline.net.xml), [HEAD XML](VERIFY_GATE2B_EVIDENCE/head.net.xml), [baseline canonical](VERIFY_GATE2B_EVIDENCE/independent.baseline.canonical.json), [HEAD canonical](VERIFY_GATE2B_EVIDENCE/independent.head.canonical.json).
+
+## 3. ERC and ERC settings — PASS
+
+```sh
+/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch erc --format json --severity-all --exit-code-violations --output /private/tmp/verify-gate2b.uZ4zCh/head.erc.json /Users/quockaiser/Desktop/Research/wt-verify2b/hardware/kicad/V1A.kicad_sch
+```
+
+Exit code **0**; **0 violations across all six sheets**, including the requested all-severity/exclusion reporting. [Fresh ERC JSON](VERIFY_GATE2B_EVIDENCE/head.erc.json).
+
+`git diff c47409f...HEAD -- hardware/kicad/V1A.kicad_pro` is empty. The entire baseline and HEAD project files are byte-identical, both SHA-256 `2f3f1d74c5c1c75bbfb7daa1cc8822c177a31f2dea212aa09cc127ca813c62c5`. Therefore `erc_exclusions` (empty), the pin conflict matrix and all rule severities were not relaxed. Existing ignored rules (`footprint_filter`, `four_way_junction`, `simulation_model_issue`, `single_global_label`) remain unchanged. [Settings comparison](VERIFY_GATE2B_EVIDENCE/erc-settings-comparison.json).
+
+The exports/ERC emitted local Fontconfig configuration warnings, but all commands completed successfully. Those warnings are distinct from electrical rule violations. ERC establishes rule-check results only, not electrical safety or physical validation.
+
+## 4. Repository tests and weakening audit — PASS
+
+All Python runs set `PYTHONDONTWRITEBYTECODE=1` to avoid writing repository caches.
+
+| Invocation / check | Result | Evidence |
+|---|---|---|
+| `python3 tests/test_r2_capture.py -v` | 10/10 pass | [log](VERIFY_GATE2B_EVIDENCE/test-r2-capture.log) |
+| Same capture suite with `setUpClass` replaced in memory to load fresh `head.net.xml` | 10/10 pass; no test-file edit | [log](VERIFY_GATE2B_EVIDENCE/test-r2-capture-fresh-head.log) |
+| `python3 scripts/check_r2_schematic.py --netlist /private/tmp/verify-gate2b.uZ4zCh/head.net.xml --footprints /Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints` | Exit 0 | [log](VERIFY_GATE2B_EVIDENCE/check-r2-fresh-head.log) |
+| `python3 tests/test_readability_identity.py -v` | 5/5 pass | [log](VERIFY_GATE2B_EVIDENCE/test-readability-identity.log) |
+
+The schematic checker reports pin contracts, hierarchy, Kelvin polarity, power domains, Sheet 03 control and no-bypass boundaries passing. Its separate `R2 RELEASE BLOCKED` statement is preserved.
+
+The existing capture test diff is exactly:
+
+```diff
+-        cls.tree = ET.parse(ROOT/'docs/evidence/r2/sheet03/V1A_gate2.net.xml').getroot()
++        cls.tree = ET.parse(ROOT/'docs/evidence/r2/sheet03/readability/readable.net.xml').getroot()
+```
+
+No existing assertion or negative test was removed or weakened. `scripts/check_r2_schematic.py` is unchanged. `scripts/check_repository.py` adds a scoped allowance for six presentation-edited schematics and `V1A.kicad_sym`, with baseline-chain, file-set, hash and retained-XML equality checks; existing integrity/no-PCB checks remain. Added identity tests cover changed values, footprints, pin membership and removed power flags. Generation/export tools were inspected without executing their write operations. [Complete scripts/tests diff](VERIFY_GATE2B_EVIDENCE/tests-scripts-baseline.diff).
+
+Limitation: the repository checker compares committed XML evidence and does not itself regenerate XML from current sources. The independent fresh exports in Check 2 and fresh-netlist test run close that gap for the exact reviewed HEAD.
+
+## 5. PDF readability — FAIL
+
+The actual supplied PDF was rendered and all six pages visually inspected, using full-page overviews and 288-dpi detail crops. The retained repository preview PNGs were not substituted for this review. A [standalone visual report](VERIFY_GATE2B_EVIDENCE/pdf_review/readability-review.md) is also included.
+
+### A3 text measurement and assessment limits
+
+The PDF's extracted technical-text font size is about **6.017 pt** on pages 1, 2, 3, 5, and 6. Its absolute minimum on these pages is **5.132 pt**, principally drawing-grid annotations, which should not be confused with component-value text. Sheet03 has essential component references, values, and signal names at **5.014 pt**, with some notes at 5.113 pt; this is approximately 17% smaller than the other sheets' technical text. These are PDF text-object font sizes, not a measurement of the visible stroke's cap height.
+
+At A3 scale, the 6 pt technical text is small but generally decipherable where unobstructed. Sheet03's approximately 5 pt technical text is marginal for comfortable paper review; reducing a printed sheet further would worsen it. Several values are actually overprinted, independent of the chosen zoom or printing resolution. An actual physical A3 print was not produced, so physical print readability is **not validated**. No numerical minimum text-size requirement was supplied; font size alone is not used as a claimed standards violation.
+
+For the table below, **text PASS** means the reviewed technical text is unobscured and visually readable; confirmed wire/symbol/frame overprints produce a local text FAIL even when a reader can infer the intended string. **Flow** assesses the primary signal/power sequence; **blocks** assesses named functional grouping; **labels** assesses sparse/useful net naming rather than text placement (placement defects are counted under text).
+
+### Per-page results
+
+| PDF page / sheet | Text | Left-to-right flow | Labeled functional blocks | Sparse/useful net labels | Assessment / required local fixes |
+|---|---|---|---|---|---|
+| 1 / 00 TOP | PASS | PASS | PASS | PASS | Four power blocks read left to right, IO below; clear margins and no obstructive collisions found. Approximately 6.017 pt technical text and bottom notes are small. Increasing technical-note size would improve A3 comfort. [Overview](VERIFY_GATE2B_EVIDENCE/pdf_review/page_01_overview.png), [hierarchy detail](VERIFY_GATE2B_EVIDENCE/pdf_review/s00_hierarchy.png). |
+| 2 / 01 INPUT PROTECTION | FAIL, local | PASS | PASS | PASS | Input/reverse stage at left, eFuse at right; UV/OV divider group separate. The long vertical FLT routing crosses the `INPUT_PGTH`, `INPUT_ILIM`, and `INPUT_DVDT` label region just right of U101. Move these labels or route the FLT wire to the right of the text column. C103's value also approaches/intersects a vertical return wire; give it clearance. Main text remains decipherable. [Overview](VERIFY_GATE2B_EVIDENCE/pdf_review/page_02_overview.png), [eFuse detail](VERIFY_GATE2B_EVIDENCE/pdf_review/s01_efuse_full.png). |
+| 3 / 02 BUCK 5V | FAIL, local | PASS | PASS | PASS | Input/enable → converter → output/feedback is clear. In the lower output capacitor bank, the vertical feedback pickup crosses C212's `22uF 50V` value. Move the value or pickup wire so the voltage rating is unobscured. [Overview](VERIFY_GATE2B_EVIDENCE/pdf_review/page_03_overview.png), [specific crossing](VERIFY_GATE2B_EVIDENCE/pdf_review/s02_caplabel_crossing.png), [feedback region](VERIFY_GATE2B_EVIDENCE/pdf_review/s02_feedback.png). |
+| 4 / 03 OUTPUT PROTECTION | FAIL | FAIL for control chain; top power path PASS | PASS | PASS in naming intent; text placement FAIL | All eleven named blocks present. Dense approximately 5.014 pt component/net text has many collisions; see detailed list below. The main power row reads left to right, but detector → qualification/latches → run action → gate driver/series FETs requires substantial backward/upward jumps. [Overview](VERIFY_GATE2B_EVIDENCE/pdf_review/page_04_overview.png). |
+| 5 / 04 POWER MONITOR | FAIL, local | PASS | PASS | PASS | Shunt force path reads left to right, local supply separated, I2C domain block below. At U401, vertical ALERT/supply-decoupling routes pass through `SCL_LOCAL` and `SDA_LOCAL` text. Move labels to a clear area or move vertical routes around their text extents. [Overview](VERIFY_GATE2B_EVIDENCE/pdf_review/page_05_overview.png), [specific crossings](VERIFY_GATE2B_EVIDENCE/pdf_review/s04_netlabel_crossings.png), [sense circuit](VERIFY_GATE2B_EVIDENCE/pdf_review/s04_sense.png). |
+| 6 / 05 IO TEST | FAIL, local | PASS | PASS | PASS | Input, load, and host connector groups are clear, with bench access below. At J503, the vertical 3V3_HOST/PWR_FLAG route passes through `SDA_HOST` and `SCL_HOST` labels. Move the route left of the full label text or reposition the labels. [Overview](VERIFY_GATE2B_EVIDENCE/pdf_review/page_06_overview.png), [specific crossings](VERIFY_GATE2B_EVIDENCE/pdf_review/s05_netlabel_crossings.png), [host region](VERIFY_GATE2B_EVIDENCE/pdf_review/s05_io.png). |
+
+Pages 2, 3, 5, and 6 have isolated presentation defects; Sheet03 requires a substantial layout cleanup. Label sparseness is generally appropriate: labels mainly identify named interfaces, control nodes, and probe points. This does not excuse collisions or the need to trace Sheet03's control path across distant blocks.
+
+### Sheet03: concrete fixes
+
+1. **Top-left header / bottom-left evidence note:** The title is crossed by the top drawing-frame line. The final `EVIDENCE: ... ERC does not validate electrical safety.` line is crossed by the bottom drawing frame. Move all header/footer text wholly inside the frame with clear margins. [Header](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_header.png), [footer](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_footer.png).
+2. **RAW BULK / FAULT-RISE BUFFER (top left):** C330 through C336 `470uF 35V` values collide with the following capacitor's plates/lead. The `35V` ratings are visibly struck through. Use more horizontal spacing, two rows, or separated/aligned value fields; retain all eight capacitors visibly. [Bulk crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_bulk.png).
+3. **OPPOSED SERIES FETS (top center):** Q301/Q302 and their common-source arrangement are visible and traceable. TP302's `VOUT_PROTECTED` property touches/crosses the right panel edge. Move that field inward. TP304 returns to the common-source `PROT_MID` node; its lead is separate from the lower `PROT_GATE` rail, so this is not a detected connectivity error. [Series crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_series.png).
+4. **DRAIN BALLAST / CROWBAR (top right):** R308/R309 and R310/R311 visibly form two series branches in parallel before Q303. The `(R308 + R309) || (R310 + R311) = 33 mOhm` note is readable when enlarged. Separate resistor pin numbers from body edges and leave clear entry-label clearance at the left panel border. No missing ballast or crowbar block found. [Ballast/crowbar crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_crowbar.png).
+5. **INDEPENDENT AUXILIARY SUPPLIES (middle left):** `SUPPLY_OK` and `DRV_DELAY` overlap directly between U306 and U307. C306's `10uF 25V` field crosses the right dashed panel boundary; other right-side fields crowd the vertical return. Move labels to distinct wire segments and bring value fields inside the block. The far-left `VIN_FUSED` label crowds the sheet margin. [Aux crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_aux.png).
+6. **SERIES GATE DRIVE (middle):** U301, D302, gate resistor, source-reference connection, and gate-source resistor are all visible. C301's `220nF 50V` extends across the block's right boundary; relocate this value. Add a clear visual continuation cue or place this block adjacent to the run action and series-FET control path. [Gate crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_gate.png).
+7. **REFERENCE / OV DETECTOR (middle right):** U302, R301/R302 divider, D301 clamp, R303, and U303 comparator all present. C304's `100nF 25V` field extends through the right block edge. U303's part-number field is crowded by the capacitor/return routing. Move both into clear field positions. D301's own reference/value were distinguishable in the enlarged render; no need to claim a D301 text collision that is not present. [Detector crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_detector.png).
+8. **CROWBAR GATE DRIVE (middle far right):** U315, separate output paths, R306, R307, and local capacitors present. `CROWBAR_ON` begins across the left panel boundary. Shorten the local route/reposition the label or widen the block, and retain adequate pin/name clearance. [Crowbar-driver crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_cbdrive.png).
+9. **SUPPLY VALID / RESET (bottom left):** `SUPPLY_OK`, `RESET_N`, and `GND` merge visually near R316/R318/J302. The DET_5V label is crossed by a horizontal wire. C322's value runs through the panel edge. Re-route and space these nets/fields so each can be read independently. [Reset crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_reset.png).
+10. **ARM / HISTORY CLOCK (bottom center-left):** J301's `ARM_N` label collides with pin-number text; `ARM_DELAYED` runs across a vertical wire and the panel edge, and C324's value crosses the right panel boundary. Provide a clear label column and contained decoupler fields. [Clock crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_clock.png).
+11. **QUALIFICATION / LATCHES (bottom center-right):** U310's `OV_OK` overlaps its pin-3 text. U310's long part number crowds R317 and the supply route. C320's value crosses the right boundary. Increase spacing among qualification logic, run latch U304, history latch U309, and their text fields. [Latch crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_latch.png).
+12. **RUN / FAULT ACTION (bottom far right):** C325's `100nF 25V` crosses both the dashed panel edge and the drawing frame into the right margin. R322's reference touches/crosses Q304's body outline. Incoming net labels start across the left panel border; lower control labels have nearby vertical-wire overprints. Move C325 and its fields inside the drawing frame, move R322 fields clear of Q304, and open a label corridor on the left. [Action crop](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_action.png), [frame overrun detail](VERIFY_GATE2B_EVIDENCE/pdf_review/s03_right_edge.png).
+13. **Whole-sheet control reading order:** The footer accurately describes a detector → latch → switch/crowbar sequence, but placement does not implement that sequence visually. Reorganize the control row(s) so reference/detection → qualification/latches → run/fault logic → gate drivers progresses left to right, with the series switch and crowbar immediately above their drivers or clearly connected by labeled continuations. Preserve the complete circuit rather than replacing it with unexplained block placeholders. Increase body text and whitespace instead of shrinking fields further.
+
+### Presence check of required protection chain
+
+- Detector/reference/divider/clamp: **PASS, visible** — U302, R301/R302, D301, R303, U303.
+- Qualification/reset and both latches: **PASS, visible** — U308/U312/U310, U304 run latch, U309 history latch, ARM/RESET circuitry.
+- Series driver and opposed MOSFETs: **PASS, visible** — U301, Q301/Q302, common-source PROT_MID and common gate routing; no drawn bypass found.
+- Crowbar driver and MOSFET: **PASS, visible** — U315, Q303, gate resistor/pulldown.
+- Drain ballast: **PASS, visible** — R308–R311 in two series strings in parallel, ahead of Q303.
+- Upstream bulk bank and auxiliary rails: **PASS, visible** — C330–C337 and U306/U307.
+- Electrical performance/timing/SOA or safety: **NOT ASSESSED / NOT VALIDATED** by this visual review.
+
+**Required disposition:** Fix the confirmed overlaps/frame overruns, improve Sheet03 technical-text size and control flow, regenerate the PDF, and repeat the actual rendered-PDF visual check. The design remains **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**.
+
+## 6. Common-drain text search — PASS
+
+Exact command in HEAD worktree: `grep -rn -i "common.drain" docs/`. This regex matches both `common-drain` and `common drain`. It returned 18 matching lines:
+
+```text
+docs/evidence/r2/OUTPUT_PROTECTION.md:6:electrical characteristics and common-drain application. FUNCTION REQUIRED:
+docs/evidence/r2/OUTPUT_PROTECTION.md:15:Review candidate **LM74800QDRRRQ1** with two common-drain N-channel MOSFETs:
+docs/evidence/r2/sheet03/GATE2_PIN_REVIEW.md:36:- Series FETs use `V1A_Qualified:Infineon_BSC034N06NS_8pin`. The isolated KiCad source combines drain copper under pad5; the adapted footprint numbers the four drain fingers **8,7,6,5** from top to bottom and retains the common drain land. Thus all eight schematic pin numbers have copper pads. Pad6–8 copper overlaps the same-net drain land, intentionally; the checker requires all four drains on the same net.
+docs/evidence/r2/sheet03/CALCULATIONS.json:3636:      "series common-source/common-drain inconsistency in prior prose",
+docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md:71:Superseded analysis, not current capture instructions. In particular, the old bullet calling a common-drain connection common-source is not a wiring contract; use the new reviewed pin table. Original outcomes remain in Git at `352a115`.
+docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md:96:* Q1/Q2 are Infineon BSC034N06NSATMA1, 60 V SuperSO8 N-channel MOSFETs, common drain at `PROT_MID`; Q1 source=`VOUT_5V1`, Q2 source=`VOUT_PROTECTED`; each body diode points toward `PROT_MID`, so neither diode provides a raw-to-load bypass. Pins 1–3 are source, pin 4 gate, pins 5–8 drain (Infineon Rev 2.3, p.1). Qg max is 41 nC (defined-by-design, not production tested), Qgd max 9.2 nC; RDS(on) max is 3.4 mΩ at 10 V/50 A.
+docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md:172:**Mechanism/topology:** `LM74800QDRRRQ1`, two `PSMN1R8-40YLC` N-channel MOSFETs in common-drain configuration: Q1 source=raw, drain=MID; Q2 drain=MID, source=protected. Q1 body diode points raw→MID, Q2 body diode protected→MID. DGATE controls reverse blocking, HGATE controls forward isolation; VS/C at MID and raw-sensing OV divider. No single FET provides both off-state blocking directions.
+docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md:198:**Development topology:** retain a common-drain opposing FET pair and ideal-diode control of Q1; give Q2 a dedicated source-referenced fast driver. Sense raw with an independent reference/comparator; latch a fault before enabling the driver. This addresses the incomplete discrete HGATE pull-down in today's Option I worksheet.
+docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md:269:| Body-diode bypass | Opposed common-drain diodes block a diode-only through path when off | Opposed common-source diodes block a diode-only through path when off | Same common-drain orientation as A; Q2 forward isolation and Q1 reverse control must remain independent |
+docs/evidence/r2/forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md:61:| 3 | Q101 CSD19537Q3 | KNOWN / OPEN | **SON 3.3 × 3.3 mm**, not SO-8. Visual pin map: **1/2/3 source, 4 gate, 5/6/7/8 drain**, including common drain metal. Current nets agree. TI SLPS549B pp8–9 defines package/copper/paste; footprint blank. **Blocks R3 assignment.** |
+docs/evidence/r2/forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md:76:**Q101 — KNOWN.** TI's visual top view resolves the scrambled PDF text extraction. Source1/2/3 connects to `VIN_FUSED`, G4 to `INPUT_BGATE`, D5–8 to `VIN_EFUSE_IN`. Recommended PCB pattern, p9: small pads 0.500 × 0.630 mm on 0.650 mm pitch; shaped common drain area; 3.500 mm overall pattern span and 0.560 mm gap as labelled. A footprint must represent every drain pin in the symbol-to-pad contract without inventing a separate ground EP. The p9 stencil drawing differs from the copper pattern. 100 V VDS, ±20 V VGS and avalanche rating do not qualify arbitrary linear fault operation. [Stored TI source, SLPS549B](../../../../third_party/documents/r2/TI_CSD19537Q3_SLPS549B.pdf).
+docs/evidence/r2/forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md:90:| Criterion | A: LM74800QDRRRQ1 + common-drain N-FET pair | B: LTC4368-2 + back-to-back N-FETs + breaker sense resistor | C: precision fast detector/reference + qualified reverse-blocking disconnect |
+docs/evidence/r2/forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md:102:Sources: [stored LM7480-Q1 SNOSD95C](../../../../third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf), §§7/9 and common-drain application; [ADI LTC4368 Rev C](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4368.pdf), electrical characteristics and fault/recovery sections. No FET, divider or auxiliary detector was selected or captured for output protection.
+docs/evidence/r2/forensic_2026-09-14/OUTPUT_PROTECTION_REQUIREMENTS_MATRIX.md:29:| A: LM74800QDRRRQ1 + common-drain N-FETs | SNOSD95C §§7.5/7.6: OV to HGATE turnoff deglitch5.4us max under stated conditions; HGATE OV sink168mA min,260mA typ | Internal combined term <=5.4us only for the cited test basis. External term `Qoff_max/Isink_min + gate-network delay + commutation` remains OPEN. ASSUMED Qoff20nC at168mA gives0.119us, hence5.519us **screen before added gate/commutation effects**. This is not a full bound and cannot use typical Qg as Qoff_max |
+docs/evidence/r2/forensic_2026-09-14/qualification_source_register.json:38:      "modifications": "Source unchanged; common drain represented by pad5 plus overlapping numbered fingers; project courtyard/mask",
+docs/evidence/r2/forensic_2026-09-14/QUALIFICATION_VERIFICATION.md:27:Manual checklist for later independent review: U201 upper-left pin1/noEP15, both VIN/PGND sides and split SW paste; Q101 lower1/2/3 source and4 gate, upper8/7/6/5/common drain and reduced paste; R401 narrow2/3 sense pads on the same designated side, wide1/4 force pads. Check every labelled dimension against the pinned PDF, not only nominal package size. In later layout, verify thermal/current return and Kelvin routing separately. DRC/assembly/thermal validation cannot be performed on a nonexistent board and are not implied here.
+docs/evidence/r2/forensic_2026-09-14/CRITICAL_FOOTPRINT_QUALIFICATION.md:44:## Q101: every terminal and common drain
+docs/evidence/r2/PIN_AND_FOOTPRINT_REVIEW.md:163:U201:RJR asymmetric HotRod needs exact lands; Q101:SON3.3x3.3 mm common drain copper is not a generic SO8; R401:Vishay wide force/narrow sense geometry and project pad numbering require a dedicated match. These remain unassigned.
+```
+
+[Exact grep output](VERIFY_GATE2B_EVIDENCE/common-drain-grep.txt) and [context around every hit](VERIFY_GATE2B_EVIDENCE/common-drain-context.txt) are retained. Classification:
+
+| Hit(s) | Meaning / disposition |
+|---|---|
+| `OUTPUT_PROTECTION.md:6,15` | Dated 2026-09-12 LM74800 reference/candidate history. |
+| `sheet03/GATE2_PIN_REVIEW.md:36` | Drain copper shared by pins of one MOSFET; not the two-device topology. |
+| `sheet03/CALCULATIONS.json:3636` | Explicit record of earlier prose inconsistency. |
+| `sheet03/SHEET03_ARCHITECTURE_DECISION.md:71` | Explicit supersession warning. |
+| Same file `:96` | Incorrect historical Candidate C bullet; clearly superseded under “Historical Gate1b” at lines 69–71. Preserve historical evidence; do not use as the current wiring contract. |
+| Same file `:172,198,269` | Historical/rejected topology alternatives and candidate comparison; not the selected current capture. |
+| `forensic_2026-09-14/R2_R3_BLOCKER_REVIEW.md:61,76` | Q101 package drain copper. |
+| Same file `:90,102` | Earlier LM74800 candidate/reference comparison. |
+| `forensic_2026-09-14/OUTPUT_PROTECTION_REQUIREMENTS_MATRIX.md:29` | Earlier candidate timing ledger. |
+| `forensic_2026-09-14/qualification_source_register.json:38` | Q101 footprint provenance/shared drain land. |
+| `forensic_2026-09-14/QUALIFICATION_VERIFICATION.md:27` | Q101 footprint inspection. |
+| `forensic_2026-09-14/CRITICAL_FOOTPRINT_QUALIFICATION.md:44` | Q101 package drain terminals. |
+| `PIN_AND_FOOTPRINT_REVIEW.md:163` | Q101 package drain copper. |
+
+The current decision at `docs/evidence/r2/sheet03/SHEET03_ARCHITECTURE_DECISION.md:11` explicitly says **common-source**. Independent fresh-netlist evidence confirms:
+
+- `PROT_MID`: Q301 pins 1/2/3, Q302 pins 1/2/3, LTC7001 U301 pin 8 (TS), TP304 pin 1.
+- `VOUT_5V1`: Q301 drain pins 5/6/7/8.
+- `VOUT_PROTECTED`: Q302 drain pins 5/6/7/8.
+- `PROT_GATE`: Q301 pin 4, Q302 pin 4, U301 pin 6.
+
+The Sheet 03 annotation also says “Common sources = PROT_MID”. No active incorrect common-drain claim was found. Historical mentions and legitimate package descriptions do not require a blanket replacement.
+
+## Disposition
+
+Do not hand in this PDF as the completed readability gate until the listed text collisions, boundary crossings and Sheet 03 control-flow presentation are corrected and the resulting PDF is rechecked. Source was deliberately left unchanged under the read-only instruction.
+
+This verdict concerns Gate 2b hand-in readiness only. R2 engineering release and R3 remain blocked, and **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED** remains applicable.
+
+VERDICT: FAIL (A3 PDF text overlaps and frame/panel crossings; Sheet 03 control flow is not consistently left to right).

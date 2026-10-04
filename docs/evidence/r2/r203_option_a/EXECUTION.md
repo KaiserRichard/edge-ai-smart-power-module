@@ -1,0 +1,18 @@
+# R203 option A execution — 2026-10-04
+
+**NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
+
+Read `/Users/quockaiser/Desktop/Research/v1a-lab/briefs/R203_OPTION_A.md` in full. Worked directly without sub-agents on `docs/bom-order-final`, baseline `a5c272d`. No purchase or push; PCB untouched.
+
+1. Edited only the placed R203 Value, MPN and Source strings. Retained symbol library/cache identity and historical default value, all coordinates/pins/nets and R202. Updated `build_gate4b.py` and active `gate4b/buck_block.json` R203 constants. The generator was not run. The sheet-wide historical note is overridden by R203 Source and the review, without an out-of-scope text edit.
+2. Ran KiCad 9.0.6 whole-project ERC before/after: zero errors/warnings both times. Fresh netlist comparison shows only R203 component properties changed, zero net changes. `check_gate4b_contracts.validate`, `check_r2_schematic.validate`, package and footprint checks all pass. The full `check_r2_schematic.py` CLI exits 1 both before and after solely with `R3 scope violation: authored PCB found`; its historical R2-only guard is unchanged. Fontconfig emits environment diagnostics, not ERC violations; no system configuration changed. No DRC because no PCB edit.
+3. Recomputed from pinned Gate4A/J502 evidence, not the superseded path proposals or 5.325 V detector. The one-page parent report distinguishes conditional path PASS, sensitivity FAIL and unqualified fault behavior. Original BUCK_DESIGN, buck_block, prior calculation JSON, captured netlist and BOM source export remain historical evidence. `calculate_r2.py` now uses 24.6k for its legacy topology sensitivity. The legacy Gate2 checker accepts 24600 and derives fault initial conditions from that divider rather than silently retaining 24.4k conditions; historical Gate1b/1c/1d models are preserved. Neither legacy model is used as current Gate4A fault evidence.
+4. B045 selected value/MPN is overlaid on the unchanged historical BOM capture. The hardware hash check reverses exactly the three R203 strings and requires the original digest; every other hardware file, including the PCB, must still match. Owner selection is closed; electrical qualification is not.
+
+Git step-1 `git add ... && git commit ...` failed before staging: `fatal: Unable to create '/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.git/worktrees/wt-bomfinal/index.lock': Operation not permitted`. Per the brief's fallback, all four steps remain uncommitted; no permissions/index workaround, commit or push. The failing sensitivity results are also retained uncommitted without trying another value.
+
+Final verification: `generate.py` PASS (112 rows; selection OPEN 0; procurement OPEN 12); `validate.py` PASS; `python3 -m unittest tests.test_bom_order` PASS (10 tests); `python3 -m unittest tests.test_gate4b_capture` PASS (19 tests). Independent hot-corner enumeration matches the new calculation. The current 20 mV path screen passes +14.043 mV; the retained 100 mV sensitivity fails -65.957 mV and remains explicitly unqualified. No alternative value was tried.
+
+[CHECKS.json](CHECKS.json) records ERC, contracts, complete hardware baseline hashes, unchanged PCB digest and test results; [BOM validation](../bom_order/VALIDATION.json) records procurement checks. [Full changed-file inventory](FILES_CHANGED.txt) lists every edited/new file. Generated BOM_ORDER_LCSC.csv, accessory CSV/totals and reconciliation were regenerated and remained byte-identical.
+
+Schematic formatting is preserved byte-for-byte outside the three property values; the edited lines inherit the file's existing trailing spaces. No whole-file formatter or schematic generator was run.

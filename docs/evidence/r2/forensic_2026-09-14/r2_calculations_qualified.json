@@ -1,0 +1,105 @@
+{
+  "classification": "CALCULATION; not measurement or guaranteed L/C production limits",
+  "output_nominal_V": 5.098360655737705,
+  "output_divider_and_reference_corner_V": [
+    5.038271401729418,
+    5.158632237795172
+  ],
+  "buck_points": [
+    {
+      "vin_V": 9,
+      "duty": 0.5664845173041894,
+      "on_time_ns": 1416.2112932604732,
+      "ripple_A": 0.8125802502314193,
+      "peak_A": 5.40629012511571,
+      "rms_A": 5.0054993645578305,
+      "valley_A": 4.59370987488429,
+      "corner_ripple_A": 1.2539818676410792,
+      "corner_peak_A": 5.626990933820539,
+      "input_A_at_90pct": 3.1481481481481484,
+      "cin_rms_A": 2.477800481065964
+    },
+    {
+      "vin_V": 12,
+      "duty": 0.42486338797814205,
+      "on_time_ns": 1062.1584699453551,
+      "ripple_A": 1.0780345126494564,
+      "peak_A": 5.539017256324728,
+      "rms_A": 5.0096752922924335,
+      "valley_A": 4.460982743675272,
+      "corner_ripple_A": 1.663633507175087,
+      "corner_peak_A": 5.831816753587543,
+      "input_A_at_90pct": 2.361111111111111,
+      "cin_rms_A": 2.471611263598489
+    },
+    {
+      "vin_V": 24,
+      "duty": 0.21243169398907102,
+      "on_time_ns": 531.0792349726776,
+      "ripple_A": 1.476215906276512,
+      "peak_A": 5.738107953138256,
+      "rms_A": 5.018127251956515,
+      "valley_A": 4.261892046861744,
+      "corner_ripple_A": 2.2781109664760986,
+      "corner_peak_A": 6.1390554832380495,
+      "input_A_at_90pct": 1.1805555555555556,
+      "cin_rms_A": 2.045143450824445
+    }
+  ],
+  "min_inductance_eq10_uH": 4.531876138433515,
+  "assumed_corner_inductance_uH": 4.896000000000001,
+  "minimum_ripple_at_9V_Lmax_fmax_A": 0.6155910986601663,
+  "on_time_at_24V_fmax_ns": 482.799304520616,
+  "effective_cin_screen_uF": 19.448,
+  "effective_cout_screen_uF": 85.272,
+  "ripple_screen_mV": 13.832546544180328,
+  "inductor_copper_loss_at_25C_maxDCR_W": 0.36877099573715755,
+  "whole_module_loss_budget_at_90pct_W": 2.833333333333335,
+  "input_uvlo_rising_V": [
+    8.223734610271697,
+    8.690635766294163
+  ],
+  "input_uvlo_falling_V": [
+    7.618700857139583,
+    8.16823530754762
+  ],
+  "input_ovp_rising_V": [
+    26.973872559387452,
+    28.289211488402323
+  ],
+  "input_ovp_falling_V": [
+    24.9974799140581,
+    26.582075060835514
+  ],
+  "input_pg_rising_V": [
+    7.763493395034966,
+    8.12508996153153
+  ],
+  "input_pg_falling_V": [
+    7.195139069360641,
+    7.634377368938938
+  ],
+  "input_ilim_nominal_A": 4.477611940298507,
+  "input_ilim_corner_A": [
+    4.1600190853922205,
+    4.795840616736139
+  ],
+  "input_ramp_24V_nominal_ms": 48.0,
+  "input_ramp_24V_corner_ms": [
+    37.33794295592049,
+    63.29038058136051
+  ],
+  "input_inrush_caponly_nominal_A": 0.022,
+  "input_inrush_caponly_corner_A": 0.033938666666666666,
+  "shunt_drop_mV": 10.0,
+  "shunt_loss_W": 0.05,
+  "shunt_analog_range_A": 20.48,
+  "current_lsb_A": 1.9073486328125e-05,
+  "shunt_cal": 2000.0,
+  "filter_corner_Hz": 79577.47154594767,
+  "local_bus_rise_at_100pF_ns": 847.3000000000001,
+  "host_bus_rise_at_200pF_ns": 796.4620000000001,
+  "lm74800_min_trip_for_normal_5p162V": 5.473015899581589,
+  "fault_example_current_increase_5p4us_A": 15.008823529411762,
+  "fault_example_cap_rise_100uF_5p4us_V": 0.40523823529411757
+}

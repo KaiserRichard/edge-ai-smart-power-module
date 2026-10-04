@@ -1,0 +1,633 @@
+{
+  "status": "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION",
+  "components": [
+    {
+      "ref": "U401",
+      "value": "INA228AIDGSR",
+      "part": "INA228AIDGSR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "A1",
+          "net": "GND",
+          "type": "input"
+        },
+        "2": {
+          "name": "A0",
+          "net": "GND",
+          "type": "input"
+        },
+        "3": {
+          "name": "ALERT",
+          "net": "ALERT_LOCAL",
+          "type": "open_collector"
+        },
+        "4": {
+          "name": "SDA",
+          "net": "SDA_LOCAL",
+          "type": "bidirectional"
+        },
+        "5": {
+          "name": "SCL",
+          "net": "SCL_LOCAL",
+          "type": "input"
+        },
+        "6": {
+          "name": "VS",
+          "net": "3V3_LOCAL",
+          "type": "power_in"
+        },
+        "7": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "8": {
+          "name": "VBUS",
+          "net": "LOAD_5V1",
+          "type": "input"
+        },
+        "9": {
+          "name": "IN-",
+          "net": "INA_IN_MINUS",
+          "type": "input"
+        },
+        "10": {
+          "name": "IN+",
+          "net": "INA_IN_PLUS",
+          "type": "input"
+        }
+      },
+      "footprint": "Package_SO:VSSOP-10_3x3mm_P0.5mm",
+      "rating": "2.7-5.5 V supply;0-85 V bus incl unpowered;address0x40",
+      "source": "TI SLYS021A Fig5-1/Table5-1; SBOU241E Fig6-1",
+      "position": [
+        83.82,
+        86.36
+      ]
+    },
+    {
+      "ref": "U402",
+      "value": "TPS70933DBVR",
+      "part": "TPS70933DBVR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "IN",
+          "net": "VOUT_PROTECTED",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "EN",
+          "net": null,
+          "type": "input"
+        },
+        "4": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "5": {
+          "name": "OUT",
+          "net": "3V3_LOCAL",
+          "type": "power_out"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "rating": "30 V input;3.3 V nominal;EN internally enabled;reverse-current protection",
+      "source": "TI SBVS186H Fig5-1/Table5-1, 8.1.1, 7.3.4",
+      "position": [
+        208.28,
+        76.2
+      ]
+    },
+    {
+      "ref": "U403",
+      "value": "TCA9517DGKR",
+      "part": "TCA9517DGKR",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "VCCA",
+          "net": "3V3_HOST",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "SCLA",
+          "net": "SCL_HOST",
+          "type": "bidirectional"
+        },
+        "3": {
+          "name": "SDAA",
+          "net": "SDA_HOST",
+          "type": "bidirectional"
+        },
+        "4": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "EN",
+          "net": "3V3_LOCAL",
+          "type": "input"
+        },
+        "6": {
+          "name": "SDAB",
+          "net": "SDA_LOCAL",
+          "type": "bidirectional"
+        },
+        "7": {
+          "name": "SCLB",
+          "net": "SCL_LOCAL",
+          "type": "bidirectional"
+        },
+        "8": {
+          "name": "VCCB",
+          "net": "3V3_LOCAL",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "rating": "3.3 V on both sides; power-off tolerant I/O; no B-to-B cascade",
+      "source": "TI SCPS242D sections6/9/11",
+      "position": [
+        337.82,
+        86.36
+      ]
+    },
+    {
+      "ref": "R401",
+      "value": "2mOhm KELVIN",
+      "part": "WSL27262L000FEA",
+      "kind": "SHUNT",
+      "pins": {
+        "1": {
+          "name": "I+",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "S+",
+          "net": "SHUNT_KPLUS",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S-",
+          "net": "SHUNT_KMINUS",
+          "type": "passive"
+        },
+        "4": {
+          "name": "I-",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus",
+      "rating": "DATASHEET: 2mOhm +/-1%, 25ppm/K; PR15 Kelvin land retained. Pulse survival/thermal/accuracy OPEN.",
+      "source": "Vishay30131 Rev29Jun2026 pp1-2; wide force pads and narrow Kelvin pads",
+      "position": [
+        208.28,
+        124.46
+      ]
+    },
+    {
+      "ref": "R402",
+      "value": "10",
+      "part": "TNPW060310R0BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SHUNT_KPLUS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INA_IN_PLUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R403",
+      "value": "10",
+      "part": "TNPW060310R0BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "SHUNT_KMINUS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INA_IN_MINUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C401",
+      "value": "100nF 50V",
+      "part": "GRM188R71H104KA93D",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INA_IN_PLUS",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INA_IN_MINUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C402",
+      "value": "100nF 50V",
+      "part": "GRM188R71H104KA93D",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C403",
+      "value": "1uF 50V",
+      "part": "GRM21BR71H105KA12L",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C404",
+      "value": "22uF 50V",
+      "part": "C5750X7R1H226M250KB",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+      "rating": "DATASHEET: 22uF 50V X7R +/-20%; qualified PR15 TDK land. Effective C / local regulator stability OPEN.",
+      "source": "TDK19Mar2019 characterization; TI SBVS186H8.1.1"
+    },
+    {
+      "ref": "C405",
+      "value": "100nF 50V",
+      "part": "GRM188R71H104KA93D",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "C406",
+      "value": "100nF 50V",
+      "part": "GRM188R71H104KA93D",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R404",
+      "value": "10k",
+      "part": "TNPW060310K0BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SDA_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R405",
+      "value": "10k",
+      "part": "TNPW060310K0BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SCL_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R406",
+      "value": "4.7k",
+      "part": "TNPW06034K70BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SDA_HOST",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R407",
+      "value": "4.7k",
+      "part": "TNPW06034K70BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "SCL_HOST",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "R408",
+      "value": "10k",
+      "part": "TNPW060310K0BEEA",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "ALERT_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "DATASHEET nominal; derating / application qualification OPEN",
+      "source": "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+    },
+    {
+      "ref": "TP401",
+      "value": "ALERT_LOCAL",
+      "part": "ALERT_LOCAL",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "ALERT_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP402",
+      "value": "SHUNT_KPLUS",
+      "part": "SHUNT_KPLUS",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "SHUNT_KPLUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP403",
+      "value": "SHUNT_KMINUS",
+      "part": "SHUNT_KMINUS",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "SHUNT_KMINUS",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP404",
+      "value": "3V3_LOCAL",
+      "part": "3V3_LOCAL",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "3V3_LOCAL",
+          "type": "passive"
+        }
+      },
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP405",
+      "part": "N/A etched paired pads",
+      "value": "VOUT_PROTECTED",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "VOUT_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "SENSEPAIR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    },
+    {
+      "ref": "TP406",
+      "part": "N/A etched paired pads",
+      "value": "LOAD_5V1",
+      "footprint": "V1A_Qualified:SensePair_P2.54",
+      "pins": {
+        "1": {
+          "name": "SIGNAL",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "kind": "SENSEPAIR",
+      "source": "Gate4A 898759e freeze; Gate4B pin review",
+      "rating": "DATASHEET nominal; application limits OPEN"
+    }
+  ],
+  "schematic_notes": [
+    "DATASHEET: R401 = 2mOhm, +/-1%, 25ppm/K. INA228 address0x40; retain independent Kelvin pads2/3, force pads1/4.",
+    "CALCULATED at5A: Vshunt10mV; dissipation50mW. ADC ranges +/-163.84mV or +/-40.96mV give +/-81.92A or +/-20.48A nominal.",
+    "CALCULATED: 10ohm + 10ohm / 100nF differential filter pole79.6kHz. Telemetry is not the fast fault-current probe.",
+    "CALCULATED: 80A would produce160mV and12.8W while flowing. Use measured integral(I^2 R dt); pulse survival OPEN.",
+    "TP402/403 are Kelvin-only; TP405/406 expose force rails with paired local GND. No sense trace may carry load current.",
+    "Host/local3.3V domains remain separate; TCA9517 EN follows local rail. No protection permission from 3V3_LOCAL. Remove J503 for first faults.",
+    "OPEN: shunt self-heating/tolerance/TCR, fault common-mode/pin stress, V/I/P/E accuracy, host-only/local-only Ioff and bus timing.",
+    "No Pi before prior dummy-load/fault/telemetry gates pass. PRELIMINARY TEST BOARD / NOT FOR FABRICATION."
+  ],
+  "passive_start": 162.56,
+  "ports": {
+    "VOUT_PROTECTED": "input",
+    "LOAD_5V1": "bidirectional",
+    "3V3_HOST": "input",
+    "SDA_HOST": "bidirectional",
+    "SCL_HOST": "bidirectional",
+    "GND": "passive"
+  },
+  "groups": [
+    [
+      "KELVIN SHUNT / LOAD-SIDE BUS SENSE",
+      [
+        "R401",
+        "U401",
+        "R402",
+        "R403",
+        "C401",
+        "C402",
+        "R408",
+        "TP401",
+        "TP402",
+        "TP403",
+        "TP405",
+        "TP406"
+      ]
+    ],
+    [
+      "LOCAL REGULATOR / HOST DOMAIN BOUNDARY",
+      [
+        "U402",
+        "U403",
+        "C403",
+        "C404",
+        "C405",
+        "C406",
+        "R404",
+        "R405",
+        "R406",
+        "R407",
+        "TP404"
+      ]
+    ]
+  ]
+}

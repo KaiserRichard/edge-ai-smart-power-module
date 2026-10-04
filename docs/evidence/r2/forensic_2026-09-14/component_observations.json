@@ -1,0 +1,185 @@
+{
+  "F101": {
+    "value": "FUSE - OPEN",
+    "footprint": "",
+    "pins": {
+      "F101.2": "/01_INPUT_PROTECTION/VIN_FUSED",
+      "F101.1": "/VIN_RAW"
+    }
+  },
+  "Q101": {
+    "value": "CSD19537Q3",
+    "footprint": "",
+    "pins": {
+      "Q101.4": "/01_INPUT_PROTECTION/INPUT_BGATE",
+      "Q101.5": "/01_INPUT_PROTECTION/VIN_EFUSE_IN",
+      "Q101.6": "/01_INPUT_PROTECTION/VIN_EFUSE_IN",
+      "Q101.7": "/01_INPUT_PROTECTION/VIN_EFUSE_IN",
+      "Q101.8": "/01_INPUT_PROTECTION/VIN_EFUSE_IN",
+      "Q101.1": "/01_INPUT_PROTECTION/VIN_FUSED",
+      "Q101.2": "/01_INPUT_PROTECTION/VIN_FUSED",
+      "Q101.3": "/01_INPUT_PROTECTION/VIN_FUSED"
+    }
+  },
+  "C201": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C201.2": "/GND",
+      "C201.1": "/VIN_PROTECTED"
+    }
+  },
+  "C202": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C202.2": "/GND",
+      "C202.1": "/VIN_PROTECTED"
+    }
+  },
+  "C209": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C209.2": "/GND",
+      "C209.1": "/VOUT_5V1"
+    }
+  },
+  "C210": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C210.2": "/GND",
+      "C210.1": "/VOUT_5V1"
+    }
+  },
+  "C211": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C211.2": "/GND",
+      "C211.1": "/VOUT_5V1"
+    }
+  },
+  "C212": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C212.2": "/GND",
+      "C212.1": "/VOUT_5V1"
+    }
+  },
+  "C213": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C213.2": "/GND",
+      "C213.1": "/VOUT_5V1"
+    }
+  },
+  "C214": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C214.2": "/GND",
+      "C214.1": "/VOUT_5V1"
+    }
+  },
+  "L201": {
+    "value": "6.8uH",
+    "footprint": "",
+    "pins": {
+      "L201.1": "/02_BUCK_5V/BUCK_SW",
+      "L201.2": "/VOUT_5V1"
+    }
+  },
+  "U201": {
+    "value": "LM61460AANRJRR",
+    "footprint": "",
+    "pins": {
+      "U201.14": "/02_BUCK_5V/BUCK_CBOOT",
+      "U201.4": "/02_BUCK_5V/BUCK_FB",
+      "U201.13": "/02_BUCK_5V/BUCK_RBOOT",
+      "U201.6": "/02_BUCK_5V/BUCK_RT",
+      "U201.10": "/02_BUCK_5V/BUCK_SW",
+      "U201.2": "/02_BUCK_5V/BUCK_VCC",
+      "U201.7": "/BUCK_INPUT_PGOOD",
+      "U201.1": "/GND",
+      "U201.11": "/GND",
+      "U201.3": "/GND",
+      "U201.9": "/GND",
+      "U201.12": "/VIN_PROTECTED",
+      "U201.8": "/VIN_PROTECTED",
+      "U201.5": "unconnected-(U201-PGOOD-Pad5)"
+    }
+  },
+  "C404": {
+    "value": "22uF 50V",
+    "footprint": "",
+    "pins": {
+      "C404.1": "/04_POWER_MONITOR/3V3_LOCAL",
+      "C404.2": "/GND"
+    }
+  },
+  "R401": {
+    "value": "2mOhm KELVIN",
+    "footprint": "",
+    "pins": {
+      "R401.3": "/04_POWER_MONITOR/SHUNT_KMINUS",
+      "R401.2": "/04_POWER_MONITOR/SHUNT_KPLUS",
+      "R401.4": "/LOAD_5V1",
+      "R401.1": "/VOUT_PROTECTED"
+    }
+  },
+  "U402": {
+    "value": "TPS70933DBVR",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+    "pins": {
+      "U402.5": "/04_POWER_MONITOR/3V3_LOCAL",
+      "U402.2": "/GND",
+      "U402.1": "/VOUT_PROTECTED",
+      "U402.3": "unconnected-(U402-EN-Pad3)",
+      "U402.4": "unconnected-(U402-NC-Pad4)"
+    }
+  },
+  "U403": {
+    "value": "TCA9517DGKR",
+    "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+    "pins": {
+      "U403.1": "/3V3_HOST",
+      "U403.5": "/04_POWER_MONITOR/3V3_LOCAL",
+      "U403.8": "/04_POWER_MONITOR/3V3_LOCAL",
+      "U403.7": "/04_POWER_MONITOR/SCL_LOCAL",
+      "U403.6": "/04_POWER_MONITOR/SDA_LOCAL",
+      "U403.4": "/GND",
+      "U403.2": "/SCL_HOST",
+      "U403.3": "/SDA_HOST"
+    }
+  },
+  "J501": {
+    "value": "DC INPUT - MPN OPEN",
+    "footprint": "",
+    "pins": {
+      "J501.2": "/GND",
+      "J501.1": "/VIN_RAW"
+    }
+  },
+  "J502": {
+    "value": "LOAD OUTPUT - MPN OPEN",
+    "footprint": "",
+    "pins": {
+      "J502.2": "/GND",
+      "J502.1": "/LOAD_5V1"
+    }
+  },
+  "J503": {
+    "value": "HOST I2C - MPN OPEN",
+    "footprint": "",
+    "pins": {
+      "J503.2": "/3V3_HOST",
+      "J503.1": "/GND",
+      "J503.4": "/SCL_HOST",
+      "J503.3": "/SDA_HOST"
+    }
+  }
+}

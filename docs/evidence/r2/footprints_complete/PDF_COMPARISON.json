@@ -1,0 +1,76 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "dimensions_mm": [
+        419.989,
+        297.002
+      ],
+      "raster_identical": true,
+      "warning_present": true,
+      "changed_rgb_bytes": 0
+    },
+    {
+      "page": 2,
+      "dimensions_mm": [
+        419.989,
+        297.002
+      ],
+      "raster_identical": true,
+      "warning_present": true,
+      "changed_rgb_bytes": 0
+    },
+    {
+      "page": 3,
+      "dimensions_mm": [
+        419.989,
+        297.002
+      ],
+      "raster_identical": true,
+      "warning_present": true,
+      "changed_rgb_bytes": 0
+    },
+    {
+      "page": 4,
+      "dimensions_mm": [
+        419.989,
+        297.002
+      ],
+      "raster_identical": true,
+      "warning_present": true,
+      "changed_rgb_bytes": 0
+    },
+    {
+      "page": 5,
+      "dimensions_mm": [
+        419.989,
+        297.002
+      ],
+      "raster_identical": true,
+      "warning_present": true,
+      "changed_rgb_bytes": 0
+    },
+    {
+      "page": 6,
+      "dimensions_mm": [
+        419.989,
+        297.002
+      ],
+      "raster_identical": false,
+      "warning_present": true,
+      "changed_rgb_bytes": 4346
+    }
+  ],
+  "method": "Native KiCad export, matching dimensions and96dpi raster comparison; Sheet05 Value text may differ; exact field-only source comparison separately freezes every coordinate",
+  "sheet05_identical_outside_connector_value_bounds": true,
+  "visual_review": "2026-09-30: inspected native Sheet03 and Sheet05 at96dpi; five native footprint plots inspected with copper/pad numbers, Fab, courtyard and hole outlines; no unexpected placement/wire/label movement observed.",
+  "pdf_sha256": "b5dd287088d00fac765f56d9f76f88c5bcd0de74369abe85117e62915c294247",
+  "previous_external_pdf": {
+    "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_REVIEW_READABLE_before_footprints_2026-09-30_140221.pdf",
+    "sha256": "61d50d69de3942a87d5ff7381e25f01bbd1eee937a1e1de698e8f4c0a0db0e70"
+  },
+  "delivered_pdf": {
+    "path": "/Users/quockaiser/Desktop/Research/V1A_review_2026-09-29/V1A_REVIEW_READABLE.pdf",
+    "sha256": "b5dd287088d00fac765f56d9f76f88c5bcd0de74369abe85117e62915c294247"
+  }
+}

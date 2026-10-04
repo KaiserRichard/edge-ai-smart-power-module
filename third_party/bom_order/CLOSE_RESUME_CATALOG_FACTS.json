@@ -1,0 +1,114 @@
+[
+  {
+    "evidence_id": "Q281",
+    "mpn": "CSD18540Q5BT",
+    "d": "mouser",
+    "url": "https://www.mouser.com/es/ProductDetail/Texas-Instruments/CSD18540Q5BT?qs=NRIcxvoDUteGYlfdfF0DmQ%3D%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "last month",
+    "sku": "595-CSD18540Q5BT",
+    "stock": 592,
+    "lead_time": "9 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "4.53"
+      ],
+      [
+        10,
+        "2.69"
+      ],
+      [
+        100,
+        "2.17"
+      ],
+      [
+        250,
+        "2.17"
+      ],
+      [
+        500,
+        "1.85"
+      ],
+      [
+        1000,
+        "1.71"
+      ],
+      [
+        2500,
+        "1.63"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "CSD18540Q5BT",
+    "page_manufacturer": "Texas Instruments",
+    "notes": [
+      "CONFIRMED single indexed US/Spanish page: exact MPN/SKU, 592 available, USD prices, minimum/multiple 1. Cut tape selected for seven units; incoming dates and MouseReel fees excluded. Indexed snapshot, not live stock. TI SLPS488B p1 confirms same device/package as CSD18540Q5B, different reel quantity only."
+    ]
+  },
+  {
+    "evidence_id": "Q282",
+    "mpn": "1777989",
+    "d": "mouser",
+    "url": "https://eu.mouser.com/en/ProductDetail/Phoenix-Contact/1777989?qs=TrDcmYSSX9WKfp2I32hSmA%3D%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "2 weeks ago",
+    "sku": "651-1777989",
+    "stock": 0,
+    "lead_time": "7 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "EUR",
+    "price_tiers": [],
+    "alternate_candidates": [],
+    "page_mpn": "1777989",
+    "page_manufacturer": "Phoenix Contact",
+    "notes": [
+      "CONFIRMED exact identity/zero stock/minimum/multiple from retrieved page; incoming quantities are not available stock. EUR2.00 quote excluded from USD tiers. Supersedes older positive Mouser stock observation Q006."
+    ]
+  },
+  {
+    "evidence_id": "Q283",
+    "mpn": "CSD18540Q5BT",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/CSD18540Q5BT/4915639",
+    "observed_date": "2026-10-04",
+    "crawl_age": "last week",
+    "sku": "296-37963-1-ND",
+    "stock": 0,
+    "lead_time": "9 Weeks",
+    "lifecycle": "Active",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "4.39000"
+      ],
+      [
+        10,
+        "2.88800"
+      ],
+      [
+        50,
+        "2.24120"
+      ],
+      [
+        100,
+        "2.03290"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "CSD18540Q5BT",
+    "page_manufacturer": "Texas Instruments",
+    "notes": [
+      "CONFIRMED indexed zero stock and cut-tape prices. Minimum inferred from tier 1; ASSUMED single-piece cut-tape multiple. Incoming 250 on 2027-06-01 excluded."
+    ]
+  }
+]

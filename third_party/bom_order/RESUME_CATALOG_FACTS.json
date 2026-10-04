@@ -1,0 +1,304 @@
+[
+  {
+    "evidence_id": "Q264",
+    "mpn": "B2P-VH-FB-B(LF)(SN)",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2P-VH-FB-B/2178726",
+    "observed_date": "2026-10-03",
+    "crawl_age": "today",
+    "sku": "455-B2P-VH-FB-B-ND",
+    "stock": 70887,
+    "lead_time": "16 Weeks",
+    "lifecycle": "Active",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "0.23000"
+      ],
+      [
+        10,
+        "0.19300"
+      ],
+      [
+        250,
+        "0.15372"
+      ],
+      [
+        500,
+        "0.14638"
+      ],
+      [
+        1000,
+        "0.13938"
+      ],
+      [
+        5000,
+        "0.12441"
+      ],
+      [
+        10000,
+        "0.11847"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "B2P-VH-FB-B",
+    "page_manufacturer": "JST Sales America Inc.",
+    "notes": [
+      "Minimum inferred from the first displayed price tier; confirm at order.",
+      "Single-piece multiple assumed for bulk/cut tape; confirm at order.",
+      "DigiKey Additional Resources explicitly lists B2P-VH-FB-B(LF)(SN) as an alias of B2P-VH-FB-B; selected MPN is unchanged. Alias evidence is the linked French product page; all stock/price/lead-time fields are from one US snapshot."
+    ],
+    "identity_source_url": "https://www.digikey.fr/fr/products/detail/jst-sales-america-inc/B2P-VH-FB-B/2178726?s=N4Ig7CBcoIYE5QIwA5EGYA0IYBcmZAAcBLJRAJgAYBWAFjQF8Gg"
+  },
+  {
+    "evidence_id": "Q265",
+    "mpn": "7447789004",
+    "d": "mouser",
+    "url": "https://www.mouser.com/ProductDetail/Wurth-Elektronik/7447789004?qs=E%2F%2FhvbtCqpM%252BzhhZNuF4OQ%3D%3D",
+    "observed_date": "2026-10-03",
+    "crawl_age": "3 months ago",
+    "sku": "710-7447789004",
+    "stock": 0,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "2.51"
+      ],
+      [
+        10,
+        "1.70"
+      ],
+      [
+        50,
+        "1.60"
+      ],
+      [
+        100,
+        "1.56"
+      ],
+      [
+        250,
+        "1.55"
+      ],
+      [
+        500,
+        "1.51"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "7447789004",
+    "page_manufacturer": "Wurth Elektronik",
+    "notes": [
+      "Minimum inferred from the first displayed price tier; confirm at order.",
+      "Single-piece multiple assumed for bulk/cut tape; confirm at order.",
+      "Cut-tape price recovered in the exact-MPN indexed product snapshot. Its expected receipt 2026-07-03 is past relative to observation date; it is not evidence of received stock."
+    ]
+  },
+  {
+    "evidence_id": "Q266",
+    "mpn": "TNPW060356K2BEEA",
+    "d": "mouser",
+    "url": "https://www.mouser.com/en/c/passive-components/resistors/film-resistors/?case+code+-+mm=1608&resistance=56.2+kOhms",
+    "observed_date": "2026-10-03",
+    "crawl_age": "3 days ago",
+    "sku": "71-TNPW060356K2BEEA",
+    "stock": 12191,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "0.26"
+      ],
+      [
+        250,
+        "0.229"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "TNPW060356K2BEEA",
+    "page_manufacturer": "Vishay",
+    "notes": [
+      "Exact-MPN row in official Mouser results supplies stock, USD price, minimum and multiple together. SKU independently confirmed by the linked Mouser product identity page; no stock/price mixing across snapshots."
+    ],
+    "identity_source_url": "https://gr.mouser.com/en/ProductDetail/Vishay/TNPW060356K2BEEA?qs=hEUCbmUtbxF7UnXDXRn4kw%3D%3D"
+  },
+  {
+    "evidence_id": "Q267",
+    "mpn": "3-87456-6",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/3-87456-6/30003",
+    "observed_date": "2026-10-03",
+    "crawl_age": "6 months ago",
+    "sku": "A3044-ND",
+    "stock": 0,
+    "lead_time": "29 Weeks",
+    "lifecycle": "Active",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "5.70000"
+      ],
+      [
+        10,
+        "4.84000"
+      ],
+      [
+        25,
+        "4.53600"
+      ],
+      [
+        50,
+        "4.31960"
+      ],
+      [
+        100,
+        "4.11330"
+      ],
+      [
+        300,
+        "3.80650"
+      ],
+      [
+        500,
+        "3.67180"
+      ],
+      [
+        1000,
+        "3.49668"
+      ],
+      [
+        2500,
+        "3.27803"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "3-87456-6",
+    "page_manufacturer": "TE Connectivity AMP Connectors",
+    "notes": [
+      "Minimum inferred from the first displayed price tier; confirm at order.",
+      "Single-piece multiple assumed for bulk/cut tape; confirm at order.",
+      "Exact manufacturer/SKU and direct DigiKey bulk price recovered. Direct stock is 0. Separate WEC marketplace inventory is excluded. Old indexed snapshot; reconfirm before procurement."
+    ]
+  },
+  {
+    "evidence_id": "Q268",
+    "mpn": "CRCW06030000Z0EA",
+    "d": "mouser",
+    "url": "https://eu.mouser.com/en/ProductDetail/Vishay/CRCW06030000Z0EA?qs=uFJqmf%2F3rbbVtxvMdbYUaQ%3D%3D",
+    "observed_date": "2026-10-03",
+    "crawl_age": "4 weeks ago",
+    "sku": "71-CRCW0603-0-E3",
+    "stock": 2865345,
+    "lead_time": "18 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "EUR",
+    "price_tiers": [],
+    "alternate_candidates": [],
+    "page_mpn": "CRCW06030000Z0EA",
+    "page_manufacturer": "Vishay",
+    "notes": [
+      "Stock uses the European thousands separator: 2.865.345 = 2865345 pieces.",
+      "Official listing supplies minimum 1, multiple 1. Listed prices are EUR; USD remains OPEN and no exchange-rate conversion is invented."
+    ]
+  },
+  {
+    "evidence_id": "Q269",
+    "mpn": "TNPW0603100KBEEA",
+    "d": "lcsc",
+    "url": "https://www.lcsc.com/product-detail/C844888.html",
+    "observed_date": "2026-10-03",
+    "crawl_age": "3 days ago",
+    "sku": "C844888",
+    "stock": 41105,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": 5,
+    "multiple": 5,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        5,
+        "0.0797"
+      ],
+      [
+        50,
+        "0.0632"
+      ],
+      [
+        150,
+        "0.055"
+      ],
+      [
+        500,
+        "0.0488"
+      ],
+      [
+        2500,
+        "0.0439"
+      ],
+      [
+        5000,
+        "0.0414"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "TNPW0603100KBEEA",
+    "page_manufacturer": "VISHAY",
+    "notes": [
+      "Complete exact-MPN snapshot replaces earlier incomplete query-string page. Stock, minimum, multiple and prices taken together from this page."
+    ]
+  },
+  {
+    "evidence_id": "Q270",
+    "mpn": "EEU-FR1E221",
+    "d": "mouser",
+    "url": "https://www.mouser.com/en/ProductDetail/Panasonic-Industry/EEU-FR1E221?qs=tfZGHB2PWd1Rv9iToDM7xw%3D%3D",
+    "observed_date": "2026-10-03",
+    "crawl_age": "4 days ago",
+    "sku": "667-EEU-FR1E221",
+    "stock": 0,
+    "lead_time": "37 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "0.71"
+      ],
+      [
+        10,
+        "0.451"
+      ],
+      [
+        100,
+        "0.308"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "EEU-FR1E221",
+    "page_manufacturer": "Panasonic Industry",
+    "notes": [
+      "Maximum order quantity 200 shown; planned order 8 is below it.",
+      "0 stock and expected receipts 9357 on 2026-11-06 plus 5800 on 2027-02-25 are distinct. Expected dates are not stock or delivery promises."
+    ]
+  }
+]

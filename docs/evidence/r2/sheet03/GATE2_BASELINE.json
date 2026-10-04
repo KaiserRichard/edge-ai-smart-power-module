@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "94376106a0388a008cb1852a63bdfc1252fb8dfa",
+  "capture_baseline_commit": "13e4c2d",
+  "meaning": "Exact pre-capture Git object hashes; preserved historical baseline. Authorized capture subsequently changes only Sheet03, library symbols, and named hierarchy connections.",
+  "files": {
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "3e3ee8a5fe74d4710c8f4c20ab99f9e1f6fcdb8c86982a4233a6624687e40bf8",
+    "hardware/kicad/02_BUCK_5V.kicad_sch": "70d21ca969958b6c6b79f0355f871f6a4c8983e7b07f34d2359aa8d860662a9a",
+    "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "bc63f87dea051eddabe303f0c28e9bb2462eafd7d032ba102340c8cca8a3cdcd",
+    "hardware/kicad/04_POWER_MONITOR.kicad_sch": "98b43392054547ed04a4ba2bb9b109c123b10a537581aa23258622103db78856",
+    "hardware/kicad/05_IO_TEST.kicad_sch": "e287c4cbb4960f6443a5047879d9bd236278c05d1fb39a44136d370a3f115ebf",
+    "hardware/kicad/V1A.kicad_pro": "2f3f1d74c5c1c75bbfb7daa1cc8822c177a31f2dea212aa09cc127ca813c62c5",
+    "hardware/kicad/V1A.kicad_sch": "009bf6a0838f7d19995d314f51a32316339132864d0d700658b362ac21215c1c",
+    "hardware/kicad/V1A.kicad_sym": "2d128816e8f20af46f70eb985eb36157d9990c0d56a4c172f48e24607513b054",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod": "49490fa2d41fb553eb0c84297dcff799dedee0d560431f61b1962606ce16838e",
+    "hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod": "5bf77b7075ce4232ced05e86c9e6c4aa9e88e61d52b3a9e6e10ee1819cc5e991",
+    "hardware/kicad/fp-lib-table": "703cfb0fd3f91b457a3766c56b14be8d218a74ffe252644f578791762c5dc02a",
+    "hardware/kicad/sym-lib-table": "b2a54c11e03449e84dfc1de436dfed2606a538f2deccf22bbae071d38a8ff747"
+  }
+}

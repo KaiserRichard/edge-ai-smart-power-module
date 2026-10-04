@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "changes": [
+    {
+      "ref": "C201",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C202",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C209",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C210",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C211",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C212",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C213",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "C214",
+      "field": "Footprint",
+      "before": "",
+      "after": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50"
+    },
+    {
+      "ref": "TP101",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "ref": "TP102",
+      "field": "Footprint",
+      "before": "",
+      "after": "TestPoint:TestPoint_Pad_D1.5mm"
+    }
+  ],
+  "non_field_source_checks": [
+    {
+      "file": "hardware/kicad/01_INPUT_PROTECTION.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/02_BUCK_5V.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/04_POWER_MONITOR.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/05_IO_TEST.kicad_sch",
+      "non_field_bytes_identical": true
+    },
+    {
+      "file": "hardware/kicad/V1A.kicad_sch",
+      "non_field_bytes_identical": true
+    }
+  ],
+  "erc_violations": 0
+}

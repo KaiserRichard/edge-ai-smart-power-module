@@ -1,0 +1,554 @@
+{
+  "sheet": "02_BUCK_5V",
+  "status": "REVIEW DRAFT - RELEASE BLOCKED",
+  "ports": {
+    "VIN_PROTECTED": "input",
+    "VOUT_5V1": "output",
+    "GND": "bidirectional",
+    "BUCK_INPUT_PGOOD": "input"
+  },
+  "components": [
+    {
+      "ref": "U201",
+      "value": "LM61460AANRJRR",
+      "kind": "IC",
+      "part": "LM61460AANRJRR",
+      "pins": {
+        "1": {
+          "name": "BIAS",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "VCC",
+          "net": "BUCK_VCC",
+          "type": "power_out"
+        },
+        "3": {
+          "name": "AGND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "4": {
+          "name": "FB",
+          "net": "BUCK_FB",
+          "type": "input"
+        },
+        "5": {
+          "name": "PGOOD",
+          "net": "BUCK_PGOOD",
+          "type": "open_collector"
+        },
+        "6": {
+          "name": "RT",
+          "net": "BUCK_RT",
+          "type": "passive"
+        },
+        "7": {
+          "name": "EN/SYNC",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "input"
+        },
+        "8": {
+          "name": "VIN1",
+          "net": "VIN_PROTECTED",
+          "type": "power_in"
+        },
+        "9": {
+          "name": "PGND1",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "10": {
+          "name": "SW",
+          "net": "BUCK_SW",
+          "type": "power_out"
+        },
+        "11": {
+          "name": "PGND2",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "12": {
+          "name": "VIN2",
+          "net": "VIN_PROTECTED",
+          "type": "power_in"
+        },
+        "13": {
+          "name": "RBOOT",
+          "net": "BUCK_RBOOT",
+          "type": "passive"
+        },
+        "14": {
+          "name": "CBOOT",
+          "net": "BUCK_CBOOT",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "package": "RJR0014A VQFN-HR 14 pins 4.0x3.5mm; asymmetric HotRod; no exposed pad15",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1; package4223976/H06/2026 PDFpp55-57",
+      "rating": "3-36V operating,42V VINabs,6AICclass;module5Acontinuous only;RJR customfootprintreviewrequired"
+    },
+    {
+      "ref": "L201",
+      "value": "6.8uH",
+      "kind": "L",
+      "part": "XAL8080-682MED",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_SW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "Coilcraft XAL8080 Doc839 revised05/01/26 and manufacturer productpage",
+      "rating": "6.8uH+/-20%;14.5mOhmmaxDCR;Isat14A30%typdrop;Irms8A20Crise;60V"
+    },
+    {
+      "ref": "R201",
+      "value": "33.2k",
+      "kind": "R",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_RT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "0.1%,0.1W,50V"
+    },
+    {
+      "ref": "R202",
+      "value": "100k",
+      "kind": "R",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_FB",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "0.1%,0.1W,50V"
+    },
+    {
+      "ref": "R203",
+      "value": "24.4k",
+      "kind": "R",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_FB",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "0.1%,0.1W,50V"
+    },
+    {
+      "ref": "R204",
+      "value": "0",
+      "kind": "R",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_CBOOT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_RBOOT",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "0ohm link0.1W"
+    },
+    {
+      "ref": "R205",
+      "value": "1k",
+      "kind": "R",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_FF",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_FB",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "1%,0.1W,50V"
+    },
+    {
+      "ref": "R206",
+      "value": "100k",
+      "kind": "R",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "1%,0.1W,50V"
+    },
+    {
+      "ref": "R207",
+      "value": "24.9k",
+      "kind": "R",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "1%,0.1W,50V"
+    },
+    {
+      "ref": "C201",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI inputcaprequirementsSNVSBD5D9.2.2.5",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C202",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI inputcaprequirementsSNVSBD5D9.2.2.5",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C203",
+      "value": "100nF 50V",
+      "kind": "C",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "X7R+/-10%;50V;oneatVIN1/PGND1,oneatVIN2/PGND2"
+    },
+    {
+      "ref": "C204",
+      "value": "100nF 50V",
+      "kind": "C",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "X7R+/-10%;50V;oneatVIN1/PGND1,oneatVIN2/PGND2"
+    },
+    {
+      "ref": "C205",
+      "value": "100nF 16V",
+      "kind": "C",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_CBOOT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_SW",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "X7R+/-10%;16V differentialbootstrapvoltage"
+    },
+    {
+      "ref": "C206",
+      "value": "1uF 16V",
+      "kind": "C",
+      "part": "",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "BUCK_VCC",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "TI SNVSBD5D sections6,7,9.2; SNVU621D Figure4-1",
+      "rating": "X7R+/-10%;16V;requiredlocalVCCbypass"
+    },
+    {
+      "ref": "C207",
+      "value": "22pF 50V",
+      "kind": "C",
+      "part": "CGA3E2C0G1H220J080AA",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "BUCK_FF",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "source": "TI EVM Table7-1anddatasheetTable9-2",
+      "rating": "C0G+/-5%;50V;inserieswithR205"
+    },
+    {
+      "ref": "C209",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C210",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C211",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C212",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C213",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    },
+    {
+      "ref": "C214",
+      "value": "22uF 50V",
+      "kind": "C",
+      "part": "C5750X7R1H226M250KB",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VOUT_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "source": "TDK characterization19Mar2019;TI Table9-2/9-3EVMadaptation",
+      "rating": "22 uF +/-20%, 50 V X7R; DC-bias figures are typical estimates, not guaranteed minima; generic 2220 land pattern disagrees with TDK recommendation; assignment OPEN"
+    }
+  ],
+  "notes": [
+    "SOURCE: TI SNVSBD5D Fig 9-1, Tables 9-2/3; SNVU621D Fig 4-1 (Q1 EVM).",
+    "FUNCTION: VIN_PROTECTED -> 5.1 V nominal / 5 A. No 6 A peak rating.",
+    "MODIFICATION: 6.8 uH; 100k/24.4k FB; 50 V raw-rail caps; BIAS grounded; input PGOOD gates EN.",
+    "RATIONALE: input margin, ripple/tolerance headroom and buck-fault exposure. VCC is internal use only.",
+    "CRITICAL LOOP: C203 VIN1-PGND1 and C204 VIN2-PGND2 immediately at U201; join both PGND to AGND.",
+    "Feedback stays before disconnect. Keep SW away from FB and Kelvin routes. No physical layout exists.",
+    "OPEN: exact RJR footprint, guaranteed effective L/C, load transient and thermal validation. See BUCK_DESIGN.md."
+  ],
+  "source_document": "docs/evidence/r2/BUCK_DESIGN.md",
+  "schematic_notes": [
+    "SOURCE: TI SNVSBD5D Fig 9-1, Tables 9-2/3; SNVU621D Fig 4-1 (Q1 EVM).",
+    "FUNCTION: VIN_PROTECTED -> 5.1 V nominal / 5 A. No 6 A peak rating.",
+    "MODIFICATION: 6.8 uH; 100k/24.4k FB; 50 V raw-rail caps; BIAS grounded; input PGOOD gates EN.",
+    "RATIONALE: input margin, ripple/tolerance headroom and buck-fault exposure. VCC is internal use only.",
+    "CRITICAL LOOP: C203 VIN1-PGND1 and C204 VIN2-PGND2 immediately at U201; join both PGND to AGND.",
+    "Feedback stays before disconnect. Keep SW away from FB and Kelvin routes. No physical layout exists.",
+    "OPEN: exact RJR footprint, guaranteed effective L/C, load transient and thermal validation. See BUCK_DESIGN.md."
+  ]
+}

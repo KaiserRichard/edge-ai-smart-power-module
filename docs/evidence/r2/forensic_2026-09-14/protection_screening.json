@@ -1,0 +1,37 @@
+{
+  "classification": "MEASURED/CALCULATED: CALCULATED ONLY; conditional sensitivity, not measured or safety bounds",
+  "inputs": {
+    "normal_high_static_screen_V": 5.158632237795172,
+    "fault_V_assumed": 24,
+    "initial_rail_V_assumed": 5.1,
+    "L_H_nominal": 6.8e-06,
+    "C_F_screen_assumed": 8.5272e-05,
+    "delay_s_LM74800_max_deglitch_only": 5.4e-06,
+    "initial_inductor_A_assumed": 5
+  },
+  "threshold_floor_expression": "normal_high * detector_max / detector_min; excludes divider, ripple and timing",
+  "threshold_floor_V": {
+    "LM74800": 5.469445226181157,
+    "LTC4368": 5.315747940469136,
+    "TPS259470": 5.333057672716395
+  },
+  "energy_expression": "0.5 * L * I^2, constant unsaturated L only",
+  "inductor_initial_energy_J": 8.5e-05,
+  "inductor_delta_I_A": 15.008823529411762,
+  "inductor_energy_at_deglitch_end_J": 0.0013612002647058823,
+  "cap_rise_expression": "(fault_V-initial_rail_V)*t^2/(2*L*C), initial excess current zero",
+  "cap_rise_V": 0.4752301286402542,
+  "TPS25947_typ_drop_at_5A_V": 0.1415,
+  "TPS25947_typ_loss_at_5A_W": 0.7075,
+  "two_CSD19537_25C_screen_drop_V": 0.166,
+  "two_CSD19537_25C_screen_loss_W": 0.83,
+  "shunt_drop_V": 0.01,
+  "shunt_loss_W": 0.05,
+  "limitations": [
+    "No physical measurements.",
+    "Normal high, bias/temperature C, constant L, delay and fault profile are incomplete bounds.",
+    "C is a raw-side bank; after disconnect it cannot be assumed to support the load.",
+    "Inductor energy after interruption stresses raw capacitance and switch/clamps; it is not all load let-through.",
+    "Input eFuse limiting cannot be assumed instantaneous."
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "classification": "Independent manufacturer ledger, not generated from the schematic connection table",
+  "parts": {
+    "LTC7001IMSE#PBF": {
+      "pins": {
+        "1": "VCC",
+        "2": "VCCUV",
+        "3": "GND",
+        "4": "INP",
+        "5": "OVLO",
+        "6": "TGDN",
+        "7": "TGUP",
+        "8": "TS",
+        "9": "BST",
+        "10": "NC",
+        "11": "EP"
+      },
+      "source_id": "G2-LTC7001",
+      "reviewed_pages": "pp2,7,16",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "REF5025IDGKR": {
+      "pins": {
+        "1": "DNC",
+        "2": "VIN",
+        "3": "TEMP",
+        "4": "GND",
+        "5": "TRIM_NR",
+        "6": "VOUT",
+        "7": "NC",
+        "8": "DNC"
+      },
+      "source_id": "G2-REF50",
+      "reviewed_pages": "p4",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "TLV3201AIDBVR": {
+      "pins": {
+        "1": "OUT",
+        "2": "GND",
+        "3": "IN+",
+        "4": "IN-",
+        "5": "VCC"
+      },
+      "source_id": "G2-TLV3201",
+      "reviewed_pages": "p3",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "SN74LVC1G74DCTR": {
+      "pins": {
+        "1": "CLK",
+        "2": "D",
+        "3": "nQ",
+        "4": "GND",
+        "5": "Q",
+        "6": "nCLR",
+        "7": "nPRE",
+        "8": "VCC"
+      },
+      "source_id": "G2-SN74LVC1G74",
+      "reviewed_pages": "p4; DCT drawing pp19-21",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "SN74LVC1G11DBVR": {
+      "pins": {
+        "1": "A",
+        "2": "GND",
+        "3": "B",
+        "4": "Y",
+        "5": "VCC",
+        "6": "C"
+      },
+      "source_id": "G2-SN74LVC1G11",
+      "reviewed_pages": "p3",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "TPS7A1601DGNR": {
+      "pins": {
+        "1": "OUT",
+        "2": "FB",
+        "3": "PG",
+        "4": "GND",
+        "5": "EN",
+        "6": "NC",
+        "7": "DELAY",
+        "8": "IN",
+        "9": "EP"
+      },
+      "source_id": "G2-TPS7A16",
+      "reviewed_pages": "p4; DGN drawing pp34-36",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "TPS3808G25DBVR": {
+      "pins": {
+        "1": "nRESET",
+        "2": "GND",
+        "3": "nMR",
+        "4": "CT",
+        "5": "SENSE",
+        "6": "VDD"
+      },
+      "source_id": "G2-TPS3808",
+      "reviewed_pages": "p4 DBV table (not DRV)",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "SN74LVC1G08DBVR": {
+      "pins": {
+        "1": "A",
+        "2": "B",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "source_id": "G2-SN74LVC1G08",
+      "reviewed_pages": "p3 DBV",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "SN74LVC1G14DBVR": {
+      "pins": {
+        "1": "NC",
+        "2": "A",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "source_id": "G2-SN74LVC1G14",
+      "reviewed_pages": "p3 DBV",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "SN74LVC1G17DBVR": {
+      "pins": {
+        "1": "NC",
+        "2": "A",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "source_id": "G2-SN74LVC1G17",
+      "reviewed_pages": "p3 DBV",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "UCC27511DBVR": {
+      "pins": {
+        "1": "VDD",
+        "2": "OUTH",
+        "3": "OUTL",
+        "4": "GND",
+        "5": "IN-",
+        "6": "IN+"
+      },
+      "source_id": "G1D-UCC27511",
+      "reviewed_pages": "p6 UCC27511 table; not UCC27512",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "BSC034N06NSATMA1": {
+      "pins": {
+        "1": "S",
+        "2": "S",
+        "3": "S",
+        "4": "G",
+        "5": "D",
+        "6": "D",
+        "7": "D",
+        "8": "D"
+      },
+      "source_id": "G2-BSC034N06NS",
+      "reviewed_pages": "p1",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "CSD18540Q5B": {
+      "pins": {
+        "1": "S",
+        "2": "S",
+        "3": "S",
+        "4": "G",
+        "5": "D",
+        "6": "D",
+        "7": "D",
+        "8": "D"
+      },
+      "source_id": "G1D-CSD18540",
+      "reviewed_pages": "p1 visually reviewed, pp8-9",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "2N7002,215": {
+      "pins": {
+        "1": "G",
+        "2": "S",
+        "3": "D"
+      },
+      "source_id": "G2-2N7002",
+      "reviewed_pages": "p1 Table2",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "BAS116,215": {
+      "pins": {
+        "1": "A",
+        "2": "NC",
+        "3": "K"
+      },
+      "source_id": "G2-BAS116",
+      "reviewed_pages": "p1 Table2",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "BAT46W-E3-08": {
+      "pins": {
+        "1": "A",
+        "2": "K"
+      },
+      "source_id": "G2-BAT46W",
+      "reviewed_pages": "p1 diagram and p4 cathode mark",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "WFMB2512R0330FEA": {
+      "pins": {
+        "1": "1",
+        "2": "2"
+      },
+      "source_id": "G1D-WFM",
+      "reviewed_pages": "p2 two-terminal nonpolar",
+      "classification": "DATASHEET physical package pin identities; net function separately reviewed"
+    },
+    "PCH1V471MCL1GS": {
+      "pins": {
+        "1": "+",
+        "2": "-"
+      },
+      "source_id": "G1C-PCH",
+      "reviewed_pages": "pp1-2 positive/negative terminals and 10x16mm case",
+      "classification": "DATASHEET polarity; KiCad assigns project pad1 positive/pad2 negative"
+    }
+  },
+  "generic_parts": "Remaining passive specifications, button headers and test pads are project-defined two-/one-terminal interfaces. MPN selection and ratings remain OPEN, all pad numbers checked."
+}

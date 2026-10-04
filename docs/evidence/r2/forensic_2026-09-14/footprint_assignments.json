@@ -1,0 +1,20 @@
+[
+  {
+    "reference": "Q101",
+    "file": "hardware/kicad/01_INPUT_PROTECTION.kicad_sch",
+    "before": "",
+    "after": "V1A_Qualified:TI_Q3_CSD19537Q3"
+  },
+  {
+    "reference": "U201",
+    "file": "hardware/kicad/02_BUCK_5V.kicad_sch",
+    "before": "",
+    "after": "V1A_Qualified:TI_RJR0014A_LM61460"
+  },
+  {
+    "reference": "R401",
+    "file": "hardware/kicad/04_POWER_MONITOR.kicad_sch",
+    "before": "",
+    "after": "V1A_Qualified:Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus"
+  }
+]

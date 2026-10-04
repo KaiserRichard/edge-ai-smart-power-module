@@ -1,0 +1,28 @@
+[
+  {
+    "url": "https://www.vishay.com/docs/88392/smbj.pdf",
+    "path": "third_party/documents/r2_qualification_2026-09-14/Vishay_SMBJ.pdf",
+    "exit": 0,
+    "bytes": 129599,
+    "sha256": "1b65b57a4311128068c1dec747bbb99f6846ae932d77fcfd39904cb2d7a5cd50"
+  },
+  {
+    "url": "https://catalog.belden.com/techdata/EN/8522_techdata.pdf",
+    "path": "third_party/documents/r2_qualification_2026-09-14/Belden_8522.pdf",
+    "exit": 0,
+    "bytes": 204270,
+    "sha256": "dd85d09556c61b4a7eafe02b80d4783d590b8cfb2d6f546eb8cd93ea119f040a"
+  },
+  {
+    "url": "https://www.coilcraft.com/getattachment/78738e29-ddc3-4cbc-9810-2db76ca42dd3/xal8080d.gif?lang=en-US",
+    "path": "third_party/documents/r2_qualification_2026-09-14/Coilcraft_XAL8080_drawing.gif",
+    "exit": 56,
+    "error": "eceived % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0  5567    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\n"
+  },
+  {
+    "url": "https://product.tdk.com/en/system/files/dam/doc/product/capacitor/ceramic/mlcc/charasheet/c5750x7r1h226m250kb.pdf",
+    "path": "third_party/documents/r2_qualification_2026-09-14/TDK_C5750.pdf",
+    "exit": 56,
+    "error": "eceived % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   500    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) The requested URL returned error: 403\n"
+  }
+]

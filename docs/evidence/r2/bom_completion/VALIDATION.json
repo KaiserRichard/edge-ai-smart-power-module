@@ -1,0 +1,51 @@
+{
+  "status": "PASS \u2014 documentation consistency only; engineering/procurement remain BLOCKED",
+  "freeze_commit": "47c7c072e1bf3d984dca79f112e953500f21ab26",
+  "j502_commit": "41cb9e889418d50d2f5f24467e66ac7f15a90476",
+  "resume_commit": "c7f0a159f794e581f2901dabc57eaba12dcec403",
+  "bom_csv_sha256": "4e17b48f149a107eca1795d827795f032fd210915b979aa59099ad47280c00bb",
+  "bom_md_sha256": "ab2a279692d59e45747ae5e9d25bbfc84915517a68cef3414e01f690f53b90cd",
+  "csv_rows": 131,
+  "named_board_mpns": 89,
+  "named_fitted_components": 223,
+  "distinct_board_fixture_pad_refs": 254,
+  "original_refs_accounted_for": 154,
+  "passive_source_mappings_checked": 41,
+  "critical_mappings_checked": 35,
+  "earlier_open_positions_resolved": 42,
+  "fitted_refs_added_to_earlier_draft": 32,
+  "assigned_open_mpns": [
+    "JP201",
+    "JP501"
+  ],
+  "unquantified_open_functions": [
+    "FAULT_TRIGGER"
+  ],
+  "native_hardware_files_unchanged": 24,
+  "native_hardware_sha256": {
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "1e869c8e24de28a32f5c5c8c5c03ee84778c6ba4c1f0b9b99d126321b6d1af6d",
+    "hardware/kicad/02_BUCK_5V.kicad_sch": "c230d990c7abc5f39845b6dfdbf6b29bbf000c10026c0dc8218de768765fb243",
+    "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "12b9cb7e52bb8766ee0a2a6c04208f1d0a07c527abebf5c7dd015afefdb9e959",
+    "hardware/kicad/04_POWER_MONITOR.kicad_sch": "f1325c3cedfec6ea5bf51ca98c995d312755fe63b594f4d126ec3aed7aaee68b",
+    "hardware/kicad/05_IO_TEST.kicad_sch": "28d850607a897f96f8888dcfe3d388fce57ee5f3cc14ac666cbb891ee80ffdf9",
+    "hardware/kicad/V1A.kicad_pro": "2f3f1d74c5c1c75bbfb7daa1cc8822c177a31f2dea212aa09cc127ca813c62c5",
+    "hardware/kicad/V1A.kicad_sch": "3580b27084d7dee4d0a27a59d6ace32510fd7cc0d3af0863aaffb0fca253721f",
+    "hardware/kicad/V1A.kicad_sym": "8e0db70dd9812ab531ffedd460c9e2889c4debd42e5e274bc49266956e0b440b",
+    "hardware/kicad/V1A_Qualified.pretty/Infineon_BSC034N06NS_8pin.kicad_mod": "8a7a7599f1853fb25b8c06d59803ea0072b25f01a590501851f2ff65b0f3c10d",
+    "hardware/kicad/V1A_Qualified.pretty/JST_B2B_XH_A_P2.50_THT.kicad_mod": "74f1b0da1f1b019f4bd22b1ccf81794a71ab7aeb814dba2644bfb206a50b5a47",
+    "hardware/kicad/V1A_Qualified.pretty/JST_B2P_VH_FB_B_P3.96_THT.kicad_mod": "01c24440e0b9873c4a93a4dcdaf1d2cfffa6fc41339ce292408334f9cf9ac261",
+    "hardware/kicad/V1A_Qualified.pretty/JST_B4B_XH_A_P2.50_THT.kicad_mod": "40502620549f9500a1c259741542bfac61f3eafb9cd31f205283108ec1c994be",
+    "hardware/kicad/V1A_Qualified.pretty/Nichicon_PCH_10x16.kicad_mod": "97ee5d35f1938778ee05faaeba92d9add4220dca0b71236448cf245f23e7a39e",
+    "hardware/kicad/V1A_Qualified.pretty/Phoenix_1776508_MSTB_2_GF_5.08.kicad_mod": "1f3993832e39cff0df3afca445ccd0dae0293ab363503161ac8bae668723b460",
+    "hardware/kicad/V1A_Qualified.pretty/TDK_C5750_2220_A4.45_B1.30_C4.50.kicad_mod": "e63d43a199a4b523443f87222810010e9a55f8d73a1f2235471f1b2bca1d9b01",
+    "hardware/kicad/V1A_Qualified.pretty/TI_DCT0008A_SN74LVC1G74.kicad_mod": "d8bf0bd41a0c2c7aa954f8d48c8887e5915cfcfdf793404d0441532fb69b3b51",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod": "49490fa2d41fb553eb0c84297dcff799dedee0d560431f61b1962606ce16838e",
+    "hardware/kicad/V1A_Qualified.pretty/TI_Q5B_CSD18540Q5B.kicad_mod": "a5199f5c3148ea5f5dc0037191edcd6099287d95e811ff35aae52a04a364d650",
+    "hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_BAT46W_A1_K2.kicad_mod": "99bcb832df10fd78ab3c6faa17e99c36bc40a57ca5aac54d191b90c2075c79be",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WFM2512.kicad_mod": "ab4c6bf3379e911ef9e57668cffea306c52837861c3215e811e255c19a3a137b",
+    "hardware/kicad/V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod": "5bf77b7075ce4232ced05e86c9e6c4aa9e88e61d52b3a9e6e10ee1819cc5e991",
+    "hardware/kicad/fp-lib-table": "703cfb0fd3f91b457a3766c56b14be8d218a74ffe252644f578791762c5dc02a",
+    "hardware/kicad/sym-lib-table": "b2a54c11e03449e84dfc1de436dfed2606a538f2deccf22bbae071d38a8ff747"
+  }
+}

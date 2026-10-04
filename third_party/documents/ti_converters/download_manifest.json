@@ -1,0 +1,59 @@
+{
+  "retrieved_utc_date": "2026-09-11",
+  "documents": [
+    {
+      "file": "tps56837.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56837.pdf",
+      "status": "downloaded",
+      "bytes": 1980506,
+      "sha256": "6d47e6df4508ca271bfb67ba72e4d7f84d19e64fda3f89a5fe0fb616e7f4b5a8"
+    },
+    {
+      "file": "tps56637.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56637.pdf",
+      "status": "downloaded",
+      "bytes": 1798868,
+      "sha256": "18edaff6769b0d5c3d0cdef66df1232538cd357bbaac214df138969f9b0d6745"
+    },
+    {
+      "file": "tps56528.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56528.pdf",
+      "status": "downloaded",
+      "bytes": 1456511,
+      "sha256": "1107e136b78ea52e6ca72dd165a4cc4a202c00c5b194b4a7b03f7ebd8119b45d"
+    },
+    {
+      "file": "lm61480.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61480.pdf",
+      "status": "remote_only",
+      "reason": "curl: (56) Maximum file size exceeded"
+    },
+    {
+      "file": "tps56837_evm.pdf",
+      "url": "https://www.ti.com/lit/pdf/slvuce1",
+      "status": "downloaded",
+      "bytes": 1475814,
+      "sha256": "333f3e215361a6dad88c37697275457f379bef80d192d3b672f4ae3c51b28929"
+    },
+    {
+      "file": "tps56637_evm.pdf",
+      "url": "https://www.ti.com/lit/pdf/slvube3",
+      "status": "downloaded",
+      "bytes": 1035104,
+      "sha256": "9128f18013449a9dc10398243ce615a477f4972641a9f8cd5c3613b14aacba7c"
+    },
+    {
+      "file": "lm61460_evm.pdf",
+      "url": "https://www.ti.com/lit/pdf/snvu621",
+      "status": "downloaded",
+      "bytes": 1578905,
+      "sha256": "b11f7b7cd9e336f32824738c3859b9ef836840a4e8b0550018aa05fc178fdfff"
+    },
+    {
+      "file": "lm61460.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "status": "remote_only",
+      "reason": "curl: (56) Maximum file size exceeded"
+    }
+  ]
+}

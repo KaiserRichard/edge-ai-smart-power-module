@@ -1,0 +1,63 @@
+[
+  {
+    "name": "erc",
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "docs/evidence/r2/forensic_2026-09-14/ERC.json",
+      "hardware/kicad/V1A.kicad_sch"
+    ],
+    "exit_code": 5
+  },
+  {
+    "name": "netlist",
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "docs/evidence/r2/forensic_2026-09-14/V1A.net.xml",
+      "hardware/kicad/V1A.kicad_sch"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "capture",
+    "command": [
+      "python3",
+      "scripts/check_r2_schematic.py",
+      "--netlist",
+      "docs/evidence/r2/forensic_2026-09-14/V1A.net.xml"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "pi_calculation",
+    "command": [
+      "python3",
+      "scripts/calculate_pi_interface.py",
+      "--output",
+      "docs/evidence/r2/forensic_2026-09-14/pi_interface_calculations.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "r2_calculation",
+    "command": [
+      "python3",
+      "scripts/calculate_r2.py",
+      "--output",
+      "docs/evidence/r2/forensic_2026-09-14/r2_calculations.json"
+    ],
+    "exit_code": 0
+  }
+]

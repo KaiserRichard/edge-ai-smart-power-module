@@ -1,0 +1,212 @@
+{
+  "status": "REVIEW DRAFT - RELEASE BLOCKED",
+  "components": [
+    {
+      "ref": "J501",
+      "value": "DC INPUT - MPN OPEN",
+      "part": "",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "+",
+          "net": "VIN_RAW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "9-24 V normal;>=5 A candidate;keying/wire/contact/interrupt coordination OPEN",
+      "source": "Frozen V1A functional input boundary",
+      "position": [
+        83.82,
+        83.82
+      ]
+    },
+    {
+      "ref": "J502",
+      "value": "LOAD OUTPUT - MPN OPEN",
+      "part": "",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "+",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "RETURN",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "5.1 V nominal,5 A;exact connector,mate/wire and fault voltage OPEN",
+      "source": "Frozen V1A functional load boundary",
+      "position": [
+        208.28,
+        83.82
+      ]
+    },
+    {
+      "ref": "J503",
+      "value": "HOST I2C - MPN OPEN",
+      "part": "",
+      "kind": "CONNECTOR",
+      "pins": {
+        "1": {
+          "name": "GND",
+          "net": "GND",
+          "type": "passive"
+        },
+        "2": {
+          "name": "VREF",
+          "net": "3V3_HOST",
+          "type": "passive"
+        },
+        "3": {
+          "name": "SDA",
+          "net": "SDA_HOST",
+          "type": "passive"
+        },
+        "4": {
+          "name": "SCL",
+          "net": "SCL_HOST",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "3.3 V host reference input;not a host power supply;100 kHz;pinout review draft",
+      "source": "Frozen telemetry requirement; power-domain interface review",
+      "position": [
+        337.82,
+        83.82
+      ]
+    },
+    {
+      "ref": "TP501",
+      "value": "VIN_RAW",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "VIN_RAW",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP502",
+      "value": "VIN_PROTECTED",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP503",
+      "value": "LOAD_5V1",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "LOAD_5V1",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP504",
+      "value": "GND",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "#FLG501",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "VIN_RAW",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "#FLG502",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "GND",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "#FLG503",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "3V3_HOST",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    }
+  ],
+  "schematic_notes": [
+    "SOURCE: project frozen requirements and R2 power-domain review; connector MPNs remain OPEN.",
+    "FUNCTION: explicit DC input, load output, host reference/I2C and local bench test access.",
+    "MODIFICATION: reusable connectors; no Pi HAT,USB,MCU,CAN or V1B-specific connector.",
+    "RATIONALE: standalone operation and controlled measurement boundaries; mating/keying review required.",
+    "R2 ONLY: output path is OPEN at sheet03. Do not bridge it to power an SBC.",
+    "Flags declare external inputs and passive-fed power for ERC only; they are not physical supplies.",
+    "Host off: 3V3_HOST=0, host pullups also0; TCA9517 separates local domain. Keep common ground connected."
+  ],
+  "passive_start": 132.08
+}

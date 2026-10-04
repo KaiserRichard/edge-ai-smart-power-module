@@ -1,0 +1,133 @@
+{
+  "date": "2026-09-12",
+  "scope": "R2 direct-power interface sources; complements original R0/R2 source registers",
+  "pi_documentation_remote_master_verified": "5e2c40fe1125bb8ff7374de2c11c94761084eb1f",
+  "pi_git_check_command": "git ls-remote https://github.com/raspberrypi/documentation.git refs/heads/master",
+  "sources": [
+    {
+      "id": "CONNECTOR_HEADER",
+      "url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstba-25-2-g-508-1757242",
+      "revision": "Live product record; no published revision",
+      "checked_at_utc": "2026-09-12T10:17:24.689713+00:00",
+      "use": "REFERENCE only; candidate not fitted; no upstream modifications",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer, part, source URL and revision/date in engineering review",
+      "sections": "Electrical ratings, mating/termination conditions, resistance; see RASPBERRY_PI_DIRECT_POWER.md",
+      "cache_status": "remote_only; official page inspected through web tool",
+      "curl_exit": 56
+    },
+    {
+      "id": "CONNECTOR_MATE",
+      "url": "https://www.phoenixcontact.com/en-ae/products/pcb-plug-mstb-25-2-st-508-1757019",
+      "revision": "Live product record; no published revision",
+      "checked_at_utc": "2026-09-12T10:17:24.873635+00:00",
+      "use": "REFERENCE only; candidate not fitted; no upstream modifications",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer, part, source URL and revision/date in engineering review",
+      "sections": "Electrical ratings, mating/termination conditions, resistance; see RASPBERRY_PI_DIRECT_POWER.md",
+      "cache_status": "remote_only; official page inspected through web tool",
+      "curl_exit": 56
+    },
+    {
+      "id": "WIRE",
+      "url": "https://www.belden.com/products/cable/electronic-wire-cable/lead-wire-hook-up-wire/37118",
+      "revision": "0.482, 2026-02-20",
+      "checked_at_utc": "2026-09-12T10:17:25.247592+00:00",
+      "use": "REFERENCE only; candidate not fitted; no upstream modifications",
+      "license": "Manufacturer copyright; no open-hardware license inferred",
+      "attribution": "Retain manufacturer, part, source URL and revision/date in engineering review",
+      "sections": "Electrical ratings, mating/termination conditions, resistance; see RASPBERRY_PI_DIRECT_POWER.md",
+      "cache_status": "remote_only; official page inspected through web tool",
+      "curl_exit": 56
+    },
+    {
+      "id": "PI_USB_PD",
+      "url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf",
+      "revision": "Release 1; 2026-03-17; 1026f0c6e305",
+      "path": "third_party/documents/raspberry-pi-usb-pd-release1.pdf",
+      "sha256": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e",
+      "bytes": 434270,
+      "sections": "Printed pp7-8; GPIO supply, default current, overrides, USB boot",
+      "license": "CC BY-ND 4.0; retain colophon; reference only",
+      "use": "REFERENCE; no copying/adaptation of circuit or upstream source",
+      "modifications": "None",
+      "attribution": "Raspberry Pi Ltd; retain links and identity",
+      "live_verified_on": "2026-09-12"
+    },
+    {
+      "id": "PI_HARDWARE",
+      "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply",
+      "revision": "5e2c40fe1125bb8ff7374de2c11c94761084eb1f",
+      "path": "third_party/documents/raspberry-pi-power-supplies.adoc",
+      "sha256": "49f6478c1c0164237ebcf1d28aac4709e843d2b5c06442539bacae05e49eafb1",
+      "bytes": 9271,
+      "sections": "power-supplies.adoc; peripheral/fan budget and warnings",
+      "license": "Raspberry Pi documentation CC BY-SA 4.0; see existing LICENSE.md",
+      "use": "REFERENCE; no copying/adaptation of circuit or upstream source",
+      "modifications": "None",
+      "attribution": "Raspberry Pi Ltd; retain links and identity",
+      "live_verified_on": "2026-09-12"
+    },
+    {
+      "id": "PI_EEPROM",
+      "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#PSU_MAX_CURRENT",
+      "revision": "5e2c40fe1125bb8ff7374de2c11c94761084eb1f",
+      "path": "third_party/wbr_hat/raspberry_pi/eeprom-bootloader.adoc",
+      "sha256": "a2fe847e35f6031b3c955ddb34ba05692b80f55e06174ded7c52dc284d988070",
+      "bytes": 32411,
+      "sections": "eeprom-bootloader.adoc; PSU_MAX_CURRENT",
+      "license": "Raspberry Pi documentation CC BY-SA 4.0; see existing LICENSE.md",
+      "use": "REFERENCE; no copying/adaptation of circuit or upstream source",
+      "modifications": "None",
+      "attribution": "Raspberry Pi Ltd; retain links and identity",
+      "live_verified_on": "2026-09-12"
+    },
+    {
+      "id": "PI_GPIO",
+      "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header",
+      "revision": "5e2c40fe1125bb8ff7374de2c11c94761084eb1f",
+      "path": "third_party/wbr_hat/raspberry_pi/gpio-on-raspberry-pi.adoc",
+      "sha256": "6867ef1baafbb3be2c96b82266ba04c4344e09aad3c6276d588adeec24560b04",
+      "bytes": 6940,
+      "sections": "GPIO pinout; power rails distinct from 3.3 V signals",
+      "license": "Raspberry Pi documentation CC BY-SA 4.0; see existing LICENSE.md",
+      "use": "REFERENCE; no copying/adaptation of circuit or upstream source",
+      "modifications": "None",
+      "attribution": "Raspberry Pi Ltd; retain links and identity",
+      "live_verified_on": "2026-09-12"
+    },
+    {
+      "id": "PI_CONFIG",
+      "url": "https://www.raspberrypi.com/documentation/computers/configuration.html",
+      "revision": "5e2c40fe1125bb8ff7374de2c11c94761084eb1f",
+      "path": "third_party/wbr_hat/raspberry_pi/reference.adoc",
+      "sha256": "0b059ca2d57405cc0bf7bb64cae1ccd0a205306d96deb8e61feec111abe245ae",
+      "bytes": 74725,
+      "sections": "chosen/power, max_current, usb_max_current_enable",
+      "license": "Raspberry Pi documentation CC BY-SA 4.0; see existing LICENSE.md",
+      "use": "REFERENCE; no copying/adaptation of circuit or upstream source",
+      "modifications": "None",
+      "attribution": "Raspberry Pi Ltd; retain links and identity",
+      "live_verified_on": "2026-09-12"
+    },
+    {
+      "id": "PI_HAT_ELECTRICAL",
+      "url": "https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf",
+      "revision": "2024-12-05; 6df06cc-clean",
+      "path": "third_party/documents/raspberry-pi-hat-plus.pdf",
+      "sha256": "3a0932253767147038383162ac9f4b5aac3adb048c30bd1f9177a462a054ca1e",
+      "bytes": 1210200,
+      "sections": "Ch4 source-only concurrent supply; Ch6 5.1 V guidance; V1A is not HAT+",
+      "license": "CC BY-ND 4.0; retain colophon; reference only",
+      "use": "REFERENCE; no copying/adaptation of circuit or upstream source",
+      "modifications": "None",
+      "attribution": "Raspberry Pi Ltd; retain links and identity",
+      "live_verified_on": "2026-09-12"
+    }
+  ],
+  "limits": [
+    "No published Pi 5 header contact current rating or fault voltage-time limit located in these official sources.",
+    "Connector snapshots are live documents identified by acquisition date and SHA-256; candidate qualification remains open.",
+    "Manufacturer ratings apply to the stated product/test conditions, not automatically to the full harness."
+  ]
+}

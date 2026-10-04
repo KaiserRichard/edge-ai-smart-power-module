@@ -1,0 +1,24 @@
+{
+  "CSD18540Q5B": {
+    "original_mpn": "CSD18540Q5B",
+    "mpn": "CSD18540Q5BT",
+    "manufacturer": "Texas Instruments",
+    "kind": "carrier_only",
+    "status": "CONFIRMED",
+    "order_accepted": true,
+    "reason": "Exact original out of stock; manufacturer confirms same device/package in 250-piece instead of 2500-piece reels.",
+    "source_url": "https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf",
+    "document_revision": "SLPS488B, April 2017, p1 ordering table; common electrical table p3 and Q5B package pp8-9",
+    "access_date": "2026-10-04",
+    "refdes": [
+      "Q303",
+      "Q330"
+    ],
+    "footprints": [
+      "V1A_Qualified:TI_Q5B_CSD18540Q5B"
+    ],
+    "offer_evidence": "Q281",
+    "owner_hold": "N/A",
+    "disposition": "CONFIRMED order alternate: CSD18540Q5BT is the same TI CSD18540Q5B device in a 250-piece reel instead of 2500; common Q5B package, pinout and electrical specifications. Seven cut-tape units from Q281. No changed Rds(on), threshold, timing, ballast or Sheet03 path model is introduced by this packing suffix. Hardware untouched; application electrical qualification remains open."
+  }
+}

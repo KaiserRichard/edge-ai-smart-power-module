@@ -1,0 +1,13 @@
+{
+  "repository": "https://gitlab.com/kicad/libraries/kicad-footprints",
+  "commit": "f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7",
+  "file": "Connector_JST.pretty/JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical.kicad_mod",
+  "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7/Connector_JST.pretty/JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical.kicad_mod",
+  "local_file": "JST_VH_B2P-VH-FB-B_1x02_P3.96mm_Vertical.kicad_mod",
+  "sha256": "cb2962ec26458e225bdf7b6d5d257a407fbee4d44618ad231ccbee0e58727d40",
+  "upstream_verified": true,
+  "license": "CC-BY-SA-4.0 with KiCad design exception",
+  "use": "ADAPTED package only, no PCB",
+  "modifications": "project name and description/revision; geometry unmodified; removed external 3D model to avoid unpinned dependency",
+  "attribution": "KiCad library contributors; retain LICENSE.md"
+}

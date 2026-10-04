@@ -1,0 +1,598 @@
+{
+  "status": "REVIEW DRAFT - RELEASE BLOCKED",
+  "components": [
+    {
+      "ref": "U101",
+      "value": "TPS26630RGER",
+      "part": "TPS26630RGER",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "IN",
+          "net": "VIN_EFUSE_IN",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "IN",
+          "net": "VIN_EFUSE_IN",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "B_GATE",
+          "net": "INPUT_BGATE",
+          "type": "output"
+        },
+        "4": {
+          "name": "DRV",
+          "net": "INPUT_DRV",
+          "type": "output"
+        },
+        "5": {
+          "name": "IN_SYS",
+          "net": "VIN_FUSED",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "UVLO",
+          "net": "INPUT_UVLO",
+          "type": "input"
+        },
+        "7": {
+          "name": "OVP",
+          "net": "INPUT_OVP",
+          "type": "input"
+        },
+        "8": {
+          "name": "GND",
+          "net": "GND",
+          "type": "power_in"
+        },
+        "9": {
+          "name": "dVdT",
+          "net": "INPUT_DVDT",
+          "type": "passive"
+        },
+        "10": {
+          "name": "ILIM",
+          "net": "INPUT_ILIM",
+          "type": "passive"
+        },
+        "11": {
+          "name": "MODE",
+          "net": null,
+          "type": "input"
+        },
+        "12": {
+          "name": "SHDN",
+          "net": "INPUT_SHDN",
+          "type": "input"
+        },
+        "13": {
+          "name": "IMON",
+          "net": null,
+          "type": "output"
+        },
+        "14": {
+          "name": "FLT",
+          "net": "INPUT_FLT",
+          "type": "open_collector"
+        },
+        "15": {
+          "name": "PGTH",
+          "net": "INPUT_PGTH",
+          "type": "input"
+        },
+        "16": {
+          "name": "PGOOD",
+          "net": "BUCK_INPUT_PGOOD",
+          "type": "open_collector"
+        },
+        "17": {
+          "name": "OUT",
+          "net": "VIN_PROTECTED",
+          "type": "power_out"
+        },
+        "18": {
+          "name": "OUT",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "19": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "20": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "21": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "22": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "23": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "24": {
+          "name": "NC",
+          "net": null,
+          "type": "no_connect"
+        },
+        "25": {
+          "name": "EP",
+          "net": "GND",
+          "type": "power_in"
+        }
+      },
+      "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+      "rating": "4.5-60 V; 67 V abs; adjustable OV cutoff, no pulse-current boost; MODE open=latch",
+      "source": "TI SLVSE94G Table 5-1/Fig 8-7; RGE0024H drawing 4219016/A",
+      "position": [
+        96.52,
+        96.52
+      ]
+    },
+    {
+      "ref": "Q101",
+      "value": "CSD19537Q3",
+      "part": "CSD19537Q3",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "3": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "4": {
+          "name": "G",
+          "net": "INPUT_BGATE",
+          "type": "input"
+        },
+        "5": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "6": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "7": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "8": {
+          "name": "D",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "100 V VDS, +/-20 V VGS; 12.1 mOhm typical at VGS=10 V; custom SON land-pattern OPEN",
+      "source": "TI SLPS549B Fig 3-1 TOP VIEW; SLVSE94G Fig 8-7",
+      "position": [
+        226.06,
+        83.82
+      ]
+    },
+    {
+      "ref": "Q102",
+      "value": "BSS138",
+      "part": "BSS138",
+      "kind": "IC",
+      "pins": {
+        "1": {
+          "name": "G",
+          "net": "INPUT_DRV",
+          "type": "input"
+        },
+        "2": {
+          "name": "S",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "3": {
+          "name": "D",
+          "net": "INPUT_BGATE",
+          "type": "passive"
+        }
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "rating": "50 V VDS; +/-20 V VGS; driver relative to VIN_FUSED, NOT GND",
+      "source": "onsemi BSS138/D Rev7 Apr2024 p1; TI SLVSE94G Fig 8-7",
+      "position": [
+        337.82,
+        83.82
+      ]
+    },
+    {
+      "ref": "F101",
+      "value": "FUSE - OPEN",
+      "part": "",
+      "kind": "F",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_RAW",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "5 A candidate only; DC interrupt/I2t/MPN must close against source",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "D101",
+      "value": "SMBJ26CA",
+      "part": "SMBJ26CA",
+      "kind": "TVS_BI",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Diode_SMD:D_SMB",
+      "rating": "CANDIDATE: 26 V standoff, 42.1 V clamp at14.3 A/10-1000us; exact source revision and surge envelope OPEN",
+      "source": "Littelfuse SMBJ family manufacturer search evidence; exact document revision/coordination OPEN"
+    },
+    {
+      "ref": "D102",
+      "value": "B260",
+      "part": "B260-13-F",
+      "kind": "D",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Diode_SMD:D_SMB",
+      "rating": "K=1 at VIN_PROTECTED, A=2 GND; 60 V, 2 A; transient negative clamp, not load path",
+      "source": "Diodes DS13004 Rev22-2 July2015; TI eFuse output clamp concept"
+    },
+    {
+      "ref": "R101",
+      "value": "332k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_UVLO",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%, 0.1 W, 75 V; reverse-input series >=300k",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R102",
+      "value": "54.9k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_UVLO",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%, 0.1 W, 75 V",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R103",
+      "value": "348k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_OVP",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%, 0.1 W, 75 V; reverse-input current limited",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R104",
+      "value": "15.8k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_OVP",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%, 0.1 W, 75 V",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R105",
+      "value": "4.02k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_ILIM",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%,0.1 W; approximately4.48 A nominal",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R106",
+      "value": "56.2k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_PGTH",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%,0.1 W,75 V",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R107",
+      "value": "10k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_PGTH",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "0.1%,0.1 W,75 V",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "R108",
+      "value": "100k",
+      "part": "",
+      "kind": "R",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_PROTECTED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "INPUT_FLT",
+          "type": "passive"
+        }
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "rating": "1%,0.1 W,75 V; LOCAL high-voltage test only",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "C101",
+      "value": "1uF 100V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_FUSED",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "rating": "X7R; 100 V; exact MPN/effective C OPEN",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "C102",
+      "value": "1uF 100V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "VIN_EFUSE_IN",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "rating": "X7R;100 V; exact MPN/effective C OPEN",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "C103",
+      "value": "100nF 16V",
+      "part": "",
+      "kind": "C",
+      "pins": {
+        "1": {
+          "name": "1",
+          "net": "INPUT_DVDT",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "net": "GND",
+          "type": "passive"
+        }
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "rating": "X7R +/-10%;16 V",
+      "source": "R2 component specification; exact passive MPN OPEN"
+    },
+    {
+      "ref": "TP101",
+      "value": "INPUT_SHDN",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "INPUT_SHDN",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "TP102",
+      "value": "INPUT_FLT",
+      "part": "",
+      "kind": "TP",
+      "pins": {
+        "1": {
+          "name": "TP",
+          "net": "INPUT_FLT",
+          "type": "passive"
+        }
+      },
+      "footprint": "",
+      "rating": "Test only; not a load-current connector",
+      "source": "Project test access; local domain only"
+    },
+    {
+      "ref": "#FLG101",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "VIN_FUSED",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    },
+    {
+      "ref": "#FLG102",
+      "value": "PWR_FLAG",
+      "part": "",
+      "kind": "FLAG",
+      "pins": {
+        "1": {
+          "name": "PWR",
+          "net": "VIN_EFUSE_IN",
+          "type": "power_out"
+        }
+      },
+      "footprint": "",
+      "rating": "Not a physical component",
+      "source": "ERC source declaration at externally supplied/passive-fed boundary"
+    }
+  ],
+  "schematic_notes": [
+    "SOURCE: TI TPS2663 SLVSE94G Fig 8-7 and SLVUBI8A Fig 11; manufacturer MOSFET diagrams.",
+    "FUNCTION: fuse/TVS, reverse-input and reverse-current block, UV/OV cutoff, input inrush/current limit.",
+    "MODIFICATION: UV ~8.46 V / OV ~27.63 V; PG ~7.94 V; 4.02k ILIM; 100nF dVdT; MODE open=latch.",
+    "RATIONALE: admit normal9-24 V; no two-times pulse mode; downstream EN held low during input ramp.",
+    "Q101 body diode: VIN_FUSED -> VIN_EFUSE_IN. Q102 source is VIN_FUSED, not ground.",
+    "OPEN: fuse order code/I2t, source/surge profile, Q101 footprint and fault SOA qualification.",
+    "LOCAL SHDN/FLT test access only; do not connect to host. No PCB or surge compliance claim."
+  ],
+  "passive_start": 157.48
+}

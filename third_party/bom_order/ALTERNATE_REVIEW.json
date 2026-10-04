@@ -1,0 +1,23 @@
+{
+  "TLV3201AIDBVR": {
+    "mpn": "TLV3201AIDBVT",
+    "manufacturer": "Texas Instruments",
+    "source_url": "https://www.ti.com/product/TLV3201/part-details/TLV3201AIDBVT",
+    "document_revision": "Undated TI exact-part page accessed 2026-10-03; linked datasheet Rev. C",
+    "disposition": "UNAPPROVED procurement alternate: TI explicitly identifies DBVT and DBVR as the same device in different carrier quantities (250 / 3000), same DBV 5-pin SOT-23. Confirm distributor stock and packing; preserve exact comparator function and timing. Replaces a generic similar-comparator suggestion; not included in order totals."
+  },
+  "TPS70933DBVR": {
+    "mpn": "TPS70933DBVT",
+    "manufacturer": "Texas Instruments",
+    "source_url": "https://www.ti.com/product/TPS709/part-details/TPS70933DBVT",
+    "document_revision": "Undated TI exact-part page accessed 2026-10-03; linked datasheet Rev. H",
+    "disposition": "UNAPPROVED procurement alternate: TI explicitly identifies DBVT and DBVR as the same device in different carrier quantities (250 / 3000), same DBV 5-pin SOT-23 and 30 V family. Confirm distributor stock and packing. Replaces an unqualified different-regulator suggestion; not included in order totals."
+  },
+  "TNPW06036K49BEEA": {
+    "mpn": "RT0603BRD076K49L",
+    "manufacturer": "YAGEO",
+    "source_url": "https://www.digikey.com/en/products/detail/yageo/RT0603BRD076K49L/5139169",
+    "document_revision": "Undated catalog page accessed 2026-10-03; crawl 4 months ago",
+    "disposition": "UNAPPROVED catalog candidate: 6.49 kohm, 0.1%, 25 ppm/K, 0603, 0.1 W; listed Active with 47061 pieces in the indexed snapshot. Lower nominal power than TNPW requires manufacturer datasheet, voltage, thermal and drift review. No substitution authorized; excluded from totals."
+  }
+}

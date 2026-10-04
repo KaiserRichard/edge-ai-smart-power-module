@@ -1,0 +1,216 @@
+{
+  "classification": "CALCULATED sensitivity only; no measured or guaranteed end-to-end result",
+  "wire_room_mOhm": 8.530183727034121,
+  "wire_hot_mOhm": 9.871128608923884,
+  "fixed_assumed_plus_nominal_shunt_mOhm": 32,
+  "fuse_input_currents": [
+    {
+      "vin_V": 9,
+      "efficiency_assumed": 0.85,
+      "input_A": 3.3333333333333335
+    },
+    {
+      "vin_V": 9,
+      "efficiency_assumed": 0.9,
+      "input_A": 3.1481481481481484
+    },
+    {
+      "vin_V": 9,
+      "efficiency_assumed": 0.95,
+      "input_A": 2.9824561403508776
+    },
+    {
+      "vin_V": 12,
+      "efficiency_assumed": 0.85,
+      "input_A": 2.5
+    },
+    {
+      "vin_V": 12,
+      "efficiency_assumed": 0.9,
+      "input_A": 2.361111111111111
+    },
+    {
+      "vin_V": 12,
+      "efficiency_assumed": 0.95,
+      "input_A": 2.236842105263158
+    },
+    {
+      "vin_V": 24,
+      "efficiency_assumed": 0.85,
+      "input_A": 1.25
+    },
+    {
+      "vin_V": 24,
+      "efficiency_assumed": 0.9,
+      "input_A": 1.1805555555555556
+    },
+    {
+      "vin_V": 24,
+      "efficiency_assumed": 0.95,
+      "input_A": 1.118421052631579
+    }
+  ],
+  "harness_scenarios": [
+    {
+      "scenario": "Phoenix additive room screen",
+      "connector_loop_mOhm": 5.6,
+      "wire_loop_mOhm": 8.530183727034121,
+      "total_loop_mOhm": 46.13018372703412,
+      "points": [
+        {
+          "current_A": 1,
+          "drop_V": 0.046130183727034126,
+          "loss_W": 0.046130183727034126,
+          "pi_nominal_V": 5.05223047201067,
+          "pi_static_low_V": 4.992141218002383,
+          "pi_static_low_minus_droop_V": 4.892141218002384
+        },
+        {
+          "current_A": 3,
+          "drop_V": 0.13839055118110238,
+          "loss_W": 0.41517165354330715,
+          "pi_nominal_V": 4.959970104556602,
+          "pi_static_low_V": 4.899880850548315,
+          "pi_static_low_minus_droop_V": 4.799880850548315
+        },
+        {
+          "current_A": 5,
+          "drop_V": 0.23065091863517062,
+          "loss_W": 1.153254593175853,
+          "pi_nominal_V": 4.867709737102534,
+          "pi_static_low_V": 4.807620483094247,
+          "pi_static_low_minus_droop_V": 4.707620483094248
+        }
+      ]
+    },
+    {
+      "scenario": "Phoenix additive hot sensitivity",
+      "connector_loop_mOhm": 7.279999999999999,
+      "wire_loop_mOhm": 9.871128608923884,
+      "total_loop_mOhm": 49.151128608923884,
+      "points": [
+        {
+          "current_A": 1,
+          "drop_V": 0.049151128608923886,
+          "loss_W": 0.049151128608923886,
+          "pi_nominal_V": 5.049209527128781,
+          "pi_static_low_V": 4.989120273120494,
+          "pi_static_low_minus_droop_V": 4.889120273120494
+        },
+        {
+          "current_A": 3,
+          "drop_V": 0.14745338582677164,
+          "loss_W": 0.442360157480315,
+          "pi_nominal_V": 4.950907269910933,
+          "pi_static_low_V": 4.890818015902646,
+          "pi_static_low_minus_droop_V": 4.790818015902646
+        },
+        {
+          "current_A": 5,
+          "drop_V": 0.24575564304461944,
+          "loss_W": 1.228778215223097,
+          "pi_nominal_V": 4.852605012693085,
+          "pi_static_low_V": 4.792515758684798,
+          "pi_static_low_minus_droop_V": 4.692515758684799
+        }
+      ]
+    },
+    {
+      "scenario": "JST VH initial room maximum screen",
+      "connector_loop_mOhm": 20,
+      "wire_loop_mOhm": 8.530183727034121,
+      "total_loop_mOhm": 60.53018372703412,
+      "points": [
+        {
+          "current_A": 1,
+          "drop_V": 0.06053018372703412,
+          "loss_W": 0.06053018372703412,
+          "pi_nominal_V": 5.03783047201067,
+          "pi_static_low_V": 4.977741218002383,
+          "pi_static_low_minus_droop_V": 4.877741218002384
+        },
+        {
+          "current_A": 3,
+          "drop_V": 0.18159055118110237,
+          "loss_W": 0.5447716535433071,
+          "pi_nominal_V": 4.916770104556602,
+          "pi_static_low_V": 4.856680850548315,
+          "pi_static_low_minus_droop_V": 4.756680850548316
+        },
+        {
+          "current_A": 5,
+          "drop_V": 0.30265091863517063,
+          "loss_W": 1.513254593175853,
+          "pi_nominal_V": 4.795709737102534,
+          "pi_static_low_V": 4.735620483094247,
+          "pi_static_low_minus_droop_V": 4.635620483094248
+        }
+      ]
+    },
+    {
+      "scenario": "JST VH after-test room maximum screen",
+      "connector_loop_mOhm": 40,
+      "wire_loop_mOhm": 8.530183727034121,
+      "total_loop_mOhm": 80.53018372703411,
+      "points": [
+        {
+          "current_A": 1,
+          "drop_V": 0.08053018372703412,
+          "loss_W": 0.08053018372703412,
+          "pi_nominal_V": 5.017830472010671,
+          "pi_static_low_V": 4.957741218002384,
+          "pi_static_low_minus_droop_V": 4.857741218002384
+        },
+        {
+          "current_A": 3,
+          "drop_V": 0.24159055118110234,
+          "loss_W": 0.7247716535433071,
+          "pi_nominal_V": 4.8567701045566025,
+          "pi_static_low_V": 4.796680850548316,
+          "pi_static_low_minus_droop_V": 4.696680850548316
+        },
+        {
+          "current_A": 5,
+          "drop_V": 0.4026509186351706,
+          "loss_W": 2.0132545931758528,
+          "pi_nominal_V": 4.695709737102534,
+          "pi_static_low_V": 4.635620483094247,
+          "pi_static_low_minus_droop_V": 4.535620483094247
+        }
+      ]
+    },
+    {
+      "scenario": "JST VH after-test hot sensitivity",
+      "connector_loop_mOhm": 52.0,
+      "wire_loop_mOhm": 9.871128608923884,
+      "total_loop_mOhm": 93.87112860892388,
+      "points": [
+        {
+          "current_A": 1,
+          "drop_V": 0.09387112860892388,
+          "loss_W": 0.09387112860892388,
+          "pi_nominal_V": 5.004489527128781,
+          "pi_static_low_V": 4.944400273120494,
+          "pi_static_low_minus_droop_V": 4.8444002731204945
+        },
+        {
+          "current_A": 3,
+          "drop_V": 0.28161338582677164,
+          "loss_W": 0.8448401574803149,
+          "pi_nominal_V": 4.816747269910933,
+          "pi_static_low_V": 4.756658015902646,
+          "pi_static_low_minus_droop_V": 4.6566580159026465
+        },
+        {
+          "current_A": 5,
+          "drop_V": 0.4693556430446194,
+          "loss_W": 2.346778215223097,
+          "pi_nominal_V": 4.629005012693085,
+          "pi_static_low_V": 4.568915758684798,
+          "pi_static_low_minus_droop_V": 4.4689157586847985
+        }
+      ]
+    }
+  ],
+  "config_sha256": "acbae31a8286668d36552bea29b9649f39ca970b4612f978bff4ebe96d0e25c5"
+}
