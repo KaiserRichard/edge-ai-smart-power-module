@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "scope": "All references, values, footprint IDs, pad numbers/nets, native sizes/drills/shapes and relative pad transforms match baseline; not electrical validation.",
+  "baseline_commit": "1c4c44d",
+  "board_sha256": "fbb8515a4d36a86a804300ef5eca630074a7a4cededf3a4cd4ee244ffe4f7bd1",
+  "differences": [],
+  "changed_placements": [
+    {
+      "ref": "TP302",
+      "old": [
+        230.0,
+        60.39,
+        0.0
+      ],
+      "new": [
+        221.0,
+        75.5,
+        0.0
+      ]
+    },
+    {
+      "ref": "J502",
+      "old": [
+        230.0,
+        70.39,
+        -90.0
+      ],
+      "new": [
+        230.0,
+        70.39,
+        90.0
+      ]
+    },
+    {
+      "ref": "R408",
+      "old": [
+        211.0,
+        56.0,
+        90.0
+      ],
+      "new": [
+        208.5,
+        55.5,
+        90.0
+      ]
+    },
+    {
+      "ref": "TP403",
+      "old": [
+        214.0,
+        50.0,
+        0.0
+      ],
+      "new": [
+        217.5,
+        63.5,
+        0.0
+      ]
+    },
+    {
+      "ref": "C402",
+      "old": [
+        210.0,
+        53.0,
+        0.0
+      ],
+      "new": [
+        210.5,
+        58.5,
+        90.0
+      ]
+    },
+    {
+      "ref": "TP402",
+      "old": [
+        218.5,
+        57.0,
+        0.0
+      ],
+      "new": [
+        211.5,
+        63.5,
+        0.0
+      ]
+    },
+    {
+      "ref": "TP503",
+      "old": [
+        227.0,
+        60.39,
+        0.0
+      ],
+      "new": [
+        224.0,
+        75.5,
+        0.0
+      ]
+    }
+  ],
+  "footprints": 370,
+  "vias": 27,
+  "zones": 39
+}

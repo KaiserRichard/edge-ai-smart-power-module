@@ -1,0 +1,43 @@
+./src/common/stdpbase.cpp(59): assert ""traits"" failed in Get(): create wxApp before calling this
+{
+  "finding": "M1-1",
+  "status": "geometric conflict corrected",
+  "J502_position_mm": [
+    230.0,
+    70.39
+  ],
+  "rotation_deg": 90,
+  "pins": {
+    "1": {
+      "position_mm": [
+        230.0,
+        70.39
+      ],
+      "net": "/LOAD_5V1"
+    },
+    "2": {
+      "position_mm": [
+        230.0,
+        65.31
+      ],
+      "net": "/GND"
+    }
+  },
+  "mate_tool_rectangles": [
+    {
+      "start_mm": [
+        240.0,
+        78.01
+      ],
+      "end_mm": [
+        250.0,
+        57.69
+      ]
+    }
+  ],
+  "R401_position_mm": [
+    214.0,
+    69.5
+  ],
+  "limitation": "Recorded provisional envelope only; physical mate, screwdriver and fixture approval remain OPEN."
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py",
+    "hardware/kicad/V1A.kicad_pcb",
+    "--json"
+  ],
+  "exit": 1,
+  "board_sha256": "fbb8515a4d36a86a804300ef5eca630074a7a4cededf3a4cd4ee244ffe4f7bd1",
+  "default_run": "completed",
+  "sensitivity_run": "2 mm grid / 30 mm width cap manually interrupted during graph construction; no numerical result used"
+}

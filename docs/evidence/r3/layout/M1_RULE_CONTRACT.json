@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "meaning": "Rule predicates, constraints and order exactly match after ignoring names and commuting simple net-name OR terms.",
+  "local": "hardware/kicad/V1A.kicad_dru",
+  "local_sha256": "7f4a7aee88e6968dc970240c161bce9956dc5e450cf4a320ff9e1cceedd16402",
+  "reference": "/Users/quockaiser/Desktop/Research/wt-fabprep/hardware/kicad/V1A.kicad_dru",
+  "reference_sha256": "5bc17bec9a23d92793f3b92ad757cab640b990e2e36f59116109cd998701fb27",
+  "limitations": "Does not establish fabrication acceptance or electrical safety; native DRC must also pass."
+}

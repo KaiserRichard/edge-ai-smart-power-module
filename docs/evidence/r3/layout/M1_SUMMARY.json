@@ -1,0 +1,27 @@
+{
+  "board_sha256": "fbb8515a4d36a86a804300ef5eca630074a7a4cededf3a4cd4ee244ffe4f7bd1",
+  "drc_errors": 53,
+  "drc_warnings": 209,
+  "unconnected": 499,
+  "parity": 0,
+  "all_errors_are_same_footprint_pad_clearance": true,
+  "native_package_errors": {
+    "U101": 13,
+    "U201": 2,
+    "U317": 5,
+    "U316": 4,
+    "Q101": 5,
+    "U302": 6,
+    "U403": 6,
+    "U600": 6,
+    "U306": 6
+  },
+  "path_status": "OPEN",
+  "known_four_send_legs_mohm": 9.961284025420156,
+  "fixed_noncopper_mohm": 38.85554624343832,
+  "partial_model_loop_mohm_excluding_two_OPEN_legs": 48.816830268858475,
+  "partial_model_voltage_upper_bound_V": 4.729236820768109,
+  "partial_model_margin_upper_bound_mV": -20.763179231891193,
+  "warning": "These partial limits apply only to the checker single-corridor model with 1 mm zone width cap; not a solved physical resistance. OPEN legs have no numerical resistance.",
+  "frozen_budget_mohm": 41.85554624343832
+}
