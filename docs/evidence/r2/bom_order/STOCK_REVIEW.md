@@ -1,5 +1,7 @@
 # Exact-stock and alternate review — 2026-10-04
 
+**Historical review:** current defaults, updated offers and the sole owner decision are in [LOCK_REVIEW.md](LOCK_REVIEW.md) and [CLOSE_SUMMARY.md](CLOSE_SUMMARY.md). The earlier findings below remain evidence; a supply gap no longer means the owner must choose another component.
+
 **CONFIRMED:** exact MPNs were searched first; the resume addendum below supersedes the earlier B033 and H01 findings; public indexed snapshots only, no account/cart/login/contact. Stock and prices can change. **OPEN** does not assert a part is nonexistent. Historical facts remain unchanged. New facts Q271–Q280 are in [CLOSE_CATALOG_FACTS.json](../../../../third_party/bom_order/CLOSE_CATALOG_FACTS.json).
 
 **CONFIRMED closure:** B085 TPS7A1601DGNR, Mouser 595-TPS7A1601DGNR, 63 observed / 7 required, USD4.21 each at qty7, minimum/multiple1, factory16 weeks; exact original MPN. [Source](https://www.mouser.com/es/ProductDetail/Texas-Instruments/TPS7A1601DGNR?qs=KC2rBGieF4oE7JWkZS%2FgAQ%3D%3D), accessed2026-10-04, crawl4weeks. Incoming dates are excluded.

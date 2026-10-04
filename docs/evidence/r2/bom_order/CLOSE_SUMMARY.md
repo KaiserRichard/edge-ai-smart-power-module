@@ -1,56 +1,62 @@
-# BOM close summary — 2026-10-04
+# BOM lock summary — 2026-10-04
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
-**CONFIRMED:** OPEN order rows **27 → 24**. Closed B007, B008, B033, B085; newly OPEN B003 (EOL).
+**Selection OPEN: 24 → 1. Immediate-procurement OPEN: 24 → 13.**
 
-Purchased row without at least one exact/accepted MPN offer with SKU, enough stock, USD price and known multiple, or unresolved lifecycle/exact-code/owner hold. Count once per row; secondary missing channels are not extra blockers.
+23 of the 24 starting rows have reasoned component or build-to-drawing defaults. B045 is the sole value-change decision. Backorders, unpriced quotes and unconfirmed stock remain visible supply gaps; they are not requests for the owner to choose a component.
 
-Literal CSV cells equal to OPEN: 1461 → 1462; rows containing OPEN text: 109 → 109. These secondary metrics include absent supplier channels and unneeded alternates, so they are not a blocker count. The CSV columns are unchanged.
+The procurement count includes complete offers in their published currencies, without conversion or mixing regional snapshots. NRND/EOL labels remain visible; the five exact Murata selections have an explicit finite-three-board disposition. The previous 27→24 review is preserved in LOCK_BASELINE.json and the original CLOSE evidence.
 
-## Selected alternates
-
-| Row | Captured original → selected alternate | Reason / bias evidence | Stock route |
-|---|---|---|---|
-| B007 | GRM21BR71E475KA73L → GRM21BZ71E475KE15L | Original NRND/EOL; retain nominal capacitance, dielectric and footprint CALCULATED worst ratio 98.45%: 4.88147 → 4.80601 µF at 2.5 V (C302). | mouser |
-| B008 | GRM21BR71H105KA12L → GCM21BR71H105KA03L | Original NRND/EOL; retain nominal capacitance, dielectric and footprint CALCULATED worst ratio 98.86%: 0.440358 → 0.43534 µF at 35 V (C307). | digikey |
-| B033 | CSD18540Q5B → CSD18540Q5BT | Exact original out of stock; manufacturer confirms same device/package in 250-piece instead of 2500-piece reels. | mouser |
-
-**CONFIRMED exact-part closure:** B085 retains TPS7A1601DGNR; Mouser Q277 stock63 / required7, USD4.21 each. This is not a component substitution.
-
-[Capacitor review](CAPACITOR_REVIEW.md) contains every original/alternate effective capacitance at the evaluated net voltages, manufacturer provenance and timing holds. [Stock review](STOCK_REVIEW.md) records exact-first sourcing and the TI carrier-only decision. Prices/stock are dated indexed snapshots, not live reservations.
+| Row | Chosen MPN | Selection | Reason | Route |
+|---|---|---|---|---|
+| B001 | GRM32ER72A105KA01L | LOCKED | Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build. | L001 |
+| B002 | GRM188R71H104KA93D | LOCKED | Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build. | L002 |
+| B003 | GRM32ER71H106KA12L | LOCKED | Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build. | L003 |
+| B004 | GRM21BR71E105KA99L | LOCKED | Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build. | L004 |
+| B009 | PCH1V471MCL1GS | LOCKED | Keep exact 470 uF/35 V polymer bank, ESR and 10x16 mm case; factory quote default. | Nichicon exact-part RFQ; price/stock/MOQ OPEN; no quote requested. |
+| B011 | C3216X7R1H475K160AC | LOCKED | Production 4.7 uF/50 V/X7R/1206; AC characterized family is the disclosed AB bias proxy. | E001: Newark 95Y0089, 5 cut-tape pieces. |
+| B013 | GRM1885C1H330JA01D | LOCKED | Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build. | L005 |
+| B014 | EEU-FR1E221 | LOCKED | Exact straight-lead 220 uF/25 V FR, 8 mm diameter/3.5 mm pitch; no ESR or hold-up change. | E002: DigiKey Ireland P124223-ND, 8 bulk pieces; EUR kept separate. |
+| B015 | SMCJ36CA | LOCKED | Preserve exact Littelfuse bidirectional 36 V SMC and frozen clamp; reject other makers same-number TVS. | Mouser 576-SMCJ36CA or DigiKey SMCJ36CALFCT-ND backorder; four pieces. |
+| B026 | CUSTOM-FX-CU-01 RevA | LOCKED | Lock C110 30x15x2 mm, M4/20 mm drawing and tin finish; installed current/contact resistance are bench checks. | Make-to-drawing 24 straps; fabricator quotation OPEN, selection closed. |
+| B038 | TNPW0805348KBEEA | LOCKED | Keep 348 kohm, 0.1%, 25 ppm/K TNPW0805; lower-power alternatives fail the rating rule. | LCSC C1709278 / Vishay authorized-distributor exact backorder or quote; five pieces. |
+| B045 | TNPW060324K4BEEA | OPEN | 24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value. | Do not order a constructed MPN; OWNER_DECISIONS.md A/B required. |
+| B053 | WFMB2512R0330FEA | LOCKED | Exact 33 mohm WFM, 1%, 50 ppm/K; custom lands match maker 1.55x3.60 mm pads/4.40 mm gap. | E003: RS Australia 188-0668; 55 pieces in tapes of five. |
+| B068 | TNPW0805365KBEEA | LOCKED | Keep exact 365 kohm, 0.1%, 25 ppm/K divider parts; preserve supervisor thresholds and power rating. | Mouser 71-TNPW0805365KBEEA backorder/quote; eight pieces, price/availability OPEN. |
+| B080 | TPS26630RGER | LOCKED | Keep TI TPS26630 RGE24 with MODE pin11 NC for latch-off; no clone or variant change. | Mouser 595-TPS26630RGER backorder; four cut-tape pieces. |
+| B093 | INA228AIDGSR | LOCKED | Keep INA228 DGS10, range, pinout, calibration and telemetry interface; no monitor substitution. | DigiKey 296-INA228AIDGSRCT-ND backorder; four cut-tape pieces. |
+| H01 | 1777989 | LOCKED | Manufacturer-listed screw-flange mate for 1776508; preserve J502 interface. | E004: Newark 69R9824, four pieces. |
+| H05 | 3-87456-6 | LOCKED | Keep 40-position housing and 87309-9 contacts; preserve frozen Pi power-only pin allocation. | DigiKey A3044-ND exact housing backorder; four pieces. |
+| H08 | 8521 010100 | LOCKED | Keep frozen black AWG16 conductor; one 100-foot spool covers J502 and added bench input leads. | E005: Mouser Europe 566-8521-100-10, one spool; EUR preserved. |
+| M01 | 00944 12 | LOCKED | Exact M4x12 ISO4762 A2-70 bolt, 7 mm head, selected to the existing force-link drawing. | Würth article 00944 12; 48 pieces minimum; pack/quote OPEN. |
+| M02 | 527381 | LOCKED | Plain A2 stainless washer, 4.3 mm ID/9 mm OD/0.8 mm thick, as specified. | RS 527-381 / Distrelec 30417580; one bag250 covers96; price/stock confirmation OPEN. |
+| M03 | 6655609 | LOCKED | M4 A4 stainless all-metal Aerotight nut; no nylon insert; 7 mm wrench size. | RS US 70826017; two packs25 cover48, stock quantity basis requires reconfirmation. |
+| O01 | XHP-2; XHP-4; SXH-001T-P0.6; VHR-2N; SVH-41T-P1.1; 8125SHZBE; 3050 BK005; 3050 WH005 | LOCKED | Define four complete input/control/I2C kits with keyed mates, gold dry contacts, labelled flying leads and manual links. | Order BOM_ACCESSORIES.csv O01.*; reuse H07/H08 spools for input leads; no duplicate spool charge. |
+| O02 | 507302B00000G; 4880SG | LOCKED | Three individual TO-220 bolt-on sinks and insulating mounting kits per board; reserve envelope in layout. | Order BOM_ACCESSORIES.csv O02.*: 12 sinks and12 kits for four complete sets. |
 
 ## Needs owner decision
 
-| Row | MPN / purpose | Reason |
+1. **B045 — A (recommended):** 24.6k, TNPW060324K6BEEA; recalculate lower setpoint. **B:** Custom 24.4k; preserve value, await manufacturer acceptance. **Answer A or B.**
+
+## Supply gaps
+
+| Row | Selected MPN | Remaining supply action |
 |---|---|---|
-| B001 | GRM32ER72A105KA01L | original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute. |
-| B002 | GRM188R71H104KA93D | C103 sets input DVDT/startup; C401 sets telemetry filter timing. Different bias behavior needs owner timing review before a grouped-row substitution. |
-| B003 | GRM32ER71H106KA12L | original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute. |
-| B004 | GRM21BR71E105KA99L | C374 sets HOLD_SLEW_C timing and >=0.5 uF requirement; changing its bias curve needs owner timing review. |
-| B009 | PCH1V471MCL1GS | Exact PCH1V471MCL1GS supplier quote required; another bank capacitor changes ESR/ESL, energy and fault behavior. |
-| B011 | C3216X7R1H475K160AB | C3216X7R1H475K160AB ordering code unverified; AC candidate needs bias, lands and converter review. |
-| B013 | GRM1885C1H330JA01D | C357 is LTC3115 feedforward compensation; loop/timing qualification is not established by nominal C0G and bias matching. |
-| B014 | EEU-FR1E221 | Exact straight-lead EEU-FR1E221 stock absent; another part needs lead-fit, ESR and hold-up review. |
-| B015 | SMCJ36CA | Exact Littelfuse SMCJ36CA stock absent; Diodes same-number candidate needs hot-clamp/pulse/fuse coordination review. |
-| B026 | CUSTOM-FX-CU-01 RevA | Approve force-link finishing/tolerances, joint stack/torque and installed current envelope; fabricator quote required. |
-| B038 | TNPW0805348KBEEA | Exact 348 kohm resistor stock absent; ERA-6AEB3483V power/voltage/thermal margins affect protection threshold. |
-| B045 | TNPW060324K4BEEA | Exact 24.4 kohm order code unverified; rounding changes output setpoint and Sheet03 path budget. |
-| B053 | WFMB2512R0330FEA | 53 exact WFMB2512R0330FEA ballast parts unavailable; 1 W WSL candidate needs WFM-land, pulse, thermal and sharing review. |
-| B068 | TNPW0805365KBEEA | Exact 365 kohm resistor stock absent; Panasonic candidate also lacks stock and threshold power/voltage/TCR review. |
-| B080 | TPS26630RGER | TPS26630RGER/RGET stock absent; preserve latch-off variant, timing, current limit and RGE pinout. |
-| B093 | INA228AIDGSR | INA228AIDGSR stock absent; obsolete/restricted AIDGST proposal rejected. Different monitor needs range/pin/telemetry review. |
-| H01 | 1777989 | Exact 1777989 stock absent in newer Mouser/DigiKey snapshots; confirm source for the selected mating plug. |
-| H05 | 3-87456-6 | Exact 3-87456-6 housing stock absent; marketplace supply is not accepted; confirm exact housing source. |
-| H08 | 8521 010100 | Exact 8521 010100 needs one coherent supplier SKU/stock/USD price/pack offer for a 100 ft spool. |
-| M01 | M4 bolts for seven links | Choose and quote exact M4x12 A2-70 bolt code after force-link joint-stack approval (48 required). |
-| M02 | M4 washers for seven links | Choose and quote exact 4.3/9/0.8 mm washer code and finish (96 required). |
-| M03 | M4 nuts for seven links | Choose and quote exact all-metal M4 nut code/finish after stack/torque review (48 required). |
-| O01 | Input / control / I2C mating harnesses | Define input/control/I2C mating harnesses, contacts, wire and manual links before quantities and sourcing. |
-| O02 | Thermal / assembly accessories | Define thermal interfaces, live-tab insulation and mounting after thermal/layout review before sourcing. |
+| B009 | PCH1V471MCL1GS | Selection LOCKED; supply only: Nichicon exact-part RFQ; price/stock/MOQ OPEN; no quote requested. |
+| B015 | SMCJ36CA | Selection LOCKED; supply only: Mouser 576-SMCJ36CA or DigiKey SMCJ36CALFCT-ND backorder; four pieces. |
+| B026 | CUSTOM-FX-CU-01 RevA | Selection LOCKED; supply only: Make-to-drawing 24 straps; fabricator quotation OPEN, selection closed. |
+| B038 | TNPW0805348KBEEA | Selection LOCKED; supply only: LCSC C1709278 / Vishay authorized-distributor exact backorder or quote; five pieces. |
+| B045 | TNPW060324K4BEEA | 24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value. |
+| B068 | TNPW0805365KBEEA | Selection LOCKED; supply only: Mouser 71-TNPW0805365KBEEA backorder/quote; eight pieces, price/availability OPEN. |
+| B080 | TPS26630RGER | Selection LOCKED; supply only: Mouser 595-TPS26630RGER backorder; four cut-tape pieces. |
+| B093 | INA228AIDGSR | Selection LOCKED; supply only: DigiKey 296-INA228AIDGSRCT-ND backorder; four cut-tape pieces. |
+| H05 | 3-87456-6 | Selection LOCKED; supply only: DigiKey A3044-ND exact housing backorder; four pieces. |
+| M01 | 00944 12 | Selection LOCKED; supply only: Würth article 00944 12; 48 pieces minimum; pack/quote OPEN. |
+| M02 | 527381 | Selection LOCKED; supply only: RS 527-381 / Distrelec 30417580; one bag250 covers96; price/stock confirmation OPEN. |
+| M03 | 6655609 | Selection LOCKED; supply only: RS US 70826017; two packs25 cover48, stock quantity basis requires reconfirmation. |
+| O01 | XHP-2; XHP-4; SXH-001T-P0.6; VHR-2N; SVH-41T-P1.1; 8125SHZBE; 3050 BK005; 3050 WH005 | Selection LOCKED; supply only: Order BOM_ACCESSORIES.csv O01.*; reuse H07/H08 spools for input leads; no duplicate spool charge. |
 
-**CALCULATED force-link screen:** [30×15×2 mm C110 strap](FORCE_LINK_DRAWING.md), 20 mm M4 pitch, conditional 8 A / 20 K rise at 40°C ambient; contact and pulse qualifications remain OPEN. No verified catalog equivalent.
+[Lock review](LOCK_REVIEW.md) records lands, ratings, frozen functions and the disclosed C351 family proxy. [Accessory definition](ACCESSORY_REVIEW.md) and [sub-BOM](BOM_ACCESSORIES.csv) close the harness/thermal identities. [Force-link drawing](FORCE_LINK_DRAWING.md): installed current, contact resistance, torque and pulse envelope are **bench check, does not block layout**.
 
-## Validation and handback
-
-Run `python3 -B docs/evidence/r2/bom_order/validate.py` and `python3 -B -m unittest discover -s tests -p test_bom_order.py -v`. [VALIDATION.json](VALIDATION.json) records document/evidence checks; [CLOSE_EXECUTION.md](CLOSE_EXECUTION.md) records execution and Git limitations. No electrical-release claim follows from these checks. The captured source BOM and all hardware remain unchanged; ERC/DRC were not rerun. R2 remains blocked; no later gate is advanced.
+Run `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](VALIDATION.json) and [LOCK_EXECUTION.md](LOCK_EXECUTION.md) record results and Git limitations. Hardware and captured source identities are unchanged. R2 electrical release remains BLOCKED; no later gate is advanced.

@@ -1,0 +1,684 @@
+{
+  "B001": {
+    "mpn": "GRM32ER72A105KA01L",
+    "manufacturer": "Murata Electronics",
+    "captured_mpn": "GRM32ER72A105KA01L",
+    "refdes": [
+      "C101",
+      "C102",
+      "C378"
+    ],
+    "footprints": [
+      "Capacitor_SMD:C_1210_3225Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact_limited_build",
+    "reason": "Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build.",
+    "offer_evidence": "L001",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "ceff_ratio": 1.0,
+    "lifecycle_risk": "Residual stock; no replenishment guarantee; re-review future builds.",
+    "electrical_delta": "Zero component change; existing untested electrical gates remain.",
+    "sources": [
+      "MURATA",
+      "FREEZE"
+    ],
+    "procurement_route": "L001"
+  },
+  "B002": {
+    "mpn": "GRM188R71H104KA93D",
+    "manufacturer": "Murata Electronics",
+    "captured_mpn": "GRM188R71H104KA93D",
+    "refdes": [
+      "C103",
+      "C203",
+      "C204",
+      "C205",
+      "C303",
+      "C304",
+      "C308",
+      "C354",
+      "C355",
+      "C364",
+      "C368",
+      "C369",
+      "C370",
+      "C376",
+      "C380",
+      "C401",
+      "C402",
+      "C405",
+      "C406",
+      "C604",
+      "C609",
+      "C640",
+      "C642",
+      "C644",
+      "C647",
+      "C651",
+      "C710",
+      "C711",
+      "C712",
+      "C714",
+      "C715",
+      "C716",
+      "C717",
+      "C723",
+      "C728",
+      "C730",
+      "C731",
+      "C732",
+      "C733",
+      "C754",
+      "C756",
+      "C761",
+      "C762"
+    ],
+    "footprints": [
+      "Capacitor_SMD:C_0603_1608Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact_limited_build",
+    "reason": "Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build.",
+    "offer_evidence": "L002",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "ceff_ratio": 1.0,
+    "lifecycle_risk": "Residual stock; no replenishment guarantee; re-review future builds.",
+    "electrical_delta": "Zero component change; existing untested electrical gates remain.",
+    "sources": [
+      "MURATA",
+      "FREEZE"
+    ],
+    "procurement_route": "L002"
+  },
+  "B003": {
+    "mpn": "GRM32ER71H106KA12L",
+    "manufacturer": "Murata Electronics",
+    "captured_mpn": "GRM32ER71H106KA12L",
+    "refdes": [
+      "C201",
+      "C202",
+      "C305",
+      "C306",
+      "C352",
+      "C377",
+      "C601",
+      "C602",
+      "C660"
+    ],
+    "footprints": [
+      "Capacitor_SMD:C_1210_3225Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact_limited_build",
+    "reason": "Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build.",
+    "offer_evidence": "L003",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "ceff_ratio": 1.0,
+    "lifecycle_risk": "Residual stock; no replenishment guarantee; re-review future builds.",
+    "electrical_delta": "Zero component change; existing untested electrical gates remain.",
+    "sources": [
+      "MURATA",
+      "FREEZE"
+    ],
+    "procurement_route": "L003"
+  },
+  "B004": {
+    "mpn": "GRM21BR71E105KA99L",
+    "manufacturer": "Murata Electronics",
+    "captured_mpn": "GRM21BR71E105KA99L",
+    "refdes": [
+      "C206",
+      "C301",
+      "C309",
+      "C365",
+      "C367",
+      "C374",
+      "C375",
+      "C600"
+    ],
+    "footprints": [
+      "Capacitor_SMD:C_0805_2012Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact_limited_build",
+    "reason": "Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build.",
+    "offer_evidence": "L004",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "ceff_ratio": 1.0,
+    "lifecycle_risk": "Residual stock; no replenishment guarantee; re-review future builds.",
+    "electrical_delta": "Zero component change; existing untested electrical gates remain.",
+    "sources": [
+      "MURATA",
+      "FREEZE"
+    ],
+    "procurement_route": "L004"
+  },
+  "B013": {
+    "mpn": "GRM1885C1H330JA01D",
+    "manufacturer": "Murata Electronics",
+    "captured_mpn": "GRM1885C1H330JA01D",
+    "refdes": [
+      "C357"
+    ],
+    "footprints": [
+      "Capacitor_SMD:C_0603_1608Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact_limited_build",
+    "reason": "Exact original in stock; preserves value, package, dielectric, bias and all frozen timing. EOL/NRND accepted only for this three-board build.",
+    "offer_evidence": "L005",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "ceff_ratio": 1.0,
+    "lifecycle_risk": "Residual stock; no replenishment guarantee; re-review future builds.",
+    "electrical_delta": "Zero component change; existing untested electrical gates remain.",
+    "sources": [
+      "MURATA",
+      "FREEZE"
+    ],
+    "procurement_route": "L005"
+  },
+  "B009": {
+    "mpn": "PCH1V471MCL1GS",
+    "manufacturer": "Nichicon",
+    "captured_mpn": "PCH1V471MCL1GS",
+    "refdes": [
+      "C330",
+      "C331",
+      "C332",
+      "C333",
+      "C334",
+      "C335",
+      "C336",
+      "C337",
+      "C340",
+      "C341",
+      "C342",
+      "C343"
+    ],
+    "footprints": [
+      "V1A_Qualified:Nichicon_PCH_10x16"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Keep exact 470 uF/35 V polymer bank, ESR and 10x16 mm case; factory quote default.",
+    "sources": [
+      "PCH",
+      "FREEZE"
+    ],
+    "procurement_route": "Nichicon exact-part RFQ; price/stock/MOQ OPEN; no quote requested.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "B011": {
+    "mpn": "C3216X7R1H475K160AC",
+    "manufacturer": "TDK",
+    "captured_mpn": "C3216X7R1H475K160AB",
+    "refdes": [
+      "C351"
+    ],
+    "footprints": [
+      "Capacitor_SMD:C_1206_3216Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "family_proxy",
+    "reason": "Production 4.7 uF/50 V/X7R/1206; AC characterized family is the disclosed AB bias proxy.",
+    "sources": [
+      "TDK",
+      "TDK_BIAS",
+      "FREEZE"
+    ],
+    "procurement_route": "E001: Newark 95Y0089, 5 cut-tape pieces.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits.",
+    "nominal_uf": 4.7,
+    "voltage_v": 50,
+    "dielectric": "X7R",
+    "tolerance_percent": 10,
+    "proxy_mpn": "C3216X7R1H475K160AC",
+    "proxy_is_assumption": true,
+    "bias_tests": [
+      {
+        "refdes": "C351",
+        "nets": [
+          "/03_OUTPUT_PROTECTION/AUX_LIMITED",
+          "/GND"
+        ],
+        "dc_voltage_v": 26,
+        "ratio": 1.0,
+        "status": "ESTIMATED_SAME_FAMILY_PROXY",
+        "basis": "Both original AB estimate and selected AC use the published AC curve; not measured AB equivalence."
+      },
+      {
+        "refdes": "C351",
+        "nets": [
+          "/03_OUTPUT_PROTECTION/AUX_LIMITED",
+          "/GND"
+        ],
+        "dc_voltage_v": 30.788889,
+        "ratio": 1.0,
+        "status": "ESTIMATED_SAME_FAMILY_PROXY",
+        "basis": "Both original AB estimate and selected AC use the published AC curve; not measured AB equivalence."
+      },
+      {
+        "refdes": "C351",
+        "nets": [
+          "/03_OUTPUT_PROTECTION/AUX_LIMITED",
+          "/GND"
+        ],
+        "dc_voltage_v": 35,
+        "ratio": 1.0,
+        "status": "ESTIMATED_SAME_FAMILY_PROXY",
+        "basis": "Both original AB estimate and selected AC use the published AC curve; not measured AB equivalence."
+      }
+    ],
+    "land_check": "1206 pads x=+/-1.475, 1.15x1.8 mm; outer span4.10/gap1.80. Body3.2+/-0.2 x1.6+/-0.2, terminal>=0.2. Full terminal overlap; maker preferred gap2.0-2.4 differs from existing IPC lands. Retain footprint; process/paste review at R3."
+  },
+  "B014": {
+    "mpn": "EEU-FR1E221",
+    "manufacturer": "Panasonic",
+    "captured_mpn": "EEUFR1E221",
+    "refdes": [
+      "C358",
+      "C359"
+    ],
+    "footprints": [
+      "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Exact straight-lead 220 uF/25 V FR, 8 mm diameter/3.5 mm pitch; no ESR or hold-up change.",
+    "sources": [
+      "PANASONIC"
+    ],
+    "procurement_route": "E002: DigiKey Ireland P124223-ND, 8 bulk pieces; EUR kept separate.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "B015": {
+    "mpn": "SMCJ36CA",
+    "manufacturer": "Littelfuse",
+    "captured_mpn": "SMCJ36CA",
+    "refdes": [
+      "D101"
+    ],
+    "footprints": [
+      "Diode_SMD:D_SMC"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Preserve exact Littelfuse bidirectional 36 V SMC and frozen clamp; reject other makers same-number TVS.",
+    "sources": [
+      "LITTELFUSE",
+      "FREEZE"
+    ],
+    "procurement_route": "Mouser 576-SMCJ36CA or DigiKey SMCJ36CALFCT-ND backorder; four pieces.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "B026": {
+    "mpn": "CUSTOM-FX-CU-01 RevA",
+    "manufacturer": "Project-defined",
+    "captured_mpn": "CUSTOM-FX-CU-01 RevA",
+    "refdes": [
+      "JP101",
+      "JP201",
+      "JP202",
+      "JP301",
+      "JP330",
+      "JP331",
+      "JP501"
+    ],
+    "footprints": [
+      "V1A_Qualified:ForceLink_M4_P20"
+    ],
+    "selection": "LOCKED",
+    "kind": "drawing",
+    "reason": "Lock C110 30x15x2 mm, M4/20 mm drawing and tin finish; installed current/contact resistance are bench checks.",
+    "sources": [
+      "FREEZE",
+      "FORCE_DRAWING"
+    ],
+    "procurement_route": "Make-to-drawing 24 straps; fabricator quotation OPEN, selection closed.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits."
+  },
+  "B038": {
+    "mpn": "TNPW0805348KBEEA",
+    "manufacturer": "Vishay",
+    "captured_mpn": "TNPW0805348KBEEA",
+    "refdes": [
+      "R103"
+    ],
+    "footprints": [
+      "Resistor_SMD:R_0805_2012Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Keep 348 kohm, 0.1%, 25 ppm/K TNPW0805; lower-power alternatives fail the rating rule.",
+    "sources": [
+      "TNPW",
+      "FREEZE"
+    ],
+    "procurement_route": "LCSC C1709278 / Vishay authorized-distributor exact backorder or quote; five pieces.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "B045": {
+    "mpn": "TNPW060324K4BEEA",
+    "manufacturer": "Vishay",
+    "captured_mpn": "TNPW060324K4BEEA",
+    "refdes": [
+      "R203"
+    ],
+    "footprints": [
+      "Resistor_SMD:R_0603_1608Metric"
+    ],
+    "selection": "OPEN",
+    "kind": "hard_stop",
+    "reason": "24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value.",
+    "sources": [
+      "TNPW",
+      "FREEZE"
+    ],
+    "procurement_route": "Do not order a constructed MPN; OWNER_DECISIONS.md A/B required.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits.",
+    "recommended_candidate": "TNPW060324K6BEEA"
+  },
+  "B053": {
+    "mpn": "WFMB2512R0330FEA",
+    "manufacturer": "Vishay",
+    "captured_mpn": "WFMB2512R0330FEA",
+    "refdes": [
+      "R308",
+      "R309",
+      "R310",
+      "R311",
+      "R380",
+      "R381",
+      "R382",
+      "R383",
+      "R386",
+      "R387",
+      "R388",
+      "R389",
+      "R390",
+      "R391",
+      "R392",
+      "R393"
+    ],
+    "footprints": [
+      "V1A_Qualified:Vishay_WFM2512"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Exact 33 mohm WFM, 1%, 50 ppm/K; custom lands match maker 1.55x3.60 mm pads/4.40 mm gap.",
+    "sources": [
+      "WFM",
+      "FREEZE"
+    ],
+    "procurement_route": "E003: RS Australia 188-0668; 55 pieces in tapes of five.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "B068": {
+    "mpn": "TNPW0805365KBEEA",
+    "manufacturer": "Vishay",
+    "captured_mpn": "TNPW0805365KBEEA",
+    "refdes": [
+      "R376",
+      "R378"
+    ],
+    "footprints": [
+      "Resistor_SMD:R_0805_2012Metric"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Keep exact 365 kohm, 0.1%, 25 ppm/K divider parts; preserve supervisor thresholds and power rating.",
+    "sources": [
+      "TNPW",
+      "FREEZE"
+    ],
+    "procurement_route": "Mouser 71-TNPW0805365KBEEA backorder/quote; eight pieces, price/availability OPEN.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "B080": {
+    "mpn": "TPS26630RGER",
+    "manufacturer": "Texas Instruments",
+    "captured_mpn": "TPS26630RGER",
+    "refdes": [
+      "U101"
+    ],
+    "footprints": [
+      "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Keep TI TPS26630 RGE24 with MODE pin11 NC for latch-off; no clone or variant change.",
+    "sources": [
+      "TPS2663",
+      "FREEZE"
+    ],
+    "procurement_route": "Mouser 595-TPS26630RGER backorder; four cut-tape pieces.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "B093": {
+    "mpn": "INA228AIDGSR",
+    "manufacturer": "Texas Instruments",
+    "captured_mpn": "INA228AIDGSR",
+    "refdes": [
+      "U401"
+    ],
+    "footprints": [
+      "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Keep INA228 DGS10, range, pinout, calibration and telemetry interface; no monitor substitution.",
+    "sources": [
+      "INA228",
+      "FREEZE"
+    ],
+    "procurement_route": "DigiKey 296-INA228AIDGSRCT-ND backorder; four cut-tape pieces.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "H01": {
+    "mpn": "1777989",
+    "manufacturer": "Phoenix Contact",
+    "captured_mpn": "1777989",
+    "refdes": [
+      "J502 mating plug"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Manufacturer-listed screw-flange mate for 1776508; preserve J502 interface.",
+    "sources": [
+      "PHOENIX",
+      "FREEZE"
+    ],
+    "procurement_route": "E004: Newark 69R9824, four pieces.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "H05": {
+    "mpn": "3-87456-6",
+    "manufacturer": "TE Connectivity",
+    "captured_mpn": "3-87456-6",
+    "refdes": [
+      "HARNESS full Pi 2x20 socket housing"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Keep 40-position housing and 87309-9 contacts; preserve frozen Pi power-only pin allocation.",
+    "sources": [
+      "TE",
+      "FREEZE"
+    ],
+    "procurement_route": "DigiKey A3044-ND exact housing backorder; four pieces.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "H08": {
+    "mpn": "8521 010100",
+    "manufacturer": "Belden",
+    "captured_mpn": "8521 010100",
+    "refdes": [
+      "HARNESS return AWG16 trunk"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "exact",
+    "reason": "Keep frozen black AWG16 conductor; one 100-foot spool covers J502 and added bench input leads.",
+    "sources": [
+      "BELDEN",
+      "FREEZE"
+    ],
+    "procurement_route": "E005: Mouser Europe 566-8521-100-10, one spool; EUR preserved.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "None: retain original identity."
+  },
+  "M01": {
+    "mpn": "00944 12",
+    "manufacturer": "Würth",
+    "captured_mpn": "N/A accessory",
+    "refdes": [
+      "M4 bolts for seven links"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "mechanical",
+    "reason": "Exact M4x12 ISO4762 A2-70 bolt, 7 mm head, selected to the existing force-link drawing.",
+    "sources": [
+      "WURTH",
+      "FORCE_DRAWING"
+    ],
+    "procurement_route": "Würth article 00944 12; 48 pieces minimum; pack/quote OPEN.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits."
+  },
+  "M02": {
+    "mpn": "527381",
+    "manufacturer": "RS PRO",
+    "captured_mpn": "N/A accessory",
+    "refdes": [
+      "M4 washers for seven links"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "mechanical",
+    "reason": "Plain A2 stainless washer, 4.3 mm ID/9 mm OD/0.8 mm thick, as specified.",
+    "sources": [
+      "WASHER",
+      "FORCE_DRAWING"
+    ],
+    "procurement_route": "RS 527-381 / Distrelec 30417580; one bag250 covers96; price/stock confirmation OPEN.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits."
+  },
+  "M03": {
+    "mpn": "6655609",
+    "manufacturer": "RS PRO",
+    "captured_mpn": "N/A accessory",
+    "refdes": [
+      "M4 nuts for seven links"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "mechanical",
+    "reason": "M4 A4 stainless all-metal Aerotight nut; no nylon insert; 7 mm wrench size.",
+    "sources": [
+      "NUT",
+      "FORCE_DRAWING"
+    ],
+    "procurement_route": "RS US 70826017; two packs25 cover48, stock quantity basis requires reconfirmation.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits."
+  },
+  "O01": {
+    "mpn": "XHP-2; XHP-4; SXH-001T-P0.6; VHR-2N; SVH-41T-P1.1; 8125SHZBE; 3050 BK005; 3050 WH005",
+    "manufacturer": "JST / C&K / Alpha Wire",
+    "captured_mpn": "N/A accessory",
+    "refdes": [
+      "Input / control / I2C mating harnesses"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "kit",
+    "reason": "Define four complete input/control/I2C kits with keyed mates, gold dry contacts, labelled flying leads and manual links.",
+    "sources": [
+      "JST_XH",
+      "JST_VH",
+      "CK",
+      "ALPHA",
+      "FREEZE"
+    ],
+    "procurement_route": "Order BOM_ACCESSORIES.csv O01.*; reuse H07/H08 spools for input leads; no duplicate spool charge.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits."
+  },
+  "O02": {
+    "mpn": "507302B00000G; 4880SG",
+    "manufacturer": "Boyd / Aavid",
+    "captured_mpn": "N/A accessory",
+    "refdes": [
+      "Thermal / assembly accessories"
+    ],
+    "footprints": [
+      "Off-board"
+    ],
+    "selection": "LOCKED",
+    "kind": "kit",
+    "reason": "Three individual TO-220 bolt-on sinks and insulating mounting kits per board; reserve envelope in layout.",
+    "sources": [
+      "BOYD",
+      "ST"
+    ],
+    "procurement_route": "Order BOM_ACCESSORIES.csv O02.*: 12 sinks and12 kits for four complete sets.",
+    "review": "LOCK_REVIEW.md",
+    "access_date": "2026-10-04",
+    "electrical_delta": "See scoped review; no CAD edits."
+  }
+}

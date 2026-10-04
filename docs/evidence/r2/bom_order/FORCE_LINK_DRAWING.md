@@ -1,5 +1,7 @@
 # CUSTOM-FX-CU-01 RevA — make-or-quote drawing / 1 of 1
 
+**Current selection:** the BOM_LOCK_ALL addendum at the end supersedes the earlier owner-selection hold; historical calculations below are retained.
+
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED** · 2026-10-04 · dimensions mm · seven positions / board; order plan **24 straps** for three boards plus spares.
 
 ```text
@@ -40,3 +42,11 @@ TOP (flat, no bend)                       SIDE
 **OPEN:** approve the proposed finishing/tolerances and joint stack/torque, obtain the fabricator quote and exact fastener codes, and establish each installed current waveform/contact-temperature limit. No catalog equivalent is accepted. This drawing supplies the make-or-quote definition; it does not close B026/M01–M03 or authorize fabrication.
 
 **CONFIRMED resume check, 2026-10-04:** all seven captured links use the inspected M4/20 mm footprint and the net pairs above in the [pinned netlist](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/4af7818511076cbbd336880607d262fc311d01bc/docs/evidence/r3/layout_prep/resume/fresh.xml). Re-running the calculator reproduces the committed JSON exactly. All 33 baseline hardware file hashes match. Existing sourced material data and current allocations are retained.
+
+## BOM_LOCK_ALL selection addendum — 2026-10-04
+
+**DECISION:** B026 is closed as an ordering specification to this authored RevA drawing,24 straps. Adopt the stated C11000, tin1–5µm, dimensions/tolerances, deburring and flatness as the quotation default. No footprint, net or nominal geometry changes. M01:Würth00944 12,M4×12A2-70,48 pieces; M02:RS PRO527381,4.3/9/0.8 mm A2 plain washer,96 minimum (one bag250); M03:RS PRO6655609,M4A4all-metal Aerotight,48 minimum (two packs25). [Sources and revisions](../../../../third_party/bom_order/LOCK_SOURCES.json), accessed2026-10-04; [selection rationale](LOCK_REVIEW.md).
+
+**BENCH DISPOSITION:** installed current rating, contact resistance, torque/creep, thread locking, joint temperature, fault-pulse envelope and parasitics are **bench check, does not block layout**. The earlier8 A thermal screen remains conditional and is not a measured rating. The existing1.6 mm board plus2 mm copper plus1.6 mm washer stack leaves6.8 mm of the12 mm shank for the nut and protrusion; verify locking engagement with the actual hardware. Preserve the stated four-wire joint and pulse checks. Supply the straps loose; fit only for the specified discharged test configuration.
+
+**SUPPLY ACTION:** obtain an exact fabricator quote and confirm purchased pack quantities before an authorized order. This is a commercial gap, not an owner decision about a different link. No fabricator was contacted and no manufacturing approval is granted. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**

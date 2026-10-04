@@ -1,5 +1,7 @@
 # Lifecycle capacitor closure — 2026-10-04
 
+**Historical review:** [BOM_LOCK_ALL review](LOCK_REVIEW.md) supersedes this document's selection holds for five exact Murata parts and adds the disclosed C351 family proxy. Original calculations and rejected alternatives below are preserved.
+
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
 **CONFIRMED:** six previously flagged MPNs reviewed; a seventh (GRM32ER71H106KA12L) is also EOL in the [Mouser snapshot](https://www.mouser.fr/fr/ProductDetail/Murata-Electronics/GRM32ER71H106KA12L?qs=6pxx44s1bjkjdm74o%2FrKhg%3D%3D), accessed 2026-10-04. Five candidates pass the Task 1 capacitance screen. Two are selected in the order BOM; three groups remain OPEN for timing/compensation review under Task 2. Two further candidates lack bias evidence. No hardware file changed.
