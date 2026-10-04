@@ -1,0 +1,24 @@
+render_layout_pdf/render_layout_pdf.swift:10: Fatal error: Usage: render_layout_pdf.swift INPUT.pdf OUTPUT_PREFIX
+Stack dump:
+0.	Program arguments: /Library/Developer/CommandLineTools/usr/bin/swift-frontend -frontend -interpret scripts/render_layout_pdf.swift -enable-objc-interop -stack-check -sdk /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -new-driver-path /Library/Developer/CommandLineTools/usr/bin/swift-driver -empty-abi-descriptor -resource-dir /Library/Developer/CommandLineTools/usr/lib/swift -module-name render_layout_pdf -disable-clang-spi -target-sdk-version 15.5 -target-sdk-name macosx15.5 -external-plugin-path /Library/Developer/Developer/usr/lib/swift/host/plugins#/Library/Developer/Developer/usr/bin/swift-plugin-server -external-plugin-path /Library/Developer/Developer/usr/local/lib/swift/host/plugins#/Library/Developer/Developer/usr/bin/swift-plugin-server -in-process-plugin-server-path /Library/Developer/CommandLineTools/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -plugin-path /Library/Developer/CommandLineTools/usr/lib/swift/host/plugins -plugin-path /Library/Developer/CommandLineTools/usr/local/lib/swift/host/plugins -- docs/evidence/r3/layout/resume3/COPPER_AND_SILK.pdf docs/evidence/r3/layout/resume3/LAYER
+1.	Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+2.	Compiling with effective version 5.10
+3.	While running user code "scripts/render_layout_pdf.swift"
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+0  swift-frontend           0x000000010b665818 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 40
+1  swift-frontend           0x000000010b663149 llvm::sys::RunSignalHandlers() + 233
+2  swift-frontend           0x000000010b665dfe SignalHandler(int) + 302
+3  libsystem_platform.dylib 0x00007ff80992031d _sigtramp + 29
+4  libsystem_platform.dylib 0x00007ff7bbccbe10 _sigtramp + 18446744072404777744
+5  libsystem_platform.dylib 0x0000000115f03883 _sigtramp + 18446603375083402627
+6  swift-frontend           0x000000010470fdcf llvm::orc::runAsMain(int (*)(int, char**), llvm::ArrayRef<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>, std::__1::optional<llvm::StringRef>) + 1295
+7  swift-frontend           0x000000010460ab93 swift::SwiftJIT::runMain(llvm::ArrayRef<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>) + 675
+8  swift-frontend           0x0000000104617fdb swift::RunImmediately(swift::CompilerInstance&, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>> const&, swift::IRGenOptions const&, swift::SILOptions const&, std::__1::unique_ptr<swift::SILModule, std::__1::default_delete<swift::SILModule>>&&) + 1435
+9  swift-frontend           0x0000000104596371 processCommandLineAndRunImmediately(swift::CompilerInstance&, std::__1::unique_ptr<swift::SILModule, std::__1::default_delete<swift::SILModule>>&&, llvm::PointerUnion<swift::ModuleDecl*, swift::SourceFile*>, swift::FrontendObserver*, int&) + 545
+10 swift-frontend           0x00000001045906a6 performCompileStepsPostSILGen(swift::CompilerInstance&, std::__1::unique_ptr<swift::SILModule, std::__1::default_delete<swift::SILModule>>, llvm::PointerUnion<swift::ModuleDecl*, swift::SourceFile*>, swift::PrimarySpecificPaths const&, int&, swift::FrontendObserver*) + 2374
+11 swift-frontend           0x000000010458fbb9 swift::performCompileStepsPostSema(swift::CompilerInstance&, int&, swift::FrontendObserver*) + 3385
+12 swift-frontend           0x0000000104593f3d performCompile(swift::CompilerInstance&, int&, swift::FrontendObserver*) + 4845
+13 swift-frontend           0x0000000104591a16 swift::performFrontend(llvm::ArrayRef<char const*>, char const*, void*, swift::FrontendObserver*) + 4518
+14 swift-frontend           0x0000000104500b09 swift::mainEntry(int, char const**) + 3241
+15 dyld                     0x00007ff809542530 start + 3056
+Rendered 1 pages

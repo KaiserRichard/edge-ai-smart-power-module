@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 705, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 689, in main
+    result = check(args.board.read_text(), settings)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 566, in check
+    g, pads = build_graph(b, settings) if b.traces or b.zones else (Graph(), {})
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 512, in build_graph
+    zone_edge(u, v)
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 502, in zone_edge
+    width = corridor_width(a, b, poly, settings.zone_width_cap_mm)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 146, in corridor_width
+    if intersection(a, b, c, d) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 113, in intersection
+    det = cross(u, v)
+          ^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 99, in cross
+    def cross(a, b):
+    
+KeyboardInterrupt

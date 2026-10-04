@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 705, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 689, in main
+    result = check(args.board.read_text(), settings)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 566, in check
+    g, pads = build_graph(b, settings) if b.traces or b.zones else (Graph(), {})
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 512, in build_graph
+    zone_edge(u, v)
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 502, in zone_edge
+    width = corridor_width(a, b, poly, settings.zone_width_cap_mm)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 148, in corridor_width
+    distance = min(distance, projection(a, c, d)[2], projection(b, c, d)[2],
+                                                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 106, in projection
+    t = 0 if length2 == 0 else max(0, min(1, sum(x*y for x, y in zip(sub(p, a), d))/length2))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py", line 106, in <genexpr>
+    t = 0 if length2 == 0 else max(0, min(1, sum(x*y for x, y in zip(sub(p, a), d))/length2))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

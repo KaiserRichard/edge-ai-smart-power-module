@@ -1,0 +1,1237 @@
+{
+  "status": "BLOCKED",
+  "count": 53,
+  "all_baseline_error_pairs_reproduced_without_routes_or_zones": true,
+  "by_footprint": {
+    "U101": 13,
+    "U201": 2,
+    "U317": 5,
+    "U316": 4,
+    "Q101": 5,
+    "U302": 6,
+    "U403": 6,
+    "U600": 6,
+    "U306": 6
+  },
+  "violations": [
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2993 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 62.75
+          },
+          "uuid": "f879847c-c4fb-45dd-af23-d2408e4eb137"
+        },
+        {
+          "description": "Pad 24 [unconnected-(U101-NC-Pad24)] of U101 on F.Cu",
+          "pos": {
+            "x": 40.75,
+            "y": 62.0375
+          },
+          "uuid": "7224d6a1-77b6-4631-a2ea-cdcbaf90774f"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 62.75
+          },
+          "uuid": "f879847c-c4fb-45dd-af23-d2408e4eb137"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 2 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 63.25
+          },
+          "uuid": "38ef4851-2eba-401b-9174-3ffd7a984395"
+        },
+        {
+          "description": "Pad 3 [/01_INPUT_PROTECTION/INPUT_BGATE] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 63.75
+          },
+          "uuid": "76b98054-2521-45b9-be11-7ef5390f536c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 2 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 63.25
+          },
+          "uuid": "38ef4851-2eba-401b-9174-3ffd7a984395"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [/01_INPUT_PROTECTION/INPUT_BGATE] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 63.75
+          },
+          "uuid": "76b98054-2521-45b9-be11-7ef5390f536c"
+        },
+        {
+          "description": "Pad 4 [/01_INPUT_PROTECTION/INPUT_DRV] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 64.25
+          },
+          "uuid": "a2d45516-e926-4534-badf-3dfcc1985c8c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [/01_INPUT_PROTECTION/INPUT_BGATE] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 63.75
+          },
+          "uuid": "76b98054-2521-45b9-be11-7ef5390f536c"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 4 [/01_INPUT_PROTECTION/INPUT_DRV] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 64.25
+          },
+          "uuid": "a2d45516-e926-4534-badf-3dfcc1985c8c"
+        },
+        {
+          "description": "Pad 5 [/VIN_FUSED] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 64.75
+          },
+          "uuid": "f2db7bf5-1a3f-44b7-ad02-dd57307e1445"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 4 [/01_INPUT_PROTECTION/INPUT_DRV] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 64.25
+          },
+          "uuid": "a2d45516-e926-4534-badf-3dfcc1985c8c"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 5 [/VIN_FUSED] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 64.75
+          },
+          "uuid": "f2db7bf5-1a3f-44b7-ad02-dd57307e1445"
+        },
+        {
+          "description": "Pad 6 [/01_INPUT_PROTECTION/INPUT_UVLO] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 65.25
+          },
+          "uuid": "1e04617f-bd4d-4285-b1ca-a4b138ca46ff"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 5 [/VIN_FUSED] of U101 on F.Cu",
+          "pos": {
+            "x": 40.0375,
+            "y": 64.75
+          },
+          "uuid": "f2db7bf5-1a3f-44b7-ad02-dd57307e1445"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A normal input voltage screen' clearance 0.2500 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 14 [/01_INPUT_PROTECTION/INPUT_FLT] of U101 on F.Cu",
+          "pos": {
+            "x": 43.9625,
+            "y": 64.75
+          },
+          "uuid": "d3245e57-da56-4576-a641-a55de852fe21"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A normal input voltage screen' clearance 0.2500 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 17 [/01_INPUT_PROTECTION/EFUSE_OUT] of U101 on F.Cu",
+          "pos": {
+            "x": 43.9625,
+            "y": 63.25
+          },
+          "uuid": "69c1908c-518b-49fa-bc3d-c8d7dc0e3d8a"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A normal input voltage screen' clearance 0.2500 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 18 [/01_INPUT_PROTECTION/EFUSE_OUT] of U101 on F.Cu",
+          "pos": {
+            "x": 43.9625,
+            "y": 62.75
+          },
+          "uuid": "73682457-8b3c-429c-add1-63b374e45554"
+        },
+        {
+          "description": "Pad 25 [/GND] of U101 on F.Cu",
+          "pos": {
+            "x": 42.0,
+            "y": 64.0
+          },
+          "uuid": "7fbc9a60-c79c-4fa4-bc89-27b92655c0d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A boosted voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [/GND] of U201 on F.Cu",
+          "pos": {
+            "x": 51.87,
+            "y": 79.75
+          },
+          "uuid": "ca8f9d10-ee38-45b1-b067-234909ae2027"
+        },
+        {
+          "description": "Pad 14 [/02_BUCK_5V/BUCK_CBOOT] of U201 on F.Cu",
+          "pos": {
+            "x": 52.875,
+            "y": 79.4
+          },
+          "uuid": "78215616-f3df-49b3-90a2-adb02605d710"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A boosted voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 13 [/02_BUCK_5V/BUCK_RBOOT] of U201 on F.Cu",
+          "pos": {
+            "x": 53.375,
+            "y": 79.4
+          },
+          "uuid": "9207e972-3d4d-4cb3-89af-0c93e0e53c07"
+        },
+        {
+          "description": "Pad 14 [/02_BUCK_5V/BUCK_CBOOT] of U201 on F.Cu",
+          "pos": {
+            "x": 52.875,
+            "y": 79.4
+          },
+          "uuid": "78215616-f3df-49b3-90a2-adb02605d710"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A normal input voltage screen' clearance 0.2500 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 12 [/03_OUTPUT_PROTECTION/AUX_VCC] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 131.275
+          },
+          "uuid": "1e06cb5c-b97b-40fb-9c29-502f235a34d0"
+        },
+        {
+          "description": "Pad 13 [/03_OUTPUT_PROTECTION/AUX_LIMITED] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 130.625
+          },
+          "uuid": "db919ff6-23c8-4afa-88f3-5aa663040683"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A normal input voltage screen' clearance 0.2500 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 13 [/03_OUTPUT_PROTECTION/AUX_LIMITED] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 130.625
+          },
+          "uuid": "db919ff6-23c8-4afa-88f3-5aa663040683"
+        },
+        {
+          "description": "Pad 14 [/03_OUTPUT_PROTECTION/AUX_VCC] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 129.975
+          },
+          "uuid": "8e22b460-3291-4e15-98c0-ebf67054e0e5"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A boosted voltage screen' clearance 0.6400 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 15 [/03_OUTPUT_PROTECTION/AUX_BST2] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 129.325
+          },
+          "uuid": "3d9dbce7-5381-4b5d-9fb7-1b73b1e7bbad"
+        },
+        {
+          "description": "Pad 16 [/03_OUTPUT_PROTECTION/AUX_BST1] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 128.675
+          },
+          "uuid": "b2e27c4c-2743-4190-ba7e-7a14521b4973"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A boosted voltage screen' clearance 0.6400 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 16 [/03_OUTPUT_PROTECTION/AUX_BST1] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 128.675
+          },
+          "uuid": "b2e27c4c-2743-4190-ba7e-7a14521b4973"
+        },
+        {
+          "description": "Pad 17 [/03_OUTPUT_PROTECTION/AUX_LIMITED] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 128.025
+          },
+          "uuid": "4f97ff0c-b06a-42ab-b419-0e9ca58a0d0c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A normal input voltage screen' clearance 0.2500 mm; actual 0.2000 mm)",
+      "items": [
+        {
+          "description": "Pad 17 [/03_OUTPUT_PROTECTION/AUX_LIMITED] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 128.025
+          },
+          "uuid": "4f97ff0c-b06a-42ab-b419-0e9ca58a0d0c"
+        },
+        {
+          "description": "Pad 18 [/03_OUTPUT_PROTECTION/AUX_SW1] of U317 on F.Cu",
+          "pos": {
+            "x": 72.775,
+            "y": 127.375
+          },
+          "uuid": "361ff63a-7fb3-4600-97d1-681eac555145"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [/03_OUTPUT_PROTECTION/AUX_SNS] of U316 on F.Cu",
+          "pos": {
+            "x": 50.85,
+            "y": 121.675
+          },
+          "uuid": "b64f2b75-8c8f-4fd2-9a23-3e54048b468f"
+        },
+        {
+          "description": "Pad 4 [/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE] of U316 on F.Cu",
+          "pos": {
+            "x": 50.85,
+            "y": 122.325
+          },
+          "uuid": "9b678e16-f424-4823-9345-2f90452bf4cf"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 4 [/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE] of U316 on F.Cu",
+          "pos": {
+            "x": 50.85,
+            "y": 122.325
+          },
+          "uuid": "9b678e16-f424-4823-9345-2f90452bf4cf"
+        },
+        {
+          "description": "Pad 5 [/03_OUTPUT_PROTECTION/AUX_RAW] of U316 on F.Cu",
+          "pos": {
+            "x": 50.85,
+            "y": 122.975
+          },
+          "uuid": "7672f3f4-1bc3-49dd-93ad-933976743597"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 7 [/GND] of U316 on F.Cu",
+          "pos": {
+            "x": 55.15,
+            "y": 123.625
+          },
+          "uuid": "5e4f367c-5cec-4302-90c0-0f1b4d0838ca"
+        },
+        {
+          "description": "Pad 8 [/03_OUTPUT_PROTECTION/AUX_RAW] of U316 on F.Cu",
+          "pos": {
+            "x": 55.15,
+            "y": 122.975
+          },
+          "uuid": "f9d21c49-9735-404a-b6dd-f5e1ae750079"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.2500 mm)",
+      "items": [
+        {
+          "description": "Pad 8 [/03_OUTPUT_PROTECTION/AUX_RAW] of U316 on F.Cu",
+          "pos": {
+            "x": 55.15,
+            "y": 122.975
+          },
+          "uuid": "f9d21c49-9735-404a-b6dd-f5e1ae750079"
+        },
+        {
+          "description": "Pad 9 [/GND] of U316 on F.Cu",
+          "pos": {
+            "x": 55.15,
+            "y": 122.325
+          },
+          "uuid": "f1698c3e-6384-4987-ac50-9d63f0957e92"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.5600 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [/VIN_FUSED] of Q101 on F.Cu",
+          "pos": {
+            "x": 33.565,
+            "y": 63.025
+          },
+          "uuid": "e42652c5-838b-473f-88d8-ab89b81acaef"
+        },
+        {
+          "description": "Pad 5 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of Q101 on F.Cu",
+          "pos": {
+            "x": 35.39,
+            "y": 64.0
+          },
+          "uuid": "e22f2b1b-907e-4a96-9b4d-f91ebbf690f8"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.5600 mm)",
+      "items": [
+        {
+          "description": "Pad 2 [/VIN_FUSED] of Q101 on F.Cu",
+          "pos": {
+            "x": 33.565,
+            "y": 63.675
+          },
+          "uuid": "e33238d5-a453-427d-8666-2e653b819bb1"
+        },
+        {
+          "description": "Pad 5 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of Q101 on F.Cu",
+          "pos": {
+            "x": 35.39,
+            "y": 64.0
+          },
+          "uuid": "e22f2b1b-907e-4a96-9b4d-f91ebbf690f8"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [/VIN_FUSED] of Q101 on F.Cu",
+          "pos": {
+            "x": 33.565,
+            "y": 64.325
+          },
+          "uuid": "49f5a1a9-450f-4c51-abef-d533fa4cce4a"
+        },
+        {
+          "description": "Pad 4 [/01_INPUT_PROTECTION/INPUT_BGATE] of Q101 on F.Cu",
+          "pos": {
+            "x": 33.565,
+            "y": 64.975
+          },
+          "uuid": "527ca980-6b63-4065-8572-17c1c2251ce8"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.5600 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [/VIN_FUSED] of Q101 on F.Cu",
+          "pos": {
+            "x": 33.565,
+            "y": 64.325
+          },
+          "uuid": "49f5a1a9-450f-4c51-abef-d533fa4cce4a"
+        },
+        {
+          "description": "Pad 5 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of Q101 on F.Cu",
+          "pos": {
+            "x": 35.39,
+            "y": 64.0
+          },
+          "uuid": "e22f2b1b-907e-4a96-9b4d-f91ebbf690f8"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A surge exposed voltage screen' clearance 0.6400 mm; actual 0.5600 mm)",
+      "items": [
+        {
+          "description": "Pad 4 [/01_INPUT_PROTECTION/INPUT_BGATE] of Q101 on F.Cu",
+          "pos": {
+            "x": 33.565,
+            "y": 64.975
+          },
+          "uuid": "527ca980-6b63-4065-8572-17c1c2251ce8"
+        },
+        {
+          "description": "Pad 5 [/01_INPUT_PROTECTION/VIN_EFUSE_IN] of Q101 on F.Cu",
+          "pos": {
+            "x": 35.39,
+            "y": 64.0
+          },
+          "uuid": "e22f2b1b-907e-4a96-9b4d-f91ebbf690f8"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [unconnected-(U302-DNC-Pad1)] of U302 on F.Cu",
+          "pos": {
+            "x": 150.8875,
+            "y": 143.025
+          },
+          "uuid": "a4f68a23-b956-429a-94c5-389836b277e4"
+        },
+        {
+          "description": "Pad 2 [/03_OUTPUT_PROTECTION/DET5] of U302 on F.Cu",
+          "pos": {
+            "x": 150.8875,
+            "y": 143.675
+          },
+          "uuid": "49d668f4-8403-4987-91f7-531b1c0a1295"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 2 [/03_OUTPUT_PROTECTION/DET5] of U302 on F.Cu",
+          "pos": {
+            "x": 150.8875,
+            "y": 143.675
+          },
+          "uuid": "49d668f4-8403-4987-91f7-531b1c0a1295"
+        },
+        {
+          "description": "Pad 3 [unconnected-(U302-TEMP-Pad3)] of U302 on F.Cu",
+          "pos": {
+            "x": 150.8875,
+            "y": 144.325
+          },
+          "uuid": "308ce295-f85c-4547-82e9-f526b7ef2509"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [unconnected-(U302-TEMP-Pad3)] of U302 on F.Cu",
+          "pos": {
+            "x": 150.8875,
+            "y": 144.325
+          },
+          "uuid": "308ce295-f85c-4547-82e9-f526b7ef2509"
+        },
+        {
+          "description": "Pad 4 [/GND] of U302 on F.Cu",
+          "pos": {
+            "x": 150.8875,
+            "y": 144.975
+          },
+          "uuid": "0d767148-78b9-4bcd-af10-54dfc2dc181b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 5 [unconnected-(U302-TRIM_NR-Pad5)] of U302 on F.Cu",
+          "pos": {
+            "x": 155.1125,
+            "y": 144.975
+          },
+          "uuid": "c6388800-ea38-40d0-8059-a6edd24e01d9"
+        },
+        {
+          "description": "Pad 6 [/03_OUTPUT_PROTECTION/REF_2V5] of U302 on F.Cu",
+          "pos": {
+            "x": 155.1125,
+            "y": 144.325
+          },
+          "uuid": "eae0662f-c6ee-45d7-a6d2-8ed49a8689da"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 6 [/03_OUTPUT_PROTECTION/REF_2V5] of U302 on F.Cu",
+          "pos": {
+            "x": 155.1125,
+            "y": 144.325
+          },
+          "uuid": "eae0662f-c6ee-45d7-a6d2-8ed49a8689da"
+        },
+        {
+          "description": "Pad 7 [unconnected-(U302-NC-Pad7)] of U302 on F.Cu",
+          "pos": {
+            "x": 155.1125,
+            "y": 143.675
+          },
+          "uuid": "b431701b-60b7-485b-9415-1054a77ce393"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 7 [unconnected-(U302-NC-Pad7)] of U302 on F.Cu",
+          "pos": {
+            "x": 155.1125,
+            "y": 143.675
+          },
+          "uuid": "b431701b-60b7-485b-9415-1054a77ce393"
+        },
+        {
+          "description": "Pad 8 [unconnected-(U302-DNC-Pad8)] of U302 on F.Cu",
+          "pos": {
+            "x": 155.1125,
+            "y": 143.025
+          },
+          "uuid": "ed1a293a-8918-4a22-bb21-c9ceaa7c284b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [/3V3_HOST] of U403 on F.Cu",
+          "pos": {
+            "x": 225.1125,
+            "y": 139.975
+          },
+          "uuid": "9329cf89-a896-437d-8661-913201eba957"
+        },
+        {
+          "description": "Pad 2 [/SCL_HOST] of U403 on F.Cu",
+          "pos": {
+            "x": 225.1125,
+            "y": 139.325
+          },
+          "uuid": "44ab987e-5530-45b6-9633-2152cc8d64ba"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 2 [/SCL_HOST] of U403 on F.Cu",
+          "pos": {
+            "x": 225.1125,
+            "y": 139.325
+          },
+          "uuid": "44ab987e-5530-45b6-9633-2152cc8d64ba"
+        },
+        {
+          "description": "Pad 3 [/SDA_HOST] of U403 on F.Cu",
+          "pos": {
+            "x": 225.1125,
+            "y": 138.675
+          },
+          "uuid": "36ef21d4-7db4-442e-a144-fb602db94ae1"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [/SDA_HOST] of U403 on F.Cu",
+          "pos": {
+            "x": 225.1125,
+            "y": 138.675
+          },
+          "uuid": "36ef21d4-7db4-442e-a144-fb602db94ae1"
+        },
+        {
+          "description": "Pad 4 [/GND] of U403 on F.Cu",
+          "pos": {
+            "x": 225.1125,
+            "y": 138.025
+          },
+          "uuid": "a9371e23-ca61-467e-839c-dcc92eeedb2d"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 5 [/04_POWER_MONITOR/3V3_LOCAL] of U403 on F.Cu",
+          "pos": {
+            "x": 220.8875,
+            "y": 138.025
+          },
+          "uuid": "d499e0f4-23ad-44ff-9dae-ea84e81bee87"
+        },
+        {
+          "description": "Pad 6 [/04_POWER_MONITOR/SDA_LOCAL] of U403 on F.Cu",
+          "pos": {
+            "x": 220.8875,
+            "y": 138.675
+          },
+          "uuid": "3a05cbf1-4e71-47f4-b4ba-7d6bb8b20032"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 6 [/04_POWER_MONITOR/SDA_LOCAL] of U403 on F.Cu",
+          "pos": {
+            "x": 220.8875,
+            "y": 138.675
+          },
+          "uuid": "3a05cbf1-4e71-47f4-b4ba-7d6bb8b20032"
+        },
+        {
+          "description": "Pad 7 [/04_POWER_MONITOR/SCL_LOCAL] of U403 on F.Cu",
+          "pos": {
+            "x": 220.8875,
+            "y": 139.325
+          },
+          "uuid": "798f1ab6-296b-41c8-aa1b-1d47034884e2"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 7 [/04_POWER_MONITOR/SCL_LOCAL] of U403 on F.Cu",
+          "pos": {
+            "x": 220.8875,
+            "y": 139.325
+          },
+          "uuid": "798f1ab6-296b-41c8-aa1b-1d47034884e2"
+        },
+        {
+          "description": "Pad 8 [/04_POWER_MONITOR/3V3_LOCAL] of U403 on F.Cu",
+          "pos": {
+            "x": 220.8875,
+            "y": 139.975
+          },
+          "uuid": "c9cf7fa6-dbd8-46d9-8af1-4f4ce61dbe1d"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [/03_OUTPUT_PROTECTION/SAFE5] of U600 on F.Cu",
+          "pos": {
+            "x": 107.15,
+            "y": 142.975
+          },
+          "uuid": "c32b168b-06ad-48d2-94d3-cc4044ec926b"
+        },
+        {
+          "description": "Pad 2 [/03_OUTPUT_PROTECTION/SAFE_FB] of U600 on F.Cu",
+          "pos": {
+            "x": 107.15,
+            "y": 142.325
+          },
+          "uuid": "38c2b678-3f0b-44f1-b357-7ebb3e8ed7ab"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 2 [/03_OUTPUT_PROTECTION/SAFE_FB] of U600 on F.Cu",
+          "pos": {
+            "x": 107.15,
+            "y": 142.325
+          },
+          "uuid": "38c2b678-3f0b-44f1-b357-7ebb3e8ed7ab"
+        },
+        {
+          "description": "Pad 3 [unconnected-(U600-PG-Pad3)] of U600 on F.Cu",
+          "pos": {
+            "x": 107.15,
+            "y": 141.675
+          },
+          "uuid": "6395db44-f62f-4780-905d-be54aa475304"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [unconnected-(U600-PG-Pad3)] of U600 on F.Cu",
+          "pos": {
+            "x": 107.15,
+            "y": 141.675
+          },
+          "uuid": "6395db44-f62f-4780-905d-be54aa475304"
+        },
+        {
+          "description": "Pad 4 [/GND] of U600 on F.Cu",
+          "pos": {
+            "x": 107.15,
+            "y": 141.025
+          },
+          "uuid": "63854524-d601-4a4f-8d17-0f595e1d3d56"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 5 [/03_OUTPUT_PROTECTION/SAFE_IN] of U600 on F.Cu",
+          "pos": {
+            "x": 102.85,
+            "y": 141.025
+          },
+          "uuid": "dfb704cf-3061-4d8c-8f47-af3b105f875b"
+        },
+        {
+          "description": "Pad 6 [unconnected-(U600-NC-Pad6)] of U600 on F.Cu",
+          "pos": {
+            "x": 102.85,
+            "y": 141.675
+          },
+          "uuid": "2c04f230-9ef9-42c5-99c6-571f1edb2d1e"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 6 [unconnected-(U600-NC-Pad6)] of U600 on F.Cu",
+          "pos": {
+            "x": 102.85,
+            "y": 141.675
+          },
+          "uuid": "2c04f230-9ef9-42c5-99c6-571f1edb2d1e"
+        },
+        {
+          "description": "Pad 7 [unconnected-(U600-DELAY-Pad7)] of U600 on F.Cu",
+          "pos": {
+            "x": 102.85,
+            "y": 142.325
+          },
+          "uuid": "5a01a9f6-ce70-4086-a667-031082154157"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 7 [unconnected-(U600-DELAY-Pad7)] of U600 on F.Cu",
+          "pos": {
+            "x": 102.85,
+            "y": 142.325
+          },
+          "uuid": "5a01a9f6-ce70-4086-a667-031082154157"
+        },
+        {
+          "description": "Pad 8 [/03_OUTPUT_PROTECTION/SAFE_IN] of U600 on F.Cu",
+          "pos": {
+            "x": 102.85,
+            "y": 142.975
+          },
+          "uuid": "65043640-9d8f-47b0-bcee-380b557ae569"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 1 [/03_OUTPUT_PROTECTION/DET5] of U306 on F.Cu",
+          "pos": {
+            "x": 134.15,
+            "y": 128.975
+          },
+          "uuid": "b9ebbcbd-4dc5-464d-852d-f04f2393c98a"
+        },
+        {
+          "description": "Pad 2 [/03_OUTPUT_PROTECTION/DET_FB] of U306 on F.Cu",
+          "pos": {
+            "x": 134.15,
+            "y": 128.325
+          },
+          "uuid": "b9e01531-1235-45fe-99bd-3dcda753ed1d"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 2 [/03_OUTPUT_PROTECTION/DET_FB] of U306 on F.Cu",
+          "pos": {
+            "x": 134.15,
+            "y": 128.325
+          },
+          "uuid": "b9e01531-1235-45fe-99bd-3dcda753ed1d"
+        },
+        {
+          "description": "Pad 3 [/03_OUTPUT_PROTECTION/DET_PG] of U306 on F.Cu",
+          "pos": {
+            "x": 134.15,
+            "y": 127.675
+          },
+          "uuid": "c3130049-0e25-4d01-bf0b-6cb01cf2c5e5"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 3 [/03_OUTPUT_PROTECTION/DET_PG] of U306 on F.Cu",
+          "pos": {
+            "x": 134.15,
+            "y": 127.675
+          },
+          "uuid": "c3130049-0e25-4d01-bf0b-6cb01cf2c5e5"
+        },
+        {
+          "description": "Pad 4 [/GND] of U306 on F.Cu",
+          "pos": {
+            "x": 134.15,
+            "y": 127.025
+          },
+          "uuid": "4bf52a61-327c-48c6-b22f-c450545b673c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 5 [/03_OUTPUT_PROTECTION/DRV_HOLD] of U306 on F.Cu",
+          "pos": {
+            "x": 129.85,
+            "y": 127.025
+          },
+          "uuid": "746d5bfa-52ed-4a6d-90a7-0be6e69f9b50"
+        },
+        {
+          "description": "Pad 6 [unconnected-(U306-NC-Pad6)] of U306 on F.Cu",
+          "pos": {
+            "x": 129.85,
+            "y": 127.675
+          },
+          "uuid": "4ad4a48d-b88f-47d9-87a6-12bbd5fc9aa8"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 6 [unconnected-(U306-NC-Pad6)] of U306 on F.Cu",
+          "pos": {
+            "x": 129.85,
+            "y": 127.675
+          },
+          "uuid": "4ad4a48d-b88f-47d9-87a6-12bbd5fc9aa8"
+        },
+        {
+          "description": "Pad 7 [unconnected-(U306-DELAY-Pad7)] of U306 on F.Cu",
+          "pos": {
+            "x": 129.85,
+            "y": 128.325
+          },
+          "uuid": "647c3751-87dd-4ed7-a5da-ec529cd33a45"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (rule 'V1A copper manufacturing floor' clearance 0.2000 mm; actual 0.1500 mm)",
+      "items": [
+        {
+          "description": "Pad 7 [unconnected-(U306-DELAY-Pad7)] of U306 on F.Cu",
+          "pos": {
+            "x": 129.85,
+            "y": 128.325
+          },
+          "uuid": "647c3751-87dd-4ed7-a5da-ec529cd33a45"
+        },
+        {
+          "description": "Pad 8 [/03_OUTPUT_PROTECTION/DRV_HOLD] of U306 on F.Cu",
+          "pos": {
+            "x": 129.85,
+            "y": 128.975
+          },
+          "uuid": "63136bae-bb05-4c48-a14d-4ec6cb43983a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  ]
+}

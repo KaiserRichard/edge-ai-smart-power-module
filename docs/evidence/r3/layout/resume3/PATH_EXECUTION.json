@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py",
+    "hardware/kicad/V1A.kicad_pcb",
+    "--json"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 508.09502961099497
+}
