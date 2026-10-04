@@ -110,13 +110,14 @@ def buck_spec():
     cs['L201']['pins']['2']['net']='L201_OUT'
     for ref in ('C201','C202'):update(cs[ref],'GRM32ER71H106KA12L','10uF 50V',passive_fp('GRM32ER71H106KA12L','C'))
     for ref in ('C203','C204'):update(cs[ref],'GRM188R71H104KA93D','100nF 50V',passive_fp('GRM188R71H104KA93D','C'))
-    for ref,mpn in [('R202','TNPW0603100KBEEA'),('R203','TNPW060324K4BEEA')]:update(cs[ref],mpn)
+    update(cs['R202'],'TNPW0603100KBEEA')
+    update(cs['R203'],'TNPW060324K6BEEA','24.6k')  # Owner option A, 2026-10-04.
     d['components'] += [force_link('JP201','BUCK_SW','L201_IN'),force_link('JP202','L201_OUT','VOUT_5V1'),
       force_pad('PF2','VIN_PROTECTED'),force_pad('PF3','BUCK_SW'),force_pad('PF4','L201_IN'),tp('TP204','L201_OUT'),tp('TP201','BUCK_SW'),tp('TP202','L201_IN'),tp('TP203','VOUT_5V1')]
     d['groups']=[('BUCK / NATIVE SWITCH NODE', ['U201','C201','C202','C203','C204','C205','C206','R201','R204','R206','R207']),
       ('FAULT INJECTION / LOCAL REGULATION',['JP201','JP202','L201','PF2','PF3','PF4','TP201','TP202','TP203','TP204','R202','R203','R205','C207','C209','C210','C211','C212','C213','C214'])]
     d['schematic_notes']=['DATASHEET: L201 = Wurth 74437636351002, 10uH; 2 plated slots per drawing001.000 (2025-02-07).',
-      'CALCULATED: 100k / 24.4k local feedback = 5.098361 V nominal. No remote sense or setpoint increase.',
+      'CALCULATED: 100k / 24.6k local feedback = 5.065041 V nominal. Owner option A 2026-10-04; no remote sense.',
       'JP201 isolates native BUCK_SW. L201_IN exports to Sheet03 R640; VIN_PROTECTED feeds R644. Remove force links only while unpowered.',
       'JP202 = IL201_FORCE after the winding, before all raw capacitance. PF2 VIN_PROTECTED / PF3 BUCK_SW / PF4 L201_IN = M4 force pads.',
       'C205 bootstrap return stays on native BUCK_SW. TP201 / TP202 paired return pads are sense only.',

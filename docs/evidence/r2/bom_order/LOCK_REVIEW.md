@@ -2,6 +2,14 @@
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
+## R203 option A addendum — owner decision taken 2026-10-04
+
+**DECISION:** B045 is now **LOCKED** to **24.6k / TNPW060324K6BEEA**, 0603, 0.1%, 25 ppm/K. This owner's R203_OPTION_A brief supersedes the earlier hardware-read-only constraint and the historical B045 question below for R203 Value/MPN/Source only. R202 remains 100k; the footprint and PCB are unchanged. See the [one-page calculation](../R203_OPTION_A.md). All 24 selections are closed; selection OPEN = 0. The preceding catalogue choice does not release electrical qualification.
+
+**EVIDENCE:** [R203A sources](../../../../third_party/bom_order/R203A_SOURCES.json) and [catalogue facts](../../../../third_party/bom_order/R203A_CATALOG_FACTS.json), accessed 2026-10-04: Mouser Brazil's indexed USD offer reports 5,101 parts, minimum/multiple 1, USD0.26 at qty5; DigiKey UK's indexed GBP offer reports 1,920 parts. Page crawl ages are last month/two weeks, respectively; reconfirm availability at order time. No purchase. The selected part remains the same TNPW0603 construction and termination geometry; no increased power or voltage rating is granted.
+
+**Historical lock review follows unchanged; its unselected B045 and pending A/B wording is superseded by this addendum.**
+
 Authority: BOM_LOCK_ALL.md; three boards plus spares; hardware read-only. Historical CLOSE evidence is preserved. This review distinguishes selected MPN, stocked offer, and electrical validation.
 
 ## Group 1 — exact capacitors

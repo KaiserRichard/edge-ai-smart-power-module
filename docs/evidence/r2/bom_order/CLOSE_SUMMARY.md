@@ -2,9 +2,9 @@
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
-**Selection OPEN: 24 → 1. Immediate-procurement OPEN: 24 → 13.**
+**Selection OPEN: 24 → 0. Immediate-procurement OPEN: 24 → 12.**
 
-23 of the 24 starting rows have reasoned component or build-to-drawing defaults. B045 is the sole value-change decision. Backorders, unpriced quotes and unconfirmed stock remain visible supply gaps; they are not requests for the owner to choose a component.
+All 24 starting selections are LOCKED. The owner chose B045 option A on 2026-10-04: R203 is 24.6k, TNPW060324K6BEEA. Backorders, unpriced quotes and unconfirmed stock remain visible supply gaps; they are not requests for the owner to choose a component.
 
 The procurement count includes complete offers in their published currencies, without conversion or mixing regional snapshots. NRND/EOL labels remain visible; the five exact Murata selections have an explicit finite-three-board disposition. The previous 27→24 review is preserved in LOCK_BASELINE.json and the original CLOSE evidence.
 
@@ -21,7 +21,7 @@ The procurement count includes complete offers in their published currencies, wi
 | B015 | SMCJ36CA | LOCKED | Preserve exact Littelfuse bidirectional 36 V SMC and frozen clamp; reject other makers same-number TVS. | Mouser 576-SMCJ36CA or DigiKey SMCJ36CALFCT-ND backorder; four pieces. |
 | B026 | CUSTOM-FX-CU-01 RevA | LOCKED | Lock C110 30x15x2 mm, M4/20 mm drawing and tin finish; installed current/contact resistance are bench checks. | Make-to-drawing 24 straps; fabricator quotation OPEN, selection closed. |
 | B038 | TNPW0805348KBEEA | LOCKED | Keep 348 kohm, 0.1%, 25 ppm/K TNPW0805; lower-power alternatives fail the rating rule. | LCSC C1709278 / Vishay authorized-distributor exact backorder or quote; five pieces. |
-| B045 | TNPW060324K4BEEA | OPEN | 24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value. | Do not order a constructed MPN; OWNER_DECISIONS.md A/B required. |
+| B045 | TNPW060324K6BEEA | LOCKED | Owner chose option A on 2026-10-04: R203 24.6k, 0.1%, 25 ppm/K; nominal 5.065041 V. CALCULATED hot 5 A/20 mV path PASS +14.043 mV; 100 mV sensitivity FAIL -65.957 mV; qualification OPEN. | Mouser 71-TNPW060324K6BEEA: 5101 indexed stock, 5 required, USD 0.26 each; DigiKey UK 1920 stock (GBP). Reconfirm stock before any future order. |
 | B053 | WFMB2512R0330FEA | LOCKED | Exact 33 mohm WFM, 1%, 50 ppm/K; custom lands match maker 1.55x3.60 mm pads/4.40 mm gap. | E003: RS Australia 188-0668; 55 pieces in tapes of five. |
 | B068 | TNPW0805365KBEEA | LOCKED | Keep exact 365 kohm, 0.1%, 25 ppm/K divider parts; preserve supervisor thresholds and power rating. | Mouser 71-TNPW0805365KBEEA backorder/quote; eight pieces, price/availability OPEN. |
 | B080 | TPS26630RGER | LOCKED | Keep TI TPS26630 RGE24 with MODE pin11 NC for latch-off; no clone or variant change. | Mouser 595-TPS26630RGER backorder; four cut-tape pieces. |
@@ -35,9 +35,9 @@ The procurement count includes complete offers in their published currencies, wi
 | O01 | XHP-2; XHP-4; SXH-001T-P0.6; VHR-2N; SVH-41T-P1.1; 8125SHZBE; 3050 BK005; 3050 WH005 | LOCKED | Define four complete input/control/I2C kits with keyed mates, gold dry contacts, labelled flying leads and manual links. | Order BOM_ACCESSORIES.csv O01.*; reuse H07/H08 spools for input leads; no duplicate spool charge. |
 | O02 | 507302B00000G; 4880SG | LOCKED | Three individual TO-220 bolt-on sinks and insulating mounting kits per board; reserve envelope in layout. | Order BOM_ACCESSORIES.csv O02.*: 12 sinks and12 kits for four complete sets. |
 
-## Needs owner decision
+## Owner decision taken
 
-1. **B045 — A (recommended):** 24.6k, TNPW060324K6BEEA; recalculate lower setpoint. **B:** Custom 24.4k; preserve value, await manufacturer acceptance. **Answer A or B.**
+1. **B045 — DECISION TAKEN: A on 2026-10-04. LOCKED:** R203 24.6k, TNPW060324K6BEEA (0603, 0.1%, 25 ppm/K); R202 100k retained. Selection OPEN = 0. [CALCULATED review](../R203_OPTION_A.md): 5 A/20 mV PASS +14.043 mV; 100 mV sensitivity FAIL -65.957 mV. Electrical release remains BLOCKED.
 
 ## Supply gaps
 
@@ -47,7 +47,6 @@ The procurement count includes complete offers in their published currencies, wi
 | B015 | SMCJ36CA | Selection LOCKED; supply only: Mouser 576-SMCJ36CA or DigiKey SMCJ36CALFCT-ND backorder; four pieces. |
 | B026 | CUSTOM-FX-CU-01 RevA | Selection LOCKED; supply only: Make-to-drawing 24 straps; fabricator quotation OPEN, selection closed. |
 | B038 | TNPW0805348KBEEA | Selection LOCKED; supply only: LCSC C1709278 / Vishay authorized-distributor exact backorder or quote; five pieces. |
-| B045 | TNPW060324K4BEEA | 24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value. |
 | B068 | TNPW0805365KBEEA | Selection LOCKED; supply only: Mouser 71-TNPW0805365KBEEA backorder/quote; eight pieces, price/availability OPEN. |
 | B080 | TPS26630RGER | Selection LOCKED; supply only: Mouser 595-TPS26630RGER backorder; four cut-tape pieces. |
 | B093 | INA228AIDGSR | Selection LOCKED; supply only: DigiKey 296-INA228AIDGSRCT-ND backorder; four cut-tape pieces. |
@@ -59,4 +58,4 @@ The procurement count includes complete offers in their published currencies, wi
 
 [Lock review](LOCK_REVIEW.md) records lands, ratings, frozen functions and the disclosed C351 family proxy. [Accessory definition](ACCESSORY_REVIEW.md) and [sub-BOM](BOM_ACCESSORIES.csv) close the harness/thermal identities. [Force-link drawing](FORCE_LINK_DRAWING.md): installed current, contact resistance, torque and pulse envelope are **bench check, does not block layout**.
 
-Run `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](VALIDATION.json) and [LOCK_EXECUTION.md](LOCK_EXECUTION.md) record results and Git limitations. Hardware and captured source identities are unchanged. R2 electrical release remains BLOCKED; no later gate is advanced.
+Run `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](VALIDATION.json) and [R203 execution](../r203_option_a/EXECUTION.md) record checks and Git limitations. The historical capture is preserved; only R203 Value/MPN/Source changed in hardware under [owner option A](../R203_OPTION_A.md). PCB unchanged. R2 electrical release remains BLOCKED; no later gate is advanced.

@@ -77,6 +77,24 @@ class BOMOrderTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             self.check_selection(a)
 
+    def test_r203_owner_change_cannot_expand_to_another_resistor(self):
+        a = copy.deepcopy(closeout.LOCKS['B045'])
+        row = dict(row_id='B045', captured_mpn='TNPW060324K4BEEA', refdes='R203',
+                   footprint='Resistor_SMD:R_0603_1608Metric')
+        closeout.assert_lock(a, row)
+        a['refdes'] = ['R202']
+        row['refdes'] = 'R202'
+        with self.assertRaises(AssertionError):
+            closeout.assert_lock(a, row)
+
+    def test_r203_owner_choice_cannot_be_used_for_another_value(self):
+        a = copy.deepcopy(closeout.LOCKS['B045'])
+        row = dict(row_id='B045', captured_mpn='TNPW060324K4BEEA', refdes='R203',
+                   footprint='Resistor_SMD:R_0603_1608Metric')
+        a['mpn'], a['value'] = 'TNPW060324K3BEEA', '24.3k'
+        with self.assertRaises(AssertionError):
+            closeout.assert_lock(a, row)
+
 
 if __name__ == '__main__':
     unittest.main()

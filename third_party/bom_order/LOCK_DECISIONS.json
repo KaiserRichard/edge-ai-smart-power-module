@@ -376,7 +376,7 @@
     "electrical_delta": "None: retain original identity."
   },
   "B045": {
-    "mpn": "TNPW060324K4BEEA",
+    "mpn": "TNPW060324K6BEEA",
     "manufacturer": "Vishay",
     "captured_mpn": "TNPW060324K4BEEA",
     "refdes": [
@@ -385,18 +385,23 @@
     "footprints": [
       "Resistor_SMD:R_0603_1608Metric"
     ],
-    "selection": "OPEN",
-    "kind": "hard_stop",
-    "reason": "24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value.",
+    "selection": "LOCKED",
+    "kind": "owner_value_change",
+    "reason": "Owner chose option A on 2026-10-04: R203 24.6k, 0.1%, 25 ppm/K; nominal 5.065041 V. CALCULATED hot 5 A/20 mV path PASS +14.043 mV; 100 mV sensitivity FAIL -65.957 mV; qualification OPEN.",
     "sources": [
       "TNPW",
-      "FREEZE"
+      "FREEZE",
+      "R203A-TI",
+      "R203A-VISHAY",
+      "R203A-M",
+      "R203A-D"
     ],
-    "procurement_route": "Do not order a constructed MPN; OWNER_DECISIONS.md A/B required.",
-    "review": "LOCK_REVIEW.md",
+    "procurement_route": "Mouser 71-TNPW060324K6BEEA: 5101 indexed stock, 5 required, USD 0.26 each; DigiKey UK 1920 stock (GBP). Reconfirm stock before any future order.",
+    "review": "../R203_OPTION_A.md",
     "access_date": "2026-10-04",
-    "electrical_delta": "See scoped review; no CAD edits.",
-    "recommended_candidate": "TNPW060324K6BEEA"
+    "electrical_delta": "Owner-authorized R203 Value/MPN/Source only; R202, nets, footprints and PCB unchanged.",
+    "value": "24.6k",
+    "owner_decision": "A on 2026-10-04"
   },
   "B053": {
     "mpn": "WFMB2512R0330FEA",
@@ -570,7 +575,7 @@
   },
   "M01": {
     "mpn": "00944 12",
-    "manufacturer": "Würth",
+    "manufacturer": "W\u00fcrth",
     "captured_mpn": "N/A accessory",
     "refdes": [
       "M4 bolts for seven links"
@@ -585,7 +590,7 @@
       "WURTH",
       "FORCE_DRAWING"
     ],
-    "procurement_route": "Würth article 00944 12; 48 pieces minimum; pack/quote OPEN.",
+    "procurement_route": "W\u00fcrth article 00944 12; 48 pieces minimum; pack/quote OPEN.",
     "review": "LOCK_REVIEW.md",
     "access_date": "2026-10-04",
     "electrical_delta": "See scoped review; no CAD edits."

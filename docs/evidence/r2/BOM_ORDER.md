@@ -2,9 +2,9 @@
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
-**Selection OPEN: 24 → 1. Immediate-procurement OPEN: 24 → 13.** Complete immediate ordering remains BLOCKED by the supply gaps below and B045. A locked MPN or build-to-drawing selection does not assert stock or electrical validation. No purchase, login, cart, quote request, CAD edit or push was made.
+**Selection OPEN: 24 → 0. Immediate-procurement OPEN: 24 → 12.** Complete immediate ordering remains BLOCKED by the supply gaps below. B045 option A is selected and its sole schematic change is documented in [R203_OPTION_A](R203_OPTION_A.md). A locked MPN or build-to-drawing selection does not assert electrical validation. No purchase, login, cart, quote request or push was made.
 
-[Close summary](bom_order/CLOSE_SUMMARY.md), [lock review](bom_order/LOCK_REVIEW.md), [owner decision](bom_order/OWNER_DECISIONS.md), and [accessory definition](bom_order/ACCESSORY_REVIEW.md) are the current dispositions. Earlier CAPACITOR_REVIEW.md and STOCK_REVIEW.md findings are retained as historical evidence; the lock review supersedes their component-selection holds for its 23 locked rows. Three previously accepted order alternates remain unchanged; C351 now selects the separately reviewed TDK AC suffix. Every captured MPN, nominal value, reference and footprint is preserved in its own CSV fields.
+[Close summary](bom_order/CLOSE_SUMMARY.md), [lock review](bom_order/LOCK_REVIEW.md), [owner decision](bom_order/OWNER_DECISIONS.md), and [accessory definition](bom_order/ACCESSORY_REVIEW.md) are the current dispositions. Earlier CAPACITOR_REVIEW.md and STOCK_REVIEW.md findings are historical; all 24 lock-review selections are now closed. Three previously accepted order alternates remain unchanged; C351 selects the reviewed TDK AC suffix. CSV `value` and `mpn` are selected identities; `captured_mpn` retains the original export. Original values, including R203 24.4k, remain in SOURCE_BOM.csv. R203 is the only authorized CAD value change; references and footprints are preserved.
 
 **EVIDENCE:** KiCad 9.0.6 export from [source commit `56e9837e522c01bd680aca602f9f471d38d6039f`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/56e9837e522c01bd680aca602f9f471d38d6039f/hardware/kicad/V1A.kicad_sch), SHA-256 `b2e57ccf9cfd4251d297d6e2bb6b422f2bfc0aead7b5d0fec14f03fad456acae`. The export contains **366 references: 298 catalog components across 96 MPNs, seven custom links and 61 etched PCB features**. Each is represented once. [SOURCE_BOM.csv](bom_order/SOURCE_BOM.csv), [PROVENANCE.json](bom_order/PROVENANCE.json), [RECONCILIATION.json](bom_order/RECONCILIATION.json) preserve the source audit; historical BOM_DRAFT is unchanged.
 
@@ -37,7 +37,7 @@ O01 mates the actual JST VH/XH input/control/I2C headers, defines four dry-conta
 | B015 | SMCJ36CA | LOCKED | Preserve exact Littelfuse bidirectional 36 V SMC and frozen clamp; reject other makers same-number TVS. | OPEN |
 | B026 | CUSTOM-FX-CU-01 RevA | LOCKED | Lock C110 30x15x2 mm, M4/20 mm drawing and tin finish; installed current/contact resistance are bench checks. | OPEN |
 | B038 | TNPW0805348KBEEA | LOCKED | Keep 348 kohm, 0.1%, 25 ppm/K TNPW0805; lower-power alternatives fail the rating rule. | OPEN |
-| B045 | TNPW060324K4BEEA | OPEN | 24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value. | OPEN |
+| B045 | TNPW060324K6BEEA | LOCKED | Owner chose option A on 2026-10-04: R203 24.6k, 0.1%, 25 ppm/K; nominal 5.065041 V. CALCULATED hot 5 A/20 mV path PASS +14.043 mV; 100 mV sensitivity FAIL -65.957 mV; qualification OPEN. | STOCKED OFFER |
 | B053 | WFMB2512R0330FEA | LOCKED | Exact 33 mohm WFM, 1%, 50 ppm/K; custom lands match maker 1.55x3.60 mm pads/4.40 mm gap. | STOCKED OFFER |
 | B068 | TNPW0805365KBEEA | LOCKED | Keep exact 365 kohm, 0.1%, 25 ppm/K divider parts; preserve supervisor thresholds and power rating. | OPEN |
 | B080 | TPS26630RGER | LOCKED | Keep TI TPS26630 RGE24 with MODE pin11 NC for latch-off; no clone or variant change. | OPEN |
@@ -53,7 +53,7 @@ O01 mates the actual JST VH/XH input/control/I2C headers, defines four dry-conta
 
 ## Owner decision
 
-1. **B045 — A (recommended):** 24.6k, TNPW060324K6BEEA; recalculate lower setpoint. **B:** Custom 24.4k; preserve value, await manufacturer acceptance. **Answer A or B.**
+1. **B045 — DECISION TAKEN: A on 2026-10-04. LOCKED:** R203 24.6k, TNPW060324K6BEEA (0603, 0.1%, 25 ppm/K); R202 100k retained. Selection OPEN = 0. [CALCULATED review](R203_OPTION_A.md): 5 A/20 mV PASS +14.043 mV; 100 mV sensitivity FAIL -65.957 mV. Electrical release remains BLOCKED.
 
 ## Remaining supply gaps
 
@@ -63,7 +63,6 @@ O01 mates the actual JST VH/XH input/control/I2C headers, defines four dry-conta
 | B015 | SMCJ36CA | Selection LOCKED; supply only: Mouser 576-SMCJ36CA or DigiKey SMCJ36CALFCT-ND backorder; four pieces. |
 | B026 | CUSTOM-FX-CU-01 RevA | Selection LOCKED; supply only: Make-to-drawing 24 straps; fabricator quotation OPEN, selection closed. |
 | B038 | TNPW0805348KBEEA | Selection LOCKED; supply only: LCSC C1709278 / Vishay authorized-distributor exact backorder or quote; five pieces. |
-| B045 | TNPW060324K4BEEA | 24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value. |
 | B068 | TNPW0805365KBEEA | Selection LOCKED; supply only: Mouser 71-TNPW0805365KBEEA backorder/quote; eight pieces, price/availability OPEN. |
 | B080 | TPS26630RGER | Selection LOCKED; supply only: Mouser 595-TPS26630RGER backorder; four cut-tape pieces. |
 | B093 | INA228AIDGSR | Selection LOCKED; supply only: DigiKey 296-INA228AIDGSRCT-ND backorder; four cut-tape pieces. |
@@ -93,7 +92,7 @@ Each channel is an alternative whole-build scenario. Do not add the three scenar
 | Distributor | Complete catalog-board total | Known-price subtotal USD | Coverage | Stock-sufficient priced subtotal USD | Harness subtotal USD / coverage |
 |---|---|---:|---|---:|---|
 | lcsc | OPEN | 576.48 | 51/96 | 251.81 (40 lines) | 0.00 / 0/7; complete OPEN |
-| mouser | OPEN | 787.34 | 51/96 | 507.14 (36 lines) | 350.50 / 2/7; complete OPEN |
+| mouser | OPEN | 788.64 | 52/96 | 508.44 (37 lines) | 350.50 / 2/7; complete OPEN |
 | digikey | OPEN | 951.18 | 84/96 | 621.06 (64 lines) | 581.46 / 5/7; complete OPEN |
 
 ## Parts and quantities
@@ -144,7 +143,7 @@ Each channel is an alternative whole-build scenario. Do not add the three scenar
 | B042 | R107, R302, R307, R313, R316, R317, R363, R365, R370, R371, R372, R385, R404, R405, R408, R601, R603, R604, R645, R648, R707, R708, R710, R713, R723, R727, R728, R729 | 28 piece | 84 | 9 | 93 piece | TNPW060310K0BEEA | Vishay | No supply flag in retrieved evidence |
 | B043 | R108, R202, R206, R321, R322, R330, R346, R364, R367, R605, R606, R609, R623, R650, R651, R652, R718 | 17 piece | 51 | 6 | 57 piece | TNPW0603100KBEEA | Vishay | No supply flag in retrieved evidence |
 | B044 | R201, R379 | 2 piece | 6 | 2 | 8 piece | TNPW060333K2BEEA | Vishay | No supply flag in retrieved evidence |
-| B045 | R203 | 1 piece | 3 | 2 | 5 piece | TNPW060324K4BEEA | Vishay | NO-CONFIRMED-STOCK; NO-VERIFIED-PRICE; EXACT-ORDER-CODE-UNCONFIRMED; LOCK-OPEN |
+| B045 | R203 | 1 piece | 3 | 2 | 5 piece | TNPW060324K6BEEA | Vishay | No supply flag in retrieved evidence; LOCK-LOCKED |
 | B046 | R204 | 1 piece | 3 | 2 | 5 piece | CRCW06030000Z0EA | Vishay | No supply flag in retrieved evidence |
 | B047 | R205, R303, R373, R622, R647, R649, R709, R712, R717, R730, R731 | 11 piece | 33 | 4 | 37 piece | TNPW06031K00BEEA | Vishay | No supply flag in retrieved evidence |
 | B048 | R207 | 1 piece | 3 | 2 | 5 piece | TNPW060324K9BEEA | Vishay | No supply flag in retrieved evidence |
@@ -382,7 +381,7 @@ All prices below are USD per stated order unit; dates, assumptions and evidence 
 | B042 | [71-TNPW060310K0BEEA](https://www.mouser.com/en/ProductDetail/Vishay/TNPW060310K0BEEA?qs=80vFmtL7BC940KIiWqacAA%3D%3D) | 93 | 0.267 | 24.831 | 141178 | 11 Weeks | OPEN |
 | B043 | [71-TNPW0603100KBEEA](https://www.mouser.com/en/ProductDetail/Vishay/TNPW0603100KBEEA?qs=80vFmtL7BC9RsqlOJE1GSA%3D%3D) | 57 | 0.26 | 14.82 | OPEN | OPEN | OPEN |
 | B044 | [71-TNPW060333K2BEEA](https://www.mouser.com/en/ProductDetail/Vishay/TNPW060333K2BEEA?qs=kHCK1FE53PmrSCtdbuezTg%3D%3D) | 8 | OPEN | OPEN | OPEN | OPEN | OPEN |
-| B045 | OPEN | 5 | OPEN | OPEN | OPEN | OPEN | OPEN |
+| B045 | [71-TNPW060324K6BEEA](https://br.mouser.com/en/ProductDetail/Vishay/TNPW060324K6BEEA?qs=sGAEpiMZZMtlubZbdhIBIKLtS20KipbwirH%252B0LPbGxU%3D) | 5 | 0.26 | 1.30 | 5101 | 22 Weeks | OPEN |
 | B046 | [71-CRCW0603-0-E3](https://eu.mouser.com/en/ProductDetail/Vishay/CRCW06030000Z0EA?qs=uFJqmf%2F3rbbVtxvMdbYUaQ%3D%3D) | 5 | OPEN | OPEN | 2865345 | 18 Weeks | OPEN |
 | B047 | [71-TNPW06031K00BEEA](https://www.mouser.com/en/ProductDetail/Vishay/TNPW06031K00BEEA?qs=U8jWr0D8IJhJummGFaCE2g%3D%3D) | 37 | 0.26 | 9.62 | 86488 | 22 Weeks | OPEN |
 | B048 | [71-TNPW060324K9BEEA](https://www.mouser.com/en/ProductDetail/Vishay/TNPW060324K9BEEA?qs=rhzOH%252BTaZWtEsP8aUWokGA%3D%3D) | 5 | 0.26 | 1.30 | 6951 | 22 Weeks | OPEN |
@@ -501,7 +500,7 @@ All prices below are USD per stated order unit; dates, assumptions and evidence 
 | B042 | [TNP10.0KAACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW060310K0BEEA/1857057) | 93 | 0.20320 | 18.89760 | 67287 | 14 Weeks | Active |
 | B043 | [TNP100KAACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW0603100KBEEA/1857055) | 57 | 0.19180 | 10.93260 | 30867 | 14 Weeks | Active |
 | B044 | [541-2018-1-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW060333K2BEEA/4869152) | 8 | 0.26000 | 2.08000 | 16317 | 25 Weeks | Active |
-| B045 | OPEN | 5 | OPEN | OPEN | OPEN | OPEN | OPEN |
+| B045 | [541-TNPW060324K6BEEACT-ND](https://www.digikey.co.uk/en/products/detail/vishay-dale/TNPW060324K6BEEA/4972391) | 5 | OPEN | OPEN | 1920 | 25 Weeks | Active |
 | B046 | [541-0.0GCT-ND](https://www.digikey.com/en/products/detail/vishay-dale/CRCW06030000Z0EA/1174156?s=N4IgTCBcDaIKwBYCMBaADAOjQcQMIBUUA5AERAF0BfIA) | 5 | 0.10000 | 0.50000 | 3358163 | 21 Weeks | Active |
 | B047 | [TNP1.00KAACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW06031K00BEEA/1606767) | 37 | 0.21900 | 8.10300 | 74229 | 25 Weeks | Active |
 | B048 | [TNP24.9KAACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW060324K9BEEA/1606924) | 5 | 0.28000 | 1.40000 | 10795 | 25 Weeks | Active |
@@ -619,7 +618,7 @@ Only explicitly accepted earlier alternates and LOCK_DECISIONS selections enter 
 | B042 | TNPW060310K0BEEA | TNPW060310K0BEEA / Vishay | [source](https://www.digikey.com/en/products/detail/vishay-dale/TNPW060310K0BEEA/1857057) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B043 | TNPW0603100KBEEA | TNPW0603100KBEEA / Vishay | [source](https://www.digikey.com/en/products/detail/vishay-dale/TNPW0603100KBEEA/1857055) | SAME-MPN alternate sourcing: lcsc, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B044 | TNPW060333K2BEEA | TNPW060333K2BEEA / Vishay | [source](https://www.digikey.com/en/products/detail/vishay-dale/TNPW060333K2BEEA/4869152) | SAME-MPN alternate sourcing: lcsc, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
-| B045 | TNPW060324K4BEEA | TNPW060324K4BEEA / Vishay | [source](bom_order/LOCK_REVIEW.md) | OPEN: 24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value. |
+| B045 | TNPW060324K6BEEA | TNPW060324K6BEEA / Vishay | [source](bom_order/LOCK_REVIEW.md) | LOCKED: Owner chose option A on 2026-10-04: R203 24.6k, 0.1%, 25 ppm/K; nominal 5.065041 V. CALCULATED hot 5 A/20 mV path PASS +14.043 mV; 100 mV sensitivity FAIL -65.957 mV; qualification OPEN. |
 | B046 | CRCW06030000Z0EA | CRCW06030000Z0EA / Vishay | [source](https://www.digikey.com/en/products/detail/vishay-dale/CRCW06030000Z0EA/1174156?s=N4IgTCBcDaIKwBYCMBaADAOjQcQMIBUUA5AERAF0BfIA) | SAME-MPN alternate sourcing: mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B047 | TNPW06031K00BEEA | TNPW06031K00BEEA / Vishay | [source](https://www.digikey.com/en/products/detail/vishay-dale/TNPW06031K00BEEA/1606767) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B048 | TNPW060324K9BEEA | TNPW060324K9BEEA / Vishay | [source](https://www.digikey.com/en/products/detail/vishay-dale/TNPW060324K9BEEA/1606924) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
@@ -690,6 +689,6 @@ Only explicitly accepted earlier alternates and LOCK_DECISIONS selections enter 
 
 [BOM_ORDER_LCSC.csv](BOM_ORDER_LCSC.csv) is a local upload-style candidate subset, not a complete order or electrical release. It requires one coherent LCSC SKU, enough stock, priced rounded quantity, known multiple and accepted selection. Finite-build exact Murata lifecycle decisions are explicit exceptions, so the five locked capacitor identities can qualify without hiding their NRND/EOL labels. Other lifecycle holds and B045 remain excluded. No upload or account interaction occurred.
 
-Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`; validate with `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](bom_order/VALIDATION.json) checks coverage, quantities, currency/pack arithmetic, offers, scoped alternates, disclosed proxy, hardware hashes, counts and exact upload membership. These are document checks. No ERC/DRC rerun is claimed because hardware was read-only; R2 remains blocked and no gate is skipped.
+Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`; validate with `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](bom_order/VALIDATION.json) checks coverage, quantities, currency/pack arithmetic, offers, scoped alternates, disclosed proxy, original hardware hashes after reversing only the three authorized R203 property edits, counts and exact upload membership. [R203 checks](r203_option_a/CHECKS.json) record ERC 0 errors/0 warnings before and after, unchanged nets and the existing R2 CLI PCB-scope rejection. DRC not rerun: PCB unchanged. R2 remains blocked and no gate is skipped.
 
 Third-party facts and attribution are isolated in [third_party/bom_order](../../../third_party/bom_order/README.md). [LOCK_EXECUTION.md](bom_order/LOCK_EXECUTION.md) records execution and commit limitations.

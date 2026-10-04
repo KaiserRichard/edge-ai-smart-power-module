@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from decimal import Decimal
 from pathlib import Path
+from closeout import hardware_baseline_bytes
 
 ROOT=Path(__file__).resolve().parents[4]
 OUT=ROOT/'docs/evidence/r2'
@@ -22,12 +23,14 @@ facts+=json.loads((ROOT/'third_party/bom_order/RESUME_CATALOG_FACTS.json').read_
 facts+=json.loads((ROOT/'third_party/bom_order/CLOSE_CATALOG_FACTS.json').read_text())
 facts+=json.loads((ROOT/'third_party/bom_order/CLOSE_RESUME_CATALOG_FACTS.json').read_text())
 facts+=json.loads((ROOT/'third_party/bom_order/LOCK_CATALOG_FACTS.json').read_text())
+facts+=json.loads((ROOT/'third_party/bom_order/R203A_CATALOG_FACTS.json').read_text())
 locks=json.loads((ROOT/'third_party/bom_order/LOCK_DECISIONS.json').read_text())
 lock_baseline=json.loads((HERE/'LOCK_BASELINE.json').read_text())
 extra={q['row_id']:q for q in json.loads((ROOT/'third_party/bom_order/LOCK_EXTERNAL_OFFERS.json').read_text())}
 accessories=json.loads((ROOT/'third_party/bom_order/LOCK_ACCESSORIES.json').read_text())
 accessory_rows=list(csv.DictReader((HERE/'BOM_ACCESSORIES.csv').open()))
 lock_sources=json.loads((ROOT/'third_party/bom_order/LOCK_SOURCES.json').read_text())['sources']
+lock_sources.update(json.loads((ROOT/'third_party/bom_order/R203A_SOURCES.json').read_text())['sources'])
 decisions=json.loads((ROOT/'third_party/bom_order/CLOSE_ALTERNATE_REVIEW.json').read_text())
 decisions.update(json.loads((ROOT/'third_party/bom_order/CLOSE_STOCK_DECISIONS.json').read_text()))
 baseline=json.loads((HERE/'CLOSE_BASELINE.json').read_text())
@@ -65,6 +68,11 @@ for r in board:
         if r['row_id']=='B011':
             assert captured=='C3216X7R1H475K160AB' and r['mpn']=='C3216X7R1H475K160AC'
             assert r['value']=='4.7uF 50V' and r['refdes']=='C351'
+        elif r['row_id']=='B045':
+            assert captured=='TNPW060324K4BEEA' and r['mpn']=='TNPW060324K6BEEA'
+            assert r['value']=='24.6k' and r['refdes']=='R203'
+            assert src['R203']['Value']=='24.4k', 'Historical export must remain intact'
+            assert a['kind']=='owner_value_change' and a['owner_decision']=='A on 2026-10-04'
         else:
             assert r['mpn']==captured, 'No other board substitution authorized by lock review'
     elif decision and decision['order_accepted']:
@@ -219,9 +227,9 @@ assert {a['mpn'] for a in decisions.values() if a['order_accepted']}=={
 for ref,voltages in [('C352',[12,12.311325,12.593099]),('C601',[5.05832,5.183488]),('C602',[12,12.311325,12.593099])]:
     assert [t['dc_voltage_v'] for t in decisions['GRM32ER71H106KA12L']['bias_tests'] if t['refdes']==ref]==voltages
 for path,digest in baseline['hardware_sha256'].items():
-    assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest, ('Hardware changed since close baseline',path)
+    assert hashlib.sha256(hardware_baseline_bytes(ROOT/path)).hexdigest()==digest, ('Unauthorized hardware change since close baseline',path)
 for path,digest in meta['source_files'].items():
-    assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
+    assert hashlib.sha256(hardware_baseline_bytes(ROOT/path)).hexdigest()==digest
 for path,digest in meta['bom_close_review']['evidence_sha256'].items():
     assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest, ('Close evidence hash mismatch',path)
 # Independently verify added same-snapshot offers, pack units and accessory kits.
@@ -278,7 +286,7 @@ assert at['currency']=='USD' and all(a['currency']=='USD' for a in accessories)
 # Lock scope and disclosed proxy, independently of the generation guard.
 start_ids={r['row_id'] for r in lock_baseline['needs_owner_decision']}
 assert len(start_ids)==24 and set(locks)==start_ids
-assert {k for k,a in locks.items() if a['selection']=='OPEN'}=={'B045'}
+assert {k for k,a in locks.items() if a['selection']=='OPEN'}==set()
 for k,a in locks.items():
     r=next(r for r in rows if r['row_id']==k)
     assert a['sources'] and set(a['sources'])<=set(lock_sources)
@@ -294,9 +302,9 @@ for t in a['bias_tests']:
     assert t['status']=='ESTIMATED_SAME_FAMILY_PROXY' and .9<=t['ratio']<=1.1
     assert set(t['nets'])==set(pin_nets[t['refdes']].values())
 assert 'not measured AB equivalence' in a['bias_tests'][0]['basis']
-assert next(r for r in rows if r['row_id']=='B045')['mpn']=='TNPW060324K4BEEA'
+assert next(r for r in rows if r['row_id']=='B045')['mpn']=='TNPW060324K6BEEA'
 owner=(HERE/'OWNER_DECISIONS.md').read_text().splitlines()
-assert len(owner)==1 and owner[0].startswith('1. **B045') and 'A (recommended)' in owner[0] and '**B:**' in owner[0]
+assert len(owner)==1 and owner[0].startswith('1. **B045') and 'DECISION TAKEN: A on 2026-10-04' in owner[0] and 'LOCKED' in owner[0]
 assert 'bench check, does not block layout' in (HERE/'FORCE_LINK_DRAWING.md').read_text()
 for source_info in lock_sources.values():
     assert all(source_info.get(k) for k in ['owner','url','revision','relevant_source_files','access_date','license','function_studied','use','modifications','required_attribution'])
@@ -318,15 +326,15 @@ for r in rows:
     if is_open:open_ids.add(r['row_id'])
     assert (r['procurement_status']=='OPEN')==is_open
 assert open_ids=={r['row_id'] for r in close['procurement_open']}
-assert {r['row_id'] for r in close['needs_owner_decision']}=={'B045'}
+assert {r['row_id'] for r in close['needs_owner_decision']}==set()
 assert close['open_before']==lock_baseline['open_after']==24 and close['open_after']==len(open_ids)
-assert close['selection_open_before']==24 and close['selection_open_after']==1
+assert close['selection_open_before']==24 and close['selection_open_after']==0
 assert set(close['closed_row_ids'])==start_ids-open_ids
 assert set(close['newly_open_row_ids'])==open_ids-start_ids==set()
 assert close['literal_open_cells_after']==sum(v=='OPEN' for r in rows for v in r.values())
 assert close['rows_containing_open_after']==sum(any('OPEN' in v for v in r.values()) for r in rows)
 for doc in [markdown,(HERE/'CLOSE_SUMMARY.md').read_text()]:
-    assert 'Selection OPEN: 24 → 1' in doc and f'Immediate-procurement OPEN: 24 → {len(open_ids)}' in doc
+    assert 'Selection OPEN: 24 → 0' in doc and f'Immediate-procurement OPEN: 24 → {len(open_ids)}' in doc
 assert any(r['Manufacturer Part Number']=='GRM32ER71H106KA12L' for r in upload)
 assert len(upload)==40
 checked_links=0
@@ -346,11 +354,13 @@ result=dict(status='PASS for BOM document consistency; procurement and R2 electr
     markdown_commercial_tables='PASS',local_links='PASS',local_links_checked=checked_links,
     u316_confirmed_identity_and_upload='PASS',harness_spool_units='PASS',lcsc_exact_membership='PASS',
     reviewed_alternate_scope_and_bias='PASS',bias_calculations_checked=bias_checks,
-    lock_scope_and_sources='PASS',selection_open_before=24,selection_open_after=1,
+    lock_scope_and_sources='PASS',selection_open_before=24,selection_open_after=0,
     family_proxy_points_checked=len(locks['B011']['bias_tests']),family_proxy_limit='Estimated same-family model; not measured AB equivalence',
     added_supplier_pack_currency_checks='PASS',accessory_subparts_checked=len(accessory_rows),
-    unchanged_hardware_files=len(baseline['hardware_sha256']),hardware_unchanged='PASS',
+    unchanged_hardware_files=len(baseline['hardware_sha256'])-1,
+    hardware_scope='PASS: original hashes match after reversing only authorized R203 Value/MPN/Source',
+    authorized_hardware_change='hardware/kicad/02_BUCK_5V.kicad_sch: R203 only; PCB unchanged',
     open_rows_before=close['open_before'],open_rows_after=close['open_after'],open_count='PASS',
-    erc_drc='Not run: CAD read-only; no schematic or PCB changes',source_export_sha256=meta['export_sha256'])
+    erc_drc='ERC before/after 0 errors, 0 warnings; see ../r203_option_a/CHECKS.json. DRC not run: PCB unchanged',source_export_sha256=meta['export_sha256'])
 (HERE/'VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

@@ -111,6 +111,7 @@ def validate(tree, specs):
     for ref in ('C306','C309','C660'):pair(ref,'SER_DRV','GND')
     # Exact order codes at boundaries cannot be silently changed alongside JSON.
     selected={'F101':'3403.0285.23','D101':'SMCJ36CA','L201':'74437636351002','R301':'TNPW06039K88BEEA','R305':'TNPW12062M00BEEA',
+      'R202':'TNPW0603100KBEEA','R203':'TNPW060324K6BEEA',
       'R341':'TNPW060388K7BEEA','R312':'TNPW060332K4BEEA','R711':'TNPW0603143KBEEA','R609':'TNPW0603100KBEEA',
       'U316':'LT4363HMS-1#PBF','U317':'LTC3115IFE-1#PBF','U327':'TPS259470LRPWR','J502':'1776508','R401':'WSL27262L000FEA'}
     for n in list(range(308,312))+[380,381,382,383,386,387,388,389,390,391,392,393]:selected['R'+str(n)]='WFMB2512R0330FEA'
@@ -119,6 +120,9 @@ def validate(tree, specs):
     for ref,mpn in selected.items():
         c=parts.get(ref)
         if c is None or c.findtext('fields/field[@name="MPN"]')!=mpn:errors.append(f'{ref}: independent frozen MPN requires {mpn}')
+    for ref,value in [('R202','100k'),('R203','24.6k')]:
+        c=parts.get(ref)
+        if c is None or c.findtext('value')!=value:errors.append(f'{ref}: owner option A requires {value}')
     source_mpns={'R640':'TNPW060320K0BEEA','R641':'TNPW06036K19BEEA','R642':'TNPW060320K0BEEA',
       'R644':'TNPW060349K9BEEA','R645':'TNPW060310K0BEEA','R651':'TNPW0603100KBEEA','R652':'TNPW0603100KBEEA',
       'U640':'TLV3201AIDBVR','U642':'TLV3201AIDBVR','U647':'ADG4612BRUZ'}

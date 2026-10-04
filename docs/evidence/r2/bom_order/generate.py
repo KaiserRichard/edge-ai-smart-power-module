@@ -24,6 +24,7 @@ QUOTES += json.loads((FACTS.parent / 'RESUME_CATALOG_FACTS.json').read_text())
 QUOTES += json.loads((FACTS.parent / 'CLOSE_CATALOG_FACTS.json').read_text())
 QUOTES += json.loads((FACTS.parent / 'CLOSE_RESUME_CATALOG_FACTS.json').read_text())
 QUOTES += json.loads((FACTS.parent / 'LOCK_CATALOG_FACTS.json').read_text())
+QUOTES += json.loads((FACTS.parent / 'R203A_CATALOG_FACTS.json').read_text())
 Q = {(q['mpn'], q['d']): q for q in QUOTES}
 ALT_REVIEW = json.loads((FACTS.parent / 'ALTERNATE_REVIEW.json').read_text())
 NATIVE_URL = META['source_repository'] + '/blob/' + META['source_commit'] + '/'
@@ -293,18 +294,18 @@ owner_text = (EVIDENCE/'OWNER_DECISIONS.md').read_text().strip()
 summary_lines = [
     '# BOM lock summary — 2026-10-04', '', '**NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**', '',
     f"**Selection OPEN: {selection_count}. Immediate-procurement OPEN: {order_count}.**",
-    '', '23 of the 24 starting rows have reasoned component or build-to-drawing defaults. B045 is the sole value-change decision. Backorders, unpriced quotes and unconfirmed stock remain visible supply gaps; they are not requests for the owner to choose a component.',
+    '', 'All 24 starting selections are LOCKED. The owner chose B045 option A on 2026-10-04: R203 is 24.6k, TNPW060324K6BEEA. Backorders, unpriced quotes and unconfirmed stock remain visible supply gaps; they are not requests for the owner to choose a component.',
     '', 'The procurement count includes complete offers in their published currencies, without conversion or mixing regional snapshots. NRND/EOL labels remain visible; the five exact Murata selections have an explicit finite-three-board disposition. The previous 27→24 review is preserved in LOCK_BASELINE.json and the original CLOSE evidence.',
     '', '| Row | Chosen MPN | Selection | Reason | Route |', '|---|---|---|---|---|']
 for r in rows:
     if r['row_id'] in LOCKS:
         summary_lines.append('| '+' | '.join(esc(r[k]) for k in ['row_id','mpn','selection_status','selection_reason','selected_route'])+' |')
-summary_lines += ['', '## Needs owner decision', '', owner_text, '', '## Supply gaps', '',
+summary_lines += ['', '## Owner decision taken', '', owner_text, '', '## Supply gaps', '',
     '| Row | Selected MPN | Remaining supply action |', '|---|---|---|']
 for r in close['procurement_open']:
     summary_lines.append('| '+' | '.join(esc(r[k]) for k in ['row_id','mpn','reason'])+' |')
 summary_lines += ['', '[Lock review](LOCK_REVIEW.md) records lands, ratings, frozen functions and the disclosed C351 family proxy. [Accessory definition](ACCESSORY_REVIEW.md) and [sub-BOM](BOM_ACCESSORIES.csv) close the harness/thermal identities. [Force-link drawing](FORCE_LINK_DRAWING.md): installed current, contact resistance, torque and pulse envelope are **bench check, does not block layout**.',
-    '', 'Run `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](VALIDATION.json) and [LOCK_EXECUTION.md](LOCK_EXECUTION.md) record results and Git limitations. Hardware and captured source identities are unchanged. R2 electrical release remains BLOCKED; no later gate is advanced.']
+    '', 'Run `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](VALIDATION.json) and [R203 execution](../r203_option_a/EXECUTION.md) record checks and Git limitations. The historical capture is preserved; only R203 Value/MPN/Source changed in hardware under [owner option A](../R203_OPTION_A.md). PCB unchanged. R2 electrical release remains BLOCKED; no later gate is advanced.']
 (EVIDENCE/'CLOSE_SUMMARY.md').write_text('\n'.join(summary_lines)+'\n')
 
 accessory_rows=[]
@@ -324,9 +325,9 @@ lines=[f'''# V1A R2 order BOM — three boards plus spares
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
-**Selection OPEN: {selection_count}. Immediate-procurement OPEN: {order_count}.** Complete immediate ordering remains BLOCKED by the supply gaps below and B045. A locked MPN or build-to-drawing selection does not assert stock or electrical validation. No purchase, login, cart, quote request, CAD edit or push was made.
+**Selection OPEN: {selection_count}. Immediate-procurement OPEN: {order_count}.** Complete immediate ordering remains BLOCKED by the supply gaps below. B045 option A is selected and its sole schematic change is documented in [R203_OPTION_A](R203_OPTION_A.md). A locked MPN or build-to-drawing selection does not assert electrical validation. No purchase, login, cart, quote request or push was made.
 
-[Close summary](bom_order/CLOSE_SUMMARY.md), [lock review](bom_order/LOCK_REVIEW.md), [owner decision](bom_order/OWNER_DECISIONS.md), and [accessory definition](bom_order/ACCESSORY_REVIEW.md) are the current dispositions. Earlier CAPACITOR_REVIEW.md and STOCK_REVIEW.md findings are retained as historical evidence; the lock review supersedes their component-selection holds for its 23 locked rows. Three previously accepted order alternates remain unchanged; C351 now selects the separately reviewed TDK AC suffix. Every captured MPN, nominal value, reference and footprint is preserved in its own CSV fields.
+[Close summary](bom_order/CLOSE_SUMMARY.md), [lock review](bom_order/LOCK_REVIEW.md), [owner decision](bom_order/OWNER_DECISIONS.md), and [accessory definition](bom_order/ACCESSORY_REVIEW.md) are the current dispositions. Earlier CAPACITOR_REVIEW.md and STOCK_REVIEW.md findings are historical; all 24 lock-review selections are now closed. Three previously accepted order alternates remain unchanged; C351 selects the reviewed TDK AC suffix. CSV `value` and `mpn` are selected identities; `captured_mpn` retains the original export. Original values, including R203 24.4k, remain in SOURCE_BOM.csv. R203 is the only authorized CAD value change; references and footprints are preserved.
 
 **EVIDENCE:** KiCad {META['kicad_version']} export from [source commit `{META['source_commit']}`]({NATIVE_URL}hardware/kicad/V1A.kicad_sch), SHA-256 `{META['export_sha256']}`. The export contains **366 references: 298 catalog components across 96 MPNs, seven custom links and 61 etched PCB features**. Each is represented once. [SOURCE_BOM.csv](bom_order/SOURCE_BOM.csv), [PROVENANCE.json](bom_order/PROVENANCE.json), [RECONCILIATION.json](bom_order/RECONCILIATION.json) preserve the source audit; historical BOM_DRAFT is unchanged.
 
@@ -351,7 +352,8 @@ O01 mates the actual JST VH/XH input/control/I2C headers, defines four dry-conta
 for r in rows:
     if r['row_id'] in LOCKS:
         lines.append('| '+' | '.join(esc(r[k]) for k in ['row_id','mpn','selection_status','selection_reason','procurement_status'])+' |')
-lines += ['\n## Owner decision\n',owner_text,'\n## Remaining supply gaps\n','| ID | MPN | Action |','|---|---|---|']
+lines += ['\n## Owner decision\n',owner_text.replace('](../R203_OPTION_A.md)', '](R203_OPTION_A.md)'),
+          '\n## Remaining supply gaps\n','| ID | MPN | Action |','|---|---|---|']
 for r in close['procurement_open']:
     lines.append('| '+' | '.join(esc(r[k]) for k in ['row_id','mpn','reason'])+' |')
 lines += ['\n## Additional supplier offers\n','Prices are in the stated currency per stated pack/spool/piece; stock has the same unit. E006 stock unit is unconfirmed and excluded from closure. These offers are alternatives to the preferred-channel columns, never additional quantities.\n',
@@ -383,7 +385,7 @@ lines += ['''
 
 [BOM_ORDER_LCSC.csv](BOM_ORDER_LCSC.csv) is a local upload-style candidate subset, not a complete order or electrical release. It requires one coherent LCSC SKU, enough stock, priced rounded quantity, known multiple and accepted selection. Finite-build exact Murata lifecycle decisions are explicit exceptions, so the five locked capacitor identities can qualify without hiding their NRND/EOL labels. Other lifecycle holds and B045 remain excluded. No upload or account interaction occurred.
 
-Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`; validate with `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](bom_order/VALIDATION.json) checks coverage, quantities, currency/pack arithmetic, offers, scoped alternates, disclosed proxy, hardware hashes, counts and exact upload membership. These are document checks. No ERC/DRC rerun is claimed because hardware was read-only; R2 remains blocked and no gate is skipped.
+Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`; validate with `python3 docs/evidence/r2/bom_order/validate.py` and `python3 -m unittest tests.test_bom_order`. [VALIDATION.json](bom_order/VALIDATION.json) checks coverage, quantities, currency/pack arithmetic, offers, scoped alternates, disclosed proxy, original hardware hashes after reversing only the three authorized R203 property edits, counts and exact upload membership. [R203 checks](r203_option_a/CHECKS.json) record ERC 0 errors/0 warnings before and after, unchanged nets and the existing R2 CLI PCB-scope rejection. DRC not rerun: PCB unchanged. R2 remains blocked and no gate is skipped.
 
 Third-party facts and attribution are isolated in [third_party/bom_order](../../../third_party/bom_order/README.md). [LOCK_EXECUTION.md](bom_order/LOCK_EXECUTION.md) records execution and commit limitations.
 ''']

@@ -2,9 +2,9 @@
   "access_date": "2026-10-04",
   "definition": "Immediate procurement OPEN: no complete stocked exact/accepted offer, or unresolved selection. Explicit finite-build lifecycle decisions accepted; additional suppliers and original currencies retained separately. Quote/backorder is not stocked.",
   "open_before": 24,
-  "open_after": 13,
+  "open_after": 12,
   "selection_open_before": 24,
-  "selection_open_after": 1,
+  "selection_open_after": 0,
   "selection_locked_row_ids": [
     "B001",
     "B002",
@@ -17,6 +17,7 @@
     "B015",
     "B026",
     "B038",
+    "B045",
     "B053",
     "B068",
     "B080",
@@ -38,6 +39,7 @@
     "B011",
     "B013",
     "B014",
+    "B045",
     "B053",
     "H01",
     "H08",
@@ -45,7 +47,7 @@
   ],
   "newly_open_row_ids": [],
   "literal_open_cells_before": 1462,
-  "literal_open_cells_after": 1419,
+  "literal_open_cells_after": 1398,
   "rows_containing_open_before": 109,
   "rows_containing_open_after": 109,
   "procurement_open": [
@@ -72,12 +74,6 @@
       "mpn": "TNPW0805348KBEEA",
       "refdes": "R103",
       "reason": "Selection LOCKED; supply only: LCSC C1709278 / Vishay authorized-distributor exact backorder or quote; five pieces."
-    },
-    {
-      "row_id": "B045",
-      "mpn": "TNPW060324K4BEEA",
-      "refdes": "R203",
-      "reason": "24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value."
     },
     {
       "row_id": "B068",
@@ -128,14 +124,7 @@
       "reason": "Selection LOCKED; supply only: Order BOM_ACCESSORIES.csv O01.*; reuse H07/H08 spools for input leads; no duplicate spool charge."
     }
   ],
-  "needs_owner_decision": [
-    {
-      "row_id": "B045",
-      "mpn": "TNPW060324K4BEEA",
-      "refdes": "R203",
-      "reason": "24.4 kohm exact catalog code unverified; stocked adjacent values change the frozen feedback value."
-    }
-  ],
+  "needs_owner_decision": [],
   "selected_alternates": [
     {
       "row_id": "B007",
@@ -175,6 +164,13 @@
       "row_id": "B014",
       "mpn": "EEU-FR1E221",
       "routes": []
+    },
+    {
+      "row_id": "B045",
+      "mpn": "TNPW060324K6BEEA",
+      "routes": [
+        "mouser"
+      ]
     },
     {
       "row_id": "B053",

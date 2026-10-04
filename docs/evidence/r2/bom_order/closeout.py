@@ -1,4 +1,4 @@
-"""BOM-close decision overlay; captured CAD identities remain immutable."""
+"""BOM decisions over an immutable capture, including the scoped R203 owner change."""
 import json
 import math
 from decimal import Decimal
@@ -18,7 +18,7 @@ ACCESSORIES = json.loads((THIRD / 'LOCK_ACCESSORIES.json').read_text())
 
 
 def assert_lock(a, row):
-    """The lock brief authorizes scoped defaults, never new CAD values or lands."""
+    """Reject value changes except the exact subsequently authorized R203 option A."""
     assert a['captured_mpn'] == row['captured_mpn']
     assert set(a['refdes']) == set(row['refdes'].split(', ')), 'Lock reference scope mismatch'
     assert set(a['footprints']) == set(row['footprint'].split('; ')), 'Lock footprint mismatch'
@@ -37,6 +37,12 @@ def assert_lock(a, row):
         assert a['mpn'] == a['captured_mpn'] == 'CUSTOM-FX-CU-01 RevA'
     elif a['kind'] in ('mechanical', 'kit'):
         assert row['captured_mpn'] == 'N/A accessory' and row['footprint'] == 'Off-board'
+    elif a['kind'] == 'owner_value_change':
+        assert row['row_id'] == 'B045' and a['refdes'] == ['R203']
+        assert a['captured_mpn'] == 'TNPW060324K4BEEA'
+        assert a['mpn'] == 'TNPW060324K6BEEA' and a['value'] == '24.6k'
+        assert a['footprints'] == ['Resistor_SMD:R_0603_1608Metric']
+        assert a['selection'] == 'LOCKED' and a['owner_decision'] == 'A on 2026-10-04'
     else:
         assert a['kind'] == 'hard_stop' and a['selection'] == 'OPEN'
         assert a['mpn'] == row['captured_mpn']
@@ -47,6 +53,30 @@ def lock_identity(row):
     if a:
         assert_lock(a, row)
         row.update(mpn=a['mpn'], manufacturer=a['manufacturer'])
+        if a['kind'] == 'owner_value_change':
+            assert row['value'] == '24.4k', 'Unexpected historical R203 capture'
+            row['value'] = a['value']
+            row['notes'] += ' Owner option A 2026-10-04: selected/current CAD 24.6k; historical SOURCE_BOM value 24.4k retained. See R203_OPTION_A.md.'
+
+
+def hardware_baseline_bytes(path):
+    """Undo only three authorized R203 properties before checking original hashes."""
+    data = path.read_bytes()
+    if path != ROOT/'hardware/kicad/02_BUCK_5V.kicad_sch':
+        return data
+    text = data.decode()
+    start = text.index('    (property "Reference" "R203" ')
+    end = text.index('    (pin "1" ', start)
+    block = text[start:end]
+    for new, old in [
+        ('(property "Value" "24.6k"', '(property "Value" "24.4k"'),
+        ('(property "MPN" "TNPW060324K6BEEA"', '(property "MPN" "TNPW060324K4BEEA"'),
+        ('(property "Source" "Owner option A 2026-10-04; docs/evidence/r2/R203_OPTION_A.md; 100k/24.6k = 5.065041 V supersedes old setpoint note"',
+         '(property "Source" "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"'),
+    ]:
+        assert block.count(new) == 1, 'Missing or expanded R203 owner change'
+        block = block.replace(new, old)
+    return (text[:start] + block + text[end:]).encode()
 
 
 def offer_terms(q, needed):

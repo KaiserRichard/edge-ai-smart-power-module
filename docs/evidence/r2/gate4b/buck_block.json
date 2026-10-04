@@ -157,9 +157,9 @@
     },
     {
       "ref": "R203",
-      "value": "24.4k",
+      "value": "24.6k",
       "kind": "R",
-      "part": "TNPW060324K4BEEA",
+      "part": "TNPW060324K6BEEA",
       "pins": {
         "1": {
           "name": "1",
@@ -720,7 +720,7 @@
   "source_document": "docs/evidence/r2/BUCK_DESIGN.md",
   "schematic_notes": [
     "DATASHEET: L201 = Wurth 74437636351002, 10uH; 2 plated slots per drawing001.000 (2025-02-07).",
-    "CALCULATED: 100k / 24.4k local feedback = 5.098361 V nominal. No remote sense or setpoint increase.",
+    "CALCULATED: 100k / 24.6k local feedback = 5.065041 V nominal. Owner option A 2026-10-04; no remote sense.",
     "JP201 isolates native BUCK_SW. L201_IN exports to Sheet03 R640; VIN_PROTECTED feeds R644. Remove force links only while unpowered.",
     "JP202 = IL201_FORCE after the winding, before all raw capacitance. PF2 VIN_PROTECTED / PF3 BUCK_SW / PF4 L201_IN = M4 force pads.",
     "C205 bootstrap return stays on native BUCK_SW. TP201 / TP202 paired return pads are sense only.",
