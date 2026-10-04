@@ -1,0 +1,160 @@
+[
+  {
+    "evidence_id": "E001",
+    "row_id": "B011",
+    "mpn": "C3216X7R1H475K160AC",
+    "supplier": "Newark",
+    "sku": "95Y0089",
+    "stock": 28853,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".662"
+      ],
+      [
+        25,
+        ".329"
+      ]
+    ],
+    "url": "https://www.newark.com/tdk/c3216x7r1h475k160ac/cap-mlcc-smd-4-7uf-50v-x7r/dp/95Y0089",
+    "observed_date": "2026-10-04",
+    "crawl_age": "last month",
+    "notes": "Cut tape; stock/price/MOQ one snapshot. Page price includes applicable duties; no separate tariff added.",
+    "order_unit": "piece",
+    "units_per_pack": 1
+  },
+  {
+    "evidence_id": "E002",
+    "row_id": "B014",
+    "mpn": "EEU-FR1E221",
+    "supplier": "DigiKey Ireland",
+    "sku": "P124223-ND",
+    "stock": 1725,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "EUR",
+    "price_tiers": [
+      [
+        1,
+        ".64"
+      ],
+      [
+        10,
+        ".404"
+      ]
+    ],
+    "url": "https://www.digikey.ie/en/products/detail/panasonic-industry/EEU-FR1E221/9921023",
+    "observed_date": "2026-10-04",
+    "crawl_age": "5 days",
+    "notes": "Bulk, min/multiple1 inferred from qty1 tier; verify at order. Regional dated offer, not merged with US USD prices; excludes VAT.",
+    "order_unit": "piece",
+    "units_per_pack": 1
+  },
+  {
+    "evidence_id": "E003",
+    "row_id": "B053",
+    "mpn": "WFMB2512R0330FEA",
+    "supplier": "RS Australia",
+    "sku": "188-0668",
+    "stock": 3765,
+    "minimum": 5,
+    "multiple": 5,
+    "currency": "AUD",
+    "price_tiers": [
+      [
+        5,
+        "3.622"
+      ],
+      [
+        500,
+        "3.548"
+      ]
+    ],
+    "url": "https://au.rs-online.com/web/p/surface-mount-resistors/1880668",
+    "observed_date": "2026-10-04",
+    "crawl_age": "2 months",
+    "notes": "Stock ready to ship from another location; excludes incoming2000 and GST; one tape5 costsAUD18.11.",
+    "order_unit": "piece",
+    "units_per_pack": 1
+  },
+  {
+    "evidence_id": "E004",
+    "row_id": "H01",
+    "mpn": "1777989",
+    "supplier": "Newark",
+    "sku": "69R9824",
+    "stock": 2154,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "2.610"
+      ],
+      [
+        10,
+        "2.170"
+      ]
+    ],
+    "url": "https://www.newark.com/phoenix-contact/1777989/terminal-block-pluggable-2pos/dp/69R9824",
+    "observed_date": "2026-10-04",
+    "crawl_age": "yesterday",
+    "notes": "UK warehouse stock, not incoming6900; displayed applicable duties included.",
+    "order_unit": "piece",
+    "units_per_pack": 1
+  },
+  {
+    "evidence_id": "E005",
+    "row_id": "H08",
+    "mpn": "8521 010100",
+    "supplier": "Mouser Europe",
+    "sku": "566-8521-100-10",
+    "stock": 3,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "EUR",
+    "price_tiers": [
+      [
+        1,
+        "268.85"
+      ],
+      [
+        2,
+        "248.82"
+      ]
+    ],
+    "url": "https://eu.mouser.com/en/ProductDetail/Belden-Wire-Cable/8521-010100?qs=sGAEpiMZZMuGxYVy11yKKvWndU1ab51ugk%2FTwCk%252B8%2Fk%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "2 months",
+    "notes": "Stock and EUR price from same page; do not splice into a US offer.",
+    "order_unit": "100 ft spool (30.48 m)",
+    "units_per_pack": 1
+  },
+  {
+    "evidence_id": "E006",
+    "row_id": "M03",
+    "mpn": "6655609",
+    "supplier": "RS US",
+    "sku": "70826017",
+    "stock": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "36.05"
+      ]
+    ],
+    "url": "https://us.rs-online.com/product/rs-pro/6655609/70826017/",
+    "observed_date": "2026-10-04",
+    "crawl_age": "3 weeks",
+    "notes": "Page price per pack25. Category says4 ready plus675 additional, but stock unit basis is ambiguous; numeric stock not asserted.",
+    "order_unit": "pack of25",
+    "units_per_pack": 25
+  }
+]

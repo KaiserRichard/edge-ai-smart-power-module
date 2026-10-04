@@ -3431,7 +3431,7 @@
       (effects 
         (font 
           (size 1.27 1.27)))) 
-    (property "Value" "24.4k" 
+    (property "Value" "24.6k" 
       (at 469.9 198.12 0) 
       (effects 
         (font 
@@ -3442,13 +3442,13 @@
         (font 
           (size 1.27 1.27)) 
         (hide yes))) 
-    (property "MPN" "TNPW060324K4BEEA" 
+    (property "MPN" "TNPW060324K6BEEA" 
       (at 469.9 205.74 0) 
       (effects 
         (font 
           (size 1.27 1.27)) 
         (hide yes))) 
-    (property "Source" "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md" 
+    (property "Source" "Owner option A 2026-10-04; docs/evidence/r2/R203_OPTION_A.md; 100k/24.6k = 5.065041 V supersedes old setpoint note" 
       (at 469.9 205.74 0) 
       (effects 
         (font 

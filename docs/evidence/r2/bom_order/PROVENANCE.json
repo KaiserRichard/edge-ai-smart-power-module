@@ -1,5 +1,5 @@
 {
-  "source_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+  "source_commit": "56e9837e522c01bd680aca602f9f471d38d6039f",
   "first_commit": "838a8a45d8939f9b57af4715724bc71afc0134fc",
   "source_repository": "https://github.com/KaiserRichard/edge-ai-smart-power-module",
   "source_branch": "origin/feat/r2-testboard-capture",
@@ -384,5 +384,51 @@
     "U656": "/03_OUTPUT_PROTECTION/",
     "U661": "/03_OUTPUT_PROTECTION/",
     "U662": "/03_OUTPUT_PROTECTION/"
+  },
+  "previous_order_bom_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+  "resume_verification": {
+    "date": "2026-10-03",
+    "fetched_branch": "origin/feat/r2-testboard-capture",
+    "fetch_location": "/tmp/v1a-bom-order.aC9fug",
+    "detached_head": "56e9837e522c01bd680aca602f9f471d38d6039f",
+    "previous_source_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+    "export_filename": "export-resume.csv",
+    "export_sha256": "b2e57ccf9cfd4251d297d6e2bb6b422f2bfc0aead7b5d0fec14f03fad456acae",
+    "identical_to_previous_export": true,
+    "six_schematic_sha256_unchanged": true,
+    "tracked_source_checkout_clean_after_export": true,
+    "source_delta": "PCB preparation files and documentation only; six source schematics unchanged",
+    "log": "resume-export.log"
+  },
+  "u316_disposition": {
+    "status": "CONFIRMED",
+    "mpn": "LT4363HMS-1#PBF",
+    "authority": "BOM_ORDER_RESUME.md explicitly confirms correct, no longer pending; supersedes original brief marker",
+    "review_commit": "6d25cf28c4d246417c0a89ec89574c702850e069",
+    "review_file": "docs/evidence/r2/gate4b/CHECK_C1C3.md",
+    "evidence": "ADI LT4363 Rev. C pp. 2, 3, 8 reviewed in CHECK_C1C3: -1 MSOP 12 pins; retain exact MPN."
+  },
+  "bom_close_review": {
+    "access_date": "2026-10-04",
+    "baseline_commit": "4af7818511076cbbd336880607d262fc311d01bc",
+    "resumed_partial_commit": "809b39a",
+    "task_briefs": [
+      "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/BOM_CLOSE_OPEN.md",
+      "/Users/quockaiser/Desktop/Research/v1a-lab/briefs/BOM_CLOSE_RESUME.md"
+    ],
+    "captured_mpn_policy": "Source export and CAD unchanged. Only order_accepted=true decisions may alter order MPN; full reference and footprint scope, bias/production evidence or TI carrier identity checked.",
+    "evidence_sha256": {
+      "third_party/bom_order/CLOSE_CAPACITOR_FACTS.json": "75fb0d435ed93b0fc26dced4dd8e56ec6c8f25f319a1ef9f3390bfa921c59a92",
+      "third_party/bom_order/CLOSE_ALTERNATE_REVIEW.json": "3ed1cc7bd866b982416e6de6044f404def82470936aec6832543efe9cf2dbabc",
+      "third_party/bom_order/CLOSE_CATALOG_FACTS.json": "3590ab175d28d6db1848e28091c69d1082e9e336154a9212f4503b0a3f2c6297",
+      "third_party/bom_order/CLOSE_RESUME_CATALOG_FACTS.json": "f72b22cfed1dfceff612adc061dceac22023b3c17f26343caf1021e006b0c6ae",
+      "third_party/bom_order/CLOSE_STOCK_DECISIONS.json": "d9257c45bad251c8fa53f80a9c1b82298ea7b442e4a38b668bff9e80ff84ac9e"
+    },
+    "baseline_hardware_manifest": "CLOSE_BASELINE.json",
+    "open_summary": "CLOSE_SUMMARY.json",
+    "execution_record": "CLOSE_EXECUTION.md",
+    "cad_modified": false,
+    "commits": "Uncommitted: Git index.lock Operation not permitted; brief explicitly permits handback uncommitted.",
+    "push": "Not attempted"
   }
 }

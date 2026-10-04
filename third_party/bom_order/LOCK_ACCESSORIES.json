@@ -1,0 +1,300 @@
+[
+  {
+    "row_id": "O01.1",
+    "parent": "O01",
+    "mpn": "XHP-2",
+    "manufacturer": "JST",
+    "qty_per_kit": 8,
+    "kit_count": 4,
+    "planning_qty": 32,
+    "order_unit": "piece",
+    "purpose": "J301/J302/J603/J604/J605/J606/JP600/JP660 mates",
+    "supplier": "DigiKey",
+    "sku": "455-2266-ND",
+    "stock": 244319,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".1"
+      ],
+      [
+        10,
+        ".059"
+      ],
+      [
+        25,
+        ".0556"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-2/555485",
+    "access_date": "2026-10-04",
+    "crawl_age": "today",
+    "notes": "Bulk min/multiple1 inferred from qty1 tier; verify at order."
+  },
+  {
+    "row_id": "O01.2",
+    "parent": "O01",
+    "mpn": "XHP-4",
+    "manufacturer": "JST",
+    "qty_per_kit": 1,
+    "kit_count": 4,
+    "planning_qty": 4,
+    "order_unit": "piece",
+    "purpose": "J503 I2C mate",
+    "supplier": "DigiKey",
+    "sku": "455-2267-ND",
+    "stock": 131707,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".1"
+      ],
+      [
+        10,
+        ".065"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-4/683353",
+    "access_date": "2026-10-04",
+    "crawl_age": "3 weeks",
+    "notes": "Bulk min/multiple1 inferred from qty1 tier; verify at order."
+  },
+  {
+    "row_id": "O01.3",
+    "parent": "O01",
+    "mpn": "SXH-001T-P0.6",
+    "manufacturer": "JST",
+    "qty_per_kit": 20,
+    "kit_count": 4,
+    "planning_qty": 80,
+    "order_unit": "piece",
+    "purpose": "16 two-position plus4 I2C contacts per kit",
+    "supplier": "DigiKey",
+    "sku": "455-1135CT-ND",
+    "stock": 2233238,
+    "minimum": 100,
+    "multiple": 100,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        100,
+        ".0471"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/SXH-001T-P0-6/527371",
+    "access_date": "2026-10-04",
+    "crawl_age": "3 weeks",
+    "notes": "Cut tape100; min/multiple100 inferred conservatively from sole cut-tape price tier; covers80 required."
+  },
+  {
+    "row_id": "O01.4",
+    "parent": "O01",
+    "mpn": "VHR-2N",
+    "manufacturer": "JST",
+    "qty_per_kit": 1,
+    "kit_count": 4,
+    "planning_qty": 4,
+    "order_unit": "piece",
+    "purpose": "J501 DC input mate",
+    "supplier": "DigiKey",
+    "sku": "455-VHR-2N-ND",
+    "stock": 94705,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".11"
+      ],
+      [
+        10,
+        ".079"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/VHR-2N/608624",
+    "access_date": "2026-10-04",
+    "crawl_age": "2 days",
+    "notes": "Bulk min/multiple1 inferred from qty1 tier; verify at order."
+  },
+  {
+    "row_id": "O01.5",
+    "parent": "O01",
+    "mpn": "SVH-41T-P1.1",
+    "manufacturer": "JST",
+    "qty_per_kit": 2,
+    "kit_count": 4,
+    "planning_qty": 8,
+    "order_unit": "piece",
+    "purpose": "AWG16 input socket contacts, not smaller21T contact",
+    "supplier": "DigiKey",
+    "sku": "455-1319-100-ND",
+    "stock": "OPEN",
+    "minimum": 100,
+    "multiple": 100,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        100,
+        ".08810"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/SVH-41T-P1-1/26213078",
+    "access_date": "2026-10-04",
+    "crawl_age": "2 days",
+    "notes": "Strip100; min/multiple100 inferred from price tier;100 estimated incoming09-Oct-2026 is not counted as stock. Exact backorder default; no reel3500."
+  },
+  {
+    "row_id": "O01.6",
+    "parent": "O01",
+    "mpn": "8125SHZBE",
+    "manufacturer": "C&K",
+    "qty_per_kit": 4,
+    "kit_count": 4,
+    "planning_qty": 16,
+    "order_unit": "piece",
+    "purpose": "Four momentary gold-contact controls; use pins1/2 only; isolateNC3",
+    "supplier": "DigiKey",
+    "sku": "CKN4022-ND",
+    "stock": 675,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "11.55"
+      ],
+      [
+        10,
+        "9.969"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/c-k/8125SHZBE/181361",
+    "access_date": "2026-10-04",
+    "crawl_age": "yesterday",
+    "notes": "Bulk min/multiple1 inferred from qty1 tier; verify at order."
+  },
+  {
+    "row_id": "O01.7",
+    "parent": "O01",
+    "mpn": "3050 BK005",
+    "manufacturer": "Alpha Wire",
+    "qty_per_kit": 1.95,
+    "kit_count": 4,
+    "planning_qty": 1,
+    "order_unit": "100 ft spool (30.48 m)",
+    "purpose": "Black AWG24 ground leads;1.95m per kit",
+    "supplier": "DigiKey",
+    "sku": "A2015B-100-ND",
+    "stock": 876,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "74.85"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/alpha-wire/3050-BK005/188639",
+    "access_date": "2026-10-04",
+    "crawl_age": "yesterday",
+    "notes": "One spool shared across4 kits;7.8m consumption; remaining22.68m covers cut allowance."
+  },
+  {
+    "row_id": "O01.8",
+    "parent": "O01",
+    "mpn": "3050 WH005",
+    "manufacturer": "Alpha Wire",
+    "qty_per_kit": 2.35,
+    "kit_count": 4,
+    "planning_qty": 1,
+    "order_unit": "100 ft spool (30.48 m)",
+    "purpose": "White AWG24 individually labelled control/I2C/manual-link leads",
+    "supplier": "DigiKey",
+    "sku": "A2015W-100-ND",
+    "stock": 349,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "74.85"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/alpha-wire/3050-WH005/188843",
+    "access_date": "2026-10-04",
+    "crawl_age": "2 weeks",
+    "notes": "One spool shared across4 kits;9.4m consumption; remaining21.08m covers cut allowance."
+  },
+  {
+    "row_id": "O02.1",
+    "parent": "O02",
+    "mpn": "507302B00000G",
+    "manufacturer": "Boyd / Aavid",
+    "qty_per_kit": 3,
+    "kit_count": 4,
+    "planning_qty": 12,
+    "order_unit": "piece",
+    "purpose": "One independent bolt-onTO220 sink for each D102/D330/D331",
+    "supplier": "DigiKey",
+    "sku": "HS115-ND",
+    "stock": 16871,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".34"
+      ],
+      [
+        10,
+        ".305"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/boyd-laconia-llc/507302B00000G/5849",
+    "access_date": "2026-10-04",
+    "crawl_age": "today",
+    "notes": "Bulk min/multiple1 inferred from qty1 tier; verify at order."
+  },
+  {
+    "row_id": "O02.2",
+    "parent": "O02",
+    "mpn": "4880SG",
+    "manufacturer": "Boyd / Aavid",
+    "qty_per_kit": 3,
+    "kit_count": 4,
+    "planning_qty": 12,
+    "order_unit": "piece",
+    "purpose": "ThermalsilIII pad, shoulder washer and4-40 mounting hardware per sink",
+    "supplier": "DigiKey",
+    "sku": "4880SG-ND",
+    "stock": 24539,
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "2.39"
+      ],
+      [
+        10,
+        "2.116"
+      ]
+    ],
+    "source_url": "https://www.digikey.com/en/products/detail/boyd-laconia-llc/4880SG/1625671",
+    "access_date": "2026-10-04",
+    "crawl_age": "5 days",
+    "notes": "Bulk min/multiple1 inferred from qty1 tier; verify at order."
+  }
+]

@@ -1,0 +1,205 @@
+{
+  "access_date": "2026-10-04",
+  "definition": "Purchased row without at least one exact/accepted MPN offer with SKU, enough stock, USD price and known multiple, or unresolved lifecycle/exact-code/owner hold. Count once per row; secondary missing channels are not extra blockers.",
+  "open_before": 27,
+  "open_after": 24,
+  "closed_row_ids": [
+    "B007",
+    "B008",
+    "B033",
+    "B085"
+  ],
+  "newly_open_row_ids": [
+    "B003"
+  ],
+  "literal_open_cells_before": 1461,
+  "literal_open_cells_after": 1462,
+  "rows_containing_open_before": 109,
+  "rows_containing_open_after": 109,
+  "needs_owner_decision": [
+    {
+      "row_id": "B001",
+      "mpn": "GRM32ER72A105KA01L",
+      "refdes": "C101, C102, C378",
+      "reason": "original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute."
+    },
+    {
+      "row_id": "B002",
+      "mpn": "GRM188R71H104KA93D",
+      "refdes": "C103, C203, C204, C205, C303, C304, C308, C354, C355, C364, C368, C369, C370, C376, C380, C401, C402, C405, C406, C604, C609, C640, C642, C644, C647, C651, C710, C711, C712, C714, C715, C716, C717, C723, C728, C730, C731, C732, C733, C754, C756, C761, C762",
+      "reason": "C103 sets input DVDT/startup; C401 sets telemetry filter timing. Different bias behavior needs owner timing review before a grouped-row substitution."
+    },
+    {
+      "row_id": "B003",
+      "mpn": "GRM32ER71H106KA12L",
+      "refdes": "C201, C202, C305, C306, C352, C377, C601, C602, C660",
+      "reason": "original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute."
+    },
+    {
+      "row_id": "B004",
+      "mpn": "GRM21BR71E105KA99L",
+      "refdes": "C206, C301, C309, C365, C367, C374, C375, C600",
+      "reason": "C374 sets HOLD_SLEW_C timing and >=0.5 uF requirement; changing its bias curve needs owner timing review."
+    },
+    {
+      "row_id": "B009",
+      "mpn": "PCH1V471MCL1GS",
+      "refdes": "C330, C331, C332, C333, C334, C335, C336, C337, C340, C341, C342, C343",
+      "reason": "Exact PCH1V471MCL1GS supplier quote required; another bank capacitor changes ESR/ESL, energy and fault behavior."
+    },
+    {
+      "row_id": "B011",
+      "mpn": "C3216X7R1H475K160AB",
+      "refdes": "C351",
+      "reason": "C3216X7R1H475K160AB ordering code unverified; AC candidate needs bias, lands and converter review."
+    },
+    {
+      "row_id": "B013",
+      "mpn": "GRM1885C1H330JA01D",
+      "refdes": "C357",
+      "reason": "C357 is LTC3115 feedforward compensation; loop/timing qualification is not established by nominal C0G and bias matching."
+    },
+    {
+      "row_id": "B014",
+      "mpn": "EEU-FR1E221",
+      "refdes": "C358, C359",
+      "reason": "Exact straight-lead EEU-FR1E221 stock absent; another part needs lead-fit, ESR and hold-up review."
+    },
+    {
+      "row_id": "B015",
+      "mpn": "SMCJ36CA",
+      "refdes": "D101",
+      "reason": "Exact Littelfuse SMCJ36CA stock absent; Diodes same-number candidate needs hot-clamp/pulse/fuse coordination review."
+    },
+    {
+      "row_id": "B026",
+      "mpn": "CUSTOM-FX-CU-01 RevA",
+      "refdes": "JP101, JP201, JP202, JP301, JP330, JP331, JP501",
+      "reason": "Approve force-link finishing/tolerances, joint stack/torque and installed current envelope; fabricator quote required."
+    },
+    {
+      "row_id": "B038",
+      "mpn": "TNPW0805348KBEEA",
+      "refdes": "R103",
+      "reason": "Exact 348 kohm resistor stock absent; ERA-6AEB3483V power/voltage/thermal margins affect protection threshold."
+    },
+    {
+      "row_id": "B045",
+      "mpn": "TNPW060324K4BEEA",
+      "refdes": "R203",
+      "reason": "Exact 24.4 kohm order code unverified; rounding changes output setpoint and Sheet03 path budget."
+    },
+    {
+      "row_id": "B053",
+      "mpn": "WFMB2512R0330FEA",
+      "refdes": "R308, R309, R310, R311, R380, R381, R382, R383, R386, R387, R388, R389, R390, R391, R392, R393",
+      "reason": "53 exact WFMB2512R0330FEA ballast parts unavailable; 1 W WSL candidate needs WFM-land, pulse, thermal and sharing review."
+    },
+    {
+      "row_id": "B068",
+      "mpn": "TNPW0805365KBEEA",
+      "refdes": "R376, R378",
+      "reason": "Exact 365 kohm resistor stock absent; Panasonic candidate also lacks stock and threshold power/voltage/TCR review."
+    },
+    {
+      "row_id": "B080",
+      "mpn": "TPS26630RGER",
+      "refdes": "U101",
+      "reason": "TPS26630RGER/RGET stock absent; preserve latch-off variant, timing, current limit and RGE pinout."
+    },
+    {
+      "row_id": "B093",
+      "mpn": "INA228AIDGSR",
+      "refdes": "U401",
+      "reason": "INA228AIDGSR stock absent; obsolete/restricted AIDGST proposal rejected. Different monitor needs range/pin/telemetry review."
+    },
+    {
+      "row_id": "H01",
+      "mpn": "1777989",
+      "refdes": "J502 mating plug",
+      "reason": "Exact 1777989 stock absent in newer Mouser/DigiKey snapshots; confirm source for the selected mating plug."
+    },
+    {
+      "row_id": "H05",
+      "mpn": "3-87456-6",
+      "refdes": "HARNESS full Pi 2x20 socket housing",
+      "reason": "Exact 3-87456-6 housing stock absent; marketplace supply is not accepted; confirm exact housing source."
+    },
+    {
+      "row_id": "H08",
+      "mpn": "8521 010100",
+      "refdes": "HARNESS return AWG16 trunk",
+      "reason": "Exact 8521 010100 needs one coherent supplier SKU/stock/USD price/pack offer for a 100 ft spool."
+    },
+    {
+      "row_id": "M01",
+      "mpn": "OPEN",
+      "refdes": "M4 bolts for seven links",
+      "reason": "Choose and quote exact M4x12 A2-70 bolt code after force-link joint-stack approval (48 required)."
+    },
+    {
+      "row_id": "M02",
+      "mpn": "OPEN",
+      "refdes": "M4 washers for seven links",
+      "reason": "Choose and quote exact 4.3/9/0.8 mm washer code and finish (96 required)."
+    },
+    {
+      "row_id": "M03",
+      "mpn": "OPEN",
+      "refdes": "M4 nuts for seven links",
+      "reason": "Choose and quote exact all-metal M4 nut code/finish after stack/torque review (48 required)."
+    },
+    {
+      "row_id": "O01",
+      "mpn": "OPEN",
+      "refdes": "Input / control / I2C mating harnesses",
+      "reason": "Define input/control/I2C mating harnesses, contacts, wire and manual links before quantities and sourcing."
+    },
+    {
+      "row_id": "O02",
+      "mpn": "OPEN",
+      "refdes": "Thermal / assembly accessories",
+      "reason": "Define thermal interfaces, live-tab insulation and mounting after thermal/layout review before sourcing."
+    }
+  ],
+  "selected_alternates": [
+    {
+      "row_id": "B007",
+      "original": "GRM21BR71E475KA73L",
+      "alternate": "GRM21BZ71E475KE15L",
+      "reason": "Original NRND/EOL; retain nominal capacitance, dielectric and footprint",
+      "routes": [
+        "mouser"
+      ]
+    },
+    {
+      "row_id": "B008",
+      "original": "GRM21BR71H105KA12L",
+      "alternate": "GCM21BR71H105KA03L",
+      "reason": "Original NRND/EOL; retain nominal capacitance, dielectric and footprint",
+      "routes": [
+        "digikey"
+      ]
+    },
+    {
+      "row_id": "B033",
+      "original": "CSD18540Q5B",
+      "alternate": "CSD18540Q5BT",
+      "reason": "Exact original out of stock; manufacturer confirms same device/package in 250-piece instead of 2500-piece reels.",
+      "routes": [
+        "mouser"
+      ]
+    }
+  ],
+  "exact_stock_closures": [
+    {
+      "row_id": "B085",
+      "mpn": "TPS7A1601DGNR",
+      "routes": [
+        "mouser"
+      ]
+    }
+  ],
+  "lock_start_commit": "0364f4c0fc5ef8e50b014ef07497d104b6984d56",
+  "bom_sha256": "7a8e3e03043309ff8958124895cc4d1cbfbfb3569c7b76aa5e061cce40336997"
+}

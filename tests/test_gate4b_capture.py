@@ -19,7 +19,8 @@ import check_r2_schematic as checker
 class Gate4BCaptureTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.tree = ET.parse(ROOT/'docs/evidence/r2/gate4b/captured.xml').getroot()
+        # Current owner-approved R203 capture; retain the earlier XML as history.
+        cls.tree = ET.parse(ROOT/'docs/evidence/r2/r203_option_a/AFTER.xml').getroot()
         cls.specs = checker.load_specs(ROOT/'docs/evidence/r2/gate4b')
 
     def validate(self, tree, specs):

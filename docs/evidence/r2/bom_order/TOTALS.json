@@ -2,11 +2,11 @@
   "lcsc": {
     "Catalog board": {
       "total": "OPEN",
-      "known_price_subtotal_usd": "591.3413",
-      "priced_lines": 53,
+      "known_price_subtotal_usd": "576.4810",
+      "priced_lines": 51,
       "lines": 96,
-      "stock_sufficient_priced_subtotal_usd": "250.4903",
-      "stock_sufficient_priced_lines": 41
+      "stock_sufficient_priced_subtotal_usd": "251.8098",
+      "stock_sufficient_priced_lines": 40
     },
     "Harness": {
       "total": "OPEN",
@@ -20,11 +20,11 @@
   "mouser": {
     "Catalog board": {
       "total": "OPEN",
-      "known_price_subtotal_usd": "706.717",
-      "priced_lines": 45,
+      "known_price_subtotal_usd": "788.635",
+      "priced_lines": 52,
       "lines": 96,
-      "stock_sufficient_priced_subtotal_usd": "442.947",
-      "stock_sufficient_priced_lines": 32
+      "stock_sufficient_priced_subtotal_usd": "508.435",
+      "stock_sufficient_priced_lines": 37
     },
     "Harness": {
       "total": "OPEN",
@@ -38,16 +38,16 @@
   "digikey": {
     "Catalog board": {
       "total": "OPEN",
-      "known_price_subtotal_usd": "936.93080",
-      "priced_lines": 81,
+      "known_price_subtotal_usd": "951.18080",
+      "priced_lines": 84,
       "lines": 96,
-      "stock_sufficient_priced_subtotal_usd": "618.21520",
-      "stock_sufficient_priced_lines": 62
+      "stock_sufficient_priced_subtotal_usd": "621.05520",
+      "stock_sufficient_priced_lines": 64
     },
     "Harness": {
       "total": "OPEN",
-      "known_price_subtotal_usd": "558.66160",
-      "priced_lines": 4,
+      "known_price_subtotal_usd": "581.46160",
+      "priced_lines": 5,
       "lines": 7,
       "stock_sufficient_priced_subtotal_usd": "281.54160",
       "stock_sufficient_priced_lines": 2

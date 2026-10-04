@@ -751,9 +751,13 @@ def calculate_gate2(netlist):
     tr = threshold(value('R301'), value('R302'))
     # Preserve the accepted fault model only when its other captured inputs
     # still match. A changed model input must not inherit the previous margins.
-    if (value('R202'), value('R203')) != (100000,24400):
+    if (value('R202'), value('R203')) != (100000,24600):
         raise ValueError('Buck divider changed; revise inherited fault initial conditions')
     raw = raw_corners(1+value('R202')/value('R203'))
+    # Owner option A: never reuse 24.4k initial conditions for a new Gate2 run.
+    # Historical Gate1b/1c/1d inputs/results above remain unchanged. This legacy
+    # Gate2 model does not describe the later Gate4A/Gate4B protection topology.
+    P.update(v_start_V=raw['min_V'], v_dc_max_V=raw['max_V'])
     caps = [value(f'C{n}') for n in range(330,338)]
     if any(not math.isclose(c,470e-6) for c in caps):
         raise ValueError('Bulk bank changed; revise fault model')

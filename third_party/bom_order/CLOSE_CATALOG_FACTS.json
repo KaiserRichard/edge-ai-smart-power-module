@@ -1,0 +1,404 @@
+[
+  {
+    "evidence_id": "Q271",
+    "mpn": "GRM188R72A104KA35D",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R72A104KA35D/702826",
+    "observed_date": "2026-10-04",
+    "crawl_age": "today",
+    "sku": "490-3285-1-ND",
+    "stock": 559089,
+    "lead_time": "17 Weeks",
+    "lifecycle": "Active",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".16"
+      ],
+      [
+        10,
+        ".087"
+      ],
+      [
+        50,
+        ".0612"
+      ],
+      [
+        100,
+        ".0532"
+      ],
+      [
+        500,
+        ".0398"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM188R72A104KA35D",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "CONFIRMED indexed stock/price snapshot; not live inventory. Minimum inferred from first price tier. ASSUMED single-piece cut-tape multiple; confirm before order."
+    ]
+  },
+  {
+    "evidence_id": "Q272",
+    "mpn": "GCM21BR71E105KA56L",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/murata-electronics/GCM21BR71E105KA56L/1641659",
+    "observed_date": "2026-10-04",
+    "crawl_age": "last month",
+    "sku": "490-4785-1-ND",
+    "stock": 73080,
+    "lead_time": "21 Weeks",
+    "lifecycle": "Active",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".18"
+      ],
+      [
+        10,
+        ".10"
+      ],
+      [
+        50,
+        ".0702"
+      ],
+      [
+        100,
+        ".0612"
+      ],
+      [
+        500,
+        ".04616"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GCM21BR71E105KA56L",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "CONFIRMED indexed stock/price snapshot; not live inventory. Minimum inferred from first price tier. ASSUMED single-piece cut-tape multiple; confirm before order."
+    ]
+  },
+  {
+    "evidence_id": "Q273",
+    "mpn": "GCM21BR71H105KA03L",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/murata-electronics/GCM21BR71H105KA03L/5251430",
+    "observed_date": "2026-10-04",
+    "crawl_age": "2 days ago",
+    "sku": "490-10675-1-ND",
+    "stock": 102251,
+    "lead_time": "21 Weeks",
+    "lifecycle": "Active",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".24"
+      ],
+      [
+        10,
+        ".137"
+      ],
+      [
+        50,
+        ".098"
+      ],
+      [
+        100,
+        ".0861"
+      ],
+      [
+        500,
+        ".0661"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GCM21BR71H105KA03L",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "CONFIRMED indexed stock/price snapshot; not live inventory. Minimum inferred from first price tier. ASSUMED single-piece cut-tape multiple; confirm before order."
+    ]
+  },
+  {
+    "evidence_id": "Q274",
+    "mpn": "GRM21BZ71E475KE15L",
+    "d": "mouser",
+    "url": "https://www.mouser.com/es/ProductDetail/Murata-Electronics/GRM21BZ71E475KE15L?qs=Ey7%2FXF42M3feXnDNgc%252BFlQ%3D%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "3 weeks ago",
+    "sku": "81-GRM21BZ71E475KE5L",
+    "stock": 180043,
+    "lead_time": "12 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".29"
+      ],
+      [
+        10,
+        ".122"
+      ],
+      [
+        100,
+        ".108"
+      ],
+      [
+        500,
+        ".084"
+      ],
+      [
+        1000,
+        ".077"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM21BZ71E475KE15L",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "CONFIRMED Spanish-language US page explicitly prices in USD; minimum/multiple 1, maximum 15000. Manufacturer production status separately confirmed in CLOSE_CAPACITOR_FACTS."
+    ]
+  },
+  {
+    "evidence_id": "Q275",
+    "mpn": "GRM1885C2E330JW07D",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885342006002/9346205",
+    "observed_date": "2026-10-04",
+    "crawl_age": "4 months ago",
+    "sku": "490-GRM1885C2E330JW07DCT-ND",
+    "stock": 5208,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": "OPEN",
+    "multiple": "OPEN",
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".20"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM1885C2E330JW07D",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "CONFIRMED exact Murata MPN in substitute table only. Its stock 5208 and USD unit price .20 are distinct from the parent Wurth stock/price. ASSUMED price tier 1 from unit quote; minimum/multiple and quantity pricing OPEN. Do not inherit parent specifications or purchase terms."
+    ]
+  },
+  {
+    "evidence_id": "Q276",
+    "mpn": "GRM32ER71H106KA12L",
+    "d": "mouser",
+    "url": "https://www.mouser.fr/fr/ProductDetail/Murata-Electronics/GRM32ER71H106KA12L?qs=6pxx44s1bjkjdm74o%2FrKhg%3D%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "2 months ago",
+    "sku": "81-GRM32ER71H106KA2L",
+    "stock": "OPEN",
+    "lead_time": "OPEN",
+    "lifecycle": "End of Life",
+    "minimum": "OPEN",
+    "multiple": "OPEN",
+    "currency": "EUR",
+    "price_tiers": [],
+    "alternate_candidates": [],
+    "page_mpn": "GRM32ER71H106KA12L",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "CONFIRMED exact MPN lifecycle: Fin de vie. Stock, USD price and pack terms not retrieved. Residual stock does not resolve lifecycle hold."
+    ]
+  },
+  {
+    "evidence_id": "Q277",
+    "mpn": "TPS7A1601DGNR",
+    "d": "mouser",
+    "url": "https://www.mouser.com/es/ProductDetail/Texas-Instruments/TPS7A1601DGNR?qs=KC2rBGieF4oE7JWkZS%2FgAQ%3D%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "4 weeks ago",
+    "sku": "595-TPS7A1601DGNR",
+    "stock": 63,
+    "lead_time": "16 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "4.21"
+      ],
+      [
+        10,
+        "3.18"
+      ],
+      [
+        25,
+        "2.93"
+      ],
+      [
+        100,
+        "2.65"
+      ],
+      [
+        250,
+        "2.51"
+      ],
+      [
+        500,
+        "2.50"
+      ],
+      [
+        1000,
+        "2.30"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "TPS7A1601DGNR",
+    "page_manufacturer": "Texas Instruments",
+    "notes": [
+      "CONFIRMED exact MPN, same-page USD prices, numeric stock and explicit minimum/multiple 1. Incoming inventory is excluded. Stock is a dated indexed snapshot, not a reservation."
+    ]
+  },
+  {
+    "evidence_id": "Q278",
+    "mpn": "SMCJ36CA",
+    "d": "mouser",
+    "url": "https://www.mouser.com/en/ProductDetail/Littelfuse/SMCJ36CA?qs=zHiv0nsVGmqDVrcTX3XJRw%3D%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "last week",
+    "sku": "576-SMCJ36CA",
+    "stock": 0,
+    "lead_time": "34 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        ".97"
+      ],
+      [
+        10,
+        ".446"
+      ],
+      [
+        100,
+        ".389"
+      ],
+      [
+        500,
+        ".303"
+      ],
+      [
+        1000,
+        ".282"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "SMCJ36CA",
+    "page_manufacturer": "Littelfuse",
+    "notes": [
+      "CONFIRMED Littelfuse identity. 38846 expected 2026-10-08 is not stock."
+    ]
+  },
+  {
+    "evidence_id": "Q279",
+    "mpn": "CSD18540Q5B",
+    "d": "mouser",
+    "url": "https://www.mouser.com/en/ProductDetail/Texas-Instruments/CSD18540Q5B?qs=NRIcxvoDUteMaKTIEMaARQ%3D%3D",
+    "observed_date": "2026-10-04",
+    "crawl_age": "last week",
+    "sku": "595-CSD18540Q5B",
+    "stock": 0,
+    "lead_time": "9 Weeks",
+    "lifecycle": "OPEN",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "3.33"
+      ],
+      [
+        10,
+        "1.89"
+      ],
+      [
+        100,
+        "1.50"
+      ],
+      [
+        500,
+        "1.24"
+      ],
+      [
+        1000,
+        "1.21"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "CSD18540Q5B",
+    "page_manufacturer": "Texas Instruments",
+    "notes": [
+      "CONFIRMED exact MPN stock 0. Alternative CSD18540Q5BT is separately listed in stock at USD4.53, minimum1, without numeric stock or full pack terms in this snapshot; not merged into original offer."
+    ]
+  },
+  {
+    "evidence_id": "Q280",
+    "mpn": "WFMB2512R0330FEA",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/vishay-dale/WFMB2512R0330FEA/9972305",
+    "observed_date": "2026-10-04",
+    "crawl_age": "4 days ago",
+    "sku": "541-10281-1-ND",
+    "stock": 0,
+    "lead_time": "83 Weeks",
+    "lifecycle": "Active",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "1.94"
+      ],
+      [
+        10,
+        "1.283"
+      ],
+      [
+        25,
+        "1.1052"
+      ],
+      [
+        50,
+        ".9932"
+      ],
+      [
+        100,
+        ".8982"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "WFMB2512R0330FEA",
+    "page_manufacturer": "Vishay Dale",
+    "notes": [
+      "CONFIRMED indexed stock/price snapshot; not live inventory. Minimum inferred from first price tier. ASSUMED single-piece cut-tape multiple; confirm before order.",
+      "2000 expected 2028-05-15 is not available stock."
+    ]
+  }
+]
