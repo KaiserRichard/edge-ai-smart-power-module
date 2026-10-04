@@ -1,9 +1,43 @@
 (version 1)
+# NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED
+# Layout-owned rules derived from read-only fabprep limits on 2026-10-04.
+# See docs/pcb/LAYOUT_FAB_RULES.md. No package exceptions or exclusions.
+# Last matching constraint wins; voltage screens follow fabrication floor.
 
-# Manufacturer/library land patterns have 0.15 mm adjacent-pad gaps.
-# Applies only between pads inside the same named package. Routing, vias,
-# zones and all inter-footprint clearances retain the 0.20 mm project rule.
-# See docs/evidence/r3/layout/PLACEMENT_REVIEW.md; fabrication capability OPEN.
-(rule "Native 0.15 mm package pad spacing"
-  (condition "A.Type == 'Pad' && B.Type == 'Pad' && ((A.memberOfFootprint('Q101') && B.memberOfFootprint('Q101')) || (A.memberOfFootprint('U302') && B.memberOfFootprint('U302')) || (A.memberOfFootprint('U306') && B.memberOfFootprint('U306')) || (A.memberOfFootprint('U600') && B.memberOfFootprint('U600')) || (A.memberOfFootprint('U403') && B.memberOfFootprint('U403')))")
-  (constraint clearance (min 0.15mm)))
+(rule "V1A copper manufacturing floor"
+  (constraint track_width (min 0.20mm))
+  (constraint clearance (min 0.20mm)))
+(rule "V1A ordinary via dimensions"
+  (condition "A.Type == 'Via'")
+  (constraint hole_size (min 0.30mm))
+  (constraint via_diameter (min 0.60mm))
+  (constraint annular_width (min 0.15mm)))
+(rule "V1A heavy copper component PTH ring"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint annular_width (min 0.254mm)))
+(rule "V1A drilled pad and mixed hole separation"
+  (constraint hole_to_hole (min 0.45mm)))
+(rule "V1A via pair hole separation"
+  (condition "A.Type == 'Via' && B.Type == 'Via'")
+  (constraint hole_to_hole (min 0.20mm)))
+(rule "V1A routed outline copper margin"
+  (constraint edge_clearance (min 0.50mm)))
+(rule "V1A legend clearance"
+  (constraint silk_clearance (min 0.15mm)))
+(rule "V1A drilled hole to copper"
+  (constraint hole_clearance (min 0.20mm)))
+(rule "V1A component hole to copper"
+  (condition "A.Pad_Type == 'Through-hole' || B.Pad_Type == 'Through-hole'")
+  (constraint hole_clearance (min 0.35mm)))
+
+(rule "V1A normal input voltage screen"
+  (condition "A.NetName == '/VIN_PROTECTED' || B.NetName == '/VIN_PROTECTED' || A.NetName == '/01_INPUT_PROTECTION/EFUSE_OUT' || B.NetName == '/01_INPUT_PROTECTION/EFUSE_OUT' || A.NetName == '/01_INPUT_PROTECTION/INPUT_FLT' || B.NetName == '/01_INPUT_PROTECTION/INPUT_FLT' || A.NetName == '/02_BUCK_5V/BUCK_SW' || B.NetName == '/02_BUCK_5V/BUCK_SW' || A.NetName == '/L201_IN' || B.NetName == '/L201_IN' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_LIMITED' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_LIMITED' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_SNS' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_SNS'")
+  (constraint clearance (min 0.25mm)))
+
+(rule "V1A surge exposed voltage screen"
+  (condition "A.NetName == '/VIN_RAW' || B.NetName == '/VIN_RAW' || A.NetName == '/VIN_FUSED' || B.NetName == '/VIN_FUSED' || A.NetName == '/01_INPUT_PROTECTION/VIN_EFUSE_IN' || B.NetName == '/01_INPUT_PROTECTION/VIN_EFUSE_IN' || A.NetName == '/01_INPUT_PROTECTION/INPUT_BGATE' || B.NetName == '/01_INPUT_PROTECTION/INPUT_BGATE' || A.NetName == '/01_INPUT_PROTECTION/INPUT_DRV' || B.NetName == '/01_INPUT_PROTECTION/INPUT_DRV' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_RAW' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_RAW' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE'")
+  (constraint clearance (min 0.64mm)))
+
+(rule "V1A boosted voltage screen"
+  (condition "A.NetName == '/02_BUCK_5V/BUCK_CBOOT' || B.NetName == '/02_BUCK_5V/BUCK_CBOOT' || A.NetName == '/02_BUCK_5V/BUCK_RBOOT' || B.NetName == '/02_BUCK_5V/BUCK_RBOOT' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_BST1' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_BST1'")
+  (constraint clearance (min 0.64mm)))
