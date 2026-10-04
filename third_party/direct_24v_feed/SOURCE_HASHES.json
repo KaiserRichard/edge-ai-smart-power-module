@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/TPS26630RGER.pdf",
+    "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/SMCJ36CA.pdf",
+    "sha256": "d9b1dafa25c0fa45eeb22fc4258fbdee3cafffb0bd14741e3cd9e35ea98f8e4c"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/3403.0285.23.pdf",
+    "sha256": "bac65726cd086e794288aa169ef2349664e674520019839b234b3a90f7c06ec7"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/LM61460AANRJRR.pdf",
+    "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/74437636351002.pdf",
+    "sha256": "b32dd62136d8b614b362d43296187b6c8557cf4dab98fbf7ed20a70e655e02d8"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/TNPW0805348KBEEA.pdf",
+    "sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/TNPW060315K8BEEA.pdf",
+    "sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/BSS138.pdf",
+    "sha256": "d1bff01c42324bc87d9fef988b6ec27425a2d8e91a9ff422b709fd1f8d1d59a5"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/CSD19537Q3.pdf",
+    "sha256": "d74d65b7815d46d642a11c89834ee71245ae6d3541595df2b4fcfa21dfbd4903"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/GRM32ER72A105KA01L.pdf",
+    "sha256": "cec81b201f2646123970829c05cae803e3f25f59403617d12e68809cb6ad9176"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/BAT46W-E3-08.pdf",
+    "sha256": "4913578755adb8c128c72614222a1dc19a4a39c296962234bfe44d4e7f2ffd84"
+  },
+  {
+    "path": "/Users/quockaiser/Desktop/Research/wt-datasheets/third_party/datasheets/FDB33N25TM.pdf",
+    "sha256": "08982131cc18dcbfb47dfbe8f968732b6e66c7508cf0179e00e38c4f0c99dead"
+  },
+  {
+    "url": "https://www.meanwell.com/Upload/PDF/DDR-120/DDR-120-SPEC.PDF",
+    "accessed": "2026-10-04",
+    "sha256": "0d9b59264c0c5cbae8101d60b858e9169814921c71c067b450c312b670180327",
+    "retention": "Read in temporary scratch space; no PDF redistributed"
+  },
+  {
+    "url": "https://www.meanwell.com/Upload/PDF/RSD-200/RSD-200-SPEC.PDF",
+    "accessed": "2026-10-04",
+    "sha256": "83212bba71630099942764adf80f76bc0eaec2ec109110cf7957e8456b967a2e",
+    "retention": "Read in temporary scratch space; no PDF redistributed"
+  }
+]

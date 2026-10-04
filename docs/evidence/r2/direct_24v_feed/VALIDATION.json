@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-04",
+  "baseline": "5f371fd7c59e90a5037004b9309bff63b0d95e71",
+  "scope": "Analysis only; no hardware edits or physical tests",
+  "calculation_regeneration": "PASS; parsed JSON identical",
+  "source_pdf_hashes": "PASS; pinned read-only PDFs unchanged",
+  "markdown_links": "PASS; report, provenance and new manager entry rechecked after all evidence files were written",
+  "fresh_netlist": {
+    "tool": "kicad-cli sch export netlist --format kicadxml",
+    "exit_code": 0,
+    "physical_components": 366,
+    "key_values": "R103 348k, R104 15.8k, R201 33.2k, R202 100k, R203 24.6k, L201 10uH",
+    "BIAS": "U201.1 GND",
+    "raw_shunt": "D101 on VIN_FUSED, upstream of U101"
+  },
+  "hardware_preservation": "PASS; git diff HEAD -- hardware is empty",
+  "repository_checker_exit": 1,
+  "repository_checker": {
+    "status": "FAIL",
+    "scope": "Repository integrity only; R2/R3 BLOCKED",
+    "hardware_files_verified": 32,
+    "markdown_files_checked": 108,
+    "json_files_checked": 148,
+    "archived_external_links": [
+      "third_party/documents/TI_LM7480-Q1_SNOSD95C.pdf",
+      "third_party/documents/Vishay_WSL2726_30131_2026-06-29.pdf",
+      "third_party/documents/r2/TI_CSD19537Q3_SLPS549B.pdf",
+      "third_party/documents/r2/TI_LM61460_SNVSBD5D.pdf"
+    ],
+    "errors": [
+      "Gate4b reviewed evidence differs or is missing: docs/evidence/r2/gate4b/buck_block.json",
+      "R203: captured MPN differs from Gate4B specification",
+      "R203: captured value differs from Gate4B specification",
+      "R203: independent frozen MPN requires TNPW060324K6BEEA",
+      "R203: owner option A requires 24.6k",
+      "Hardware differs from reviewed preservation record or is missing: hardware/kicad/02_BUCK_5V.kicad_sch",
+      "R3 boundary violation: project PCB exists"
+    ]
+  },
+  "checker_interpretation": "FAIL is retained. All implicated hardware, Gate4B evidence and checker files are byte-identical to supplied HEAD; R203/preservation and existing-PCB scope issues were not altered.",
+  "ERC_DRC": "Not rerun; no schematic/PCB change",
+  "visual_review": [
+    "DDR-120 PDF p3 specification",
+    "RSD-200 PDF p1 specification",
+    "LM61460 PDF p35 efficiency plot"
+  ],
+  "git": {
+    "status": "UNCOMMITTED per brief fallback",
+    "git_add_exit": 128,
+    "error": "Unable to create worktree index.lock: Operation not permitted",
+    "commit_reached": false,
+    "push": false,
+    "log": "git_commit.log"
+  }
+}

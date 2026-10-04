@@ -1,0 +1,99 @@
+{
+  "TVS_25C_ambient_thermal_screen_W": 1.6666666666666667,
+  "TVS_power_if_terminal_held_at_54_6V_W": {
+    "1": 54.6,
+    "10": 546.0,
+    "15.625": 853.125,
+    "25": 1365.0
+  },
+  "buck": {
+    "12": {
+      "duty": 0.4220867208672086,
+      "inductor_copper_20C_max_DCR_W": 0.017080435074120347,
+      "partial_IC_loss_W": 0.8573572334090052,
+      "peak_A": 5.365894281402164,
+      "ripple_App": 0.7317885628043271,
+      "rms_A": 5.004460631115765,
+      "switch_conduction_max_Rds_screen_W": 1.5181353329882434,
+      "switch_conduction_typ_W": 0.7373572334090052,
+      "switching_10ns_screen_W": 0.12
+    },
+    "24": {
+      "duty": 0.2110433604336043,
+      "inductor_copper_20C_max_DCR_W": 0.017106722489991746,
+      "partial_IC_loss_W": 0.8726193200816512,
+      "peak_A": 5.499512181351489,
+      "ripple_App": 0.9990243627029766,
+      "rms_A": 5.008310174743524,
+      "switch_conduction_max_Rds_screen_W": 1.3246072426106577,
+      "switch_conduction_typ_W": 0.6326193200816512,
+      "switching_10ns_screen_W": 0.24
+    }
+  },
+  "buck_output_nominal_V": 5.0650406504065035,
+  "buck_output_power_5A_W": 25.325203252032516,
+  "efficiency_sensitivity": {
+    "0.9": {
+      "buck_input_current_24V_A": 1.1724631135200239,
+      "whole_buck_loss_W": 2.8139114724480585
+    },
+    "0.935": {
+      "buck_input_current_24V_A": 1.1285741199657984,
+      "whole_buck_loss_W": 1.7605756271466413
+    },
+    "0.945": {
+      "buck_input_current_24V_A": 1.1166315366857371,
+      "whole_buck_loss_W": 1.473953628425177
+    }
+  },
+  "fuse_125A_typical_prearc_screen_s": 0.02176,
+  "normal_source_screens": {
+    "DDR_0_to_55C": {
+      "high_V_before_dynamic_overshoot": 24.505999999999997,
+      "initial_OVP_margin_V": 2.4678725593874553,
+      "margin_to_26V_V": 1.4940000000000033,
+      "maximum_setpoint_for_26V_no_dynamics_V": 25.46614327772326,
+      "temperature_screen_OVP_margin_V": 2.332651801010069
+    },
+    "DDR_25C": {
+      "high_V_before_dynamic_overshoot": 24.290000000000003,
+      "initial_OVP_margin_V": 2.6838725593874493,
+      "margin_to_26V_V": 1.7099999999999973,
+      "maximum_setpoint_for_26V_no_dynamics_V": 25.693069306930692,
+      "temperature_screen_OVP_margin_V": 2.548651801010063
+    },
+    "RSD_0_to_50C": {
+      "high_V_before_dynamic_overshoot": 24.810000000000002,
+      "initial_OVP_margin_V": 2.1638725593874497,
+      "margin_to_26V_V": 1.1899999999999977,
+      "maximum_setpoint_for_26V_no_dynamics_V": 25.158150851581507,
+      "temperature_screen_OVP_margin_V": 2.0286518010100636
+    },
+    "RSD_25C": {
+      "high_V_before_dynamic_overshoot": 24.63,
+      "initial_OVP_margin_V": 2.343872559387453,
+      "margin_to_26V_V": 1.370000000000001,
+      "maximum_setpoint_for_26V_no_dynamics_V": 25.34313725490196,
+      "temperature_screen_OVP_margin_V": 2.208651801010067
+    }
+  },
+  "ovp_initial": {
+    "recovery_max_V": 26.582075060835514,
+    "recovery_min_V": 24.9974799140581,
+    "resistor_fractional_bound": 0.001,
+    "trip_max_V": 28.289211488402323,
+    "trip_min_V": 26.973872559387452,
+    "trip_nom_V": 27.63037974683544
+  },
+  "ovp_temperature_screen": {
+    "recovery_max_V": 26.71580732764741,
+    "recovery_min_V": 24.872157769090965,
+    "resistor_fractional_bound": 0.003625,
+    "trip_max_V": 28.431540318600376,
+    "trip_min_V": 26.838651801010066,
+    "trip_nom_V": 27.63037974683544
+  },
+  "peak_Lminus20pct_f360kHz_A": 5.693766918543734,
+  "ripple_Lminus20pct_f360kHz_App": 1.3875338370874675,
+  "status": "CALCULATED screens only; assumptions and OPEN limits in report"
+}
