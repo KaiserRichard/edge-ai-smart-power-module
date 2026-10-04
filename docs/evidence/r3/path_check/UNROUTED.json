@@ -1,0 +1,162 @@
+{
+  "status": "OPEN",
+  "classification": "CALCULATED under ASSUMED conditions; not electrically validated",
+  "board_sha256": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a",
+  "settings": {
+    "copper_um_outer": 70.0,
+    "copper_um_inner": 35.0,
+    "temp_c": 85.0,
+    "via_plating_um": 25,
+    "zone_grid_mm": 1,
+    "zone_width_cap_mm": 1,
+    "max_zone_nodes": 40000
+  },
+  "budget": {
+    "source": "/Users/quockaiser/Desktop/Research/wt-pathcheck/docs/evidence/r2/r203_option_a/CALCULATIONS.json",
+    "sha256": "d6a0477801c45b42f17c843eb57c5eb15be08a846e7d0562b9914e932cc7e1af",
+    "rows": [
+      {
+        "element": "unsensed_buck_copper",
+        "send_mohm": 0.5,
+        "return_mohm": 0.5
+      },
+      {
+        "element": "module_FET_pair_proposed",
+        "send_mohm": 13.6,
+        "return_mohm": 0.0
+      },
+      {
+        "element": "shunt_2mohm_1pct_25ppm_100C",
+        "send_mohm": 2.0237875,
+        "return_mohm": 0.0
+      },
+      {
+        "element": "module_PCB",
+        "send_mohm": 1.0,
+        "return_mohm": 1.0
+      },
+      {
+        "element": "J502_complete_pole_including_termination",
+        "send_mohm": 3.12,
+        "return_mohm": 3.12
+      },
+      {
+        "element": "AWG16_trunk_75mm",
+        "send_mohm": 1.2528740157480316,
+        "return_mohm": 1.2528740157480316
+      },
+      {
+        "element": "AWG20_fanout_15mm_35mm",
+        "send_mohm": 0.30695413385826775,
+        "return_mohm": 0.17905657808398953
+      },
+      {
+        "element": "Pi_mate_and_female_crimp_combined",
+        "send_mohm": 10.0,
+        "return_mohm": 2.5
+      },
+      {
+        "element": "Pi_male_attachment",
+        "send_mohm": 0.24,
+        "return_mohm": 0.06
+      },
+      {
+        "element": "fanout_splices",
+        "send_mohm": 0.5,
+        "return_mohm": 0.5
+      },
+      {
+        "element": "module_solder_joints",
+        "send_mohm": 0.1,
+        "return_mohm": 0.1
+      }
+    ],
+    "copper_mohm": {
+      "send": 1.5,
+      "return": 1.5
+    },
+    "fixed_mohm": {
+      "send": 31.1436156496063,
+      "return": 7.711930593832021
+    },
+    "frozen_loop_mohm": 41.85554624343832,
+    "buck_min_V": 4.993320972112401,
+    "trough_V": 0.02,
+    "pi_floor_V": 4.75,
+    "load_A": 5
+  },
+  "issues": [],
+  "legs": [
+    {
+      "net": "VOUT_5V1",
+      "side": "send",
+      "status": "OPEN",
+      "resistance_mohm": null,
+      "reason": "unrouted/disconnected C209.1",
+      "path": []
+    },
+    {
+      "net": "PROT_MID",
+      "side": "send",
+      "status": "OPEN",
+      "resistance_mohm": null,
+      "reason": "unrouted/disconnected Q301.1",
+      "path": []
+    },
+    {
+      "net": "SERIES_OUT",
+      "side": "send",
+      "status": "OPEN",
+      "resistance_mohm": null,
+      "reason": "unrouted/disconnected Q302.5",
+      "path": []
+    },
+    {
+      "net": "VOUT_PROTECTED",
+      "side": "send",
+      "status": "OPEN",
+      "resistance_mohm": null,
+      "reason": "unrouted/disconnected JP301.2",
+      "path": []
+    },
+    {
+      "net": "LOAD_5V1",
+      "side": "send",
+      "status": "OPEN",
+      "resistance_mohm": null,
+      "reason": "unrouted/disconnected R401.4",
+      "path": []
+    },
+    {
+      "net": "GND",
+      "side": "return",
+      "status": "OPEN",
+      "resistance_mohm": null,
+      "reason": "unrouted/disconnected J502.2",
+      "path": []
+    }
+  ],
+  "copper_mohm": {
+    "send": null,
+    "return": null
+  },
+  "copper_exceeded": [],
+  "total_copper_mohm": null,
+  "total_loop_mohm": null,
+  "drop_5A_mV": null,
+  "pi_min_V": null,
+  "margin_mV": null,
+  "thermal_traces": [],
+  "assumptions": [
+    "70/35 um defaults are ASSUMED finished copper; temp-c is copper temperature, not ambient.",
+    "rho20=1.724e-8 ohm m, alpha20=0.00393/K; via plating default 25 um; drill is finished bore.",
+    "Through-hole layer hops each charged full board thickness; blind/buried depths remain OPEN.",
+    "Minimum-resistance single corridor at 5 A; no parallel current-sharing credit.",
+    "Zone width=min(cap,2*minimum clearance along edge); saved fills only; grid may miss narrow paths.",
+    "Pad spreading uses a land-width strip (annulus-limited for holes); solder covered by frozen allocation.",
+    "Thermal: IPC-2152-style conservative screen, legacy IPC-2221 internal envelope k=.024 on ALL layers; no chart corrections.",
+    "Thermal rise is per trace at full 5 A, independent of DC copper temperature; cooling and mutual heating OPEN.",
+    "JP301 fitted link is ASSUMED; its unbudgeted contact/bulk resistance is OPEN, not board copper.",
+    "Endpoint is C209-C214 output bank; upstream inductor/JP202 and regulator dynamics excluded."
+  ]
+}

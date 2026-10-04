@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://dev-docs.kicad.org/en/file-formats/sexpr-pcb/",
+    "access_date": "2026-10-04",
+    "use": "Referenced format syntax; no code or prose copied",
+    "stored_content": "Metadata only; source page not vendored",
+    "sha256": "5b89de281abdcc5617f0613bff668a254b2a7ba39d3e8f6420331a9d65929f12",
+    "bytes": 97765,
+    "page_last_modified": "2025-02-20"
+  },
+  {
+    "url": "https://dev-docs.kicad.org/en/file-formats/sexpr-intro/",
+    "access_date": "2026-10-04",
+    "use": "Referenced format syntax; no code or prose copied",
+    "stored_content": "Metadata only; source page not vendored",
+    "sha256": "cc17d89536768d327207783ccae1730f17ced3b27671503264ff73ca50dfde8a",
+    "bytes": 217065,
+    "page_last_modified": "2025-02-20"
+  }
+]

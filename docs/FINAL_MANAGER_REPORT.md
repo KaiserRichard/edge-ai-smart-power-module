@@ -305,3 +305,19 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **OPEN RISKS:** the guide worktree remains outside current writable roots, so installation and its requested local commit cannot be completed here. Existing electrical/thermal/fault risks and local-bypass/return questions persist. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 **NEXT GATE:** install and review the prepared guide patch from a session with the required filesystem access, resolve R2 items and authorize placement before R3 work. Follow the established current-limited/dummy-load-first bring-up sequence before SBC use.
+
+## V1A 5 A path-check tooling — 2026-10-04
+
+**STATUS: CONDITIONAL PASS for software calculation checks; the current PCB path is OPEN. R2 electrical release and R3 layout release remain BLOCKED.**
+
+**WHAT WAS DONE:** added a read-only standard-library Python checker for the complete send/return path, including the protection intermediate nets, force shunt pins, actual J502 poles, track/arc copper, plated barrels, and saved filled-zone corridors. It substitutes calculated copper for the frozen 3 mΩ copper rows and retains all other R203 option-A allocations once. Added synthetic-board tests and documented the assumptions, usage and limits.
+
+**EVIDENCE:** [path-check report](pcb/PATH_CHECK.md), [verification](evidence/r3/path_check/VERIFICATION.json), [unrouted-board output](evidence/r3/path_check/UNROUTED.json), and [provenance](../third_party/path_check/SOURCES.md). All 42 tests pass. Independent KiCad 9.0.6 checks matched 48 pad coordinates, including rotated/back-side footprints. The current board returns all six path legs OPEN and exit 1 without crashing; its SHA-256 is unchanged. No schematic or PCB edits, installation, sub-agents, or new ERC/DRC run.
+
+**DECISIONS:** enforce 1.5 mΩ copper per direction and a 4.75 V Pi floor after the 20 mV trough. No parallel-current credit. Temperature output is explicitly an IPC-2152-style screen using the legacy internal-conductor envelope, not an IPC-2152 chart implementation or validated temperature. No new thermal acceptance requirement or fabrication authorization.
+
+**OPEN RISKS:** incomplete routing, discretized zone/pad approximations, finished copper/plating minima, force-link resistance not separately included in the frozen JSON, assumed link fitting/FET conduction, and all inherited hot-contact/regulation/thermal/fault risks remain. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**NEXT GATE:** apply the checker to the layout worker's reviewed, filled and saved board and inspect the calculated paths. Resolve R2/R3 engineering risks before fabrication review; maintain the current-limited dummy-load bring-up sequence.
+
+**Git handback:** the authorized stepwise local commits could not create `index.lock` (`Operation not permitted`, exit 128). All changes remain uncommitted under the brief's fallback; [attempt log](evidence/r3/path_check/GIT_ATTEMPTS.log). Nothing was pushed.

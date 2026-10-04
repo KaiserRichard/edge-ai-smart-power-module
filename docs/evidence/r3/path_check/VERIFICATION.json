@@ -1,0 +1,51 @@
+{
+  "classification": "OBSERVATION; software checks only, no electrical validation",
+  "date": "2026-10-04",
+  "branch": "feat/v1a-path-check",
+  "base_commit": "5f371fd7c59e90a5037004b9309bff63b0d95e71",
+  "python": "3.11.0rc2",
+  "test_command": "python3 -m unittest discover -s tests -p test_check_5a_path.py -v",
+  "test_result": {
+    "tests_run": 42,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS",
+    "duration_s": 1.383
+  },
+  "checker_command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 scripts/check_5a_path.py hardware/kicad/V1A.kicad_pcb --copper-um-outer 70 --copper-um-inner 35 --temp-c 85 --json",
+  "checker_exit_code": 1,
+  "checker_stderr": "",
+  "path_status": "OPEN",
+  "open_legs": [
+    "VOUT_5V1",
+    "PROT_MID",
+    "SERIES_OUT",
+    "VOUT_PROTECTED",
+    "LOAD_5V1",
+    "GND"
+  ],
+  "board_sha256_before": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a",
+  "board_sha256_after": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a",
+  "board_unchanged": true,
+  "erc_drc": "Not rerun: no schematic or PCB edits; no gate advanced.",
+  "native_coordinate_check": {
+    "kicad": "9.0.6",
+    "comparisons": 48,
+    "status": "PASS",
+    "angles_deg": [
+      0,
+      37,
+      90,
+      180
+    ],
+    "references": [
+      "Q301",
+      "R401",
+      "J502"
+    ],
+    "layers": "front and back",
+    "exit_code": 0,
+    "writes": "temporary copies only",
+    "diagnostic": "./src/common/stdpbase.cpp(59): assert \"\"traits\"\" failed in Get(): create wxApp before calling this"
+  }
+}
