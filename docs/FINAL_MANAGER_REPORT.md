@@ -305,3 +305,35 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **OPEN RISKS:** the guide worktree remains outside current writable roots, so installation and its requested local commit cannot be completed here. Existing electrical/thermal/fault risks and local-bypass/return questions persist. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 **NEXT GATE:** install and review the prepared guide patch from a session with the required filesystem access, resolve R2 items and authorize placement before R3 work. Follow the established current-limited/dummy-load-first bring-up sequence before SBC use.
+
+## V1A fabrication-prep rules — 2026-10-04
+
+**STATUS: CONDITIONAL PASS for rule preparation; R2 electrical / R3 layout / R4 fabrication release remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** followed `v1a-lab/briefs/FAB_PREP.md` directly without sub-agents. Added KiCad 9 custom rules for the assumed JLCPCB four-layer, 1.6 mm, 70/35/35/70 µm stack; documented manufacturing minima, conservative choices, 1 oz outer differences and net-specific IPC-2221B spacing screens. Read fresh schematic nets, including the surge-exposed auxiliary branch. No PCB, schematic or project file changed.
+
+**EVIDENCE:** [fabrication rules](pcb/FAB_RULES.md), [source provenance](../third_party/fabprep/SOURCES.md), [net targets](evidence/r4/fabprep/NET_RULE_TARGETS.json), [native verification](evidence/r4/fabprep/RULE_CHECK.json). Ninety-five boundary probes pass using KiCad 9.0.6. Current-board DRC recognizes the custom rules but reports 2,191 violations and 213 unconnected items on the unplaced import; this is not a physical DRC pass.
+
+**DECISIONS:** 0.20 mm copper floor, 0.60/0.30 mm ordinary vias, 0.254 mm component PTH rings, 0.50 mm copper-to-edge, 0.15 mm silk clearance, 0.25 mm normal-domain and 0.64 mm surge/boosted-domain electrical screens. Retain fine-pitch conflicts for engineering review; no clearance waivers or board edits. Commit each brief step locally; no push.
+
+**OPEN RISKS:** actual board remains two-layer and unplaced; precise fab stack, fault voltage differences, package clearances, mask/slot DFM, thermal/current capacity and existing electrical blockers remain unresolved. Manufacturer spacing data and DRC do not validate hardware.
+
+**NEXT GATE:** complete the requested export-script smoke test on the unchanged current board. Layout owner must reconcile the intended stack and complete placement/routing and engineering review before R3/R4 release.
+
+**Git handback (rules step):** authorized `git add` failed creating `.git/worktrees/wt-fabprep/index.lock` with `Operation not permitted`. Per FAB_PREP.md, changes remain uncommitted; no permission/lock workaround or push.
+
+## V1A fabrication-prep exporter — 2026-10-04
+
+**STATUS: PASS for export-tool execution; CONDITIONAL PASS for preparation handoff. R2 electrical / R3 layout / R4 fabrication release remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** implemented `scripts/export_fab_package.sh <pcb> <outdir>` with KiCad CLI Gerbers, Excellon drills/maps, matching JLC BOM/CPL, per-layer PDFs/PNGs, 3D rendering and a review-only Gerber/drill zip. Added source hashes, native DRC/parity evidence, population exclusions and an OPEN per-part rotation ledger. Nothing was installed or sent externally. Source PCB/schematics/project remain byte-identical.
+
+**EVIDENCE:** [export usage](pcb/EXPORT_PACKAGE.md), [test evidence](evidence/r4/fabprep/EXPORT_CHECK.json), [complete file/test handoff](evidence/r4/fabprep/HANDOFF.md). Final current-board export to `/private/tmp/v1a fabprep final` exits 0: 9 layer Gerbers plus job metadata, 2 Excellon files, 2 drill-map PDFs, 351 BOM/CPL references, 11 layer PDF/PNG pairs, native 3D PNG and CRC-checked zip. A separate synthetic four-layer regression checks inner Gerbers, 13 layer pairs, bottom-side positions, nonzero auxiliary origin, assembly population/mapping and output overwrite refusal. Native rule probes remain 95/95 PASS. Exported PCB images were visually inspected and show the unplaced origin pile.
+
+**DECISIONS:** export actual enabled layers; retain absolute origin and native KiCad angles with no guessed JLC offsets. Read LCSC identities only from the requested procurement CSV; preserve 170 unmapped references with blank codes and OPEN status. The assembly BOM takes current schematic values while logging PCB discrepancies: R203 BOM = 24.6k; unchanged PCB = 24.4k. Review success does not authorize fabrication.
+
+**OPEN RISKS:** board has two copper layers, no outline, no routing and coincident footprint anchors; DRC reports 2,191 violations / 213 unconnected items / one schematic-parity issue. Exact fab stack, source fault/thermal/current limits, package clearances, final CAM review and JLC rotation/centroid verification remain OPEN. R203 needs reconciliation by the layout owner. All physical validation remains outstanding.
+
+**NEXT GATE:** hand rules and exporter to the layout worker; complete existing R2 review items and authorized R3 layout before R4 release. Preserve the documented bring-up progression before SBC integration.
+
+**Git handback (export step):** the second authorized local commit attempt failed at `git add` with the same worktree `index.lock: Operation not permitted` error. Both brief steps remain uncommitted as instructed; branch/HEAD remain `feat/v1a-fab-prep` / `5f371fd`. No push.

@@ -1,0 +1,499 @@
+{
+  "source_commit": "5f371fd",
+  "date": "2026-10-04",
+  "source": "fresh kicad-cli schematic XML export; no schematic edits",
+  "groups": {
+    "normal_26V": {
+      "/VIN_PROTECTED": [
+        {
+          "ref": "C201",
+          "pin": "1",
+          "value": "10uF 50V"
+        },
+        {
+          "ref": "C202",
+          "pin": "1",
+          "value": "10uF 50V"
+        },
+        {
+          "ref": "C203",
+          "pin": "1",
+          "value": "100nF 50V"
+        },
+        {
+          "ref": "C204",
+          "pin": "1",
+          "value": "100nF 50V"
+        },
+        {
+          "ref": "D102",
+          "pin": "2",
+          "value": "STPS60H100CT"
+        },
+        {
+          "ref": "JP101",
+          "pin": "2",
+          "value": "REMOVABLE FORCE LINK"
+        },
+        {
+          "ref": "PF2",
+          "pin": "1",
+          "value": "VIN_PROTECTED"
+        },
+        {
+          "ref": "R106",
+          "pin": "1",
+          "value": "56.2k"
+        },
+        {
+          "ref": "R108",
+          "pin": "1",
+          "value": "100k"
+        },
+        {
+          "ref": "R206",
+          "pin": "1",
+          "value": "100k"
+        },
+        {
+          "ref": "R644",
+          "pin": "1",
+          "value": "49.9k"
+        },
+        {
+          "ref": "TP502",
+          "pin": "1",
+          "value": "VIN_PROTECTED"
+        },
+        {
+          "ref": "U201",
+          "pin": "12",
+          "value": "LM61460AANRJRR"
+        },
+        {
+          "ref": "U201",
+          "pin": "8",
+          "value": "LM61460AANRJRR"
+        }
+      ],
+      "/01_INPUT_PROTECTION/EFUSE_OUT": [
+        {
+          "ref": "JP101",
+          "pin": "1",
+          "value": "REMOVABLE FORCE LINK"
+        },
+        {
+          "ref": "TP103",
+          "pin": "1",
+          "value": "EFUSE_OUT"
+        },
+        {
+          "ref": "U101",
+          "pin": "17",
+          "value": "TPS26630RGER"
+        },
+        {
+          "ref": "U101",
+          "pin": "18",
+          "value": "TPS26630RGER"
+        }
+      ],
+      "/01_INPUT_PROTECTION/INPUT_FLT": [
+        {
+          "ref": "R108",
+          "pin": "2",
+          "value": "100k"
+        },
+        {
+          "ref": "TP102",
+          "pin": "1",
+          "value": "INPUT_FLT"
+        },
+        {
+          "ref": "U101",
+          "pin": "14",
+          "value": "TPS26630RGER"
+        }
+      ],
+      "/02_BUCK_5V/BUCK_SW": [
+        {
+          "ref": "C205",
+          "pin": "2",
+          "value": "100nF 50V"
+        },
+        {
+          "ref": "JP201",
+          "pin": "1",
+          "value": "REMOVABLE FORCE LINK"
+        },
+        {
+          "ref": "PF3",
+          "pin": "1",
+          "value": "BUCK_SW"
+        },
+        {
+          "ref": "TP201",
+          "pin": "1",
+          "value": "BUCK_SW"
+        },
+        {
+          "ref": "U201",
+          "pin": "10",
+          "value": "LM61460AANRJRR"
+        }
+      ],
+      "/L201_IN": [
+        {
+          "ref": "JP201",
+          "pin": "2",
+          "value": "REMOVABLE FORCE LINK"
+        },
+        {
+          "ref": "L201",
+          "pin": "1",
+          "value": "10uH DATASHEET"
+        },
+        {
+          "ref": "PF4",
+          "pin": "1",
+          "value": "L201_IN"
+        },
+        {
+          "ref": "R640",
+          "pin": "1",
+          "value": "20.0k"
+        },
+        {
+          "ref": "TP202",
+          "pin": "1",
+          "value": "L201_IN"
+        }
+      ],
+      "/03_OUTPUT_PROTECTION/AUX_LIMITED": [
+        {
+          "ref": "C307",
+          "pin": "1",
+          "value": "1uF 50V"
+        },
+        {
+          "ref": "C351",
+          "pin": "1",
+          "value": "4.7uF 50V"
+        },
+        {
+          "ref": "C380",
+          "pin": "1",
+          "value": "100nF 50V"
+        },
+        {
+          "ref": "R323",
+          "pin": "1",
+          "value": "10k 0.25W"
+        },
+        {
+          "ref": "R330",
+          "pin": "1",
+          "value": "100k"
+        },
+        {
+          "ref": "R332",
+          "pin": "2",
+          "value": "0.33"
+        },
+        {
+          "ref": "R345",
+          "pin": "1",
+          "value": "383k"
+        },
+        {
+          "ref": "TP330",
+          "pin": "1",
+          "value": "AUX_LIMITED"
+        },
+        {
+          "ref": "U316",
+          "pin": "2",
+          "value": "LT4363HMS-1#PBF"
+        },
+        {
+          "ref": "U317",
+          "pin": "13",
+          "value": "LTC3115IFE-1#PBF"
+        },
+        {
+          "ref": "U317",
+          "pin": "17",
+          "value": "LTC3115IFE-1#PBF"
+        }
+      ],
+      "/03_OUTPUT_PROTECTION/AUX_SNS": [
+        {
+          "ref": "Q316",
+          "pin": "3",
+          "value": "FDB33N25TM"
+        },
+        {
+          "ref": "R332",
+          "pin": "1",
+          "value": "0.33"
+        },
+        {
+          "ref": "U316",
+          "pin": "3",
+          "value": "LT4363HMS-1#PBF"
+        }
+      ]
+    },
+    "surge_58V_class": {
+      "/VIN_RAW": [
+        {
+          "ref": "F101",
+          "pin": "1",
+          "value": "12.5A T / 125VDC"
+        },
+        {
+          "ref": "J501",
+          "pin": "1",
+          "value": "DC INPUT"
+        },
+        {
+          "ref": "PF1",
+          "pin": "1",
+          "value": "VIN_RAW"
+        },
+        {
+          "ref": "TP501",
+          "pin": "1",
+          "value": "VIN_RAW"
+        }
+      ],
+      "/VIN_FUSED": [
+        {
+          "ref": "C101",
+          "pin": "1",
+          "value": "1uF 100V"
+        },
+        {
+          "ref": "D101",
+          "pin": "1",
+          "value": "SMCJ36CA 36V bidirectional"
+        },
+        {
+          "ref": "D303",
+          "pin": "1",
+          "value": "BAT46W-E3-08"
+        },
+        {
+          "ref": "F101",
+          "pin": "2",
+          "value": "12.5A T / 125VDC"
+        },
+        {
+          "ref": "Q101",
+          "pin": "1",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "Q101",
+          "pin": "2",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "Q101",
+          "pin": "3",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "Q102",
+          "pin": "2",
+          "value": "BSS138"
+        },
+        {
+          "ref": "R101",
+          "pin": "1",
+          "value": "332k"
+        },
+        {
+          "ref": "R103",
+          "pin": "1",
+          "value": "348k"
+        },
+        {
+          "ref": "U101",
+          "pin": "5",
+          "value": "TPS26630RGER"
+        }
+      ],
+      "/01_INPUT_PROTECTION/VIN_EFUSE_IN": [
+        {
+          "ref": "C102",
+          "pin": "1",
+          "value": "1uF 100V"
+        },
+        {
+          "ref": "Q101",
+          "pin": "5",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "Q101",
+          "pin": "6",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "Q101",
+          "pin": "7",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "Q101",
+          "pin": "8",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "U101",
+          "pin": "1",
+          "value": "TPS26630RGER"
+        },
+        {
+          "ref": "U101",
+          "pin": "2",
+          "value": "TPS26630RGER"
+        }
+      ],
+      "/01_INPUT_PROTECTION/INPUT_BGATE": [
+        {
+          "ref": "Q101",
+          "pin": "4",
+          "value": "CSD19537Q3"
+        },
+        {
+          "ref": "Q102",
+          "pin": "3",
+          "value": "BSS138"
+        },
+        {
+          "ref": "U101",
+          "pin": "3",
+          "value": "TPS26630RGER"
+        }
+      ],
+      "/01_INPUT_PROTECTION/INPUT_DRV": [
+        {
+          "ref": "Q102",
+          "pin": "1",
+          "value": "BSS138"
+        },
+        {
+          "ref": "U101",
+          "pin": "4",
+          "value": "TPS26630RGER"
+        }
+      ],
+      "/03_OUTPUT_PROTECTION/AUX_RAW": [
+        {
+          "ref": "C378",
+          "pin": "1",
+          "value": "1uF 100V"
+        },
+        {
+          "ref": "D303",
+          "pin": "2",
+          "value": "BAT46W-E3-08"
+        },
+        {
+          "ref": "Q316",
+          "pin": "2",
+          "value": "FDB33N25TM"
+        },
+        {
+          "ref": "TP329",
+          "pin": "1",
+          "value": "AUX_RAW"
+        },
+        {
+          "ref": "U316",
+          "pin": "5",
+          "value": "LT4363HMS-1#PBF"
+        },
+        {
+          "ref": "U316",
+          "pin": "6",
+          "value": "LT4363HMS-1#PBF"
+        },
+        {
+          "ref": "U316",
+          "pin": "8",
+          "value": "LT4363HMS-1#PBF"
+        }
+      ],
+      "/03_OUTPUT_PROTECTION/AUX_GATE": [
+        {
+          "ref": "Q316",
+          "pin": "1",
+          "value": "FDB33N25TM"
+        },
+        {
+          "ref": "R333",
+          "pin": "2",
+          "value": "10"
+        }
+      ],
+      "/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE": [
+        {
+          "ref": "R333",
+          "pin": "1",
+          "value": "10"
+        },
+        {
+          "ref": "U316",
+          "pin": "4",
+          "value": "LT4363HMS-1#PBF"
+        }
+      ]
+    },
+    "boosted_31_to_100V_screen": {
+      "/02_BUCK_5V/BUCK_CBOOT": [
+        {
+          "ref": "C205",
+          "pin": "1",
+          "value": "100nF 50V"
+        },
+        {
+          "ref": "R204",
+          "pin": "1",
+          "value": "0"
+        },
+        {
+          "ref": "U201",
+          "pin": "14",
+          "value": "LM61460AANRJRR"
+        }
+      ],
+      "/02_BUCK_5V/BUCK_RBOOT": [
+        {
+          "ref": "R204",
+          "pin": "2",
+          "value": "0"
+        },
+        {
+          "ref": "U201",
+          "pin": "13",
+          "value": "LM61460AANRJRR"
+        }
+      ],
+      "/03_OUTPUT_PROTECTION/AUX_BST1": [
+        {
+          "ref": "C354",
+          "pin": "1",
+          "value": "100nF 50V"
+        },
+        {
+          "ref": "U317",
+          "pin": "16",
+          "value": "LTC3115IFE-1#PBF"
+        }
+      ]
+    }
+  }
+}

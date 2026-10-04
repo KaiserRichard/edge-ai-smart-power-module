@@ -1,0 +1,819 @@
+{
+  "date": "2026-10-04",
+  "baseline_commit": "5f371fd",
+  "status": "CONDITIONAL PASS for custom-rule preparation only; layout/electrical release BLOCKED",
+  "hardware_unchanged_sha256": {
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "e1bce9b948dda904ccd756ea3e619704c9e2a30de4de2e6801271357e2b21d47",
+    "hardware/kicad/05_IO_TEST.kicad_sch": "3dc65ef9267c9599e26226a4bfb1a1dbd13584a860c689447166ada62ca536e9",
+    "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "b1ef585adf37946493721f510a197a1c0b5f0ec562446685ec78f0bbc8955075",
+    "hardware/kicad/02_BUCK_5V.kicad_sch": "0a68c0ed3dc2b7503c574f6ef49383c5f6fed5e9a1ab210254396ab51a8a5c6b",
+    "hardware/kicad/V1A.kicad_pcb": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a",
+    "hardware/kicad/V1A.kicad_sch": "926bb81d876645902594c34808b2905ef1fb6463873d87a19fd2f07abe5324a1",
+    "hardware/kicad/04_POWER_MONITOR.kicad_sch": "a2c653cfe327d0370318c210d5690425b2a0f7c900124d378cdd3d7e6f96ffb6",
+    "hardware/kicad/V1A.kicad_pro": "adfaca18079528832a6c60750591cc31221b27f3f1d1384ebe63c091f1e5c0c3"
+  },
+  "kicad_version": "9.0.6",
+  "probes": {
+    "kicad_version": "9.0.6",
+    "checks": 95,
+    "passed": true,
+    "results": [
+      {
+        "probe": "space_0_TEST_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_TEST_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_TEST_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_TEST_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_PROTECTED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_PROTECTED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_PROTECTED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_PROTECTED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_FUSED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_FUSED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_FUSED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_VIN_FUSED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_AUX_RAW_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_AUX_RAW_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_AUX_RAW_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_AUX_RAW_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_BUCK_CBOOT_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_BUCK_CBOOT_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_0_BUCK_CBOOT_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_0_BUCK_CBOOT_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_TEST_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_TEST_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_TEST_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_TEST_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_PROTECTED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_PROTECTED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_PROTECTED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_PROTECTED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_FUSED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_FUSED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_FUSED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_VIN_FUSED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_AUX_RAW_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_AUX_RAW_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_AUX_RAW_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_AUX_RAW_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_BUCK_CBOOT_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_BUCK_CBOOT_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_4_BUCK_CBOOT_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_4_BUCK_CBOOT_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_TEST_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_TEST_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_TEST_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_TEST_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_PROTECTED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_PROTECTED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_PROTECTED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_PROTECTED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_FUSED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_FUSED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_FUSED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_VIN_FUSED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_AUX_RAW_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_AUX_RAW_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_AUX_RAW_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_AUX_RAW_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_BUCK_CBOOT_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_BUCK_CBOOT_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_6_BUCK_CBOOT_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_6_BUCK_CBOOT_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_TEST_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_TEST_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_TEST_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'FAB copper floor 2oz outer 1oz inner' clearance 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_TEST_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_PROTECTED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_PROTECTED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_PROTECTED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE normal_26V' clearance 0.2500 mm; actual 0.2400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_PROTECTED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_FUSED_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_FUSED_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_FUSED_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_VIN_FUSED_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_AUX_RAW_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_AUX_RAW_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_AUX_RAW_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE surge_58V_class' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_AUX_RAW_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_BUCK_CBOOT_False_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_BUCK_CBOOT_False_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "space_2_BUCK_CBOOT_True_-0.01",
+        "type": "clearance",
+        "expected_violation": true,
+        "matched": [
+          "Clearance violation (rule 'VOLTAGE boosted_31_to_100V_screen' clearance 0.6400 mm; actual 0.6300 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "space_2_BUCK_CBOOT_True_0.01",
+        "type": "clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "width_0.19",
+        "type": "track_width",
+        "expected_violation": true,
+        "matched": [
+          "Track width (board setup constraints min width 0.2000 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "width_0.21",
+        "type": "track_width",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "via_drill_bad",
+        "type": "drill_out_of_range",
+        "expected_violation": true,
+        "matched": [
+          "Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "via_ring_bad",
+        "type": "annular_width",
+        "expected_violation": true,
+        "matched": [
+          "Annular width (rule 'FAB through via drill and ring' min annular width 0.1500 mm; actual 0.1400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "via_ring_good",
+        "type": "annular_width",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "pth_ring_0.8",
+        "type": "annular_width",
+        "expected_violation": true,
+        "matched": [
+          "Annular width (rule 'FAB PTH component annular ring' min annular width 0.2540 mm; actual 0.2500 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "pth_ring_0.82",
+        "type": "annular_width",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "via_holes_0.19",
+        "type": "hole_to_hole",
+        "expected_violation": true,
+        "matched": [
+          "Drilled hole too close to other hole (rule 'FAB via hole spacing' min 0.1995 mm; actual 0.1900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "via_holes_0.21",
+        "type": "hole_to_hole",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "pad_holes_0.44",
+        "type": "hole_to_hole",
+        "expected_violation": true,
+        "matched": [
+          "Drilled hole too close to other hole (rule 'FAB pad or mixed hole spacing' min 0.4495 mm; actual 0.4400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "pad_holes_0.46",
+        "type": "hole_to_hole",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "edge_0.49",
+        "type": "copper_edge_clearance",
+        "expected_violation": true,
+        "matched": [
+          "Board edge clearance violation (rule 'FAB copper to board edge' clearance 0.5000 mm; actual 0.4900 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "edge_0.51",
+        "type": "copper_edge_clearance",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      },
+      {
+        "probe": "silk_0.14",
+        "type": "silk_over_copper",
+        "expected_violation": true,
+        "matched": [
+          "Silkscreen clipped by solder mask (rule 'FAB silk to exposed pad' clearance 0.1500 mm; actual 0.1400 mm)"
+        ],
+        "pass": true
+      },
+      {
+        "probe": "silk_0.16",
+        "type": "silk_over_copper",
+        "expected_violation": false,
+        "matched": [],
+        "pass": true
+      }
+    ]
+  },
+  "current_board_drc": {
+    "violations": 2191,
+    "unconnected": 213,
+    "types": {
+      "clearance": 499,
+      "shorting_items": 199,
+      "hole_clearance": 199,
+      "courtyards_overlap": 199,
+      "invalid_outline": 1,
+      "solder_mask_bridge": 340,
+      "holes_co_located": 199,
+      "hole_to_hole": 148,
+      "text_height": 9,
+      "silk_over_copper": 199,
+      "silk_overlap": 199
+    },
+    "custom_rule_hits": {
+      "FAB copper floor 2oz outer 1oz inner": 435,
+      "VOLTAGE surge_58V_class": 26,
+      "VOLTAGE normal_26V": 34,
+      "VOLTAGE boosted_31_to_100V_screen": 4,
+      "FAB PTH hole to copper": 198,
+      "FAB hole to copper": 1,
+      "FAB pad or mixed hole spacing": 148,
+      "FAB silk to exposed pad": 199
+    },
+    "report_sha256": "17ae11c9663f220cb0e47a30fd1ec8f4f105889597f6c9f55912a2b03eecb52c",
+    "report_temp_path": "/tmp/v1a-fabprep-rules-final-drc.json"
+  },
+  "limitations": [
+    "Board is an unplaced two-layer import; no outline, routing or zones.",
+    "Native rule probes test software behavior only.",
+    "KiCad Python fixture construction emits wxApp assertion diagnostic but completes all 95 checks.",
+    "No manufacturing release, electrical validation or ordering."
+  ]
+}

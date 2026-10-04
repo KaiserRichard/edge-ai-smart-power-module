@@ -1,0 +1,63 @@
+(version 1)
+# NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED
+# KiCad 9; sources, derivations and OPEN limitations: docs/pcb/FAB_RULES.md.
+# ASSUMED JLCPCB 4 layers, 1.6 mm, 70/35/35/70 um copper, routed outline.
+# JLCPCB capabilities accessed 2026-10-04:
+# https://jlcpcb.com/capabilities/pcb-capabilities
+# CALCULATED electrical screens use IPC-2221B B2 (uncoated <=3050 m).
+# Last matching constraint wins: voltage rules MUST remain after fab floor.
+
+# ASSUMED conservative 0.20 mm floor on all layers, above 2 oz multilayer
+# published 0.15 mm and 1 oz multilayer 0.09 mm. Not an ampacity constraint.
+(rule "FAB copper floor 2oz outer 1oz inner"
+  (constraint track_width (min 0.20mm))
+  (constraint clearance (min 0.20mm)))
+
+# ASSUMED robust ordinary through vias: 0.60/0.30 mm, radial ring 0.15 mm.
+# JLC preferred hole >=0.20 mm; preferred pad-minus-hole >=0.15 mm (diametral).
+(rule "FAB through via drill and ring"
+  (condition "A.Type == 'Via'")
+  (constraint hole_size (min 0.30mm))
+  (constraint via_diameter (min 0.60mm))
+  (constraint annular_width (min 0.15mm)))
+
+# REQUIREMENT 2 oz PTH component pads: radial ring >=0.254 mm.
+(rule "FAB PTH component annular ring"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint annular_width (min 0.254mm)))
+
+# ASSUMED 0.45 mm also for mixed via/pad pairs; via/via exception follows.
+(rule "FAB pad or mixed hole spacing"
+  (constraint hole_to_hole (min 0.45mm)))
+(rule "FAB via hole spacing"
+  (condition "A.Type == 'Via' && B.Type == 'Via'")
+  (constraint hole_to_hole (min 0.20mm)))
+
+# ASSUMED 0.50 mm margin exceeds routed 0.20 / V-cut 0.40 mm minima.
+(rule "FAB copper to board edge"
+  (constraint edge_clearance (min 0.50mm)))
+(rule "FAB silk to exposed pad"
+  (constraint silk_clearance (min 0.15mm)))
+
+# Hole-to-unconnected-copper: JLC inner via 0.20, PTH 0.30 mm;
+# 0.35 mm PTH choice also covers recommended outer PTH-to-track separation.
+(rule "FAB hole to copper"
+  (constraint hole_clearance (min 0.20mm)))
+(rule "FAB PTH hole to copper"
+  (condition "A.Pad_Type == 'Through-hole' || B.Pad_Type == 'Through-hole'")
+  (constraint hole_clearance (min 0.35mm)))
+
+# CALCULATED max(0.20 mm fab floor, 0.10 mm IPC B2, 0.25 mm A6) = 0.25 mm.
+(rule "VOLTAGE normal_26V"
+  (condition "A.NetName == '/VIN_PROTECTED' || A.NetName == '/01_INPUT_PROTECTION/EFUSE_OUT' || A.NetName == '/01_INPUT_PROTECTION/INPUT_FLT' || A.NetName == '/02_BUCK_5V/BUCK_SW' || A.NetName == '/L201_IN' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_LIMITED' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_SNS' || B.NetName == '/VIN_PROTECTED' || B.NetName == '/01_INPUT_PROTECTION/EFUSE_OUT' || B.NetName == '/01_INPUT_PROTECTION/INPUT_FLT' || B.NetName == '/02_BUCK_5V/BUCK_SW' || B.NetName == '/L201_IN' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_LIMITED' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_SNS'")
+  (constraint clearance (min 0.25mm)))
+
+# CALCULATED 31-50 / 51-100 V IPC B2 = 0.64 mm; ASSUMED on inner layers too.
+(rule "VOLTAGE surge_58V_class"
+  (condition "A.NetName == '/VIN_RAW' || A.NetName == '/VIN_FUSED' || A.NetName == '/01_INPUT_PROTECTION/VIN_EFUSE_IN' || A.NetName == '/01_INPUT_PROTECTION/INPUT_BGATE' || A.NetName == '/01_INPUT_PROTECTION/INPUT_DRV' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_RAW' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE' || B.NetName == '/VIN_RAW' || B.NetName == '/VIN_FUSED' || B.NetName == '/01_INPUT_PROTECTION/VIN_EFUSE_IN' || B.NetName == '/01_INPUT_PROTECTION/INPUT_BGATE' || B.NetName == '/01_INPUT_PROTECTION/INPUT_DRV' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_RAW' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE'")
+  (constraint clearance (min 0.64mm)))
+
+# CALCULATED 31-50 / 51-100 V IPC B2 = 0.64 mm; ASSUMED on inner layers too.
+(rule "VOLTAGE boosted_31_to_100V_screen"
+  (condition "A.NetName == '/02_BUCK_5V/BUCK_CBOOT' || A.NetName == '/02_BUCK_5V/BUCK_RBOOT' || A.NetName == '/03_OUTPUT_PROTECTION/AUX_BST1' || B.NetName == '/02_BUCK_5V/BUCK_CBOOT' || B.NetName == '/02_BUCK_5V/BUCK_RBOOT' || B.NetName == '/03_OUTPUT_PROTECTION/AUX_BST1'")
+  (constraint clearance (min 0.64mm)))
