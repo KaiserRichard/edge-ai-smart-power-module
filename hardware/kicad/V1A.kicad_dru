@@ -1,0 +1,9 @@
+(version 1)
+
+# Manufacturer/library land patterns have 0.15 mm adjacent-pad gaps.
+# Applies only between pads inside the same named package. Routing, vias,
+# zones and all inter-footprint clearances retain the 0.20 mm project rule.
+# See docs/evidence/r3/layout/PLACEMENT_REVIEW.md; fabrication capability OPEN.
+(rule "Native 0.15 mm package pad spacing"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && ((A.memberOfFootprint('Q101') && B.memberOfFootprint('Q101')) || (A.memberOfFootprint('U302') && B.memberOfFootprint('U302')) || (A.memberOfFootprint('U306') && B.memberOfFootprint('U306')) || (A.memberOfFootprint('U600') && B.memberOfFootprint('U600')) || (A.memberOfFootprint('U403') && B.memberOfFootprint('U403')))")
+  (constraint clearance (min 0.15mm)))

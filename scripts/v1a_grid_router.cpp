@@ -61,3 +61,23 @@ int route(int sx,int sy,int sz,int tx,int ty,int tz,int net,int allowvia,int *ou
  return 0;
 }
 }
+// Mark a filled polygon including its holes (all contours use even/odd filling).
+extern "C" void polygon_holes(int z,int net,double *pts,int *ends,int cnt,double rad,int isvia){
+ auto &a=isvia?viaocc:occ;
+ int total=ends[cnt-1];double minx=1e9,miny=1e9,maxx=-1e9,maxy=-1e9;
+ for(int i=0;i<total;i++){minx=min(minx,pts[2*i]);maxx=max(maxx,pts[2*i]);miny=min(miny,pts[2*i+1]);maxy=max(maxy,pts[2*i+1]);}
+ int x1=max(0,(int)floor((minx-rad-X0)/S)),x2=min(W-1,(int)ceil((maxx+rad-X0)/S));
+ int y1=max(0,(int)floor((miny-rad-Y0)/S)),y2=min(H-1,(int)ceil((maxy+rad-Y0)/S));
+ for(int y=y1;y<=y2;y++)for(int x=x1;x<=x2;x++){
+  double px=X0+x*S,py=Y0+y*S;bool in=false,near=false;int begin=0;
+  for(int k=0;k<cnt;k++){
+   int end=ends[k];
+   for(int i=begin,j=end-1;i<end;j=i++){
+    double ax=pts[2*i],ay=pts[2*i+1],bx=pts[2*j],by=pts[2*j+1];
+    if(((ay>py)!=(by>py))&&(px<(bx-ax)*(py-ay)/(by-ay)+ax))in=!in;
+    double dx=bx-ax,dy=by-ay,len=dx*dx+dy*dy,t=len?clamp(((px-ax)*dx+(py-ay)*dy)/len,0.,1.):0;
+    double ex=px-ax-t*dx,ey=py-ay-t*dy;if(ex*ex+ey*ey<=rad*rad)near=true;
+   }begin=end;
+  }if(in||near)writecell(a,id(x,y,z),net);
+ }
+}

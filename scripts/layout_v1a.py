@@ -39,22 +39,23 @@ def text(b,s,x,y,size=1,layer=p.F_SilkS):
 
 def setup(b):
  b.SetCopperLayerCount(4)
- for a,c in [((10,10),(290,10)),((290,10),(290,225)),((290,225),(10,225)),((10,225),(10,10))]:
+ for a,c in [((10,10),(240,10)),((240,10),(240,205)),((240,205),(10,205)),((10,205),(10,10))]:
   e=p.PCB_SHAPE();e.SetShape(p.SHAPE_T_SEGMENT);e.SetStart(v(*a));e.SetEnd(v(*c));e.SetLayer(p.Edge_Cuts);e.SetWidth(mm(.05));b.Add(e)
  # Board-only NPTH mechanical holes; excluded from BOM and schematic parity.
- for i,(x,y) in enumerate([(15,15),(285,15),(15,220),(285,220)],1):
+ for i,(x,y) in enumerate([(15,15),(235,15),(15,200),(235,200)],1):
   f=p.FOOTPRINT(b);f.SetReference('MH'+str(i));f.SetValue('M3 NPTH - preliminary');f.SetAttributes(p.FP_BOARD_ONLY|p.FP_EXCLUDE_FROM_BOM|p.FP_EXCLUDE_FROM_POS_FILES);f.SetPosition(v(x,y));b.Add(f)
   pad=p.PAD(f);pad.SetAttribute(p.PAD_ATTRIB_NPTH);pad.SetShape(p.PAD_SHAPE_CIRCLE);pad.SetSize(v(3.2,3.2));pad.SetDrillSize(v(3.2,3.2));pad.SetLayerSet(p.LSET.AllCuMask());pad.SetPosition(v(x,y));f.Add(pad)
   f.Reference().SetVisible(False);f.Value().SetVisible(False)
  title=b.GetTitleBlock();title.SetTitle('V1A test board - preliminary placed/routed study');title.SetComment(0,'NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED');b.SetTitleBlock(title)
- text(b,'V1A TEST BOARD  /  9-26 V INPUT  /  5 A TARGET',148,16,1.5)
- text(b,'NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED',148,21,1.4)
- text(b,'MANUAL CONTROLS: NO AUTOMATIC PROTECTION QUALIFICATION',147,217,1.2)
+ text(b,'V1A TEST BOARD  /  9-26 V INPUT  /  5 A TARGET',119,198,1.1)
+ text(b,'NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED',119,201,1.0)
+ text(b,'MANUAL CONTROLS: NO AUTOMATIC PROTECTION QUALIFICATION',119,195,0.8)
  return {f.GetReference():f for f in b.GetFootprints()}
 
 PLACED={}
+BOXES={}
 def put(fps,r,x,y,a=0):
- f=fps[r];f.SetOrientationDegrees(a);f.SetPosition(v(x,y));f.SetIsPlaced(True);f.SetNeedsPlaced(False);PLACED[r]=[x,y,a]
+ f=fps[r];f.SetOrientationDegrees(a);f.SetPosition(v(x,y));f.SetIsPlaced(True);f.SetNeedsPlaced(False);PLACED[r]=[x,y,a];BOXES[r]=box(f)
  f.Value().SetVisible(False)
  for fld in f.GetFields():
   if fld.GetName() not in ('Reference',):fld.SetVisible(False)
@@ -62,58 +63,72 @@ def put(fps,r,x,y,a=0):
 
 def mechanics(b):
  fps=setup(b)
- for r,x,y,a in [('J501',17,81,270),('J502',277,76,90),('J503',284,118,90),('J301',105,210,0),('J302',125,210,0),('J603',145,210,0),('J604',165,210,0),('J605',185,210,0),('J606',205,210,0),('JP600',228,210,0)]:put(fps,r,x,y,a)
+ for r,x,y,a in [('J501',17,64.5,270),('J502',230,70.39,270),('J503',234,137,90),('J301',35,188,0),('J302',59,188,0),('J603',83,188,0),('J604',107,188,0),('J605',131,188,0),('J606',155,188,0),('JP600',187,188,0)]:put(fps,r,x,y,a)
  return fps
 
 def box(f):
  bb=f.GetBoundingBox(False,False);return [p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),p.ToMM(bb.GetRight()),p.ToMM(bb.GetBottom())]
 def collision(f,fps,gap=.3):
  a=box(f)
- if a[0]<19 or a[1]<27 or a[2]>282 or a[3]>204:return True
+ if a[0]<19 or a[1]<19 or a[2]>232 or a[3]>184:return True
  for r in PLACED:
   if r==f.GetReference():continue
-  c=box(fps[r])
+  c=BOXES[r]
   if a[0]<c[2]+gap and a[2]>c[0]-gap and a[1]<c[3]+gap and a[3]>c[1]-gap:return True
  return False
 
 def place(b):
  fps=mechanics(b)
  fixed={
- 'F101':(32,75,0),'PF1':(25,61,0),'D101':(33,87,90),'Q101':(47,75,270),'Q102':(45,81,0),'U101':(54,75,0),'JP101':(61,57,0),'D102':(74,64,0),'PF2':(77,46,0),
- 'U201':(67,91,0),'C203':(67.95,94,0),'C204':(67.95,88,0),'C201':(68,97.8,0),'C202':(69,84,0),'C205':(65.9,86,0),'R204':(63.1,88,90),'C206':(62,90,90),'R201':(63.5,96,0),'R202':(61,94,0),'R203':(60,91.7,0),'R205':(58,94,90),'C207':(58,97.5,90),
- 'JP201':(88,91,0),'PF3':(78,106,0),'PF4':(98,106,0),'L201':(121,85.25,90),'JP202':(155,79.5,0),
- 'Q301':(190,79.5,180),'Q302':(199,79.5,0),'JP301':(224,79.5,0),'R401':(262,79.5,0),
- 'U301':(193,67,270),'C301':(196.4,69,90),'R304':(191,72,90),'R305':(195,75,90),'D302':(199.5,64,0),'C309':(190,63,0),'C306':(186,65,90),'JP660':(179,61,0),'D660':(177,67,0),'C660':(182,68,90),
- 'JP501':(270,140,270),'PF5':(282,151,0),
- 'JP331':(176,49,180),'Q330':(150,49,180),'U330':(144,43,0),'R384':(147.3,44,90),'R385':(145.5,48,90),'C368':(140.5,40,90),'C367':(143.5,38,0),'D330':(133,57,0),
- 'JP330':(232,49,0),'Q303':(251,49,0),'U315':(257,43,180),'R306':(255,46,90),'R307':(256,49,90),'C308':(260.5,40,90),'D331':(266,51,0),
- 'Q316':(35,132,180),'R332':(49,131,90),'U316':(56,130,0),'R333':(49,137,0),'C378':(37,142,0),'C307':(53,124,90),'D303':(37,110,90),'C350':(61.5,127,90),
- 'U317':(73,137,0),'L301':(73,128,90),'C351':(80,136,90),'C380':(77.8,133.8,90),'C352':(65.5,137,90),'C377':(60.5,138,90),'C353':(76,143.5,0),'C379':(80.5,141,90),'C354':(79,130,90),'C355':(67,132,90),
- 'U327':(96,137,0),'D304':(91,131,0),'C375':(93,137,90),'C376':(98.8,137,90),'C358':(110,131,90),'C359':(122,131,90),'R375':(98,133.5,90),'R374':(98,141,90),'C374':(101,143,90),
- 'U306':(133,137,180),'C305':(138,137,90),'U318':(141,148,0),'C365':(137,145,90),'C366':(145,145,90),
- 'U600':(105,157,180),'C601':(111,157,90),'C602':(99,157,90),'D600':(96,152,0),'R602':(98,148,0),'C600':(95,147,90),
- 'U302':(159,141,0),'C302':(164,141,90),'C303':(154.5,140,90),'U303':(175,141,0),'C304':(177,137.5,0),'U321':(175,150,0),'C364':(180.5,148.5,90),'D321':(162,153,0),
- 'U322':(147,156,0),'C369':(149,152.5,0),'U323':(158,162,0),'C370':(160,158.5,0),
- 'U640':(106,115,0),'C640':(107.5,111.5,0),'U642':(115,115,0),'C642':(116.5,111.5,0),'U647':(110,124,0),'C647':(115.5,123.5,90),'R640':(104,102,90),
- 'U607':(184,166,0),'C604':(185.5,162.5,0),'U651':(194,168,0),'C651':(199.5,166.5,90),
- 'U401':(260,66,90),'R402':(259,71.5,90),'R403':(263,71.5,90),'C401':(261,68.5,0),'C402':(256,63.5,0),
- 'U402':(248,69,0),'C403':(244.5,67,90),'C404':(250,62,0),'U403':(271,105,180),'C405':(275,108,90),'C406':(267,108,90),
+ 'F101':(26,43,0),'PF1':(21,32,0),'D101':(26,57,90),'Q101':(35,49,0),'Q102':(32,54,0),'U101':(42,49,0),'JP101':(53,31,0),'D102':(70,43,0),'PF2':(75,29,0),
+ 'U201':(54,66,0),'C203':(54.95,69,0),'C204':(54.95,63,0),'C201':(55,72.8,0),'C202':(56,59,0),'C205':(52.9,61,0),'R204':(50.1,63,90),'C206':(49,65,90),'R201':(50.5,71,0),'R202':(48,69,0),'R203':(47,66.7,0),'R205':(45,69,90),'C207':(45,72.5,90),
+ 'JP201':(75,66,0),'PF3':(65,79,0),'PF4':(85,79,0),'L201':(109,60.25,90),'JP202':(144,54.5,0),
+ 'Q301':(164,54.5,180),'Q302':(173,54.5,0),'JP301':(194,54.5,0),'R401':(211,54.5,0),
+ 'U301':(168,44,270),'C301':(171.4,46,90),'R304':(165,48,90),'R305':(169,50,0),'D302':(174.5,41,0),'C309':(165,40,0),'C306':(161,42,90),'JP660':(166,32,0),'D660':(177,33,0),'C660':(180,38,90),
+ 'JP501':(212,136,270),'PF5':(220,151,0),
+ 'JP331':(79,43,180),'Q330':(59,43,180),'U330':(55,37,0),'R384':(57.5,39,90),'R385':(54,42,90),'C368':(51,34,90),'C367':(54,32,0),'D330':(91,31,0),
+ 'JP330':(199,101,0),'Q303':(221,101,0),'U315':(220,94,180),'R306':(224,97,90),'R307':(226,100,90),'C308':(224,91,90),'D331':(208,88,0),
+ 'Q316':(32,104,180),'R332':(46,103,90),'U316':(53,102,0),'R333':(46,109,0),'C378':(34,114,0),'C307':(50,96,90),'D303':(29,82,90),'C350':(58.5,99,90),
+ 'U317':(70,109,0),'L301':(70,100,270),'C351':(77,108,90),'C380':(74.8,105.8,90),'C352':(62.5,109,90),'C377':(57.5,110,90),'C353':(73,115.5,0),'C379':(77.5,113,90),'C354':(76,102,90),'C355':(64,104,90),
+ 'U327':(93,107,0),'D304':(88,101,0),'C375':(90,107,90),'C376':(95.8,107,90),'C358':(107,101,90),'C359':(119,101,90),'R375':(95,103.5,90),'R374':(95,111,90),'C374':(98,113,90),
+ 'U306':(132,108,180),'C305':(137,108,90),'U318':(143,109,0),'C365':(139,115,90),'C366':(147,106,90),
+ 'U600':(105,122,180),'C601':(111,122,90),'C602':(99,122,90),'D600':(96,117,0),'R602':(90,118,0),'C600':(86,120,90),
+ 'U302':(153,124,0),'C302':(158,124,90),'C303':(148.5,123,90),'U303':(171,124,0),'C304':(173,120.5,0),'U321':(176,135,0),'C364':(181.5,133.5,90),'D321':(157,135,0),
+ 'U322':(137,124,0),'C369':(139,120.5,0),'U323':(150,141,0),'C370':(152,137.5,0),
+ 'U640':(98,87,0),'C640':(99.5,83.5,0),'U642':(112,87,0),'C642':(113.5,83.5,0),'U647':(132,91,0),'C647':(137.5,90.5,90),'R640':(91,77,90),
+ 'U607':(172,153,0),'C604':(173.5,149.5,0),'U651':(189,151,0),'C651':(194.5,149.5,90),
+ 'U401':(211,40,270),'R402':(210.5,45.5,90),'R403':(212.5,45.5,90),'C401':(211.5,43.5,0),'C402':(207,38,0),
+ 'U402':(195,40,0),'C403':(191.5,38,90),'C404':(197,33,0),'U403':(213,119,180),'C405':(217,122,90),'C406':(209,122,90),
  }
- # Main MLCC bank, power points north, ground south. Six across two rows.
- for i in range(6):fixed['C'+str(209+i)]=(173+(i%3)*6.5,85+(i//3)*8.5,270)
- # Raw bank beside its discharge strings. Protected bank beside the output rail.
- for i in range(8):fixed['C'+str(330+i)]=(143+(i%4)*13,65+(i//4)*-35,270)
- for i in range(4):fixed['C'+str(340+i)]=(214+i*13,96,90)
- # Two matched 6-resistor paths along the raw bank's upper edge.
+ for i in range(6):fixed['C'+str(209+i)]=(148+(i%3)*6.5,66+(i//3)*8.5,270)
+ for i in range(8):fixed['C'+str(330+i)]=(108+(i%4)*13,27+(i//4)*14,90)
+ for i in range(4):fixed['C'+str(340+i)]=(178+i*13,77,90)
  for row,refs in enumerate([[380,381,382,383,386,387],[388,389,390,391,392,393]]):
-  for j,n in enumerate(refs):fixed['R'+str(n)]=(191+j*8.5,30+row*7,0)
- for r,z in {'R308':(216,41,270),'R309':(216,50,270),'R310':(225,41,270),'R311':(225,59,270)}.items():fixed[r]=z
- # Logic ICs and dedicated bypass pairs, quiet bottom region.
+  for j,n in enumerate(refs):fixed['R'+str(n)]=(99-j*8.5,20+row*7,180)
+ for r,z in {'R308':(173,92,0),'R309':(182,92,0),'R310':(173,99,0),'R311':(182,99,0)}.items():fixed[r]=z
  logic=[602,662,614,628,615,616,617,610,623,612,630,631,611,632,633,644,654,656,661]
  caps={602:609,662:762,614:714,628:728,615:715,616:716,617:717,610:710,623:723,612:712,630:730,631:731,611:711,632:732,633:733,644:644,654:754,656:756,661:761}
  for i,n in enumerate(logic):
-  x=110+(i%7)*19;y=177+(i//7)*12
+  x=29+(i%7)*17;y=135+(i//7)*12
   fixed['U'+str(n)]=(x,y,0);fixed['C'+str(caps[n])]=(x+2,y-4,0)
+ # Compact the signal floor while allowing the actual force-link courtyards.
+ for r,(x,y,a) in list(fixed.items()):
+  if y>=90: fixed[r]=(x,y+20,a)
+  elif r in ['U201','C203','C204','C201','C202','C205','R204','C206','R201','R202','R203','R205','C207','JP201','PF3','PF4','L201','JP202','Q301','Q302','JP301','R401','U301','C301','R304','R305','D302','C309','C306','JP660','D660','C660','U401','R402','R403','C401','C402','U402','C403','C404','U640','C640','U642','C642','R640'] or (r.startswith('C') and 209<=int(r[1:])<=214) or (r.startswith('C') and 340<=int(r[1:])<=343):
+   fixed[r]=(x,y+15,a)
+ fixed.update({'F101':(27,53,0),'D101':(26,66,90),'Q101':(35,64,270),'Q102':(34,70,0),'U101':(42,64,0),'JP101':(29,88,270),'D102':(42,99,0),'PF1':(19,44,0),'PF2':(47,107,0),
+ 'D303':(24,113,90),'JP331':(77,43,180),'Q330':(55,43,180),'U330':(51,36,0),'R384':(52,40,90),'R385':(50,43,90),'C368':(47,34,90),'C367':(50,31,0),
+ 'JP301':(193,69.5,0),'R401':(214,69.5,0),'U401':(214,55,270),'R402':(213.5,60.5,90),'R403':(215.5,60.5,90),'C401':(214.5,58.7,0),'C402':(210,53,0),
+ 'JP501':(212,164,270),'PF5':(224,180,0),'U403':(223,139,180),'C405':(227,142,90),'C406':(219,142,90),
+ 'R640':(87,103,90),'U640':(97,108,0),'C640':(98.5,104.5,0),'U642':(113,106,0),'C642':(114.5,102.5,0),
+ 'C203':(54.95,84.15,0),'C204':(54.95,77.85,0),'C202':(58,73.5,0),'C205':(52.9,75,0),'R204':(50.5,77.5,90),'C206':(49,80.4,90),'R203':(46,81.7,0),
+ 'C309':(163,53,0),'D330':(93,37,0),'C330':(110,26,90),'C334':(110,40,90),
+ 'R306':(225,116,90),'C401':(215,58.9,0),'C367':(49,28,0)})
+ fixed.update({'PF3':(65,95.5,0),'PF4':(85,95.5,0),'PF5':(226,182,0),'C202':(57,73.5,0),'R204':(49.7,76.5,90),'R384':(50,39,90),'D330':(98,52,0),'JP330':(201,121,0),'D331':(208,104,0),'R402':(213.5,61.5,90),'R403':(215.5,61.5,90),'C401':(215,59.1,0)})
+ for i in range(209,212):fixed['C'+str(i)]=(148+(i-209)*6.5,82,270)
+ for i in range(340,344):fixed['C'+str(i)]=(178+(i-340)*13,92,270)
+ fixed.update({'R384':(50,39.3,90),'JP330':(202,121,0),'Q303':(222,121,0),'R307':(228,120,270)})
+ for i in range(212,215):fixed['C'+str(i)]=(148+(i-212)*6.5,90.5,270)
  for r,z in fixed.items():put(fps,r,*z)
  # Assign all remaining passives/testpoints to their explicit functional cluster.
  clusters={
@@ -147,20 +162,27 @@ def place(b):
   f=fps[r];anchor=assigned.get(r)
   if not anchor:raise ValueError('No functional placement assignment: '+r)
   cx,cy=xy(fps[anchor].GetPosition());best=None
-  # Candidate positions on a preliminary 0.5 mm placement grid; never alter pads.
-  for rad in range(3,45):
-   cand=[]
-   for d in range(-rad,rad+1):cand.extend([(cx+d*.5,cy-rad*.5),(cx+d*.5,cy+rad*.5),(cx-rad*.5,cy+d*.5),(cx+rad*.5,cy+d*.5)])
-   for x,y in cand:
-    for a in (0,90,180,270):
-     f.SetOrientationDegrees(a);f.SetPosition(v(x,y))
-     if collision(f,fps):continue
+  shapes=[]
+  for angle in [0,90,180,270]:
+   f.SetPosition(v(0,0));f.SetOrientationDegrees(angle)
+   bb=box(f);pp=[]
+   for pad in f.Pads():
+    netname=pad.GetNetname()
+    if netname in ['/GND','/03_OUTPUT_PROTECTION/SAFE5'] or netname.startswith('unconnected'):continue
+    pts=[q for rr,q in allpads.get(netname,[]) if rr==anchor]
+    if pts:pp.append((xy(pad.GetPosition()),pts))
+   shapes.append((angle,bb,pp))
+  occupied=list(BOXES.values())
+  for rad in range(3,60):
+   cand=set()
+   for d in range(-rad,rad+1):cand.update([(cx+d*.5,cy-rad*.5),(cx+d*.5,cy+rad*.5),(cx-rad*.5,cy+d*.5),(cx+rad*.5,cy+d*.5)])
+   for x,y in sorted(cand):
+    for a,bb,pp in shapes:
+     aa=[bb[0]+x,bb[1]+y,bb[2]+x,bb[3]+y]
+     if aa[0]<19 or aa[1]<19 or aa[2]>232 or aa[3]>184:continue
+     if any(aa[0]<c[2]+.3 and aa[2]>c[0]-.3 and aa[1]<c[3]+.3 and aa[3]>c[1]-.3 for c in occupied):continue
      score=math.hypot(x-cx,y-cy)
-     for pad in f.Pads():
-      net=pad.GetNetname()
-      if net.endswith('/GND') or net.endswith('/SAFE5') or net.startswith('unconnected'):continue
-      pts=[q for rr,q in allpads.get(net,[]) if rr==anchor]
-      if pts:score+=min(math.dist(xy(pad.GetPosition()),q) for q in pts)
+     for (px,py),pts in pp:score+=min(math.hypot(px+x-qx,py+y-qy) for qx,qy in pts)
      if best is None or score<best[0]:best=(score,x,y,a)
    if best and rad>math.hypot(best[1]-cx,best[2]-cy)*2+4:break
   if not best:raise ValueError('No free placement: '+r)
@@ -171,7 +193,7 @@ def place(b):
  for f in fps.values():
   if f.GetReference().startswith('MH'):continue
   f.Reference().SetLayer(p.F_Fab)
- for label,x,y in [('INPUT / SURGE',35,52),('BUCK / SWITCH LINKS',91,119),('RAW BANK / DUMP',156,23.5),('SERIES ISOLATION',205,86),('PROTECTED BANK',236,110),('KELVIN MONITOR',258,56),('AUX SURGE / CONVERTER',58,154),('MANUAL LOGIC / OBSERVATIONS',178,207)]:text(b,label,x,y,.9)
+ for label,x,y in [('INPUT / SURGE',28,24),('BUCK / SWITCH LINKS',63,101),('RAW BANK',122,16),('SERIES ISOLATION',183,82),('PROTECTED BANK',190,103),('KELVIN MONITOR',211,30),('AUXILIARY POWER',51,144),('MANUAL LOGIC',117,183)]:text(b,label,x,y,.9)
  EV.joinpath('PLACEMENT.json').write_text(json.dumps(PLACED,indent=2)+'\n')
  print('Placed',len(PLACED),'electrical footprints')
  return fps
