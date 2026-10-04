@@ -1,6 +1,8 @@
 # Edge AI Smart Power Module V1A
 
 A standalone Project II compute-power module for Raspberry Pi 5 / Edge Artificial Intelligence (AI): **9–24 V-class input → input protection → LM61460 synchronous buck → approximately 5.1 V / 5 A target → independent output protection → 2 mΩ Kelvin shunt + INA228 monitoring → load**.
+Schematic PDFs (research V1A): [docs/schematic/](docs/schematic/)
+
 
 **R2 schematic release BLOCKED. R3 printed circuit board (PCB) release BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
