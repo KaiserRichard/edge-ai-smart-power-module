@@ -8,11 +8,13 @@
 	)
 	(paper "A4")
 	(title_block
-		(title "V1A schematic import only — all footprints unplaced")
-		(comment 1 "NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED")
+		(title "V1A test board - preliminary placed/routed study")
+		(comment 1 "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED")
 	)
 	(layers
 		(0 "F.Cu" signal)
+		(4 "In1.Cu" signal)
+		(6 "In2.Cu" signal)
 		(2 "B.Cu" signal)
 		(9 "F.Adhes" user "F.Adhesive")
 		(11 "B.Adhes" user "B.Adhesive")
@@ -38,6 +40,23 @@
 		(45 "User.4" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS" (type "Top Silk Screen"))
+			(layer "F.Paste" (type "Top Solder Paste"))
+			(layer "F.Mask" (type "Top Solder Mask") (thickness 0.01))
+			(layer "F.Cu" (type "copper") (thickness 0.07))
+			(layer "dielectric 1" (type "prepreg") (thickness 0.18))
+			(layer "In1.Cu" (type "copper") (thickness 0.035))
+			(layer "dielectric 2" (type "core") (thickness 1.01))
+			(layer "In2.Cu" (type "copper") (thickness 0.035))
+			(layer "dielectric 3" (type "prepreg") (thickness 0.18))
+			(layer "B.Cu" (type "copper") (thickness 0.07))
+			(layer "B.Mask" (type "Bottom Solder Mask") (thickness 0.01))
+			(layer "B.Paste" (type "Bottom Solder Paste"))
+			(layer "B.SilkS" (type "Bottom Silk Screen"))
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
@@ -19163,6 +19182,68 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "320d78fa-f302-4a12-8c47-2090160ad94c")
+		(at 285 220)
+		(property "Reference" "MH4"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0c3c959f-e73c-4899-9a90-881d58b504ff")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH - preliminary"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a07d6458-70cb-4076-93b7-c1e9eed0c8c6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "959b5642-032b-4468-8f79-6bc20c7118e5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "05f5c0b5-ef2b-4198-b811-0f80766ce588")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu")
+			(uuid "451224d9-5d55-4dd8-a4ea-85073a6ed071")
+		)
+		(embedded_fonts no)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -41518,24 +41599,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "6a05e661-c1e7-4675-ac2f-c24b342e9d49")
-		(at 0 0)
+		(at 205 210)
 		(descr "JST B2B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-2 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "J606"
-			(at 1.25 -3.85 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "a026836e-63e9-420b-a021-48708217ded5")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "MAIN PERMISSION / guarded output"
 			(at 1.25 4.9 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "5d3ad2cf-2de7-4a00-9628-a5aa66ce0e61")
 			(effects
 				(font
@@ -42427,24 +42510,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "6dc9437e-3324-4bc9-ba37-a3a18701f67a")
-		(at 0 0)
+		(at 185 210)
 		(descr "JST B2B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-2 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "J605"
-			(at 1.25 -3.85 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "1f19e975-512f-4d92-acaf-7440b4b19839")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "REAL PG / guarded output"
 			(at 1.25 4.9 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "bf383550-a517-4459-bd18-fbcc00242d72")
 			(effects
 				(font
@@ -46479,24 +46564,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "72a852b9-82f3-4219-82bf-50d66da20752")
-		(at 0 0)
+		(at 105 210)
 		(descr "JST B2B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-2 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "J301"
-			(at 1.25 -3.85 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "82b70923-b964-4f2a-bd74-22c8fb40ca84")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "MAIN ARM / dry contact"
 			(at 1.25 4.9 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "d6f4ed01-93a2-456f-9070-72f4d856fdde")
 			(effects
 				(font
@@ -47343,6 +47430,68 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "74e1feb0-bc2b-4f01-bcbd-fbd6eb58f729")
+		(at 285 15)
+		(property "Reference" "MH2"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "01407210-2c20-43e9-9202-b4c99c6f4dcc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH - preliminary"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b2a0d54a-01f8-4879-8746-787dda7dfc93")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fda8fb52-237b-46ba-a8fa-34f26f133942")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "043acb1d-c013-49b6-8ae5-a7094d9ce253")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu")
+			(uuid "31ac7443-ef6e-40c9-a953-4d35f5e8cd02")
+		)
+		(embedded_fonts no)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -48319,24 +48468,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "7a8aea6d-bc4c-4354-a0e7-ebbaa6c9cc10")
-		(at 0 0)
+		(at 277 76 90)
 		(descr "Phoenix Contact1776508 MSTB2.5/2-GF-5.08; Nov12,2013 p6 drilling drawing plus current product record2026-09-30; mate1777989; project terminal1 atleft; PTH1.40 pitch5.08; optional board fixing NPTH2.40; no EP/paste")
 		(property "Reference" "J502"
-			(at 2.54 -3.5 0)
+			(at 2.5 0 0)
 			(layer "F.SilkS")
 			(uuid "be99ba76-12d2-4f84-8d38-ef0140615d70")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "LOAD OUTPUT / mate1777989"
-			(at 2.54 11.5 0)
+			(at 2.54 11.5 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "5fa716d5-3dee-4da0-aa01-40a4b6c33332")
 			(effects
 				(font
@@ -48346,7 +48497,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a636fa76-2396-4e76-ac70-e95e001f1851")
@@ -48358,7 +48509,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "aed48c3b-57a6-4327-ae60-9d2d0f87eb5e")
@@ -48370,7 +48521,7 @@
 			)
 		)
 		(property "MPN" "1776508"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "bb9840a1-d2d5-4031-a771-a9b071223098")
@@ -48382,7 +48533,7 @@
 			)
 		)
 		(property "Source" "J502 solution A, commit41cb9e889418d50d2f5f24467e66ac7f15a90476; PR15 qualified Phoenix land retained"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "eafb38ce-94de-4b98-a54e-a9b26cd17c89")
@@ -48394,7 +48545,7 @@
 			)
 		)
 		(property "Rating" "DATASHEET 12A nominal; CALCULATED acceptance <=3.12mOhm per complete hot pole is NOT a catalog guarantee."
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "6373a7b9-fadf-49a9-8063-8e8ccc9d73ec")
@@ -48443,7 +48594,7 @@
 			(uuid "95ca050b-087c-452a-8299-5e10c124a562")
 		)
 		(fp_text user "1 +"
-			(at 0 -2.2 0)
+			(at 0 -2.2 90)
 			(layer "F.SilkS")
 			(uuid "4ea5288f-39f6-4e0c-a50e-81616d669f72")
 			(effects
@@ -48454,7 +48605,7 @@
 			)
 		)
 		(fp_text user "MATE / TOOL ACCESS - REVIEW"
-			(at 2.54 21 0)
+			(at 2.54 21 90)
 			(layer "Dwgs.User")
 			(uuid "5b26bd4c-a124-40f2-bf0c-922d1e46d725")
 			(effects
@@ -48465,21 +48616,21 @@
 			)
 		)
 		(pad "" np_thru_hole circle
-			(at -5.08 2.5)
+			(at -5.08 2.5 90)
 			(size 2.4 2.4)
 			(drill 2.4)
 			(layers "*.Cu" "*.Mask")
 			(uuid "4296506c-4258-4c5f-8410-a1e34ae79896")
 		)
 		(pad "" np_thru_hole circle
-			(at 10.16 2.5)
+			(at 10.16 2.5 90)
 			(size 2.4 2.4)
 			(drill 2.4)
 			(layers "*.Cu" "*.Mask")
 			(uuid "15e38e89-58f6-4695-90d8-3b40beebb6d3")
 		)
 		(pad "1" thru_hole rect
-			(at 0 0)
+			(at 0 0 90)
 			(size 2.8 2.8)
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
@@ -48490,7 +48641,7 @@
 			(uuid "501a095a-0a0c-435a-83ce-0e749294d217")
 		)
 		(pad "2" thru_hole circle
-			(at 5.08 0)
+			(at 5.08 0 90)
 			(size 2.8 2.8)
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
@@ -50877,24 +51028,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "8377ca5e-1d13-4bfb-8ddd-1ab2c82741a7")
-		(at 0 0)
+		(at 228 210)
 		(descr "JST B2B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-2 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "JP600"
-			(at 1.25 -3.85 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "019660a1-8a50-4081-bd29-285431d8c87e")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "MANUAL RAIL VALID LINK"
 			(at 1.25 4.9 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "3567ebe0-ca68-4091-90a9-c276ff3dec7f")
 			(effects
 				(font
@@ -55222,24 +55375,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B4B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "8ace5b25-3cca-42cf-af1e-e003f6ee7793")
-		(at 0 0)
+		(at 284 118 90)
 		(descr "JST B4B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-4 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "J503"
-			(at 3.75 -3.85 0)
+			(at 2.5 0 0)
 			(layer "F.SilkS")
 			(uuid "7e4bd1ce-a6e0-47d5-abdf-f5620620c73c")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "HOST I2C"
-			(at 3.75 4.9 0)
+			(at 3.75 4.9 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "3fd54763-9257-4f4f-a4f6-985074eede6e")
 			(effects
 				(font
@@ -55249,7 +55404,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c01aed8a-d1a5-49ba-8a63-143e0e870b6b")
@@ -55261,7 +55416,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7a0481d8-52f6-47a5-ac2f-50236308c1a6")
@@ -55273,7 +55428,7 @@
 			)
 		)
 		(property "MPN" "B4B-XH-A(LF)(SN)"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "245c2b2a-5896-4e8e-bf21-ffaf6c6f9879")
@@ -55285,7 +55440,7 @@
 			)
 		)
 		(property "Source" "Frozen telemetry requirement; power-domain interface review"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "e0b7dc6f-f81b-4eb0-bae6-75d6db5cd762")
@@ -55297,7 +55452,7 @@
 			)
 		)
 		(property "Rating" "3.3 V host reference input;not a host power supply;100 kHz;pinout review draft"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "7583a60b-df85-4f32-b886-aef0f6b2066b")
@@ -55345,7 +55500,7 @@
 			(uuid "3f8ae738-facd-4bb5-a09e-f733d2a3571c")
 		)
 		(fp_text user "1"
-			(at 0 -2.55 0)
+			(at 0 -2.55 90)
 			(layer "F.SilkS")
 			(uuid "4d706d69-7706-4d7f-990c-d6e258c6a963")
 			(effects
@@ -55356,7 +55511,7 @@
 			)
 		)
 		(pad "1" thru_hole rect
-			(at 0 0)
+			(at 0 0 90)
 			(size 1.7 2)
 			(drill 0.95)
 			(layers "*.Cu" "*.Mask")
@@ -55367,7 +55522,7 @@
 			(uuid "dc37f2b4-0622-46b2-849f-fcc658497b41")
 		)
 		(pad "2" thru_hole oval
-			(at 2.5 0)
+			(at 2.5 0 90)
 			(size 1.7 2)
 			(drill 0.95)
 			(layers "*.Cu" "*.Mask")
@@ -55378,7 +55533,7 @@
 			(uuid "09fc1745-d224-4417-957a-cdec5fe9249b")
 		)
 		(pad "3" thru_hole oval
-			(at 5 0)
+			(at 5 0 90)
 			(size 1.7 2)
 			(drill 0.95)
 			(layers "*.Cu" "*.Mask")
@@ -55389,7 +55544,7 @@
 			(uuid "7cbd1344-c8b3-4a2f-9699-43fd5b6b61fb")
 		)
 		(pad "4" thru_hole oval
-			(at 7.5 0)
+			(at 7.5 0 90)
 			(size 1.7 2)
 			(drill 0.95)
 			(layers "*.Cu" "*.Mask")
@@ -62036,6 +62191,68 @@
 			)
 		)
 	)
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "9c44fc64-17ac-448d-82fa-d953eb13964e")
+		(at 15 220)
+		(property "Reference" "MH3"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a56d97c9-eec7-4271-9b89-c18d6f97b1eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH - preliminary"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bd761bd1-bfcc-407a-a2ec-b7a12825d263")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "607c3204-cb86-4669-adf2-89cfb1d7a7af")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "24886c0d-092e-457a-86ad-1b88c72955b3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu")
+			(uuid "cd29b7b3-84c3-4932-a257-bac77cd3e433")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "9cbb0d59-215a-4e78-ac92-b915d875306f")
@@ -62775,24 +62992,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "9f895c60-59a3-4672-a701-13e99a7ecb6a")
-		(at 0 0)
+		(at 145 210)
 		(descr "JST B2B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-2 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "J603"
-			(at 1.25 -3.85 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "eb3d9226-fe5f-4fe2-b5fa-9f507990277d")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "SOURCE FAULT / dry contact"
 			(at 1.25 4.9 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "704bf39b-fd78-4e3a-a0b3-a7de82f6f45f")
 			(effects
 				(font
@@ -78166,6 +78385,68 @@
 			)
 		)
 	)
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "cf206ebf-a831-45ed-84fd-25e7592fa2d9")
+		(at 15 15)
+		(property "Reference" "MH1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0aa6566c-48ed-4168-ada9-ecf70e5c1c22")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH - preliminary"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "82815a6f-b82e-44f5-8172-b72210be0112")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "51e35a51-da94-4dad-aff5-56e7227725c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5a7fcf42-dbc7-4e17-aed6-b8c8df2bcabc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu")
+			(uuid "165b6571-f9e9-4a5b-9842-4c4cbf41a896")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "TestPoint:TestPoint_Pad_D1.5mm"
 		(layer "F.Cu")
 		(uuid "cfd137ee-cb5e-4ca7-92e9-80c15761f550")
@@ -80342,7 +80623,7 @@
 				)
 			)
 		)
-		(property "Value" "24.4k"
+		(property "Value" "24.6k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "585947db-c7aa-47f1-9d78-68fda15ce1ec")
@@ -80377,7 +80658,7 @@
 				)
 			)
 		)
-		(property "MPN" "TNPW060324K4BEEA"
+		(property "MPN" "TNPW060324K6BEEA"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -80389,7 +80670,7 @@
 				)
 			)
 		)
-		(property "Source" "Gate4A 898759e freeze; Gate4B PIN_REVIEW.md"
+		(property "Source" "Owner option A 2026-10-04; docs/evidence/r2/R203_OPTION_A.md; 100k/24.6k = 5.065041 V supersedes old setpoint note"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -81842,24 +82123,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "de4f1641-65c2-4b18-823c-0a4bdfddb837")
-		(at 0 0)
+		(at 165 210)
 		(descr "JST B2B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-2 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "J604"
-			(at 1.25 -3.85 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "c3c62d3c-91fd-45ad-ad1b-0015e2226419")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "SERIES ARM / dry contact"
 			(at 1.25 4.9 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "cc639a85-774e-43cc-b3f5-0273cc9e7299")
 			(effects
 				(font
@@ -89649,24 +89932,26 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2B_XH_A_P2.50_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "f6c70fec-ae86-4d67-a947-664190dcb0f4")
-		(at 0 0)
+		(at 125 210)
 		(descr "JST B2B-XH-A(LF)(SN); eXH.pdf retrieved2026-09-30 PDF metadata2025-07-30 pp2,4,5; no boss; pin1 square; mate XHP-2 plus SXH-001T-P0.6; copper annulus and courtyard project choices")
 		(property "Reference" "J302"
-			(at 1.25 -3.85 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "b31683c9-c9a2-47fa-a64d-25dd402e9867")
 			(effects
 				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "MANUAL RESET / dry contact"
 			(at 1.25 4.9 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "ff28eaa3-c708-4d66-b359-93b89360c830")
 			(effects
 				(font
@@ -90914,25 +91199,27 @@
 		)
 	)
 	(footprint "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "f9c00c88-9db2-41a2-a821-665c061cf375")
-		(at 0 0)
+		(at 17 81 -90)
 		(descr "JST B2P-VH-FB-B(LF)(SN); eVH.pdf metadata2026-01-09 pp1-4; pitch3.96 drill1.70 boss1.45; mate VHR-2N plus SVH-21T-P1.1; adapted unchanged geometry from KiCad f64dbd7 CC-BY-SA-4.0 with design exception; KiCad library contributors")
 		(tags "connector JST VH vertical")
 		(property "Reference" "J501"
-			(at 1.98 -5.7 0)
+			(at -2.5 0 0)
 			(layer "F.SilkS")
 			(uuid "4ef40061-ac56-409d-a92b-a1a7eafab71a")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.85 0.85)
+					(thickness 0.13)
 				)
 			)
 		)
 		(property "Value" "DC INPUT"
-			(at 1.98 6.4 0)
+			(at 1.98 6.4 270)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "dcc8f3d4-f583-48fb-aa0f-177791ee8a03")
 			(effects
 				(font
@@ -90942,7 +91229,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0bd20e17-66ff-4ec8-83a5-5ba95c4ae1d5")
@@ -90954,7 +91241,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a99ff5e-1bf1-486e-a412-b68583ff6b0c")
@@ -90966,7 +91253,7 @@
 			)
 		)
 		(property "MPN" "B2P-VH-FB-B(LF)(SN)"
-			(at 0 0 0)
+			(at 0 0 270)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "82b5f47e-64a0-42ce-8424-1172c53e51ea")
@@ -90978,7 +91265,7 @@
 			)
 		)
 		(property "Source" "Frozen V1A functional input boundary"
-			(at 0 0 0)
+			(at 0 0 270)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "bb50b8a0-7c06-4b5b-b3c2-861f9f802326")
@@ -90990,7 +91277,7 @@
 			)
 		)
 		(property "Rating" "REQUIREMENT: 9-26 V input; PR15 JST VH land retained. Installed wire/contact/fuse coordination OPEN."
-			(at 0 0 0)
+			(at 0 0 270)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "e86442fc-f7a7-41d3-a6be-4164bde178dc")
@@ -91006,14 +91293,24 @@
 		(sheetfile "05_IO_TEST.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -3.83 -0.3)
-			(end -3.23 0)
+			(start -3.03 5.31)
+			(end -3.03 -4.61)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e18bbaf9-bba3-46c5-9f6a-eeceec7c8b14")
+			(uuid "61b17643-bc71-4fe8-ae8d-bb013d373f4e")
+		)
+		(fp_line
+			(start 6.99 5.31)
+			(end -3.03 5.31)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "92489e2b-3c4c-4a46-9471-828be49ec615")
 		)
 		(fp_line
 			(start -3.83 0.3)
@@ -91036,34 +91333,14 @@
 			(uuid "7843add1-20bd-4ac8-919e-4a1ddfde43c0")
 		)
 		(fp_line
-			(start -3.03 -4.61)
-			(end 0.09 -4.61)
+			(start -3.83 -0.3)
+			(end -3.23 0)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "0b34cc3a-73c0-48d4-8b9b-c5779cc72311")
-		)
-		(fp_line
-			(start -3.03 5.31)
-			(end -3.03 -4.61)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "61b17643-bc71-4fe8-ae8d-bb013d373f4e")
-		)
-		(fp_line
-			(start 0.09 -4.61)
-			(end 0.09 -3.41)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "bf8f23c3-2ddd-4292-8e81-c9ff7aac6e8e")
+			(uuid "e18bbaf9-bba3-46c5-9f6a-eeceec7c8b14")
 		)
 		(fp_line
 			(start 0.09 -3.41)
@@ -91076,16 +91353,6 @@
 			(uuid "9cc7d075-57f0-4009-8e6c-c3da3ad3d137")
 		)
 		(fp_line
-			(start 3.87 -4.61)
-			(end 6.99 -4.61)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "918ace5c-75b4-4bec-988d-e01e9ccc11e9")
-		)
-		(fp_line
 			(start 3.87 -3.41)
 			(end 3.87 -4.61)
 			(stroke
@@ -91094,6 +91361,36 @@
 			)
 			(layer "F.SilkS")
 			(uuid "9a47bcaa-64d4-4223-915c-d0f05cb29283")
+		)
+		(fp_line
+			(start -3.03 -4.61)
+			(end 0.09 -4.61)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0b34cc3a-73c0-48d4-8b9b-c5779cc72311")
+		)
+		(fp_line
+			(start 0.09 -4.61)
+			(end 0.09 -3.41)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "bf8f23c3-2ddd-4292-8e81-c9ff7aac6e8e")
+		)
+		(fp_line
+			(start 3.87 -4.61)
+			(end 6.99 -4.61)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "918ace5c-75b4-4bec-988d-e01e9ccc11e9")
 		)
 		(fp_line
 			(start 6.99 -4.61)
@@ -91106,26 +91403,6 @@
 			(uuid "8a7b882c-621a-4348-a8e2-e685889b0fa9")
 		)
 		(fp_line
-			(start 6.99 5.31)
-			(end -3.03 5.31)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "92489e2b-3c4c-4a46-9471-828be49ec615")
-		)
-		(fp_line
-			(start -3.43 -5)
-			(end -3.43 5.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "eaf50eb0-56d8-4a75-8da6-f643900fec32")
-		)
-		(fp_line
 			(start -3.43 5.7)
 			(end 7.39 5.7)
 			(stroke
@@ -91134,16 +91411,6 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "36618f76-1473-4c3c-8b0e-178ca2abc2f6")
-		)
-		(fp_line
-			(start 7.39 -5)
-			(end -3.43 -5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "7a362da8-d5ba-4395-a32b-d3c23485658e")
 		)
 		(fp_line
 			(start 7.39 5.7)
@@ -91156,34 +91423,24 @@
 			(uuid "d62e018c-1f14-4762-94fc-2f7cf76e354d")
 		)
 		(fp_line
-			(start -2.92 -4.5)
-			(end -0.02 -4.5)
+			(start -3.43 -5)
+			(end -3.43 5.7)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "4aad74d0-9fe3-40ad-b120-9bebda2810f4")
+			(layer "F.CrtYd")
+			(uuid "eaf50eb0-56d8-4a75-8da6-f643900fec32")
 		)
 		(fp_line
-			(start -2.92 -1)
-			(end -1.92 0)
+			(start 7.39 -5)
+			(end -3.43 -5)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "4613c64f-a074-4659-ab2d-dd3a9d44e8c6")
-		)
-		(fp_line
-			(start -2.92 1)
-			(end -1.92 0)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "af6647f1-b14b-4ec1-853b-3e7943b34de7")
+			(layer "F.CrtYd")
+			(uuid "7a362da8-d5ba-4395-a32b-d3c23485658e")
 		)
 		(fp_line
 			(start -2.92 5.2)
@@ -91196,14 +91453,14 @@
 			(uuid "ce0e8aca-1c60-4dc1-88ee-387815db0aa9")
 		)
 		(fp_line
-			(start -2 -2.1)
-			(end 5.96 -2.1)
+			(start 6.88 5.2)
+			(end -2.92 5.2)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "baa24aab-6b91-4914-b72d-aecb741e67db")
+			(uuid "bb064fdd-dce9-4ab6-b355-de9761b3c4f2")
 		)
 		(fp_line
 			(start -2 4.3)
@@ -91216,44 +91473,44 @@
 			(uuid "1da9922a-7a32-49d6-a829-30042dd49ea7")
 		)
 		(fp_line
-			(start -0.02 -4.5)
-			(end -0.02 -3.3)
+			(start 5.96 4.3)
+			(end -2 4.3)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "45688ac6-25d4-47a6-bfbf-9ae0862b505d")
+			(uuid "eda228d2-268b-492a-8812-04495735b47b")
 		)
 		(fp_line
-			(start -0.02 -3.3)
-			(end 3.98 -3.3)
+			(start -2.92 1)
+			(end -1.92 0)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "55d1c099-b149-466f-aa0b-34a35fda6b26")
+			(uuid "af6647f1-b14b-4ec1-853b-3e7943b34de7")
 		)
 		(fp_line
-			(start 3.98 -4.5)
-			(end 6.88 -4.5)
+			(start -2.92 -1)
+			(end -1.92 0)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "98aad98c-8500-4be9-807a-b545e29fde56")
+			(uuid "4613c64f-a074-4659-ab2d-dd3a9d44e8c6")
 		)
 		(fp_line
-			(start 3.98 -3.3)
-			(end 3.98 -4.5)
+			(start -2 -2.1)
+			(end 5.96 -2.1)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "a9c516e6-2b88-4f23-8143-66f4e8678b5b")
+			(uuid "baa24aab-6b91-4914-b72d-aecb741e67db")
 		)
 		(fp_line
 			(start 5.96 -2.1)
@@ -91266,14 +91523,54 @@
 			(uuid "56b7d5d9-cc01-40fe-a9bd-8add4fa8f3e7")
 		)
 		(fp_line
-			(start 5.96 4.3)
-			(end -2 4.3)
+			(start -0.02 -3.3)
+			(end 3.98 -3.3)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "eda228d2-268b-492a-8812-04495735b47b")
+			(uuid "55d1c099-b149-466f-aa0b-34a35fda6b26")
+		)
+		(fp_line
+			(start 3.98 -3.3)
+			(end 3.98 -4.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a9c516e6-2b88-4f23-8143-66f4e8678b5b")
+		)
+		(fp_line
+			(start -2.92 -4.5)
+			(end -0.02 -4.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4aad74d0-9fe3-40ad-b120-9bebda2810f4")
+		)
+		(fp_line
+			(start -0.02 -4.5)
+			(end -0.02 -3.3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "45688ac6-25d4-47a6-bfbf-9ae0862b505d")
+		)
+		(fp_line
+			(start 3.98 -4.5)
+			(end 6.88 -4.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "98aad98c-8500-4be9-807a-b545e29fde56")
 		)
 		(fp_line
 			(start 6.88 -4.5)
@@ -91285,18 +91582,8 @@
 			(layer "F.Fab")
 			(uuid "79577e54-e31a-4b9f-a96f-6990ef8ce0bf")
 		)
-		(fp_line
-			(start 6.88 5.2)
-			(end -2.92 5.2)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "bb064fdd-dce9-4ab6-b355-de9761b3c4f2")
-		)
 		(fp_text user "${REFERENCE}"
-			(at 1.98 2.5 0)
+			(at 1.98 2.5 270)
 			(layer "F.Fab")
 			(uuid "44057027-7d0c-4e73-9174-8a915e2a3d0d")
 			(effects
@@ -91307,14 +91594,14 @@
 			)
 		)
 		(pad "" np_thru_hole circle
-			(at -1.5 -3.4)
+			(at -1.5 -3.4 270)
 			(size 1.45 1.45)
 			(drill 1.45)
 			(layers "*.Cu" "*.Mask")
 			(uuid "8fdbd9e7-cf1d-440a-b3e7-aabb97039177")
 		)
 		(pad "1" thru_hole roundrect
-			(at 0 0)
+			(at 0 0 270)
 			(size 2.7 2.7)
 			(drill 1.7)
 			(layers "*.Cu" "*.Mask")
@@ -91326,7 +91613,7 @@
 			(uuid "2b6563c7-8f0d-46e6-a280-3d7f7d608ccb")
 		)
 		(pad "2" thru_hole circle
-			(at 3.96 0)
+			(at 3.96 0 270)
 			(size 2.7 2.7)
 			(drill 1.7)
 			(layers "*.Cu" "*.Mask")
@@ -93425,6 +93712,79 @@
 			(uuid "cbec840a-6bab-4596-b9e3-9bcec6e59a0d")
 		)
 		(embedded_fonts no)
+	)
+	(gr_line
+		(start 10 10)
+		(end 290 10)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "33ec8060-5524-46b5-b251-8bd06568a806")
+	)
+	(gr_line
+		(start 290 10)
+		(end 290 225)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "4700467d-c81f-4e2e-89c4-da450569d704")
+	)
+	(gr_line
+		(start 290 225)
+		(end 10 225)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "60a0be50-be25-4d05-ae12-f95ea913e5d1")
+	)
+	(gr_line
+		(start 10 225)
+		(end 10 10)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ef0d976b-1e42-4798-a18a-e7f5a4f33bc5")
+	)
+	(gr_text "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED"
+		(at 148 21 0)
+		(layer "F.SilkS")
+		(uuid "3eb03200-78b5-47b8-8d71-5f6417d463d9")
+		(effects
+			(font
+				(size 1.4 1.4)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "MANUAL CONTROLS: NO AUTOMATIC PROTECTION QUALIFICATION"
+		(at 147 217 0)
+		(layer "F.SilkS")
+		(uuid "9b6bc4d4-56d7-4e34-8c24-9477e1fe8c05")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "V1A TEST BOARD  /  9-26 V INPUT  /  5 A TARGET"
+		(at 148 16 0)
+		(layer "F.SilkS")
+		(uuid "f58b71cd-568c-43da-a2cb-6d39b728e637")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
 	)
 	(embedded_fonts no)
 )
