@@ -1,0 +1,420 @@
+{
+  "status": "PASS: import connectivity, schematic UUID paths and board-resolved net classes",
+  "scope": "Unplaced import only; no R3 layout or fabrication release",
+  "kicad_version": "9.0.6",
+  "schematic_baseline": "56e9837e522c01bd680aca602f9f471d38d6039f",
+  "footprints": 366,
+  "numbered_pads_checked": 1027,
+  "nets_including_no_connects": 207,
+  "named_nets": 158,
+  "class_counts": {
+    "Signal": 121,
+    "HighCurrent": 29,
+    "Kelvin": 4,
+    "Switching": 4
+  },
+  "classes_mm": {
+    "HighCurrent": {
+      "track_width": 2.0,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1
+    },
+    "Kelvin": {
+      "track_width": 0.2,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1
+    },
+    "Signal": {
+      "track_width": 0.2,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1
+    },
+    "Switching": {
+      "track_width": 1.0,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1
+    },
+    "Default": {
+      "track_width": 0.2,
+      "clearance": 0.2,
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1
+    }
+  },
+  "resolved_named_nets": {
+    "/01_INPUT_PROTECTION/EFUSE_OUT": "HighCurrent",
+    "/01_INPUT_PROTECTION/INPUT_BGATE": "Signal",
+    "/01_INPUT_PROTECTION/INPUT_DRV": "Signal",
+    "/01_INPUT_PROTECTION/INPUT_DVDT": "Signal",
+    "/01_INPUT_PROTECTION/INPUT_FLT": "Signal",
+    "/01_INPUT_PROTECTION/INPUT_ILIM": "Signal",
+    "/01_INPUT_PROTECTION/INPUT_OVP": "Signal",
+    "/01_INPUT_PROTECTION/INPUT_PGTH": "Signal",
+    "/01_INPUT_PROTECTION/INPUT_UVLO": "Signal",
+    "/01_INPUT_PROTECTION/VIN_EFUSE_IN": "HighCurrent",
+    "/02_BUCK_5V/BUCK_CBOOT": "Signal",
+    "/02_BUCK_5V/BUCK_FB": "Signal",
+    "/02_BUCK_5V/BUCK_FF": "Signal",
+    "/02_BUCK_5V/BUCK_RBOOT": "Signal",
+    "/02_BUCK_5V/BUCK_RT": "Signal",
+    "/02_BUCK_5V/BUCK_SW": "Switching",
+    "/02_BUCK_5V/BUCK_VCC": "Signal",
+    "/02_BUCK_5V/L201_OUT": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/3V3_AUX": "Signal",
+    "/03_OUTPUT_PROTECTION/ARMED": "Signal",
+    "/03_OUTPUT_PROTECTION/ARM_CONTACT": "Signal",
+    "/03_OUTPUT_PROTECTION/ARM_DOWN": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_12V": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_BB_FB": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_BST1": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_BST2": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_COMP": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_FB": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_FF": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_GATE": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_GATE_DRIVE": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_LIMITED": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_PREHOLD": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_RAW": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_RT": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_RUN": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_SNS": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_SW1": "Switching",
+    "/03_OUTPUT_PROTECTION/AUX_SW2": "Switching",
+    "/03_OUTPUT_PROTECTION/AUX_TMR": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_VC": "Signal",
+    "/03_OUTPUT_PROTECTION/AUX_VCC": "Signal",
+    "/03_OUTPUT_PROTECTION/CB_BALLAST_OUT": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/CB_DRAIN": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/CB_GATE": "Signal",
+    "/03_OUTPUT_PROTECTION/CB_GATE_UP": "Signal",
+    "/03_OUTPUT_PROTECTION/CB_R_A": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/CB_R_B": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/CLAMP_2V5": "Signal",
+    "/03_OUTPUT_PROTECTION/CORE_POR_N": "Signal",
+    "/03_OUTPUT_PROTECTION/CORE_POR_RAW_N": "Signal",
+    "/03_OUTPUT_PROTECTION/DET5": "Signal",
+    "/03_OUTPUT_PROTECTION/DET_FB": "Signal",
+    "/03_OUTPUT_PROTECTION/DET_OBS_DIV": "Signal",
+    "/03_OUTPUT_PROTECTION/DET_OBS_N": "Signal",
+    "/03_OUTPUT_PROTECTION/DET_PG": "Signal",
+    "/03_OUTPUT_PROTECTION/DET_SWITCH_EN": "Signal",
+    "/03_OUTPUT_PROTECTION/DISPOSAL": "Signal",
+    "/03_OUTPUT_PROTECTION/DISPOSAL_LOGIC": "Signal",
+    "/03_OUTPUT_PROTECTION/DRV_HOLD": "Signal",
+    "/03_OUTPUT_PROTECTION/DRV_OBS_DIV": "Signal",
+    "/03_OUTPUT_PROTECTION/DRV_OBS_N": "Signal",
+    "/03_OUTPUT_PROTECTION/FAULT": "Signal",
+    "/03_OUTPUT_PROTECTION/FAULT_CLEAR_N": "Signal",
+    "/03_OUTPUT_PROTECTION/FAULT_DRIVE": "Signal",
+    "/03_OUTPUT_PROTECTION/HOLD_AUXOFF": "Signal",
+    "/03_OUTPUT_PROTECTION/HOLD_DVDT": "Signal",
+    "/03_OUTPUT_PROTECTION/HOLD_EN": "Signal",
+    "/03_OUTPUT_PROTECTION/HOLD_FLT": "Signal",
+    "/03_OUTPUT_PROTECTION/HOLD_ILM": "Signal",
+    "/03_OUTPUT_PROTECTION/HOLD_OVLO": "Signal",
+    "/03_OUTPUT_PROTECTION/HOLD_SLEW_C": "Signal",
+    "/03_OUTPUT_PROTECTION/MAIN_FIXTURE": "Signal",
+    "/03_OUTPUT_PROTECTION/MAIN_PERMISSION": "Signal",
+    "/03_OUTPUT_PROTECTION/MANUAL_RAILS_VALID": "Signal",
+    "/03_OUTPUT_PROTECTION/MANUAL_VALID_NOFAULT": "Signal",
+    "/03_OUTPUT_PROTECTION/NOFAULT": "Signal",
+    "/03_OUTPUT_PROTECTION/NO_TRUE_FAULT": "Signal",
+    "/03_OUTPUT_PROTECTION/OV_COMPARATOR": "Signal",
+    "/03_OUTPUT_PROTECTION/OV_DIV": "Signal",
+    "/03_OUTPUT_PROTECTION/OV_RAW": "Signal",
+    "/03_OUTPUT_PROTECTION/OV_SENSE": "Signal",
+    "/03_OUTPUT_PROTECTION/OV_SWITCHED": "Signal",
+    "/03_OUTPUT_PROTECTION/OV_VALID": "Signal",
+    "/03_OUTPUT_PROTECTION/PG_DIV": "Signal",
+    "/03_OUTPUT_PROTECTION/PG_FIXTURE": "Signal",
+    "/03_OUTPUT_PROTECTION/PG_GOOD": "Signal",
+    "/03_OUTPUT_PROTECTION/PG_SENSE": "Signal",
+    "/03_OUTPUT_PROTECTION/PROT_BST": "Signal",
+    "/03_OUTPUT_PROTECTION/PROT_GATE": "Signal",
+    "/03_OUTPUT_PROTECTION/PROT_MID": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_A1": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_A2": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_A3": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_A4": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_A5": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_B1": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_B2": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_B3": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_B4": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_B5": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_BALLAST_OUT": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_DUMP_DRAIN": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/RAW_DUMP_GATE": "Signal",
+    "/03_OUTPUT_PROTECTION/RAW_DUMP_UP": "Signal",
+    "/03_OUTPUT_PROTECTION/REF1V25": "Signal",
+    "/03_OUTPUT_PROTECTION/REF_2V5": "Signal",
+    "/03_OUTPUT_PROTECTION/REF_SAFE_2V5": "Signal",
+    "/03_OUTPUT_PROTECTION/REF_SENSE": "Signal",
+    "/03_OUTPUT_PROTECTION/RESET_CONTACT": "Signal",
+    "/03_OUTPUT_PROTECTION/RESET_DOWN": "Signal",
+    "/03_OUTPUT_PROTECTION/RUN_GATE": "Signal",
+    "/03_OUTPUT_PROTECTION/RUN_GATE_LOGIC": "Signal",
+    "/03_OUTPUT_PROTECTION/SAFE5": "Signal",
+    "/03_OUTPUT_PROTECTION/SAFE_FB": "Signal",
+    "/03_OUTPUT_PROTECTION/SAFE_FEED": "Signal",
+    "/03_OUTPUT_PROTECTION/SAFE_IN": "Signal",
+    "/03_OUTPUT_PROTECTION/SERIES_ARMED": "Signal",
+    "/03_OUTPUT_PROTECTION/SERIES_CLEAR_N": "Signal",
+    "/03_OUTPUT_PROTECTION/SERIES_CONTACT": "Signal",
+    "/03_OUTPUT_PROTECTION/SERIES_DOWN": "Signal",
+    "/03_OUTPUT_PROTECTION/SERIES_OUT": "HighCurrent",
+    "/03_OUTPUT_PROTECTION/SER_DRV": "Signal",
+    "/03_OUTPUT_PROTECTION/SER_FEED": "Signal",
+    "/03_OUTPUT_PROTECTION/SER_UVLO": "Signal",
+    "/03_OUTPUT_PROTECTION/SOURCE_CONTACT": "Signal",
+    "/03_OUTPUT_PROTECTION/SRC_TRIP": "Signal",
+    "/03_OUTPUT_PROTECTION/SW_HIGH": "Signal",
+    "/03_OUTPUT_PROTECTION/SW_HYS": "Signal",
+    "/03_OUTPUT_PROTECTION/SW_SENSE": "Signal",
+    "/03_OUTPUT_PROTECTION/TGUP_SLOW": "Signal",
+    "/03_OUTPUT_PROTECTION/TRUE_FAULT": "Signal",
+    "/03_OUTPUT_PROTECTION/VIN_GOOD_FAST": "Signal",
+    "/03_OUTPUT_PROTECTION/VIN_MON": "Signal",
+    "/03_OUTPUT_PROTECTION/VIN_SENSE": "Signal",
+    "/04_POWER_MONITOR/3V3_LOCAL": "Signal",
+    "/04_POWER_MONITOR/ALERT_LOCAL": "Signal",
+    "/04_POWER_MONITOR/INA_IN_MINUS": "Kelvin",
+    "/04_POWER_MONITOR/INA_IN_PLUS": "Kelvin",
+    "/04_POWER_MONITOR/SCL_LOCAL": "Signal",
+    "/04_POWER_MONITOR/SDA_LOCAL": "Signal",
+    "/04_POWER_MONITOR/SHUNT_KMINUS": "Kelvin",
+    "/04_POWER_MONITOR/SHUNT_KPLUS": "Kelvin",
+    "/05_IO_TEST/LOAD_FIXTURE": "HighCurrent",
+    "/3V3_HOST": "Signal",
+    "/BUCK_INPUT_PGOOD": "Signal",
+    "/BUCK_PGOOD": "Signal",
+    "/GND": "HighCurrent",
+    "/INPUT_SHDN": "Signal",
+    "/L201_IN": "Switching",
+    "/LOAD_5V1": "HighCurrent",
+    "/SCL_HOST": "Signal",
+    "/SDA_HOST": "Signal",
+    "/VIN_FUSED": "HighCurrent",
+    "/VIN_PROTECTED": "HighCurrent",
+    "/VIN_RAW": "HighCurrent",
+    "/VOUT_5V1": "HighCurrent",
+    "/VOUT_PROTECTED": "HighCurrent"
+  },
+  "placement": "All footprint anchors at (0,0), 0 degrees; none marked placed",
+  "tracks_and_vias": 0,
+  "zones": 0,
+  "board_drawings_and_outline": 0,
+  "project_changed": false,
+  "project_sha256": "adfaca18079528832a6c60750591cc31221b27f3f1d1384ebe63c091f1e5c0c3",
+  "board_sha256": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a",
+  "schematic_sha256": {
+    "01_INPUT_PROTECTION.kicad_sch": "e1bce9b948dda904ccd756ea3e619704c9e2a30de4de2e6801271357e2b21d47",
+    "02_BUCK_5V.kicad_sch": "a7e932809d6f9c52561e63b62fb2e036716855a697d00d4895d6429c98209a47",
+    "03_OUTPUT_PROTECTION.kicad_sch": "b1ef585adf37946493721f510a197a1c0b5f0ec562446685ec78f0bbc8955075",
+    "04_POWER_MONITOR.kicad_sch": "a2c653cfe327d0370318c210d5690425b2a0f7c900124d378cdd3d7e6f96ffb6",
+    "05_IO_TEST.kicad_sch": "3dc65ef9267c9599e26226a4bfb1a1dbd13584a860c689447166ada62ca536e9",
+    "V1A.kicad_sch": "926bb81d876645902594c34808b2905ef1fb6463873d87a19fd2f07abe5324a1"
+  },
+  "netlist_sha256": "5e8790fab43ba623729aae35e19f7199f4198403b7f2aadfc8e262b83329396c",
+  "footprint_sources": {
+    "Capacitor_SMD:C_1210_3225Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+      "sha256": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88"
+    },
+    "Capacitor_SMD:C_0603_1608Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "sha256": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419"
+    },
+    "Diode_SMD:D_SMC": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Diode_SMD.pretty/D_SMC.kicad_mod",
+      "sha256": "27d6a82f606544b92f552e8553603bf7a9953c48b32288661478bd77be661d4b"
+    },
+    "Package_TO_SOT_THT:TO-220-3_Vertical": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_THT.pretty/TO-220-3_Vertical.kicad_mod",
+      "sha256": "6b833c0eb0487be34d2a77aac4eeb30814b709a8ee52fa8d958820204ae3d48b"
+    },
+    "V1A_Qualified:Schurter_UMT_H_15.4x5.35": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Schurter_UMT_H_15.4x5.35.kicad_mod",
+      "sha256": "f05affef30556160c2d8f8bf9925d5234c3cd04b03ae20b6fe9549863802964e"
+    },
+    "V1A_Qualified:ForceLink_M4_P20": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/ForceLink_M4_P20.kicad_mod",
+      "sha256": "4f0812f62fa026e6ea945831dc8617fad19e28c18372b3cf22eeb752734688af"
+    },
+    "V1A_Qualified:TI_Q3_CSD19537Q3": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/TI_Q3_CSD19537Q3.kicad_mod",
+      "sha256": "49490fa2d41fb553eb0c84297dcff799dedee0d560431f61b1962606ce16838e"
+    },
+    "Package_TO_SOT_SMD:SOT-23": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod",
+      "sha256": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d"
+    },
+    "Resistor_SMD:R_0603_1608Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "sha256": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4"
+    },
+    "Resistor_SMD:R_0805_2012Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod",
+      "sha256": "54fd6e17158e15e5a591053f905fbd5bd9a1aa7008c73cccd391b192a3b1a09d"
+    },
+    "TestPoint:TestPoint_Pad_D1.5mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "sha256": "b863253216b04db5519fae21af9390e330c8fc62dee105cab1cf015166eeb2fd"
+    },
+    "V1A_Qualified:SensePair_P2.54": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/SensePair_P2.54.kicad_mod",
+      "sha256": "52cb3e83e565b09bb770daae45cc614583a0040b149222d9412dc496533c0128"
+    },
+    "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_DFN_QFN.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod",
+      "sha256": "a99b712ecc5976476fd117aca0e789096f71dfb9cf1a9983ba2a996d3a19b0e5"
+    },
+    "Capacitor_SMD:C_0805_2012Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+      "sha256": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc"
+    },
+    "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/TDK_C5750_2220_A4.45_B1.30_C4.50.kicad_mod",
+      "sha256": "e63d43a199a4b523443f87222810010e9a55f8d73a1f2235471f1b2bca1d9b01"
+    },
+    "V1A_Qualified:Wurth_74437636351002": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Wurth_74437636351002.kicad_mod",
+      "sha256": "64cc6a18d4daec2481220ac98f68e03f2f3ffc612e5a22a874ad92d9a02d098d"
+    },
+    "V1A_Qualified:ForcePad_M4": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/ForcePad_M4.kicad_mod",
+      "sha256": "079238b96b837c0e70d15ef07ae7e8c0f7992f89481229098a3f2d7fadbcb090"
+    },
+    "V1A_Qualified:TI_RJR0014A_LM61460": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod",
+      "sha256": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c"
+    },
+    "V1A_Qualified:Nichicon_PCH_10x16": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Nichicon_PCH_10x16.kicad_mod",
+      "sha256": "97ee5d35f1938778ee05faaeba92d9add4220dca0b71236448cf245f23e7a39e"
+    },
+    "Capacitor_SMD:C_1206_3216Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod",
+      "sha256": "9343c2f817fd00cce4d60eb82049bd305d87ee6a856d04895b6c546aceac317b"
+    },
+    "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_THT.pretty/CP_Radial_D8.0mm_P3.50mm.kicad_mod",
+      "sha256": "a408de9854a71cfd369e8d996c82712decfe96402c4331e1233c3ee62cc94653"
+    },
+    "V1A_Qualified:Vishay_BAT46W_A1_K2": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Vishay_BAT46W_A1_K2.kicad_mod",
+      "sha256": "99bcb832df10fd78ab3c6faa17e99c36bc40a57ca5aac54d191b90c2075c79be"
+    },
+    "Diode_SMD:D_SMB": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Diode_SMD.pretty/D_SMB.kicad_mod",
+      "sha256": "fcfd409e5167499f325224f41c3e556c23e3de23eeeea48137ea55075e4630d8"
+    },
+    "V1A_Qualified:JST_B2B_XH_A_P2.50_THT": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/JST_B2B_XH_A_P2.50_THT.kicad_mod",
+      "sha256": "74f1b0da1f1b019f4bd22b1ccf81794a71ab7aeb814dba2644bfb206a50b5a47"
+    },
+    "V1A_Qualified:Wurth_7447789004": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Wurth_7447789004.kicad_mod",
+      "sha256": "11c15b4cb50646e25cc0db35ff4b425c164d4a1920c0c91fab6073d9a46df23a"
+    },
+    "V1A_Qualified:Infineon_BSC034N06NS_8pin": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Infineon_BSC034N06NS_8pin.kicad_mod",
+      "sha256": "8a7a7599f1853fb25b8c06d59803ea0072b25f01a590501851f2ff65b0f3c10d"
+    },
+    "V1A_Qualified:TI_Q5B_CSD18540Q5B": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/TI_Q5B_CSD18540Q5B.kicad_mod",
+      "sha256": "a5199f5c3148ea5f5dc0037191edcd6099287d95e811ff35aae52a04a364d650"
+    },
+    "Package_TO_SOT_SMD:TO-263-3_TabPin2": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_SMD.pretty/TO-263-3_TabPin2.kicad_mod",
+      "sha256": "a75cd3e2ead578ef35f692f8af72aacc2a473ac1b6e6655b3e203b5cc374a7dd"
+    },
+    "Resistor_SMD:R_1206_3216Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Resistor_SMD.pretty/R_1206_3216Metric.kicad_mod",
+      "sha256": "3671ca6038d43f4aa571edc854129ee383e8ae11a7ba61c67a44707b29eb7e3b"
+    },
+    "V1A_Qualified:Vishay_WFM2512": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Vishay_WFM2512.kicad_mod",
+      "sha256": "ab4c6bf3379e911ef9e57668cffea306c52837861c3215e811e255c19a3a137b"
+    },
+    "Resistor_SMD:R_2512_6332Metric": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Resistor_SMD.pretty/R_2512_6332Metric.kicad_mod",
+      "sha256": "e6c8e0ff63a631cbc022921a9d7f63a78c54176ad7aca6dae41ab9f5b4f95138"
+    },
+    "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_SO.pretty/MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm.kicad_mod",
+      "sha256": "1cdbb97c13cf3065b83379e9a0b4551f20b22834a82bc7c545e43e1e8b04284f"
+    },
+    "Package_SO:VSSOP-8_3x3mm_P0.65mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_SO.pretty/VSSOP-8_3x3mm_P0.65mm.kicad_mod",
+      "sha256": "158512ca5921f79f03ab2171af707bdfdcc39ffcba866c675a21addce0234cec"
+    },
+    "Package_TO_SOT_SMD:SOT-23-5": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
+      "sha256": "7dd62023ad614b9337b62dc6332bdd83c04e6c471118b102709dddae0241abed"
+    },
+    "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_SO.pretty/HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm.kicad_mod",
+      "sha256": "4bb3901e412c4f86257b61162636d18b442028dbe5906aed854f9832cd7b9b7b"
+    },
+    "Package_TO_SOT_SMD:SOT-23-6": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_SMD.pretty/SOT-23-6.kicad_mod",
+      "sha256": "602125b8f14e0119ce6e808989d7ae7b5c99b37401d399b561ac1938f9aa5e45"
+    },
+    "Package_SO:MSOP-12_3x4.039mm_P0.65mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_SO.pretty/MSOP-12_3x4.039mm_P0.65mm.kicad_mod",
+      "sha256": "1c2c9d61e15bef840e591670a246735267c06f69e4af2e6417542943f375997a"
+    },
+    "V1A_Qualified:ADI_FE20_EP2.74x4.95": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/ADI_FE20_EP2.74x4.95.kicad_mod",
+      "sha256": "5ecebd3af65c282feccf5eb6f607fc00afac955f10b8fdad345b513d659b743c"
+    },
+    "Package_SO:TSSOP-16_4.4x5mm_P0.65mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_SO.pretty/TSSOP-16_4.4x5mm_P0.65mm.kicad_mod",
+      "sha256": "c0016b3582642de61cdd94f64593862d6f9b27db9f0b27194dc79452f08dda8a"
+    },
+    "V1A_Qualified:TI_RPW0010A_TPS25947": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/TI_RPW0010A_TPS25947.kicad_mod",
+      "sha256": "4367c2fdbac142282dc79ec68cae487cf8faf48053cc6bfedbf494b2e57b8da5"
+    },
+    "V1A_Qualified:TI_DCT0008A_SN74LVC1G74": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/TI_DCT0008A_SN74LVC1G74.kicad_mod",
+      "sha256": "d8bf0bd41a0c2c7aa954f8d48c8887e5915cfcfdf793404d0441532fb69b3b51"
+    },
+    "V1A_Qualified:Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Vishay_WSL2726_Kelvin_1Fplus_2Splus_3Sminus_4Fminus.kicad_mod",
+      "sha256": "5bf77b7075ce4232ced05e86c9e6c4aa9e88e61d52b3a9e6e10ee1819cc5e991"
+    },
+    "Package_SO:VSSOP-10_3x3mm_P0.5mm": {
+      "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_SO.pretty/VSSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "sha256": "930d7346a8b6e8833ddaf4846df842051074ca166e1a5bdb577134730bf7dd8d"
+    },
+    "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/JST_B2P_VH_FB_B_P3.96_THT.kicad_mod",
+      "sha256": "01c24440e0b9873c4a93a4dcdaf1d2cfffa6fc41339ce292408334f9cf9ac261"
+    },
+    "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/Phoenix_1776508_MSTB_2_GF_5.08.kicad_mod",
+      "sha256": "1f3993832e39cff0df3afca445ccd0dae0293ab363503161ac8bae668723b460"
+    },
+    "V1A_Qualified:JST_B4B_XH_A_P2.50_THT": {
+      "path": "/Users/quockaiser/Desktop/Research/wt-gate4b/hardware/kicad/V1A_Qualified.pretty/JST_B4B_XH_A_P2.50_THT.kicad_mod",
+      "sha256": "40502620549f9500a1c259741542bfac61f3eafb9cd31f205283108ec1c994be"
+    }
+  }
+}

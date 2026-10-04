@@ -1,0 +1,15 @@
+test_current_manufacturer_pin_identities (fresh_capture_tests.CaptureTests.test_current_manufacturer_pin_identities) ... ok
+test_host_pullup_to_live_local_rail_is_rejected (fresh_capture_tests.CaptureTests.test_host_pullup_to_live_local_rail_is_rejected) ... ok
+test_manufacturer_pin_identity_rejects_swapped_driver_outputs (fresh_capture_tests.CaptureTests.test_manufacturer_pin_identity_rejects_swapped_driver_outputs) ... ok
+test_output_boundary_cannot_be_shortened_even_in_both_contracts (fresh_capture_tests.CaptureTests.test_output_boundary_cannot_be_shortened_even_in_both_contracts) ... ok
+test_q102_source_must_follow_input_not_ground (fresh_capture_tests.CaptureTests.test_q102_source_must_follow_input_not_ground) ... ok
+test_reversed_kelvin_sense_is_rejected (fresh_capture_tests.CaptureTests.test_reversed_kelvin_sense_is_rejected) ... ok
+test_review_capture_matches_contracts (fresh_capture_tests.CaptureTests.test_review_capture_matches_contracts) ... ok
+test_series_fet_footprint_has_every_physical_terminal (fresh_capture_tests.CaptureTests.test_series_fet_footprint_has_every_physical_terminal) ... ok
+test_series_fet_source_reference_must_not_follow_output_drain (fresh_capture_tests.CaptureTests.test_series_fet_source_reference_must_not_follow_output_drain) ... ok
+test_ucc27511_input_pin_error_rejected_even_when_spec_agrees (fresh_capture_tests.CaptureTests.test_ucc27511_input_pin_error_rejected_even_when_spec_agrees) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.131s
+
+OK

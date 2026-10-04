@@ -1,0 +1,639 @@
+--- 1f4c2f8.canonical
++++ footprints-complete.canonical
+@@ -510,6 +510,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "ec1c04c9-5f7f-5d54-996e-5dfa0177c69b",
+@@ -547,7 +553,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -650,6 +656,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "e40c5b3d-467c-5399-b217-b95dd82b0417",
+@@ -687,7 +699,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -1520,6 +1532,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "7416d42a-8a77-5337-b174-9625b9bce629",
+@@ -1557,7 +1575,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -1660,6 +1678,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "a9ab5d63-34a5-50cd-ad4b-83cd118d4109",
+@@ -1697,7 +1721,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -1800,6 +1824,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "f7a50610-78c9-5229-b9ff-950c7da6471b",
+@@ -1837,7 +1867,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -1940,6 +1970,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "1a97759c-498a-5358-8a2a-7cd52b508e28",
+@@ -1977,7 +2013,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -2080,6 +2116,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "1bad9497-0fbd-51fd-aa81-63acad0e804f",
+@@ -2117,7 +2159,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -2220,6 +2262,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "af66c2dd-a71c-5ac9-bac7-a6d40c191c5c",
+@@ -2257,7 +2305,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -7616,6 +7664,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "93586c12-e0c9-52be-b322-8a610f7ff1a1",
+@@ -7653,7 +7707,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:TDK_C5750_2220_A4.45_B1.30_C4.50",
+               "children": []
+             },
+             {
+@@ -8867,7 +8921,7 @@
+           "tag": "property",
+           "attributes": {
+             "name": "MPN",
+-            "value": "PinHeader_1x02"
++            "value": "B2B-XH-A(LF)(SN)"
+           },
+           "text": "",
+           "children": []
+@@ -8920,7 +8974,7 @@
+         {
+           "tag": "footprint",
+           "attributes": {},
+-          "text": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
++          "text": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+           "children": []
+         },
+         {
+@@ -8961,7 +9015,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
++              "text": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+               "children": []
+             },
+             {
+@@ -8969,7 +9023,7 @@
+               "attributes": {
+                 "name": "MPN"
+               },
+-              "text": "PinHeader_1x02",
++              "text": "B2B-XH-A(LF)(SN)",
+               "children": []
+             },
+             {
+@@ -9013,7 +9067,7 @@
+           "tag": "property",
+           "attributes": {
+             "name": "MPN",
+-            "value": "PinHeader_1x02"
++            "value": "B2B-XH-A(LF)(SN)"
+           },
+           "text": "",
+           "children": []
+@@ -9066,7 +9120,7 @@
+         {
+           "tag": "footprint",
+           "attributes": {},
+-          "text": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
++          "text": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+           "children": []
+         },
+         {
+@@ -9107,7 +9161,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
++              "text": "V1A_Qualified:JST_B2B_XH_A_P2.50_THT",
+               "children": []
+             },
+             {
+@@ -9115,7 +9169,7 @@
+               "attributes": {
+                 "name": "MPN"
+               },
+-              "text": "PinHeader_1x02",
++              "text": "B2B-XH-A(LF)(SN)",
+               "children": []
+             },
+             {
+@@ -9159,7 +9213,7 @@
+           "tag": "property",
+           "attributes": {
+             "name": "MPN",
+-            "value": ""
++            "value": "B2P-VH-FB-B(LF)(SN)"
+           },
+           "text": "",
+           "children": []
+@@ -9210,6 +9264,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "ed382c47-3625-51c9-bf2a-6456edff7a59",
+@@ -9218,7 +9278,7 @@
+         {
+           "tag": "value",
+           "attributes": {},
+-          "text": "DC INPUT - MPN OPEN",
++          "text": "DC INPUT",
+           "children": []
+         },
+         {
+@@ -9247,7 +9307,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT",
+               "children": []
+             },
+             {
+@@ -9255,7 +9315,7 @@
+               "attributes": {
+                 "name": "MPN"
+               },
+-              "text": "",
++              "text": "B2P-VH-FB-B(LF)(SN)",
+               "children": []
+             },
+             {
+@@ -9299,7 +9359,7 @@
+           "tag": "property",
+           "attributes": {
+             "name": "MPN",
+-            "value": ""
++            "value": "1776508"
+           },
+           "text": "",
+           "children": []
+@@ -9350,6 +9410,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "5f688bc6-1287-5946-be33-f20f0749abf1",
+@@ -9358,7 +9424,7 @@
+         {
+           "tag": "value",
+           "attributes": {},
+-          "text": "LOAD OUTPUT - MPN OPEN",
++          "text": "LOAD OUTPUT",
+           "children": []
+         },
+         {
+@@ -9387,7 +9453,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:Phoenix_1776508_MSTB_2_GF_5.08",
+               "children": []
+             },
+             {
+@@ -9395,7 +9461,7 @@
+               "attributes": {
+                 "name": "MPN"
+               },
+-              "text": "",
++              "text": "1776508",
+               "children": []
+             },
+             {
+@@ -9439,7 +9505,7 @@
+           "tag": "property",
+           "attributes": {
+             "name": "MPN",
+-            "value": ""
++            "value": "B4B-XH-A(LF)(SN)"
+           },
+           "text": "",
+           "children": []
+@@ -9490,6 +9556,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "V1A_Qualified:JST_B4B_XH_A_P2.50_THT",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "18cc0105-8bd3-5c2c-bc53-428bfbb83a1a",
+@@ -9498,7 +9570,7 @@
+         {
+           "tag": "value",
+           "attributes": {},
+-          "text": "HOST I2C - MPN OPEN",
++          "text": "HOST I2C",
+           "children": []
+         },
+         {
+@@ -9527,7 +9599,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "V1A_Qualified:JST_B4B_XH_A_P2.50_THT",
+               "children": []
+             },
+             {
+@@ -9535,7 +9607,7 @@
+               "attributes": {
+                 "name": "MPN"
+               },
+-              "text": "",
++              "text": "B4B-XH-A(LF)(SN)",
+               "children": []
+             },
+             {
+@@ -17362,6 +17434,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "47d342b5-afde-5a3f-8327-fb6439d4ba14",
+@@ -17399,7 +17477,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -17502,6 +17580,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "8d090595-4fd9-5117-acb8-feb06efa1d0f",
+@@ -17539,7 +17623,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -18372,6 +18456,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "34db608d-46e6-513a-bcb6-0206702c761d",
+@@ -18409,7 +18499,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -18512,6 +18602,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "09916992-745c-5caf-9ae2-89a41c04bf0d",
+@@ -18549,7 +18645,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -18652,6 +18748,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "d9f8b6f8-abdc-596e-a4e0-a271438c216e",
+@@ -18689,7 +18791,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -18792,6 +18894,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "7d25ee58-6b74-5364-b6d1-c4216e1193c8",
+@@ -18829,7 +18937,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -18932,6 +19040,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "cd599412-28b0-584d-97c8-e3acad5493d1",
+@@ -18969,7 +19083,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -19072,6 +19186,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "debfa10f-eaed-5ae2-9f5e-b73c544a7e35",
+@@ -19109,7 +19229,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -19212,6 +19332,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "4b73d537-249e-5b60-b4f7-e0560bbd587e",
+@@ -19249,7 +19375,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {
+@@ -19352,6 +19478,12 @@
+           "children": []
+         },
+         {
++          "tag": "footprint",
++          "attributes": {},
++          "text": "TestPoint:TestPoint_Pad_D1.5mm",
++          "children": []
++        },
++        {
+           "tag": "tstamps",
+           "attributes": {},
+           "text": "de5c825b-43e6-5903-ab9a-45e6a3aabf13",
+@@ -19389,7 +19521,7 @@
+               "attributes": {
+                 "name": "Footprint"
+               },
+-              "text": "",
++              "text": "TestPoint:TestPoint_Pad_D1.5mm",
+               "children": []
+             },
+             {

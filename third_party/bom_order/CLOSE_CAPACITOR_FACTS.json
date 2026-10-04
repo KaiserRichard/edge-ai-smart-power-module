@@ -1,0 +1,712 @@
+{
+  "access_date": "2026-10-04",
+  "revision": "Undated dynamic SimSurfing snapshot; response hashes and request URLs below",
+  "conditions": "25 degC, AC 1 Vrms, manufacturer typical model; linear interpolation of adjacent returned points; uF unless specified. No tolerance, aging, temperature or lot guarantee.",
+  "catalog_url": "https://ds.murata.co.jp/simsurfing_data/data/mlcc.zip",
+  "catalog_sha256": "b4d1a7d17bf9a1ecf8f75e95dba669189698d8afa1127401d607dfc72fddafbd",
+  "status_mapping": {
+    "B": "In Production",
+    "N": "NRND",
+    "C": "To be discontinued",
+    "D": "Discontinued"
+  },
+  "status_mapping_url": "https://ds.murata.co.jp/simsurfing/muratalib/js/product/simsurfing_mlcc_func.min.js",
+  "curves": {
+    "GRM32ER72A105KA01": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "The specified partnumber not exist.",
+      "unit": "uF",
+      "points": [],
+      "catalog": {
+        "L": "OPEN",
+        "W": "OPEN",
+        "size_thickness_max": "OPEN",
+        "tempchar": "OPEN",
+        "rvol": "OPEN",
+        "tolerance": "OPEN",
+        "production_status_en-us": "OPEN"
+      }
+    },
+    "GRM188R71H104KA93": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          0.0,
+          0.10080666666666667
+        ],
+        [
+          0.25,
+          0.10078872147100318
+        ],
+        [
+          3.25,
+          0.10109374558946442
+        ],
+        [
+          3.5,
+          0.10106392550456882
+        ],
+        [
+          4.0,
+          0.10097972003632306
+        ],
+        [
+          4.25,
+          0.10092674740416631
+        ],
+        [
+          4.5,
+          0.10086740203173093
+        ],
+        [
+          4.75,
+          0.10080227227127304
+        ],
+        [
+          5.0,
+          0.10073188707847801
+        ],
+        [
+          5.25,
+          0.1006567151032437
+        ],
+        [
+          8.75,
+          0.09924549593156139
+        ],
+        [
+          9.0,
+          0.09912321702792498
+        ],
+        [
+          11.75,
+          0.09757852784777533
+        ],
+        [
+          12.0,
+          0.09741838561470645
+        ],
+        [
+          12.25,
+          0.09725470624666013
+        ],
+        [
+          12.5,
+          0.09708744034344453
+        ],
+        [
+          12.75,
+          0.09691654205606662
+        ],
+        [
+          25.75,
+          0.08312000743378985
+        ],
+        [
+          26.0,
+          0.0827794033898166
+        ],
+        [
+          29.75,
+          0.0774956115572266
+        ],
+        [
+          30.0,
+          0.07713456244832216
+        ],
+        [
+          30.75,
+          0.07604709506716273
+        ],
+        [
+          31.0,
+          0.07568335410859277
+        ],
+        [
+          34.75,
+          0.07019202874786867
+        ],
+        [
+          35.0,
+          0.06982578695382209
+        ]
+      ],
+      "catalog": {
+        "L": "1.6±0.1",
+        "W": "0.8±0.1",
+        "size_thickness_max": "0.9",
+        "tempchar": "X7R",
+        "rvol": "50",
+        "tolerance": "±10%",
+        "production_status_en-us": "C"
+      }
+    },
+    "GRM21BR71E105KA99": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          3.25,
+          1.0368913638066224
+        ],
+        [
+          3.375,
+          1.036009654966799
+        ],
+        [
+          11.875,
+          0.856019347597376
+        ],
+        [
+          12.0,
+          0.8521482969902592
+        ],
+        [
+          12.25,
+          0.8443625282897261
+        ],
+        [
+          12.375,
+          0.8404495709759827
+        ],
+        [
+          12.5,
+          0.8365243910436262
+        ],
+        [
+          12.625,
+          0.8325878466307554
+        ],
+        [
+          13.875,
+          0.792779011204643
+        ],
+        [
+          14.0,
+          0.7887711910316555
+        ],
+        [
+          17.25,
+          0.6857861366486472
+        ],
+        [
+          17.375,
+          0.6819427224769871
+        ]
+      ],
+      "catalog": {
+        "L": "2±0.15",
+        "W": "1.25±0.15",
+        "size_thickness_max": "1.4",
+        "tempchar": "X7R",
+        "rvol": "25",
+        "tolerance": "±10%",
+        "production_status_en-us": "C"
+      }
+    },
+    "GRM21BR71E475KA73": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          2.375,
+          4.929142806795424
+        ],
+        [
+          2.5,
+          4.881468251325846
+        ],
+        [
+          3.25,
+          4.551614967161199
+        ],
+        [
+          3.375,
+          4.491338821853152
+        ],
+        [
+          4.375,
+          3.986730745856941
+        ],
+        [
+          4.5,
+          3.922972985388446
+        ],
+        [
+          4.625,
+          3.8594516336480686
+        ]
+      ],
+      "catalog": {
+        "L": "2±0.15",
+        "W": "1.25±0.15",
+        "size_thickness_max": "1.4",
+        "tempchar": "X7R",
+        "rvol": "25",
+        "tolerance": "±10%",
+        "production_status_en-us": "C"
+      }
+    },
+    "GRM21BR71H105KA12": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          5.0,
+          1.0229897770544174
+        ],
+        [
+          5.25,
+          1.0206794530094028
+        ],
+        [
+          5.5,
+          1.018221792674616
+        ],
+        [
+          25.75,
+          0.60523679698457
+        ],
+        [
+          26.0,
+          0.6000702238725386
+        ],
+        [
+          30.75,
+          0.5091938132382439
+        ],
+        [
+          31.0,
+          0.5048139621791108
+        ],
+        [
+          34.75,
+          0.4440790366067524
+        ],
+        [
+          35.0,
+          0.44035819490750294
+        ]
+      ],
+      "catalog": {
+        "L": "2±0.1",
+        "W": "1.25±0.1",
+        "size_thickness_max": "1.35",
+        "tempchar": "X7R",
+        "rvol": "50",
+        "tolerance": "±10%",
+        "production_status_en-us": "C"
+      }
+    },
+    "GRM1885C1H330JA01": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          10.75,
+          3.2999999999999996e-05
+        ],
+        [
+          11.0,
+          3.2999999999999996e-05
+        ],
+        [
+          11.25,
+          3.2999999999999996e-05
+        ],
+        [
+          11.5,
+          3.2999999999999996e-05
+        ],
+        [
+          11.75,
+          3.2999999999999996e-05
+        ]
+      ],
+      "catalog": {
+        "L": "1.6±0.1",
+        "W": "0.8±0.1",
+        "size_thickness_max": "0.9",
+        "tempchar": "C0G",
+        "rvol": "50",
+        "tolerance": "±5%",
+        "production_status_en-us": "N"
+      }
+    },
+    "GRM188R72A104KA35": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          0.0,
+          0.1024
+        ],
+        [
+          0.5,
+          0.1023919134692905
+        ],
+        [
+          3.0,
+          0.10166266554891043
+        ],
+        [
+          3.5,
+          0.10145564978629545
+        ],
+        [
+          4.0,
+          0.10123806021556386
+        ],
+        [
+          4.5,
+          0.10101078715743705
+        ],
+        [
+          5.0,
+          0.10077398459578042
+        ],
+        [
+          5.5,
+          0.10052733981611249
+        ],
+        [
+          8.5,
+          0.09880199303688911
+        ],
+        [
+          9.0,
+          0.09846682364468116
+        ],
+        [
+          11.5,
+          0.096558702266276
+        ],
+        [
+          12.0,
+          0.09612957362652849
+        ],
+        [
+          12.5,
+          0.0956846887874688
+        ],
+        [
+          13.0,
+          0.09522424149924394
+        ],
+        [
+          25.5,
+          0.08001456451336995
+        ],
+        [
+          26.0,
+          0.07932327090005768
+        ],
+        [
+          29.5,
+          0.07446355329259294
+        ],
+        [
+          30.0,
+          0.07377110983570177
+        ],
+        [
+          30.5,
+          0.07308018384954916
+        ],
+        [
+          31.0,
+          0.07239109137697834
+        ],
+        [
+          34.5,
+          0.06764219263705758
+        ],
+        [
+          35.0,
+          0.06697737551189986
+        ]
+      ],
+      "catalog": {
+        "L": "1.6±0.1",
+        "W": "0.8±0.1",
+        "size_thickness_max": "0.9",
+        "tempchar": "X7R",
+        "rvol": "100",
+        "tolerance": "±10%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GRM219R71E105KA88": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          11.875,
+          0.7070545763616816
+        ],
+        [
+          12.0,
+          0.7021704586880226
+        ]
+      ],
+      "catalog": {
+        "L": "2±0.1",
+        "W": "1.25±0.1",
+        "size_thickness_max": "0.95",
+        "tempchar": "X7R",
+        "rvol": "25",
+        "tolerance": "±10%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GRM21BZ71E475KE15": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          2.375,
+          4.833791757237742
+        ],
+        [
+          2.5,
+          4.806013904796709
+        ],
+        [
+          3.25,
+          4.612849383399126
+        ],
+        [
+          3.375,
+          4.576980037572947
+        ],
+        [
+          4.375,
+          4.265135847681414
+        ],
+        [
+          4.5,
+          4.223992540180024
+        ],
+        [
+          4.625,
+          4.182558881502813
+        ]
+      ],
+      "catalog": {
+        "L": "2±0.2",
+        "W": "1.25±0.2",
+        "size_thickness_max": "1.45",
+        "tempchar": "X7R",
+        "rvol": "25",
+        "tolerance": "±10%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GCM21BR71H105KA01": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [],
+      "catalog": {
+        "L": "2±0.15",
+        "W": "1.25±0.15",
+        "size_thickness_max": "1.4",
+        "tempchar": "X7R",
+        "rvol": "50",
+        "tolerance": "±10%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GRM1885C2E330JW07": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER72A105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R71H104KA93%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E105KA99%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71E475KA73%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BR71H105KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C1H330JA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM188R72A104KA35%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM219R71E105KA88%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM21BZ71E475KE15%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA01%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GRM1885C2E330JW07%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          10.0,
+          3.299999223704463e-05
+        ],
+        [
+          11.25,
+          3.299999141942995e-05
+        ],
+        [
+          12.5,
+          3.2999990625956374e-05
+        ]
+      ],
+      "catalog": {
+        "L": "1.6±0.1",
+        "W": "0.8±0.1",
+        "size_thickness_max": "0.9",
+        "tempchar": "C0G",
+        "rvol": "250",
+        "tolerance": "±5%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GCM21BR71E105KA56": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GCM21BR71E105KA56%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71E105KA42%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA03%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          3.25,
+          1.0122895568305428
+        ],
+        [
+          3.375,
+          1.011121253251757
+        ],
+        [
+          11.875,
+          0.8403338697181716
+        ],
+        [
+          12.0,
+          0.8369003279892869
+        ],
+        [
+          12.25,
+          0.8299920173842197
+        ],
+        [
+          12.375,
+          0.8265184496769732
+        ],
+        [
+          12.5,
+          0.8230327405510338
+        ],
+        [
+          12.625,
+          0.8195354892197377
+        ],
+        [
+          13.875,
+          0.7840587897466813
+        ],
+        [
+          14.0,
+          0.7804735862785067
+        ],
+        [
+          17.25,
+          0.6872151526322599
+        ],
+        [
+          17.375,
+          0.6836878868336926
+        ]
+      ],
+      "catalog": {
+        "L": "2±0.15",
+        "W": "1.25±0.15",
+        "size_thickness_max": "1.4",
+        "tempchar": "X7R",
+        "rvol": "25",
+        "tolerance": "±10%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GCM21BR71E105KA42": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GCM21BR71E105KA56%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71E105KA42%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA03%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [],
+      "catalog": {
+        "L": "2±0.15",
+        "W": "1.25±0.15",
+        "size_thickness_max": "1.4",
+        "tempchar": "X7R",
+        "rvol": "25",
+        "tolerance": "±10%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GCM21BR71H105KA03": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GCM21BR71E105KA56%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71E105KA42%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%2C+%7B%22partnumber%22%3A+%22GCM21BR71H105KA03%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "",
+      "unit": "uF",
+      "points": [
+        [
+          5.0,
+          1.0224002936019454
+        ],
+        [
+          5.25,
+          1.0202050076935225
+        ],
+        [
+          5.5,
+          1.0178681516163062
+        ],
+        [
+          25.75,
+          0.6057520639750984
+        ],
+        [
+          26.0,
+          0.6004332144324007
+        ],
+        [
+          30.75,
+          0.5065813427913031
+        ],
+        [
+          31.0,
+          0.5020485538682731
+        ],
+        [
+          34.75,
+          0.4391885440518544
+        ],
+        [
+          35.0,
+          0.43534020553680497
+        ]
+      ],
+      "catalog": {
+        "L": "2±0.15",
+        "W": "1.25±0.15",
+        "size_thickness_max": "1.4",
+        "tempchar": "X7R",
+        "rvol": "50",
+        "tolerance": "±10%",
+        "production_status_en-us": "B"
+      }
+    },
+    "GRM32ER71H106KA12": {
+      "request_url": "https://ds.murata.com/simserve/characteristics?callback=nothing&ReqType=Characteristics&ReqChara=%5B%7B%22partnumber%22%3A+%22GRM32ER71H106KA12%22%2C+%22chara_type%22%3A+%22c_dcbias_capacitance%22%2C+%22parameter%22%3A+%7B%22tc%22%3A+25%2C+%22ac%22%3A+1%7D%7D%5D",
+      "response_error": "The specified partnumber not exist.",
+      "unit": "uF",
+      "points": [],
+      "catalog": {
+        "L": "OPEN",
+        "W": "OPEN",
+        "size_thickness_max": "OPEN",
+        "tempchar": "OPEN",
+        "rvol": "OPEN",
+        "tolerance": "OPEN",
+        "production_status_en-us": "OPEN"
+      }
+    }
+  },
+  "rejected_candidate": {
+    "original": "GRM21BR71E105KA99L",
+    "candidate": "GRM219R71E105KA88D",
+    "voltage_v": 12,
+    "original_ceff_uf": 0.8521482969902592,
+    "candidate_ceff_uf": 0.7021704586880226,
+    "disposition": "OPEN / REJECTED for automatic selection: >10% lower effective capacitance."
+  }
+}

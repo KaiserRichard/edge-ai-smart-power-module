@@ -1,0 +1,40 @@
+{
+  "classification": "CALCULATED under ASSUMED boundary conditions; installed rating OPEN",
+  "access_date": "2026-10-04",
+  "material_url": "https://www.kme.com/fileadmin/DOWNLOADCENTER/COPPER%20DIVISON/4%20Industrial%20Rolled/3_Datasheets/Datasheets_NEW_2021/Cu-ETP_01_2021_e.pdf",
+  "material_revision": "C11000_Cu-ETP_10_2020 p1; typical annealed values",
+  "assumptions": {
+    "ambient_C": 40,
+    "temperature_rise_K": 20,
+    "h_W_m2K": 5,
+    "each_joint_ohm": 0.0002,
+    "length_m": 0.03,
+    "width_m": 0.015,
+    "thickness_m": 0.002,
+    "hole_diameter_m": 0.0045,
+    "neglected": "radiation, PCB/end heat transfer; lumped uniform temperature is unvalidated"
+  },
+  "full_cross_section_mm2": 30.0,
+  "neck_cross_section_mm2": 21.0,
+  "rho20_ohm_m": 1.724137931034483e-08,
+  "r60_bulk_ohm": 2.827586206896552e-05,
+  "r60_with_joints_ohm": 0.0004282758620689655,
+  "exposed_top_area_m2": 0.00032276549752961335,
+  "mass_kg": 0.0074605341189820755,
+  "heat_capacity_J_K": 2.939450442878938,
+  "continuous_screen_A": 8.68123980454126,
+  "rounded_screen_A": 8,
+  "at_5A": {
+    "loss_W": 0.010706896551724137,
+    "drop_V": 0.0021413793103448276,
+    "rise_K": 6.634474027535605
+  },
+  "at_100A_20us": {
+    "bulk_energy_J": 5.655172413793105e-06,
+    "each_joint_energy_J": 4e-05,
+    "bulk_adiabatic_rise_K": 1.9238876530452243e-06
+  },
+  "protected_dump_resistive_screen_A": 168.94745734076702,
+  "raw_dump_resistive_screen_A": 76.86440965054327,
+  "limitations": "Pulse currents are conditional V/R screens only. Peak, duration, reversal, joint hot spots and repetition remain OPEN. Never infer a 100A installed rating."
+}

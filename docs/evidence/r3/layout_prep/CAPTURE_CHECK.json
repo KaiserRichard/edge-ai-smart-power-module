@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "checks": [
+    "Gate4B capture contracts",
+    "Independent pin/control/no-bypass boundaries",
+    "Sheet03 packages",
+    "All physical footprint copper pad numbers"
+  ],
+  "scope_note": "Called existing validators directly. Legacy check_r2_schematic.py CLI rejects every PCB as an R3 scope violation; the current LAYOUT_PREP brief explicitly authorizes this unplaced import. That older scope guard was not changed."
+}

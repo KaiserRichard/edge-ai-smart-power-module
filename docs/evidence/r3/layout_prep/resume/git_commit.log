@@ -1,0 +1,14 @@
+Capture branch: feat/r2-testboard-capture
+Resume base: 56e9837e522c01bd680aca602f9f471d38d6039f
+Step: git add the layout-preparation resume paths
+Exit: 128
+fatal: Unable to create '/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.git/worktrees/wt-gate4b/index.lock': Operation not permitted
+
+No new commit created. Per LAYOUT_PREP_RESUME.md, leave resume changes uncommitted.
+Earlier supplied commits 566b00e and 56e9837 remain intact.
+No permission/lock workaround or push attempted.
+
+Guide branch: docs/pcb-layout-guide
+Guide base: 8f9ebe5576a8aa177948b5e772ae4e815ec85446
+The target worktree lies outside current writable roots. No installation or commit attempted there in this resume.
+Patch applicability and byte-for-byte reproduction in a temporary copy pass; target remains unchanged.

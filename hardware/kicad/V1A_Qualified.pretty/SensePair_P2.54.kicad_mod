@@ -1,0 +1,8 @@
+(footprint "SensePair_P2.54" (version 20241229) (generator "pcbnew") (layer "F.Cu")
+ (descr "Project paired etched sense pads; pin1 signal pin2 local return; no current-carrying link") (attr smd exclude_from_bom)
+ (fp_text reference "REF**" (at 0 -3.2) (layer "F.SilkS") (effects (font (size 1 1) (thickness .15))))
+ (fp_text value "SensePair_P2.54" (at 0 3.2) (layer "F.Fab") (effects (font (size 1 1) (thickness .15))))
+ (fp_rect (start -3.5 -1.2) (end 3.5 1.2) (stroke (width .1) (type default)) (fill none) (layer "F.Fab"))
+ (fp_rect (start -4.0 -1.7) (end 4.0 1.7) (stroke (width .05) (type default)) (fill none) (layer "F.CrtYd"))
+ (pad "1" smd circle (at 0 0) (size 1.5 1.5) (layers "F.Cu" "F.Mask"))
+(pad "2" smd circle (at 2.54 0) (size 1.5 1.5) (layers "F.Cu" "F.Mask")))

@@ -1,0 +1,17 @@
+{
+  "docs/evidence/r2/path_budget/PATH_BUDGET.md": {
+    "commit": "ebe51b9e141588d118d74daf37e65a3bd2307c1f",
+    "sha256": "93e0c5fd17798dd038e95f9659cf10a563d93b9533baeadd5ffb39fc65f2b701",
+    "use": "Referenced; no merge or upstream modification"
+  },
+  "docs/evidence/r2/j502_harness/HARNESS_DECISION.md": {
+    "commit": "54d3bc67fd64f4bd947440518d90e76673faf5db",
+    "sha256": "4ec56cc6855f693e2f152aa56d5fb8acb63127f6e11d56261181dfbab19de097",
+    "use": "Referenced; no merge or upstream modification"
+  },
+  "docs/evidence/r2/footprints/FOOTPRINT_AUDIT.md": {
+    "commit": "8535cffe2151794ae352d25e19f9262a549dbc1b",
+    "sha256": "57c181a241727bf2b7ebc2623eebd710c51cae8310c89d78fd69c4e28450451d",
+    "use": "Referenced; no merge or upstream modification"
+  }
+}

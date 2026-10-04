@@ -1,0 +1,65 @@
+{
+  "status": "PASS: resumed import and guide-patch checks; guide installation BLOCKED by writable-root restriction",
+  "resumed_from": "56e9837e522c01bd680aca602f9f471d38d6039f",
+  "prior_commits": [
+    "566b00e5dda5f41a09f499c87d76b8c773c871f7",
+    "56e9837e522c01bd680aca602f9f471d38d6039f"
+  ],
+  "board_sha256": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a",
+  "board_and_project_unchanged": true,
+  "schematics_unchanged": true,
+  "import_check_changed_fields": [
+    "schematic_baseline",
+    "netlist_sha256"
+  ],
+  "fresh_netlist_equal_except_export_date": true,
+  "footprints_per_sheet": {
+    "/01_INPUT_PROTECTION/": 21,
+    "/02_BUCK_5V/": 31,
+    "/03_OUTPUT_PROTECTION/": 280,
+    "/04_POWER_MONITOR/": 23,
+    "/05_IO_TEST/": 11
+  },
+  "root_sheet_physical_footprints": 0,
+  "drc": {
+    "exit_code": 5,
+    "schematic_parity": 0,
+    "violations": 2191,
+    "unconnected_items": 213,
+    "violation_counts_by_type": {
+      "clearance": 499,
+      "courtyards_overlap": 199,
+      "hole_clearance": 199,
+      "hole_to_hole": 148,
+      "holes_co_located": 199,
+      "invalid_outline": 1,
+      "shorting_items": 199,
+      "silk_over_copper": 199,
+      "silk_overlap": 199,
+      "solder_mask_bridge": 340,
+      "text_height": 9
+    }
+  },
+  "guide": {
+    "target_branch": "docs/pcb-layout-guide",
+    "target_head": "8f9ebe5576a8aa177948b5e772ae4e815ec85446",
+    "target_sha256": "8aa9bf37bf86cca6f1c373de96c995c2d709c1fdb6535efe95f73855c3d758f7",
+    "target_unchanged": true,
+    "target_worktree_clean": true,
+    "patch_applies_to_target": true,
+    "patch_applied_to_temporary_copy_matches_prepared_document": true,
+    "prepared_sha256": "713ff39285c28430a0018a59a1774bde4106b74d05654e4b2e959a4f2abf3fde",
+    "patch_sha256": "5e692632c44c058b186a78709793469f64e419350add0cccda85d852ac3457d5",
+    "physical_refs_checked_including_ranges": 283,
+    "missing_refs": [],
+    "installation": "NOT RUN: target lies outside current writable roots; prior worker write denial retained in original evidence"
+  },
+  "visual_review": "Existing UNPLACED.png inspected; board hash matches original rendered board; all footprints overlap at origin, no routing/outline",
+  "regression_tests": "Previous 50 passing tests retained; not rerun because no schematic/footprint or import semantics changed",
+  "fabrication": "NOT FOR FABRICATION \u2014 ENGINEERING REVIEW REQUIRED",
+  "git": {
+    "capture_commit": "BLOCKED at git add: index.lock Operation not permitted, exit 128; leave uncommitted per brief",
+    "guide_commit": "BLOCKED: target outside writable roots; no target change",
+    "push": "NOT RUN"
+  }
+}

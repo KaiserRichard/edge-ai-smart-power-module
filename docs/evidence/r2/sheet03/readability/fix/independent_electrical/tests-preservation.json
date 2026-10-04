@@ -1,0 +1,8 @@
+{
+  "preexisting_footprint_tests_unchanged": true,
+  "preexisting_capture_tests_only_export_path_updated": true,
+  "underlying_capture_checker_unchanged": true,
+  "fresh_capture_tests": 10,
+  "successful": true,
+  "identity_regression_tests_added": 5
+}

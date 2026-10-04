@@ -1,3 +1,48 @@
+# Current validation — Gate2, 2026-09-29
+
+**PRELIMINARY — R2 BLOCKED — NOT FOR FABRICATION.** Current commands:
+
+```sh
+python3 -B scripts/check_repository.py
+python3 -B -m unittest discover -s tests -v
+python3 -B scripts/check_r2_schematic.py --netlist docs/evidence/r2/sheet03/V1A_gate2.net.xml
+python3 -B scripts/calculate_sheet03_gate1b.py --gate 2
+```
+
+Expected: repository PASS,15 tests PASS, capture integrity PASS followed by R2
+release BLOCKED. For every Sheet03 copper pad, add
+`--footprints /Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints`
+to the capture checker on this workstation. The checker now understands the
+real opposed-FET/crowbar circuit; the earlier empty-output assertions and
+historical test netlist have been superseded.
+
+The repository checker uses the reviewed
+[Gate2 preservation record](evidence/r2/sheet03/GATE2_SCOPE.json), retaining
+unchanged historical hashes and separately documenting scoped changes. Do not
+update hashes to hide unreviewed edits. Current fresh ERC is 0 violations;
+source declarations represent the fitted paths and are independently checked.
+See [Gate2 validation](evidence/r2/sheet03/GATE2_VALIDATION.md).
+
+Use the fresh KiCad command forms below with outputs in ignored scratch space.
+For the current capture, ERC's expected exit is0; a historical undriven-U402
+error is no longer expected. Do not compare current contracts against an old
+pre-capture netlist. The full marked PDF can be reproduced using a Python
+environment with PyMuPDF:
+
+```sh
+python scripts/export_sheet03_review.py --kicad-cli /Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli --review-dir /Users/quockaiser/Desktop/Research/V1A_review_2026-09-29
+```
+
+The strict R0/R1 cache checker remains unchanged and still fails on the archived
+source/predecessor snapshot. Its130 issues were recorded, not reported as PASS.
+No bench or electrical safety conclusion follows from these software checks.
+
+---
+
+The following instructions describe the **historical2026-09-26 cleanup state**.
+Their old netlist,10-test count and expected ERC error are preserved context;
+the current Gate2 instructions above take precedence.
+
 # Repository validation and reproduction
 
 Run from repository root. Python 3.11 and KiCad 9.0.6 were used in the existing evidence. No runtime software build is currently applicable. These are non-destructive checks; R2 and R3 remain BLOCKED.

@@ -1,0 +1,61 @@
+{
+  "access_date": "2026-10-04",
+  "sources": {
+    "R203A-TI": {
+      "owner": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "revision": "SNVSBD5D, July 2022; section 7.4 p6 (FPWM-conditioned reference accuracy and typical FB current)",
+      "relevant_source_files": [
+        "lm61460.pdf p6"
+      ],
+      "access_date": "2026-10-04",
+      "license": "Copyright owner; no open-source license asserted",
+      "function_studied": "Reference tolerance and explicit limit on using typical FB current",
+      "use": "Referenced; no third-party circuit copied",
+      "modifications": "None to upstream source; factual summary authored locally",
+      "required_attribution": "Texas Instruments; retain URL and revision/access date"
+    },
+    "R203A-VISHAY": {
+      "owner": "Vishay",
+      "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "revision": "Document 28758, 10-Apr-2026",
+      "relevant_source_files": [
+        "tnpw_e3.pdf ordering table and dimensions"
+      ],
+      "access_date": "2026-10-04",
+      "license": "Copyright owner; no open-source license asserted",
+      "function_studied": "TNPW0603 tolerance/TCR/package identity; retain existing footprint and derating",
+      "use": "Referenced; no third-party circuit copied",
+      "modifications": "None to upstream source; factual summary authored locally",
+      "required_attribution": "Vishay; retain URL and revision/access date"
+    },
+    "R203A-M": {
+      "owner": "Mouser Electronics",
+      "url": "https://br.mouser.com/en/ProductDetail/Vishay/TNPW060324K6BEEA?qs=sGAEpiMZZMtlubZbdhIBIKLtS20KipbwirH%252B0LPbGxU%3D",
+      "revision": "Unversioned public indexed product page; crawl age last month",
+      "relevant_source_files": [
+        "R203A_CATALOG_FACTS.json R203A-M"
+      ],
+      "access_date": "2026-10-04",
+      "license": "Copyright owner; no open-source license asserted",
+      "function_studied": "Exact MPN, stock, price, minimum and multiple from one USD-displaying regional offer",
+      "use": "Referenced; no third-party circuit copied",
+      "modifications": "None to upstream source; factual summary authored locally",
+      "required_attribution": "Mouser Electronics; retain URL and revision/access date"
+    },
+    "R203A-D": {
+      "owner": "DigiKey",
+      "url": "https://www.digikey.co.uk/en/products/detail/vishay-dale/TNPW060324K6BEEA/4972391",
+      "revision": "Unversioned public indexed product page; crawl age 2 weeks",
+      "relevant_source_files": [
+        "R203A_CATALOG_FACTS.json R203A-D"
+      ],
+      "access_date": "2026-10-04",
+      "license": "Copyright owner; no open-source license asserted",
+      "function_studied": "Exact MPN and UK stock; GBP prices not used as USD",
+      "use": "Referenced; no third-party circuit copied",
+      "modifications": "None to upstream source; factual summary authored locally",
+      "required_attribution": "DigiKey; retain URL and revision/access date"
+    }
+  }
+}

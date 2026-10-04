@@ -1,0 +1,145 @@
+[
+  {
+    "evidence_id": "L001",
+    "mpn": "GRM32ER72A105KA01L",
+    "d": "digikey",
+    "url": "https://www.digikey.com/en/products/detail/murata-electronics/GRM32ER72A105KA01L/586582",
+    "observed_date": "2026-10-04",
+    "crawl_age": "3 weeks",
+    "sku": "490-1857-1-ND",
+    "stock": 248909,
+    "lead_time": "OPEN",
+    "lifecycle": "Not For New Designs",
+    "minimum": 1,
+    "multiple": 1,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "1.22"
+      ],
+      [
+        10,
+        ".784"
+      ],
+      [
+        50,
+        ".6126"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM32ER72A105KA01L",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "One public distributor snapshot; not a reservation. Cut tape; no reeling fee."
+    ]
+  },
+  {
+    "evidence_id": "L002",
+    "mpn": "GRM188R71H104KA93D",
+    "d": "lcsc",
+    "url": "https://www.lcsc.com/product-detail/C77055.html",
+    "observed_date": "2026-10-04",
+    "crawl_age": "today",
+    "sku": "C77055",
+    "stock": 1176650,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": 50,
+    "multiple": 50,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        50,
+        ".0171"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM188R71H104KA93D",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "One public distributor snapshot; not a reservation. Cut tape; no reeling fee."
+    ]
+  },
+  {
+    "evidence_id": "L003",
+    "mpn": "GRM32ER71H106KA12L",
+    "d": "lcsc",
+    "url": "https://www.lcsc.com/product-detail/C77102.html",
+    "observed_date": "2026-10-04",
+    "crawl_age": "today",
+    "sku": "C77102",
+    "stock": 36990,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": 5,
+    "multiple": 5,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        5,
+        ".3322"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM32ER71H106KA12L",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "One public distributor snapshot; not a reservation. Cut tape; no reeling fee."
+    ]
+  },
+  {
+    "evidence_id": "L004",
+    "mpn": "GRM21BR71E105KA99L",
+    "d": "lcsc",
+    "url": "https://www.lcsc.com/product-detail/C77080.html",
+    "observed_date": "2026-10-04",
+    "crawl_age": "yesterday",
+    "sku": "C77080",
+    "stock": 17770,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": 10,
+    "multiple": 10,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        10,
+        ".0586"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM21BR71E105KA99L",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "One public distributor snapshot; not a reservation. Cut tape; no reeling fee."
+    ]
+  },
+  {
+    "evidence_id": "L005",
+    "mpn": "GRM1885C1H330JA01D",
+    "d": "lcsc",
+    "url": "https://www.lcsc.com/product-detail/C77035.html",
+    "observed_date": "2026-10-04",
+    "crawl_age": "2 days",
+    "sku": "C77035",
+    "stock": 77750,
+    "lead_time": "OPEN",
+    "lifecycle": "OPEN",
+    "minimum": 50,
+    "multiple": 50,
+    "currency": "USD",
+    "price_tiers": [
+      [
+        50,
+        ".0165"
+      ]
+    ],
+    "alternate_candidates": [],
+    "page_mpn": "GRM1885C1H330JA01D",
+    "page_manufacturer": "Murata Electronics",
+    "notes": [
+      "One public distributor snapshot; not a reservation. Cut tape; no reeling fee."
+    ]
+  }
+]

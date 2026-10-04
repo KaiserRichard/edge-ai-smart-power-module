@@ -1,0 +1,80 @@
+[
+  {
+    "mpn": "TNPW060324K6BEEA",
+    "observed_date": "2026-10-04",
+    "alternate_candidates": [],
+    "page_mpn": "TNPW060324K6BEEA",
+    "page_manufacturer": "Vishay",
+    "minimum": 1,
+    "multiple": 1,
+    "evidence_id": "R203A-M",
+    "d": "mouser",
+    "url": "https://br.mouser.com/en/ProductDetail/Vishay/TNPW060324K6BEEA?qs=sGAEpiMZZMtlubZbdhIBIKLtS20KipbwirH%252B0LPbGxU%3D",
+    "crawl_age": "last month",
+    "sku": "71-TNPW060324K6BEEA",
+    "stock": 5101,
+    "lead_time": "22 Weeks",
+    "lifecycle": "OPEN",
+    "currency": "USD",
+    "price_tiers": [
+      [
+        1,
+        "0.26"
+      ],
+      [
+        10,
+        "0.20"
+      ],
+      [
+        500,
+        "0.193"
+      ]
+    ],
+    "notes": [
+      "Public indexed Brazil-region product snapshot displayed USD; stock, price, minimum and multiple from that same page. Not a live inventory reservation; reconfirm at any future order. Cut tape; no MouseReel fee."
+    ]
+  },
+  {
+    "mpn": "TNPW060324K6BEEA",
+    "observed_date": "2026-10-04",
+    "alternate_candidates": [],
+    "page_mpn": "TNPW060324K6BEEA",
+    "page_manufacturer": "Vishay",
+    "minimum": 1,
+    "multiple": 1,
+    "evidence_id": "R203A-D",
+    "d": "digikey",
+    "url": "https://www.digikey.co.uk/en/products/detail/vishay-dale/TNPW060324K6BEEA/4972391",
+    "crawl_age": "2 weeks",
+    "sku": "541-TNPW060324K6BEEACT-ND",
+    "stock": 1920,
+    "lead_time": "25 Weeks",
+    "lifecycle": "Active",
+    "currency": "GBP",
+    "price_tiers": [
+      [
+        1,
+        "0.19000"
+      ],
+      [
+        10,
+        "0.16100"
+      ],
+      [
+        50,
+        "0.14120"
+      ],
+      [
+        100,
+        "0.13340"
+      ],
+      [
+        500,
+        "0.11756"
+      ]
+    ],
+    "notes": [
+      "Public indexed UK snapshot; direct page retrieval failed. GBP price is excluded from USD totals; no currency conversion or regional offer splicing. Qty1 cut-tape single-piece multiple is an ordering assumption to reconfirm. Stock is not reserved."
+    ]
+  }
+]

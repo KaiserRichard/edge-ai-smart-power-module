@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Recompute R2 screening calculations; all assumptions are explicit in the report."""
+"""Legacy R2 topology sensitivity with current R203; not the Gate4A path/fault model.
+
+R203 option A calculations are in docs/evidence/r2/r203_option_a/calculate.py.
+"""
 import argparse
 import itertools
 import json
@@ -17,7 +20,7 @@ def divider_bounds(top, bottom, threshold, tolerance=0.001, leakage=150e-9):
 
 
 def calculate():
-    vout = 1 + 100e3 / 24.4e3
+    vout = 1 + 100e3 / 24.6e3  # Owner option A, 2026-10-04.
     points = []
     for vin in (9, 12, 24):
         duty = vout / vin
@@ -36,7 +39,7 @@ def calculate():
     return dict(
         classification='CALCULATION; not measurement or guaranteed L/C production limits',
         output_nominal_V=vout,
-        output_divider_and_reference_corner_V=divider_bounds(100e3,24.4e3,[0.99,1.01],leakage=10e-9),
+        output_divider_and_reference_corner_V=divider_bounds(100e3,24.6e3,[0.99,1.01],leakage=10e-9),
         buck_points=points,
         min_inductance_eq10_uH=0.32*vout/360e3*1e6,
         assumed_corner_inductance_uH=6.8*0.8*0.9,
