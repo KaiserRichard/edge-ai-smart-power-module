@@ -1,6 +1,6 @@
 # Exact-stock and alternate review — 2026-10-04
 
-**CONFIRMED:** exact MPNs were searched first; public indexed snapshots only, no account/cart/login/contact. Stock and prices can change. **OPEN** does not assert a part is nonexistent. Historical facts remain unchanged. New facts Q271–Q280 are in [CLOSE_CATALOG_FACTS.json](../../../../third_party/bom_order/CLOSE_CATALOG_FACTS.json).
+**CONFIRMED:** exact MPNs were searched first; the resume addendum below supersedes the earlier B033 and H01 findings; public indexed snapshots only, no account/cart/login/contact. Stock and prices can change. **OPEN** does not assert a part is nonexistent. Historical facts remain unchanged. New facts Q271–Q280 are in [CLOSE_CATALOG_FACTS.json](../../../../third_party/bom_order/CLOSE_CATALOG_FACTS.json).
 
 **CONFIRMED closure:** B085 TPS7A1601DGNR, Mouser 595-TPS7A1601DGNR, 63 observed / 7 required, USD4.21 each at qty7, minimum/multiple1, factory16 weeks; exact original MPN. [Source](https://www.mouser.com/es/ProductDetail/Texas-Instruments/TPS7A1601DGNR?qs=KC2rBGieF4oE7JWkZS%2FgAQ%3D%3D), accessed2026-10-04, crawl4weeks. Incoming dates are excluded.
 
@@ -70,3 +70,11 @@ These rows already have sufficient exact stock in another channel in the pinned2
 H01/H08 stock-only routes still lack a complete USD/pack offer; H05 housing procurement remains OPEN. M01–M03 hardware purchase codes/quotes and O01/O02 harness/thermal definitions remain OPEN. Their stock rows are not engineering qualification. See generated CLOSE_SUMMARY.md for the complete deduplicated count.
 
 **Provenance:** distributor pages are undated dynamic snapshots, copyright their respective owners, no open redistribution license established. Only factual observations retained; referenced, not copied/adapted circuitry. Manufacturer sources above and capacitor model data were read only. No third-party design or PCB reused.
+
+## Resume addendum — 2026-10-04
+
+**CONFIRMED B033 closure:** original CSD18540Q5B exact offers remain zero. The [TI SLPS488B ordering table](https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf), April 2017 p1, lists CSD18540Q5B and CSD18540Q5BT as one SON 5×6 mm device with 2500/250-piece reel options. Shared electrical specifications are on p3, Q5B lands/pins on pp8–9. This is a carrier-only substitution, with no new electrical model or CAD change. **CONFIRMED:** [Mouser's US/Spanish page](https://www.mouser.com/es/ProductDetail/Texas-Instruments/CSD18540Q5BT?qs=NRIcxvoDUteGYlfdfF0DmQ%3D%3D) gives SKU 595-CSD18540Q5BT, stock592, minimum/multiple1, USD4.53 at seven units, factory9weeks (crawl last month). Accept seven cut-tape units for Q303/Q330. [DigiKey](https://www.digikey.com/en/products/detail/texas-instruments/CSD18540Q5BT/4915639) remains zero (crawl last week); its later expected inventory is excluded. These snapshots are independent offers, not combined stock/price fields.
+
+**OPEN H01 correction:** the [newer exact Phoenix 1777989 Mouser page](https://eu.mouser.com/en/ProductDetail/Phoenix-Contact/1777989?qs=TrDcmYSSX9WKfp2I32hSmA%3D%3D), crawl2weeks, shows zero stock. It supersedes the older Q006 stock10 route above. Its EUR price is excluded from USD totals. H08 still lacks a coherent exact-SKU USD offer; indexed category results do not resolve the missing offer and are not substituted for the recorded page.
+
+**EVIDENCE:** all links accessed 2026-10-04; Q281–Q283 in [CLOSE_RESUME_CATALOG_FACTS.json](../../../../third_party/bom_order/CLOSE_RESUME_CATALOG_FACTS.json), technical decision in [CLOSE_STOCK_DECISIONS.json](../../../../third_party/bom_order/CLOSE_STOCK_DECISIONS.json). Undated dynamic pages; copyright Mouser/DigiKey and TI, factual metadata only, no open redistribution license established. TI document referenced, no circuit copied or adapted. Other previously sourced searches/owner holds are retained, including the rejected INA228AIDGST packing proposal. No accounts, carts or purchases.

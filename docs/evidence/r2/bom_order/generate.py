@@ -8,6 +8,7 @@ import re
 from collections import defaultdict, Counter
 from decimal import Decimal
 from pathlib import Path
+from closeout import DECISIONS, assert_selection, summary
 
 ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / 'docs/evidence/r2'
@@ -19,6 +20,8 @@ SOURCE = list(csv.DictReader((EVIDENCE / 'SOURCE_BOM.csv').open()))
 DRAFT = list(csv.DictReader((OUT / 'BOM_DRAFT.csv').open()))
 QUOTES = json.loads(FACTS.read_text())
 QUOTES += json.loads((FACTS.parent / 'RESUME_CATALOG_FACTS.json').read_text())
+QUOTES += json.loads((FACTS.parent / 'CLOSE_CATALOG_FACTS.json').read_text())
+QUOTES += json.loads((FACTS.parent / 'CLOSE_RESUME_CATALOG_FACTS.json').read_text())
 Q = {(q['mpn'], q['d']): q for q in QUOTES}
 ALT_REVIEW = json.loads((FACTS.parent / 'ALTERNATE_REVIEW.json').read_text())
 NATIVE_URL = META['source_repository'] + '/blob/' + META['source_commit'] + '/'
@@ -72,7 +75,7 @@ def commercial(row):
                 notes.append('Order multiple OPEN; quantity is a planning minimum, not a confirmed pack quantity.')
         row[d + '_qty_to_order'] = 0 if not_bought else n
         applicable = [(int(t), Decimal(str(p))) for t, p in q['price_tiers'] if isinstance(n, int) and int(t) <= n]
-        priced = bool(applicable) and q['sku'] != 'OPEN' and isinstance(n, int) and n > 0
+        priced = bool(applicable) and q.get('currency') == 'USD' and q['sku'] != 'OPEN' and isinstance(n, int) and n > 0
         tier, price = max(applicable) if priced else ('OPEN', None)
         row[d + '_price_break'] = 'N/A' if not_bought else tier
         row[d + '_unit_price_usd'] = 'N/A' if not_bought else str(price) if priced else 'OPEN'
@@ -163,6 +166,23 @@ def commercial(row):
         a = ALT_REVIEW[mpn]
         row.update(alternate_mpn=a['mpn'], alternate_manufacturer=a['manufacturer'],
             alternate_source=a['source_url'], alternate_status=a['disposition'])
+    if row['captured_mpn'] in DECISIONS:
+        a = DECISIONS[row['captured_mpn']]
+        row.update(alternate_mpn=a['mpn'], alternate_manufacturer=a['manufacturer'],
+            alternate_source=a['source_url'], alternate_status=a['disposition'])
+        if a['order_accepted']:
+            row['flags'] += '; REVIEWED-ORDER-ALTERNATE'
+            row['notes'] += ' CONFIRMED order alternate from captured '+row['captured_mpn']+' to '+mpn+'. Hardware identity preserved; see bom_order/CAPACITOR_REVIEW.md and STOCK_REVIEW.md.'
+            if a.get('kind') != 'carrier_only':
+                row['lifecycle'] += '; manufacturer: In Production (SimSurfing B, 2026-10-04)'
+        else:
+            row['flags'] += '; OWNER-HOLD'
+            row['notes'] += ' OPEN: '+a['owner_hold']
+    if mpn == 'INA228AIDGSR':
+        row['alternate_status'] = 'OPEN / REJECTED: INA228AIDGST obsolete/restricted in newer source; no accepted alternate. See STOCK_REVIEW.md.'
+    if row['scope'] == 'Custom link':
+        row['alternate_source'] = 'bom_order/FORCE_LINK_DRAWING.md'
+        row['notes'] += ' Make-or-quote drawing: bom_order/FORCE_LINK_DRAWING.md; calculated 8 A continuous screen is conditional, installed rating OPEN.'
 
 groups = defaultdict(list)
 for r in SOURCE:
@@ -190,6 +210,10 @@ for (scope, key), items in sorted(groups.items(), key=lambda p: natural(p[1][0][
     if refs == ['U316']:
         assert META['u316_disposition']['mpn'] == mpn and META['u316_disposition']['status'] == 'CONFIRMED'
         row['notes']+=' U316 CONFIRMED: LT4363HMS-1#PBF, 12-pin MSOP, -1 variant. Resume brief supersedes original pending check; C1-C3 pin review PASS. No U316-specific hold.'
+    if mpn in DECISIONS and DECISIONS[mpn]['order_accepted']:
+        a = DECISIONS[mpn]
+        assert_selection(a, refs, row['footprint'].split('; '))
+        row.update(mpn=a['mpn'], manufacturer=a['manufacturer'])
     commercial(row);rows.append(row)
 
 # External harness notes are not extra fitted board components. Wire is ordered by spool, never by an invented per-metre piece price.
@@ -230,6 +254,8 @@ for row in rows:
 FIELDS=list(rows[0])
 with (OUT/'BOM_ORDER.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,fieldnames=FIELDS,lineterminator='\n');w.writeheader();w.writerows(rows)
+close = summary(rows)
+(EVIDENCE/'CLOSE_SUMMARY.json').write_text(json.dumps(close,indent=2)+'\n')
 
 oldrefs={ref.strip():r for r in DRAFT for ref in r['refdes'].split(',') if re.fullmatch(r'[A-Z]+\d+',ref.strip())}
 newrefs={r['Reference']:r for r in SOURCE}
@@ -252,11 +278,45 @@ for d in CHANNELS:
 def esc(s):
     return str(s).replace('|','/').replace('\n',' ')
 
+# The summary uses the same row definition as the preserved baseline, not the
+# number of missing cells in secondary distributor channels.
+summary_lines = [
+    '# BOM close summary — 2026-10-04',
+    '', '**NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**', '',
+    f"**CONFIRMED:** OPEN order rows **{close['open_before']} → {close['open_after']}**. "
+    f"Closed {', '.join(close['closed_row_ids'])}; newly OPEN {', '.join(close['newly_open_row_ids'])} (EOL).",
+    '', close['definition'], '',
+    f"Literal CSV cells equal to OPEN: {close['literal_open_cells_before']} → {close['literal_open_cells_after']}; "
+    f"rows containing OPEN text: {close['rows_containing_open_before']} → {close['rows_containing_open_after']}. "
+    'These secondary metrics include absent supplier channels and unneeded alternates, so they are not a blocker count. The CSV columns are unchanged.',
+    '', '## Selected alternates', '',
+    '| Row | Captured original → selected alternate | Reason / bias evidence | Stock route |',
+    '|---|---|---|---|',
+]
+for r in close['selected_alternates']:
+    a = DECISIONS[r['original']]
+    detail = a['reason']
+    if a.get('kind') != 'carrier_only':
+        t = min(a['bias_tests'], key=lambda t:t['ratio'])
+        detail += f" CALCULATED worst ratio {100*t['ratio']:.2f}%: {t['original_ceff_uf']:.6g} → {t['alternate_ceff_uf']:.6g} µF at {t['dc_voltage_v']:g} V ({t['refdes']})."
+    summary_lines.append('| '+' | '.join(esc(v) for v in [r['row_id'],r['original']+' → '+r['alternate'],detail,', '.join(r['routes'])])+' |')
+summary_lines += ['', '**CONFIRMED exact-part closure:** B085 retains TPS7A1601DGNR; Mouser Q277 stock63 / required7, USD4.21 each. This is not a component substitution.',
+    '', '[Capacitor review](CAPACITOR_REVIEW.md) contains every original/alternate effective capacitance at the evaluated net voltages, manufacturer provenance and timing holds. [Stock review](STOCK_REVIEW.md) records exact-first sourcing and the TI carrier-only decision. Prices/stock are dated indexed snapshots, not live reservations.',
+    '', '## Needs owner decision', '', '| Row | MPN / purpose | Reason |', '|---|---|---|']
+for r in close['needs_owner_decision']:
+    summary_lines.append('| '+' | '.join(esc(v) for v in [r['row_id'],r['mpn'] if r['mpn']!='OPEN' else r['refdes'],r['reason']])+' |')
+summary_lines += ['', '**CALCULATED force-link screen:** [30×15×2 mm C110 strap](FORCE_LINK_DRAWING.md), 20 mm M4 pitch, conditional 8 A / 20 K rise at 40°C ambient; contact and pulse qualifications remain OPEN. No verified catalog equivalent.',
+    '', '## Validation and handback', '',
+    'Run `python3 -B docs/evidence/r2/bom_order/validate.py` and `python3 -B -m unittest discover -s tests -p test_bom_order.py -v`. [VALIDATION.json](VALIDATION.json) records document/evidence checks; [CLOSE_EXECUTION.md](CLOSE_EXECUTION.md) records execution and Git limitations. No electrical-release claim follows from these checks. The captured source BOM and all hardware remain unchanged; ERC/DRC were not rerun. R2 remains blocked; no later gate is advanced.']
+(EVIDENCE/'CLOSE_SUMMARY.md').write_text('\n'.join(summary_lines)+'\n')
+
 lines=[f'''# V1A R2 order BOM — three boards plus spares
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
 **STATUS: BLOCKED for a complete order.** The procurement register is synchronized and every unavailable or unverified commercial field is marked **OPEN**. It is not a claim that all parts can be purchased today or that the R2 design is electrically released. No purchase, cart, quote request, CAD edit, merge or push was made.
+
+**CONFIRMED close review — 2026-10-04:** deduplicated OPEN order rows **{close['open_before']} → {close['open_after']}**. Closed: {', '.join(close['closed_row_ids'])}; newly OPEN: {', '.join(close['newly_open_row_ids'])} (additional EOL evidence). [Close summary and Needs owner decision](bom_order/CLOSE_SUMMARY.md) defines the count. Three reviewed order alternates are selected; their original `captured_mpn`, values, references and footprints are retained. Other proposed alternates remain excluded. This is procurement-document closure only.
 
 **EVIDENCE — 2026-10-03:** KiCad {META['kicad_version']} BOM export from a detached `/tmp` copy of [`origin/feat/r2-testboard-capture` at `{META['source_commit'][:7]}`]({NATIVE_URL}hardware/kicad/V1A.kicad_sch). The resumed fetch advances the recorded source from `6d25cf2` to the current branch tip (PCB preparation and documentation only). All six schematic hashes are unchanged and the fresh export has identical SHA-256 `{META['export_sha256']}`. The source contains **366 references: 298 catalog components across 96 MPNs, seven custom links, and 61 etched PCB features**. Power flags are excluded by KiCad; the exported physical references have no DNP marks. Manufacturer fields are blank in the export; names come from the existing selection register and exact catalog identities, never invented schematic fields.
 
@@ -271,6 +331,8 @@ lines=[f'''# V1A R2 order BOM — three boards plus spares
 **EVIDENCE LIMIT:** website/index snapshots, not live reservations or firm quotes. Each stock/price offer is one coherent retrieved snapshot; an independently linked SKU/alias identity source is identified when needed; stock and price are not stitched from unrelated pages. Prefer complete exact-SKU evidence, then the more recent crawl. Pages with another manufacturer's same-number component, unmatched suffixes or unverified marketplace supply do not become selected offers. OPEN does not mean zero stock or EOL. Lifecycle is labeled by channel; channel withdrawal is not manufacturer EOL. Shipping, tax, duty, tariffs, reeling, assembly, PCB, custom fabrication and external test equipment are excluded from numeric subtotals. Reconfirm published prices, quantities and stock before ordering.
 
 ## JP201 / JP501 and U316 dispositions
+
+The completed [force-link make-or-quote drawing](bom_order/FORCE_LINK_DRAWING.md) records all seven net interfaces, proposed manufacturing details and reproducible conditional current calculations. Fabricator, joint/thermal qualification and exact hardware codes remain OPEN.
 
 **DECISION — identities closed:** JP201 and JP501 both resolve to **CUSTOM-FX-CU-01 RevA**, as do JP101, JP202, JP301, JP330 and JP331. This is an authored removable force-link drawing, **not a distributor MPN**. Catalog MPN is N/A; qualified fabricator, purchased stock/subpart MPNs and price remain OPEN. [Captured pin review]({NATIVE_URL}docs/evidence/r2/gate4b/PIN_REVIEW.md) and [Sheet05 review]({NATIVE_URL}docs/evidence/r2/gate4b/SHEET05_REVIEW.md) establish the exact interfaces. No 2.54 mm shunt is substituted.
 
@@ -312,24 +374,24 @@ for d in CHANNELS:
     for r in rows:
         url=r[d+'_source_url'];sku=r[d+'_part_number'];label=f'[{sku}]({url})' if url.startswith('https://') else sku
         lines.append('| '+' | '.join(esc(v) for v in [r['row_id'],label,r[d+'_qty_to_order'],r[d+'_unit_price_usd'],r[d+'_extended_usd'],r[d+'_stock'],r[d+'_lead_time'],r[d+'_lifecycle']])+' |')
-lines += ['\n## Alternate disposition register\n','Different-MPN candidates are excluded from order quantities and totals and need engineering approval. SAME-MPN entries are alternate supplier routes for the existing quantities; do not order twice. Backorder/OPEN-stock routes do not solve an immediate stock shortage. SINGLE-OBSERVED means only one channel in the retrieved evidence showed stock, not proof of an exclusive manufacturer or distributor. OPEN replacements remain unresolved procurement actions.\n','| ID | Selected MPN | Alternate / manufacturer | Evidence | Disposition |','|---|---|---|---|---|']
+lines += ['\n## Alternate disposition register\n','Only the three CONFIRMED order alternates in CLOSE_SUMMARY.md are selected in quantities/totals. Other different-MPN candidates remain excluded and require owner review. SAME-MPN entries are alternate supplier routes for the existing quantities; do not order twice. Backorder/OPEN-stock routes do not solve an immediate stock shortage. SINGLE-OBSERVED means only one channel in the retrieved evidence showed stock, not proof of an exclusive manufacturer or distributor. OPEN replacements remain unresolved procurement actions.\n','| ID | Selected MPN | Alternate / manufacturer | Evidence | Disposition |','|---|---|---|---|---|']
 for r in rows:
     if r['scope']=='PCB feature':continue
-    url=r['alternate_source'];link=f'[source]({url})' if url.startswith('https://') else 'OPEN'
+    url=r['alternate_source'];link=f'[source]({url})' if url.startswith(('https://', 'bom_order/')) else 'OPEN'
     lines.append('| '+' | '.join(esc(v) for v in [r['row_id'],r['mpn'],r['alternate_mpn']+' / '+r['alternate_manufacturer'],link,r['alternate_status']])+' |')
 lines += ['''
 ## LCSC upload and validation
 
-[BOM_ORDER_LCSC.csv](BOM_ORDER_LCSC.csv) is a **local LCSC-upload-style candidate subset**, with LCSC part number, quantity, manufacturer part number and designators. It includes only catalog-board lines with a verified SKU, published order-quantity price, known multiple, enough observed stock, no reported NRND/EOL and no unresolved exact-order code. Confirmed U316 is included when those commercial criteria pass. The other lines remain in the main CSV. Upload compatibility has not been tested against an account; no upload, cart or purchase was performed. This file is not a complete board BOM or an order authorization.
+[BOM_ORDER_LCSC.csv](BOM_ORDER_LCSC.csv) is a **local LCSC-upload-style candidate subset**, with LCSC part number, quantity, manufacturer part number and designators. It includes only catalog-board lines with a verified SKU, published order-quantity price, known multiple, enough observed stock, no reported NRND/EOL, unresolved exact-order code or owner hold. B003 is now excluded by newly recorded EOL evidence; unselected candidates cannot inherit the original part's LCSC SKU. Confirmed U316 is included when those commercial criteria pass. The other lines remain in the main CSV. Upload compatibility has not been tested against an account; no upload, cart or purchase was performed. This file is not a complete board BOM or an order authorization.
 
-[VALIDATION.json](bom_order/VALIDATION.json) checks source coverage, uniqueness, source hash, three-board/spare arithmetic, supplier rounding, exact selected MPNs, confirmed U316 identity and inclusion, CSV/Markdown prices and exact upload membership. No ERC or DRC rerun is claimed: native KiCad files were read-only. This procurement subtask does not close R2 or advance to R3/R4/R5. Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`.
+[VALIDATION.json](bom_order/VALIDATION.json) checks source coverage, uniqueness, source hash, three-board/spare arithmetic, supplier rounding, captured identities and reviewed alternate scope/bias evidence, unchanged hardware hashes, OPEN counts, confirmed U316 identity and inclusion, CSV/Markdown prices and exact upload membership. No ERC or DRC rerun is claimed: native KiCad files were read-only. This procurement subtask does not close R2 or advance to R3/R4/R5. Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`.
 
 Catalog facts and third-party provenance are isolated in [third_party/bom_order](../../../third_party/bom_order/README.md). The [resume review](bom_order/RESUME_REVIEW.md) records the refreshed source, supplier additions, remaining actions and evidence limits. Referenced designs/documents were not modified or copied into CAD. Validate the regenerated files with `python3 -B docs/evidence/r2/bom_order/validate.py`.
 ''']
 (OUT/'BOM_ORDER.md').write_text('\n'.join(lines))
 upload=[]
 for r in rows:
-    if r['scope']=='Catalog board' and r['lcsc_part_number']!='OPEN' and r['lcsc_unit_price_usd']!='OPEN' and isinstance(r['lcsc_order_multiple'],int) and isinstance(r['lcsc_stock'],int) and r['lcsc_stock']>=r['lcsc_qty_to_order'] and not any(s in r['flags'] for s in ['NRND/EOL','EXACT-ORDER']):
+    if r['scope']=='Catalog board' and r['lcsc_part_number']!='OPEN' and r['lcsc_unit_price_usd']!='OPEN' and isinstance(r['lcsc_order_multiple'],int) and isinstance(r['lcsc_stock'],int) and r['lcsc_stock']>=r['lcsc_qty_to_order'] and not any(s in r['flags'] for s in ['NRND/EOL','EXACT-ORDER','OWNER-HOLD']):
         upload.append({'LCSC Part Number':r['lcsc_part_number'],'Quantity':r['lcsc_qty_to_order'],'Manufacturer Part Number':r['mpn'],'Designator':r['refdes']})
 with (OUT/'BOM_ORDER_LCSC.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,fieldnames=['LCSC Part Number','Quantity','Manufacturer Part Number','Designator'],lineterminator='\n');w.writeheader();w.writerows(upload)

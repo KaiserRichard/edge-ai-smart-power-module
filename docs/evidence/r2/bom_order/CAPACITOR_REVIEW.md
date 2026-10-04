@@ -46,14 +46,13 @@ All values below **CALCULATED**, µF (33 pF = 0.000033 µF). Voltage assumptions
 | C401 | 0.01 | 0.1008059 | 0.1023998 | 1.0158 |
 | C401 | 0.16384 | 0.1007949 | 0.1023974 | 1.0159 |
 | C201, C202 | 9 | OPEN | OPEN | OPEN |
-| C201, C202, C352 | 26 | OPEN | OPEN | OPEN |
+| C201, C202 | 26 | OPEN | OPEN | OPEN |
 | C201, C202 | 30 | OPEN | OPEN | OPEN |
-| C305, C602 | 5.05832 | OPEN | OPEN | OPEN |
-| C306, C377, C601, C660 | 12 | OPEN | OPEN | OPEN |
-| C306, C377, C601, C660 | 12.311325 | OPEN | OPEN | OPEN |
-| C306, C377, C601, C660 | 12.593099 | OPEN | OPEN | OPEN |
-| C352 | 30.788889 | OPEN | OPEN | OPEN |
-| C352 | 35 | OPEN | OPEN | OPEN |
+| C305, C601 | 5.05832 | OPEN | OPEN | OPEN |
+| C306, C352, C377, C602, C660 | 12 | OPEN | OPEN | OPEN |
+| C306, C352, C377, C602, C660 | 12.311325 | OPEN | OPEN | OPEN |
+| C306, C352, C377, C602, C660 | 12.593099 | OPEN | OPEN | OPEN |
+| C601 | 5.183488 | OPEN | OPEN | OPEN |
 | C206 | 3.3 | 1.036539 | 1.011822 | 0.9762 |
 | C301, C309, C365, C367, C374, C375, C600 | 12 | 0.8521483 | 0.8369003 | 0.9821 |
 | C301 | 14 | 0.7887712 | 0.7804736 | 0.9895 |
@@ -90,3 +89,11 @@ The bias-screen CONFIRMED status above is distinct from order acceptance. Only B
 - **GRM188R71H104KA93D → GRM188R72A104KA35D: OPEN.** C103 sets input DVDT/startup; C401 sets telemetry filter timing. Different bias behavior needs owner timing review before a grouped-row substitution.
 - **GRM21BR71E105KA99L → GCM21BR71E105KA56L: OPEN.** C374 sets HOLD_SLEW_C timing and >=0.5 uF requirement; changing its bias curve needs owner timing review.
 - **GRM1885C1H330JA01D → GRM1885C2E330JW07D: OPEN.** C357 is LTC3115 feedforward compensation; loop/timing qualification is not established by nominal C0G and bias matching.
+
+## Resume check — 2026-10-04
+
+**CONFIRMED:** all seven flagged capacitor MPNs have a disposition. Five candidates pass the typical-bias screen; only B007/B008 are accepted for order selection. Missing original curves at B001/B003 and timing holds at B002/B004/B013 remain **OPEN**. The manufacturer data already collected are reused.
+
+**CALCULATED / ASSUMED correction:** C352 is on AUX_12V (use the same 12/12.311325/12.593099 V screens as C377), C601 is on SAFE5 (5.05832 V nominal / 5.183488 V static upper), and C602 is on SAFE_IN (auxiliary-rail upper screens with diode/resistor drops omitted). The previous draft applied AUX_LIMITED, driver, and SAFE5 voltages respectively to those three references. Their Ceff remains **OPEN**. Prior values are retained in `voltage_correction_history` in the decision JSON.
+
+**EVIDENCE:** [captured netlist](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/4af7818511076cbbd336880607d262fc311d01bc/docs/evidence/r3/layout_prep/resume/fresh.xml), [FREEZE_TABLE S03-13](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md), and [FIX3_INTERLOCK regulator/reservoir and updated numerical screens](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md), read locally from pinned Git objects on 2026-10-04. No new electrical requirement is inferred.

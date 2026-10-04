@@ -44,7 +44,7 @@
         },
         "dc_voltage_v": 9,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -58,7 +58,7 @@
         },
         "dc_voltage_v": 26,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -72,7 +72,7 @@
         },
         "dc_voltage_v": 58.1,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -86,7 +86,7 @@
         },
         "dc_voltage_v": 9,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -100,7 +100,7 @@
         },
         "dc_voltage_v": 26,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -114,7 +114,7 @@
         },
         "dc_voltage_v": 58.1,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -128,7 +128,7 @@
         },
         "dc_voltage_v": 9,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -142,7 +142,7 @@
         },
         "dc_voltage_v": 26,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -156,7 +156,7 @@
         },
         "dc_voltage_v": 58.1,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9–26 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md ; https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: 9\u201326 V normal; 58.1 V aux-only transient screen, not a DC operating guarantee",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -175,20 +175,20 @@
     "source_url": "https://ds.murata.co.jp/simsurfing/mlcc.html",
     "access_date": "2026-10-04",
     "original_specs": {
-      "L": "1.6±0.1",
-      "W": "0.8±0.1",
+      "L": "1.6\u00b10.1",
+      "W": "0.8\u00b10.1",
       "size_thickness_max": "0.9",
       "tempchar": "X7R",
       "rvol": "50",
-      "tolerance": "±10%"
+      "tolerance": "\u00b110%"
     },
     "alternate_specs": {
-      "L": "1.6±0.1",
-      "W": "0.8±0.1",
+      "L": "1.6\u00b10.1",
+      "W": "0.8\u00b10.1",
       "size_thickness_max": "0.9",
       "tempchar": "X7R",
       "rvol": "100",
-      "tolerance": "±10%",
+      "tolerance": "\u00b110%",
       "production_status_en-us": "B"
     },
     "original_mpn": "GRM188R71H104KA93D",
@@ -279,7 +279,7 @@
         },
         "dc_voltage_v": 9,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9–26 V normal; 30 V abnormal source ceiling",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9\u201326 V normal; 30 V abnormal source ceiling",
         "original_ceff_uf": 0.09912321702792498,
         "alternate_ceff_uf": 0.09846682364468116,
         "ratio": 0.9933780056486776,
@@ -293,7 +293,7 @@
         },
         "dc_voltage_v": 26,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9–26 V normal; 30 V abnormal source ceiling",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9\u201326 V normal; 30 V abnormal source ceiling",
         "original_ceff_uf": 0.0827794033898166,
         "alternate_ceff_uf": 0.07932327090005768,
         "ratio": 0.9582488838016429,
@@ -307,7 +307,7 @@
         },
         "dc_voltage_v": 30,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9–26 V normal; 30 V abnormal source ceiling",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9\u201326 V normal; 30 V abnormal source ceiling",
         "original_ceff_uf": 0.07713456244832216,
         "alternate_ceff_uf": 0.07377110983570177,
         "ratio": 0.9563949997788113,
@@ -321,7 +321,7 @@
         },
         "dc_voltage_v": 9,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9–26 V normal; 30 V abnormal source ceiling",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9\u201326 V normal; 30 V abnormal source ceiling",
         "original_ceff_uf": 0.09912321702792498,
         "alternate_ceff_uf": 0.09846682364468116,
         "ratio": 0.9933780056486776,
@@ -335,7 +335,7 @@
         },
         "dc_voltage_v": 26,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9–26 V normal; 30 V abnormal source ceiling",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9\u201326 V normal; 30 V abnormal source ceiling",
         "original_ceff_uf": 0.0827794033898166,
         "alternate_ceff_uf": 0.07932327090005768,
         "ratio": 0.9582488838016429,
@@ -349,7 +349,7 @@
         },
         "dc_voltage_v": 30,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9–26 V normal; 30 V abnormal source ceiling",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: input 9\u201326 V normal; 30 V abnormal source ceiling",
         "original_ceff_uf": 0.07713456244832216,
         "alternate_ceff_uf": 0.07377110983570177,
         "ratio": 0.9563949997788113,
@@ -671,7 +671,7 @@
         },
         "dc_voltage_v": 0.01,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md S04-01: 2mohm shunt ×5A=10mV; INA228 full +/-163.84mV differential screen (not common-mode voltage)",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md S04-01: 2mohm shunt \u00d75A=10mV; INA228 full +/-163.84mV differential screen (not common-mode voltage)",
         "original_ceff_uf": 0.10080594885884013,
         "alternate_ceff_uf": 0.10239983826938581,
         "ratio": 1.0158114618094378,
@@ -685,7 +685,7 @@
         },
         "dc_voltage_v": 0.16384,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md S04-01: 2mohm shunt ×5A=10mV; INA228 full +/-163.84mV differential screen (not common-mode voltage)",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md S04-01: 2mohm shunt \u00d75A=10mV; INA228 full +/-163.84mV differential screen (not common-mode voltage)",
         "original_ceff_uf": 0.10079490610323665,
         "alternate_ceff_uf": 0.10239735020561712,
         "ratio": 1.0158980663242962,
@@ -1262,9 +1262,9 @@
           "1": "/03_OUTPUT_PROTECTION/AUX_12V",
           "2": "/GND"
         },
-        "dc_voltage_v": 26,
+        "dc_voltage_v": 12,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: AUX_LIMITED normal and clamp target",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md S03-13: C352 is AUX_12V output, paired with C377; 12 V nominal screen and earlier/final static upper screens, not AUX_LIMITED.",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -1276,9 +1276,9 @@
           "1": "/03_OUTPUT_PROTECTION/AUX_12V",
           "2": "/GND"
         },
-        "dc_voltage_v": 30.788889,
+        "dc_voltage_v": 12.311325,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: AUX_LIMITED normal and clamp target",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md S03-13: C352 is AUX_12V output, paired with C377; 12 V nominal screen and earlier/final static upper screens, not AUX_LIMITED.",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -1290,9 +1290,9 @@
           "1": "/03_OUTPUT_PROTECTION/AUX_12V",
           "2": "/GND"
         },
-        "dc_voltage_v": 35,
+        "dc_voltage_v": 12.593099,
         "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: AUX_LIMITED normal and clamp target",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FREEZE_TABLE.md S03-13: C352 is AUX_12V output, paired with C377; 12 V nominal screen and earlier/final static upper screens, not AUX_LIMITED.",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -1346,9 +1346,9 @@
           "1": "/03_OUTPUT_PROTECTION/SAFE5",
           "2": "/GND"
         },
-        "dc_voltage_v": 12,
-        "voltage_label": "ASSUMED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: driver/auxiliary rails; diode drops omitted",
+        "dc_voltage_v": 5.05832,
+        "voltage_label": "CALCULATED",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md: C601 is SAFE5 LDO output; nominal 5.05832 V and 5.183488 V static upper screen.",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -1360,23 +1360,9 @@
           "1": "/03_OUTPUT_PROTECTION/SAFE5",
           "2": "/GND"
         },
-        "dc_voltage_v": 12.311325,
-        "voltage_label": "ASSUMED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: driver/auxiliary rails; diode drops omitted",
-        "original_ceff_uf": "OPEN",
-        "alternate_ceff_uf": "OPEN",
-        "ratio": "OPEN",
-        "status": "OPEN"
-      },
-      {
-        "refdes": "C601",
-        "nets": {
-          "1": "/03_OUTPUT_PROTECTION/SAFE5",
-          "2": "/GND"
-        },
-        "dc_voltage_v": 12.593099,
-        "voltage_label": "ASSUMED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: driver/auxiliary rails; diode drops omitted",
+        "dc_voltage_v": 5.183488,
+        "voltage_label": "CALCULATED",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md: C601 is SAFE5 LDO output; nominal 5.05832 V and 5.183488 V static upper screen.",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -1388,9 +1374,37 @@
           "1": "/03_OUTPUT_PROTECTION/SAFE_IN",
           "2": "/GND"
         },
-        "dc_voltage_v": 5.05832,
-        "voltage_label": "CALCULATED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md: DET5/SAFE5 nominal",
+        "dc_voltage_v": 12,
+        "voltage_label": "ASSUMED",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md: C602 is SAFE_IN upstream of U600, fed from DRV_HOLD through D600/R602. ASSUMED conservative auxiliary-rail upper screen omits positive diode/resistor drops; actual loaded voltage varies.",
+        "original_ceff_uf": "OPEN",
+        "alternate_ceff_uf": "OPEN",
+        "ratio": "OPEN",
+        "status": "OPEN"
+      },
+      {
+        "refdes": "C602",
+        "nets": {
+          "1": "/03_OUTPUT_PROTECTION/SAFE_IN",
+          "2": "/GND"
+        },
+        "dc_voltage_v": 12.311325,
+        "voltage_label": "ASSUMED",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md: C602 is SAFE_IN upstream of U600, fed from DRV_HOLD through D600/R602. ASSUMED conservative auxiliary-rail upper screen omits positive diode/resistor drops; actual loaded voltage varies.",
+        "original_ceff_uf": "OPEN",
+        "alternate_ceff_uf": "OPEN",
+        "ratio": "OPEN",
+        "status": "OPEN"
+      },
+      {
+        "refdes": "C602",
+        "nets": {
+          "1": "/03_OUTPUT_PROTECTION/SAFE_IN",
+          "2": "/GND"
+        },
+        "dc_voltage_v": 12.593099,
+        "voltage_label": "ASSUMED",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md: C602 is SAFE_IN upstream of U600, fed from DRV_HOLD through D600/R602. ASSUMED conservative auxiliary-rail upper screen omits positive diode/resistor drops; actual loaded voltage varies.",
         "original_ceff_uf": "OPEN",
         "alternate_ceff_uf": "OPEN",
         "ratio": "OPEN",
@@ -1440,7 +1454,112 @@
       }
     ],
     "order_accepted": false,
-    "owner_hold": "OPEN: OPEN: original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute."
+    "owner_hold": "OPEN: OPEN: original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute.",
+    "voltage_correction_history": {
+      "access_date": "2026-10-04",
+      "supersedes_commit": "809b39a",
+      "reason": "Correct three net-to-voltage mismatches against captured netlist and pinned freeze documents; preserve prior observations below. No capacitance closure or CAD change.",
+      "previous_bias_tests": [
+        {
+          "refdes": "C352",
+          "nets": {
+            "1": "/03_OUTPUT_PROTECTION/AUX_12V",
+            "2": "/GND"
+          },
+          "dc_voltage_v": 26,
+          "voltage_label": "CALCULATED",
+          "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: AUX_LIMITED normal and clamp target",
+          "original_ceff_uf": "OPEN",
+          "alternate_ceff_uf": "OPEN",
+          "ratio": "OPEN",
+          "status": "OPEN"
+        },
+        {
+          "refdes": "C352",
+          "nets": {
+            "1": "/03_OUTPUT_PROTECTION/AUX_12V",
+            "2": "/GND"
+          },
+          "dc_voltage_v": 30.788889,
+          "voltage_label": "CALCULATED",
+          "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: AUX_LIMITED normal and clamp target",
+          "original_ceff_uf": "OPEN",
+          "alternate_ceff_uf": "OPEN",
+          "ratio": "OPEN",
+          "status": "OPEN"
+        },
+        {
+          "refdes": "C352",
+          "nets": {
+            "1": "/03_OUTPUT_PROTECTION/AUX_12V",
+            "2": "/GND"
+          },
+          "dc_voltage_v": 35,
+          "voltage_label": "CALCULATED",
+          "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: AUX_LIMITED normal and clamp target",
+          "original_ceff_uf": "OPEN",
+          "alternate_ceff_uf": "OPEN",
+          "ratio": "OPEN",
+          "status": "OPEN"
+        },
+        {
+          "refdes": "C601",
+          "nets": {
+            "1": "/03_OUTPUT_PROTECTION/SAFE5",
+            "2": "/GND"
+          },
+          "dc_voltage_v": 12,
+          "voltage_label": "ASSUMED",
+          "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: driver/auxiliary rails; diode drops omitted",
+          "original_ceff_uf": "OPEN",
+          "alternate_ceff_uf": "OPEN",
+          "ratio": "OPEN",
+          "status": "OPEN"
+        },
+        {
+          "refdes": "C601",
+          "nets": {
+            "1": "/03_OUTPUT_PROTECTION/SAFE5",
+            "2": "/GND"
+          },
+          "dc_voltage_v": 12.311325,
+          "voltage_label": "ASSUMED",
+          "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: driver/auxiliary rails; diode drops omitted",
+          "original_ceff_uf": "OPEN",
+          "alternate_ceff_uf": "OPEN",
+          "ratio": "OPEN",
+          "status": "OPEN"
+        },
+        {
+          "refdes": "C601",
+          "nets": {
+            "1": "/03_OUTPUT_PROTECTION/SAFE5",
+            "2": "/GND"
+          },
+          "dc_voltage_v": 12.593099,
+          "voltage_label": "ASSUMED",
+          "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/AUX_BRANCH_FIX.md: driver/auxiliary rails; diode drops omitted",
+          "original_ceff_uf": "OPEN",
+          "alternate_ceff_uf": "OPEN",
+          "ratio": "OPEN",
+          "status": "OPEN"
+        },
+        {
+          "refdes": "C602",
+          "nets": {
+            "1": "/03_OUTPUT_PROTECTION/SAFE_IN",
+            "2": "/GND"
+          },
+          "dc_voltage_v": 5.05832,
+          "voltage_label": "CALCULATED",
+          "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_INTERLOCK.md: DET5/SAFE5 nominal",
+          "original_ceff_uf": "OPEN",
+          "alternate_ceff_uf": "OPEN",
+          "ratio": "OPEN",
+          "status": "OPEN"
+        }
+      ]
+    }
   },
   "GRM21BR71E105KA99L": {
     "mpn": "GCM21BR71E105KA56L",
@@ -1451,20 +1570,20 @@
     "source_url": "https://ds.murata.co.jp/simsurfing/mlcc.html",
     "access_date": "2026-10-04",
     "original_specs": {
-      "L": "2±0.15",
-      "W": "1.25±0.15",
+      "L": "2\u00b10.15",
+      "W": "1.25\u00b10.15",
       "size_thickness_max": "1.4",
       "tempchar": "X7R",
       "rvol": "25",
-      "tolerance": "±10%"
+      "tolerance": "\u00b110%"
     },
     "alternate_specs": {
-      "L": "2±0.15",
-      "W": "1.25±0.15",
+      "L": "2\u00b10.15",
+      "W": "1.25\u00b10.15",
       "size_thickness_max": "1.4",
       "tempchar": "X7R",
       "rvol": "25",
-      "tolerance": "±10%",
+      "tolerance": "\u00b110%",
       "production_status_en-us": "B"
     },
     "original_mpn": "GRM21BR71E105KA99L",
@@ -1506,7 +1625,7 @@
         },
         "dc_voltage_v": 12,
         "voltage_label": "ASSUMED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: floating BST–TS differential; 14 V discharge/qualification allocation, not BST-to-GND",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: floating BST\u2013TS differential; 14 V discharge/qualification allocation, not BST-to-GND",
         "original_ceff_uf": 0.8521482969902592,
         "alternate_ceff_uf": 0.8369003279892869,
         "ratio": 0.9821064372776109,
@@ -1520,7 +1639,7 @@
         },
         "dc_voltage_v": 14,
         "voltage_label": "ASSUMED",
-        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: floating BST–TS differential; 14 V discharge/qualification allocation, not BST-to-GND",
+        "voltage_basis": "https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md: floating BST\u2013TS differential; 14 V discharge/qualification allocation, not BST-to-GND",
         "original_ceff_uf": 0.7887711910316555,
         "alternate_ceff_uf": 0.7804735862785067,
         "ratio": 0.9894803399927726,
@@ -1777,20 +1896,20 @@
     "source_url": "https://ds.murata.co.jp/simsurfing/mlcc.html",
     "access_date": "2026-10-04",
     "original_specs": {
-      "L": "2±0.15",
-      "W": "1.25±0.15",
+      "L": "2\u00b10.15",
+      "W": "1.25\u00b10.15",
       "size_thickness_max": "1.4",
       "tempchar": "X7R",
       "rvol": "25",
-      "tolerance": "±10%"
+      "tolerance": "\u00b110%"
     },
     "alternate_specs": {
-      "L": "2±0.2",
-      "W": "1.25±0.2",
+      "L": "2\u00b10.2",
+      "W": "1.25\u00b10.2",
       "size_thickness_max": "1.45",
       "tempchar": "X7R",
       "rvol": "25",
-      "tolerance": "±10%",
+      "tolerance": "\u00b110%",
       "production_status_en-us": "B"
     },
     "original_mpn": "GRM21BR71E475KA73L",
@@ -1903,20 +2022,20 @@
     "source_url": "https://ds.murata.co.jp/simsurfing/mlcc.html",
     "access_date": "2026-10-04",
     "original_specs": {
-      "L": "2±0.1",
-      "W": "1.25±0.1",
+      "L": "2\u00b10.1",
+      "W": "1.25\u00b10.1",
       "size_thickness_max": "1.35",
       "tempchar": "X7R",
       "rvol": "50",
-      "tolerance": "±10%"
+      "tolerance": "\u00b110%"
     },
     "alternate_specs": {
-      "L": "2±0.15",
-      "W": "1.25±0.15",
+      "L": "2\u00b10.15",
+      "W": "1.25\u00b10.15",
       "size_thickness_max": "1.4",
       "tempchar": "X7R",
       "rvol": "50",
-      "tolerance": "±10%",
+      "tolerance": "\u00b110%",
       "production_status_en-us": "B"
     },
     "original_mpn": "GRM21BR71H105KA12L",
@@ -2013,20 +2132,20 @@
     "source_url": "https://ds.murata.co.jp/simsurfing/mlcc.html",
     "access_date": "2026-10-04",
     "original_specs": {
-      "L": "1.6±0.1",
-      "W": "0.8±0.1",
+      "L": "1.6\u00b10.1",
+      "W": "0.8\u00b10.1",
       "size_thickness_max": "0.9",
       "tempchar": "C0G",
       "rvol": "50",
-      "tolerance": "±5%"
+      "tolerance": "\u00b15%"
     },
     "alternate_specs": {
-      "L": "1.6±0.1",
-      "W": "0.8±0.1",
+      "L": "1.6\u00b10.1",
+      "W": "0.8\u00b10.1",
       "size_thickness_max": "0.9",
       "tempchar": "C0G",
       "rvol": "250",
-      "tolerance": "±5%",
+      "tolerance": "\u00b15%",
       "production_status_en-us": "B"
     },
     "original_mpn": "GRM1885C1H330JA01D",

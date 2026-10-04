@@ -4,6 +4,8 @@
 
 **STATUS: BLOCKED for a complete order.** The procurement register is synchronized and every unavailable or unverified commercial field is marked **OPEN**. It is not a claim that all parts can be purchased today or that the R2 design is electrically released. No purchase, cart, quote request, CAD edit, merge or push was made.
 
+**CONFIRMED close review — 2026-10-04:** deduplicated OPEN order rows **27 → 24**. Closed: B007, B008, B033, B085; newly OPEN: B003 (additional EOL evidence). [Close summary and Needs owner decision](bom_order/CLOSE_SUMMARY.md) defines the count. Three reviewed order alternates are selected; their original `captured_mpn`, values, references and footprints are retained. Other proposed alternates remain excluded. This is procurement-document closure only.
+
 **EVIDENCE — 2026-10-03:** KiCad 9.0.6 BOM export from a detached `/tmp` copy of [`origin/feat/r2-testboard-capture` at `56e9837`](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/56e9837e522c01bd680aca602f9f471d38d6039f/hardware/kicad/V1A.kicad_sch). The resumed fetch advances the recorded source from `6d25cf2` to the current branch tip (PCB preparation and documentation only). All six schematic hashes are unchanged and the fresh export has identical SHA-256 `b2e57ccf9cfd4251d297d6e2bb6b422f2bfc0aead7b5d0fec14f03fad456acae`. The source contains **366 references: 298 catalog components across 96 MPNs, seven custom links, and 61 etched PCB features**. Power flags are excluded by KiCad; the exported physical references have no DNP marks. Manufacturer fields are blank in the export; names come from the existing selection register and exact catalog identities, never invented schematic fields.
 
 [BOM_ORDER.csv](BOM_ORDER.csv) contains every reference, footprint, quantity, supplier SKU, supplier-specific order quantity, USD unit/extended price, stock, lead time, lifecycle, source URL, observation date, crawl age and alternate disposition. [SOURCE_BOM.csv](bom_order/SOURCE_BOM.csv), [PROVENANCE.json](bom_order/PROVENANCE.json), [RECONCILIATION.json](bom_order/RECONCILIATION.json) and [TOTALS.json](bom_order/TOTALS.json) make the arithmetic and synchronization reviewable. Historical BOM_DRAFT files are preserved.
@@ -17,6 +19,8 @@
 **EVIDENCE LIMIT:** website/index snapshots, not live reservations or firm quotes. Each stock/price offer is one coherent retrieved snapshot; an independently linked SKU/alias identity source is identified when needed; stock and price are not stitched from unrelated pages. Prefer complete exact-SKU evidence, then the more recent crawl. Pages with another manufacturer's same-number component, unmatched suffixes or unverified marketplace supply do not become selected offers. OPEN does not mean zero stock or EOL. Lifecycle is labeled by channel; channel withdrawal is not manufacturer EOL. Shipping, tax, duty, tariffs, reeling, assembly, PCB, custom fabrication and external test equipment are excluded from numeric subtotals. Reconfirm published prices, quantities and stock before ordering.
 
 ## JP201 / JP501 and U316 dispositions
+
+The completed [force-link make-or-quote drawing](bom_order/FORCE_LINK_DRAWING.md) records all seven net interfaces, proposed manufacturing details and reproducible conditional current calculations. Fabricator, joint/thermal qualification and exact hardware codes remain OPEN.
 
 **DECISION — identities closed:** JP201 and JP501 both resolve to **CUSTOM-FX-CU-01 RevA**, as do JP101, JP202, JP301, JP330 and JP331. This is an authored removable force-link drawing, **not a distributor MPN**. Catalog MPN is N/A; qualified fabricator, purchased stock/subpart MPNs and price remain OPEN. [Captured pin review](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/56e9837e522c01bd680aca602f9f471d38d6039f/docs/evidence/r2/gate4b/PIN_REVIEW.md) and [Sheet05 review](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/56e9837e522c01bd680aca602f9f471d38d6039f/docs/evidence/r2/gate4b/SHEET05_REVIEW.md) establish the exact interfaces. No 2.54 mm shunt is substituted.
 
@@ -47,29 +51,29 @@ Each channel column is an alternative whole-build scenario. **Do not add the thr
 
 | Distributor | Complete catalog-board total | Known-price subtotal USD | Coverage | Stock-sufficient priced subtotal USD | Harness subtotal USD / coverage |
 |---|---|---:|---|---:|---|
-| lcsc | OPEN | 595.13 | 54/96 | 254.28 (42 lines) | 0.00 / 0/7; complete OPEN |
-| mouser | OPEN | 720.57 | 47/96 | 444.25 (33 lines) | 350.50 / 2/7; complete OPEN |
-| digikey | OPEN | 937.85 | 82/96 | 619.14 (63 lines) | 581.46 / 5/7; complete OPEN |
+| lcsc | OPEN | 576.48 | 51/96 | 251.81 (40 lines) | 0.00 / 0/7; complete OPEN |
+| mouser | OPEN | 787.34 | 51/96 | 507.14 (36 lines) | 350.50 / 2/7; complete OPEN |
+| digikey | OPEN | 947.68 | 83/96 | 621.06 (64 lines) | 581.46 / 5/7; complete OPEN |
 
 ## Parts and quantities
 
 | ID | Refdes / purpose | Per board | 3-board base | Spares | Planning order | MPN | Manufacturer | Flags |
 |---|---|---:|---:|---:|---|---|---|---|
-| B001 | C101, C102, C378 | 3 piece | 9 | 2 | 11 piece | GRM32ER72A105KA01L | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey) |
-| B002 | C103, C203, C204, C205, C303, C304, C308, C354, C355, C364, C368, C369, C370, C376, C380, C401, C402, C405, C406, C604, C609, C640, C642, C644, C647, C651, C710, C711, C712, C714, C715, C716, C717, C723, C728, C730, C731, C732, C733, C754, C756, C761, C762 | 43 piece | 129 | 13 | 142 piece | GRM188R71H104KA93D | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); SINGLE-OBSERVED(lcsc) |
-| B003 | C201, C202, C305, C306, C352, C377, C601, C602, C660 | 9 piece | 27 | 3 | 30 piece | GRM32ER71H106KA12L | Murata Electronics | OOS(digikey); CHANNEL-RESTRICTION(digikey); SINGLE-OBSERVED(lcsc) |
-| B004 | C206, C301, C309, C365, C367, C374, C375, C600 | 8 piece | 24 | 3 | 27 piece | GRM21BR71E105KA99L | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); SINGLE-OBSERVED(lcsc) |
+| B001 | C101, C102, C378 | 3 piece | 9 | 2 | 11 piece | GRM32ER72A105KA01L | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); OWNER-HOLD |
+| B002 | C103, C203, C204, C205, C303, C304, C308, C354, C355, C364, C368, C369, C370, C376, C380, C401, C402, C405, C406, C604, C609, C640, C642, C644, C647, C651, C710, C711, C712, C714, C715, C716, C717, C723, C728, C730, C731, C732, C733, C754, C756, C761, C762 | 43 piece | 129 | 13 | 142 piece | GRM188R71H104KA93D | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); SINGLE-OBSERVED(lcsc); OWNER-HOLD |
+| B003 | C201, C202, C305, C306, C352, C377, C601, C602, C660 | 9 piece | 27 | 3 | 30 piece | GRM32ER71H106KA12L | Murata Electronics | NRND/EOL(mouser); OOS(digikey); CHANNEL-RESTRICTION(digikey); SINGLE-OBSERVED(lcsc); OWNER-HOLD |
+| B004 | C206, C301, C309, C365, C367, C374, C375, C600 | 8 piece | 24 | 3 | 27 piece | GRM21BR71E105KA99L | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); SINGLE-OBSERVED(lcsc); OWNER-HOLD |
 | B005 | C207 | 1 piece | 3 | 2 | 5 piece | CGA3E2C0G1H220J080AA | TDK | No supply flag in retrieved evidence |
 | B006 | C209, C210, C211, C212, C213, C214, C404 | 7 piece | 21 | 3 | 24 piece | C5750X7R1H226M250KB | TDK | OOS(lcsc); OOS(digikey); SINGLE-OBSERVED(mouser) |
-| B007 | C302, C353, C366, C379 | 4 piece | 12 | 2 | 14 piece | GRM21BR71E475KA73L | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); SINGLE-OBSERVED(lcsc) |
-| B008 | C307, C403 | 2 piece | 6 | 2 | 8 piece | GRM21BR71H105KA12L | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); SINGLE-OBSERVED(lcsc) |
+| B007 | C302, C353, C366, C379 | 4 piece | 12 | 2 | 14 piece | GRM21BZ71E475KE15L | Murata Electronics | SINGLE-OBSERVED(mouser); REVIEWED-ORDER-ALTERNATE |
+| B008 | C307, C403 | 2 piece | 6 | 2 | 8 piece | GCM21BR71H105KA03L | Murata Electronics | SINGLE-OBSERVED(digikey); REVIEWED-ORDER-ALTERNATE |
 | B009 | C330, C331, C332, C333, C334, C335, C336, C337, C340, C341, C342, C343 | 12 piece | 36 | 4 | 40 piece | PCH1V471MCL1GS | Nichicon | NO-CONFIRMED-STOCK; NO-VERIFIED-PRICE |
 | B010 | C350, C603 | 2 piece | 6 | 2 | 8 piece | C1608C0G1H103J080AA | TDK | OOS(mouser); SINGLE-OBSERVED(digikey) |
 | B011 | C351 | 1 piece | 3 | 2 | 5 piece | C3216X7R1H475K160AB | TDK | NO-CONFIRMED-STOCK; NO-VERIFIED-PRICE; EXACT-ORDER-CODE-UNCONFIRMED |
 | B012 | C356 | 1 piece | 3 | 2 | 5 piece | C1608C0G1H102J080AA | TDK | OOS(mouser); SINGLE-OBSERVED(digikey) |
-| B013 | C357 | 1 piece | 3 | 2 | 5 piece | GRM1885C1H330JA01D | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey) |
+| B013 | C357 | 1 piece | 3 | 2 | 5 piece | GRM1885C1H330JA01D | Murata Electronics | NRND/EOL(mouser); NRND/EOL(digikey); OWNER-HOLD |
 | B014 | C358, C359 | 2 piece | 6 | 2 | 8 piece | EEU-FR1E221 | Panasonic | OOS(mouser); OOS(digikey); NO-CONFIRMED-STOCK |
-| B015 | D101 | 1 piece | 3 | 1 | 4 piece | SMCJ36CA | Littelfuse | OOS(digikey); NO-CONFIRMED-STOCK |
+| B015 | D101 | 1 piece | 3 | 1 | 4 piece | SMCJ36CA | Littelfuse | OOS(mouser); OOS(digikey); NO-CONFIRMED-STOCK |
 | B016 | D102, D330, D331 | 3 piece | 9 | 1 | 10 piece | STPS60H100CT | STMicroelectronics | No supply flag in retrieved evidence |
 | B017 | D301, D302, D322, D618, D619, D640, D641, D642, D643 | 9 piece | 27 | 3 | 30 piece | BAS116,215 | Nexperia | OOS(mouser); OOS(digikey); SINGLE-OBSERVED(lcsc) |
 | B018 | D303 | 1 piece | 3 | 1 | 4 piece | BAT46W-E3-08 | Vishay | OOS(mouser); SHORTFALL(digikey) |
@@ -87,7 +91,7 @@ Each channel column is an alternative whole-build scenario. **Do not add the thr
 | B030 | Q101 | 1 piece | 3 | 1 | 4 piece | CSD19537Q3 | Texas Instruments | SHORTFALL(mouser) |
 | B031 | Q102 | 1 piece | 3 | 1 | 4 piece | BSS138 | onsemi | No supply flag in retrieved evidence |
 | B032 | Q301, Q302 | 2 piece | 6 | 1 | 7 piece | BSC034N06NSATMA1 | Infineon Technologies | No supply flag in retrieved evidence |
-| B033 | Q303, Q330 | 2 piece | 6 | 1 | 7 piece | CSD18540Q5B | Texas Instruments | OOS(lcsc); OOS(mouser); OOS(digikey); NO-CONFIRMED-STOCK |
+| B033 | Q303, Q330 | 2 piece | 6 | 1 | 7 piece | CSD18540Q5BT | Texas Instruments | OOS(digikey); SINGLE-OBSERVED(mouser); REVIEWED-ORDER-ALTERNATE |
 | B034 | Q304 | 1 piece | 3 | 1 | 4 piece | 2N7002,215 | Nexperia | OOS(mouser); OOS(digikey); SINGLE-OBSERVED(lcsc) |
 | B035 | Q316 | 1 piece | 3 | 1 | 4 piece | FDB33N25TM | onsemi | No supply flag in retrieved evidence |
 | B036 | R101 | 1 piece | 3 | 2 | 5 piece | TNPW0603332KBEEA | Vishay | OOS(digikey); SINGLE-OBSERVED(mouser) |
@@ -139,7 +143,7 @@ Each channel column is an alternative whole-build scenario. **Do not add the thr
 | B082 | U301 | 1 piece | 3 | 1 | 4 piece | LTC7001IMSE#PBF | Analog Devices | OOS(digikey) |
 | B083 | U302 | 1 piece | 3 | 1 | 4 piece | REF5025IDGKR | Texas Instruments | No supply flag in retrieved evidence |
 | B084 | U303, U607, U640, U642 | 4 piece | 12 | 2 | 14 piece | TLV3201AIDBVR | Texas Instruments | OOS(mouser); OOS(digikey); SINGLE-OBSERVED(lcsc) |
-| B085 | U306, U600 | 2 piece | 6 | 1 | 7 piece | TPS7A1601DGNR | Texas Instruments | OOS(lcsc); OOS(digikey); NO-CONFIRMED-STOCK |
+| B085 | U306, U600 | 2 piece | 6 | 1 | 7 piece | TPS7A1601DGNR | Texas Instruments | OOS(lcsc); OOS(digikey); SINGLE-OBSERVED(mouser) |
 | B086 | U315, U330 | 2 piece | 6 | 1 | 7 piece | UCC27511DBVR | Texas Instruments | No supply flag in retrieved evidence |
 | B087 | U316 | 1 piece | 3 | 1 | 4 piece | LT4363HMS-1#PBF | Analog Devices | No supply flag in retrieved evidence |
 | B088 | U317 | 1 piece | 3 | 1 | 4 piece | LTC3115IFE-1#PBF | Analog Devices | SHORTFALL(lcsc) |
@@ -155,7 +159,7 @@ Each channel column is an alternative whole-build scenario. **Do not add the thr
 | B098 | U615 | 1 piece | 3 | 1 | 4 piece | SN74LVC1G32DBVR | Texas Instruments | OOS(digikey); SINGLE-OBSERVED(lcsc) |
 | B099 | U617, U623, U628, U630, U631, U632, U633 | 7 piece | 21 | 3 | 24 piece | SN74LVC1G08DBVR | Texas Instruments | No supply flag in retrieved evidence |
 | B100 | U662 | 1 piece | 3 | 1 | 4 piece | SN74LVC1G17DBVR | Texas Instruments | No supply flag in retrieved evidence |
-| H01 | J502 mating plug | 1 piece | 3 | 1 | 4 piece | 1777989 | Phoenix Contact | OOS(digikey); SINGLE-OBSERVED(mouser) |
+| H01 | J502 mating plug | 1 piece | 3 | 1 | 4 piece | 1777989 | Phoenix Contact | OOS(mouser); OOS(digikey); NO-CONFIRMED-STOCK |
 | H05 | HARNESS full Pi 2x20 socket housing | 1 piece | 3 | 1 | 4 piece | 3-87456-6 | TE Connectivity | OOS(digikey); NO-CONFIRMED-STOCK |
 | H06 | HARNESS ten populated power/ground contacts | 10 piece | 30 | 3 | 33 piece | 87309-9 | TE Connectivity | No supply flag in retrieved evidence |
 | H07 | HARNESS positive AWG16 trunk | 0.075 metre | 0.225 | 1 | 1 100 ft spool (30.48 m) | 8521 002100 | Belden | No supply flag in retrieved evidence |
@@ -180,8 +184,8 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B004 | [C77080](https://www.lcsc.com/product-detail/C77080.html?is_substitute=1&lcsc_vid=RFAKAVdeTlMPX1IAR1ReXwBeQ1ZcXgcAFVYPXgYCElgxVlNeQFJbUVxWR1RYXztW&original_product_code=C2168801&original_unit_price=0.0957) | 30 | 0.0586 | 1.7580 | 17770 | OPEN | OPEN |
 | B005 | OPEN | 5 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B006 | [C3901066](https://www.lcsc.com/product-detail/C3901066.html) | 24 | 4.123 | 98.952 | 0 | OPEN | OPEN |
-| B007 | [C162427](https://www.lcsc.com/product-detail/C162427.html) | 15 | 0.1365 | 2.0475 | 10385 | OPEN | OPEN |
-| B008 | [C77083](https://www.lcsc.com/product-detail/C77083.html) | 10 | 0.0425 | 0.4250 | 119480 | OPEN | OPEN |
+| B007 | OPEN | 14 | OPEN | OPEN | OPEN | OPEN | OPEN |
+| B008 | OPEN | 8 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B009 | OPEN | 40 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B010 | OPEN | 8 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B011 | OPEN | 5 | OPEN | OPEN | OPEN | OPEN | OPEN |
@@ -206,7 +210,7 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B030 | [C478469](https://www.lcsc.com/product-detail/C478469.html) | 4 | 0.8449 | 3.3796 | 3779 | OPEN | OPEN |
 | B031 | [C52895](https://www.lcsc.com/es/product-detail/MOSFET_FAIRCHILD_BSS138_BSS138_C52895.html) | 4 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B032 | [C55106953](https://www.lcsc.com/product-detail/C55106953.html) | 7 | 1.0754 | 7.5278 | 998 | OPEN | OPEN |
-| B033 | [C86513](https://www.lcsc.com/product-detail/C86513.html) | 7 | 2.3114 | 16.1798 | 0 | OPEN | OPEN |
+| B033 | OPEN | 7 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B034 | [C65189](https://www.lcsc.com/product-detail/C65189.html) | 20 | 0.0183 | 0.3660 | 275600 | OPEN | OPEN |
 | B035 | [C241752](https://www.lcsc.com/product-detail/C241752.html) | 4 | 1.6089 | 6.4356 | 1365 | OPEN | OPEN |
 | B036 | OPEN | 5 | OPEN | OPEN | OPEN | OPEN | OPEN |
@@ -295,19 +299,19 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 |---|---|---:|---:|---:|---|---|---|
 | B001 | [81-GRM32ER72A105KA01](https://www.mouser.com/en/ProductDetail/Murata-Electronics/GRM32ER72A105KA01L?qs=IjyrXs0Hof%252B1DBjYdhBu6w%3D%3D) | 11 | 0.602 | 6.622 | 4755 | 12 Weeks | End of Life: |
 | B002 | [81-GRM39X104K50D](https://gr.mouser.com/en/ProductDetail/Murata-Electronics/GRM188R71H104KA93D?qs=f7ZljCwbPOm85Y6l%2FNGt7A%3D%3D) | 142 | OPEN | OPEN | OPEN | OPEN | Obsolete |
-| B003 | [OPEN](https://gr.mouser.com/ProductDetail/Murata-Electronics/GRM32ER71H106KA12L?qs=6pxx44s1bjkjdm74o%2FrKhg%3D%3D) | 30 | OPEN | OPEN | OPEN | OPEN | OPEN |
+| B003 | [81-GRM32ER71H106KA2L](https://www.mouser.fr/fr/ProductDetail/Murata-Electronics/GRM32ER71H106KA12L?qs=6pxx44s1bjkjdm74o%2FrKhg%3D%3D) | 30 | OPEN | OPEN | OPEN | OPEN | End of Life |
 | B004 | [81-GRM21BR71E105KA99](https://www.mouser.com/en/ProductDetail/Murata-Electronics/GRM21BR71E105KA99L?qs=pAhIg4h%2FqUTk69tB5q7hhg%3D%3D) | 27 | OPEN | OPEN | OPEN | OPEN | Obsolete |
 | B005 | [810-CGA3E2C0G1H220J](https://www.mouser.com/en/ProductDetail/TDK/CGA3E2C0G1H220J080AA?qs=FxQuwy19cyDYFYuuIEBNFA%3D%3D) | 5 | 0.15 | 0.75 | 49442 | 24 Weeks | OPEN |
 | B006 | [810-C5750X7R1H226M25](https://www.mouser.com/ProductDetail/TDK/C5750X7R1H226M250KB?qs=P1JMDcb91o59nz9c5XhFzA%3D%3D) | 24 | 3.40 | 81.60 | 45172 | 12 Weeks | OPEN |
-| B007 | [81-GRM21BR71E475KA3L](https://www.mouser.com/ProductDetail/Murata-Electronics/GRM21BR71E475KA73L?qs=Od3eZLdO5mERWmTe7n2nHA%3D%3D) | 14 | OPEN | OPEN | OPEN | OPEN | Obsolete |
-| B008 | [81-GRM21BR71H105KA2L](https://my.mouser.com/en/ProductDetail/Murata-Electronics/GRM21BR71H105KA12L?qs=Er06SXQpt%252B60EIT%2FJ7%2F41Q%3D%3D) | 8 | OPEN | OPEN | OPEN | OPEN | Obsolete |
+| B007 | [81-GRM21BZ71E475KE5L](https://www.mouser.com/es/ProductDetail/Murata-Electronics/GRM21BZ71E475KE15L?qs=Ey7%2FXF42M3feXnDNgc%252BFlQ%3D%3D) | 14 | 0.122 | 1.708 | 180043 | 12 Weeks | OPEN |
+| B008 | OPEN | 8 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B009 | OPEN | 40 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B010 | [810-C1608C0G1H103J](https://www.mouser.com/en/ProductDetail/TDK/C1608C0G1H103J080AA?qs=NRhsANhppD%2FAN3pEk1wMuQ%3D%3D) | 8 | 0.24 | 1.92 | 0 | 24 Weeks | OPEN |
 | B011 | OPEN | 5 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B012 | [810-C1608C0G1H102J](https://www.mouser.com/en/ProductDetail/TDK/C1608C0G1H102J080AA?qs=NRhsANhppD8t9qBk5zN%252Bsw%3D%3D) | 5 | 0.15 | 0.75 | 0 | 24 Weeks | OPEN |
 | B013 | [81-GRM39C330J50](https://www.mouser.com/ProductDetail/Murata-Electronics/GRM1885C1H330JA01D?qs=E%252B5dfF6xfG3shwmI3hm0tg%3D%3D) | 5 | OPEN | OPEN | OPEN | 10 Weeks | NRND: |
 | B014 | [667-EEU-FR1E221](https://www.mouser.com/en/ProductDetail/Panasonic-Industry/EEU-FR1E221?qs=tfZGHB2PWd1Rv9iToDM7xw%3D%3D) | 8 | 0.71 | 5.68 | 0 | 37 Weeks | OPEN |
-| B015 | [576-SMCJ36CA](https://www.mouser.com/en/ProductDetail/Littelfuse/SMCJ36CA?qs=zHiv0nsVGmqDVrcTX3XJRw%3D%3D) | 4 | OPEN | OPEN | OPEN | OPEN | OPEN |
+| B015 | [576-SMCJ36CA](https://www.mouser.com/en/ProductDetail/Littelfuse/SMCJ36CA?qs=zHiv0nsVGmqDVrcTX3XJRw%3D%3D) | 4 | 0.97 | 3.88 | 0 | 34 Weeks | OPEN |
 | B016 | [511-STPS60H100CT](https://www.mouser.com/en/ProductDetail/STMicroelectronics/STPS60H100CT?qs=kndcJBrKlnQCElnVE4U9wA%3D%3D) | 10 | 1.79 | 17.90 | 474 | 15 Weeks | OPEN |
 | B017 | [771-BAS116-T/R](https://www.mouser.com/ProductDetail/Nexperia/BAS116215?qs=me8TqzrmIYUhk4ykXYPaNg%3D%3D) | 30 | 0.151 | 4.530 | 0 | 53 Weeks | OPEN |
 | B018 | [78-BAT46W-E3-08](https://www.mouser.com/en/ProductDetail/Vishay-Semiconductors/BAT46W-E3-08?qs=KP8Io%2FXyE5QAjvoG5XlHWA%3D%3D) | 4 | OPEN | OPEN | 0 | 29 Weeks | OPEN |
@@ -325,7 +329,7 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B030 | [595-CSD19537Q3](https://www.mouser.com/en/ProductDetail/Texas-Instruments/CSD19537Q3?qs=kFLL9AfgRSA2baK1OoK3Jg%3D%3D) | 4 | OPEN | OPEN | 1 | 16 Weeks | OPEN |
 | B031 | [512-BSS138](https://www.mouser.com/en/ProductDetail/onsemi/BSS138?qs=HK%252BeIG1iaahCeqBvjB4arg%3D%3D) | 4 | OPEN | OPEN | 578 | 26 Weeks | OPEN |
 | B032 | [OPEN](https://www.mouser.com/en/ProductDetail/Infineon-Technologies/BSC034N06NSATMA1?qs=WkdRfq4wf1Mx6O2FQ7xjpw%3D%3D) | 7 | OPEN | OPEN | OPEN | OPEN | OPEN |
-| B033 | [595-CSD18540Q5B](https://www.mouser.com/en/ProductDetail/Texas-Instruments/CSD18540Q5B?qs=NRIcxvoDUteMaKTIEMaARQ%3D%3D) | 7 | OPEN | OPEN | 0 | 12 Weeks | OPEN |
+| B033 | [595-CSD18540Q5BT](https://www.mouser.com/es/ProductDetail/Texas-Instruments/CSD18540Q5BT?qs=NRIcxvoDUteGYlfdfF0DmQ%3D%3D) | 7 | 4.53 | 31.71 | 592 | 9 Weeks | OPEN |
 | B034 | [771-2N7002-T/R](https://www.mouser.com/ProductDetail/Nexperia/2N7002215?qs=P62ublwmbi9rRKKuNdhqMA%3D%3D) | 4 | 0.23 | 0.92 | 0 | 53 Weeks | OPEN |
 | B035 | [512-FDB33N25TM](https://www.mouser.com/en/ProductDetail/onsemi/FDB33N25TM?qs=efMQ9B2bthcq0RaZmjVB%2Fg%3D%3D) | 4 | 3.44 | 13.76 | 21605 | 13 Weeks | OPEN |
 | B036 | [71-TNPW0603332KBEEA](https://www.mouser.com/en/ProductDetail/Vishay/TNPW0603332KBEEA?qs=CxPiq9xx9FKSJfW2xVEvxQ%3D%3D) | 5 | 0.32 | 1.60 | 2709 | 22 Weeks | OPEN |
@@ -377,7 +381,7 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B082 | [584-LTC7001IMSEPBF](https://www.mouser.com/ProductDetail/Analog-Devices/LTC7001IMSEPBF?qs=BZBei1rCqCCuiLQ%252BeMjtcQ%3D%3D) | 4 | 8.59 | 34.36 | 199 | OPEN | OPEN |
 | B083 | [595-REF5025IDGKR](https://www.mouser.com/en/ProductDetail/Texas-Instruments/REF5025IDGKR?qs=AFkNxQkJKAJ8W8NohOGecw%3D%3D) | 4 | 7.56 | 30.24 | 2263 | 20 Weeks | OPEN |
 | B084 | [595-TLV3201AIDBVR](https://www.mouser.com/en/ProductDetail/Texas-Instruments/TLV3201AIDBVR?qs=5771e39Rz9GGuYwPEKy7fA%3D%3D) | 14 | 1.03 | 14.42 | 0 | OPEN | OPEN |
-| B085 | [OPEN](https://www.mouser.com/es/ProductDetail/Texas-Instruments/TPS7A1601DGNR?qs=KC2rBGieF4oE7JWkZS%2FgAQ%3D%3D) | 7 | OPEN | OPEN | OPEN | OPEN | OPEN |
+| B085 | [595-TPS7A1601DGNR](https://www.mouser.com/es/ProductDetail/Texas-Instruments/TPS7A1601DGNR?qs=KC2rBGieF4oE7JWkZS%2FgAQ%3D%3D) | 7 | 4.21 | 29.47 | 63 | 16 Weeks | OPEN |
 | B086 | OPEN | 7 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B087 | [584-LT4363HMS-1#PBF](https://www.mouser.com/ProductDetail/Analog-Devices/LT4363HMS-1PBF?qs=hVkxg5c3xu8ArsH0sbL%2FnA%3D%3D) | 4 | 11.79 | 47.16 | 1056 | OPEN | OPEN |
 | B088 | [584-LTC3115IFE-1#PBF](https://www.mouser.com/en/ProductDetail/Analog-Devices/LTC3115IFE-1PBF?qs=hVkxg5c3xu9vMUkzUIxpDQ%3D%3D) | 4 | 19.65 | 78.60 | 1054 | OPEN | OPEN |
@@ -393,7 +397,7 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B098 | [OPEN](https://www.mouser.com/en/ProductDetail/Texas-Instruments/SN74LVC1G32DBVR?qs=3pnr37ZAbK%2F6ArGi%2FPb2Ng%3D%3D) | 4 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B099 | OPEN | 24 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B100 | [595-SN74LVC1G17DBVR](https://www.mouser.com/en/ProductDetail/Texas-Instruments/SN74LVC1G17DBVR?qs=fvkeCqCHl3BQIcdbAa1fbQ%3D%3D) | 4 | OPEN | OPEN | OPEN | OPEN | OPEN |
-| H01 | [651-1777989](https://eu.mouser.com/ProductDetail/Phoenix-Contact/1777989?qs=TrDcmYSSX9WKfp2I32hSmA%3D%3D) | 4 | OPEN | OPEN | 10 | 7 Weeks | OPEN |
+| H01 | [651-1777989](https://eu.mouser.com/en/ProductDetail/Phoenix-Contact/1777989?qs=TrDcmYSSX9WKfp2I32hSmA%3D%3D) | 4 | OPEN | OPEN | 0 | 7 Weeks | OPEN |
 | H05 | [571-3-87456-6](https://ar.mouser.com/es/ProductDetail/TE-Connectivity/3-87456-6?qs=sGAEpiMZZMvlX3nhDDO4AGTYleWEkGmaDuMluOXipMk%3D) | 4 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | H06 | [571-873099](https://www.mouser.com/es/ProductDetail/TE-Connectivity/87309-9?qs=ZDXmSm13592Ol9UKkiRmzQ%3D%3D) | 33 | OPEN | OPEN | 112500 | OPEN | OPEN |
 | H07 | [566-8521-100-02](https://eu.mouser.com/ProductDetail/Belden-Wire-Cable/8521-002100?qs=sGAEpiMZZMuGxYVy11yKKgHFk5vWcMIQhsWIt9snOas%3D) | 1 | OPEN | OPEN | 2 | OPEN | OPEN |
@@ -418,8 +422,8 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B004 | [490-6484-2-ND](https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR71E105KA99L/2472647) | 27 | OPEN | OPEN | OPEN | OPEN | Obsolete |
 | B005 | [445-5632-1-ND](https://www.digikey.com/en/products/detail/tdk/CGA3E2C0G1H220J080AA/2443110) | 5 | 0.15000 | 0.75000 | 27243 | 24 Weeks | Active |
 | B006 | [445-C5750X7R1H226M250KBCT-ND](https://www.digikey.com/en/products/detail/tdk-corporation/C5750X7R1H226M250KB/13672015) | 24 | 3.46000 | 83.04000 | 0 | 24 Weeks | Active |
-| B007 | [490-9962-2-ND](https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR71E475KA73L/4905545) | 14 | OPEN | OPEN | OPEN | OPEN | Obsolete |
-| B008 | [490-4736-2-ND](https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR71H105KA12L/1244326) | 8 | OPEN | OPEN | OPEN | OPEN | Obsolete |
+| B007 | OPEN | 14 | OPEN | OPEN | OPEN | OPEN | OPEN |
+| B008 | [490-10675-1-ND](https://www.digikey.com/en/products/detail/murata-electronics/GCM21BR71H105KA03L/5251430) | 8 | 0.24 | 1.92 | 102251 | 21 Weeks | Active |
 | B009 | OPEN | 40 | OPEN | OPEN | OPEN | OPEN | OPEN |
 | B010 | [445-7404-1-ND](https://www.digikey.com/en/products/detail/tdk-corporation/C1608C0G1H103J080AA/2732839) | 8 | 0.24000 | 1.92000 | 26138 | 24 Weeks | Active |
 | B011 | OPEN | 5 | OPEN | OPEN | OPEN | OPEN | OPEN |
@@ -444,7 +448,7 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B030 | [296-44351-1-ND](https://www.digikey.com/en/products/detail/texas-instruments/CSD19537Q3/5438037) | 4 | 1.99000 | 7.96000 | 66702 | 20 Weeks | Active |
 | B031 | [BSS138CT-ND](https://www.digikey.com/en/products/detail/onsemi/BSS138/244294) | 4 | 0.32000 | 1.28000 | 712990 | 26 Weeks | Active |
 | B032 | [BSC034N06NSATMA1CT-ND](https://www.digikey.com/en/products/detail/infineon-technologies/BSC034N06NSATMA1/5959900) | 7 | 1.69000 | 11.83000 | 14650 | 52 Weeks | Active |
-| B033 | [296-41076-1-ND](https://www.digikey.com/en/products/detail/texas-instruments/CSD18540Q5B/5181315?s=N4Ig7CBcoIYE5QIwA5EGYA0IYBcmZAAcBLKAVgE4KAWAJguQF9Gg) | 7 | 3.26000 | 22.82000 | 0 | 9 Weeks | Active |
+| B033 | [296-37963-1-ND](https://www.digikey.com/en/products/detail/texas-instruments/CSD18540Q5BT/4915639) | 7 | 4.39000 | 30.73000 | 0 | 9 Weeks | Active |
 | B034 | [1727-2N7002,215CT-ND](https://www.digikey.com/en/products/detail/nexperia-usa-inc/2N7002-215/762973) | 4 | 0.18000 | 0.72000 | 0 | 30 Weeks | Active |
 | B035 | [FDB33N25TMCT-ND](https://www.digikey.com/en/products/detail/onsemi/FDB33N25TM/1922973) | 4 | 3.57000 | 14.28000 | 6828 | 13 Weeks | Active |
 | B036 | [541-3654-1-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW0603332KBEEA/1607053) | 5 | 0.26000 | 1.30000 | 0 | 25 Weeks | Active |
@@ -464,7 +468,7 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 | B050 | [TNP100AACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW0603100RBEEA/1857056) | 5 | 0.26000 | 1.30000 | 33193 | 25 Weeks | Active |
 | B051 | [541-TNPW12062M00BEEACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW12062M00BEEA/11500936) | 5 | 0.59000 | 2.95000 | 80469 | 11 Weeks | Active |
 | B052 | [541-1.00HHCT-ND](https://www.digikey.com/en/products/detail/vishay-dale/CRCW06031R00FKEA/1961997) | 8 | 0.10000 | 0.80000 | 215256 | 15 Weeks | Active |
-| B053 | [541-10281-1-ND](https://www.digikey.com/en/products/detail/vishay-dale/WFMB2512R0330FEA/9972305) | 53 | 0.99320 | 52.63960 | 0 | 83 Weeks | Active |
+| B053 | [541-10281-1-ND](https://www.digikey.com/en/products/detail/vishay-dale/WFMB2512R0330FEA/9972305) | 53 | 0.9932 | 52.6396 | 0 | 83 Weeks | Active |
 | B054 | [TNP32.4KAACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW060332K4BEEA/1857080) | 8 | 0.26000 | 2.08000 | 4140 | 25 Weeks | Active |
 | B055 | [541-10.0KFCT-ND](https://www.digikey.com/en/products/detail/vishay-dale/CRCW120610K0FKEA/1176758) | 5 | 0.11000 | 0.55000 | 671025 | 21 Weeks | Active |
 | B056 | [541-TNPW06034K32BEEACT-ND](https://www.digikey.com/en/products/detail/vishay-dale/TNPW06034K32BEEA/1606839) | 5 | 0.26000 | 1.30000 | 12837 | 25 Weeks | Active |
@@ -527,23 +531,23 @@ All prices below are USD per stated order unit. Lead time is the published manuf
 
 ## Alternate disposition register
 
-Different-MPN candidates are excluded from order quantities and totals and need engineering approval. SAME-MPN entries are alternate supplier routes for the existing quantities; do not order twice. Backorder/OPEN-stock routes do not solve an immediate stock shortage. SINGLE-OBSERVED means only one channel in the retrieved evidence showed stock, not proof of an exclusive manufacturer or distributor. OPEN replacements remain unresolved procurement actions.
+Only the three CONFIRMED order alternates in CLOSE_SUMMARY.md are selected in quantities/totals. Other different-MPN candidates remain excluded and require owner review. SAME-MPN entries are alternate supplier routes for the existing quantities; do not order twice. Backorder/OPEN-stock routes do not solve an immediate stock shortage. SINGLE-OBSERVED means only one channel in the retrieved evidence showed stock, not proof of an exclusive manufacturer or distributor. OPEN replacements remain unresolved procurement actions.
 
 | ID | Selected MPN | Alternate / manufacturer | Evidence | Disposition |
 |---|---|---|---|---|
-| B001 | GRM32ER72A105KA01L | GRM32CR72A105KA35L / Murata Electronics | [source](https://www.digikey.com/en/products/detail/murata-electronics/GRM32ER72A105KA01L/587295) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
-| B002 | GRM188R71H104KA93D | 0603BB104K500YT / Knowles Novacap | [source](https://www.digikey.com/en/products/detail/murata-electronics/GRM188R71H104KA93D/587854) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
-| B003 | GRM32ER71H106KA12L | UMK325AB7106KM-T / Taiyo Yuden | [source](https://www.digikey.com/en/products/detail/murata-electronics/GRM32ER71H106KA12L/2548481) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
-| B004 | GRM21BR71E105KA99L | GRM219R71E105KA88D / Murata Electronics | [source](https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR71E105KA99L/2472647) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
+| B001 | GRM32ER72A105KA01L | C3225X7R2A105K200AA / TDK | [source](https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R2A105K200AA) | OPEN: original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute. |
+| B002 | GRM188R71H104KA93D | GRM188R72A104KA35D / Murata Electronics | [source](https://ds.murata.co.jp/simsurfing/mlcc.html) | CONFIRMED procurement alternate under Task 1 nominal/package/rating and >=90% typical Ceff screen; hardware unchanged. Typical data are not guaranteed minima or electrical release. OPEN owner hold under brief Task 2: C103 sets input DVDT/startup; C401 sets telemetry filter timing. Different bias behavior needs owner timing review before a grouped-row substitution. Chosen candidate only; original remains in order quantities. |
+| B003 | GRM32ER71H106KA12L | C3225X7R1H106K250AC / TDK | [source](https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1H106K250AC) | OPEN: original absent from Murata SimSurfing; original/alternate effective capacitance comparison unavailable. TDK nominal same-package in-production candidate only; do not substitute. |
+| B004 | GRM21BR71E105KA99L | GCM21BR71E105KA56L / Murata Electronics | [source](https://ds.murata.co.jp/simsurfing/mlcc.html) | CONFIRMED procurement alternate under Task 1 nominal/package/rating and >=90% typical Ceff screen; hardware unchanged. Typical data are not guaranteed minima or electrical release. OPEN owner hold under brief Task 2: C374 sets HOLD_SLEW_C timing and >=0.5 uF requirement; changing its bias curve needs owner timing review. Chosen candidate only; original remains in order quantities. |
 | B005 | CGA3E2C0G1H220J080AA | CGA3E2C0G1H220J080AA / TDK | [source](https://www.digikey.com/en/products/detail/tdk/CGA3E2C0G1H220J080AA/2443110) | SAME-MPN alternate sourcing: mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B006 | C5750X7R1H226M250KB | CGA9P3X7R1H226M250KB / TDK | [source](https://www.digikey.com/en/products/detail/tdk-corporation/C5750X7R1H226M250KB/13672015) | UNAPPROVED catalog candidate (Parametric Equivalent); recheck package/pins, ratings, timing and application. Not in order quantities. |
-| B007 | GRM21BR71E475KA73L | 08053C475KAT2A / KYOCERA AVX | [source](https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR71E475KA73L/4905545) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
-| B008 | GRM21BR71H105KA12L | GJ821BR71H105KA12L / Murata Electronics | [source](https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR71H105KA12L/1244326) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
+| B007 | GRM21BZ71E475KE15L | GRM21BZ71E475KE15L / Murata Electronics | [source](https://ds.murata.co.jp/simsurfing/mlcc.html) | CONFIRMED procurement alternate under Task 1 nominal/package/rating and >=90% typical Ceff screen; hardware unchanged. Typical data are not guaranteed minima or electrical release. |
+| B008 | GCM21BR71H105KA03L | GCM21BR71H105KA03L / Murata Electronics | [source](https://ds.murata.co.jp/simsurfing/mlcc.html) | CONFIRMED procurement alternate under Task 1 nominal/package/rating and >=90% typical Ceff screen; hardware unchanged. Typical data are not guaranteed minima or electrical release. |
 | B009 | PCH1V471MCL1GS | PCH1V471MCL1GS / Nichicon | [source](https://www.nichicon.co.jp/_assets/images/products/catalog/corporate/digital/sh_pch.pdf) | Alternate sourcing route: manufacturer/distributor quote for exact part. Different electrical MPN OPEN; pulse/ESR/ESL/thermal requalification required. |
 | B010 | C1608C0G1H103J080AA | C1608NP01H103J080AA / TDK | [source](https://www.digikey.com/en/products/detail/tdk-corporation/C1608C0G1H103J080AA/2732839) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
 | B011 | C3216X7R1H475K160AB | C3216X7R1H475K160AC / TDK | [source](https://www.digikey.com/en/products/detail/tdk/C3216X7R1H475K160AC/2792268) | UNAPPROVED: Suffix AC is a catalog candidate, not an alias for AB; verify DC-bias capacitance, package and compensation. Stock remains a separate issue. |
 | B012 | C1608C0G1H102J080AA | C0603C102J5GAC7411 / KEMET | [source](https://www.digikey.com/en/products/detail/tdk-corporation/C1608C0G1H102J080AA/513735) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
-| B013 | GRM1885C1H330JA01D | GRM1885C1H330GA01D / Murata Electronics | [source](https://www.digikey.com/en/products/detail/murata-electronics/GRM1885C1H330JA01D/586908) | UNAPPROVED catalog candidate (Upgrade); recheck package/pins, ratings, timing and application. Not in order quantities. |
+| B013 | GRM1885C1H330JA01D | GRM1885C2E330JW07D / Murata Electronics | [source](https://ds.murata.co.jp/simsurfing/mlcc.html) | CONFIRMED procurement alternate under Task 1 nominal/package/rating and >=90% typical Ceff screen; hardware unchanged. Typical data are not guaranteed minima or electrical release. OPEN owner hold under brief Task 2: C357 is LTC3115 feedforward compensation; loop/timing qualification is not established by nominal C0G and bias matching. Chosen candidate only; original remains in order quantities. |
 | B014 | EEU-FR1E221 | UHE1E221MPD / Nichicon | [source](https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEU-FR1E221/9921023) | UNAPPROVED catalog candidate (Similar); recheck package/pins, ratings, timing and application. Not in order quantities. |
 | B015 | SMCJ36CA | SMCJ36CA-TP / MCC (Micro Commercial Components) | [source](https://www.digikey.com/en/products/detail/littelfuse-inc/SMCJ36CA/762405) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
 | B016 | STPS60H100CT | STPS60H100CT / STMicroelectronics | [source](https://www.digikey.com/en/products/detail/stmicroelectronics/STPS60H100CT/691910) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
@@ -556,13 +560,13 @@ Different-MPN candidates are excluded from order quantities and totals and need 
 | B023 | B2P-VH-FB-B(LF)(SN) | B2P-VH-FB-B(LF)(SN) / JST | [source](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2P-VH-FB-B/2178726) | SAME-MPN alternate sourcing: lcsc, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B024 | 1776508 | 1776508 / Phoenix Contact | [source](https://www.digikey.com/en/products/detail/phoenix-contact/1776508/349000) | SAME-MPN alternate sourcing: mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B025 | B4B-XH-A(LF)(SN) | B4B-XH-A(LF)(SN) / JST | [source](https://www.mouser.com/ProductDetail/JST-Commercial/B4B-XH-ALFSN?qs=cdbOS8ANM9CfC08d%252BywhFw%3D%3D) | SAME-MPN alternate sourcing: lcsc, mouser each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
-| B026 | CUSTOM-FX-CU-01 RevA | CUSTOM-FX-CU-01 RevA / Qualified fabricator OPEN | [source](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/56e9837e522c01bd680aca602f9f471d38d6039f/docs/evidence/r2/gate4b/PIN_REVIEW.md) | Build-to-drawing sourcing only; no compatible catalog jumper verified. Identity closed; procurement and qualification OPEN. |
+| B026 | CUSTOM-FX-CU-01 RevA | CUSTOM-FX-CU-01 RevA / Qualified fabricator OPEN | [source](bom_order/FORCE_LINK_DRAWING.md) | Build-to-drawing sourcing only; no compatible catalog jumper verified. Identity closed; procurement and qualification OPEN. |
 | B027 | 74437636351002 | 74437636351002 / Würth Elektronik | [source](https://www.mouser.com/ProductDetail/Wurth-Elektronik/74437636351002?qs=2FehpBK1j97R94Iy%2Fo9K7Q%3D%3D) | SAME-MPN backup sourcing: mouser 710-74437636351002; observed stock 0. Backorder/stock confirmation required; no stocked replacement established. Different component MPN remains OPEN. |
 | B028 | 7447789004 | 7447789004 / Würth Elektronik | [source](https://www.mouser.com/ProductDetail/Wurth-Elektronik/7447789004?qs=E%2F%2FhvbtCqpM%252BzhhZNuF4OQ%3D%3D) | SAME-MPN backup sourcing: mouser 710-7447789004; observed stock 0. Backorder/stock confirmation required; no stocked replacement established. Different component MPN remains OPEN. |
 | B030 | CSD19537Q3 | CSD19537Q3 / Texas Instruments | [source](https://www.digikey.com/en/products/detail/texas-instruments/CSD19537Q3/5438037) | SAME-MPN alternate sourcing: lcsc, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B031 | BSS138 | BSS138 / onsemi | [source](https://www.digikey.com/en/products/detail/onsemi/BSS138/244294) | SAME-MPN alternate sourcing: mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B032 | BSC034N06NSATMA1 | BSC034N06NSATMA1 / Infineon Technologies | [source](https://www.digikey.com/en/products/detail/infineon-technologies/BSC034N06NSATMA1/5959900) | SAME-MPN alternate sourcing: lcsc, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
-| B033 | CSD18540Q5B | FDMS86500DC / onsemi | [source](https://www.digikey.com/en/products/detail/texas-instruments/CSD18540Q5B/5181315?s=N4Ig7CBcoIYE5QIwA5EGYA0IYBcmZAAcBLKAVgE4KAWAJguQF9Gg) | UNAPPROVED catalog candidate (Similar); recheck package/pins, ratings, timing and application. Not in order quantities. |
+| B033 | CSD18540Q5BT | CSD18540Q5BT / Texas Instruments | [source](https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf) | CONFIRMED order alternate: CSD18540Q5BT is the same TI CSD18540Q5B device in a 250-piece reel instead of 2500; common Q5B package, pinout and electrical specifications. Seven cut-tape units from Q281. No changed Rds(on), threshold, timing, ballast or Sheet03 path model is introduced by this packing suffix. Hardware untouched; application electrical qualification remains open. |
 | B034 | 2N7002,215 | 2N7002ET1G / onsemi | [source](https://www.digikey.com/en/products/detail/nexperia-usa-inc/2N7002-215/762973) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
 | B035 | FDB33N25TM | FDB33N25TM / onsemi | [source](https://www.digikey.com/en/products/detail/onsemi/FDB33N25TM/1922973) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B036 | TNPW0603332KBEEA | RG1608P-3323-B-T5 / Susumu | [source](https://www.digikey.com/en/products/detail/vishay-dale/TNPW0603332KBEEA/1607053) | UNAPPROVED catalog candidate (Direct); recheck package/pins, ratings, timing and application. Not in order quantities. |
@@ -620,7 +624,7 @@ Different-MPN candidates are excluded from order quantities and totals and need 
 | B090 | ADG4612BRUZ | ADG4612BRUZ / Analog Devices | [source](https://www.digikey.com/en/products/detail/analog-devices-inc/ADG4612BRUZ/2507324) | SAME-MPN alternate sourcing: mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B091 | TPS3808G01DBVR | TPS3808G01DBVR / Texas Instruments | [source](https://www.digikey.com/en/products/detail/texas-instruments/TPS3808G01DBVR/666712?msockid=2002127634786b56294b04d135d96a9f) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B092 | TPS259470LRPWR | TPS259470LRPWR / Texas Instruments | [source](https://www.digikey.com/en/products/detail/texas-instruments/TPS259470LRPWR/14124014) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
-| B093 | INA228AIDGSR | INA228AIDGST / Texas Instruments | [source](https://www.digikey.com/en/products/detail/texas-instruments/INA228AIDGST/13691047) | UNAPPROVED: Same device/package family with different packing suffix; verify exact ordering table and availability. |
+| B093 | INA228AIDGSR | INA228AIDGST / Texas Instruments | [source](https://www.digikey.com/en/products/detail/texas-instruments/INA228AIDGST/13691047) | OPEN / REJECTED: INA228AIDGST obsolete/restricted in newer source; no accepted alternate. See STOCK_REVIEW.md. |
 | B094 | TCA9517DGKR | TCA9517DGKR / Texas Instruments | [source](https://www.digikey.com/en/products/detail/texas-instruments/TCA9517DGKR/3926681) | SAME-MPN alternate sourcing: lcsc, mouser, digikey each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
 | B095 | TPS3808G50DBVR | TPS3808G50DBVT / Texas Instruments | [source](https://www.digikey.com/en/products/detail/texas-instruments/TPS3808G50DBVR/666729) | UNAPPROVED catalog candidate (Parametric Equivalent); recheck package/pins, ratings, timing and application. Not in order quantities. |
 | B096 | SN74LVC1G74DCTR | SN74LVC1G74DCTR / Texas Instruments | [source](https://www.mouser.com/ProductDetail/Texas-Instruments/SN74LVC1G74DCTR?qs=DS7Z8uEdLNwRYlUtd5z9Zw%3D%3D) | SAME-MPN alternate sourcing: lcsc, mouser each show sufficient stock. Use one channel; do not duplicate order quantities. No component substitution. |
@@ -643,8 +647,8 @@ Different-MPN candidates are excluded from order quantities and totals and need 
 
 ## LCSC upload and validation
 
-[BOM_ORDER_LCSC.csv](BOM_ORDER_LCSC.csv) is a **local LCSC-upload-style candidate subset**, with LCSC part number, quantity, manufacturer part number and designators. It includes only catalog-board lines with a verified SKU, published order-quantity price, known multiple, enough observed stock, no reported NRND/EOL and no unresolved exact-order code. Confirmed U316 is included when those commercial criteria pass. The other lines remain in the main CSV. Upload compatibility has not been tested against an account; no upload, cart or purchase was performed. This file is not a complete board BOM or an order authorization.
+[BOM_ORDER_LCSC.csv](BOM_ORDER_LCSC.csv) is a **local LCSC-upload-style candidate subset**, with LCSC part number, quantity, manufacturer part number and designators. It includes only catalog-board lines with a verified SKU, published order-quantity price, known multiple, enough observed stock, no reported NRND/EOL, unresolved exact-order code or owner hold. B003 is now excluded by newly recorded EOL evidence; unselected candidates cannot inherit the original part's LCSC SKU. Confirmed U316 is included when those commercial criteria pass. The other lines remain in the main CSV. Upload compatibility has not been tested against an account; no upload, cart or purchase was performed. This file is not a complete board BOM or an order authorization.
 
-[VALIDATION.json](bom_order/VALIDATION.json) checks source coverage, uniqueness, source hash, three-board/spare arithmetic, supplier rounding, exact selected MPNs, confirmed U316 identity and inclusion, CSV/Markdown prices and exact upload membership. No ERC or DRC rerun is claimed: native KiCad files were read-only. This procurement subtask does not close R2 or advance to R3/R4/R5. Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`.
+[VALIDATION.json](bom_order/VALIDATION.json) checks source coverage, uniqueness, source hash, three-board/spare arithmetic, supplier rounding, captured identities and reviewed alternate scope/bias evidence, unchanged hardware hashes, OPEN counts, confirmed U316 identity and inclusion, CSV/Markdown prices and exact upload membership. No ERC or DRC rerun is claimed: native KiCad files were read-only. This procurement subtask does not close R2 or advance to R3/R4/R5. Rebuild with `python3 docs/evidence/r2/bom_order/generate.py`.
 
 Catalog facts and third-party provenance are isolated in [third_party/bom_order](../../../third_party/bom_order/README.md). The [resume review](bom_order/RESUME_REVIEW.md) records the refreshed source, supplier additions, remaining actions and evidence limits. Referenced designs/documents were not modified or copied into CAD. Validate the regenerated files with `python3 -B docs/evidence/r2/bom_order/validate.py`.

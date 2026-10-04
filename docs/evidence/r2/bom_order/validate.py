@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 import re
+import xml.etree.ElementTree as ET
 from collections import Counter
 from decimal import Decimal
 from pathlib import Path
@@ -18,6 +19,12 @@ upload=list(csv.DictReader((OUT/'BOM_ORDER_LCSC.csv').open()))
 meta=json.loads((HERE/'PROVENANCE.json').read_text())
 facts=json.loads((ROOT/'third_party/bom_order/CATALOG_FACTS.json').read_text())
 facts+=json.loads((ROOT/'third_party/bom_order/RESUME_CATALOG_FACTS.json').read_text())
+facts+=json.loads((ROOT/'third_party/bom_order/CLOSE_CATALOG_FACTS.json').read_text())
+facts+=json.loads((ROOT/'third_party/bom_order/CLOSE_RESUME_CATALOG_FACTS.json').read_text())
+decisions=json.loads((ROOT/'third_party/bom_order/CLOSE_ALTERNATE_REVIEW.json').read_text())
+decisions.update(json.loads((ROOT/'third_party/bom_order/CLOSE_STOCK_DECISIONS.json').read_text()))
+baseline=json.loads((HERE/'CLOSE_BASELINE.json').read_text())
+close=json.loads((HERE/'CLOSE_SUMMARY.json').read_text())
 factmap={q['evidence_id']:q for q in facts}
 selected_facts={(q['mpn'],q['d']):q for q in facts}
 assert len(factmap)==len(facts), 'Evidence IDs must be unique'
@@ -41,7 +48,18 @@ for r in board:
     if r['scope']=='PCB feature':
         assert r['qty_to_order']=='0' and r['spares']=='0'
         continue
-    assert all(src[ref]['MPN'].replace('EEUFR1E221','EEU-FR1E221')==r['mpn'] for ref in listed)
+    captured=r['captured_mpn'].replace('EEUFR1E221','EEU-FR1E221')
+    decision=decisions.get(captured)
+    if decision and decision['order_accepted']:
+        assert r['mpn']==decision['mpn'] and r['manufacturer']==decision['manufacturer']
+        assert set(listed)==set(decision['refdes'])
+        assert set(r['footprint'].split('; '))==set(decision['footprints'])
+        assert decision['status']=='CONFIRMED' and decision['owner_hold']=='N/A'
+        assert 'REVIEWED-ORDER-ALTERNATE' in r['flags']
+    else:
+        assert all(src[ref]['MPN'].replace('EEUFR1E221','EEU-FR1E221')==r['mpn'] for ref in listed)
+        if decision:
+            assert 'OWNER-HOLD' in r['flags']
     base=3*len(listed)
     passive=listed[0][0] in 'CRLF'
     assert int(r['spares'])==max(2 if passive else 1,math.ceil(base/10))
@@ -124,20 +142,93 @@ for item in upload:
     assert item['LCSC Part Number']==r['lcsc_part_number']
     assert item['Quantity']==r['lcsc_qty_to_order'] and item['Designator']==r['refdes']
     assert int(r['lcsc_stock'])>=int(item['Quantity'])
-    assert not any(flag in r['flags'] for flag in ['NRND/EOL','EXACT-ORDER'])
+    assert not any(flag in r['flags'] for flag in ['NRND/EOL','EXACT-ORDER','OWNER-HOLD'])
     assert r['lcsc_unit_price_usd']!='OPEN' and r['lcsc_order_multiple']!='OPEN'
 eligible={r['mpn'] for r in catalog if r['lcsc_part_number']!='OPEN' and r['lcsc_unit_price_usd']!='OPEN'
     and r['lcsc_order_multiple'].isdigit() and r['lcsc_stock'].isdigit()
     and int(r['lcsc_stock'])>=int(r['lcsc_qty_to_order'])
-    and not any(flag in r['flags'] for flag in ['NRND/EOL','EXACT-ORDER'])}
+    and not any(flag in r['flags'] for flag in ['NRND/EOL','EXACT-ORDER','OWNER-HOLD'])}
 assert len(upload)==len(eligible) and {r['Manufacturer Part Number'] for r in upload}==eligible
 assert any(r['Designator']=='U316' and r['Quantity']=='4' and r['LCSC Part Number']=='C580193' for r in upload)
+# Independently verify every saved bias calculation and its actual net pair.
+curves=json.loads((ROOT/'third_party/bom_order/CLOSE_CAPACITOR_FACTS.json').read_text())['curves']
+netlist=ET.parse(ROOT/'docs/evidence/r3/layout_prep/resume/fresh.xml').getroot()
+pin_nets={}
+for net in netlist.findall('./nets/net'):
+    for node in net.findall('node'):
+        pin_nets.setdefault(node.get('ref'),{})[node.get('pin')]=net.get('name')
+def interpolate(points, voltage):
+    for (v0,c0),(v1,c1) in zip(points,points[1:]):
+        if v0 <= voltage <= v1:
+            return c0+(c1-c0)*(voltage-v0)/(v1-v0)
+    raise AssertionError(('Bias voltage outside retained samples',voltage))
+bias_checks=0
+for original,a in decisions.items():
+    assert set(a['refdes'])=={ref for ref,item in src.items() if item['MPN']==original}
+    assert {src[ref]['Footprint'] for ref in a['refdes']}==set(a['footprints'])
+    if a.get('kind')=='carrier_only':
+        assert original=='CSD18540Q5B' and a['mpn']=='CSD18540Q5BT'
+        assert a['offer_evidence']=='Q281' and a['document_revision'].startswith('SLPS488B')
+        continue
+    ratios=[]
+    for t in a['bias_tests']:
+        assert t['nets']==pin_nets[t['refdes']], ('Bias net mismatch',t['refdes'])
+        assert t['voltage_basis'] and t['voltage_label'] in ['CONFIRMED','CALCULATED','ASSUMED']
+        if t['status']=='OPEN':
+            assert not a['accepted'] and not a['order_accepted']
+            assert t['original_ceff_uf']==t['alternate_ceff_uf']==t['ratio']=='OPEN'
+            continue
+        for name,key in [(original,'original_ceff_uf'),(a['mpn'],'alternate_ceff_uf')]:
+            expected=interpolate(curves[name[:-1]]['points'],t['dc_voltage_v'])
+            assert math.isclose(expected,t[key],rel_tol=1e-12,abs_tol=1e-15), (original,t['refdes'],key)
+        ratio=t['alternate_ceff_uf']/t['original_ceff_uf']
+        assert math.isclose(ratio,t['ratio'],rel_tol=1e-12)
+        ratios.append(ratio);bias_checks+=1
+    if a['accepted']:
+        assert ratios and min(ratios)>=.9 and math.isclose(min(ratios),a['min_ratio'],rel_tol=1e-12)
+        assert original[10:13]==a['mpn'][10:13], 'Nominal capacitance code changed'
+        assert original[3:5]==a['mpn'][3:5], 'Metric package code changed'
+        assert a['alternate_specs']['tempchar']==a['original_specs']['tempchar']
+        assert float(a['alternate_specs']['rvol'])>=float(a['original_specs']['rvol'])
+        assert curves[a['mpn'][:-1]]['catalog']==a['alternate_specs']
+        assert a['alternate_specs']['production_status_en-us']=='B'
+assert {a['mpn'] for a in decisions.values() if a['order_accepted']}=={
+    'GRM21BZ71E475KE15L','GCM21BR71H105KA03L','CSD18540Q5BT'}
+for ref,voltages in [('C352',[12,12.311325,12.593099]),('C601',[5.05832,5.183488]),('C602',[12,12.311325,12.593099])]:
+    assert [t['dc_voltage_v'] for t in decisions['GRM32ER71H106KA12L']['bias_tests'] if t['refdes']==ref]==voltages
+for path,digest in baseline['hardware_sha256'].items():
+    assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest, ('Hardware changed since close baseline',path)
+for path,digest in meta['source_files'].items():
+    assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
+for path,digest in meta['bom_close_review']['evidence_sha256'].items():
+    assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest, ('Close evidence hash mismatch',path)
+# Independently count purchased rows lacking an actionable route, or with an owner/lifecycle hold.
+open_ids=set()
+for r in rows:
+    if r['scope']=='PCB feature':continue
+    routes=[d for d in ['lcsc','mouser','digikey'] if r[d+'_part_number'] not in ['OPEN','N/A']
+        and r[d+'_unit_price_usd'] not in ['OPEN','N/A'] and r[d+'_stock'].isdigit()
+        and r[d+'_qty_to_order'].isdigit() and int(r[d+'_qty_to_order'])>0
+        and int(r[d+'_stock'])>=int(r[d+'_qty_to_order'])
+        and r[d+'_order_multiple'].isdigit() and int(r[d+'_order_multiple'])>0]
+    if not routes or any(f in r['flags'] for f in ['NRND/EOL','EXACT-ORDER','OWNER-HOLD']):open_ids.add(r['row_id'])
+assert open_ids=={r['row_id'] for r in close['needs_owner_decision']}
+assert close['open_before']==baseline['open_order_rows']==27 and close['open_after']==len(open_ids)==24
+assert set(close['closed_row_ids'])==set(baseline['open_order_row_ids'])-open_ids=={'B007','B008','B033','B085'}
+assert set(close['newly_open_row_ids'])==open_ids-set(baseline['open_order_row_ids'])=={'B003'}
+assert close['literal_open_cells_after']==sum(v=='OPEN' for r in rows for v in r.values())
+assert close['rows_containing_open_after']==sum(any('OPEN' in v for v in r.values()) for r in rows)
+assert '**27 → 24**' in markdown and '**27 → 24**' in (HERE/'CLOSE_SUMMARY.md').read_text()
+assert all(r['Manufacturer Part Number']!='GRM32ER71H106KA12L' for r in upload)
+assert len(upload)==36
 checked_links=0
-for match in re.finditer(r'\]\(([^)]+)\)',markdown):
-    target=match.group(1)
-    if not target.startswith(('http','OPEN')) and 'VALIDATION.json' not in target:
-        assert (OUT/target).exists(),target
-        checked_links+=1
+for document in [OUT/'BOM_ORDER.md']+[HERE/name for name in [
+        'CLOSE_SUMMARY.md','CAPACITOR_REVIEW.md','STOCK_REVIEW.md','FORCE_LINK_DRAWING.md','CLOSE_EXECUTION.md']]:
+    for match in re.finditer(r'\]\(([^)]+)\)',document.read_text()):
+        target=match.group(1)
+        if not target.startswith(('http','OPEN')) and 'VALIDATION.json' not in target:
+            assert (document.parent/target).exists(),(document,target)
+            checked_links+=1
 assert checked_links>=7, 'Local-link check must actually visit the document links'
 result=dict(status='PASS for BOM document consistency; procurement and R2 electrical release BLOCKED',source_commit=meta['source_commit'],
     references_accounted_for=len(refs),catalog_components_per_board=298,catalog_mpns=96,custom_links_per_board=7,etched_features_per_board=61,
@@ -145,6 +236,9 @@ result=dict(status='PASS for BOM document consistency; procurement and R2 electr
     supplier_quantities_and_price_tiers='PASS',supplier_evidence_fields='PASS',currency='PASS',totals='PASS',
     markdown_commercial_tables='PASS',local_links='PASS',local_links_checked=checked_links,
     u316_confirmed_identity_and_upload='PASS',harness_spool_units='PASS',lcsc_exact_membership='PASS',
+    reviewed_alternate_scope_and_bias='PASS',bias_calculations_checked=bias_checks,
+    unchanged_hardware_files=len(baseline['hardware_sha256']),hardware_unchanged='PASS',
+    open_rows_before=close['open_before'],open_rows_after=close['open_after'],open_count='PASS',
     erc_drc='Not run: CAD read-only; no schematic or PCB changes',source_export_sha256=meta['export_sha256'])
 (HERE/'VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

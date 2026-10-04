@@ -34,3 +34,9 @@ TOP (flat, no bend)                       SIDE
 [fixture]: https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/FIX3_FIXTURE.md
 [calc]: https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/898759e45578f3767721d19eb313312b7d7733a9/docs/evidence/r2/gate4a/CALCULATIONS.json
 [kme]: https://www.kme.com/fileadmin/DOWNLOADCENTER/COPPER%20DIVISON/4%20Industrial%20Rolled/3_Datasheets/Datasheets_NEW_2021/Cu-ETP_01_2021_e.pdf
+
+## Needs owner decision
+
+**OPEN:** approve the proposed finishing/tolerances and joint stack/torque, obtain the fabricator quote and exact fastener codes, and establish each installed current waveform/contact-temperature limit. No catalog equivalent is accepted. This drawing supplies the make-or-quote definition; it does not close B026/M01–M03 or authorize fabrication.
+
+**CONFIRMED resume check, 2026-10-04:** all seven captured links use the inspected M4/20 mm footprint and the net pairs above in the [pinned netlist](https://github.com/KaiserRichard/edge-ai-smart-power-module/blob/4af7818511076cbbd336880607d262fc311d01bc/docs/evidence/r3/layout_prep/resume/fresh.xml). Re-running the calculator reproduces the committed JSON exactly. All 33 baseline hardware file hashes match. Existing sourced material data and current allocations are retained.
