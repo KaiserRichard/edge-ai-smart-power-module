@@ -1,0 +1,8 @@
+{
+  "board_sha256": "f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e",
+  "input_hashes_identical": true,
+  "visually_reviewed_rasters_and_assembly_identical": true,
+  "previous_package_commit": "51d138b",
+  "fresh_export_log": "HANDBACK_EXPORT.log",
+  "package_integrity": "PACKAGE_VERIFICATION.json"
+}

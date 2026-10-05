@@ -2,7 +2,7 @@
 
 **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
 
-**STATUS: CONDITIONAL PASS for the requested layout correction/evidence package; BLOCKED for electrical qualification and fabrication release.** Sole editor, no sub-agents. Baseline `44eee9c`; all 11 findings audited before further editing. No push, merge, upload, order, physical test or schematic/setpoint change. Git staging/commit is denied by worktree `index.lock` permissions; work remains uncommitted as directed.
+**STATUS: CONDITIONAL PASS for the requested layout correction/evidence package; BLOCKED for electrical qualification and fabrication release.** Sole editor, no sub-agents. Resume baseline `51d138b` (including `44eee9c`); all 11 findings re-audited against the saved board before handback. No push, merge, upload, order, physical test or schematic/setpoint change. Earlier workers encountered Git write failures; their work was subsequently committed in `44eee9c` and `51d138b`. Current handback Git result is recorded in LAYOUT_PROGRESS.md.
 
 Final board SHA256: `f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e`. Board **80×60 mm, four layers, nominal 1.6 mm, 35/15.2/15.2/35 µm copper**. L2 GND only; L3 GND plus separate live power/thermal regions. See [progress](LAYOUT_PROGRESS.md) and [source register](../../../third_party/v1a_lite_pcb_fix1/SOURCES.md).
 
@@ -22,7 +22,7 @@ Final board SHA256: `f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b6
 | 8 64/103 V spacing | OPEN requirements | Explicit coating/environment/voltage-pair classification in [spacing note](fix1/SPACING_AND_ASSEMBLY.md). Native DRC checks manufacturing spacing, not an approved B4/B2 insulation design. No spacing waiver. |
 | 9 silk / assembly | Process sizes addressed; coverage PARTIAL | Critical labels ≥1.0 mm/0.15 mm; revision, polarity and warning retained. Added available local TP/SCR refs and bottom probe refs; [omissions recorded](fix1/SILK_IDENTIFICATION.json). Removed 117 duplicate Fab annotations and reduced probe Fab text to separate adjacent IDs. Native orientation marks retained. |
 | 10 via-in-pad | Layout/process addressed | Zero via centers in exposed lands; both-face hole-to-land audit minimum **0.142377 mm**, zero below 0.1 mm. Standard off-land tented through vias; no filled/capped premium. Solder/void inspection still required. |
-| 11 assembly / rotation | Disposition complete; supplier offsets OPEN | 100-part review inventory; 94 SMT candidates; D101/SCR301/C217/C218/J501/J502 manual. Exact Bourns D101 retained. Native angles/pad identities preserved; [rotation checklist](fab/assembly/ROTATION_REVIEW.csv) does not falsely accept supplier zero angles. |
+| 11 assembly / rotation | Disposition complete; supplier offsets OPEN | 100-part review inventory; 93 SMT candidates; C101/D101/SCR301/C217/C218/J501/J502 manual (seven parts). The prior 94/six prose count was incorrect; the exports already excluded C101 correctly. Exact Bourns D101 retained. Native angles/pad identities preserved; [rotation checklist](fab/assembly/ROTATION_REVIEW.csv) does not falsely accept supplier zero angles. |
 
 ## Copper and voltage evidence
 
@@ -56,14 +56,14 @@ The coupled 2 mm four-sheet model uses filled copper, via conduction, FR4 0.3 W/
 | 10 | 181.0 | 181.6 | 206.8 | FAIL / FAIL / FAIL |
 | 15 | 158.5 | 159.5 | 185.5 | FAIL / FAIL / FAIL |
 
-Ambient/airflow/derating and a revised loss/cooling or continuous-current case need engineering approval. [Thermal JSON](fix1/THERMAL_SCREEN.json), [proposed qualification plan](fix1/QUALIFICATION_PLAN.md). No unapproved derating was silently changed into a requirement.
+At the central 10 W/m²K case the rises above 50°C ambient are **131.0 K / 131.6 K / 156.8 K** for Q101/Q102/U201. [Thermal mitigation](fix1/THERMAL_MITIGATION.md) proposes a conditional initial **2 A bench ceiling**, with measured/bounded U201 loss ≤0.75 W; the weakest cooling case then gives 85.3/85.5/105.4°C. This is not a new validated rating. Lower-loss FETs alone cannot cure the buck screen. Ambient/airflow/derating and the proposed loss/cooling/current limits need engineering approval and bench measurement. [Thermal JSON](fix1/THERMAL_SCREEN.json), [proposed qualification plan](fix1/QUALIFICATION_PLAN.md). No unapproved derating was silently changed into a requirement.
 
 **Public cost screen, checked 2026-10-05:** JLC advertises **from US$2/five for 1–4 layers**, with the same US$2/five two-layer baseline. This 80×60 mm board fits the published ≤100×100 mm size tier: **advertised entry-price delta US$0/five**. Exact configuration/nonpromotional price, freight/tax and first-build landed budget remain OPEN. [Price/stack detail](fix1/COST_AND_STACK.md), [public page](https://jlcpcb.com/ads/pcb-prototype). No premium via process selected or order placed.
 
 ## Checks, package, and handoff
 
-Native KiCad 9.0.6 **DRC: 0 violations, 0 unconnected, 0 schematic parity** with all severities/all track errors and JLC manufacturing rules. **ERC: 0 errors / 0 warnings.** [Final package DRC](fab/review/DRC.json), [fresh ERC](fix1/RESUME_ERC.rpt). These are geometry/netlist evidence only.
+Native KiCad 9.0.6 **DRC: 0 violations, 0 unconnected, 0 schematic parity** with all severities/all track errors and JLC manufacturing rules. **ERC: 0 errors / 0 warnings.** [Final package DRC](fab/review/DRC.json), [fresh ERC](fix1/HANDBACK_ERC.rpt). These are geometry/netlist evidence only.
 
-[Four-layer Gerber/drill ZIP](fab/V1A_GERBERS_DRILL_REVIEW_ONLY.zip), BOM/CPL/manual disposition, mask-subtracted silk, PDFs/PNGs, bare-board render, native command logs and hash manifest are under [fab](fab/). The [package verification](fix1/PACKAGE_VERIFICATION.json) records final hash/set/ZIP/rule-check integrity. Visual review is recorded separately in [VISUAL_REVIEW.md](fix1/VISUAL_REVIEW.md). The render lacks component models; no populated mechanical clearance claim.
+[Four-layer Gerber/drill ZIP](fab/V1A_GERBERS_DRILL_REVIEW_ONLY.zip), BOM/CPL/manual disposition, mask-subtracted silk, PDFs/PNGs, incomplete assembly render, native command logs and hash manifest are under [fab](fab/). The [package verification](fix1/PACKAGE_VERIFICATION.json) records final hash/set/ZIP/rule-check integrity. Visual review is recorded separately in [VISUAL_REVIEW.md](fix1/VISUAL_REVIEW.md). The render includes many models but omits connector bodies and some custom parts; no populated mechanical clearance claim.
 
-**NEXT:** independent engineering review of the explicit remaining pulse, thermal, spacing, sensing and assembly blockers; R4 release remains BLOCKED. Follow the staged bench procedure only after approval. Requested Git group commits were attempted but worktree `index.lock` creation was denied. No push, permission change or historical-evidence deletion.
+**NEXT:** independent engineering review of the explicit remaining pulse, thermal, spacing, sensing and assembly blockers; R4 release remains BLOCKED. Follow the staged bench procedure only after approval. Earlier requested group commits failed on worktree `index.lock`; see the final resume Git result in LAYOUT_PROGRESS.md. No push, permission change or historical-evidence deletion.

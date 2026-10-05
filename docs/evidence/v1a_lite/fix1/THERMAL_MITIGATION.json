@@ -1,0 +1,205 @@
+{
+  "board_sha256": "f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e",
+  "classification": "CALCULATED / ASSUMED; bench proposal only",
+  "ambient_C_assumed": 50,
+  "junction_screen_C_assumed": 110,
+  "scenarios": [
+    {
+      "h_W_m2K_assumed": 5,
+      "load_scenarios": [
+        {
+          "output_A": 1,
+          "input_A_assumed_90pct_buck_efficiency": 0.3192239734069714,
+          "loss_W_per_FET_at_0.58ohm": 0.05910428821468617,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 0.95309825524852,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            70.07109638828143,
+            70.2816185008906,
+            97.73129024005999
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 2,
+          "input_A_assumed_90pct_buck_efficiency": 0.6527743644449425,
+          "loss_W_per_FET_at_0.58ohm": 0.24714633510836917,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 0.8253544574402117,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            85.34627184442989,
+            85.4690384773059,
+            105.44800635376977
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 3,
+          "input_A_assumed_90pct_buck_efficiency": 1.0027728159029121,
+          "loss_W_per_FET_at_0.58ohm": 0.5832209257820362,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 0.5970467716394936,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            112.64654018173438,
+            112.61246749373566,
+            119.23956123258994
+          ],
+          "conditional_status": "FAIL"
+        },
+        {
+          "output_A": 5,
+          "input_A_assumed_90pct_buck_efficiency": 1.7637614348568282,
+          "loss_W_per_FET_at_0.58ohm": 1.804295551471166,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": -4.251892507461297,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            211.8378086271262,
+            211.23388472054373,
+            169.34902555588
+          ],
+          "conditional_status": "FAIL"
+        }
+      ],
+      "five_A_junction_rise_K": [
+        195.77768774844466,
+        195.70299165099468,
+        220.04875409283238
+      ],
+      "U201_C_with_zero_FET_heat_and_2.417W": 196.0055452149981
+    },
+    {
+      "h_W_m2K_assumed": 10,
+      "load_scenarios": [
+        {
+          "output_A": 1,
+          "input_A_assumed_90pct_buck_efficiency": 0.3192239734069714,
+          "loss_W_per_FET_at_0.58ohm": 0.05910428821468617,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 1.180584339410517,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            60.949031127483536,
+            61.19251468970897,
+            88.55181986336697
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 2,
+          "input_A_assumed_90pct_buck_efficiency": 0.6527743644449425,
+          "loss_W_per_FET_at_0.58ohm": 0.24714633510836917,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 1.104388057665615,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            72.10164169862291,
+            72.3214726889239,
+            92.3472936579868
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 3,
+          "input_A_assumed_90pct_buck_efficiency": 1.0027728159029121,
+          "loss_W_per_FET_at_0.58ohm": 0.5832209257820362,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 0.9682076947026885,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            92.03393394152549,
+            92.21149232014626,
+            99.13068238944787
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 5,
+          "input_A_assumed_90pct_buck_efficiency": 1.7637614348568282,
+          "loss_W_per_FET_at_0.58ohm": 1.804295551471166,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": -4.736736065404434,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            164.45481003585041,
+            164.47877747092247,
+            123.77706770399735
+          ],
+          "conditional_status": "FAIL"
+        }
+      ],
+      "five_A_junction_rise_K": [
+        130.99946742279477,
+        131.58114169875208,
+        156.81333497327807
+      ],
+      "U201_C_with_zero_FET_heat_and_2.417W": 170.39511576573562
+    },
+    {
+      "h_W_m2K_assumed": 15,
+      "load_scenarios": [
+        {
+          "output_A": 1,
+          "input_A_assumed_90pct_buck_efficiency": 0.3192239734069714,
+          "loss_W_per_FET_at_0.58ohm": 0.05910428821468617,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 1.2825309585079399,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            57.875746024337396,
+            58.138682726875686,
+            85.41155288068785
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 2,
+          "input_A_assumed_90pct_buck_efficiency": 0.6527743644449425,
+          "loss_W_per_FET_at_0.58ohm": 0.24714633510836917,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 1.2286507821994697,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            67.5551965697884,
+            67.84085259599894,
+            87.89935165515156
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 3,
+          "input_A_assumed_90pct_buck_efficiency": 1.0027728159029121,
+          "loss_W_per_FET_at_0.58ohm": 0.5832209257820362,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": 1.1323544564711494,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            84.85461142803904,
+            85.18087213564755,
+            92.34562294722623
+          ],
+          "conditional_status": "PASS"
+        },
+        {
+          "output_A": 5,
+          "input_A_assumed_90pct_buck_efficiency": 1.7637614348568282,
+          "loss_W_per_FET_at_0.58ohm": 1.804295551471166,
+          "U201_max_loss_W_for_all_junctions_at_most_110C": -5.101420197006661,
+          "U201_loss_W_assumed_for_bench_screen": 0.75,
+          "conditional_junction_C": [
+            147.70933805386406,
+            148.18312954039834,
+            108.5004564405868
+          ],
+          "conditional_status": "FAIL"
+        }
+      ],
+      "five_A_junction_rise_K": [
+        108.45227981624299,
+        109.49461987427142,
+        135.47051930434574
+      ],
+      "U201_C_with_zero_FET_heat_and_2.417W": 161.59966521738164
+    }
+  ],
+  "proposal": "After engineering approval, start no-load then low-load dummy testing; provisional ceiling 2 A only if U201 loss <=0.75 W and reviewed temperatures/uncertainty pass. No new product current rating.",
+  "limitations": [
+    "Fixed 0.58 ohm requires adequate gate drive and temperature <=150C",
+    "Buck efficiency 90% is assumed, not a guaranteed low-load bound",
+    "0.75 W U201 loss is a proposed acceptance allocation, not a predicted loss",
+    "Other component heat and the coarse thermal model require bench calibration",
+    "No FET substitution or schematic change; lower FET resistance alone cannot fix U201 self-heating at the inherited 2.417 W screen"
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "board_sha256": "f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e",
+  "fabrication_released": false,
+  "checks": [
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/V1A_LITE_BOM.csv",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/01_INPUT_PROTECTION.kicad_sch",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/02_BUCK_5V.kicad_sch",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/05_IO_TEST.kicad_sch",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_sch",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pro",
+      "pass": true
+    },
+    {
+      "check": "input /Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_dru",
+      "pass": true
+    },
+    {
+      "check": "artifact V1A_GERBERS_DRILL_REVIEW_ONLY.zip",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/BOM_JLC.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/BOM_JLC_SMT_REVIEW.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/CPL_JLC.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/CPL_JLC_SMT_REVIEW.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/EXCLUDED.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/MANUAL_ASSEMBLY.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/POSITIONS_KICAD.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact assembly/ROTATION_REVIEW.csv",
+      "pass": true
+    },
+    {
+      "check": "artifact drill/V1A-NPTH-drl_map.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact drill/V1A-NPTH.drl",
+      "pass": true
+    },
+    {
+      "check": "artifact drill/V1A-PTH-drl_map.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact drill/V1A-PTH.drl",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-B_Cu.gbl",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-B_Mask.gbs",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-B_Paste.gbp",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-B_Silkscreen.gbo",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-Edge_Cuts.gm1",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-F_Cu.gtl",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-F_Mask.gts",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-F_Paste.gtp",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-F_Silkscreen.gto",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-In1_Cu.g1",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-In2_Cu.g2",
+      "pass": true
+    },
+    {
+      "check": "artifact gerbers/V1A-job.gbrjob",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/drc.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/drill.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/gerbers.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/layer-pngs.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-B.Cu.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-B.Fab.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-B.Mask.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-B.Paste.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-B.SilkS.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-Edge.Cuts.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-F.Cu.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-F.Fab.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-F.Mask.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-F.Paste.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-F.SilkS.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-In1.Cu.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/pdf-In2.Cu.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/positions.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/render-availability.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/render.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/schematic-netlist.log",
+      "pass": true
+    },
+    {
+      "check": "artifact logs/version.log",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/B.Cu.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/B.Fab.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/B.Mask.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/B.Paste.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/B.SilkS.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/Edge.Cuts.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/F.Cu.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/F.Fab.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/F.Mask.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/F.Paste.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/F.SilkS.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/In1.Cu.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact pdf/In2.Cu.pdf",
+      "pass": true
+    },
+    {
+      "check": "artifact png/B.Cu.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/B.Fab.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/B.Mask.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/B.Paste.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/B.SilkS.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/Edge.Cuts.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/F.Cu.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/F.Fab.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/F.Mask.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/F.Paste.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/F.SilkS.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/In1.Cu.png",
+      "pass": true
+    },
+    {
+      "check": "artifact png/In2.Cu.png",
+      "pass": true
+    },
+    {
+      "check": "artifact render/PCB_3D.png",
+      "pass": true
+    },
+    {
+      "check": "artifact review/COMMANDS.json",
+      "pass": true
+    },
+    {
+      "check": "artifact review/DRC.json",
+      "pass": true
+    },
+    {
+      "check": "artifact review/SCHEMATIC.xml",
+      "pass": true
+    },
+    {
+      "check": "exporter export_lite_fab.py",
+      "pass": true
+    },
+    {
+      "check": "exporter lite_pdf_to_png.swift",
+      "pass": true
+    },
+    {
+      "check": "calculation board identity COPPER_GEOMETRY.json",
+      "pass": true
+    },
+    {
+      "check": "calculation board identity COPPER_RESISTANCE_0.1.json",
+      "pass": true
+    },
+    {
+      "check": "calculation board identity THERMAL_SCREEN.json",
+      "pass": true
+    },
+    {
+      "check": "calculation board identity VOLTAGE_BUDGET.json",
+      "pass": true
+    },
+    {
+      "check": "ZIP exact member set",
+      "pass": true
+    },
+    {
+      "check": "ZIP bytes match loose manufacturing files",
+      "pass": true
+    },
+    {
+      "check": "100 BOM/CPL refs",
+      "pass": true
+    },
+    {
+      "check": "93 SMT refs, seven manual parts excluded",
+      "pass": true
+    },
+    {
+      "check": "seven manual refs exact",
+      "pass": true
+    },
+    {
+      "check": "fab/review/DRC.json",
+      "pass": true
+    },
+    {
+      "check": "fix1/HANDBACK_DRC.json",
+      "pass": true
+    },
+    {
+      "check": "ERC zero",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

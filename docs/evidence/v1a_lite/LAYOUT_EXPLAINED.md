@@ -6,7 +6,7 @@ This is an **80×60 mm, four-layer, nominal 1.6 mm** review candidate. It uses 3
 
 ## Reading the board
 
-These are native top-view coordinates; bottom plots are **not mirrored**. There are 116 schematic footprints plus four mounting holes, including 100 purchased parts. The silk warning and “5A TARGET” do not establish a validated rating. Component models are absent from the KiCad 3D render; use the assembly drawing and actual package dimensions for review.
+These are native top-view coordinates; bottom plots are **not mirrored**. There are 116 schematic footprints plus four mounting holes, including 100 purchased parts. The silk warning and “5A TARGET” do not establish a validated rating. Some connector/custom component models are absent from the KiCad 3D render; use the assembly drawing and actual package dimensions for review.
 
 ![Front copper](fab/png/F.Cu.png)
 ![L2 ground reference](fab/png/In1.Cu.png)
@@ -15,7 +15,7 @@ These are native top-view coordinates; bottom plots are **not mirrored**. There 
 ![Front assembly](fab/png/F.Fab.png)
 ![Bottom probe locations](fab/png/B.Fab.png)
 ![Front identification](fab/png/F.SilkS.png)
-![Bare-board review render](fab/render/PCB_3D.png)
+![Incomplete assembly review render](fab/render/PCB_3D.png)
 
 ## Follow the power
 
@@ -34,7 +34,7 @@ Via holes were moved out of wettable lands on both faces. The final polygon/dril
 
 Silk critical text meets the configured 1.0 mm height / 0.15 mm stroke limits. Numbered connectors, revision and fabrication warning remain. Some dense locations still lack a local silk reference; [the explicit list](fix1/SILK_IDENTIFICATION.json) prevents claiming full coverage. Removed duplicate Fab reference text to improve assembly reading; high-resolution PDFs and native position tables remain essential.
 
-The complete review BOM/CPL contains 100 references. Separate SMT candidate files contain 94; D101, SCR301, C217/C218 and J501/J502 are manual operations. D101 retains **Bourns SMCJ64CA**, external Mouser sourcing, blank LCSC, excluded from SMT placement. The THT anchors are not assumed to be body centroids. All supplier rotation/centroid offsets remain OPEN; zero applied is not zero accepted. See [assembly disposition](fix1/SPACING_AND_ASSEMBLY.md).
+The complete review BOM/CPL contains 100 references. Separate SMT candidate files contain 93; C101, D101, SCR301, C217/C218 and J501/J502 are the seven manual parts. This corrects the earlier prose count; the files already excluded the THT C101. D101 retains **Bourns SMCJ64CA**, external Mouser sourcing, blank LCSC, excluded from SMT placement. The THT anchors are not assumed to be body centroids. All supplier rotation/centroid offsets remain OPEN; zero applied is not zero accepted. See [assembly disposition](fix1/SPACING_AND_ASSEMBLY.md).
 
 ## What the calculations show
 
@@ -50,6 +50,8 @@ Crowbar pulse behavior also remains unqualified. An assumed 10–100 nH loop swe
 
 KiCad 9.0.6 DRC with all severities, all track errors and schematic parity: **0 violations / 0 unconnected / 0 parity**. Fresh ERC: **0 errors / 0 warnings**. Minimum track/default clearance 0.15 mm, power clearance 0.20 mm, vias 0.60/0.30 mm, PTH rules and 0.50 mm copper-edge clearance retained; silk process sizes enforced. No DRC exclusion or severity downgrade added. These are JLC manufacturing checks, not electrical-spacing or safety approval. Environmental/coating/altitude basis and 64/103 V spacing remain OPEN.
 
-The [review package](fab/) includes four-layer Gerbers, drills/maps, ZIP, BOM/CPL/manual lists, PDF/PNG views, bare-board render and integrity manifest. Nothing was uploaded or ordered. JLC's public entry tier is **from US$2/five** for both two-layer and four-layer boards within this size category: **advertised delta US$0**. A configured 80×60 mm quote, freight/tax and the full <1M VND build budget remain OPEN; [dated source detail](fix1/COST_AND_STACK.md).
+The [review package](fab/) includes four-layer Gerbers, drills/maps, ZIP, BOM/CPL/manual lists, PDF/PNG views, incomplete assembly render and integrity manifest. Nothing was uploaded or ordered. JLC's public entry tier is **from US$2/five** for both two-layer and four-layer boards within this size category: **advertised delta US$0**. A configured 80×60 mm quote, freight/tax and the full <1M VND build budget remain OPEN; [dated source detail](fix1/COST_AND_STACK.md).
 
-Electrical findings, thermal qualification, detector Kelvin return, environmental spacing, mechanical access and supplier rotations still block fabrication. Next is independent engineering review. After approval, bring-up must progress through inspection, continuity, current-limited no-load startup, rail verification, dummy-load steps, thermal/ripple/transient/protection tests, and only then Pi integration. Telemetry/shunt are N/A in Lite. Git writes remain blocked by `index.lock` permissions; authorized changes are retained uncommitted, with no push or permission/lock changes.
+Electrical findings, thermal qualification, detector Kelvin return, environmental spacing, mechanical access and supplier rotations still block fabrication. Next is independent engineering review. After approval, bring-up must progress through inspection, continuity, current-limited no-load startup, rail verification, dummy-load steps, thermal/ripple/transient/protection tests, and only then Pi integration. Telemetry/shunt are N/A in Lite. Earlier Git writes failed; the final resume Git outcome is recorded in LAYOUT_PROGRESS.md. No push or permission/lock changes.
+
+**Thermal bench proposal:** [THERMAL_MITIGATION.md](fix1/THERMAL_MITIGATION.md) gives per-device rise and a conditional initial 2 A ceiling, requiring U201 loss ≤0.75 W and reviewed temperature/uncertainty limits. At 50°C ambient and assumed 5 W/m²K cooling it gives Q101/Q102/U201 85.3/85.5/105.4°C. It is a measurement plan, not an approved continuous-current rating.

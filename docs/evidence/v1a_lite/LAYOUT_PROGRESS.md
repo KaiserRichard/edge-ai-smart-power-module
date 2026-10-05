@@ -96,3 +96,27 @@ Baseline evidence is retained in commit `44eee9c` and existing intermediate repo
 `RESUME_SILK_DRC.json`: **0 violations / 0 unconnected / 0 parity**. Exploratory DRC reports retained; earlier failed candidates were corrected before export. No schematic or setpoint changes. Remaining voltage, pulse, thermal, spacing, supplier-orientation and final package evidence follows.
 
 Git finding-group commit: audit staging/commit both failed with `index.lock: Operation not permitted`; further group attempt recorded separately. Changes stay uncommitted per brief; no permissions/lock changes.
+
+### FIX1 — final resume audit and closure, 2026-10-05
+
+Re-read both full briefs and R1 findings 1–11. Baseline is now **51d138b**, which already contains the previous worker's remaining layout changes and draft reports. Fresh pcbnew audit confirms board SHA256 **f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e**. No CAD or schematic changes are needed for this handback; completed work is retained. Historical progress above is not a statement that those changes remain uncommitted today.
+
+| Finding | Final disposition | Verified geometry / handback work |
+| --- | --- | --- |
+| 1 | Layout addressed | Numbered J501/J502 polarity and J503 labels agree with pad nets; visually reviewed. Actual keyed-harness continuity still required. |
+| 2 | Layout addressed | R204 (42.55,40.8), C205 (42.5,39.2), RBOOT 2.600 mm / CBOOT 5.350 mm F.Cu, zero vias. L2 GND only. |
+| 3 | Layout addressed; electrical BLOCKED | SCR K/A/G (69,33.4)/(66.46,33.4)/(63.92,33.4); R308 (73,34.5); local cathode branch and cap orientation retained. Package/lead/ESL, gate waveform, cutoff, energy and recovery remain unqualified. |
+| 4 | Conditional allocation PASS | Bridge 1.073683 mΩ cold, 6.740 mV at 5 A/assumed 85°C. Harness ≤25 mΩ; reference/divider screen 4.809622 V, +59.622 mV. Full operating worst case OPEN. |
+| 5 | Thermal FAIL; mitigation documented | Four-layer live drain copper retained. At 50°C ambient/h=10, rises Q101/Q102/U201 = 131.0/131.6/156.8 K. Added calculated, conditional 2 A initial bench proposal; no schematic substitution or validated rating. |
+| 6 | Geometry addressed; access OPEN | Q102 pair 3.2 mm, SCR pair 3.1 mm, raw ripple pair 3.25 mm. Added complete coordinate/net PROBE_MAP.csv for physical review. |
+| 7 | PARTIAL, explicitly deferred | C206 (41.05,43.6), R203 (40.9,46.3), local top routing retained. Detector-return isolation remains a reviewed redesign item; an extra same-net trace would not make it Kelvin. |
+| 8 | OPEN requirements | 64 V source and 103 V pulse cases distinguished; coating/environment/altitude basis unavailable. Manufacturing DRC is not insulation approval. |
+| 9 | Process sizes addressed; coverage PARTIAL | ≥1.0/0.15 mm board text; warning/revision/polarity checked visually. Missing local silk refs documented and supplemented with probe map. Added missing VISUAL_REVIEW.md. |
+| 10 | Layout/process addressed | Fresh both-face audit: zero via/land overlaps, minimum hole-to-open-land 0.142377 mm. Standard off-land tented vias retained. |
+| 11 | Disposition complete; offsets OPEN | Found/corrected prose error: **93 SMT / seven manual**, including THT C101. Export was already correct. No guessed supplier offsets. |
+
+Added reproducible `scripts/handback_lite_fix1.py`: saved-board inventory, thermal mitigation calculation, probe map and package hash/ZIP/refset checks. Fresh all-severity native **DRC 0/0/0; ERC 0 errors/0 warnings**. Public JLC entry price rechecked 2026-10-05: from $2/five for 1–4 layers, advertised delta $0; exact configured 80×60 mm quote remains OPEN. Final package regeneration and final Git outcome follow below. No push, merge, order, electrical validation or gate release.
+
+**Final package:** regenerated using the existing exporter in an empty temporary directory, verified and copied into `fab/`. Previous manifest retained as `fix1/PRE_HANDBACK_FAB_MANIFEST.json`, previous complete package retained in commit `51d138b`. All input hashes, raster views/render and assembly files are identical; `HANDBACK_EXPORT_IDENTITY.json` binds the visual review to this fresh export. Gerber/drill/PDF metadata and logs were refreshed. **100 package/identity checks PASS**, including ZIP-to-loose-file bytes, DRC, ERC, source hashes, calculation board hashes and corrected manual/SMT sets. Fresh check and export logs are under `fix1/`; no CAD bytes changed.
+
+**Final Git result:** both authorized current staging attempts (finding/evidence group and final package/manager group) failed exit 128: `Unable to create .../.git/worktrees/wt-lite/index.lock: Operation not permitted`. No commit could be made. All current handback changes remain **uncommitted at 51d138b**, as the brief directs; previous workers' committed work remains intact. No permission/lock changes, push, merge, upload or order. `git diff --check` passes. Requested correction/evidence handback is complete with the explicit partial/OPEN dispositions above; fabrication and electrical validation remain BLOCKED.
