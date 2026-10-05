@@ -1,0 +1,264 @@
+{
+  "source": "/Users/quockaiser/Desktop/Research/wt-litesrc/docs/evidence/v1a_lite/SOURCING_PLAN.md",
+  "sha256": "cc8027f7968c58794adcb9394757b93d7396dc92e116dd87fb9083b651d08bdb",
+  "access_date": "2026-10-05",
+  "label": "KNOWN saved sibling sourcing plan; read-only; local offers inherited, not refreshed",
+  "rows": [
+    {
+      "mpn": "RT0603BRD071KL",
+      "installed": 2,
+      "target": 3,
+      "buy": "20",
+      "route": "LCSC, $0.0298 \u00d7 20",
+      "cost_vnd": "15794.00"
+    },
+    {
+      "mpn": "BZT52C12-7-F",
+      "installed": 3,
+      "target": 4,
+      "buy": "10",
+      "route": "LCSC, $0.0771 \u00d7 10",
+      "cost_vnd": "20431.50"
+    },
+    {
+      "mpn": "0451003.MRL",
+      "installed": 1,
+      "target": 2,
+      "buy": "5",
+      "route": "LCSC, $0.2556 \u00d7 5",
+      "cost_vnd": "33867.00"
+    },
+    {
+      "mpn": "BZT52C3V3-7-F",
+      "installed": 1,
+      "target": 2,
+      "buy": "10",
+      "route": "LCSC, $0.0528 \u00d7 10",
+      "cost_vnd": "13992.00"
+    },
+    {
+      "mpn": "0805W8F1002T5E",
+      "installed": 4,
+      "target": 5,
+      "buy": "50",
+      "route": "Local, 50 \u00d7 56 VND",
+      "cost_vnd": "2800.00"
+    },
+    {
+      "mpn": "EEUFR1H101",
+      "installed": 1,
+      "target": 2,
+      "buy": "5",
+      "route": "LCSC, $0.3259 \u00d7 5",
+      "cost_vnd": "43181.75"
+    },
+    {
+      "mpn": "SRP1265A-6R8M",
+      "installed": 1,
+      "target": 2,
+      "buy": "2",
+      "route": "LCSC, $1.1431 \u00d7 2",
+      "cost_vnd": "60584.30"
+    },
+    {
+      "mpn": "TNPW060333K2BEEA",
+      "installed": 1,
+      "target": 2,
+      "buy": "5",
+      "route": "LCSC, $0.0909 \u00d7 5",
+      "cost_vnd": "12044.25"
+    },
+    {
+      "mpn": "0603WAF1001T5E",
+      "installed": 4,
+      "target": 5,
+      "buy": "50",
+      "route": "Local, 50 \u00d7 38 VND",
+      "cost_vnd": "1900.00"
+    },
+    {
+      "mpn": "C0402C220J4GACTU",
+      "installed": 1,
+      "target": 2,
+      "buy": "50",
+      "route": "LCSC, $0.0171 \u00d7 50",
+      "cost_vnd": "22657.50"
+    },
+    {
+      "mpn": "0603WAF1000T5E",
+      "installed": 7,
+      "target": 8,
+      "buy": "50",
+      "route": "Local, 50 \u00d7 76 VND",
+      "cost_vnd": "3800.00"
+    },
+    {
+      "mpn": "0603WAF1300T5E",
+      "installed": 1,
+      "target": 2,
+      "buy": "100",
+      "route": "LCSC, $0.0014 \u00d7 100",
+      "cost_vnd": "3710.00"
+    },
+    {
+      "mpn": "0603WAF1501T5E",
+      "installed": 9,
+      "target": 10,
+      "buy": "100",
+      "route": "LCSC, $0.0020 \u00d7 100",
+      "cost_vnd": "5300.00"
+    },
+    {
+      "mpn": "0603WAF100JT5E",
+      "installed": 1,
+      "target": 2,
+      "buy": "20",
+      "route": "LCSC, $0.0032 \u00d7 20",
+      "cost_vnd": "1696.00"
+    },
+    {
+      "mpn": "IRF9540NPBF",
+      "installed": 2,
+      "target": 3,
+      "buy": "5",
+      "route": "LCSC, $0.3593 \u00d7 5",
+      "cost_vnd": "47607.25"
+    },
+    {
+      "mpn": "0603WAF1003T5E",
+      "installed": 2,
+      "target": 3,
+      "buy": "50",
+      "route": "Local, 50 \u00d7 76 VND",
+      "cost_vnd": "3800.00"
+    },
+    {
+      "mpn": "TYN612RG",
+      "installed": 1,
+      "target": 2,
+      "buy": "2",
+      "route": "LCSC, $0.6784 \u00d7 2",
+      "cost_vnd": "35955.20"
+    },
+    {
+      "mpn": "TVS3300DRVR",
+      "installed": 1,
+      "target": 2,
+      "buy": "2",
+      "route": "LCSC reference, $0.5261 \u00d7 2",
+      "cost_vnd": "27883.30"
+    },
+    {
+      "mpn": "LM61460AANRJRR",
+      "installed": 1,
+      "target": 2,
+      "buy": "2",
+      "route": "LCSC, $1.8929 \u00d7 2",
+      "cost_vnd": "100323.70"
+    },
+    {
+      "mpn": "TL431BIDBZR",
+      "installed": 2,
+      "target": 3,
+      "buy": "5",
+      "route": "LCSC, $0.0784 \u00d7 5",
+      "cost_vnd": "10388.00"
+    },
+    {
+      "mpn": "GRM188R71C104KA01D",
+      "installed": 1,
+      "target": 2,
+      "buy": "2 allocated / 10 shared",
+      "route": "Local, 10 \u00d7 190 VND shared lot",
+      "cost_vnd": "760.00"
+    },
+    {
+      "mpn": "BC807-40,215",
+      "installed": 1,
+      "target": 2,
+      "buy": "20",
+      "route": "LCSC, $0.0200 \u00d7 20",
+      "cost_vnd": "10600.00"
+    },
+    {
+      "mpn": "GRM188R71H104KA93D",
+      "installed": 2,
+      "target": 3,
+      "buy": "3 allocated / 10 shared",
+      "route": "Local, same shared 100 nF lot",
+      "cost_vnd": "1140.00"
+    },
+    {
+      "mpn": "GRM21BR71C105KA01L",
+      "installed": 2,
+      "target": 3,
+      "buy": "10",
+      "route": "Local, 10 \u00d7 400 VND",
+      "cost_vnd": "4000.00"
+    },
+    {
+      "mpn": "GRM32ER61C476KE15L",
+      "installed": 8,
+      "target": 9,
+      "buy": "10",
+      "route": "LCSC, $0.3135 \u00d7 10",
+      "cost_vnd": "83077.50"
+    },
+    {
+      "mpn": "GRM32ER71H106KA12L",
+      "installed": 4,
+      "target": 5,
+      "buy": "5",
+      "route": "LCSC, $0.3322 \u00d7 5",
+      "cost_vnd": "44016.50"
+    },
+    {
+      "mpn": "MMBTA42-TP",
+      "installed": 1,
+      "target": 2,
+      "buy": "10",
+      "route": "LCSC reference, $0.0583 \u00d7 10",
+      "cost_vnd": "15449.50"
+    },
+    {
+      "mpn": "TNPW0603100KBEEA",
+      "installed": 2,
+      "target": 3,
+      "buy": "5",
+      "route": "LCSC, $0.0797 \u00d7 5",
+      "cost_vnd": "10560.25"
+    },
+    {
+      "mpn": "TNPW0603100RBEEA",
+      "installed": 1,
+      "target": 2,
+      "buy": "5",
+      "route": "LCSC, $0.0922 \u00d7 5",
+      "cost_vnd": "12216.50"
+    },
+    {
+      "mpn": "TNPW060310K0BEEA",
+      "installed": 2,
+      "target": 3,
+      "buy": "10",
+      "route": "LCSC, $0.0711 \u00d7 10",
+      "cost_vnd": "18841.50"
+    },
+    {
+      "mpn": "RT0603BRD0724K6L",
+      "installed": 2,
+      "target": 3,
+      "buy": "20",
+      "route": "LCSC, $0.0354 \u00d7 20",
+      "cost_vnd": "18762.00"
+    },
+    {
+      "mpn": "0451007.MRL",
+      "installed": 1,
+      "target": 2,
+      "buy": "5",
+      "route": "LCSC, $0.2345 \u00d7 5",
+      "cost_vnd": "31071.25"
+    }
+  ]
+}

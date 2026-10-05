@@ -1,0 +1,34 @@
+{
+  "label": "EVIDENCE: numerical and accounting tests only; hardware NOT RUN",
+  "checks": {
+    "historical_C_evidence_unchanged": "PASS",
+    "original_calculation_functions_reused": "PASS",
+    "deterministic_regeneration": "PASS",
+    "independent_matrix_exponential": "PASS",
+    "RK4_step_halving": "PASS",
+    "BOM_unique_references": "PASS",
+    "A_B_C_arithmetic": "PASS",
+    "local_shared_lots_charged_once": "PASS",
+    "minimum_purchase_quantities": "PASS",
+    "sibling_source_unchanged": "PASS",
+    "no_CAD_changes": "PASS"
+  },
+  "matrix_solution": {
+    "allowed_delay_us": 0.9366990699293016,
+    "peak_at_0p5us_v": 5.4698255149914985
+  },
+  "pi_step_halving": {
+    "dt10ns_peak_v": 5.701828414017483,
+    "dt5ns_peak_v": 5.701468768493884
+  },
+  "output_sha256": {
+    "PHASE_C2_REVISION.json": "49cfcab5bd494401296b34dd5510e2c8469b274ee79c631d9424cce0e142a116",
+    "PHASE_C2_BOM.csv": "d421074accd334b3f4a3a8988b22374de5a73d385a19205153a13f47126e28bd",
+    "PHASE_C2_PURCHASE_MODEL.csv": "7fb8945aaadbe6d18a3e1643b8acbb7d43082111a0764be898a1c6a145781b5a"
+  },
+  "reproducer_sha256": "b1cc8d67648fef95c41989ea85498a17e55c997d5378ce4d1417ceef131c86a8",
+  "verifier_sha256": "33888d3a1bf1bd9b450b907720db4dab3a7b11830c988f9ffa627f640f7ba104",
+  "ERC": "N/A no CAD edits",
+  "DRC": "N/A no PCB edits",
+  "hardware_tests": "NOT RUN; no fabrication or purchases"
+}

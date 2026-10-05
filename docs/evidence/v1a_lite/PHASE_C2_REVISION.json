@@ -1,0 +1,2415 @@
+{
+  "label": "CALCULATED C2 screens; SELECTED parts are cost candidates, no qualification",
+  "baseline_head": "b5461b0bc5eaae874c3c3ed869dfb03d5295827b",
+  "inputs": {
+    "inherited_phase_c_inputs": {
+      "vin_normal": {
+        "value": [
+          18,
+          26
+        ],
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "Phase C owner requirement"
+      },
+      "vin_fault": {
+        "value": [
+          54.6,
+          64
+        ],
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "Phase C continuous fault requirement"
+      },
+      "pi_window": {
+        "value": [
+          4.75,
+          5.5
+        ],
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "project requirement; upper bound strict"
+      },
+      "load": {
+        "value": 5,
+        "label": "KNOWN",
+        "unit": "A",
+        "basis": "continuous design requirement; peak/duration OPEN"
+      },
+      "temperature_screen": {
+        "value": [
+          -40,
+          85
+        ],
+        "label": "ASSUMED",
+        "unit": "degC",
+        "basis": "TL431BI range; system ambient remains OPEN"
+      },
+      "fet_vds": {
+        "value": 100,
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "Infineon IRF9540NPBF absolute maximum"
+      },
+      "tvs_standoff": {
+        "value": 64,
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "Bourns SMCJ64CA"
+      },
+      "tvs_clamp": {
+        "value": 103,
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "SMCJ64CA at rated 14.6 A pulse; not arbitrary source"
+      },
+      "input_divider": {
+        "value": [
+          102000,
+          10000
+        ],
+        "label": "SELECTED",
+        "unit": "ohm",
+        "basis": "100k + 1k + 1k /10k; E96"
+      },
+      "precision_r_tolerance": {
+        "value": 0.001,
+        "label": "KNOWN",
+        "unit": "fraction",
+        "basis": "selected 0.1% parts"
+      },
+      "precision_tcr_screen": {
+        "value": 2.5e-05,
+        "label": "ASSUMED",
+        "unit": "/degC",
+        "basis": "qualify exact resistor suffixes"
+      },
+      "tl431_ref_nom": {
+        "value": 2.495,
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "TI TL431BI table6.12"
+      },
+      "tl431_ref_25": {
+        "value": [
+          2.483,
+          2.507
+        ],
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "table6.12 at 10mA"
+      },
+      "tl431_temp_deviation": {
+        "value": 0.034,
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "conservatively added both ways"
+      },
+      "tl431_iref_max": {
+        "value": 6.5e-06,
+        "label": "CALCULATED",
+        "unit": "A",
+        "basis": "4uA +2.5uA full-temperature deviation"
+      },
+      "input_cathode_shift_reserve": {
+        "value": 0.026,
+        "label": "ASSUMED",
+        "unit": "V",
+        "basis": "26mV lowering screen; actual transition OPEN"
+      },
+      "cin_min_screen": {
+        "value": 9.2e-05,
+        "label": "ASSUMED",
+        "unit": "F",
+        "basis": "80uF electrolytic +12uF effective ceramics"
+      },
+      "fet_qgd_screen": {
+        "value": 3.4e-08,
+        "label": "ASSUMED",
+        "unit": "C",
+        "basis": "Phase B typical-charge screen; not a maximum"
+      },
+      "turnoff_delay_screen": {
+        "value": 2.5e-05,
+        "label": "ASSUMED",
+        "unit": "s",
+        "basis": "TL431+storage+gate total, not guaranteed"
+      },
+      "input_excess_currents": {
+        "value": [
+          3,
+          15,
+          100
+        ],
+        "label": "ASSUMED",
+        "unit": "A",
+        "basis": "source sensitivity; not UENPO specification"
+      },
+      "fb_resistors": {
+        "value": [
+          100000,
+          24600
+        ],
+        "label": "SELECTED",
+        "unit": "ohm",
+        "basis": "retain owner divider"
+      },
+      "fb_reference": {
+        "value": [
+          0.99,
+          1,
+          1.01
+        ],
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "LM61460 FPWM accuracy; auto light-load OPEN"
+      },
+      "fb_current_typ": {
+        "value": 1e-08,
+        "label": "KNOWN",
+        "unit": "A",
+        "basis": "typical only, no specified max"
+      },
+      "rt": {
+        "value": 33200,
+        "label": "SELECTED",
+        "unit": "ohm",
+        "basis": "400kHz setting"
+      },
+      "frequency_screen": {
+        "value": [
+          356400,
+          400000,
+          444400
+        ],
+        "label": "ASSUMED",
+        "unit": "Hz",
+        "basis": "360\u2013440kHz table expanded by 1%"
+      },
+      "inductance": {
+        "value": 6.8e-06,
+        "label": "SELECTED",
+        "unit": "H",
+        "basis": "SRP1265A-6R8M \u00b120%"
+      },
+      "magnetic_retention": {
+        "value": 0.8,
+        "label": "ASSUMED",
+        "unit": "fraction",
+        "basis": "additional screening drop; not hot guaranteed L"
+      },
+      "inductor_dcr_max": {
+        "value": 0.0115,
+        "label": "KNOWN",
+        "unit": "ohm",
+        "basis": "Bourns at25C"
+      },
+      "output_c_effective": {
+        "value": [
+          2.9728753e-05,
+          2.8008429e-05
+        ],
+        "label": "KNOWN",
+        "unit": "F/part",
+        "basis": "saved typical Murata model at5.1/5.5V"
+      },
+      "c_derating_factors": {
+        "value": [
+          0.9,
+          0.85,
+          0.9
+        ],
+        "label": "ASSUMED",
+        "unit": "fraction",
+        "basis": "initial/temp/aging-model screen"
+      },
+      "cout_normal": {
+        "value": 0.00012,
+        "label": "ASSUMED",
+        "unit": "F",
+        "basis": "six raw ceramics; acceptance target not guarantee"
+      },
+      "cout_fault": {
+        "value": 0.00011,
+        "label": "ASSUMED",
+        "unit": "F",
+        "basis": "reduced at5.5V; lumped sensitivity model"
+      },
+      "cout_esr": {
+        "value": 0.003,
+        "label": "ASSUMED",
+        "unit": "ohm",
+        "basis": "raw bank effective ESR"
+      },
+      "load_release_overshoot": {
+        "value": [
+          0.025,
+          0.1
+        ],
+        "label": "ASSUMED",
+        "unit": "V",
+        "basis": "sensitivity, not a measured maximum"
+      },
+      "crowbar_divider": {
+        "value": [
+          1000,
+          100,
+          30,
+          1000
+        ],
+        "label": "SELECTED",
+        "unit": "ohm",
+        "basis": "upper3 segments/lower1k"
+      },
+      "crowbar_30r_tcr": {
+        "value": 0.0001,
+        "label": "ASSUMED",
+        "unit": "/degC",
+        "basis": "1% thick-film segment; exact maximum OPEN"
+      },
+      "crowbar_cathode_shift": {
+        "value": 0.008,
+        "label": "ASSUMED",
+        "unit": "V",
+        "basis": "Phase B 8mV lowering reserve"
+      },
+      "fault_l_screens": {
+        "value": [
+          4.352e-06,
+          2e-06
+        ],
+        "label": "ASSUMED",
+        "unit": "H",
+        "basis": "normal stressed L /saturation sensitivity"
+      },
+      "fault_c_screens": {
+        "value": [
+          4e-05,
+          0.00011,
+          0.00015
+        ],
+        "label": "ASSUMED",
+        "unit": "F",
+        "basis": "local only /raw lump /combined lump"
+      },
+      "fault_delays": {
+        "value": [
+          2e-07,
+          5e-07,
+          2e-06,
+          5e-06
+        ],
+        "label": "ASSUMED",
+        "unit": "s",
+        "basis": "total detector+PNP+SCR+commutation; no datasheet max"
+      },
+      "scr_igt_25": {
+        "value": 0.015,
+        "label": "KNOWN",
+        "unit": "A",
+        "basis": "TYN612RG maximum at25C"
+      },
+      "scr_cold_igt_screen": {
+        "value": 0.03,
+        "label": "ASSUMED",
+        "unit": "A",
+        "basis": "2x25C max; cold maximum OPEN"
+      },
+      "scr_vgt_25": {
+        "value": 1.3,
+        "label": "KNOWN",
+        "unit": "V",
+        "basis": "25C test maximum; full-temp bound OPEN"
+      },
+      "scr_hot_model": {
+        "value": [
+          0.85,
+          0.03
+        ],
+        "label": "KNOWN",
+        "unit": "V,ohm",
+        "basis": "ST on-state model at125C"
+      },
+      "fuse_i2t": {
+        "value": [
+          1.65,
+          10.32
+        ],
+        "label": "KNOWN",
+        "unit": "A2s",
+        "basis": "nominal melting F101/F301; not total clearing"
+      },
+      "scr_i2t": {
+        "value": 98,
+        "label": "KNOWN",
+        "unit": "A2s",
+        "basis": "nonrepetitive25C specified pulse"
+      },
+      "switch_edge_sum": {
+        "value": [
+          1e-08,
+          3e-08
+        ],
+        "label": "ASSUMED",
+        "unit": "s",
+        "basis": "overlap-loss sensitivity, not vendor bound"
+      },
+      "buck_extra_loss": {
+        "value": [
+          0.1,
+          0.3
+        ],
+        "label": "ASSUMED",
+        "unit": "W",
+        "basis": "LDO/gate/deadtime/Coss placeholder"
+      },
+      "inductor_ac_loss": {
+        "value": [
+          0.05,
+          0.3
+        ],
+        "label": "ASSUMED",
+        "unit": "W",
+        "basis": "core/AC screen; vendor loss model OPEN"
+      },
+      "fet_hot_multiplier": {
+        "value": 2,
+        "label": "ASSUMED",
+        "unit": "ratio",
+        "basis": "relative to117mohm at25C"
+      },
+      "thermal_ambient_target": {
+        "value": [
+          50,
+          110
+        ],
+        "label": "ASSUMED",
+        "unit": "degC",
+        "basis": "ambient/junction design screen, not requirements"
+      },
+      "scr_sink_interface": {
+        "value": 1,
+        "label": "ASSUMED",
+        "unit": "degC/W",
+        "basis": "insulator/contact provisional"
+      },
+      "scr_fault_currents": {
+        "value": [
+          2.2,
+          3,
+          5,
+          6,
+          10,
+          14
+        ],
+        "label": "ASSUMED",
+        "unit": "A",
+        "basis": "source/clearing sensitivity only"
+      }
+    },
+    "bulk_capacitance_factor": {
+      "value": 0.8,
+      "label": "ASSUMED",
+      "unit": "fraction",
+      "basis": "initial -20% only; temperature/endurance minima OPEN"
+    },
+    "bulk_esr": {
+      "value": [
+        0.028,
+        0.008
+      ],
+      "label": "ASSUMED",
+      "unit": "ohm",
+      "basis": "FR catalog |Z| modeled as R; polymer ESR at stated frequency; cold/endurance/ESL OPEN"
+    },
+    "raw_ceramic_screens": {
+      "value": [
+        0.00011,
+        4e-05
+      ],
+      "label": "ASSUMED",
+      "unit": "F",
+      "basis": "not new 25V Murata guaranteed effective C"
+    },
+    "latch_storage_tail": {
+      "value": 2e-05,
+      "label": "ASSUMED",
+      "unit": "s",
+      "basis": "transistor storage, feedback capture and gate tail; not maximum"
+    },
+    "source_currents": {
+      "value": [
+        3,
+        10,
+        50,
+        100
+      ],
+      "label": "ASSUMED",
+      "unit": "A",
+      "basis": "sensitivity only; UENPO bound OPEN"
+    },
+    "cutoff_screens": {
+      "value": [
+        0.00015,
+        0.001
+      ],
+      "label": "ASSUMED",
+      "unit": "s",
+      "basis": "150us rounded gate screen /1ms missed deadline sensitivity"
+    },
+    "scr_effective_heat_capacity": {
+      "value": [
+        0.002,
+        0.01
+      ],
+      "label": "ASSUMED",
+      "unit": "J/K",
+      "basis": "adiabatic sensitivity only; not vendor silicon thermal capacitance"
+    },
+    "scr_Zja_10ms_envelope": {
+      "value": 1.8,
+      "label": "ASSUMED",
+      "unit": "K/W",
+      "basis": "rounded upper graphical reading 0.03*60 from ST Fig5; source rectangle only"
+    },
+    "fet_Zjc_envelope": {
+      "value": [
+        0.16,
+        0.45
+      ],
+      "label": "ASSUMED",
+      "unit": "K/W",
+      "basis": "padded graphical reads Fig11 for150us/1ms; fixed case50C only"
+    },
+    "pi_harness_L": {
+      "value": [
+        2e-07,
+        1e-06,
+        2e-06
+      ],
+      "label": "ASSUMED",
+      "unit": "H",
+      "basis": "sensitivity; harness specification OPEN"
+    },
+    "pi_harness_R": {
+      "value": [
+        0.009,
+        0.059
+      ],
+      "label": "ASSUMED",
+      "unit": "ohm",
+      "basis": "cold F301 alone /plus50mohm harness"
+    }
+  },
+  "bulk_candidates": [
+    {
+      "mpn": "EEUFR1A102",
+      "c_f": 0.001,
+      "esr_ohm": 0.028,
+      "ripple_a": 1.79,
+      "rated_v": 10,
+      "unit_usd": ".1751",
+      "qty": 1
+    },
+    {
+      "mpn": "EEUFR1A102",
+      "c_f": 0.001,
+      "esr_ohm": 0.028,
+      "ripple_a": 1.79,
+      "rated_v": 10,
+      "unit_usd": ".1751",
+      "qty": 2
+    },
+    {
+      "mpn": "6SEPC470M+TS",
+      "c_f": 0.00047,
+      "esr_ohm": 0.008,
+      "ripple_a": 5.7,
+      "rated_v": 6.3,
+      "unit_usd": "1.0743",
+      "qty": 1
+    },
+    {
+      "mpn": "6SEPC470M+TS",
+      "c_f": 0.00047,
+      "esr_ohm": 0.008,
+      "ripple_a": 5.7,
+      "rated_v": 6.3,
+      "unit_usd": "1.0743",
+      "qty": 2
+    }
+  ],
+  "thresholds": [
+    {
+      "segment_ohm": 0,
+      "low_v": 5.112040132153098,
+      "high_v": 5.357981665102926,
+      "margins_for_25mV_100mV_v": [
+        -0.05908979116817026,
+        -0.13408979116816955
+      ]
+    },
+    {
+      "segment_ohm": 20,
+      "low_v": 5.159928894152849,
+      "high_v": 5.409908300640588,
+      "margins_for_25mV_100mV_v": [
+        -0.011201029168418586,
+        -0.08620102916841788
+      ]
+    },
+    {
+      "segment_ohm": 24.9,
+      "low_v": 5.171661640842788,
+      "high_v": 5.422630326347316,
+      "margins_for_25mV_100mV_v": [
+        0.0005317175215200365,
+        -0.07446828247847925
+      ]
+    },
+    {
+      "segment_ohm": 27,
+      "low_v": 5.176689960852762,
+      "high_v": 5.42808262307877,
+      "margins_for_25mV_100mV_v": [
+        0.005560037531494366,
+        -0.06943996246850492
+      ]
+    },
+    {
+      "segment_ohm": 30,
+      "low_v": 5.183873275152724,
+      "high_v": 5.435871618409418,
+      "margins_for_25mV_100mV_v": [
+        0.012743351831455918,
+        -0.06225664816854337
+      ]
+    }
+  ],
+  "normal_ripple_sensitivity": [
+    {
+      "ceramic_c_f": 4e-05,
+      "ripple_pp_v": 0.031104840072336205,
+      "normal_high_25mV_v": 5.178855085467887
+    },
+    {
+      "ceramic_c_f": 0.00011,
+      "ripple_pp_v": 0.016356803246972296,
+      "normal_high_25mV_v": 5.171481067055206
+    },
+    {
+      "ceramic_c_f": 0.00012,
+      "ripple_pp_v": 0.015654515779097825,
+      "normal_high_25mV_v": 5.171129923321268
+    }
+  ],
+  "ideal_lumped_faults": [
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "c_f": 0.00091,
+      "delay_us": 0.5,
+      "trip_time_us": 9.682976072254391,
+      "trip_current_a": 48.030439721460375,
+      "allowed_delay_us": 1.1557482226376443,
+      "peak_cap_v": 5.462847630721554,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "c_f": 0.00091,
+      "delay_us": 0.5,
+      "trip_time_us": 6.847946580218442,
+      "trip_current_a": 70.51857424795026,
+      "allowed_delay_us": 0.7868384169232314,
+      "peak_cap_v": 5.475892194952247,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "c_f": 0.00091,
+      "delay_us": 0.5,
+      "trip_time_us": 9.26527926360889,
+      "trip_current_a": 50.490219264993186,
+      "allowed_delay_us": 1.0993127113500676,
+      "peak_cap_v": 5.464262269603801,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "c_f": 0.00091,
+      "delay_us": 0.5,
+      "trip_time_us": 6.539079148694265,
+      "trip_current_a": 74.16332785834305,
+      "allowed_delay_us": 0.7481117497156605,
+      "peak_cap_v": 5.478032122044058,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "c_f": 0.0017100000000000001,
+      "delay_us": 0.5,
+      "trip_time_us": 13.753652664368817,
+      "trip_current_a": 65.57328660050054,
+      "allowed_delay_us": 1.590166728930419,
+      "peak_cap_v": 5.455356802649607,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "c_f": 0.0017100000000000001,
+      "delay_us": 0.5,
+      "trip_time_us": 9.61685514303492,
+      "trip_current_a": 96.48570378043364,
+      "allowed_delay_us": 1.080448372075853,
+      "peak_cap_v": 5.464761978113711,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "c_f": 0.0017100000000000001,
+      "delay_us": 0.5,
+      "trip_time_us": 13.137661859779866,
+      "trip_current_a": 68.95825100172607,
+      "allowed_delay_us": 1.511985208377519,
+      "peak_cap_v": 5.456380146168141,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "c_f": 0.0017100000000000001,
+      "delay_us": 0.5,
+      "trip_time_us": 9.172262779511767,
+      "trip_current_a": 101.49092388586793,
+      "allowed_delay_us": 1.0271022431747543,
+      "peak_cap_v": 5.466298573904053,
+      "screen_status": "PASS",
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "c_f": 0.00048600000000000005,
+      "delay_us": 0.5,
+      "trip_time_us": 6.743792125175451,
+      "trip_current_a": 35.36479561211857,
+      "allowed_delay_us": 0.8388889361895281,
+      "peak_cap_v": 5.473351558794976,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "c_f": 0.00048600000000000005,
+      "delay_us": 0.5,
+      "trip_time_us": 4.8428362665523315,
+      "trip_current_a": 51.71517961238748,
+      "allowed_delay_us": 0.5732020358254164,
+      "peak_cap_v": 5.4914615660233626,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "c_f": 0.00048600000000000005,
+      "delay_us": 0.5,
+      "trip_time_us": 6.467839990263641,
+      "trip_current_a": 37.14961409407148,
+      "allowed_delay_us": 0.7984401588875534,
+      "peak_cap_v": 5.475305953749379,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "c_f": 0.00048600000000000005,
+      "delay_us": 0.5,
+      "trip_time_us": 4.631798732307728,
+      "trip_current_a": 54.36992486630043,
+      "allowed_delay_us": 0.5451553775768384,
+      "peak_cap_v": 5.49444986447629,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "c_f": 0.000862,
+      "delay_us": 0.5,
+      "trip_time_us": 9.390277651815046,
+      "trip_current_a": 46.769083519901976,
+      "allowed_delay_us": 1.1243622925704366,
+      "peak_cap_v": 5.463618121753391,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "c_f": 0.000862,
+      "delay_us": 0.5,
+      "trip_time_us": 6.64857738863291,
+      "trip_current_a": 68.64890392978702,
+      "allowed_delay_us": 0.7656502900161851,
+      "peak_cap_v": 5.477036196599629,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "c_f": 0.000862,
+      "delay_us": 0.5,
+      "trip_time_us": 8.986772036017197,
+      "trip_current_a": 49.162013313530025,
+      "allowed_delay_us": 1.0695038974967905,
+      "peak_cap_v": 5.465072757648721,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "c_f": 0.000862,
+      "delay_us": 0.5,
+      "trip_time_us": 6.349461343560232,
+      "trip_current_a": 72.19547557217926,
+      "allowed_delay_us": 0.7279806272788202,
+      "peak_cap_v": 5.4792383328561725,
+      "screen_status": "PASS",
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    }
+  ],
+  "esr_faults": [
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 3.292013423189784,
+      "allowed_delay_us": 0.6143225366312803,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.48782359593533,
+        "2": 5.6554983647865935,
+        "5": 6.0333014335455015
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 2.0434873461448047,
+      "allowed_delay_us": 0.48780662117811197,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.501608275787452,
+        "2": 5.702580527579579,
+        "5": 6.129204533863943
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 2.2006035169337412,
+      "allowed_delay_us": 0.3730470292553062,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.52275555510966,
+        "2": 5.822330038073755,
+        "5": 6.5454989080552
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 1.3684818752618888,
+      "allowed_delay_us": 0.27193460448908896,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.5554179429086386,
+        "2": 5.945984086746475,
+        "5": 6.80409682169042
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 3.126964461201662,
+      "allowed_delay_us": 0.5744951567062759,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.491495682954935,
+        "2": 5.67239513844647,
+        "5": 6.083773942695405
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 1.9389290645308874,
+      "allowed_delay_us": 0.4502963824192618,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.507119267966882,
+        "2": 5.726460931324218,
+        "5": 6.194499984416451
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 2.084772247900665,
+      "allowed_delay_us": 0.3501290198700144,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.528729588968638,
+        "2": 5.852405778926368,
+        "5": 6.642628942005123
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0008,
+      "bulk_esr_ohm": 0.028,
+      "trip_us": 1.2986527838751944,
+      "allowed_delay_us": 0.25295981675497303,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.564868017018246,
+        "2": 5.991521848293984,
+        "5": 6.9361930826067955
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 4.578646875981312,
+      "allowed_delay_us": 0.9366988552020864,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.469825514210132,
+        "2": 5.575429109405176,
+        "5": 5.8025420951318
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 3.59301240392435,
+      "allowed_delay_us": 0.8977048241062853,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.4713723088916115,
+        "2": 5.58124158385823,
+        "5": 5.816681431838685
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 2.7932348460198098,
+      "allowed_delay_us": 0.5136924620340904,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.498255543442579,
+        "2": 5.69884357157067,
+        "5": 6.142951204395282
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 2.030709789298665,
+      "allowed_delay_us": 0.4556736459509793,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.506290115075854,
+        "2": 5.724544794039974,
+        "5": 6.191796555280078
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 4.28866440609872,
+      "allowed_delay_us": 0.8645090029189793,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.47268669468129,
+        "2": 5.587519644167236,
+        "5": 5.835290182653894
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 3.3283254448565343,
+      "allowed_delay_us": 0.8233437787865255,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.474624114831703,
+        "2": 5.594568347334336,
+        "5": 5.85184352886436
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 2.62146883739006,
+      "allowed_delay_us": 0.47605632494930494,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.503299920708663,
+        "2": 5.721681813094294,
+        "5": 6.208400955650952
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0016,
+      "bulk_esr_ohm": 0.014,
+      "trip_us": 1.8911509095505667,
+      "allowed_delay_us": 0.4163752129690699,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.51300110085657,
+        "2": 5.752647945020085,
+        "5": 6.266398022575485
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "EEUFR1A102",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 4.8381793328935006,
+      "allowed_delay_us": 0.7973005855750319,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.475444740527623,
+        "2": 5.607118273714111,
+        "5": 5.928248335735353
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 3.9905755278637662,
+      "allowed_delay_us": 0.7275640680499513,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.479367443791644,
+        "2": 5.62496821914048,
+        "5": 5.983374587930459
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 3.1491797515484325,
+      "allowed_delay_us": 0.5158659896780204,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.497952290270059,
+        "2": 5.712398304873986,
+        "5": 6.26526194057644
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 2.5191924355741713,
+      "allowed_delay_us": 0.4647465215673982,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.505056068332733,
+        "2": 5.7451090546810715,
+        "5": 6.368484028357703
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 4.586127100638299,
+      "allowed_delay_us": 0.7545977533804739,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.477753236927764,
+        "2": 5.617758158975754,
+        "5": 5.961838624100254
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 3.770193498957198,
+      "allowed_delay_us": 0.6878874831952028,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.481958128364676,
+        "2": 5.6369706165270905,
+        "5": 6.021521858889367
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 2.969041009807151,
+      "allowed_delay_us": 0.4858942512013248,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.5019360272110465,
+        "2": 5.731502239418372,
+        "5": 6.3282531811034834
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.00037600000000000003,
+      "bulk_esr_ohm": 0.008,
+      "trip_us": 2.363587099069515,
+      "allowed_delay_us": 0.43637989526527865,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.509733226084684,
+        "2": 5.767349348762513,
+        "5": 6.441517974846036
+      },
+      "screen_status": {
+        "0.5": "FAIL",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 1
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 7.126618298308939,
+      "allowed_delay_us": 1.0909681193210834,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.464538330170302,
+        "2": 5.557879009432222,
+        "5": 5.777358582422334
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 6.5193546048497915,
+      "allowed_delay_us": 1.041331124826531,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.465942318609433,
+        "2": 5.564133117816766,
+        "5": 5.796144921534084
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 4.561703886238023,
+      "allowed_delay_us": 0.7170887590886216,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.480010025280689,
+        "2": 5.628299494850888,
+        "5": 5.9954414201927015
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 24,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 4.107150183048055,
+      "allowed_delay_us": 0.6821103404658017,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.482354140713031,
+        "2": 5.639039712914629,
+        "5": 6.02895750180985
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 6.742133200700767,
+      "allowed_delay_us": 1.0340957036167646,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.466153521137083,
+        "2": 5.565134658590009,
+        "5": 5.799455948100386
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 4.352e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 6.157582789628599,
+      "allowed_delay_us": 0.9867163963088689,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.467649103351916,
+        "2": 5.5718247674884065,
+        "5": 5.819677035166546
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 0.00011,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 4.289267256560712,
+      "allowed_delay_us": 0.6770508822105717,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.4827093237009645,
+        "2": 5.640821219068583,
+        "5": 6.035294170165334
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    },
+    {
+      "vin_v": 26,
+      "l_h": 2e-06,
+      "ceramic_c_f": 4e-05,
+      "bulk_c_f": 0.0007520000000000001,
+      "bulk_esr_ohm": 0.004,
+      "trip_us": 3.851086977729341,
+      "allowed_delay_us": 0.643555391700213,
+      "pi_peak_unity_interface_v": {
+        "0.5": 5.485236377712462,
+        "2": 5.652440650106734,
+        "5": 6.071739263329168
+      },
+      "screen_status": {
+        "0.5": "PASS",
+        "2": "FAIL",
+        "5": "FAIL"
+      },
+      "mpn": "6SEPC470M+TS",
+      "qty": 2
+    }
+  ],
+  "selected_fault": {
+    "vin_v": 24,
+    "l_h": 4.352e-06,
+    "ceramic_c_f": 0.00011,
+    "bulk_c_f": 0.0016,
+    "bulk_esr_ohm": 0.014,
+    "trip_us": 4.578646875981312,
+    "allowed_delay_us": 0.9366988552020864,
+    "pi_peak_unity_interface_v": {
+      "0.5": 5.469825514210132,
+      "2": 5.575429109405176,
+      "5": 5.8025420951318
+    },
+    "screen_status": {
+      "0.5": "PASS",
+      "2": "FAIL",
+      "5": "FAIL"
+    },
+    "mpn": "EEUFR1A102",
+    "qty": 2
+  },
+  "pi_two_node_screens": [
+    {
+      "delay_us": 0.5,
+      "harness_l_h": 2e-07,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 5.584375417077109,
+      "raw_peak_v": 5.4743486376028745,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 0.5,
+      "harness_l_h": 2e-07,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 5.417011379015059,
+      "raw_peak_v": 5.472134521566209,
+      "status": "PASS"
+    },
+    {
+      "delay_us": 0.5,
+      "harness_l_h": 1e-06,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 5.926899778032207,
+      "raw_peak_v": 5.471421489061192,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 0.5,
+      "harness_l_h": 1e-06,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 5.701828414017483,
+      "raw_peak_v": 5.471094885032149,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 0.5,
+      "harness_l_h": 2e-06,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 6.135078957537413,
+      "raw_peak_v": 5.471037593984664,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 0.5,
+      "harness_l_h": 2e-06,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 5.9068849372201075,
+      "raw_peak_v": 5.4707400797305015,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 2,
+      "harness_l_h": 2e-07,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 5.6136872530116655,
+      "raw_peak_v": 5.590759074909462,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 2,
+      "harness_l_h": 2e-07,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 5.495061824882629,
+      "raw_peak_v": 5.583495887057142,
+      "status": "PASS"
+    },
+    {
+      "delay_us": 2,
+      "harness_l_h": 1e-06,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 6.020211570798691,
+      "raw_peak_v": 5.582603696455782,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 2,
+      "harness_l_h": 1e-06,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 5.804253286664394,
+      "raw_peak_v": 5.581368778495411,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 2,
+      "harness_l_h": 2e-06,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 6.2435396053349,
+      "raw_peak_v": 5.579464490332469,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 2,
+      "harness_l_h": 2e-06,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 6.018669271415774,
+      "raw_peak_v": 5.578876241016256,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 5,
+      "harness_l_h": 2e-07,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 5.69519399762933,
+      "raw_peak_v": 5.821643366598054,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 5,
+      "harness_l_h": 2e-07,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 5.662824460905054,
+      "raw_peak_v": 5.8138083306105015,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 5,
+      "harness_l_h": 1e-06,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 6.166599882905095,
+      "raw_peak_v": 5.824075424843277,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 5,
+      "harness_l_h": 1e-06,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 5.97877253783487,
+      "raw_peak_v": 5.8200557445078065,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 5,
+      "harness_l_h": 2e-06,
+      "harness_r_ohm": 0.009,
+      "pi_peak_v": 6.433299300012183,
+      "raw_peak_v": 5.815278482418706,
+      "status": "FAIL"
+    },
+    {
+      "delay_us": 5,
+      "harness_l_h": 2e-06,
+      "harness_r_ohm": 0.059,
+      "pi_peak_v": 6.219474611997245,
+      "raw_peak_v": 5.813715055290984,
+      "status": "FAIL"
+    }
+  ],
+  "latch_bias": [
+    {
+      "vin_v": 18,
+      "ctrl12_v": 7.928085106382979,
+      "branch_drive_a": 0.0007028085106382979,
+      "old_gate_base_sink_a": 0.00040255319148936174,
+      "ballast_w": 0.02536086740606609,
+      "ctrl12_load_a": 0.0025179787234042555
+    },
+    {
+      "vin_v": 24,
+      "ctrl12_v": 10.268510638297874,
+      "branch_drive_a": 0.0009368510638297874,
+      "old_gate_base_sink_a": 0.0006153191489361704,
+      "ballast_w": 0.04713845002263466,
+      "ctrl12_load_a": 0.0034328723404255324
+    },
+    {
+      "vin_v": 26,
+      "ctrl12_v": 11.048652482269505,
+      "branch_drive_a": 0.0010148652482269505,
+      "old_gate_base_sink_a": 0.0006862411347517732,
+      "ballast_w": 0.05588569814898646,
+      "ctrl12_load_a": 0.003737836879432625
+    },
+    {
+      "vin_v": 64,
+      "ctrl12_v": 12,
+      "branch_drive_a": 0.0011099999999999999,
+      "old_gate_base_sink_a": 0,
+      "ballast_w": 0.676,
+      "ctrl12_load_a": 0.012837
+    }
+  ],
+  "cutoff": {
+    "q101_forward_isolation": "FAIL: body diode, no finite isolation time",
+    "tl431_max_propagation_s": null,
+    "scr_max_tgt_s": null,
+    "q102_max_qg_at_test_c": 9.7e-08,
+    "q102_max_qgd_at_test_c": 5.1e-08,
+    "scaled_gate_charge_c": 1.29495e-07,
+    "gate_to_1V_screen_us": 129.495,
+    "latch_to_off_screen_us": 149.495,
+    "guaranteed_off_delay_us": null
+  },
+  "scr_single_event": [
+    {
+      "vin_v": 24,
+      "source_current_a": 3,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.0013499999999999999,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.5866619935916344,
+      "overlap_bound_i2t_a2s": 4.737269230774903,
+      "ratio_to_98": 0.04833948194668268,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 118.09722089987753,
+      "total_peak_sum_bound_a": 271.0972208998775,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 0.15911610771457962,
+      "input_tail_to_zero_us": 84.0537003118407,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 88.21099462051686,
+        "peak_time_us": 199.99999999999997,
+        "scr_energy_waveform_j": 0.0729673781521977,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        129.5580538572898,
+        65.91161077145796
+      ],
+      "source_only_tj_10ms_Zja_envelope": 55.076
+    },
+    {
+      "vin_v": 24,
+      "source_current_a": 3,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.009000000000000001,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.5866619935916344,
+      "overlap_bound_i2t_a2s": 4.760219230774903,
+      "ratio_to_98": 0.04857366562015208,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 118.09722089987753,
+      "total_peak_sum_bound_a": 271.0972208998775,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 0.16197210771457965,
+      "input_tail_to_zero_us": 84.0537003118407,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 75.18703461689462,
+        "peak_time_us": 1050.0,
+        "scr_energy_waveform_j": 0.06914402449817249,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        130.98605385728982,
+        66.19721077145796
+      ],
+      "source_only_tj_10ms_Zja_envelope": 55.076
+    },
+    {
+      "vin_v": 24,
+      "source_current_a": 10,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.015,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.5892766600889596,
+      "overlap_bound_i2t_a2s": 4.786063230266879,
+      "ratio_to_98": 0.04883737990068244,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 118.366257729616,
+      "total_peak_sum_bound_a": 278.366257729616,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 0.16147734068904718,
+      "input_tail_to_zero_us": 82.72531969173772,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 90.42445348351717,
+        "peak_time_us": 199.99999999999997,
+        "scr_energy_waveform_j": 0.07901537877204395,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        130.7386703445236,
+        66.14773406890473
+      ],
+      "source_only_tj_10ms_Zja_envelope": 70.7
+    },
+    {
+      "vin_v": 24,
+      "source_current_a": 10,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.1,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.5892766600889596,
+      "overlap_bound_i2t_a2s": 5.041063230266879,
+      "ratio_to_98": 0.051439420717008966,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 118.366257729616,
+      "total_peak_sum_bound_a": 278.366257729616,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 0.17635234068904718,
+      "input_tail_to_zero_us": 82.72531969173772,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 77.72417869790519,
+        "peak_time_us": 1050.0,
+        "scr_energy_waveform_j": 0.08346642719399247,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        138.1761703445236,
+        67.63523406890472
+      ],
+      "source_only_tj_10ms_Zja_envelope": 70.7
+    },
+    {
+      "vin_v": 24,
+      "source_current_a": 50,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.37499999999999994,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.6553420483913116,
+      "overlap_bound_i2t_a2s": 6.064259395173934,
+      "ratio_to_98": 0.0618801979099381,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 125.5948433701744,
+      "total_peak_sum_bound_a": 325.59484337017443,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 0.2050552058670441,
+      "input_tail_to_zero_us": 75.18431381937688,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 107.304962517101,
+        "peak_time_us": 189.99999999999997,
+        "scr_energy_waveform_j": 0.12379723202626114,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        152.52760293352205,
+        70.5055205867044
+      ],
+      "source_only_tj_10ms_Zja_envelope": 261.5
+    },
+    {
+      "vin_v": 24,
+      "source_current_a": 50,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 2.5,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.6553420483913116,
+      "overlap_bound_i2t_a2s": 12.439259395173936,
+      "ratio_to_98": 0.1269312183181014,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 125.5948433701744,
+      "total_peak_sum_bound_a": 325.59484337017443,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 0.4324302058670441,
+      "input_tail_to_zero_us": 75.18431381937688,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 103.54923711898417,
+        "peak_time_us": 1040.0,
+        "scr_energy_waveform_j": 0.22339631879334995,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        266.2151029335221,
+        93.2430205867044
+      ],
+      "source_only_tj_10ms_Zja_envelope": 261.5
+    },
+    {
+      "vin_v": 24,
+      "source_current_a": 100,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 1.4999999999999998,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.8477208328430154,
+      "overlap_bound_i2t_a2s": 10.016395748529044,
+      "ratio_to_98": 0.10220811988294944,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 147.31009408523002,
+      "total_peak_sum_bound_a": 397.31009408523005,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 0.3303907746969588,
+      "input_tail_to_zero_us": 67.00143373640152,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 141.3694432872291,
+        "peak_time_us": 179.99999999999997,
+        "scr_energy_waveform_j": 0.20387456263470377,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        215.19538734847941,
+        83.03907746969588
+      ],
+      "source_only_tj_10ms_Zja_envelope": 743.0
+    },
+    {
+      "vin_v": 24,
+      "source_current_a": 100,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 10.0,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 0.8477208328430154,
+      "overlap_bound_i2t_a2s": 35.51639574852905,
+      "ratio_to_98": 0.36241220151560255,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 147.31009408523002,
+      "total_peak_sum_bound_a": 397.31009408523005,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.047232,
+      "scr_energy_screen_j": 1.167640774696959,
+      "input_tail_to_zero_us": 67.00143373640152,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 166.89343178450093,
+        "peak_time_us": 1029.9999999999998,
+        "scr_energy_waveform_j": 0.5369699013082728,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        633.8203873484795,
+        166.7640774696959
+      ],
+      "source_only_tj_10ms_Zja_envelope": 743.0
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 3,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.0013499999999999999,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.363808974989804,
+      "overlap_bound_i2t_a2s": 16.06871017496941,
+      "ratio_to_98": 0.16396643035683073,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 322.09021740494245,
+      "total_peak_sum_bound_a": 475.09021740494245,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 0.5083598238692209,
+      "input_tail_to_zero_us": 84.41215942482248,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 203.5980409896328,
+        "peak_time_us": 199.99999999999997,
+        "scr_energy_waveform_j": 0.2069962986598074,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        304.17991193461046,
+        100.83598238692208
+      ],
+      "source_only_tj_10ms_Zja_envelope": 55.076
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 3,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.009000000000000001,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.363808974989804,
+      "overlap_bound_i2t_a2s": 16.091660174969412,
+      "ratio_to_98": 0.16420061403030012,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 322.09021740494245,
+      "total_peak_sum_bound_a": 475.09021740494245,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 0.5112158238692209,
+      "input_tail_to_zero_us": 84.41215942482248,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 181.5673575098089,
+        "peak_time_us": 1050.0,
+        "scr_energy_waveform_j": 0.19175702105396952,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        305.60791193461046,
+        101.12158238692209
+      ],
+      "source_only_tj_10ms_Zja_envelope": 55.076
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 10,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.015,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.366441065608615,
+      "overlap_bound_i2t_a2s": 16.117556446825844,
+      "ratio_to_98": 0.16446486170230454,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 322.188385433332,
+      "total_peak_sum_bound_a": 482.188385433332,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 0.5107195005625191,
+      "input_tail_to_zero_us": 83.92783678183753,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 206.090514588865,
+        "peak_time_us": 199.99999999999997,
+        "scr_energy_waveform_j": 0.2130327997906941,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        305.35975028125955,
+        101.07195005625192
+      ],
+      "source_only_tj_10ms_Zja_envelope": 70.7
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 10,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.1,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.366441065608615,
+      "overlap_bound_i2t_a2s": 16.372556446825843,
+      "ratio_to_98": 0.16706690251863104,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 322.188385433332,
+      "total_peak_sum_bound_a": 482.188385433332,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 0.5255945005625191,
+      "input_tail_to_zero_us": 83.92783678183753,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 184.38351632705132,
+        "peak_time_us": 1050.0,
+        "scr_energy_waveform_j": 0.20607268760239805,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        312.79725028125955,
+        102.5594500562519
+      ],
+      "source_only_tj_10ms_Zja_envelope": 70.7
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 50,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 0.37499999999999994,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.434827805474498,
+      "overlap_bound_i2t_a2s": 17.402716666423494,
+      "ratio_to_98": 0.1775787414941173,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 324.80825103886053,
+      "total_peak_sum_bound_a": 524.8082510388606,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 0.5544221396032599,
+      "input_tail_to_zero_us": 81.13534747733115,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 223.82563858646392,
+        "peak_time_us": 199.99999999999997,
+        "scr_energy_waveform_j": 0.25773399640852995,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        327.21106980162995,
+        105.442213960326
+      ],
+      "source_only_tj_10ms_Zja_envelope": 261.5
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 50,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 2.5,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.434827805474498,
+      "overlap_bound_i2t_a2s": 23.777716666423494,
+      "ratio_to_98": 0.24262976190228056,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 324.80825103886053,
+      "total_peak_sum_bound_a": 524.8082510388606,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 0.78179713960326,
+      "input_tail_to_zero_us": 81.13534747733115,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 211.62602902616902,
+        "peak_time_us": 1050.0,
+        "scr_energy_waveform_j": 0.34598406124150904,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        440.89856980163,
+        128.179713960326
+      ],
+      "source_only_tj_10ms_Zja_envelope": 261.5
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 100,
+      "cutoff_ms": 0.15,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 1.4999999999999998,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.643274908582101,
+      "overlap_bound_i2t_a2s": 21.4030579757463,
+      "ratio_to_98": 0.21839855077292142,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 333.0954793394501,
+      "total_peak_sum_bound_a": 583.0954793394501,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 0.6809586859695559,
+      "input_tail_to_zero_us": 77.65303059625187,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 254.35405407453783,
+        "peak_time_us": 199.99999999999997,
+        "scr_energy_waveform_j": 0.33783612473148394,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        390.47934298477793,
+        118.09586859695558
+      ],
+      "source_only_tj_10ms_Zja_envelope": 743.0
+    },
+    {
+      "vin_v": 64,
+      "source_current_a": 100,
+      "cutoff_ms": 1.0,
+      "output_c_max_f": 0.0028418,
+      "input_c_max_f": 0.000164,
+      "source_i2t_a2s": 10.0,
+      "output_i2t_a2s": 0.99107775,
+      "input_i2t_a2s": 4.643274908582101,
+      "overlap_bound_i2t_a2s": 46.90305797574631,
+      "ratio_to_98": 0.47860263240557455,
+      "output_peak_model_a": 150.0,
+      "input_peak_model_a": 333.0954793394501,
+      "total_peak_sum_bound_a": 583.0954793394501,
+      "output_energy_stored_j": 0.042982225,
+      "input_energy_stored_j": 0.335872,
+      "scr_energy_screen_j": 1.5182086859695563,
+      "input_tail_to_zero_us": 77.65303059625187,
+      "thermal_waveform": {
+        "tj_estimate_no_sink_c": 272.36842240147575,
+        "peak_time_us": 1050.0,
+        "scr_energy_waveform_j": 0.6597837662859288,
+        "case_capacity_assumed_j_k": 0.1,
+        "label": "CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN"
+      },
+      "adiabatic_tj_at_50C_for_Cth_2mJ_10mJ": [
+        809.1043429847781,
+        201.82086859695562
+      ],
+      "source_only_tj_10ms_Zja_envelope": 743.0
+    }
+  ],
+  "fet_turnoff": [
+    {
+      "vin_v": 24,
+      "current_a": 3,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.010799999999999999,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 61.519999999999996,
+      "status": "OPEN"
+    },
+    {
+      "vin_v": 24,
+      "current_a": 3,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 0.07200000000000001,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 82.4,
+      "status": "OPEN"
+    },
+    {
+      "vin_v": 24,
+      "current_a": 10,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.036,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 88.4,
+      "status": "OPEN"
+    },
+    {
+      "vin_v": 24,
+      "current_a": 10,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 0.24,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 158.0,
+      "status": "OPEN"
+    },
+    {
+      "vin_v": 24,
+      "current_a": 50,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.18,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 242.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 24,
+      "current_a": 50,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 1.2,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 590.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 24,
+      "current_a": 100,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.36,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 434.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 24,
+      "current_a": 100,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 2.4,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 1130.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 3,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.0288,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 80.72,
+      "status": "OPEN"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 3,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 0.192,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 136.4,
+      "status": "OPEN"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 10,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.09599999999999999,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 152.4,
+      "status": "OPEN"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 10,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 0.64,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 338.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 50,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.48,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 562.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 50,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 3.2,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 1490.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 100,
+      "overlap_us": 150.0,
+      "rectangular_energy_j": 0.96,
+      "zjc_screen_c_w": 0.16,
+      "tj_fixed_case_50C": 1074.0,
+      "status": "FAIL"
+    },
+    {
+      "vin_v": 64,
+      "current_a": 100,
+      "overlap_us": 1000.0,
+      "rectangular_energy_j": 6.4,
+      "zjc_screen_c_w": 0.45,
+      "tj_fixed_case_50C": 2930.0,
+      "status": "FAIL"
+    }
+  ],
+  "totals": {
+    "label": "CALCULATED planning estimates; unpriced safety qualification/redesign remains OPEN",
+    "A_core_vnd": "348655.2000",
+    "B_core_board_connectors_vnd": "382940.90000",
+    "C_first_build_vnd": "1603992.7000",
+    "C_local_sourcing_vnd": "1277914.5500",
+    "C_gap_vnd": "603992.7000",
+    "C_local_gap_vnd": "277914.5500",
+    "core_purchase_vnd": {
+      "phase_c_spares": "932489.9500",
+      "local_plan_spares": "840195.5500"
+    },
+    "overhead_assumed_vnd": {
+      "pcb_five_board_lot": 53000,
+      "wire_fanout": 35000,
+      "shipping_tax": 180000,
+      "assembly_consumables": 50000,
+      "rework": 50000,
+      "thermal_contingency": 40000
+    },
+    "local_overhead_assumed_vnd": {
+      "pcb_five_board_lot": 53000,
+      "local_connectors": 4719,
+      "wire_heatshrink": 20000,
+      "lcsc_shipping_import_reserve": 80000,
+      "pcb_shipping_tax_reserve": 120000,
+      "local_delivery_reserve": 20000,
+      "assembly_consumables": 50000,
+      "rework_reserve": 50000,
+      "thermal_contingency": 40000
+    },
+    "local_without_thermal_contingency_vnd": "1237914.5500",
+    "local_pickup_without_thermal_contingency_vnd": "1217914.5500",
+    "unpriced": "Input-FET thermal hardware; compliant surge coordination; latch reset/hold-up; qualified capacitor/SCR solution. Not zero.",
+    "local_plan_source_sha256": "cc8027f7968c58794adcb9394757b93d7396dc92e116dd87fb9083b651d08bdb"
+  },
+  "changed_mpns": {
+    "C217_C218": "2x EEUFR1A102",
+    "C209_C214": "6x GRM31CR61E476ME44L (25V; 1206 replaces1210)",
+    "Q104_Q106": "2x MMBTA42-TP added",
+    "Q105": "1x BC807-40,215 added",
+    "R160_R163": "4x 0805W8F1002T5E added",
+    "R164_R166": "3x 0603WAF1003T5E added"
+  },
+  "checks": {
+    "01_raw_crowbar_no_intervening_fuse_topology": "PASS",
+    "02_literal_Q101_only_input_isolation": "FAIL",
+    "03_Q102_latch_static_bias_screen": "PASS",
+    "04_power_removal_only_reset_and_max_cutoff_delay": "OPEN",
+    "05_selected_24V_0p5us_unity_interface_screen": "PASS",
+    "06_selected_24V_2us_unity_interface_screen": "FAIL",
+    "07_guaranteed_Pi_pin_less_than_5p5V": "OPEN",
+    "07b_Pi_1uH_59mohm_0p5us_sensitivity": "FAIL",
+    "08_normal_nuisance_trip_100mV_screen": "FAIL",
+    "09_F301_open_no_longer_disconnects_raw_SCR": "PASS",
+    "10_25V_caps_at_uncontained_26_to_29V": "FAIL",
+    "11_guaranteed_raw_cap_voltage_containment": "OPEN",
+    "12_SCR_local_10nH_di_dt_screen": "FAIL",
+    "13_SCR_I2t_temperature_no_heatsink_qualification": "OPEN",
+    "14_SCR_holding_current_zero_current_and_backfeed": "OPEN",
+    "15_FET_24V_64V_turnoff_hot_SOA": "OPEN",
+    "16_existing_103V_TVS_to_100V_FET": "FAIL",
+    "17_cost_C_under_1000000": "FAIL",
+    "18_local_cost_C_under_1000000": "FAIL",
+    "19_Phase_D_change_list_and_C2_evidence": "PASS",
+    "20_R1_release_hardware_qualification": "OPEN"
+  },
+  "reproducer_sha256": "b1cc8d67648fef95c41989ea85498a17e55c997d5378ce4d1417ceef131c86a8",
+  "baseline_json_sha256": "1d70683b17e2263ada06246c071d93e7eaa981b2eefca42132541b26e119267b"
+}

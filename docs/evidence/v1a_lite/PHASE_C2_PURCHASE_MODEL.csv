@@ -1,0 +1,71 @@
+method,mpn,installed,target,buy,unit_usd,cost_vnd,label
+phase_c_spares,0451003.MRL,1,2,5,0.2556,33867.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0451007.MRL,1,2,5,0.2345,31071.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0603WAF1000T5E,7,9,100,0.0032,8480.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0603WAF1001T5E,23,29,100,0.0026,6890.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0603WAF1003T5E,5,7,100,0.0031,8215.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0603WAF100JT5E,1,2,20,0.0032,1696.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0603WAF1300T5E,1,2,100,0.0014,3710.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0603WAF1501T5E,1,2,100,0.0020,5300.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,0805W8F1002T5E,8,10,100,0.0034,9010.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,"BC807-40,215",2,3,20,0.0200,10600.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,BZT52C12-7-F,3,4,10,0.0771,20431.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,BZT52C3V3-7-F,1,2,10,0.0528,13992.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,C0402C220J4GACTU,1,2,50,0.0171,22657.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,EEUFR1A102,2,3,5,0.1751,23200.7500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,EEUFR1H101,1,2,5,0.3259,43181.7500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,GRM188R71C104KA01D,1,2,50,0.0170,22525.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,GRM188R71H104KA93D,2,3,50,0.0171,22657.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,GRM21BR71C105KA01L,2,3,10,0.0621,16456.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,GRM31CR61E476ME44L,6,8,8,0.6136,130083.2000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,GRM32ER61C476KE15L,2,3,5,0.3135,41538.7500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,GRM32ER71H106KA12L,4,5,5,0.3322,44016.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,IRF9540NPBF,2,3,5,0.3593,47607.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,LM61460AANRJRR,1,2,2,1.8929,100323.7000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,MMBTA42-TP,3,4,10,0.0583,15449.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,RT0603BRD071KL,4,5,20,0.0298,15794.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,RT0603BRD0724K6L,2,3,20,0.0354,18762.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,SMCJ64CA,1,2,2,0.5,26500.0,ASSUMED TVS allowance; rejected coordination candidate
+phase_c_spares,SRP1265A-6R8M,1,2,2,1.1431,60584.3000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,TL431BIDBZR,2,3,5,0.0784,10388.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,TNPW0603100KBEEA,2,3,5,0.0797,10560.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,TNPW0603100RBEEA,1,2,5,0.0922,12216.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,TNPW060310K0BEEA,1,2,10,0.0711,18841.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,TNPW060333K2BEEA,1,2,5,0.0909,12044.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,TVS3300DRVR,1,2,2,0.5261,27883.3000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+phase_c_spares,TYN612RG,1,2,2,0.6784,35955.2000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,0451003.MRL,1,2,5,0.2556,33867.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,0451007.MRL,1,2,5,0.2345,31071.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,0603WAF1000T5E,7,8,50,local lot,3800.00,ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share
+local_plan_spares,0603WAF1001T5E,23,24,50,local lot,1900.00,ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share
+local_plan_spares,0603WAF1003T5E,5,6,50,local lot,3800.00,ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share
+local_plan_spares,0603WAF100JT5E,1,2,20,0.0032,1696.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,0603WAF1300T5E,1,2,100,0.0014,3710.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,0603WAF1501T5E,1,2,100,0.0020,5300.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,0805W8F1002T5E,8,9,50,local lot,2800.00,ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share
+local_plan_spares,"BC807-40,215",2,3,20,0.0200,10600.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,BZT52C12-7-F,3,4,10,0.0771,20431.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,BZT52C3V3-7-F,1,2,10,0.0528,13992.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,C0402C220J4GACTU,1,2,50,0.0171,22657.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,EEUFR1A102,2,3,5,0.1751,23200.7500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,EEUFR1H101,1,2,5,0.3259,43181.7500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,GRM188R71C104KA01D,1,2,2 allocated / 10 shared,local lot,760.00,ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share
+local_plan_spares,GRM188R71H104KA93D,2,3,3 allocated / 10 shared,local lot,1140.00,ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share
+local_plan_spares,GRM21BR71C105KA01L,2,3,10,local lot,4000.00,ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share
+local_plan_spares,GRM31CR61E476ME44L,6,7,7,0.6136,113822.8000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,GRM32ER61C476KE15L,2,3,5,0.3135,41538.7500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,GRM32ER71H106KA12L,4,5,5,0.3322,44016.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,IRF9540NPBF,2,3,5,0.3593,47607.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,LM61460AANRJRR,1,2,2,1.8929,100323.7000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,MMBTA42-TP,3,4,10,0.0583,15449.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,RT0603BRD071KL,4,5,20,0.0298,15794.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,RT0603BRD0724K6L,2,3,20,0.0354,18762.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,SMCJ64CA,1,2,2,0.5,26500.0,ASSUMED TVS allowance; rejected coordination candidate
+local_plan_spares,SRP1265A-6R8M,1,2,2,1.1431,60584.3000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,TL431BIDBZR,2,3,5,0.0784,10388.0000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,TNPW0603100KBEEA,2,3,5,0.0797,10560.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,TNPW0603100RBEEA,1,2,5,0.0922,12216.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,TNPW060310K0BEEA,1,2,10,0.0711,18841.5000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,TNPW060333K2BEEA,1,2,5,0.0909,12044.2500,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,TVS3300DRVR,1,2,2,0.5261,27883.3000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN
+local_plan_spares,TYN612RG,1,2,2,0.6784,35955.2000,KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN

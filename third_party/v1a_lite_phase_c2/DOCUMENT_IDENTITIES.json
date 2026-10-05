@@ -1,0 +1,42 @@
+[
+  {
+    "name": "IRF9540N",
+    "revision": "01/04; supplier mirror of manufacturer sheet,9 pages",
+    "read_copy": "/private/tmp/litec2/C2575.pdf",
+    "sha256": "c09f80da5e9d7f900ca9ca13f8a9d9f0c39e2cecff062f2d9c839155cd33d67f",
+    "use": "referenced only; no circuit copied",
+    "license": "manufacturer copyright; no open license asserted"
+  },
+  {
+    "name": "TYN612",
+    "revision": "DocID7475 Rev11,October2016",
+    "read_copy": "/private/tmp/litec2/C262993.pdf",
+    "sha256": "de2df9b9d5beb4a35097d739e45b5e5e929968e8acaacdc41c851d38793a4bf7",
+    "use": "referenced only; no circuit copied",
+    "license": "manufacturer copyright; no open license asserted"
+  },
+  {
+    "name": "Panasonic_FR",
+    "revision": "1-Sep-25; ABA0000C1259",
+    "read_copy": "/private/tmp/litec2/fr.pdf",
+    "sha256": "47cf18461482e03270f72e475f855080e11e2154e3f343f735e5cb0e61e27df7",
+    "use": "referenced only; no circuit copied",
+    "license": "manufacturer copyright; no open license asserted"
+  },
+  {
+    "name": "Panasonic_SEPC",
+    "revision": "catalog printed revision not found; hash pinned",
+    "read_copy": "/private/tmp/litec2/C1578723.pdf",
+    "sha256": "3214e94691060c965402cc392604e22b1de19dd9439a43938e6daff433cb8a93",
+    "use": "referenced only; no circuit copied",
+    "license": "manufacturer copyright; no open license asserted"
+  },
+  {
+    "name": "Murata_25V",
+    "revision": "Last updated2015/12/28",
+    "read_copy": "/private/tmp/litec2/C403725.pdf",
+    "sha256": "d33dff462cf1ad4284a04a35c2bc3500d789a632b32931834ddb3219d22d76ee",
+    "use": "referenced only; no circuit copied",
+    "license": "manufacturer copyright; no open license asserted"
+  }
+]

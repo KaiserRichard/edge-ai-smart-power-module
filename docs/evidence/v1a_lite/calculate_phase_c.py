@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Phase C screening calculations. Standard library only; no CAD or network writes.
 
-Run from any directory. Results are models, not electrical qualification.
+Run from any directory; --c2 generates additive Phase C2 evidence only.
+Results are models, not electrical qualification.
 All numeric model inputs carry an epistemic label; derived sections inherit
 CALCULATED, and their assumptions are explicitly listed in inputs / report.
 """
@@ -424,7 +425,323 @@ def calculate():
     return result
 
 
+# Phase C2 is an additive review. Original Phase C outputs remain historical.
+def c2_rk4(state, dt, derivative):
+    k1 = derivative(state)
+    k2 = derivative([v+dt*k/2 for v,k in zip(state,k1)])
+    k3 = derivative([v+dt*k/2 for v,k in zip(state,k2)])
+    k4 = derivative([v+dt*k for v,k in zip(state,k3)])
+    return [v+dt*(a+2*b+2*c+d)/6 for v,a,b,c,d in zip(state,k1,k2,k3,k4)]
+
+
+def c2_esr_fault(vin, inductance, ceramic_c, bulk_c, bulk_r, dt=1e-8):
+    """Separate ceramic and bulk capacitor states; ESRs are modeling inputs.
+
+    Load is released, source is stiff during first microseconds. Pi voltage
+    equals raw only in the zero-impedance interface screen, not a pin bound.
+    """
+    old = crowbar(); vt = old['static_trip_screen_v'][1]
+    initial = old['initial_fault_v']; rc = .003
+    state = [old['initial_fault_a'], initial, initial]
+    def node(s):
+        i,vc,vb=s
+        return (i+vc/rc+vb/bulk_r)/(1/rc+1/bulk_r)
+    def derivative(s):
+        v=node(s);i,vc,vb=s
+        return [(vin-v)/inductance,(v-vc)/(rc*ceramic_c),(v-vb)/(bulk_r*bulk_c)]
+    crossings={}; samples=[]; old_v=node(state); t=0
+    for _ in range(12000):
+        samples.append((t,old_v,state[0]))
+        if vt in crossings and t>=crossings[vt]+5.01e-6:break
+        new=c2_rk4(state,dt,derivative);new_v=node(new)
+        for target in (vt,5.5,10,16,25):
+            if target not in crossings and old_v<target<=new_v:
+                crossings[target]=t+dt*(target-old_v)/(new_v-old_v)
+        state=new;old_v=new_v;t+=dt
+    assert vt in crossings and 5.5 in crossings
+    def interp(t):
+        n=min(int(t/dt),len(samples)-2);f=(t-samples[n][0])/dt
+        return samples[n][1]*(1-f)+samples[n+1][1]*f
+    peaks={str(d):interp(crossings[vt]+d*1e-6) for d in (.5,2,5)}
+    return dict(vin_v=vin,l_h=inductance,ceramic_c_f=ceramic_c,bulk_c_f=bulk_c,
+                bulk_esr_ohm=bulk_r,trip_us=crossings[vt]*1e6,
+                allowed_delay_us=(crossings[5.5]-crossings[vt])*1e6,
+                pi_peak_unity_interface_v=peaks,
+                screen_status={d:'PASS' if v<5.5 else 'FAIL' for d,v in peaks.items()})
+
+
+def c2_pi_fault(delay_us, harness_l, harness_r, dt=1e-8):
+    """Illustrative two-node transient, including cable stored current.
+
+    Ideal abrupt SCR establishment after chosen delay; source holds 24 V until
+    I reaches ASSUMED 50 A after firing. This is NOT a source specification.
+    Early 40-us window only; late SCR stress separately calculated.
+    """
+    c=crowbar();rc=.003;rb=.014;cc=110e-6;cb=1600e-6;cp=40e-6;l=4.352e-6
+    s=[c['initial_fault_a'],c['initial_fault_v'],c['initial_fault_v'],5,
+       c['initial_fault_v']-5*harness_r]
+    fired=False;trip=None;peak=s[4];peak_raw=0;t=0
+    def raw(s):
+        i,vc,vb,ih,vp=s;g=1/rc+1/rb;n=i-ih+vc/rc+vb/rb
+        if fired:g+=1/.030;n+=.85/.030
+        return n/g
+    def deriv(s):
+        v=raw(s);i,vc,vb,ih,vp=s;di=(24-v)/l
+        if fired and i>=50 and di>0:di=0
+        return [di,(v-vc)/(rc*cc),(v-vb)/(rb*cb),
+                (v-vp-harness_r*ih)/harness_l,ih/cp]
+    for _ in range(round(40e-6/dt)):
+        v=raw(s)
+        if trip is None and v>=c['static_trip_screen_v'][1]:trip=t
+        if trip is not None and t>=trip+delay_us*1e-6:fired=True
+        peak=max(peak,s[4]);peak_raw=max(peak_raw,raw(s))
+        s=c2_rk4(s,dt,deriv);t+=dt
+    assert fired
+    return dict(delay_us=delay_us,harness_l_h=harness_l,harness_r_ohm=harness_r,
+                pi_peak_v=peak,raw_peak_v=peak_raw,
+                status='PASS' if peak<5.5 else 'FAIL')
+
+
+def c2_thermal_waveform(current, cutoff_s, vin):
+    """Illustrative transient-temperature estimate, NOT guaranteed thermal Z.
+
+    ST Fig4 short-time diffusion extrapolation below 1 ms; fixed-case response
+    plus adiabatic case rise for ASSUMED 0.1 J/K package thermal capacitance.
+    No external heatsink. Separate cap/source waveforms approximate electrical
+    coupling. Local turn-on current spreading is not represented.
+    """
+    step=2e-6;end=cutoff_s+.001;co=.0028418;ci=.000164
+    inp=[vin,current];powers=[];energy=0
+    for n in range(math.ceil(end/step)):
+        t=(n+.5)*step
+        source=current if t<cutoff_s else 0
+        output=150*math.exp(-t/(.031*co))
+        input_i=0
+        if t>=cutoff_s:
+            if inp[1]>0:
+                input_i=inp[1]
+                inp=c2_rk4(inp,step,lambda s:[-s[1]/ci,(s[0]-.85-.0415*s[1])/4.352e-6])
+        i=source+output+input_i;p=.85*i+.030*i*i
+        energy+=p*step;powers.append(p)
+    def zjc(t):
+        if t<=0:return 0
+        # .17*1.3 at1ms and .5*1.3 at10ms, approximate curve readings.
+        if t<.001:return .221*math.sqrt(t/.001)
+        return .221*(t/.001)**(math.log(.65/.221)/math.log(10))
+    best=(0,0);case_energy=0
+    for k in range(1,len(powers)+1):
+        case_energy+=powers[k-1]*step
+        if k%5 and k!=len(powers):continue
+        rise=sum(p*(zjc((k-j)*step)-zjc((k-j-1)*step)) for j,p in enumerate(powers[:k]))
+        tj=50+rise+case_energy/.1
+        if tj>best[0]:best=(tj,k*step)
+    return dict(tj_estimate_no_sink_c=best[0],peak_time_us=best[1]*1e6,
+                scr_energy_waveform_j=energy,case_capacity_assumed_j_k=.1,
+                label='CALCULATED from ASSUMED waveform and extrapolated Zjc; max temperature OPEN')
+
+
+def c2_pulse_stress(current, cutoff_s, vin, dt=1e-7):
+    """Source rectangle + output RC discharge + isolated input RLC discharge.
+
+    Full reservoir retained at cutoff is a conservative energy sensitivity.
+    Input discharge may in reality start earlier; 3*sum(I2t) bounds arbitrary
+    overlap of these three positive modeled current components. No fuse credit.
+    """
+    co=(6*47e-6*1.2+2*47e-6*1.1+2*1000e-6*1.2)
+    ci=100e-6*1.2+4*10e-6*1.1  # nominal upper initial tolerance; not hot guarantee
+    ro=.031;dv=5.5-.85
+    qout=co*dv;i2out=dv*dv*co/(2*ro)
+    s=[vin,current];qinp=0;i2inp=0;pin_peak=current;t=0
+    def deriv(s):
+        v,i=s
+        return [-i/ci,(v-.85-i*(.030+.0115))/4.352e-6]
+    while s[1]>0 and t<.01:
+        n=c2_rk4(s,dt,deriv)
+        if n[1]<0:
+            dt_last=dt*s[1]/(s[1]-n[1]);qinp+=s[1]*dt_last/2;i2inp+=s[1]**2*dt_last/3
+            t+=dt_last;break
+        qinp+=(s[1]+n[1])*dt/2;i2inp+=(s[1]**2+n[1]**2)*dt/2
+        pin_peak=max(pin_peak,n[1]);s=n;t+=dt
+    i2source=current**2*cutoff_s
+    i2bound=3*(i2source+i2out+i2inp)
+    qtotal=current*cutoff_s+qout+qinp
+    energy=.85*qtotal+.030*i2bound
+    return dict(vin_v=vin,source_current_a=current,cutoff_ms=cutoff_s*1000,
+                output_c_max_f=co,input_c_max_f=ci,
+                source_i2t_a2s=i2source,output_i2t_a2s=i2out,input_i2t_a2s=i2inp,
+                overlap_bound_i2t_a2s=i2bound,ratio_to_98=i2bound/98,
+                output_peak_model_a=dv/ro,input_peak_model_a=pin_peak,
+                total_peak_sum_bound_a=current+dv/ro+pin_peak,
+                output_energy_stored_j=.5*co*5.5**2,input_energy_stored_j=.5*ci*vin**2,
+                scr_energy_screen_j=energy,input_tail_to_zero_us=t*1e6,
+                thermal_waveform=c2_thermal_waveform(current,cutoff_s,vin),
+                # Effective silicon heat capacity is ASSUMED, not a vendor specification.
+                adiabatic_tj_at_50C_for_Cth_2mJ_10mJ=[50+energy/.002,50+energy/.010],
+                source_only_tj_10ms_Zja_envelope=50+1.8*(.85*current+.030*current**2))
+
+
+def c2_bom_and_costs():
+    D=Decimal;fx=D(26500)
+    rows=list(csv.DictReader((HERE/'PHASE_C_BOM.csv').open()))
+    old_by_ref={r['ref']:r for r in rows}
+    obs=json.loads((ROOT/'third_party/v1a_lite_phase_b/LCSC_OBSERVATIONS.json').read_text())
+    obs.update(json.loads((ROOT/'third_party/v1a_lite_phase_c2/LCSC_OBSERVATIONS.json').read_text()))
+    offers={v['productModel']:v for v in obs.values() if 'productModel' in v}
+    for r in rows:
+        r['qty']=int(r['qty'])
+        if r['ref'].startswith('C209 '):
+            o=offers['GRM31CR61E476ME44L'];r.update(mpn=o['productModel'],value='47uF 25V X5R 1206 raw; containment OPEN',unit_vnd=str(D('.6136')*fx),source=o['url'],access_date='2026-10-05',stock_observation=str(o['stockNumber']),notes='Rating upgrade only; 25V still below 26-29V uncontained fault; effective C and footprint requalification required')
+            r['extended_vnd']=str(D(r['unit_vnd'])*r['qty'])
+        if r['ref']=='F301':r['value']='7A wiring backup AFTER raw crowbar; no OV-clearing duty'
+        if r['ref']=='HS301 KIT301':
+            r['value']='Unqualified thermal contingency; no heatsink fitted in C2 event model'
+            r['notes']='40k kept in C until no-heatsink event survival qualified; zero-sink sensitivity separate'
+        r['selection_label']='SELECTED C2 analysis candidate; NOT FOR FABRICATION'
+    def clone(original,refs,value_):
+        r=dict(old_by_ref[original]);r.update(ref=refs,qty=len(refs.split()),value=value_,scope='LATCH_C2',selection_label='PROPOSED Q102 latch implementation; qualification OPEN')
+        r['extended_vnd']=str(D(r['unit_vnd'])*r['qty']);rows.append(r)
+    clone('Q103','Q104 Q106','MMBTA42 latch NPN / Q103 base clamp')
+    clone('Q301','Q105','BC807 regenerative latch PNP; emitter CTRL12')
+    clone('R145','R160 R161 R162 R163','10k latch collector feedback trigger and clamp-base drives')
+    clone('R146','R164 R165 R166','100k latch transistor base-emitter bleeds')
+    o=offers['EEUFR1A102'];r=dict(old_by_ref['C101'])
+    r.update(ref='C217 C218',mpn=o['productModel'],qty=2,value='1000uF 10V FR raw-node bulk; pulse/rating OPEN',unit_vnd=str(D('.1751')*fx),extended_vnd=str(2*D('.1751')*fx),source=o['url'],access_date='2026-10-05',stock_observation=str(o['stockNumber']),scope='COMMON_BUCK',selection_label='SELECTED two-cap C2 cost candidate; qualification OPEN',notes='28mohm catalog impedance used as ASSUMED ESR; 1.79A ripple each')
+    rows.append(r)
+    fields=list(rows[0])
+    with (HERE/'PHASE_C2_BOM.csv').open('w') as f:
+        w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n');w.writeheader();w.writerows(rows)
+    physical=[r for r in rows if r['scope'] not in ('THERMAL_C_ONLY','UNPRICED')]
+    refs=[ref for r in physical for ref in r['ref'].split()]
+    assert len(refs)==len(set(refs))
+    core=[r for r in physical if r['scope']!='CONNECTORS'];counts=Counter()
+    for r in core:
+        assert D(r['unit_vnd'])*r['qty']==D(r['extended_vnd'])
+        counts[r['mpn']]+=r['qty']
+    local_basis=json.loads((ROOT/'third_party/v1a_lite_phase_c2/LOCAL_SOURCING_BASIS.json').read_text())
+    local={r['mpn']:r for r in local_basis['rows'] if r['route'].startswith('Local')}
+    purchases=[]
+    for method in ('phase_c_spares','local_plan_spares'):
+        for mpn,n in sorted(counts.items()):
+            need=n+(max(1,math.ceil(.25*n)) if method=='phase_c_spares' else 1)
+            if method=='local_plan_spares' and mpn in local:
+                lr=local[mpn];cost=D(lr['cost_vnd']);buy=lr['buy'];unit=None
+                # Existing shared 100nF 10-piece lot has enough for 3 installed+spares;
+                # 10k and 100k additions also fit unchanged local 50-piece lots.
+                assert need<=50
+                label='ASSUMED approved-equivalent local candidate; saved plan lot once/allocated share'
+            else:
+                if mpn=='SMCJ64CA':buy=need;unit=D('.5');label='ASSUMED TVS allowance; rejected coordination candidate'
+                else:
+                    o=offers[mpn];moq=o['minBuyNumber'];buy=math.ceil(max(need,moq)/moq)*moq
+                    unit=D([t for t in o['productPriceList'] if t['ladder']<=buy][-1]['productPrice'])
+                    label='KNOWN dated offer / CALCULATED quantity; stock/landed quote OPEN'
+                cost=unit*buy*fx
+            purchases.append(dict(method=method,mpn=mpn,installed=n,target=need,buy=buy,
+                                  unit_usd=str(unit) if unit is not None else 'local lot',cost_vnd=str(cost),label=label))
+    with (HERE/'PHASE_C2_PURCHASE_MODEL.csv').open('w') as f:
+        w=csv.DictWriter(f,fieldnames=list(purchases[0]),lineterminator='\n');w.writeheader();w.writerows(purchases)
+    A=sum(D(r['extended_vnd']) for r in core)
+    connectors=sum(D(r['extended_vnd']) for r in physical if r['scope']=='CONNECTORS')
+    cash={m:sum(D(r['cost_vnd']) for r in purchases if r['method']==m) for m in ('phase_c_spares','local_plan_spares')}
+    overhead={'pcb_five_board_lot':53000,'wire_fanout':35000,'shipping_tax':180000,'assembly_consumables':50000,'rework':50000,'thermal_contingency':40000}
+    local_overhead={'pcb_five_board_lot':53000,'local_connectors':4719,'wire_heatshrink':20000,'lcsc_shipping_import_reserve':80000,'pcb_shipping_tax_reserve':120000,'local_delivery_reserve':20000,'assembly_consumables':50000,'rework_reserve':50000,'thermal_contingency':40000}
+    C=cash['phase_c_spares']+D('263502.75')+sum(overhead.values())
+    CL=cash['local_plan_spares']+sum(local_overhead.values())
+    return dict(label='CALCULATED planning estimates; unpriced safety qualification/redesign remains OPEN',A_core_vnd=str(A),B_core_board_connectors_vnd=str(A+connectors+10600),C_first_build_vnd=str(C),C_local_sourcing_vnd=str(CL),C_gap_vnd=str(C-1000000),C_local_gap_vnd=str(CL-1000000),core_purchase_vnd={k:str(v) for k,v in cash.items()},overhead_assumed_vnd=overhead,local_overhead_assumed_vnd=local_overhead,local_without_thermal_contingency_vnd=str(CL-40000),local_pickup_without_thermal_contingency_vnd=str(CL-60000),unpriced='Input-FET thermal hardware; compliant surge coordination; latch reset/hold-up; qualified capacitor/SCR solution. Not zero.',local_plan_source_sha256=local_basis['sha256'])
+
+
+def calculate_c2():
+    old=json.loads((HERE/'PHASE_C_CALCULATIONS.json').read_text()); b=buck();c=crowbar()
+    candidates=[dict(mpn='EEUFR1A102',c_f=.001,esr_ohm=.028,ripple_a=1.79,rated_v=10,unit_usd='.1751',qty=q) for q in (1,2)]
+    candidates += [dict(mpn='6SEPC470M+TS',c_f=470e-6,esr_ohm=.008,ripple_a=5.7,rated_v=6.3,unit_usd='1.0743',qty=q) for q in (1,2)]
+    rows=[];ideal=[]
+    for cap in candidates:
+        for vin in (24,26):
+            for l in (4.352e-6,2e-6):
+                for cc in (110e-6,40e-6):
+                    x=c2_esr_fault(vin,l,cc,cap['c_f']*.8*cap['qty'],cap['esr_ohm']/cap['qty']);x.update(mpn=cap['mpn'],qty=cap['qty']);rows.append(x)
+                x=lc_fault(vin,c['static_trip_screen_v'][1],c['initial_fault_v'],c['initial_fault_a'],l,110e-6+cap['c_f']*.8*cap['qty'],.5e-6)
+                x.update(mpn=cap['mpn'],qty=cap['qty']);ideal.append(x)
+    thresholds=[]
+    for segment in (0,20,24.9,27,30):
+        e=.001+25e-6*65;top=1100+segment;er=1100*e+segment*(.01+100e-6*65)
+        lo=(2.483-.034-.008)*(1+(top-er)/(1000*(1+e)))
+        hi=(2.507+.034)*(1+(top+er)/(1000*(1-e)))+6.5e-6*(top+er)
+        thresholds.append(dict(segment_ohm=segment,low_v=lo,high_v=hi,margins_for_25mV_100mV_v=[lo-n for n in b['normal_high_screens_v']]))
+    # Gate max charge at its specified test condition; scaled to 13.35 V as an ASSUMED screen.
+    qgate=97e-9*13.35/10;gate_us=qgate/(1/1000)*1e6
+    latch=[]
+    for vin in (18,24,26,64):
+        # In latched state, CTRL12 feeds three latch branches and old 11k chain.
+        def consumption(v):
+            old_detector=(v-2.5)/1000 if vin==64 else (v-3.5)/11000
+            return 3*(v-.9)/10000+.7/100000+old_detector
+        ctrl=min(12,(vin/4000+3*.9/10000-.7/100000+3.5/11000)/(1/4000+3/10000+1/11000))
+        latch.append(dict(vin_v=vin,ctrl12_v=ctrl,branch_drive_a=(ctrl-.9)/10000,old_gate_base_sink_a=0 if vin==64 else (ctrl-3.5)/11000,ballast_w=(vin-ctrl)**2/4000,ctrl12_load_a=consumption(ctrl)))
+    pulses=[c2_pulse_stress(i,t,vin) for vin in (24,64) for i in (3,10,50,100) for t in (.00015,.001)]
+    fet=[]
+    for vin in (24,64):
+        for i in (3,10,50,100):
+            for t in (150e-6,1e-3):
+                # Graph-read padded Zjc screens, fixed case; not free-air bounds.
+                z=.16 if t==150e-6 else .45
+                fet.append(dict(vin_v=vin,current_a=i,overlap_us=t*1e6,rectangular_energy_j=vin*i*t,zjc_screen_c_w=z,tj_fixed_case_50C=50+vin*i*z,status='FAIL' if 50+vin*i*z>175 else 'OPEN'))
+    costs=c2_bom_and_costs()
+    selected=next(x for x in rows if x['mpn']=='EEUFR1A102' and x['qty']==2 and x['vin_v']==24 and x['l_h']==4.352e-6 and x['ceramic_c_f']==110e-6)
+    result=dict(label='CALCULATED C2 screens; SELECTED parts are cost candidates, no qualification',baseline_head='b5461b0bc5eaae874c3c3ed869dfb03d5295827b',inputs={
+        'inherited_phase_c_inputs':old['inputs'],
+        'bulk_capacitance_factor':value(.8,'ASSUMED','fraction','initial -20% only; temperature/endurance minima OPEN'),
+        'bulk_esr':value([.028,.008],'ASSUMED','ohm','FR catalog |Z| modeled as R; polymer ESR at stated frequency; cold/endurance/ESL OPEN'),
+        'raw_ceramic_screens':value([110e-6,40e-6],'ASSUMED','F','not new 25V Murata guaranteed effective C'),
+        'latch_storage_tail':value(20e-6,'ASSUMED','s','transistor storage, feedback capture and gate tail; not maximum'),
+        'source_currents':value([3,10,50,100],'ASSUMED','A','sensitivity only; UENPO bound OPEN'),
+        'cutoff_screens':value([.00015,.001],'ASSUMED','s','150us rounded gate screen /1ms missed deadline sensitivity'),
+        'scr_effective_heat_capacity':value([.002,.010],'ASSUMED','J/K','adiabatic sensitivity only; not vendor silicon thermal capacitance'),
+        'scr_Zja_10ms_envelope':value(1.8,'ASSUMED','K/W','rounded upper graphical reading 0.03*60 from ST Fig5; source rectangle only'),
+        'fet_Zjc_envelope':value([.16,.45],'ASSUMED','K/W','padded graphical reads Fig11 for150us/1ms; fixed case50C only'),
+        'pi_harness_L':value([.2e-6,1e-6,2e-6],'ASSUMED','H','sensitivity; harness specification OPEN'),
+        'pi_harness_R':value([.009,.059],'ASSUMED','ohm','cold F301 alone /plus50mohm harness'),
+    },bulk_candidates=candidates,thresholds=thresholds,normal_ripple_sensitivity=[dict(ceramic_c_f=cc,ripple_pp_v=b['rows'][2]['stressed_ripple_a']*(1/(8*356400*cc)+.003),normal_high_25mV_v=b['resistor_and_reference_screen_v'][1]+.001+.025+b['rows'][2]['stressed_ripple_a']*(1/(8*356400*cc)+.003)/2) for cc in (40e-6,110e-6,120e-6)],ideal_lumped_faults=ideal,esr_faults=rows,selected_fault=selected,
+        pi_two_node_screens=[c2_pi_fault(d,l,r) for d in (.5,2,5) for l in (.2e-6,1e-6,2e-6) for r in (.009,.059)],
+        latch_bias=latch,cutoff=dict(q101_forward_isolation='FAIL: body diode, no finite isolation time',tl431_max_propagation_s=None,scr_max_tgt_s=None,q102_max_qg_at_test_c=97e-9,q102_max_qgd_at_test_c=51e-9,scaled_gate_charge_c=qgate,gate_to_1V_screen_us=gate_us,latch_to_off_screen_us=gate_us+20,guaranteed_off_delay_us=None),
+        scr_single_event=pulses,fet_turnoff=fet,totals=costs,
+        changed_mpns={'C217_C218':'2x EEUFR1A102','C209_C214':'6x GRM31CR61E476ME44L (25V; 1206 replaces1210)','Q104_Q106':'2x MMBTA42-TP added','Q105':'1x BC807-40,215 added','R160_R163':'4x 0805W8F1002T5E added','R164_R166':'3x 0603WAF1003T5E added'},
+        checks={
+          '01_raw_crowbar_no_intervening_fuse_topology':'PASS',
+          '02_literal_Q101_only_input_isolation':'FAIL',
+          '03_Q102_latch_static_bias_screen':'PASS',
+          '04_power_removal_only_reset_and_max_cutoff_delay':'OPEN',
+          '05_selected_24V_0p5us_unity_interface_screen':selected['screen_status']['0.5'],
+          '06_selected_24V_2us_unity_interface_screen':selected['screen_status']['2'],
+          '07_guaranteed_Pi_pin_less_than_5p5V':'OPEN',
+          '07b_Pi_1uH_59mohm_0p5us_sensitivity':'FAIL',
+          '08_normal_nuisance_trip_100mV_screen':'FAIL',
+          '09_F301_open_no_longer_disconnects_raw_SCR':'PASS',
+          '10_25V_caps_at_uncontained_26_to_29V':'FAIL',
+          '11_guaranteed_raw_cap_voltage_containment':'OPEN',
+          '12_SCR_local_10nH_di_dt_screen':'FAIL',
+          '13_SCR_I2t_temperature_no_heatsink_qualification':'OPEN',
+          '14_SCR_holding_current_zero_current_and_backfeed':'OPEN',
+          '15_FET_24V_64V_turnoff_hot_SOA':'OPEN',
+          '16_existing_103V_TVS_to_100V_FET':'FAIL',
+          '17_cost_C_under_1000000':'PASS' if Decimal(costs['C_first_build_vnd'])<1000000 else 'FAIL',
+          '18_local_cost_C_under_1000000':'PASS' if Decimal(costs['C_local_sourcing_vnd'])<1000000 else 'FAIL',
+          '19_Phase_D_change_list_and_C2_evidence':'PASS',
+          '20_R1_release_hardware_qualification':'OPEN'})
+    result['reproducer_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+    result['baseline_json_sha256']=hashlib.sha256((HERE/'PHASE_C_CALCULATIONS.json').read_bytes()).hexdigest()
+    (HERE/'PHASE_C2_REVISION.json').write_text(json.dumps(result,indent=2)+'\n')
+    for name,status in result['checks'].items(): print(f'{status}: {name}')
+    print('SELECTED changed MPNs: '+json.dumps(result['changed_mpns']))
+    print('CALCULATED totals: '+json.dumps(costs))
+    return result
+
+
 def main():
+    import sys
+    if "--c2" in sys.argv:
+        calculate_c2()
+        return
     result = calculate()
     result['reproducer_sha256'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     (HERE / 'PHASE_C_CALCULATIONS.json').write_text(json.dumps(result, indent=2)+'\n')
