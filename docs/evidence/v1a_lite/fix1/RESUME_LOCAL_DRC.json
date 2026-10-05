@@ -1,0 +1,225 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T15:03:57+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1590 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 42.1,
+                        "y": 48.7
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_EN] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 41.95,
+                        "y": 48.1
+                    },
+                    "uuid": "dc58d043-965b-48a9-961c-d7c136b973f9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1590 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 42.1,
+                        "y": 48.7
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_EN] on B.Cu, length 0.4500 mm",
+                    "pos": {
+                        "x": 41.85,
+                        "y": 48.2
+                    },
+                    "uuid": "f2d1d9d9-b090-4e2b-b49c-6f5b1f9f05ee"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VOUT_PI)",
+            "items": [
+                {
+                    "description": "Pad 1 [/GND] of TP506 on F.Cu",
+                    "pos": {
+                        "x": 66.5,
+                        "y": 58.5
+                    },
+                    "uuid": "1330fb33-f861-4156-b642-fd6f05f14b90"
+                },
+                {
+                    "description": "Pad 1 [/VOUT_PI] of J503 on F.Cu",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 61.5
+                    },
+                    "uuid": "f1f7df2f-6096-49ee-8318-add580bc8355"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint R308",
+                    "pos": {
+                        "x": 66.5,
+                        "y": 35.8
+                    },
+                    "uuid": "22a3dc40-9d95-4910-9d97-e1642994bc4a"
+                },
+                {
+                    "description": "Footprint SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 33.4
+                    },
+                    "uuid": "68140291-f470-4d24-9d89-12dd5678dbf1"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP506",
+                    "pos": {
+                        "x": 66.5,
+                        "y": 58.5
+                    },
+                    "uuid": "c9a459db-2e3c-4bec-9a9e-506228d1e441"
+                },
+                {
+                    "description": "Footprint J503",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 61.5
+                    },
+                    "uuid": "e1acb7eb-f4c3-4644-817a-56fe1c6897ba"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP506",
+                    "pos": {
+                        "x": 66.5,
+                        "y": 58.5
+                    },
+                    "uuid": "c9a459db-2e3c-4bec-9a9e-506228d1e441"
+                },
+                {
+                    "description": "Footprint C214",
+                    "pos": {
+                        "x": 67.5,
+                        "y": 56.0
+                    },
+                    "uuid": "e50bb3a9-c7f3-4590-be7d-6e7bbe2bae9f"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Pad 1 [/GND] of TP506 on F.Cu",
+                    "pos": {
+                        "x": 66.5,
+                        "y": 58.5
+                    },
+                    "uuid": "1330fb33-f861-4156-b642-fd6f05f14b90"
+                },
+                {
+                    "description": "Pad 1 [/VOUT_PI] of J503 on F.Cu",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 61.5
+                    },
+                    "uuid": "f1f7df2f-6096-49ee-8318-add580bc8355"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of SCR301 on F.Silkscreen",
+                    "pos": {
+                        "x": 71.57,
+                        "y": 35.28
+                    },
+                    "uuid": "8fbf2bf8-bebe-433d-96ba-fd135c6d95f6"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Circle of TP506 on F.Silkscreen",
+                    "pos": {
+                        "x": 66.5,
+                        "y": 58.5
+                    },
+                    "uuid": "64aaa16c-38b6-4698-967b-9b9e24bdeb1f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen overlap (board setup constraints silk clearance 0.1500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment of R308 on F.Silkscreen",
+                    "pos": {
+                        "x": 66.262742,
+                        "y": 35.2775
+                    },
+                    "uuid": "3886f4cb-14c7-4129-914c-c66dce55c921"
+                },
+                {
+                    "description": "Segment of SCR301 on F.Silkscreen",
+                    "pos": {
+                        "x": 71.57,
+                        "y": 35.28
+                    },
+                    "uuid": "8fbf2bf8-bebe-433d-96ba-fd135c6d95f6"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

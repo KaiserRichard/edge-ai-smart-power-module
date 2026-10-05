@@ -1,0 +1,4 @@
+./src/common/stdpbase.cpp(59): assert ""traits"" failed in Get(): create wxApp before calling this
+{'BUCK_RBOOT': {'via_count': 0, 'track_length_mm': 2.6000000000000014, 'layers': ['F.Cu']}, 'BUCK_CBOOT': {'via_count': 0, 'track_length_mm': 5.349999999999994, 'layers': ['F.Cu']}, 'BUCK_VCC': {'via_count': 0, 'track_length_mm': 2.357107036142986, 'layers': ['F.Cu']}, 'BUCK_FB': {'via_count': 0, 'track_length_mm': 10.542209588551719, 'layers': ['F.Cu']}}
+Residual via centers in SMD lands 0
+Hole-to-open-land minimum 0.14237698672250806 under 0.1mm 0

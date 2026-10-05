@@ -1,0 +1,122 @@
+[
+  {
+    "ref": "Q101",
+    "status": "OPEN no uncluttered local silk location"
+  },
+  {
+    "ref": "Q102",
+    "status": "OPEN no uncluttered local silk location"
+  },
+  {
+    "ref": "SCR301",
+    "layer": "F.Silkscreen",
+    "pos": [
+      74.5,
+      39.4
+    ]
+  },
+  {
+    "ref": "TP110",
+    "status": "OPEN no uncluttered local silk location"
+  },
+  {
+    "ref": "TP111",
+    "layer": "F.Silkscreen",
+    "pos": [
+      65.0,
+      16.25
+    ]
+  },
+  {
+    "ref": "TP112",
+    "status": "OPEN no uncluttered local silk location"
+  },
+  {
+    "ref": "TP113",
+    "layer": "B.Silkscreen",
+    "pos": [
+      35.8,
+      25.0
+    ]
+  },
+  {
+    "ref": "TP114",
+    "layer": "B.Silkscreen",
+    "pos": [
+      35.8,
+      15.8
+    ]
+  },
+  {
+    "ref": "TP301",
+    "status": "OPEN no uncluttered local silk location"
+  },
+  {
+    "ref": "TP302",
+    "status": "OPEN no uncluttered local silk location"
+  },
+  {
+    "ref": "TP501",
+    "layer": "F.Silkscreen",
+    "pos": [
+      17.0,
+      20.0
+    ]
+  },
+  {
+    "ref": "TP502",
+    "layer": "F.Silkscreen",
+    "pos": [
+      22.5,
+      22.0
+    ]
+  },
+  {
+    "ref": "TP503",
+    "layer": "F.Silkscreen",
+    "pos": [
+      58.5,
+      35.0
+    ]
+  },
+  {
+    "ref": "TP504",
+    "layer": "F.Silkscreen",
+    "pos": [
+      60.0,
+      63.5
+    ]
+  },
+  {
+    "ref": "TP505",
+    "status": "OPEN no uncluttered local silk location"
+  },
+  {
+    "ref": "TP506",
+    "layer": "F.Silkscreen",
+    "pos": [
+      62.25,
+      65.5
+    ]
+  },
+  {
+    "ref": "TP507",
+    "layer": "F.Silkscreen",
+    "pos": [
+      34.0,
+      55.0
+    ]
+  },
+  {
+    "ref": "TP508",
+    "layer": "F.Silkscreen",
+    "pos": [
+      80.0,
+      34.0
+    ]
+  },
+  {
+    "ref": "U201",
+    "status": "OPEN no uncluttered local silk location"
+  }
+]

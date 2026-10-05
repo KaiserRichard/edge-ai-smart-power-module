@@ -1,0 +1,46 @@
+{
+  "classification": "CALCULATED sensitivity using ASSUMED values; no extracted/qualified total loop bound",
+  "capacitance_F_assumed_upper_nominal_plus_20pct_all_raw_parts": 0.0027383999999999998,
+  "voltage_V_assumed": 5.5,
+  "stored_energy_J_assuming_voltage_bound": 0.0414183,
+  "SCR_drop_V_assumed": 0.85,
+  "inductance_nH_sweep": [
+    10,
+    25,
+    50,
+    100
+  ],
+  "initial_didt_A_per_us": [
+    465.0,
+    186.0,
+    93.0,
+    46.5
+  ],
+  "inductance_nH_needed_for_50A_per_us_with_assumed_drop": 93.00000000000001,
+  "inductance_nH_needed_without_assuming_minimum_SCR_drop": 110.0,
+  "five_A_conduction_W_screen": 5.0,
+  "cutoff_duration_s_sweep": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1
+  ],
+  "five_A_source_conduction_J_screen": [
+    0.0005,
+    0.005,
+    0.05,
+    0.5,
+    5
+  ],
+  "open": [
+    "raw-node peak voltage",
+    "each bank ESR/ESL and package/lead/mutual inductance",
+    "gate rise and current vs ST conditions",
+    "source current and Q102 cutoff latency",
+    "hot SOA",
+    "SCR transient temperature/di_dt/i2t/recovery/repetition",
+    "remote Pi-node overshoot"
+  ],
+  "decision": "Do not add series fuse or incidental trace inductance as limiting. Electrical finding remains BLOCKED."
+}

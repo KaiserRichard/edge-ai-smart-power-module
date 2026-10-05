@@ -1,0 +1,126 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T15:08:01+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.0859 mm)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on F.Cu, length 0.9750 mm",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 35.325
+                    },
+                    "uuid": "4f0091c8-7169-47c2-94e2-0c23ca1945e6"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on F.Cu, length 7.7075 mm",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 32.05
+                    },
+                    "uuid": "5a322815-cee9-4632-9539-dc0218f6eb65"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on F.Cu, length 7.7075 mm",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 32.05
+                    },
+                    "uuid": "5a322815-cee9-4632-9539-dc0218f6eb65"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 2.0000 mm",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 33.675
+                    },
+                    "uuid": "b5eb1df2-04ab-47be-9eae-b6102a0da550"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /CB_COLLECTOR)",
+            "items": [
+                {
+                    "description": "Pad 1 [/03_OUTPUT_PROTECTION/SCR_GATE] of R308 on F.Cu",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 35.325
+                    },
+                    "uuid": "57cf88dc-5d6a-48f0-9a13-623000618ea9"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on F.Cu, length 7.7075 mm",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 32.05
+                    },
+                    "uuid": "5a322815-cee9-4632-9539-dc0218f6eb65"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1950 mm)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on F.Cu, length 7.7075 mm",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 32.05
+                    },
+                    "uuid": "5a322815-cee9-4632-9539-dc0218f6eb65"
+                },
+                {
+                    "description": "Pad 2 [/GND] of R308 on F.Cu",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 33.675
+                    },
+                    "uuid": "709cea3f-5351-4ef8-9e13-531991a511ef"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on F.Cu, length 7.7075 mm",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 32.05
+                    },
+                    "uuid": "5a322815-cee9-4632-9539-dc0218f6eb65"
+                },
+                {
+                    "description": "Pad 1 [/03_OUTPUT_PROTECTION/SCR_GATE] of R308 on F.Cu",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 35.325
+                    },
+                    "uuid": "57cf88dc-5d6a-48f0-9a13-623000618ea9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        }
+    ]
+}

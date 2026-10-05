@@ -376,7 +376,7 @@
     "argv": [
       "/usr/bin/swift",
       "-module-cache-path",
-      "/var/folders/2k/d7w4x7fn0kz9s4h_zp41vvdh0000gn/T/v1a-fab-swift-cache-0y4tlh9o",
+      "/var/folders/2k/d7w4x7fn0kz9s4h_zp41vvdh0000gn/T/v1a-fab-swift-cache-6ooyibrw",
       "/Users/quockaiser/Desktop/Research/wt-lite/scripts/lite_pdf_to_png.swift",
       "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/png"

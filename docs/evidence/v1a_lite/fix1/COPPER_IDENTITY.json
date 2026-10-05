@@ -1,0 +1,6 @@
+{
+  "before_board_sha256": "7b17fb3ecd39dddb490ea8d14a3e59664b6d0bc7b0654e7b9633be8f5bae5853",
+  "after_board_sha256": "f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e",
+  "all_extracted_geometry_identical": true,
+  "reason": "Only duplicate Fab annotations removed; existing numerical solves apply to identical geometry."
+}

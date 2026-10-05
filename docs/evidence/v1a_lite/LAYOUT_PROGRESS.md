@@ -65,3 +65,34 @@ Visually inspected all 11 layer views, both drill maps and the 3D board. The 3D 
 Next: independent engineering review of the delivered package and closure of listed blockers before any fabrication/physical bring-up. Do not rerun import/placement/power builders on the finished board without an intentional new layout revision. All earlier exploratory evidence retained. Final commit result follows.
 
 **Final step-5 Git result:** staging failed exit 128: unable to create `/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.git/worktrees/wt-lite/index.lock` (Operation not permitted). Steps 3, 4 and 5 each had an authorized commit attempt; no commit could be created. Work is retained uncommitted at HEAD `1d99ea96947f07569d571237691ffa255050c973`, as instructed. No push, permission/lock modification, merge or order. `git diff --check` passes. Full deliverable paths: `layout/DELIVERABLE_FILES.txt`. All requested review deliverables are present; fabrication remains blocked.
+
+## FIX1 — resume audit, 2026-10-05
+
+Authority: `V1A_LITE_PCB_FIX1_RESUME.md` and full `V1A_LITE_PCB_FIX1.md`. Sole editor; work on `feat/v1a-lite-cost-reduction`; no push, merge or order. Baseline `44eee9c`. Read all independent R1 findings before editing. Fresh pcbnew audit reproduces board SHA256 `7c6157f95bd1f44c2ec752e5eaddd74a85ff80e7888d5e0bf94667860e026083`; earlier work is retained, not regenerated.
+
+| Finding | Audit at resume | Remaining work |
+| --- | --- | --- |
+| 1 polarity | DONE: J501/J502 numbered positive/GND labels and J503 polarity match actual pad nets; J502.1 (84,44), .2 (84,47.96). | Final mask-subtracted silk review. |
+| 2 BOOT | DONE: R204 (42.55,40.8), C205 (42.5,39.2); RBOOT 2.60 mm F.Cu, zero vias; CBOOT 5.35 mm total tree, zero vias, no old bottom route. | Retain; distinguish total tree from pin-to-cap length; startup/ringing remains untested. |
+| 3 crowbar | LAYOUT CHANGED: K/A/G (69,33.4)/(66.46,33.4)/(63.92,33.4), C217 GND (69,26), C218 reversed with GND (76,26); L2 GND and L3 force copper, no old TP302 slot, no intervening fuse. | Document pulse/lead/ESL/cutoff sensitivity and unresolved electrical limits; shorten R308 sense where practical. |
+| 4 bridge/budget | LAYOUT DONE: R308 moved to (61,30.7), fuse to (74.5,43), 4 mm authored corridor; extracted L201→F301 1.057 mΩ cold versus 1.834 mΩ old. Harness already ≤25 mΩ. | Missing voltage budget JSON/report; final extraction after remaining edits, include -1% reference and resistor tolerances. |
+| 5 thermal | LAYOUT DONE: 4 layers, 35/15.2/15.2/35 µm, expanded drain copper F/B/L3; L2 GND. | Existing assumed thermal screen FAILS; report numbers honestly, add cost/source/qualification record. |
+| 6 probes | PARTIAL: SCR pair 3.1 mm apart, no long slot. Q102 pair still 12.50 mm apart. | Move source/gate pickups closer and add local raw-ripple GND access; populated access remains OPEN. |
+| 7 VCC/FB | PARTIAL: local top-only VCC 2.357 mm, FB 10.542 mm tree, C206/R203 moved. | Inspect local AGND and detector Kelvin return; avoid claiming net GND is an isolated sense path. |
+| 8 spacing | DOCUMENTED OPEN: manufacturing clearance only, B4 environment not established. | Explicit conservative audit and voltage-pair basis; cannot invent environmental requirements. |
+| 9 silk/assembly | PARTIAL: 1.0/0.15 mm board labels/rules, warning/revision and native marks present. | Essential TP identification and readable assembly annotation. |
+| 10 via process | PARTIAL: FET vias moved; 10 via centers still in SMD lands including C203/C209. | Finish off-land escapes where practical; inspect hole/mask margin, not centers alone. |
+| 11 rotations | PARTIAL: 94 SMT candidates / 6 manual operations; exact external D101 retained. | Per-package supplier checklist and explicit unaccepted offsets; no guessed rotations. |
+
+Baseline evidence is retained in commit `44eee9c` and existing intermediate reports. Engineering/fabrication status remains BLOCKED; completion of this correction task is not electrical validation.
+
+### FIX1 — remaining layout corrections completed
+
+- **3:** R308 moved again to (73,34.5), right of SCR's actual body/courtyard. Its ground land now has a 4.019 mm top trace to K; the obsolete ≈14.7 mm bottom return was removed. Gate connects by a local off-land via to the existing driver branch. CB_COLLECTOR was detoured around this placement. This is a separately authored branch, not proof of an isolated Kelvin return in the shared GND plane.
+- **6:** TP113/TP114 moved to B.Cu (35.8,22)/(35.8,18.8), 3.2 mm apart, using nearby source/gate vias. Old TP114 leaf stub pruned, common-source control junction preserved. Raw TP504/TP506 now (60,60.5)/(63.25,60.5), 3.25 mm apart; existing GND access reused. SCR pair retained at 3.1 mm spacing; no L2 signal routing or new return-plane slot.
+- **9:** Added locally placed 1.0 mm/0.15 mm silk references for test pads and Q101/Q102/U201/SCR301 where geometry allowed; moved key Fab fields to their own body/pad centers. `SILK_IDENTIFICATION.json` records placement and any omissions. Retained numbered connector labels, revision and warning.
+- **10:** Relocated ten inherited via centers out of lands, then checked BOTH faces and actual hole radii. Moved Q106 GND via, removed a redundant C203 ground via and vias under moved test pads. R201 ground-via escape required rerouting the existing bottom EN segment; L2 stays GND. Final audit: **zero centers in SMD lands; zero hole-to-land gaps <0.1 mm; minimum 0.142377 mm**. Standard tented through vias with off-land holes selected, no fill/cap premium assumed. Inspection of solder fillets/voids is still required.
+
+`RESUME_SILK_DRC.json`: **0 violations / 0 unconnected / 0 parity**. Exploratory DRC reports retained; earlier failed candidates were corrected before export. No schematic or setpoint changes. Remaining voltage, pulse, thermal, spacing, supplier-orientation and final package evidence follows.
+
+Git finding-group commit: audit staging/commit both failed with `index.lock: Operation not permitted`; further group attempt recorded separately. Changes stay uncommitted per brief; no permissions/lock changes.

@@ -94,7 +94,7 @@ R304,Resistor_SMD:R_0603_1608Metric,C110776,90.000000,0,OPEN — supplier zero-a
 R305,Resistor_SMD:R_0603_1608Metric,C22843,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 R306,Resistor_SMD:R_0805_2012Metric,C17414,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 R307,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
-R308,Resistor_SMD:R_0603_1608Metric,C21190,180.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R308,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 SCR301,Package_TO_SOT_THT:TO-220-3_Vertical,C262993,180.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
 U101,Package_TO_SOT_SMD:SOT-23,C41283,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 U201,V1A_Qualified:TI_RJR0014A_LM61460,C2864505,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied

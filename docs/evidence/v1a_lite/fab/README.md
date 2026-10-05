@@ -8,8 +8,8 @@ Export commands completed. This is not a fabrication-ready package.
 - **OPEN:** Electrical review findings 1–4 remain blocking; R4 fabrication release is BLOCKED.
 - **OPEN:** Saved copper fills match zero-error native DRC; four-layer thermal/EMI performance remains unqualified.
 - **OPEN:** 3D model completeness, pad numbering and polarity require review; a render is not validation.
-- **OPEN:** TP113/114 and TP301/302 lead geometry requires differential-probe review; do not infer ideal Kelvin accuracy.
-- **OPEN:** Drain vias moved outside FET solder lands; residual small-component via-in-pad locations remain OPEN in FIX1 report. Ordinary tenting is not filled/capped via-in-pad.
+- **OPEN:** Paired Q102, SCR and raw-ripple pads provided; populated differential-probe access and shared-plane pickup accuracy remain unqualified.
+- **OPEN:** Via holes are outside exposed lands on both faces; minimum audited hole-to-land gap 0.142 mm. Standard tented through vias selected; solder/voiding inspection still required.
 - **OPEN:** First-build landed cost below 1,000,000 VND is unverified; no purchase, quote or upload performed.
 - **OPEN:** 1 assembly references have blank LCSC Part #; sourcing/assembly route OPEN.
 

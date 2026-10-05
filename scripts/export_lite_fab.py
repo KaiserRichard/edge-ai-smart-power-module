@@ -201,8 +201,8 @@ def main():
         'Electrical review findings 1–4 remain blocking; R4 fabrication release is BLOCKED.',
         'Saved copper fills match zero-error native DRC; four-layer thermal/EMI performance remains unqualified.',
         '3D model completeness, pad numbering and polarity require review; a render is not validation.',
-        'TP113/114 and TP301/302 lead geometry requires differential-probe review; do not infer ideal Kelvin accuracy.',
-        'Drain vias moved outside FET solder lands; residual small-component via-in-pad locations remain OPEN in FIX1 report. Ordinary tenting is not filled/capped via-in-pad.',
+        'Paired Q102, SCR and raw-ripple pads provided; populated differential-probe access and shared-plane pickup accuracy remain unqualified.',
+        'Via holes are outside exposed lands on both faces; minimum audited hole-to-land gap 0.142 mm. Standard tented through vias selected; solder/voiding inspection still required.',
         'First-build landed cost below 1,000,000 VND is unverified; no purchase, quote or upload performed.']
     if count != 4:
         raise RuntimeError('Lite export requires the reviewed four-layer board')

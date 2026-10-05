@@ -66,6 +66,18 @@ def run(name,src,dst):
  edge_current=g*(out[ei]-out[ej])*5/current
  result['max_grid_edge_current_A_at_5A']=float(np.max(np.abs(edge_current)))
  result['five_amp_drop_mV_20C']=5000/current
+ if src==['L201.2']:
+  coords=np.argwhere(ids>=0);aa=coords[ei];bb=coords[ej];same=aa[:,0]==bb[:,0]
+  density=np.abs(edge_current)/(s*np.array(data['thickness_mm'])[aa[:,0]])
+  density[~same]=0;kk=int(np.argmax(density))
+  result['max_sheet_edge_A_per_mm2_at_5A']=float(density[kk])
+  result['max_sheet_edge_location_mm']=[10+(float(aa[kk,2])+float(bb[kk,2])+1)*s/2,10+(float(aa[kk,1])+float(bb[kk,1])+1)*s/2]
+  result['max_sheet_edge_layer']=data['layers'][int(aa[kk,0])]
+  # Vertical cross-section through the widened bridge, excluding probe area.
+  cut=int((69.5-10)/s);lo=int((41-10)/s);hi=int((45-10)/s)
+  sel=same & (aa[:,2]==cut-1) & (bb[:,2]==cut) & (aa[:,1]>=lo) & (aa[:,1]<hi)
+  result['bridge_x69.5_y41_to45_current_A_by_layer']={ly:float(edge_current[sel & (aa[:,0]==z)].sum()) for z,ly in enumerate(data['layers'])}
+  result['bridge_sheet_density_max_A_per_mm2']=float(density[sel].max())
  print(result,flush=True);return result
 # Separate net solutions keep F301 component resistance outside copper results.
 results={}

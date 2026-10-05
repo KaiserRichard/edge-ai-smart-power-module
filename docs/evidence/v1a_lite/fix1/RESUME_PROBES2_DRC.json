@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:56:41+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP114",
+                    "pos": {
+                        "x": 35.8,
+                        "y": 19.5
+                    },
+                    "uuid": "08780e6b-4be9-4083-9484-96d8a358b803"
+                },
+                {
+                    "description": "Footprint TP113",
+                    "pos": {
+                        "x": 35.8,
+                        "y": 22.0
+                    },
+                    "uuid": "d36fd55c-fa7d-4a9c-bf5f-f69b9560fc40"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 13.0
+                    },
+                    "uuid": "6277f45c-d38e-4769-b243-daf880163137"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Silkscreen overlap (board setup constraints silk clearance 0.1500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Circle of TP113 on B.Silkscreen",
+                    "pos": {
+                        "x": 35.8,
+                        "y": 22.0
+                    },
+                    "uuid": "2f858530-cc6c-4592-8680-f974f06ea4ee"
+                },
+                {
+                    "description": "Circle of TP114 on B.Silkscreen",
+                    "pos": {
+                        "x": 35.8,
+                        "y": 19.5
+                    },
+                    "uuid": "a49b9f1e-ff1e-446e-8293-737d7c412d85"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

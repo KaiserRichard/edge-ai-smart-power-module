@@ -22,3 +22,33 @@ for t in b.GetTracks():
  if hits:out['via_centers_in_smd_lands'].append({'pos':xy(t.GetPosition()),'net':t.GetNetname(),'lands':hits})
 (FIX/'BOARD_AUDIT.json').write_text(json.dumps(out,indent=2)+'\n')
 print(out['nets']);print('Residual via centers in SMD lands',len(out['via_centers_in_smd_lands']))
+# Check actual hole edges against exposed SMD/test lands on BOTH faces.
+# Board mask expansion is zero; outlines include KiCad rounded corners.
+def segment_distance(pt,a,c):
+ dx=c[0]-a[0];dy=c[1]-a[1];den=dx*dx+dy*dy
+ t=max(0,min(1,((pt[0]-a[0])*dx+(pt[1]-a[1])*dy)/den)) if den else 0
+ return math.dist(pt,(a[0]+t*dx,a[1]+t*dy))
+land_polys=[]
+for f in b.GetFootprints():
+ for q in f.Pads():
+  if not q.GetNumber() or q.GetDrillSize().x:continue
+  ly=p.F_Cu if q.IsOnLayer(p.F_Cu) else p.B_Cu
+  pp=q.GetEffectivePolygon(ly)
+  for k in range(pp.OutlineCount()):
+   ch=pp.COutline(k);pts=[xy(ch.CPoint(j)) for j in range(ch.PointCount())]
+   land_polys.append((f.GetReference()+'.'+q.GetNumber(),pts,ch))
+close=[];minimum=100
+for t in b.GetTracks():
+ if not isinstance(t,p.PCB_VIA):continue
+ pt=xy(t.GetPosition());rad=p.ToMM(t.GetDrill())/2
+ for ref,pts,ch in land_polys:
+  if min(x for x,y in pts)-1>pt[0] or max(x for x,y in pts)+1<pt[0] or min(y for x,y in pts)-1>pt[1] or max(y for x,y in pts)+1<pt[1]:continue
+  dd=min(segment_distance(pt,a,c) for a,c in zip(pts,pts[1:]+pts[:1]))
+  gap=(-dd if ch.PointInside(t.GetPosition()) else dd)-rad
+  minimum=min(minimum,gap)
+  if gap<.0999:close.append({'via':pt,'land':ref,'hole_to_open_land_mm':gap})
+out['hole_to_smd_mask_minimum_mm']=minimum
+out['hole_to_smd_mask_below_0.1mm']=close
+out['test_pairs']={name:{'refs':refs,'centers':[xy(ps[r,'1'].GetPosition()) for r in refs],'separation_mm':math.dist(*[xy(ps[r,'1'].GetPosition()) for r in refs])} for name,refs in [('Q102',['TP113','TP114']),('SCR',['TP301','TP302']),('raw_ripple',['TP504','TP506'])]}
+(FIX/'BOARD_AUDIT.json').write_text(json.dumps(out,indent=2)+'\n')
+print('Hole-to-open-land minimum',minimum,'under 0.1mm',len(close))

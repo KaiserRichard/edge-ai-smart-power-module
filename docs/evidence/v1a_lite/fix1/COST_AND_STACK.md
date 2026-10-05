@@ -1,0 +1,9 @@
+# FIX1 stack and public price screen
+
+2026-10-05 — **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED**
+
+**DECISION:** retain 80×60 mm outline, nominal 1.6 mm FR4, four layers, 1 oz outer / nominal 0.5 oz inner. L2 is GND only, with normal antipads; L3 has GND and isolated VIN_FUSED, VIN_PROTECTED and raw VOUT_5V1 power/thermal regions. The two FET drains remain different live nets. No signal routing on L2. Standard through vias, off-land holes, green mask and lead-free HASL review assumptions; no filled/capped-via process selected.
+
+**EVIDENCE:** [JLC public price page](https://jlcpcb.com/ads/pcb-prototype), checked 2026-10-05, advertises **from US$2 for five 1–4-layer boards** in the 100×100 mm category. [Two-layer baseline](https://jlcpcb.com/help/article/how-do-i-place-an-order) is likewise **US$2/five** within ≤100×100 mm. **CALCULATED advertised entry-price difference: US$0 per five boards (US$0 per board)**. The 80×60 mm board is within that size envelope; this is an inference from the public size tier, **not a configured 80×60 mm quotation or a guaranteed final price**. Finish, stack availability, account/promotion restrictions, freight/tax, assembly and harness are not included. No coupon redemption, upload, quote cart or purchase occurred. Nonpromotional configured delta and the full <1,000,000 VND first-build budget remain OPEN.
+
+**EVIDENCE / CALCULATION:** saved standard stack uses copper 0.035/0.0152/0.0152/0.035 mm; dielectric 0.2104/1.065/0.2104 mm; modeled copper-center depths 0.0175/0.253/1.3332/1.5687 mm. The drawing thickness is nominal 1.6 mm. See [JLC stackup](https://jlcpcb.com/impedance) and the [source register](../../../../third_party/v1a_lite_pcb_fix1/SOURCES.md). This is thinner copper than TI's recommended 2/1/1/2 oz example. Four layers alone do not qualify the thermal case.

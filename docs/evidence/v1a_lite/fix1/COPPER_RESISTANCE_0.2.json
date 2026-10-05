@@ -1,5 +1,5 @@
 {
-  "geometry_board_sha256": "7c6157f95bd1f44c2ec752e5eaddd74a85ff80e7888d5e0bf94667860e026083",
+  "geometry_board_sha256": "f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e",
   "grid_mm": 0.2,
   "copper_um": [
     35,
@@ -19,13 +19,13 @@
       "sink_pads": [
         "F301.1"
       ],
-      "ohms_20C": 0.0009349791640368945,
-      "ohms_85C": 0.001173819591490119,
-      "nodes": 12576,
-      "iterations": 917,
-      "relative_residual": 9.659812189365179e-11,
-      "max_grid_edge_current_A_at_5A": 0.8506967551389217,
-      "five_amp_drop_mV_20C": 4.674895820184473
+      "ohms_20C": 0.0009480524457915586,
+      "ohms_85C": 0.0011902324430690123,
+      "nodes": 12567,
+      "iterations": 920,
+      "relative_residual": 9.223916192915567e-11,
+      "max_grid_edge_current_A_at_5A": 0.7834803704364623,
+      "five_amp_drop_mV_20C": 4.740262228957794
     },
     "C209_return": {
       "net": "/GND",
@@ -35,13 +35,13 @@
       "sink_pads": [
         "J502.2"
       ],
-      "ohms_20C": 0.0009781199099823355,
-      "ohms_85C": 0.0012279806409873232,
-      "nodes": 387184,
-      "iterations": 2703,
-      "relative_residual": 9.828953545794013e-11,
-      "max_grid_edge_current_A_at_5A": 1.8321569471054626,
-      "five_amp_drop_mV_20C": 4.890599549911678
+      "ohms_20C": 0.001749114398325605,
+      "ohms_85C": 0.002195925671377881,
+      "nodes": 387025,
+      "iterations": 2688,
+      "relative_residual": 9.887052825235515e-11,
+      "max_grid_edge_current_A_at_5A": 3.1851929783084634,
+      "five_amp_drop_mV_20C": 8.745571991628026
     },
     "C214_positive_raw": {
       "net": "/VOUT_5V1",
@@ -51,13 +51,13 @@
       "sink_pads": [
         "F301.1"
       ],
-      "ohms_20C": 0.0032870550974542674,
-      "ohms_85C": 0.00412673332209896,
-      "nodes": 12576,
-      "iterations": 888,
-      "relative_residual": 9.178775812677774e-11,
-      "max_grid_edge_current_A_at_5A": 0.900846646600584,
-      "five_amp_drop_mV_20C": 16.435275487271337
+      "ohms_20C": 0.003300973260583125,
+      "ohms_85C": 0.004144206879999084,
+      "nodes": 12567,
+      "iterations": 893,
+      "relative_residual": 9.529601315545607e-11,
+      "max_grid_edge_current_A_at_5A": 0.8773857070334562,
+      "five_amp_drop_mV_20C": 16.504866302915627
     },
     "C214_return": {
       "net": "/GND",
@@ -67,13 +67,13 @@
       "sink_pads": [
         "J502.2"
       ],
-      "ohms_20C": 0.0004253078212414247,
-      "ohms_85C": 0.0005339527041775465,
-      "nodes": 387184,
-      "iterations": 2683,
-      "relative_residual": 9.931484943368012e-11,
-      "max_grid_edge_current_A_at_5A": 0.35897847443440767,
-      "five_amp_drop_mV_20C": 2.1265391062071233
+      "ohms_20C": 0.0004248037685742727,
+      "ohms_85C": 0.0005333198912565707,
+      "nodes": 387025,
+      "iterations": 2694,
+      "relative_residual": 9.957945956618985e-11,
+      "max_grid_edge_current_A_at_5A": 0.35835563409795856,
+      "five_amp_drop_mV_20C": 2.1240188428713638
     },
     "pi_positive": {
       "net": "/VOUT_PI",
@@ -99,17 +99,32 @@
       "sink_pads": [
         "F301.1"
       ],
-      "ohms_20C": 0.0010618944915691548,
-      "ohms_85C": 0.0013331554394404954,
-      "nodes": 12576,
-      "iterations": 878,
-      "relative_residual": 9.426637597161157e-11,
-      "max_grid_edge_current_A_at_5A": 0.8673904942135398,
-      "five_amp_drop_mV_20C": 5.309472457845774
+      "ohms_20C": 0.001075336957621022,
+      "ohms_85C": 0.0013500317834453121,
+      "nodes": 12567,
+      "iterations": 880,
+      "relative_residual": 9.551547366053436e-11,
+      "max_grid_edge_current_A_at_5A": 0.84533643300965,
+      "five_amp_drop_mV_20C": 5.37668478810511,
+      "max_sheet_edge_A_per_mm2_at_5A": 109.88090615818692,
+      "max_sheet_edge_location_mm": [
+        70.7,
+        39.8
+      ],
+      "max_sheet_edge_layer": "In2.Cu",
+      "bridge_x69.5_y41_to45_current_A_by_layer": {
+        "F.Cu": 2.8395830999452336,
+        "In1.Cu": 0.0,
+        "In2.Cu": 0.277795090376293,
+        "B.Cu": 0.0
+      },
+      "bridge_sheet_density_max_A_per_mm2": 81.54144367636978
     }
   },
-  "C209_round_trip_ohms_20C": 0.0024917212132576122,
-  "C209_round_trip_ohms_85C": 0.003128231397184269,
-  "C214_round_trip_ohms_20C": 0.004290985057934074,
-  "C214_round_trip_ohms_85C": 0.005387117190983333
+  "C209_round_trip_ohms_20C": 0.003275788983355546,
+  "C209_round_trip_ohms_85C": 0.00411258927915372,
+  "C214_round_trip_ohms_20C": 0.00430439916839578,
+  "C214_round_trip_ohms_85C": 0.005403957935962482,
+  "solved_board_sha256": "7b17fb3ecd39dddb490ea8d14a3e59664b6d0bc7b0654e7b9633be8f5bae5853",
+  "geometry_identity_evidence": "COPPER_IDENTITY.json"
 }

@@ -1,0 +1,32 @@
+{
+  "classification": "CALCULATED conditional allocation screen; not measured operating worst case",
+  "board_sha256": "f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e",
+  "output_A": 5,
+  "setpoint_V": 5.0650406504065035,
+  "raw_min_V_reference_minus_1pct_dividers_opposing_0.1pct": 5.006349504154382,
+  "hot_aged_harness_ohm_requirement": 0.025,
+  "fuse_ohm_cold_assumed": 0.009,
+  "sampled_copper_round_trip_ohm_at_assumed_85C": 0.005345503636156958,
+  "copper_drop_mV_at_5A": 26.72751818078479,
+  "Pi_V_tolerance_screen": 4.809621985973598,
+  "margin_to_4.75_mV": 59.6219859735978,
+  "allocation_status": "PASS",
+  "full_operating_worst_case_status": "OPEN; FAIL to demonstrate guaranteed compliance",
+  "remaining_series_resistance_if_no_ripple_ohm": 0.01192439719471956,
+  "unbounded_terms": [
+    "hot fuse resistance",
+    "minimum finished copper and barrel plating",
+    "solder joints",
+    "regulator line/load/temperature terms outside selected tolerance",
+    "ripple and load transients",
+    "measurement uncertainty"
+  ],
+  "sensitivity_not_requirements": {
+    "conductor_area_factor_assumed": 0.8,
+    "hot_fuse_ohm_assumed": 0.0135,
+    "board_joints_ohm_assumed": 0.002,
+    "negative_ripple_V_assumed": 0.025,
+    "Pi_V": 4.745440106428401,
+    "margin_mV": -4.5598935715993605
+  }
+}

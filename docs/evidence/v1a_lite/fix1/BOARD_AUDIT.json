@@ -1,5 +1,5 @@
 {
-  "board_sha256": "7c6157f95bd1f44c2ec752e5eaddd74a85ff80e7888d5e0bf94667860e026083",
+  "board_sha256": "f4d096e2e63b12c7f2d493a306d8c2a74383398720bba7072b95768c5b67501e",
   "layers": 4,
   "pads": {
     "J501": {
@@ -351,15 +351,15 @@
       "2": {
         "net": "/GND",
         "pos": [
-          60.175,
-          30.7
+          73.0,
+          33.675
         ]
       },
       "1": {
         "net": "/03_OUTPUT_PROTECTION/SCR_GATE",
         "pos": [
-          61.825,
-          30.7
+          73.0,
+          35.325
         ]
       }
     },
@@ -367,8 +367,8 @@
       "1": {
         "net": "/01_INPUT_PROTECTION/S_COMMON",
         "pos": [
-          42.5,
-          25.25
+          35.8,
+          22.0
         ]
       }
     },
@@ -376,8 +376,8 @@
       "1": {
         "net": "/01_INPUT_PROTECTION/CUT_GATE",
         "pos": [
-          40.0,
-          13.0
+          35.8,
+          18.8
         ]
       }
     },
@@ -430,108 +430,7 @@
       ]
     }
   },
-  "via_centers_in_smd_lands": [
-    {
-      "pos": [
-        25.0,
-        31.2
-      ],
-      "net": "/01_INPUT_PROTECTION/OVIN_D1",
-      "lands": [
-        "R150.2"
-      ]
-    },
-    {
-      "pos": [
-        25.35,
-        29.0
-      ],
-      "net": "/01_INPUT_PROTECTION/OVIN_D2",
-      "lands": [
-        "R151.2"
-      ]
-    },
-    {
-      "pos": [
-        45.9,
-        24.65
-      ],
-      "net": "/01_INPUT_PROTECTION/PUA",
-      "lands": [
-        "R140.2"
-      ]
-    },
-    {
-      "pos": [
-        50.0,
-        21.8
-      ],
-      "net": "/01_INPUT_PROTECTION/PUA",
-      "lands": [
-        "R141.1"
-      ]
-    },
-    {
-      "pos": [
-        25.0,
-        32.85
-      ],
-      "net": "/01_INPUT_PROTECTION/S_COMMON",
-      "lands": [
-        "R150.1"
-      ]
-    },
-    {
-      "pos": [
-        57.1,
-        18.0
-      ],
-      "net": "/CTRL12",
-      "lands": [
-        "Q105.2"
-      ]
-    },
-    {
-      "pos": [
-        69.0,
-        40.5
-      ],
-      "net": "/GND",
-      "lands": [
-        "C209.2"
-      ]
-    },
-    {
-      "pos": [
-        30.85,
-        18.65
-      ],
-      "net": "/GND",
-      "lands": [
-        "R102.2"
-      ]
-    },
-    {
-      "pos": [
-        41.7,
-        49.1
-      ],
-      "net": "/GND",
-      "lands": [
-        "R201.2"
-      ]
-    },
-    {
-      "pos": [
-        46.7,
-        47.55
-      ],
-      "net": "/GND",
-      "lands": [
-        "C203.2"
-      ]
-    }
-  ],
+  "via_centers_in_smd_lands": [],
   "zone_area_mm2": [
     {
       "net": "/02_BUCK_5V/BUCK_SW",
@@ -546,12 +445,12 @@
     {
       "net": "/VIN_FUSED",
       "layer": "F.Cu",
-      "area": 142.5684023029155
+      "area": 141.0248272118395
     },
     {
       "net": "/GND",
       "layer": "F.Cu",
-      "area": 3192.090486686822
+      "area": 3195.3495273762246
     },
     {
       "net": "/01_INPUT_PROTECTION/S_COMMON",
@@ -561,7 +460,7 @@
     {
       "net": "/VOUT_5V1",
       "layer": "F.Cu",
-      "area": 129.304120776699
+      "area": 128.6908680829995
     },
     {
       "net": "/VOUT_PI",
@@ -571,7 +470,7 @@
     {
       "net": "/VIN_PROTECTED",
       "layer": "F.Cu",
-      "area": 146.936545526069
+      "area": 145.6978120034755
     },
     {
       "net": "/VIN_PROTECTED",
@@ -581,47 +480,102 @@
     {
       "net": "/GND",
       "layer": "B.Cu",
-      "area": 4009.1693193120345
+      "area": 3995.87926328636
     },
     {
       "net": "/VIN_FUSED",
       "layer": "B.Cu",
-      "area": 138.8678024058705
+      "area": 138.924823216337
     },
     {
       "net": "/VIN_PROTECTED",
       "layer": "B.Cu",
-      "area": 42.691862065683
+      "area": 42.404734548871
     },
     {
       "net": "/VIN_PROTECTED",
       "layer": "B.Cu",
-      "area": 105.2200429689495
+      "area": 103.2896350577475
     },
     {
       "net": "/GND",
       "layer": "In1.Cu",
-      "area": 4491.294104526671
+      "area": 4490.242333582855
     },
     {
       "net": "/VIN_FUSED",
       "layer": "In2.Cu",
-      "area": 142.531432532741
+      "area": 143.3229291058705
     },
     {
       "net": "/VIN_PROTECTED",
       "layer": "In2.Cu",
-      "area": 307.332142236902
+      "area": 306.8254575791435
     },
     {
       "net": "/VOUT_5V1",
       "layer": "In2.Cu",
-      "area": 280.745132456167
+      "area": 280.745129982567
     },
     {
       "net": "/GND",
       "layer": "In2.Cu",
-      "area": 3728.9663670727737
+      "area": 3727.693065902896
     }
-  ]
+  ],
+  "hole_to_smd_mask_minimum_mm": 0.14237698672250806,
+  "hole_to_smd_mask_below_0.1mm": [],
+  "test_pairs": {
+    "Q102": {
+      "refs": [
+        "TP113",
+        "TP114"
+      ],
+      "centers": [
+        [
+          35.8,
+          22.0
+        ],
+        [
+          35.8,
+          18.8
+        ]
+      ],
+      "separation_mm": 3.1999999999999993
+    },
+    "SCR": {
+      "refs": [
+        "TP301",
+        "TP302"
+      ],
+      "centers": [
+        [
+          66.5,
+          38.35
+        ],
+        [
+          69.6,
+          38.35
+        ]
+      ],
+      "separation_mm": 3.0999999999999943
+    },
+    "raw_ripple": {
+      "refs": [
+        "TP504",
+        "TP506"
+      ],
+      "centers": [
+        [
+          60.0,
+          60.5
+        ],
+        [
+          63.25,
+          60.5
+        ]
+      ],
+      "separation_mm": 3.25
+    }
+  }
 }

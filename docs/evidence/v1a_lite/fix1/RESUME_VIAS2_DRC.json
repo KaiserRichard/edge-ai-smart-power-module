@@ -1,0 +1,1138 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:58:15+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets /VIN_FUSED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.65,
+                        "y": 18.1
+                    },
+                    "uuid": "1a4d6276-f5aa-4627-805c-f82da9dc9232"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.65,
+                        "y": 18.1
+                    },
+                    "uuid": "1a4d6276-f5aa-4627-805c-f82da9dc9232"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1616 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 40.5
+                    },
+                    "uuid": "40517051-fcf8-4fd9-ac02-711927498a4a"
+                },
+                {
+                    "description": "Via [/VOUT_5V1] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.5,
+                        "y": 39.8
+                    },
+                    "uuid": "bcfe419c-2a8d-42e8-88ac-3dcc481e3301"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_FUSED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.65,
+                        "y": 18.1
+                    },
+                    "uuid": "1a4d6276-f5aa-4627-805c-f82da9dc9232"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1616 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 40.5
+                    },
+                    "uuid": "40517051-fcf8-4fd9-ac02-711927498a4a"
+                },
+                {
+                    "description": "Via [/VOUT_5V1] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.5,
+                        "y": 39.8
+                    },
+                    "uuid": "bcfe419c-2a8d-42e8-88ac-3dcc481e3301"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1616 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 40.5
+                    },
+                    "uuid": "40517051-fcf8-4fd9-ac02-711927498a4a"
+                },
+                {
+                    "description": "Via [/VOUT_5V1] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.5,
+                        "y": 39.8
+                    },
+                    "uuid": "bcfe419c-2a8d-42e8-88ac-3dcc481e3301"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1616 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 40.5
+                    },
+                    "uuid": "40517051-fcf8-4fd9-ac02-711927498a4a"
+                },
+                {
+                    "description": "Via [/VOUT_5V1] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.5,
+                        "y": 39.8
+                    },
+                    "uuid": "bcfe419c-2a8d-42e8-88ac-3dcc481e3301"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_FUSED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 31.65,
+                        "y": 18.15
+                    },
+                    "uuid": "1de0880c-5aa0-472f-8984-ecd048001548"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 31.65,
+                        "y": 18.15
+                    },
+                    "uuid": "1de0880c-5aa0-472f-8984-ecd048001548"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 31.65,
+                        "y": 18.15
+                    },
+                    "uuid": "1de0880c-5aa0-472f-8984-ecd048001548"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0031 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.4,
+                        "y": 17.95
+                    },
+                    "uuid": "20bd9ba2-8a40-44ca-8ba5-a0e42b2f51c7"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1531 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.4,
+                        "y": 17.95
+                    },
+                    "uuid": "20bd9ba2-8a40-44ca-8ba5-a0e42b2f51c7"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1306 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.4,
+                        "y": 17.95
+                    },
+                    "uuid": "20bd9ba2-8a40-44ca-8ba5-a0e42b2f51c7"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1092 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.45,
+                        "y": 18.0
+                    },
+                    "uuid": "01e6dc87-3206-4060-9e53-1b6e9fb48321"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0259 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.5657 mm",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.45
+                    },
+                    "uuid": "010268c1-a510-4a5e-ae6c-4ec5bcb40fb5"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_FUSED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.4
+                    },
+                    "uuid": "81a6b472-487a-4827-a511-e015bcffee3a"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_FUSED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.45,
+                        "y": 18.0
+                    },
+                    "uuid": "01e6dc87-3206-4060-9e53-1b6e9fb48321"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.75,
+                        "y": 18.35
+                    },
+                    "uuid": "dd4b0d66-6edf-43c6-88a4-9769d40af0be"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1106 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.45,
+                        "y": 18.0
+                    },
+                    "uuid": "01e6dc87-3206-4060-9e53-1b6e9fb48321"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_FUSED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.5657 mm",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.45
+                    },
+                    "uuid": "010268c1-a510-4a5e-ae6c-4ec5bcb40fb5"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.5657 mm",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.45
+                    },
+                    "uuid": "010268c1-a510-4a5e-ae6c-4ec5bcb40fb5"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0426 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.5,
+                        "y": 18.0
+                    },
+                    "uuid": "b374f087-21d8-4945-8adf-fa3fc0b3365f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.4
+                    },
+                    "uuid": "81a6b472-487a-4827-a511-e015bcffee3a"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.6,
+                        "y": 18.05
+                    },
+                    "uuid": "e77ff5ab-702f-431d-9181-7ab8c5372531"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.4
+                    },
+                    "uuid": "81a6b472-487a-4827-a511-e015bcffee3a"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 31.75,
+                        "y": 18.25
+                    },
+                    "uuid": "f4cd0a4f-e564-4824-b5d5-0bf1cba8e373"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.75,
+                        "y": 18.35
+                    },
+                    "uuid": "dd4b0d66-6edf-43c6-88a4-9769d40af0be"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.75,
+                        "y": 18.35
+                    },
+                    "uuid": "dd4b0d66-6edf-43c6-88a4-9769d40af0be"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0212 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.55,
+                        "y": 18.05
+                    },
+                    "uuid": "f5a56910-24db-4277-a71d-2b14e510fe64"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.5,
+                        "y": 18.0
+                    },
+                    "uuid": "b374f087-21d8-4945-8adf-fa3fc0b3365f"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0415 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.5,
+                        "y": 18.0
+                    },
+                    "uuid": "b374f087-21d8-4945-8adf-fa3fc0b3365f"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.6,
+                        "y": 18.05
+                    },
+                    "uuid": "e77ff5ab-702f-431d-9181-7ab8c5372531"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1972 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 2.8000 mm",
+                    "pos": {
+                        "x": 28.6,
+                        "y": 17.95
+                    },
+                    "uuid": "849f0194-9967-43a2-8c22-f3424ada0354"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.0512 mm",
+                    "pos": {
+                        "x": 30.85,
+                        "y": 18.65
+                    },
+                    "uuid": "ae7b95be-bcb1-460d-8844-bbbfa5064105"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 31.6,
+                        "y": 18.05
+                    },
+                    "uuid": "e77ff5ab-702f-431d-9181-7ab8c5372531"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 31.75,
+                        "y": 18.25
+                    },
+                    "uuid": "f4cd0a4f-e564-4824-b5d5-0bf1cba8e373"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 31.75,
+                        "y": 18.25
+                    },
+                    "uuid": "f4cd0a4f-e564-4824-b5d5-0bf1cba8e373"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VIN_FUSED)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.55,
+                        "y": 18.05
+                    },
+                    "uuid": "f5a56910-24db-4277-a71d-2b14e510fe64"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 31.55,
+                        "y": 18.05
+                    },
+                    "uuid": "f5a56910-24db-4277-a71d-2b14e510fe64"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0717 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                },
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 2.8000 mm",
+                    "pos": {
+                        "x": 28.6,
+                        "y": 17.95
+                    },
+                    "uuid": "849f0194-9967-43a2-8c22-f3424ada0354"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2217 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_FUSED] on F.Cu, length 2.8000 mm",
+                    "pos": {
+                        "x": 28.6,
+                        "y": 17.95
+                    },
+                    "uuid": "849f0194-9967-43a2-8c22-f3424ada0354"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 31.8,
+                        "y": 18.2
+                    },
+                    "uuid": "5fc926db-8d4a-444e-b52b-d87b87a072e0"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /02_BUCK_5V/BUCK_RT)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.0
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RT] on F.Cu, length 1.1000 mm",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 49.15
+                    },
+                    "uuid": "bd5ba761-b3c2-4450-87ea-420cc31e83b4"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RT] on F.Cu, length 1.1000 mm",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 49.15
+                    },
+                    "uuid": "bd5ba761-b3c2-4450-87ea-420cc31e83b4"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.0
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /02_BUCK_5V/BUCK_RT and /GND)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RT] on F.Cu, length 1.2021 mm",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.25
+                    },
+                    "uuid": "5315e72f-df43-4ec4-aae8-f1a81166f441"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.0
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RT] on F.Cu, length 1.2021 mm",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.25
+                    },
+                    "uuid": "5315e72f-df43-4ec4-aae8-f1a81166f441"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.0
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_PROTECTED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_PROTECTED] on B.Cu, length 5.5000 mm",
+                    "pos": {
+                        "x": 37.9,
+                        "y": 50.2
+                    },
+                    "uuid": "585f7a43-8d14-4bc4-80d7-552cae2319f6"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.0
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_PROTECTED] on B.Cu, length 5.5000 mm",
+                    "pos": {
+                        "x": 37.9,
+                        "y": 50.2
+                    },
+                    "uuid": "585f7a43-8d14-4bc4-80d7-552cae2319f6"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.0
+                    },
+                    "uuid": "78aea0e8-39bc-45a0-8a91-8bb7750e9f75"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_PROTECTED and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VIN_PROTECTED] on B.Cu, length 5.5000 mm",
+                    "pos": {
+                        "x": 37.9,
+                        "y": 50.2
+                    },
+                    "uuid": "585f7a43-8d14-4bc4-80d7-552cae2319f6"
+                },
+                {
+                    "description": "Track [/GND] on B.Cu, length 1.2042 mm",
+                    "pos": {
+                        "x": 41.7,
+                        "y": 49.1
+                    },
+                    "uuid": "de895fb5-2581-496f-8eb5-9304740ba550"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RT] on F.Cu, length 1.2021 mm",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 50.25
+                    },
+                    "uuid": "5315e72f-df43-4ec4-aae8-f1a81166f441"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.2042 mm",
+                    "pos": {
+                        "x": 41.7,
+                        "y": 49.1
+                    },
+                    "uuid": "74a5cacf-9e14-4416-97f8-4d6b90283861"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.2042 mm",
+                    "pos": {
+                        "x": 41.7,
+                        "y": 49.1
+                    },
+                    "uuid": "74a5cacf-9e14-4416-97f8-4d6b90283861"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RT] on F.Cu, length 1.1000 mm",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 49.15
+                    },
+                    "uuid": "bd5ba761-b3c2-4450-87ea-420cc31e83b4"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        }
+    ]
+}

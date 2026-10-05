@@ -1,0 +1,1146 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:55:49+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on F.Cu, length 0.8485 mm",
+                    "pos": {
+                        "x": 41.85,
+                        "y": 24.85
+                    },
+                    "uuid": "3be88083-727a-4f95-9b26-d6d6c73b24e2"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 40.35,
+                        "y": 27.35
+                    },
+                    "uuid": "461f1000-2c44-41f9-a4e0-0c515d9b29ae"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 39.35,
+                        "y": 22.35
+                    },
+                    "uuid": "c2b688fa-69fb-4ebf-a26c-6177bb5a1267"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/S_COMMON and /01_INPUT_PROTECTION/CUT_GATE)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 39.15,
+                        "y": 21.4
+                    },
+                    "uuid": "c8842d5e-2be3-4df9-a90a-d2f00df83175"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 39.15,
+                        "y": 21.4
+                    },
+                    "uuid": "c8842d5e-2be3-4df9-a90a-d2f00df83175"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.35,
+                        "y": 22.4
+                    },
+                    "uuid": "e174dbc9-7a8b-43a2-b3b2-0cf71ff66c14"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "53f07e5d-de41-4d45-8543-2102ef23fb53"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                },
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "53f07e5d-de41-4d45-8543-2102ef23fb53"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "53f07e5d-de41-4d45-8543-2102ef23fb53"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1093 mm)",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/S_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 22.28
+                    },
+                    "uuid": "17c1fed6-31ce-4727-a9d8-494b7cac0e6a"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 40.45,
+                        "y": 22.65
+                    },
+                    "uuid": "2c238d68-3ecb-4534-b453-0b3a95e81f55"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 39.45,
+                        "y": 22.5
+                    },
+                    "uuid": "f1694989-b75b-42b1-9b16-6a9faba36a1c"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/S_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 22.28
+                    },
+                    "uuid": "17c1fed6-31ce-4727-a9d8-494b7cac0e6a"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 40.4,
+                        "y": 22.7
+                    },
+                    "uuid": "4aae1aa7-c301-4881-84a4-11d4d6244add"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/S_COMMON and /01_INPUT_PROTECTION/IN_NPN_BASE)",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/S_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 22.28
+                    },
+                    "uuid": "17c1fed6-31ce-4727-a9d8-494b7cac0e6a"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.7500 mm",
+                    "pos": {
+                        "x": 40.45,
+                        "y": 21.9
+                    },
+                    "uuid": "dae2e2c2-d0f6-4260-9762-a69ab0f691a7"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.7500 mm",
+                    "pos": {
+                        "x": 40.45,
+                        "y": 21.9
+                    },
+                    "uuid": "dae2e2c2-d0f6-4260-9762-a69ab0f691a7"
+                },
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/S_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 22.28
+                    },
+                    "uuid": "17c1fed6-31ce-4727-a9d8-494b7cac0e6a"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1166 mm)",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/S_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 22.28
+                    },
+                    "uuid": "17c1fed6-31ce-4727-a9d8-494b7cac0e6a"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.7071 mm",
+                    "pos": {
+                        "x": 40.95,
+                        "y": 21.4
+                    },
+                    "uuid": "380c9531-6f93-4eb0-9142-5825aa640345"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1816 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 39.45,
+                        "y": 22.7
+                    },
+                    "uuid": "fa9aa1dd-13ba-4e9d-98b1-fe8effae36ef"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.2,
+                        "y": 21.65
+                    },
+                    "uuid": "2bd37fd6-558e-434a-87ba-36d44c3454aa"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.2,
+                        "y": 21.65
+                    },
+                    "uuid": "2bd37fd6-558e-434a-87ba-36d44c3454aa"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 39.3,
+                        "y": 22.3
+                    },
+                    "uuid": "3e42213d-84f2-4e20-a724-4df00fa83fed"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0250 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.5500 mm",
+                    "pos": {
+                        "x": 39.3,
+                        "y": 21.75
+                    },
+                    "uuid": "5aae08b1-b7bb-4d25-9c46-37de56009080"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.5500 mm",
+                    "pos": {
+                        "x": 39.3,
+                        "y": 21.75
+                    },
+                    "uuid": "5aae08b1-b7bb-4d25-9c46-37de56009080"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 39.15,
+                        "y": 21.3
+                    },
+                    "uuid": "76f1ff19-97ae-455e-ab27-79a61309dd7b"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 39.15,
+                        "y": 21.3
+                    },
+                    "uuid": "76f1ff19-97ae-455e-ab27-79a61309dd7b"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0750 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "7ebfb315-217e-4dd7-9ad8-19f3334f6c9a"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "7ebfb315-217e-4dd7-9ad8-19f3334f6c9a"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 39.2,
+                        "y": 21.45
+                    },
+                    "uuid": "8ce23b19-e673-41a8-9e13-6fe12f12a4a1"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 39.2,
+                        "y": 21.45
+                    },
+                    "uuid": "8ce23b19-e673-41a8-9e13-6fe12f12a4a1"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.2
+                    },
+                    "uuid": "90cd5682-d4f6-40dd-940a-bf5b02ebfe7b"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on B.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 21.5
+                    },
+                    "uuid": "9c853176-c21e-46a2-9b94-527522b00c54"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /01_INPUT_PROTECTION/CUT_GATE and /01_INPUT_PROTECTION/S_COMMON)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.2
+                    },
+                    "uuid": "90cd5682-d4f6-40dd-940a-bf5b02ebfe7b"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1450 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 40.45,
+                        "y": 22.65
+                    },
+                    "uuid": "2c238d68-3ecb-4534-b453-0b3a95e81f55"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on F.Cu, length 1.8400 mm",
+                    "pos": {
+                        "x": 38.96,
+                        "y": 22.28
+                    },
+                    "uuid": "55247a98-70d7-4a71-bf85-de55797c0be7"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1550 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.7071 mm",
+                    "pos": {
+                        "x": 40.95,
+                        "y": 21.4
+                    },
+                    "uuid": "380c9531-6f93-4eb0-9142-5825aa640345"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on F.Cu, length 1.8400 mm",
+                    "pos": {
+                        "x": 38.96,
+                        "y": 22.28
+                    },
+                    "uuid": "55247a98-70d7-4a71-bf85-de55797c0be7"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1950 mm)",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 40.4,
+                        "y": 22.7
+                    },
+                    "uuid": "4aae1aa7-c301-4881-84a4-11d4d6244add"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on F.Cu, length 1.8400 mm",
+                    "pos": {
+                        "x": 38.96,
+                        "y": 22.28
+                    },
+                    "uuid": "55247a98-70d7-4a71-bf85-de55797c0be7"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/S_COMMON] on F.Cu, length 1.8400 mm",
+                    "pos": {
+                        "x": 38.96,
+                        "y": 22.28
+                    },
+                    "uuid": "55247a98-70d7-4a71-bf85-de55797c0be7"
+                },
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/IN_NPN_BASE] on F.Cu, length 0.7500 mm",
+                    "pos": {
+                        "x": 40.45,
+                        "y": 21.9
+                    },
+                    "uuid": "dae2e2c2-d0f6-4260-9762-a69ab0f691a7"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                },
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "53f07e5d-de41-4d45-8543-2102ef23fb53"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP114",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 19.0
+                    },
+                    "uuid": "08780e6b-4be9-4083-9484-96d8a358b803"
+                },
+                {
+                    "description": "Footprint TP113",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "d36fd55c-fa7d-4a9c-bf5f-f69b9560fc40"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "53f07e5d-de41-4d45-8543-2102ef23fb53"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.2,
+                        "y": 21.65
+                    },
+                    "uuid": "2bd37fd6-558e-434a-87ba-36d44c3454aa"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 39.3,
+                        "y": 22.3
+                    },
+                    "uuid": "3e42213d-84f2-4e20-a724-4df00fa83fed"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.5500 mm",
+                    "pos": {
+                        "x": 39.3,
+                        "y": 21.75
+                    },
+                    "uuid": "5aae08b1-b7bb-4d25-9c46-37de56009080"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 39.15,
+                        "y": 21.3
+                    },
+                    "uuid": "76f1ff19-97ae-455e-ab27-79a61309dd7b"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.1
+                    },
+                    "uuid": "7ebfb315-217e-4dd7-9ad8-19f3334f6c9a"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 39.2,
+                        "y": 21.45
+                    },
+                    "uuid": "8ce23b19-e673-41a8-9e13-6fe12f12a4a1"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.05,
+                        "y": 21.2
+                    },
+                    "uuid": "90cd5682-d4f6-40dd-940a-bf5b02ebfe7b"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 39.35,
+                        "y": 22.35
+                    },
+                    "uuid": "c2b688fa-69fb-4ebf-a26c-6177bb5a1267"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 39.15,
+                        "y": 21.4
+                    },
+                    "uuid": "c8842d5e-2be3-4df9-a90a-d2f00df83175"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 39.35,
+                        "y": 22.4
+                    },
+                    "uuid": "e174dbc9-7a8b-43a2-b3b2-0cf71ff66c14"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on B.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 39.45,
+                        "y": 22.5
+                    },
+                    "uuid": "f1694989-b75b-42b1-9b16-6a9faba36a1c"
+                },
+                {
+                    "description": "Pad 1 [/01_INPUT_PROTECTION/S_COMMON] of TP113 on B.Cu",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "fdd5cce4-b16a-4cf9-9546-ac779ab341cd"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 13.1
+                    },
+                    "uuid": "08767d99-2c51-4bc8-93ea-c6d163ca032b"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/S_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.4,
+                        "y": 27.35
+                    },
+                    "uuid": "444dde41-25d0-45f5-9028-94665d27248b"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.8,
+                        "y": 17.72
+                    },
+                    "uuid": "7135bb86-12d6-499f-bf0c-9916be05605a"
+                },
+                {
+                    "description": "Via [/01_INPUT_PROTECTION/CUT_GATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.9,
+                        "y": 17.7
+                    },
+                    "uuid": "9b02b626-994d-4a20-af58-667391f12c47"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Silkscreen overlap (board setup constraints silk clearance 0.1500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Circle of TP113 on B.Silkscreen",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 21.5
+                    },
+                    "uuid": "2f858530-cc6c-4592-8680-f974f06ea4ee"
+                },
+                {
+                    "description": "Circle of TP114 on B.Silkscreen",
+                    "pos": {
+                        "x": 39.0,
+                        "y": 19.0
+                    },
+                    "uuid": "a49b9f1e-ff1e-446e-8293-737d7c412d85"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}
