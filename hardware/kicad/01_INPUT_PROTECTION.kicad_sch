@@ -1717,7 +1717,7 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-    (property "LCSC" "OPEN"
+    (property "LCSC" "N/A - Mouser sourced"
       (at 116.84 83.82 0)
       (effects
         (font
@@ -1729,7 +1729,7 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-    (property "Source" "https://www.bourns.com/data/global/pdfs/SMCJ.pdf"
+    (property "Source" "https://www.mouser.com/en/ProductDetail/Bourns/SMCJ64CA?qs=NMatY7cgvvbtyPM2xB%252BvVA%3D%3D"
       (at 116.84 83.82 0)
       (effects
         (font
@@ -1742,6 +1742,18 @@
           (size 1.27 1.27))
         (hide yes)))
     (property "Cost_scope" "COMMON_INPUT"
+      (at 116.84 83.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Distributor" "Mouser"
+      (at 116.84 83.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Distributor_SKU" "652-SMCJ64CA"
       (at 116.84 83.82 0)
       (effects
         (font
@@ -7447,6 +7459,166 @@
         (size 1.016 1.016))
       (justify left bottom))
     (uuid "77ffc7f6-5f54-5375-8cf9-ce038b392a81"))
+  (symbol
+    (lib_id "Connector:TestPoint")
+    (at 421.64 347.98 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "23f98fef-5cd2-5195-9940-3e32c59a145e")
+    (property "Reference" "TP113"
+      (at 421.64 329.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "S_COMMON"
+      (at 421.64 332.52000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 421.64 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "PCB_FEATURE"
+      (at 421.64 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "N/A"
+      (at 421.64 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "PCB"
+      (at 421.64 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Source" "Project-owned copper feature"
+      (at 421.64 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Unit_VND" "0"
+      (at 421.64 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Cost_scope" "PCB_FEATURE"
+      (at 421.64 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142/f5eed0ac-98ac-582d-b5c8-5efe81696a94"
+          (reference "TP113")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 421.64 347.98)
+      (xy 421.64 353.06))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "8acd5801-73fa-5123-b260-5ff7798557fb"))
+  (label "S_COMMON"
+    (at 421.64 353.06 0)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify left bottom))
+    (uuid "d183acaf-c524-5407-9bb1-3e001aac8ea5"))
+  (symbol
+    (lib_id "Connector:TestPoint")
+    (at 497.84000000000003 347.98 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "93d2abfc-658a-56b8-b83a-7586ad336a88")
+    (property "Reference" "TP114"
+      (at 497.84000000000003 329.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "CUT_GATE"
+      (at 497.84000000000003 332.52000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 497.84000000000003 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "PCB_FEATURE"
+      (at 497.84000000000003 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "N/A"
+      (at 497.84000000000003 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "PCB"
+      (at 497.84000000000003 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Source" "Project-owned copper feature"
+      (at 497.84000000000003 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Unit_VND" "0"
+      (at 497.84000000000003 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Cost_scope" "PCB_FEATURE"
+      (at 497.84000000000003 347.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142/f5eed0ac-98ac-582d-b5c8-5efe81696a94"
+          (reference "TP114")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 497.84000000000003 347.98)
+      (xy 497.84 353.06))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "a00cb8cd-10f9-5175-b171-c838214f20fc"))
+  (label "CUT_GATE"
+    (at 497.84 353.06 0)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify left bottom))
+    (uuid "a5a95caa-73b9-5716-8b9b-1bd5ff573ff8"))
   (hierarchical_label "VIN_RAW"
     (shape passive)
     (at 22.86 398.78 0)
@@ -7454,7 +7626,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "8acd5801-73fa-5123-b260-5ff7798557fb"))
+    (uuid "848a89f2-1b4a-5a5f-a76e-aacffffa6809"))
   (wire
     (pts
       (xy 22.86 398.78)
@@ -7462,14 +7634,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "d183acaf-c524-5407-9bb1-3e001aac8ea5"))
+    (uuid "c04618af-03a6-5e49-8ec7-c28c465c3512"))
   (label "VIN_RAW"
     (at 17.78 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "a00cb8cd-10f9-5175-b171-c838214f20fc"))
+    (uuid "8d48809e-7552-5965-b851-179998cbacf9"))
   (hierarchical_label "VIN_FUSED"
     (shape passive)
     (at 93.98 398.78 0)
@@ -7477,7 +7649,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "a5a95caa-73b9-5716-8b9b-1bd5ff573ff8"))
+    (uuid "3154a914-6ff3-53d2-8155-fdc82c2cdf46"))
   (wire
     (pts
       (xy 93.98 398.78)
@@ -7485,14 +7657,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "848a89f2-1b4a-5a5f-a76e-aacffffa6809"))
+    (uuid "cf1d3b27-d42a-5afe-9349-8d87c919584c"))
   (label "VIN_FUSED"
     (at 88.9 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "c04618af-03a6-5e49-8ec7-c28c465c3512"))
+    (uuid "45be5218-2758-54cb-b771-aec9af12edf2"))
   (hierarchical_label "VIN_PROTECTED"
     (shape passive)
     (at 165.10000000000002 398.78 0)
@@ -7500,7 +7672,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "8d48809e-7552-5965-b851-179998cbacf9"))
+    (uuid "063e0575-5aa3-592e-bf49-a21bfd32379d"))
   (wire
     (pts
       (xy 165.10000000000002 398.78)
@@ -7508,14 +7680,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "3154a914-6ff3-53d2-8155-fdc82c2cdf46"))
+    (uuid "a996de3e-4cc3-527c-b8f7-6f6d7cf499d6"))
   (label "VIN_PROTECTED"
     (at 160.02 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "cf1d3b27-d42a-5afe-9349-8d87c919584c"))
+    (uuid "f167151b-78d6-59e2-9d57-44e460dbaa3d"))
   (hierarchical_label "CTRL12"
     (shape passive)
     (at 236.22000000000003 398.78 0)
@@ -7523,7 +7695,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "45be5218-2758-54cb-b771-aec9af12edf2"))
+    (uuid "dba3eff6-374f-58ef-bd80-b492d18613aa"))
   (wire
     (pts
       (xy 236.22000000000003 398.78)
@@ -7531,14 +7703,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "063e0575-5aa3-592e-bf49-a21bfd32379d"))
+    (uuid "0a18fcc4-749c-5f0f-ad65-bc1bec54cfb0"))
   (label "CTRL12"
     (at 231.14000000000001 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "a996de3e-4cc3-527c-b8f7-6f6d7cf499d6"))
+    (uuid "cb565ecc-6ffd-557e-8a5e-e08f3a84c657"))
   (hierarchical_label "CB_COLLECTOR"
     (shape passive)
     (at 307.34000000000003 398.78 0)
@@ -7546,7 +7718,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "f167151b-78d6-59e2-9d57-44e460dbaa3d"))
+    (uuid "1f8da20e-dac6-59d8-9d82-df47e74e46ff"))
   (wire
     (pts
       (xy 307.34000000000003 398.78)
@@ -7554,14 +7726,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "dba3eff6-374f-58ef-bd80-b492d18613aa"))
+    (uuid "43d3def1-9eaa-51a8-be3b-8766d958a604"))
   (label "CB_COLLECTOR"
     (at 302.26000000000005 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "0a18fcc4-749c-5f0f-ad65-bc1bec54cfb0"))
+    (uuid "4afbbea7-181f-5525-8dda-92f4c658d7d3"))
   (hierarchical_label "GND"
     (shape passive)
     (at 378.46000000000004 398.78 0)
@@ -7569,7 +7741,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "cb565ecc-6ffd-557e-8a5e-e08f3a84c657"))
+    (uuid "fc1f97c5-f90a-55fb-97bc-c37810d166ae"))
   (wire
     (pts
       (xy 378.46000000000004 398.78)
@@ -7577,11 +7749,18 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "1f8da20e-dac6-59d8-9d82-df47e74e46ff"))
+    (uuid "30ca0da5-c96a-5c41-b11d-2c919f85e783"))
   (label "GND"
     (at 373.38000000000005 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "43d3def1-9eaa-51a8-be3b-8766d958a604")))
+    (uuid "89995cc8-6200-519b-8325-2dbd1204880b"))
+  (text "TP113 S_COMMON / TP114 CUT_GATE: differential Q102 VGS sense stubs only; no load current in pads."
+    (at 15.24 43.18 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid "7e2b4567-875f-5e78-acf1-ca04faa57392")))

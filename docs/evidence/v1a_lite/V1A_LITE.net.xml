@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_sch</source>
-    <date>2026-10-05T12:19:08+0700</date>
+    <date>2026-10-05T13:03:01+0700</date>
     <tool>Eeschema 9.0.6</tool>
     <textvar name="RELEASE_STATUS">NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -158,22 +158,26 @@
       <footprint>Diode_SMD:D_SMC</footprint>
       <fields>
         <field name="MPN">SMCJ64CA</field>
-        <field name="LCSC">OPEN</field>
+        <field name="LCSC">N/A - Mouser sourced</field>
         <field name="Manufacturer">Bourns</field>
-        <field name="Source">https://www.bourns.com/data/global/pdfs/SMCJ.pdf</field>
+        <field name="Source">https://www.mouser.com/en/ProductDetail/Bourns/SMCJ64CA?qs=NMatY7cgvvbtyPM2xB%252BvVA%3D%3D</field>
         <field name="Unit_VND">13250</field>
         <field name="Cost_scope">COMMON_INPUT</field>
+        <field name="Distributor">Mouser</field>
+        <field name="Distributor_SKU">652-SMCJ64CA</field>
         <field name="Footprint">Diode_SMD:D_SMC</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D_TVS" description="Bidirectional transient-voltage-suppression diode"/>
       <property name="MPN" value="SMCJ64CA"/>
-      <property name="LCSC" value="OPEN"/>
+      <property name="LCSC" value="N/A - Mouser sourced"/>
       <property name="Manufacturer" value="Bourns"/>
-      <property name="Source" value="https://www.bourns.com/data/global/pdfs/SMCJ.pdf"/>
+      <property name="Source" value="https://www.mouser.com/en/ProductDetail/Bourns/SMCJ64CA?qs=NMatY7cgvvbtyPM2xB%252BvVA%3D%3D"/>
       <property name="Unit_VND" value="13250"/>
       <property name="Cost_scope" value="COMMON_INPUT"/>
+      <property name="Distributor" value="Mouser"/>
+      <property name="Distributor_SKU" value="652-SMCJ64CA"/>
       <property name="Sheetname" value="01_INPUT_PROTECTION"/>
       <property name="Sheetfile" value="01_INPUT_PROTECTION.kicad_sch"/>
       <property name="ki_keywords" value="diode TVS thyrector"/>
@@ -1778,6 +1782,64 @@
       <sheetpath names="/01_INPUT_PROTECTION/" tstamps="/f5eed0ac-98ac-582d-b5c8-5efe81696a94/"/>
       <tstamps>7b9a99b5-233b-5c10-b787-e3e601215eb2</tstamps>
     </comp>
+    <comp ref="TP113">
+      <value>S_COMMON</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB_FEATURE</field>
+        <field name="LCSC">N/A</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Source">Project-owned copper feature</field>
+        <field name="Unit_VND">0</field>
+        <field name="Cost_scope">PCB_FEATURE</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB_FEATURE"/>
+      <property name="LCSC" value="N/A"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Source" value="Project-owned copper feature"/>
+      <property name="Unit_VND" value="0"/>
+      <property name="Cost_scope" value="PCB_FEATURE"/>
+      <property name="Sheetname" value="01_INPUT_PROTECTION"/>
+      <property name="Sheetfile" value="01_INPUT_PROTECTION.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/01_INPUT_PROTECTION/" tstamps="/f5eed0ac-98ac-582d-b5c8-5efe81696a94/"/>
+      <tstamps>23f98fef-5cd2-5195-9940-3e32c59a145e</tstamps>
+    </comp>
+    <comp ref="TP114">
+      <value>CUT_GATE</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB_FEATURE</field>
+        <field name="LCSC">N/A</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Source">Project-owned copper feature</field>
+        <field name="Unit_VND">0</field>
+        <field name="Cost_scope">PCB_FEATURE</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB_FEATURE"/>
+      <property name="LCSC" value="N/A"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Source" value="Project-owned copper feature"/>
+      <property name="Unit_VND" value="0"/>
+      <property name="Cost_scope" value="PCB_FEATURE"/>
+      <property name="Sheetname" value="01_INPUT_PROTECTION"/>
+      <property name="Sheetfile" value="01_INPUT_PROTECTION.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/01_INPUT_PROTECTION/" tstamps="/f5eed0ac-98ac-582d-b5c8-5efe81696a94/"/>
+      <tstamps>93d2abfc-658a-56b8-b83a-7586ad336a88</tstamps>
+    </comp>
     <comp ref="U101">
       <value>TL431BIDBZR</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
@@ -2896,6 +2958,64 @@
       <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/25d5ed6d-72ed-57c8-99e8-315aae647773/"/>
       <tstamps>a387714b-8fa4-5759-8ba5-009a0503d201</tstamps>
     </comp>
+    <comp ref="TP301">
+      <value>SCR_GATE</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB_FEATURE</field>
+        <field name="LCSC">N/A</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Source">Project-owned copper feature</field>
+        <field name="Unit_VND">0</field>
+        <field name="Cost_scope">PCB_FEATURE</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB_FEATURE"/>
+      <property name="LCSC" value="N/A"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Source" value="Project-owned copper feature"/>
+      <property name="Unit_VND" value="0"/>
+      <property name="Cost_scope" value="PCB_FEATURE"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/25d5ed6d-72ed-57c8-99e8-315aae647773/"/>
+      <tstamps>cd7dc84d-8a96-51cb-a86a-17fbf05f2698</tstamps>
+    </comp>
+    <comp ref="TP302">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB_FEATURE</field>
+        <field name="LCSC">N/A</field>
+        <field name="Manufacturer">PCB</field>
+        <field name="Source">Project-owned copper feature</field>
+        <field name="Unit_VND">0</field>
+        <field name="Cost_scope">PCB_FEATURE</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB_FEATURE"/>
+      <property name="LCSC" value="N/A"/>
+      <property name="Manufacturer" value="PCB"/>
+      <property name="Source" value="Project-owned copper feature"/>
+      <property name="Unit_VND" value="0"/>
+      <property name="Cost_scope" value="PCB_FEATURE"/>
+      <property name="Sheetname" value="03_OUTPUT_PROTECTION"/>
+      <property name="Sheetfile" value="03_OUTPUT_PROTECTION.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/03_OUTPUT_PROTECTION/" tstamps="/25d5ed6d-72ed-57c8-99e8-315aae647773/"/>
+      <tstamps>9447887d-d0f1-5f2b-8656-f4f153721caa</tstamps>
+    </comp>
     <comp ref="U301">
       <value>TL431BIDBZR</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
@@ -3656,6 +3776,7 @@
       <node ref="R130" pin="1" pintype="passive"/>
       <node ref="R141" pin="2" pintype="passive"/>
       <node ref="R143" pin="2" pintype="passive"/>
+      <node ref="TP114" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="18" name="/01_INPUT_PROTECTION/GATE_SINK" class="Default">
       <node ref="Q103" pin="3" pinfunction="C" pintype="passive"/>
@@ -3755,6 +3876,7 @@
       <node ref="R140" pin="1" pintype="passive"/>
       <node ref="R142" pin="1" pintype="passive"/>
       <node ref="R150" pin="1" pintype="passive"/>
+      <node ref="TP113" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="38" name="/02_BUCK_5V/BUCK_CBOOT" class="Default">
       <node ref="C205" pin="1" pintype="passive"/>
@@ -3819,6 +3941,7 @@
       <node ref="R307" pin="2" pintype="passive"/>
       <node ref="R308" pin="1" pintype="passive"/>
       <node ref="SCR301" pin="3" pinfunction="G" pintype="input"/>
+      <node ref="TP301" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="52" name="/CB_COLLECTOR" class="Default">
       <node ref="Q301" pin="3" pinfunction="C" pintype="passive"/>
@@ -3879,6 +4002,7 @@
       <node ref="R304" pin="2" pintype="passive"/>
       <node ref="R308" pin="2" pintype="passive"/>
       <node ref="SCR301" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="TP302" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP506" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="3" pinfunction="A" pintype="passive"/>
       <node ref="U201" pin="1" pinfunction="BIAS" pintype="power_in"/>

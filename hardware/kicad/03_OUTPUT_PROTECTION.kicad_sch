@@ -660,6 +660,77 @@
             (effects
               (font
                 (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "Connector:TestPoint"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0.762)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TP"
+        (at 0 6.858 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "TestPoint"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 5.08 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 5.08 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "test point"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "test point tp"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "Pin* Test*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "TestPoint_0_1"
+        (circle
+          (center 0 3.302)
+          (radius 0.762)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "TestPoint_1_1"
+        (pin passive line
+          (at 0 0 90)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27))))))
       (embedded_fonts no)))
   (text "V1A-Lite 1R / 03_OUTPUT_PROTECTION"
     (at 15.24 12.7 0)
@@ -2078,6 +2149,166 @@
         (size 1.016 1.016))
       (justify left bottom))
     (uuid "6e1ab901-ae3c-5214-8bc8-273df222a12d"))
+  (symbol
+    (lib_id "Connector:TestPoint")
+    (at 40.64 149.86 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "cd7dc84d-8a96-51cb-a86a-17fbf05f2698")
+    (property "Reference" "TP301"
+      (at 40.64 131.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SCR_GATE"
+      (at 40.64 134.4 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 40.64 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "PCB_FEATURE"
+      (at 40.64 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "N/A"
+      (at 40.64 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "PCB"
+      (at 40.64 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Source" "Project-owned copper feature"
+      (at 40.64 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Unit_VND" "0"
+      (at 40.64 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Cost_scope" "PCB_FEATURE"
+      (at 40.64 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142/25d5ed6d-72ed-57c8-99e8-315aae647773"
+          (reference "TP301")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 40.64 149.86)
+      (xy 40.64 154.94))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "11f46840-f9ee-5dde-8645-bf4d95133dcb"))
+  (label "SCR_GATE"
+    (at 40.64 154.94 0)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify left bottom))
+    (uuid "bf608e60-ba16-5e78-b93c-bb86e5627829"))
+  (symbol
+    (lib_id "Connector:TestPoint")
+    (at 78.74 149.86 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "9447887d-d0f1-5f2b-8656-f4f153721caa")
+    (property "Reference" "TP302"
+      (at 78.74 131.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "GND"
+      (at 78.74 134.4 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 78.74 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "MPN" "PCB_FEATURE"
+      (at 78.74 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC" "N/A"
+      (at 78.74 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Manufacturer" "PCB"
+      (at 78.74 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Source" "Project-owned copper feature"
+      (at 78.74 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Unit_VND" "0"
+      (at 78.74 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Cost_scope" "PCB_FEATURE"
+      (at 78.74 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142/25d5ed6d-72ed-57c8-99e8-315aae647773"
+          (reference "TP302")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 78.74 149.86)
+      (xy 78.74 154.94))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b6a9c27f-22d7-576a-9fcc-5caf861fe95d"))
+  (label "GND"
+    (at 78.74 154.94 0)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify left bottom))
+    (uuid "2f4d5f59-6138-53b4-a773-d86105501151"))
   (hierarchical_label "VOUT_5V1"
     (shape passive)
     (at 22.86 398.78 0)
@@ -2085,7 +2316,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "11f46840-f9ee-5dde-8645-bf4d95133dcb"))
+    (uuid "8cb32f16-aee9-5728-aa9d-9efa74d1455f"))
   (wire
     (pts
       (xy 22.86 398.78)
@@ -2093,14 +2324,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "bf608e60-ba16-5e78-b93c-bb86e5627829"))
+    (uuid "a2e14021-8c1b-5d4c-8767-2da41247a33f"))
   (label "VOUT_5V1"
     (at 17.78 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "b6a9c27f-22d7-576a-9fcc-5caf861fe95d"))
+    (uuid "f3e4ecf8-7282-54cc-9ea5-0ad4afeb1631"))
   (hierarchical_label "VOUT_PI"
     (shape passive)
     (at 93.98 398.78 0)
@@ -2108,7 +2339,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "2f4d5f59-6138-53b4-a773-d86105501151"))
+    (uuid "a3d746f8-f4c3-56cb-8a8b-0b28481e574c"))
   (wire
     (pts
       (xy 93.98 398.78)
@@ -2116,14 +2347,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "8cb32f16-aee9-5728-aa9d-9efa74d1455f"))
+    (uuid "0e9a4a9d-1384-5d9a-b912-d6d3de519f12"))
   (label "VOUT_PI"
     (at 88.9 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "a2e14021-8c1b-5d4c-8767-2da41247a33f"))
+    (uuid "c89178c0-a20f-58f0-aa23-2fef52043fa3"))
   (hierarchical_label "CB_COLLECTOR"
     (shape passive)
     (at 165.10000000000002 398.78 0)
@@ -2131,7 +2362,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "f3e4ecf8-7282-54cc-9ea5-0ad4afeb1631"))
+    (uuid "d3be50f0-20af-5c28-a7d1-bdb7615ebec7"))
   (wire
     (pts
       (xy 165.10000000000002 398.78)
@@ -2139,14 +2370,14 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "a3d746f8-f4c3-56cb-8a8b-0b28481e574c"))
+    (uuid "b6da0286-e473-5a88-841a-53eccb014351"))
   (label "CB_COLLECTOR"
     (at 160.02 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "0e9a4a9d-1384-5d9a-b912-d6d3de519f12"))
+    (uuid "87185ee3-aa51-5bde-8e8f-15debfd4646e"))
   (hierarchical_label "GND"
     (shape passive)
     (at 236.22000000000003 398.78 0)
@@ -2154,7 +2385,7 @@
       (font
         (size 1.016 1.016))
       (justify left))
-    (uuid "c89178c0-a20f-58f0-aa23-2fef52043fa3"))
+    (uuid "7395cc43-910e-5e3e-911f-2e5c8c3bc37c"))
   (wire
     (pts
       (xy 236.22000000000003 398.78)
@@ -2162,11 +2393,18 @@
     (stroke
       (width 0)
       (type default))
-    (uuid "d3be50f0-20af-5c28-a7d1-bdb7615ebec7"))
+    (uuid "59848181-5bd9-5c6c-8d25-516e725a7a47"))
   (label "GND"
     (at 231.14000000000001 398.78 180)
     (effects
       (font
         (size 1.016 1.016))
       (justify right bottom))
-    (uuid "b6da0286-e473-5a88-841a-53eccb014351")))
+    (uuid "30ced5e5-5ef8-5628-91da-25e064493db4"))
+  (text "TP301 SCR_GATE + TP302 cathode GND: adjacent Kelvin sense pair at SCR301; no discharge current in pads."
+    (at 15.24 43.18 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid "99214741-e062-5267-bfee-c60a11d1e5b0")))

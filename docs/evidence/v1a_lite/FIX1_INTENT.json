@@ -1,0 +1,1287 @@
+{
+  "1": [
+    {
+      "ref": "F101",
+      "value": "3A / 125V",
+      "lid": "Device:Fuse",
+      "fp": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+      "pins": {
+        "1": "VIN_RAW",
+        "2": "VIN_FUSED"
+      },
+      "mpn": "0451003.MRL",
+      "manufacturer": "Littelfuse",
+      "source": "https://www.lcsc.com/product-detail/C13982.html",
+      "lcsc": "C13982",
+      "price": "6773.4000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "D101",
+      "value": "SMCJ64CA",
+      "lid": "Device:D_TVS",
+      "fp": "Diode_SMD:D_SMC",
+      "pins": {
+        "1": "VIN_FUSED",
+        "2": "GND"
+      },
+      "mpn": "SMCJ64CA",
+      "manufacturer": "Bourns",
+      "source": "https://www.mouser.com/en/ProductDetail/Bourns/SMCJ64CA?qs=NMatY7cgvvbtyPM2xB%252BvVA%3D%3D",
+      "lcsc": "N/A - Mouser sourced",
+      "price": "13250",
+      "scope": "COMMON_INPUT",
+      "distributor": "Mouser",
+      "distributor_sku": "652-SMCJ64CA"
+    },
+    {
+      "ref": "Q101",
+      "value": "IRFR6215TRPBF",
+      "lid": "Transistor_FET:Q_PMOS_GDS",
+      "fp": "Package_TO_SOT_SMD:TO-252-2",
+      "pins": {
+        "1": "REV_GATE",
+        "2": "VIN_FUSED",
+        "3": "S_COMMON"
+      },
+      "mpn": "IRFR6215TRPBF",
+      "manufacturer": "Infineon",
+      "source": "https://www.lcsc.com/product-detail/C150936.html",
+      "lcsc": "C150936",
+      "price": "24843.7500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "Q102",
+      "value": "IRFR6215TRPBF",
+      "lid": "Transistor_FET:Q_PMOS_GDS",
+      "fp": "Package_TO_SOT_SMD:TO-252-2",
+      "pins": {
+        "1": "CUT_GATE",
+        "2": "VIN_PROTECTED",
+        "3": "S_COMMON"
+      },
+      "mpn": "IRFR6215TRPBF",
+      "manufacturer": "Infineon",
+      "source": "https://www.lcsc.com/product-detail/C150936.html",
+      "lcsc": "C150936",
+      "price": "24843.7500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "D102",
+      "value": "12V",
+      "lid": "Device:D_Zener",
+      "fp": "Diode_SMD:D_SOD-123",
+      "pins": {
+        "1": "S_COMMON",
+        "2": "REV_GATE"
+      },
+      "mpn": "BZT52C12-7-F",
+      "manufacturer": "DIODES",
+      "source": "https://www.lcsc.com/product-detail/C124196.html",
+      "lcsc": "C124196",
+      "price": "2043.1500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "D103",
+      "value": "12V",
+      "lid": "Device:D_Zener",
+      "fp": "Diode_SMD:D_SOD-123",
+      "pins": {
+        "1": "S_COMMON",
+        "2": "CUT_GATE"
+      },
+      "mpn": "BZT52C12-7-F",
+      "manufacturer": "DIODES",
+      "source": "https://www.lcsc.com/product-detail/C124196.html",
+      "lcsc": "C124196",
+      "price": "2043.1500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R101",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "REV_GATE",
+        "2": "REV_PULL"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R102",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "REV_PULL",
+        "2": "GND"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "D106",
+      "value": "TVS3300DRVR",
+      "lid": "Power_Protection:TVS3300DRV",
+      "fp": "Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm",
+      "pins": {
+        "1": "GND",
+        "2": "GND",
+        "3": "GND",
+        "4": "VIN_PROTECTED",
+        "5": "VIN_PROTECTED",
+        "6": "VIN_PROTECTED",
+        "7": "GND"
+      },
+      "mpn": "TVS3300DRVR",
+      "manufacturer": "TI",
+      "source": "https://www.lcsc.com/product-detail/C2863624.html",
+      "lcsc": "C2863624",
+      "price": "11771.3000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "C101",
+      "value": "100uF / 50V",
+      "lid": "Device:C_Polarized",
+      "fp": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "pins": {
+        "1": "VIN_PROTECTED",
+        "2": "GND"
+      },
+      "mpn": "EEUFR1H101",
+      "manufacturer": "PANASONIC",
+      "source": "https://www.lcsc.com/product-detail/C178702.html",
+      "lcsc": "C178702",
+      "price": "8636.3500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R110",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "S_COMMON",
+        "2": "BA1"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R111",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BA1",
+        "2": "BA2"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R112",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BA2",
+        "2": "BA3"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R113",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BA3",
+        "2": "BA4"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R114",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BA4",
+        "2": "BA5"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R115",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BA5",
+        "2": "BA6"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R116",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BA6",
+        "2": "BA7"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R117",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BA7",
+        "2": "CTRL12"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R118",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "S_COMMON",
+        "2": "BB1"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R119",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BB1",
+        "2": "BB2"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R120",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BB2",
+        "2": "BB3"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R121",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BB3",
+        "2": "BB4"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R122",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BB4",
+        "2": "BB5"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R123",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BB5",
+        "2": "BB6"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R124",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BB6",
+        "2": "BB7"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R125",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "BB7",
+        "2": "CTRL12"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "D104",
+      "value": "12V",
+      "lid": "Device:D_Zener",
+      "fp": "Diode_SMD:D_SOD-123",
+      "pins": {
+        "1": "CTRL12",
+        "2": "GND"
+      },
+      "mpn": "BZT52C12-7-F",
+      "manufacturer": "DIODES",
+      "source": "https://www.lcsc.com/product-detail/C124196.html",
+      "lcsc": "C124196",
+      "price": "2043.1500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "C102",
+      "value": "1uF / 16V",
+      "lid": "Device:C",
+      "fp": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CTRL12",
+        "2": "GND"
+      },
+      "mpn": "GRM21BR71C105KA01L",
+      "manufacturer": "muRata",
+      "source": "https://www.lcsc.com/product-detail/C77079.html",
+      "lcsc": "C77079",
+      "price": "1645.6500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R150",
+      "value": "100k / 0.1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "S_COMMON",
+        "2": "OVIN_D1"
+      },
+      "mpn": "TNPW0603100KBEEA",
+      "manufacturer": "VISHAY",
+      "source": "https://www.lcsc.com/product-detail/C844888.html",
+      "lcsc": "C844888",
+      "price": "2112.0500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R151",
+      "value": "1k / 0.1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "OVIN_D1",
+        "2": "OVIN_D2"
+      },
+      "mpn": "RT0603BRD071KL",
+      "manufacturer": "YAGEO",
+      "source": "https://www.lcsc.com/product-detail/C110776.html",
+      "lcsc": "C110776",
+      "price": "789.7000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R152",
+      "value": "1k / 0.1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "OVIN_D2",
+        "2": "OVIN_REF"
+      },
+      "mpn": "RT0603BRD071KL",
+      "manufacturer": "YAGEO",
+      "source": "https://www.lcsc.com/product-detail/C110776.html",
+      "lcsc": "C110776",
+      "price": "789.7000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R153",
+      "value": "10k / 0.1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "OVIN_REF",
+        "2": "GND"
+      },
+      "mpn": "TNPW060310K0BEEA",
+      "manufacturer": "VISHAY",
+      "source": "https://www.lcsc.com/product-detail/C844890.html",
+      "lcsc": "C844890",
+      "price": "1884.1500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "U101",
+      "value": "TL431BIDBZR",
+      "lid": "Reference_Voltage:TL431DBZ",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "OVIN_K",
+        "2": "OVIN_REF",
+        "3": "GND"
+      },
+      "mpn": "TL431BIDBZR",
+      "manufacturer": "TI",
+      "source": "https://www.lcsc.com/product-detail/C41283.html",
+      "lcsc": "C41283",
+      "price": "2077.6000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R144",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "CTRL12",
+        "2": "OVIN_K"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "D105",
+      "value": "3.3V",
+      "lid": "Device:D_Zener",
+      "fp": "Diode_SMD:D_SOD-123",
+      "pins": {
+        "1": "OVIN_K",
+        "2": "BASE_SHIFT"
+      },
+      "mpn": "BZT52C3V3-7-F",
+      "manufacturer": "DIODES",
+      "source": "https://www.lcsc.com/product-detail/C151564.html",
+      "lcsc": "C151564",
+      "price": "1399.2000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R145",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "BASE_SHIFT",
+        "2": "IN_NPN_BASE"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R146",
+      "value": "100k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "IN_NPN_BASE",
+        "2": "GND"
+      },
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C25803.html",
+      "lcsc": "C25803",
+      "price": "82.1500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "Q103",
+      "value": "MMBTA42-TP",
+      "lid": "Transistor_BJT:MMBTA42",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "IN_NPN_BASE",
+        "2": "GND",
+        "3": "GATE_SINK"
+      },
+      "mpn": "MMBTA42-TP",
+      "manufacturer": "MCC",
+      "source": "https://www.lcsc.com/product-detail/C78715.html",
+      "lcsc": "C78715",
+      "price": "1544.9500",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R130",
+      "value": "100R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "CUT_GATE",
+        "2": "GS1"
+      },
+      "mpn": "0603WAF1000T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22775.html",
+      "lcsc": "C22775",
+      "price": "84.8000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R131",
+      "value": "100R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "GS1",
+        "2": "GS2"
+      },
+      "mpn": "0603WAF1000T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22775.html",
+      "lcsc": "C22775",
+      "price": "84.8000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R132",
+      "value": "100R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "GS2",
+        "2": "GS3"
+      },
+      "mpn": "0603WAF1000T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22775.html",
+      "lcsc": "C22775",
+      "price": "84.8000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R133",
+      "value": "100R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "GS3",
+        "2": "GS4"
+      },
+      "mpn": "0603WAF1000T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22775.html",
+      "lcsc": "C22775",
+      "price": "84.8000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R134",
+      "value": "100R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "GS4",
+        "2": "GS5"
+      },
+      "mpn": "0603WAF1000T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22775.html",
+      "lcsc": "C22775",
+      "price": "84.8000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R135",
+      "value": "100R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "GS5",
+        "2": "GATE_SINK"
+      },
+      "mpn": "0603WAF1000T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22775.html",
+      "lcsc": "C22775",
+      "price": "84.8000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R140",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "S_COMMON",
+        "2": "PUA"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R141",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "PUA",
+        "2": "CUT_GATE"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R142",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "S_COMMON",
+        "2": "PUB"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "R143",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "PUB",
+        "2": "CUT_GATE"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "COMMON_INPUT"
+    },
+    {
+      "ref": "Q104",
+      "value": "MMBTA42-TP",
+      "lid": "Transistor_BJT:MMBTA42",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "SET_LATCH",
+        "2": "GND",
+        "3": "LATCH_NCOL"
+      },
+      "mpn": "MMBTA42-TP",
+      "manufacturer": "MCC",
+      "source": "https://www.lcsc.com/product-detail/C78715.html",
+      "lcsc": "C78715",
+      "price": "1544.9500",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "Q105",
+      "value": "BC807-40,215",
+      "lid": "Transistor_BJT:BC807",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "LATCH_PBASE",
+        "2": "CTRL12",
+        "3": "LATCH_H"
+      },
+      "mpn": "BC807-40,215",
+      "manufacturer": "Nexperia",
+      "source": "https://www.lcsc.com/product-detail/C57316.html",
+      "lcsc": "C57316",
+      "price": "530.0000",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "Q106",
+      "value": "MMBTA42-TP",
+      "lid": "Transistor_BJT:MMBTA42",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "CLAMP_BASE",
+        "2": "GND",
+        "3": "IN_NPN_BASE"
+      },
+      "mpn": "MMBTA42-TP",
+      "manufacturer": "MCC",
+      "source": "https://www.lcsc.com/product-detail/C78715.html",
+      "lcsc": "C78715",
+      "price": "1544.9500",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "R160",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "LATCH_PBASE",
+        "2": "LATCH_NCOL"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "R161",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "LATCH_H",
+        "2": "SET_LATCH"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "R162",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "LATCH_H",
+        "2": "CLAMP_BASE"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "R163",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CB_COLLECTOR",
+        "2": "SET_LATCH"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "R164",
+      "value": "100k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "CTRL12",
+        "2": "LATCH_PBASE"
+      },
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C25803.html",
+      "lcsc": "C25803",
+      "price": "82.1500",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "R165",
+      "value": "100k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SET_LATCH",
+        "2": "GND"
+      },
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C25803.html",
+      "lcsc": "C25803",
+      "price": "82.1500",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "R166",
+      "value": "100k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "CLAMP_BASE",
+        "2": "GND"
+      },
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C25803.html",
+      "lcsc": "C25803",
+      "price": "82.1500",
+      "scope": "LATCH_C2"
+    },
+    {
+      "ref": "TP110",
+      "value": "SET_LATCH",
+      "lid": "Connector:TestPoint",
+      "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "SET_LATCH"
+      },
+      "mpn": "PCB_FEATURE",
+      "manufacturer": "PCB",
+      "source": "Project-owned copper feature",
+      "lcsc": "N/A",
+      "price": "0",
+      "scope": "PCB_FEATURE",
+      "feature": true
+    },
+    {
+      "ref": "TP111",
+      "value": "LATCH_H",
+      "lid": "Connector:TestPoint",
+      "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "LATCH_H"
+      },
+      "mpn": "PCB_FEATURE",
+      "manufacturer": "PCB",
+      "source": "Project-owned copper feature",
+      "lcsc": "N/A",
+      "price": "0",
+      "scope": "PCB_FEATURE",
+      "feature": true
+    },
+    {
+      "ref": "TP112",
+      "value": "IN_NPN_BASE",
+      "lid": "Connector:TestPoint",
+      "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "IN_NPN_BASE"
+      },
+      "mpn": "PCB_FEATURE",
+      "manufacturer": "PCB",
+      "source": "Project-owned copper feature",
+      "lcsc": "N/A",
+      "price": "0",
+      "scope": "PCB_FEATURE",
+      "feature": true
+    },
+    {
+      "ref": "TP113",
+      "value": "S_COMMON",
+      "lid": "Connector:TestPoint",
+      "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "S_COMMON"
+      },
+      "mpn": "PCB_FEATURE",
+      "manufacturer": "PCB",
+      "source": "Project-owned copper feature",
+      "lcsc": "N/A",
+      "price": "0",
+      "scope": "PCB_FEATURE",
+      "feature": true
+    },
+    {
+      "ref": "TP114",
+      "value": "CUT_GATE",
+      "lid": "Connector:TestPoint",
+      "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CUT_GATE"
+      },
+      "mpn": "PCB_FEATURE",
+      "manufacturer": "PCB",
+      "source": "Project-owned copper feature",
+      "lcsc": "N/A",
+      "price": "0",
+      "scope": "PCB_FEATURE",
+      "feature": true
+    }
+  ],
+  "3": [
+    {
+      "ref": "F301",
+      "value": "7A / wiring backup",
+      "lid": "Device:Fuse",
+      "fp": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+      "pins": {
+        "1": "VOUT_5V1",
+        "2": "VOUT_PI"
+      },
+      "mpn": "0451007.MRL",
+      "manufacturer": "Littelfuse",
+      "source": "https://www.lcsc.com/product-detail/C99548.html",
+      "lcsc": "C99548",
+      "price": "6214.2500",
+      "scope": "OPT1"
+    },
+    {
+      "ref": "SCR301",
+      "value": "TYN612RG",
+      "lid": "Triac_Thyristor:TIC106",
+      "fp": "Package_TO_SOT_THT:TO-220-3_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "VOUT_5V1",
+        "3": "SCR_GATE"
+      },
+      "mpn": "TYN612RG",
+      "manufacturer": "ST",
+      "source": "https://www.lcsc.com/product-detail/C262993.html",
+      "lcsc": "C262993",
+      "price": "15105.0000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "U301",
+      "value": "TL431BIDBZR",
+      "lid": "Reference_Voltage:TL431DBZ",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "OVOUT_K",
+        "2": "OVOUT_REF",
+        "3": "GND"
+      },
+      "mpn": "TL431BIDBZR",
+      "manufacturer": "TI",
+      "source": "https://www.lcsc.com/product-detail/C41283.html",
+      "lcsc": "C41283",
+      "price": "2077.6000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "Q301",
+      "value": "BC807-40,215",
+      "lid": "Transistor_BJT:BC807",
+      "fp": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "CB_PBASE",
+        "2": "VOUT_5V1",
+        "3": "CB_COLLECTOR"
+      },
+      "mpn": "BC807-40,215",
+      "manufacturer": "Nexperia",
+      "source": "https://www.lcsc.com/product-detail/C57316.html",
+      "lcsc": "C57316",
+      "price": "530.0000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R301",
+      "value": "1k / 0.1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "VOUT_5V1",
+        "2": "OVOUT_D1"
+      },
+      "mpn": "RT0603BRD071KL",
+      "manufacturer": "YAGEO",
+      "source": "https://www.lcsc.com/product-detail/C110776.html",
+      "lcsc": "C110776",
+      "price": "789.7000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R302",
+      "value": "100R / 0.1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "OVOUT_D1",
+        "2": "OVOUT_D2"
+      },
+      "mpn": "TNPW0603100RBEEA",
+      "manufacturer": "VISHAY",
+      "source": "https://www.lcsc.com/product-detail/C844889.html",
+      "lcsc": "C844889",
+      "price": "2443.3000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R303",
+      "value": "30R / 1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "OVOUT_D2",
+        "2": "OVOUT_REF"
+      },
+      "mpn": "0603WAF1300T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22796.html",
+      "lcsc": "C22796",
+      "price": "37.1000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R304",
+      "value": "1k / 0.1%",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "OVOUT_REF",
+        "2": "GND"
+      },
+      "mpn": "RT0603BRD071KL",
+      "manufacturer": "YAGEO",
+      "source": "https://www.lcsc.com/product-detail/C110776.html",
+      "lcsc": "C110776",
+      "price": "789.7000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R305",
+      "value": "500R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "CB_PBASE",
+        "2": "OVOUT_K"
+      },
+      "mpn": "0603WAF1501T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22843.html",
+      "lcsc": "C22843",
+      "price": "53.0000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R306",
+      "value": "10k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VOUT_5V1",
+        "2": "CB_PBASE"
+      },
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C17414.html",
+      "lcsc": "C17414",
+      "price": "90.1000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R307",
+      "value": "100R",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "CB_COLLECTOR",
+        "2": "SCR_GATE"
+      },
+      "mpn": "0603WAF1000T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C22775.html",
+      "lcsc": "C22775",
+      "price": "84.8000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "R308",
+      "value": "1k",
+      "lid": "Device:R",
+      "fp": "Resistor_SMD:R_0603_1608Metric",
+      "pins": {
+        "1": "SCR_GATE",
+        "2": "GND"
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "source": "https://www.lcsc.com/product-detail/C21190.html",
+      "lcsc": "C21190",
+      "price": "68.9000",
+      "scope": "CROWBAR"
+    },
+    {
+      "ref": "C301",
+      "value": "47uF / 16V",
+      "lid": "Device:C",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "VOUT_PI",
+        "2": "GND"
+      },
+      "mpn": "GRM32ER61C476KE15L",
+      "manufacturer": "muRata",
+      "source": "https://www.lcsc.com/product-detail/C77101.html",
+      "lcsc": "C77101",
+      "price": "8307.7500",
+      "scope": "COMMON_OUTPUT"
+    },
+    {
+      "ref": "C302",
+      "value": "47uF / 16V",
+      "lid": "Device:C",
+      "fp": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "VOUT_PI",
+        "2": "GND"
+      },
+      "mpn": "GRM32ER61C476KE15L",
+      "manufacturer": "muRata",
+      "source": "https://www.lcsc.com/product-detail/C77101.html",
+      "lcsc": "C77101",
+      "price": "8307.7500",
+      "scope": "COMMON_OUTPUT"
+    },
+    {
+      "ref": "TP301",
+      "value": "SCR_GATE",
+      "lid": "Connector:TestPoint",
+      "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "SCR_GATE"
+      },
+      "mpn": "PCB_FEATURE",
+      "manufacturer": "PCB",
+      "source": "Project-owned copper feature",
+      "lcsc": "N/A",
+      "price": "0",
+      "scope": "PCB_FEATURE",
+      "feature": true
+    },
+    {
+      "ref": "TP302",
+      "value": "GND",
+      "lid": "Connector:TestPoint",
+      "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "GND"
+      },
+      "mpn": "PCB_FEATURE",
+      "manufacturer": "PCB",
+      "source": "Project-owned copper feature",
+      "lcsc": "N/A",
+      "price": "0",
+      "scope": "PCB_FEATURE",
+      "feature": true
+    }
+  ]
+}

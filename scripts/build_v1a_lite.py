@@ -51,6 +51,7 @@ def tp(sh,ref,net):add(sh,ref,net,'Connector:TestPoint','TestPoint:TestPoint_Pad
 def build_parts():
  add(1,'F101','3A / 125V','Device:Fuse','Fuse:Fuse_Littelfuse-NANO2-451_453',{1:'VIN_RAW',2:'VIN_FUSED'})
  add(1,'D101','SMCJ64CA','Device:D_TVS','Diode_SMD:D_SMC',{1:'VIN_FUSED',2:'GND'})
+ PARTS[1][-1].update(lcsc='N/A - Mouser sourced',source='https://www.mouser.com/en/ProductDetail/Bourns/SMCJ64CA?qs=NMatY7cgvvbtyPM2xB%252BvVA%3D%3D',distributor='Mouser',distributor_sku='652-SMCJ64CA')
  for ref,drain,gate in [('Q101','VIN_FUSED','REV_GATE'),('Q102','VIN_PROTECTED','CUT_GATE')]:add(1,ref,'IRFR6215TRPBF','Transistor_FET:Q_PMOS_GDS','Package_TO_SOT_SMD:TO-252-2',{1:gate,2:drain,3:'S_COMMON'})
  z('D102','12V','S_COMMON','REV_GATE');z('D103','12V','S_COMMON','CUT_GATE')
  r(1,'R101','10k','REV_GATE','REV_PULL');r(1,'R102','10k','REV_PULL','GND')
@@ -71,6 +72,7 @@ def build_parts():
  for ref,a,b in [('R160','LATCH_PBASE','LATCH_NCOL'),('R161','LATCH_H','SET_LATCH'),('R162','LATCH_H','CLAMP_BASE'),('R163','CB_COLLECTOR','SET_LATCH')]:r(1,ref,'10k',a,b)
  for ref,a,b in [('R164','CTRL12','LATCH_PBASE'),('R165','SET_LATCH','GND'),('R166','CLAMP_BASE','GND')]:r(1,ref,'100k',a,b)
  for ref,net in [('TP110','SET_LATCH'),('TP111','LATCH_H'),('TP112','IN_NPN_BASE')]:tp(1,ref,net)
+ for ref,net in [('TP113','S_COMMON'),('TP114','CUT_GATE')]:tp(1,ref,net)
  add(2,'U201','LM61460AANRJRR','V1A:U201_LM61460AANRJRR','V1A_Qualified:TI_RJR0014A_LM61460',{1:'GND',2:'BUCK_VCC',3:'GND',4:'BUCK_FB',5:None,6:'BUCK_RT',7:'BUCK_EN',8:'VIN_PROTECTED',9:'GND',10:'BUCK_SW',11:'GND',12:'VIN_PROTECTED',13:'BUCK_RBOOT',14:'BUCK_CBOOT'})
  add(2,'L201','6.8uH / SRP1265A','Device:L','V1A_Lite:Bourns_SRP1265A',{1:'BUCK_SW',2:'VOUT_5V1'})
  for n in [201,202,215,216]:c(2,f'C{n}','10uF / 50V','VIN_PROTECTED',case='1210')
@@ -85,6 +87,7 @@ def build_parts():
  transistor('Q301',3,'BC807','CB_PBASE','VOUT_5V1','CB_COLLECTOR')
  for ref,v,a,b in [('R301','1k / 0.1%','VOUT_5V1','OVOUT_D1'),('R302','100R / 0.1%','OVOUT_D1','OVOUT_D2'),('R303','30R / 1%','OVOUT_D2','OVOUT_REF'),('R304','1k / 0.1%','OVOUT_REF','GND'),('R305','500R','CB_PBASE','OVOUT_K'),('R306','10k','VOUT_5V1','CB_PBASE'),('R307','100R','CB_COLLECTOR','SCR_GATE'),('R308','1k','SCR_GATE','GND')]:r(3,ref,v,a,b)
  for n in [301,302]:c(3,f'C{n}','47uF / 16V','VOUT_PI',case='1210')
+ for ref,net in [('TP301','SCR_GATE'),('TP302','GND')]:tp(3,ref,net)
  for ref,rail,v in [('J501','VIN_RAW','24V INPUT'),('J502','VOUT_PI','PI 5V OUTPUT')]:add(5,ref,v,'Connector_Generic:Conn_01x02','V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT',{1:rail,2:'GND'})
  for ref,net in [('TP501','VIN_RAW'),('TP502','VIN_FUSED'),('TP503','VIN_PROTECTED'),('TP504','VOUT_5V1'),('TP505','VOUT_PI'),('TP506','GND'),('TP507','CTRL12'),('TP508','CB_COLLECTOR')]:tp(5,ref,net)
  add(5,'J503','DUMMY LOAD + / -','Connector_Generic:Conn_01x02','V1A_Lite:Dummy_Load_Pads',{1:'VOUT_PI',2:'GND'},feature=True)
@@ -108,6 +111,7 @@ class Drawing:
   # Fields placed above body; enough vertical clearance for all pin labels.
   ph=max([abs(float(one(a,'at')[2])) for a in pins]+[4]);fy=y-ph-14
   props=[pr('Reference',ref,x,fy,flag),pr('Value',p['value'],x,fy+2.54,flag),pr('Footprint',p['fp'],x,y,True),pr('MPN',p['mpn'],x,y,True),pr('LCSC',p['lcsc'],x,y,True),pr('Manufacturer',p['manufacturer'],x,y,True),pr('Source',p['source'],x,y,True),pr('Unit_VND',p['price'],x,y,True),pr('Cost_scope',p['scope'],x,y,True)]
+  if 'distributor' in p:props += [pr('Distributor',p['distributor'],x,y,True),pr('Distributor_SKU',p['distributor_sku'],x,y,True)]
   self.items.append(f'(symbol (lib_id {q(lid)}) (at {x} {y} 0) (unit 1) (in_bom {bom}) (on_board {physical}) (dnp no) (uuid {q(uid(ref))}) '+ ' '.join(props)+f' (instances (project "V1A" (path "/{uid("V1A")}/{uid(self.name)}" (reference {q(ref)}) (unit 1)))))')
   done=set()
   for pin in pins:
@@ -127,6 +131,7 @@ def sheet(n):
  # Labelled cells preserve standard electronic glyphs and exact pin identities.
  # A2 sheet makes the dense 16-part ballast explicit rather than collapsing BOM.
  for i,p in enumerate(PARTS[n]):
+  if p['ref']=='TP302':d.part(p,78.74,149.86);continue
   if n==2 and i==0:d.part(p,83.82,104.14);continue
   idx=i-1 if n==2 else i
   ybase=170.18 if n==2 else 83.82
@@ -134,6 +139,8 @@ def sheet(n):
  for i,net in enumerate(PORTS[n]):
   x=22.86+i*71.12;y=398.78
   d.items.append(f'(hierarchical_label {q(net)} (shape passive) (at {x} {y} 0) {fx(1.016,"left")} (uuid {q(d.key())}))');d.wire(x,y,x-5.08,y);d.label(net,x-5.08,y,right=True)
+ if n==1:d.text('TP113 S_COMMON / TP114 CUT_GATE: differential Q102 VGS sense stubs only; no load current in pads.',15.24,43.18)
+ if n==3:d.text('TP301 SCR_GATE + TP302 cathode GND: adjacent Kelvin sense pair at SCR301; no discharge current in pads.',15.24,43.18)
  d.save()
 def root(completed):
  d=Drawing('V1A');d.text('V1A-Lite / OPTION 1R / PHASE D SCHEMATIC CAPTURE',20.32,20.32,3)

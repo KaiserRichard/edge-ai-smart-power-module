@@ -1,0 +1,17 @@
+[
+  {
+    "file": "bourns_smcj.pdf",
+    "url": "https://www.bourns.com/data/global/pdfs/SMCJ.pdf",
+    "sha256": "93a69df92cd5266561c45b29405a2cbb00afc891c00e09fe472eb6d80700d2cb"
+  },
+  {
+    "file": "jst_vh.pdf",
+    "url": "https://www.jst-mfg.com/product/pdf/eng/eVH.pdf",
+    "sha256": "d51e669c597988b20c0963daf5bef7356cbd2104c1f867e9107c6fa6cd2b899c"
+  },
+  {
+    "file": "pi5_usb_power.pdf",
+    "url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-009856-WP-1-USB%20Power%20delivery%20on%20Raspberry%20Pi%205.pdf",
+    "sha256": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e"
+  }
+]

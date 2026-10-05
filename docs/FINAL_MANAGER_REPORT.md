@@ -386,3 +386,19 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **NEXT GATE:** resolve R1 threshold,series drop,pin survival,guaranteed transient behavior,source/interface/SOA/latch and budget findings before Phase D implementation. The report contains the proposed schematic change list; no later gate is skipped. Preserve limited-bench/dummy-load-first bring-up and SBC integration last. Git result: see [C3 Git log](evidence/v1a_lite/PHASE_C3_GIT_LOG.txt); no push.
 
 **C3 Git handback:** authorized `git add` failed exit128 because `.git/worktrees/wt-lite/index.lock` could not be created (`Operation not permitted`). Per the brief, all C3 files remain **uncommitted**, HEAD `b20b51c`. No lock/permission changes, commit, push or purchase.
+
+## V1A-Lite schematic FIX1 — 2026-10-05
+
+**STATUS: CONDITIONAL PASS for schematic/documentation fixes; BLOCKED for R2 electrical release / R3. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** followed the full FIX1 brief as sole editor. Added SCR gate/cathode and Q102 source/gate sense pads. Retained exact Bourns SMCJ64CA with verified Mouser source fields. Defined the Pi header harness, current-sharing/voltage-drop budget and external mating parts. Converted all four electrical review blockers into an ordered bench qualification plan with equipment, limits and test points. No circuit changes for those blockers, PCB edits, purchases or physical tests.
+
+**EVIDENCE:** [capture addendum](evidence/v1a_lite/PHASE_D_CAPTURE.md#fix1-review-fixes--2026-10-05), [harness](evidence/v1a_lite/PI_HARNESS.md), [bench tests](evidence/v1a_lite/BENCH_TESTS.md), [source review](evidence/v1a_lite/D101_SOURCE_REVIEW.md), refreshed PDF/BOM/XML, ERC **0 errors / 0 warnings**, **566 static checks PASS**, **5 required Lite tests OK**. Changed PDF pages visually reviewed; scope comparison confirms every preexisting pin connection and PCB/project bytes unchanged.
+
+**DECISIONS:** J502 and all purchased MPNs remain unchanged; use both Pi 5 V contacts with separate returns. New source identity closes D101 sourcing, not surge survival. Four new copper pads add no purchased-component cost. No new LCSC identifier invented; dated costs remain estimates.
+
+**OPEN RISKS:** review findings 1–4 remain blocking: normal/trip/response window, input fault survival, persistent latch and SCR discharge stress. Pi male-header rating, mechanical key realization, contact aging/current sharing/fuse coordination, upstream source/temperature/harness capacitance bounds and all physical measurements remain OPEN. ERC/static PASS establishes capture evidence only.
+
+**NEXT GATE:** engineering review and qualification closure before R2 release; R3 remains separately gated. Preserve visual/continuity → current-limited no-load → rail/dummy-load → thermal/ripple/transient → OV/crowbar/cutoff/latch/fault → telemetry N/A → Pi last. Authorized local commit outcome in [FIX1 Git log](evidence/v1a_lite/FIX1_GIT_LOG.txt); no push.
+
+**FIX1 GIT RESULT:** staging failed exit 128 because worktree `index.lock` creation returned `Operation not permitted`. Requested commit could not be made; all FIX1 work remains **uncommitted** per the brief's fallback. No push or permissions/lock changes.

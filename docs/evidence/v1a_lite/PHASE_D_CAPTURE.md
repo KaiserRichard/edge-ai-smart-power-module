@@ -1,5 +1,7 @@
 # V1A-Lite Phase D — option 1R capture
 
+**Current addendum:** [FIX1 review fixes](#fix1-review-fixes--2026-10-05) supersede the historical pad count, D101 sourcing gap and Git handoff below. Original Phase D evidence is retained.
+
 2026-10-05. **STATUS: CONDITIONAL PASS — schematic capture only. Electrical R2 release and R3 remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 **REQUIREMENT / authority:** full owner brief `/Users/quockaiser/Desktop/Research/v1a-lab/briefs/V1A_LITE_PHASE_D.md`; branch `feat/v1a-lite-cost-reduction`, starting `9c37897`. The later owner selection authorizes capture despite C2's historical implementation block; it does not waive qualification. C2 §7 governs over Phase C; C3 contributes only the selected IRFR6215TRPBF input correction. No sub-agents, purchases, push, placement/routing or PCB changes.
@@ -86,3 +88,26 @@ The only purchased-MPN deviations from C2 are the two expressly authorized FETs.
 **NEXT GATE:** independent engineering review and closure of the electrical requirements/qualification plan before R2 release; only then separately authorized R3 layout. The old PCB and its research netclasses are not a Lite implementation. No fabrication release is implied.
 
 **GIT:** commit was attempted after Sheet01 as instructed, but `git add` failed with exit128: `Unable to create .../.git/worktrees/wt-lite/index.lock: Operation not permitted`. Per the brief, work remains **uncommitted**; no permissions/locks altered and no push. [Progress](PHASE_D_PROGRESS.md) records each sheet and resume state.
+
+## FIX1 review fixes — 2026-10-05
+
+**STATUS: CONDITIONAL PASS for requested schematic/documentation fixes; electrical R2 release and R3 remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**REQUIREMENT / authority:** full `/Users/quockaiser/Desktop/Research/v1a-lab/briefs/V1A_LITE_SCH_FIX1.md`, read in full; work started from `837512a33b0c31f0748015400c55aba4b3770a1d`, branch `feat/v1a-lite-cost-reduction`. Direct work as sole KiCad editor; no sub-agents. The prior Phase D uncommitted state is historical: it was already committed before this task.
+
+**WHAT WAS DONE / DECISIONS:**
+
+- Finding 5: Sheet01 adds **TP113=S_COMMON** and **TP114=CUT_GATE**, retaining TP110–112; Sheet03 adds **TP301=SCR_GATE** and adjacent **TP302=GND**, explicitly a cathode Kelvin sense pair. All use existing `Connector:TestPoint` / `TestPoint:TestPoint_Pad_D2.0mm`, with no purchased part. Notes require sense stubs outside high-current paths; actual adjacent cathode placement/Kelvin routing is an R3 requirement, not a completed layout.
+- Finding 7: exact **Bourns SMCJ64CA retained**, verified Mouser **652-SMCJ64CA** listing; source fields and BOM now carry Distributor/Distributor_SKU and `LCSC=N/A - Mouser sourced`. No substitute or fabricated LCSC code. [D101 source/rating review](D101_SOURCE_REVIEW.md) records the 103 V 10/1000 µs and 133.9 V 8/20 µs clamps, package and 150 V FET comparison. Historical 13,250 VND allowance is retained, not relabeled as a quote.
+- Finding 6: [Pi harness](PI_HARNESS.md) compares header/USB-C and selects physical Pi 2/4 +5 V, 6/9 GND. Defines JST mating parts, 150 mm AWG18 trunk/50 mm AWG22 parallel fanout, mating-face drawing, required carrier key, branch limits, Pi firmware settings and ≤40 mΩ hot round-trip allocation. J502 unchanged. Pi male-header rating, carrier realization, contact aging/fault and harness bench qualification remain OPEN; no unsupported per-pin rating claimed.
+- Findings 1–4: [numbered bench plan](BENCH_TESTS.md), explicitly mapped in tests 7–11, specifies equipment, measurements, points and acceptance bounds. OPEN quantities block release; no simulated or proposed result is called validated. No circuit tuning/redesign for these findings. The full ordered progression ends with Pi integration only after dummy-load and OV/crowbar/cutoff/latch/fault gates pass.
+
+**EVIDENCE:** fresh [ERC](PHASE_D_ERC.rpt), KiCad CLI 9.0.6: **0 errors / 0 warnings**, no ERC rule/exclusion changes. Re-exported five-page [schematic PDF](../../schematic/V1A_Lite_schematic.pdf), [native XML](V1A_LITE.net.xml), [BOM](V1A_LITE_BOM.csv). Visually reviewed changed input/crowbar PDF pages and sense-pad labels. [Static verifier](PHASE_D_VERIFICATION.json): **566 passing checks**; [required unittest log](FIX1_TESTS.txt): **5 tests, OK**. Existing protected net connections are identical, with exactly four new pad nodes; all existing MPNs/values/footprints remain unchanged. [Scope comparison](FIX1_SCOPE_CHECK.json) verifies PCB, project settings, root, buck and IO sheets byte-identical to starting HEAD. No DRC applies because no PCB was changed. Host Fontconfig stderr warnings are not ERC findings.
+
+**CALCULATION:** now **100 purchased components + 16 PCB features** (15 test pads and one dummy-load pair), plus 3 nonphysical power flags. Installed core **379,299.80 VND**; with J501/J502 **387,816.90 VND**, unchanged dated planning totals. External harness/carrier is outside this installed BOM. Builder and read-only checker now preserve/verify FIX1 source fields and test access; CSV exporter uses LF newlines. `git diff --check` passes.
+
+**PROVENANCE:** [FIX1 source register](../../../third_party/v1a_lite_fix1/SOURCES.md), unmodified manufacturer reading copies and hashes. The new [FIX1 intent](FIX1_INTENT.json) and manifest identify current artifacts; original per-sheet intent/ERC, Phase D manifest and original test log remain historical snapshots and were not rewritten. Current PHASE_D_ERC/VERIFICATION, PDF, BOM and XML are intentionally refreshed deliverables.
+
+**OPEN RISKS / NEXT GATE:** all four electrical review blockers remain. Continue engineering qualification review and close bounds/results before R2 electrical release, then separately authorized R3. No physical test, PCB edit, purchase or push; no fabrication or Pi-use release. Local commit outcome is recorded in [FIX1 Git log](FIX1_GIT_LOG.txt).
+
+**FIX1 GIT RESULT:** authorized staging failed with exit 128: Git could not create `/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.git/worktrees/wt-lite/index.lock` (`Operation not permitted`). Per the brief, FIX1 remains **uncommitted** at `837512a`; no permission/lock changes, workaround or push. See FIX1_GIT_LOG.txt.

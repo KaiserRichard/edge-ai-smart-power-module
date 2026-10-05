@@ -31,3 +31,14 @@ Owner brief: `/Users/quockaiser/Desktop/Research/v1a-lab/briefs/V1A_LITE_PHASE_D
 - PCB and project settings remain byte-identical to starting HEAD. No DRC/layout work applies. No purchases, fabrication or push.
 - Git remains at `9c37897`; work is uncommitted because the authorized Sheet01 stage/commit attempt could not create index.lock. No retry through another worktree, lock manipulation or permission change.
 - RESUME at independent engineering review, **not more schematic generation or PCB layout**. C2/C3 dynamic, thermal, source/harness, cost and bench gates remain OPEN. No Pi until dummy-load and OV/crowbar/fault tests pass. See `PHASE_D_CAPTURE.md` for the full sequence and limitations.
+
+## FIX1 handoff — 2026-10-05
+
+- Full FIX1 brief read; start `837512a33b0c31f0748015400c55aba4b3770a1d`, not the historical uncommitted Phase D state above.
+- Added TP113/114 Q102 VGS access and TP301/302 SCR gate/cathode Kelvin pair with existing pad style. PCB unchanged.
+- Verified exact Bourns D101 through Mouser 652-SMCJ64CA; updated source fields/BOM; unchanged MPN and historical allowance.
+- Completed PI_HARNESS.md and BENCH_TESTS.md. Four electrical findings remain bench blockers; header current/aging/key-carrier details are explicit qualification conditions. J502 unchanged.
+- Fresh ERC **0 errors / 0 warnings**, PDF/XML/BOM regenerated, changed PDF pages visually reviewed. Static checks **566 PASS**, requested `python3 -m unittest tests.test_v1a_lite`: **5 tests OK**. Existing net connections unchanged; PCB/project/root/buck/IO byte-identical to start. `git diff --check` clean.
+- Capture/manager reports and FIX1 provenance/evidence updated. Original review and historical per-sheet reports/manifests retained. Current count: 100 purchased references + 16 PCB features.
+- Resume at engineering review/bench-plan closure, not PCB generation or Pi testing. No purchases/push. Requested local commit outcome: see FIX1_GIT_LOG.txt.
+- FIX1 local staging failed exit 128: cannot create worktree `index.lock` (`Operation not permitted`). Leave all FIX1 changes **uncommitted** per brief; HEAD remains `837512a`. No push or permission/lock workaround.

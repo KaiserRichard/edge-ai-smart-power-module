@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/raspberrypi/hats",
+  "commit": "348dbf88d870bf50d6b4f23dbe2b64d60363f23c",
+  "relevant_file": "designguide.md",
+  "license": {
+    "key": "bsd-3-clause",
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "spdx_id": "BSD-3-Clause",
+    "url": "https://api.github.com/licenses/bsd-3-clause",
+    "node_id": "MDc6TGljZW5zZTU="
+  },
+  "disposition": "context reference only; no copy or adaptation"
+}

@@ -1,0 +1,13 @@
+{
+  "baseline": "837512a33b0c31f0748015400c55aba4b3770a1d",
+  "all_existing_pin_net_sets_unchanged": true,
+  "added_physical_references": [
+    "TP113",
+    "TP114",
+    "TP301",
+    "TP302"
+  ],
+  "all_existing_values_footprints_unchanged": true,
+  "pcb_project_root_buck_io_byte_identical": true,
+  "note": "Only source fields and four sense pads changed; bench findings remain unvalidated."
+}

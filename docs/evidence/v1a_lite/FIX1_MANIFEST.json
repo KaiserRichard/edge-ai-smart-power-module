@@ -1,0 +1,39 @@
+{
+  "baseline": "837512a33b0c31f0748015400c55aba4b3770a1d",
+  "status": "Requested fixes complete; electrical release BLOCKED; NOT FOR FABRICATION",
+  "erc": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "static_checks_passed": 566,
+  "unittest": "5 tests OK",
+  "git": "Uncommitted: index.lock creation denied; no push",
+  "historical_manifest": "PHASE_D_MANIFEST.json retained as original capture snapshot",
+  "files": {
+    "docs/FINAL_MANAGER_REPORT.md": "470f008f27f9901fe04bd6cfd9daf64c99b4a4a3eaf94802018c9c0e21bc43b0",
+    "docs/evidence/v1a_lite/BENCH_TESTS.md": "9bbf9eb6d001b7be4760b65ba152775c9ac187f29609043b46c8076f2fc41d9b",
+    "docs/evidence/v1a_lite/D101_SOURCE_REVIEW.md": "e4fe74e94c4aeb673968296ea92334c2e13cf60c3748042237e8bb45566e247c",
+    "docs/evidence/v1a_lite/FIX1_GIT_LOG.txt": "a3182a2925a0eb84479d8e2fdc96c175c784de975eadb3ae4444cda1a8e3b5e4",
+    "docs/evidence/v1a_lite/FIX1_INTENT.json": "5981f718b89aa5d3c2cdb416915489f35506d9dc50c4c5013fb116fbfb6b5b05",
+    "docs/evidence/v1a_lite/FIX1_SCOPE_CHECK.json": "5704e95907a2a5f2e601e2540783a754c76f3c41a69cfcb06d25f297acf80cf8",
+    "docs/evidence/v1a_lite/FIX1_TESTS.txt": "3e160d63896988d1f810e3ffc1669fdbbb8877dddd037cb61fc2b9944661cdaa",
+    "docs/evidence/v1a_lite/PHASE_D_CAPTURE.md": "a59fe2012f6e852c284db03bbc223539ea2b896cd71906f5c39f583d7a398648",
+    "docs/evidence/v1a_lite/PHASE_D_ERC.rpt": "2b10472d90061f369a06abdd942887e33eff2aef1676d5ce671124bc92e7e4b5",
+    "docs/evidence/v1a_lite/PHASE_D_PROGRESS.md": "ff21a01e4e50dfd5e90fa0e90108c5c1d4b97f33f2bb706a47075256e6454d5b",
+    "docs/evidence/v1a_lite/PHASE_D_VERIFICATION.json": "bda03a239e720ca9cf46146bc84e8d5d990567fd4a799312d4e1a788152437d6",
+    "docs/evidence/v1a_lite/PI_HARNESS.md": "ff12fc9d170f60f51bdb802034f1aa350290350f5d1c238945d6aa5bb034cc72",
+    "docs/evidence/v1a_lite/V1A_LITE.net.xml": "ee4ccacb7032079824dc960af846e08bb1bf67a7b1fd30aab478e60772071692",
+    "docs/evidence/v1a_lite/V1A_LITE_BOM.csv": "8f340166aa73a9128d795b63228eac1c46cb81c80c4df5d4e494df54a24d3888",
+    "docs/schematic/V1A_Lite_schematic.pdf": "7aa7ef7fef6260d83ebbc959d6d584468e22ac033ba98dc7d06103e1905b3017",
+    "hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "9e0a6d53667ec7c1c4db31c155d6243d9d2b9521971ac1f06d15eda804430224",
+    "hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "6d35889169ee3e7cba9fb73eb6d95f03c03bbdaf6bdb4affdfb49ccb448b9a69",
+    "scripts/build_v1a_lite.py": "45a071fafc3d422051d5daf749e252a1a68e6afb073ac0af4d32801876c5691b",
+    "scripts/check_v1a_lite.py": "451cae1500595858ab1e475f9db35d56874d269493e21c45418f3e9eb17d5bd6",
+    "third_party/v1a_lite_fix1/DOCUMENT_IDENTITIES.json": "c5dc50fe54854fa294518855cb4cb2f113b29f83b3a22032c0ab1b90e5001090",
+    "third_party/v1a_lite_fix1/HATS_IDENTITY.json": "6930f4a46589479959f57da204c92c4fa610c6e62487f7ecb1b9215f06d80395",
+    "third_party/v1a_lite_fix1/SOURCES.md": "2b315d254b97a426dc405d7370d25f46ba4a0036680e5fdad5c7ba7960b5a698",
+    "third_party/v1a_lite_fix1/bourns_smcj.pdf": "93a69df92cd5266561c45b29405a2cbb00afc891c00e09fe472eb6d80700d2cb",
+    "third_party/v1a_lite_fix1/jst_vh.pdf": "d51e669c597988b20c0963daf5bef7356cbd2104c1f867e9107c6fa6cd2b899c",
+    "third_party/v1a_lite_fix1/pi5_usb_power.pdf": "95024157e7931196a4fd232e941be4012007ea51f5d715612a4f57f776d21e0e"
+  }
+}

@@ -49,6 +49,8 @@ def validate(tree,root=ROOT):
  check(p('Q105',2)==p('C102',1)==p('D104',1)==p('R144',1),'Latch supply is CTRL12')
  check(p('Q301',3)==p('R307',1)==p('R163',1),'One OV event drives SCR and upstream latch')
  check(p('R307',2)==p('SCR301',3)==p('R308',1),'SCR gate drive and gate/cathode bleed')
+ check(p('TP301',1)==p('SCR301',3) and p('TP302',1)==p('SCR301',1),'Direct SCR gate/cathode sense pads')
+ check(p('TP113',1)==p('Q102',3) and p('TP114',1)==p('Q102',1),'Direct Q102 source/gate sense pads')
  check(p('U201',10)==p('L201',1)==p('C205',2),'Bootstrap capacitor returns to native SW')
  check(p('R204',1)==p('U201',13) and p('R204',2)==p('C205',1)==p('U201',14),'RBOOT/CBOOT wiring')
  check(p('U201',2)==p('C206',1) and len(nets[p('U201',2)])==2,'VCC has bypass only, no protection load')
@@ -63,7 +65,10 @@ def validate(tree,root=ROOT):
  for ref,row in exp.items():
   if ref not in comps:continue
   c=comps[ref];f=fields(c);check(f.get('MPN')==row['mpn'],f'{ref} exact MPN')
-  lcsc=re.search(r'/(C\d+)\.html',row['source']);check(f.get('LCSC')==(lcsc.group(1) if lcsc else 'OPEN'),f'{ref} LCSC field')
+  lcsc=re.search(r'/(C\d+)\.html',row['source'])
+  if ref=='D101':
+   check(f.get('LCSC')=='N/A - Mouser sourced' and f.get('Manufacturer')=='Bourns' and f.get('Distributor')=='Mouser' and f.get('Distributor_SKU')=='652-SMCJ64CA' and f.get('Source')=='https://www.mouser.com/en/ProductDetail/Bourns/SMCJ64CA?qs=NMatY7cgvvbtyPM2xB%252BvVA%3D%3D','D101 exact Bourns authorized-distributor identity (FIX1)')
+  else:check(f.get('LCSC')==(lcsc.group(1) if lcsc else 'OPEN'),f'{ref} LCSC field')
   price=Decimal(row['unit_vnd']);check(Decimal(f['Unit_VND'])==price,f'{ref} inherited dated price')
   total+=price
   if ref not in ('J501','J502'):core+=price
@@ -95,11 +100,11 @@ def validate(tree,root=ROOT):
  check('Errors 0  Warnings 0' in report,'Final ERC zero errors and warnings')
  return {'status':'PASS' if not errors else 'FAIL','scope':'capture and static connectivity only; not electrical validation','checks_passed':len(checks),'errors':errors,'purchased_part_count':len(fitted),'pcb_feature_count':len(comps)-len(fitted),'core_vnd':str(core),'installed_purchased_vnd':str(total),'pcb_sha256':hashlib.sha256(before).hexdigest()}
 def export_bom(tree,path):
- cols=['Reference','Value','MPN','Manufacturer','Footprint','LCSC','Quantity','Unit_VND','Extended_VND','Scope','Source','Price_basis']
+ cols=['Reference','Value','MPN','Manufacturer','Footprint','LCSC','Distributor','Distributor_SKU','Quantity','Unit_VND','Extended_VND','Scope','Source','Price_basis']
  with path.open('w',newline='') as out:
-  w=csv.DictWriter(out,fieldnames=cols);w.writeheader()
+  w=csv.DictWriter(out,fieldnames=cols,lineterminator='\n');w.writeheader()
   for c in tree.findall('./components/comp'):
-   f=fields(c);w.writerow(dict(Reference=c.get('ref'),Value=c.findtext('value'),MPN=f['MPN'],Manufacturer=f['Manufacturer'],Footprint=c.findtext('footprint'),LCSC=f['LCSC'],Quantity=1,Unit_VND=f['Unit_VND'],Extended_VND=f['Unit_VND'],Scope=f['Cost_scope'],Source=f['Source'],Price_basis='Copper feature; no purchased part' if f['MPN']=='PCB_FEATURE' else 'C2 dated planning estimate; Q101/Q102 C3 correction; not a current quote'))
+   f=fields(c);w.writerow(dict(Reference=c.get('ref'),Value=c.findtext('value'),MPN=f['MPN'],Manufacturer=f['Manufacturer'],Footprint=c.findtext('footprint'),LCSC=f['LCSC'],Distributor=f.get('Distributor',''),Distributor_SKU=f.get('Distributor_SKU',''),Quantity=1,Unit_VND=f['Unit_VND'],Extended_VND=f['Unit_VND'],Scope=f['Cost_scope'],Source=f['Source'],Price_basis='Copper feature; no purchased part' if f['MPN']=='PCB_FEATURE' else 'C2 allowance retained; verified Mouser identity only, not a quote' if c.get('ref')=='D101' else 'C2 dated planning estimate; Q101/Q102 C3 correction; not a current quote'))
 def run(root=ROOT):return validate(ET.parse(root/'docs/evidence/v1a_lite/V1A_LITE.net.xml').getroot(),root)
 if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--write-evidence',action='store_true');args=ap.parse_args();t=ET.parse(EV/'V1A_LITE.net.xml').getroot();result=validate(t)
