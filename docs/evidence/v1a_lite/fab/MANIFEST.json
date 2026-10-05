@@ -1,0 +1,230 @@
+{
+  "status": "NOT FOR FABRICATION \u2014 ENGINEERING REVIEW REQUIRED",
+  "export_completed": true,
+  "fabrication_released": false,
+  "generated_utc": "2026-10-05T06:50:41.930396+00:00",
+  "kicad_version": "9.0.6",
+  "exporter_sha256": {
+    "export_lite_fab.py": "eeaece00b7930ecb31a1d44866d70960d6d0520750923e6aa5f91e40c236f4a3",
+    "lite_pdf_to_png.swift": "a873fe6286126b66b97315829003e9c25f99516d5790e26e48beffde2d251f1a"
+  },
+  "input_sha256": {
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb": "597b30be4ef73be637cd79bbda192d3280ca3ef2999b7fca378f60f1cf37c908",
+    "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/V1A_LITE_BOM.csv": "8f340166aa73a9128d795b63228eac1c46cb81c80c4df5d4e494df54a24d3888",
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/01_INPUT_PROTECTION.kicad_sch": "9e0a6d53667ec7c1c4db31c155d6243d9d2b9521971ac1f06d15eda804430224",
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/02_BUCK_5V.kicad_sch": "f46813cb375b51096c0a6bc112930c37580a2e8685b5a29dbdf510ae64fb1f51",
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/03_OUTPUT_PROTECTION.kicad_sch": "6d35889169ee3e7cba9fb73eb6d95f03c03bbdaf6bdb4affdfb49ccb448b9a69",
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/05_IO_TEST.kicad_sch": "fdd5c8f31884c3072a02c782d781a401b229881d3e2690313099700b6c89d092",
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_sch": "f975ad421f1de69100f341b15612947f9ec99a5e9f9062c721f948355ca2cf11",
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pro": "2cb7912756ef986795f5fc5faec871d8edd1bded12ab39b55c3df0f604f54b46",
+    "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_dru": "a567a646ae961ba8f22b0ab5d4230f7cc9de25e1c29ffbcd5842b2588d04acdc"
+  },
+  "input_unchanged": true,
+  "inventory": {
+    "copper_layers": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.6,
+    "footprints": 120,
+    "tracks_and_vias": 2854,
+    "zones": 18,
+    "edge_graphics": 4,
+    "unique_footprint_positions": 120
+  },
+  "gerber_layers": [
+    "F.Cu",
+    "B.Cu",
+    "F.Paste",
+    "B.Paste",
+    "F.SilkS",
+    "B.SilkS",
+    "F.Mask",
+    "B.Mask",
+    "Edge.Cuts"
+  ],
+  "origin": "absolute; native KiCad XY; no bottom-X negation; positive CCW angle modulo 360",
+  "assumed_target_stack": "2-layer / 1.6 mm / 35-35 um; thermal qualification OPEN",
+  "drc": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "assembly": {
+    "bom_rows": 100,
+    "cpl_rows": 100,
+    "excluded": [
+      {
+        "Designator": "J503",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "MH1",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "MH2",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "MH3",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "MH4",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP110",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP111",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP112",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP113",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP114",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP301",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP302",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP501",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP502",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP503",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP504",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP505",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP506",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP507",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      },
+      {
+        "Designator": "TP508",
+        "Reason": "exclude_from_bom, exclude_from_position_files"
+      }
+    ],
+    "comment_source": "fresh schematic value when available; otherwise PCB value; LCSC MPN appended",
+    "missing_lcsc": [
+      "D101"
+    ],
+    "rotation_offsets": "OPEN for all populated references; zero applied",
+    "source_comparison": [],
+    "lcsc_references_not_on_board": []
+  },
+  "render": {
+    "available": true,
+    "status": "EXPORTED",
+    "returncode": 0
+  },
+  "open_risks": [
+    "JLC rotation/centroid offsets OPEN for every component; no offsets assumed verified.",
+    "Electrical review findings 1\u20134 remain blocking; R4 fabrication release is BLOCKED.",
+    "Saved copper fills match zero-error native DRC; two-layer thermal/EMI performance remains unqualified.",
+    "3D model completeness, pad numbering and polarity require review; a render is not validation.",
+    "TP113/114 and TP301/302 lead geometry requires differential-probe review; do not infer ideal Kelvin accuracy.",
+    "Vias in capacitor/FET solder lands require reviewed tenting/fill and assembly process; no premium via process assumed.",
+    "First-build landed cost below 1,000,000 VND is unverified; no purchase, quote or upload performed.",
+    "1 assembly references have blank LCSC Part #; sourcing/assembly route OPEN."
+  ],
+  "zip": "V1A_GERBERS_DRILL_REVIEW_ONLY.zip",
+  "artifacts_sha256": {
+    "V1A_GERBERS_DRILL_REVIEW_ONLY.zip": "34ea35461612f8b5808ff4059f5ba817c3d6c33c814b223263948ca5191e7022",
+    "assembly/BOM_JLC.csv": "0f37fa4b0f27e01d78f15b4f878bf68a3f3479f62045dade552a1bc632d082e6",
+    "assembly/CPL_JLC.csv": "6501310fdb295d2b4e3649451904abfe7bd1712f37ede4ddee65571ebbe2de51",
+    "assembly/EXCLUDED.csv": "392cbd0ca11f5b40c13640c53b0f58c0772ce767bed674555230c3cec1869cb2",
+    "assembly/POSITIONS_KICAD.csv": "003c1f63525c421eba0f34e0da756d24552f2848777fd2abde80275c049c39e1",
+    "assembly/ROTATION_REVIEW.csv": "6912d74731c97a0044ee3488d3e7efd68fdf33c8b5a42becb1d369dff352dc0c",
+    "drill/V1A-NPTH-drl_map.pdf": "b700c0dd393760c32841efe5e0178eaff9735eb9d4fb994cfa1f8d088fb3aa21",
+    "drill/V1A-NPTH.drl": "1c3760442bf39d64f8164fdeb9cd90aacf3dd36ef505fe8bda1f715fec631f20",
+    "drill/V1A-PTH-drl_map.pdf": "36b6dad93c56f9ef36f50647b5f00d510bb76e405c274254e73caec86ba26c07",
+    "drill/V1A-PTH.drl": "02094af34193d09a87b50276280821f2cc17fec4f61da7b0c07bb473c49153bd",
+    "gerbers/V1A-B_Cu.gbl": "8be69db36986e2bc78568b870e8e0a71e5d6b921e275c1a4218f052ff226fc09",
+    "gerbers/V1A-B_Mask.gbs": "d348b6e6703cb4695ef7dacb0d6ca0284670b90e966cb57b4419e7de72a157e5",
+    "gerbers/V1A-B_Paste.gbp": "474e10f12c4b63efe1bc5dedf65e469d67f3e70baa3b5337e769c8069c4eede9",
+    "gerbers/V1A-B_Silkscreen.gbo": "57057412c6197eb0baa9447ae1d7fdf7207a036cb7eb05ea5d1fbfe8263f76d1",
+    "gerbers/V1A-Edge_Cuts.gm1": "37792aa957a5c78a310fce15e53c06a85ef99b5ea180d86b50622d32323ac322",
+    "gerbers/V1A-F_Cu.gtl": "b351b2714166ac440b8853d10ba155aab5b74287db7c6c99787f963ab3594310",
+    "gerbers/V1A-F_Mask.gts": "a928d1612db2834fe31a6c7ce05d7fdebc8c620950359ccb61ee0406b64e28c7",
+    "gerbers/V1A-F_Paste.gtp": "9459340b6b8d638dd22315970251084ffcf33c7d93e64a4db66a4a3ef46251c2",
+    "gerbers/V1A-F_Silkscreen.gto": "b0ce933aa480994fa6e10acb6e289b89f5da0c364edd99ede93b617f97ad9567",
+    "gerbers/V1A-job.gbrjob": "e90a23ecc6b2569b5ac07208b40edc7593684313260618a58502542d08f97fc2",
+    "logs/drc.log": "388401623dee3ea288009d61b90cc9e084cd39cd22f42d13555b85ae4e391a2c",
+    "logs/drill.log": "8ca2d1c9c01ccc02e306c4ed30a0fc6479fb824ecde54183273e8ae56d8a8baa",
+    "logs/gerbers.log": "de612cd8b85de970f9aeafbb149b17e3cab50d88a379fc5d5089ea9032b8d485",
+    "logs/layer-pngs.log": "e6383422f4ef96dcf8014e01dd93420305e3070b0d6addda8c22c483858c0345",
+    "logs/pdf-B.Cu.log": "90d47fd23580421c33f07f61c6470e6c3416a03d9b62724b4d7ee94b1a68fdea",
+    "logs/pdf-B.Fab.log": "3fdcf366e0c56a1c5d71a60d9fadce628c295049e2736f5813c9b684458a816c",
+    "logs/pdf-B.Mask.log": "338350f3c5129e93acbc434378f9531d36803a6ab3aa8aa261dcc3f0e6bab762",
+    "logs/pdf-B.Paste.log": "d70a76921fd1b8349e69dd7751ca78de0f6348f84ddf61b426fbec3165deb34a",
+    "logs/pdf-B.SilkS.log": "ef975c0871383620d3201dd9fecf2555be9663a8545fc8c643bb72ca5ac55cc9",
+    "logs/pdf-Edge.Cuts.log": "322c31ac406f6afe31169d35dd6d9278f6833e37351afd441d4c2bb37fbd4f9f",
+    "logs/pdf-F.Cu.log": "f7461ca7ee1cbb71b52032c15967a7e205a3bec0e21cc927d5029659f3cbb47d",
+    "logs/pdf-F.Fab.log": "5aa77e941181a4cca1a7166b0eb6004033e75e429400c70cc5c03b82bb1339ae",
+    "logs/pdf-F.Mask.log": "333ed8347f31cdbfb3d41fd89ff132075a8ce1470f99bfc9fcb7e1839ef38336",
+    "logs/pdf-F.Paste.log": "b4186df7388f968e8358b441f16b2c0c4260bf351d7a362d0b923637b71adfdc",
+    "logs/pdf-F.SilkS.log": "823b73ce2f9aeb5f2f8047fa812592fe511767d5841015ad07f4a3f89d1dd5d0",
+    "logs/positions.log": "755fe5528b0875aa2bc87919c7115c760064ab3bd359431c83658bbc4635763f",
+    "logs/render-availability.log": "33f37cd8d6bdac5b2d855e1008abf4dbb1bee0d945e42884ad47f80e44e36efe",
+    "logs/render.log": "f4e1e496bea3e9f43b2fbd387c2173e0f2d3fe6ea436dbf4f331b2f7f221452f",
+    "logs/schematic-netlist.log": "1c91c31666796fb17540b459e7af1604942df9b7a5821f1acf687b581cf0d753",
+    "logs/version.log": "dcc6636b1ff992eb18b6c5a5bd5d64a20edf6e17850d7134b39f1cb83985710d",
+    "pdf/B.Cu.pdf": "fe383a83f1ab824cdeace22b50a4eea277257c1a195e4d40e81799020efb7b59",
+    "pdf/B.Fab.pdf": "632cf845ef0247732e50989eed647bee83f56e8c02d3ed095944eca5f3deebc5",
+    "pdf/B.Mask.pdf": "f7262b756b0dc331feb14c83cb612f7423d6210846e980ca883af54938c4585f",
+    "pdf/B.Paste.pdf": "986f1f8d660f48eaf052a4c0d300e69e295fc4514f46efa1eedbadbaf6fd2a61",
+    "pdf/B.SilkS.pdf": "445e11b7a44b9021b75819ed8380196e3d2460275fe7faaa9aba054f009115ce",
+    "pdf/Edge.Cuts.pdf": "bd792f9ccfc73eca35288cd4739f0bac7c59600b1ea61978a7b9294515903426",
+    "pdf/F.Cu.pdf": "aa58a170330aa9604f9fd00462c52670261fcc7f14ce1ab9eb218221e3bf3761",
+    "pdf/F.Fab.pdf": "63921b08293de3672482fb9f684a3d1156b009d072b89e183709e82e0bea551d",
+    "pdf/F.Mask.pdf": "73257dbba9d594748a2c8ac6ddf110fd5aef97d8ef8a1d8d1dade0bd18624a9e",
+    "pdf/F.Paste.pdf": "fde8b7024d62715fa1381a2fb14a669565bceac5782a1f4b428165c9c8fa560e",
+    "pdf/F.SilkS.pdf": "6799d744017c5a759e682fb791aa92799b835642bd05eebaf616101d448a2a51",
+    "png/B.Cu.png": "1e56b0d160980d510cce03f798504cca162712ccc636dcb868863e6fefa521e7",
+    "png/B.Fab.png": "f6d311d8b3fbafb8720248cdc7a960283edc0c3fdd7c88f05ec23e7e87de3e27",
+    "png/B.Mask.png": "e2e1d3b464857dfe6fa099253ead234458b40f6d6e51509495cb1332aa0f9e49",
+    "png/B.Paste.png": "f6d311d8b3fbafb8720248cdc7a960283edc0c3fdd7c88f05ec23e7e87de3e27",
+    "png/B.SilkS.png": "f6d311d8b3fbafb8720248cdc7a960283edc0c3fdd7c88f05ec23e7e87de3e27",
+    "png/Edge.Cuts.png": "33e157e7231150b2aaca9a401d45263a72c96f1b9edaa7c52538d73eb66cfc4e",
+    "png/F.Cu.png": "bae23c0ab70e8ff834f7f5b7d5ff9cd13578d2edb8af35a8bbae2f732b598e8f",
+    "png/F.Fab.png": "f446d61f788ddb9bfb704fdb9258c5fd95e7742e68f2ba9797af538b17702d56",
+    "png/F.Mask.png": "cc5071f7f3d0eff3655e9cf2ba185a353ca79333d81f518cd133bb78bc9bd9ed",
+    "png/F.Paste.png": "cd3f673eaa90e342739b24165ad2e1c81a1a3adaeae0e0fcc59e44b64da46abe",
+    "png/F.SilkS.png": "ac08b3507eb7cb3085a8266723d422c782fceb60fddab4b0757cae474398d66e",
+    "render/PCB_3D.png": "bfce5af4285287350c4975865d578de53adb8967d1f809e40c4433da8a99cf09",
+    "review/COMMANDS.json": "ee66dc2f1c95242a2fcec393f65e0a39d95866ebbe33b4b11c7d5c8131c38b59",
+    "review/DRC.json": "24939542cb7eca55c508768944dfee8946ef5567955c996dfbc98fc7ac82d6aa",
+    "review/SCHEMATIC.xml": "e23beb8d615a976d12b0ba5b3a70fa54fccb126a886bc904c69fc0c140f75f88"
+  }
+}

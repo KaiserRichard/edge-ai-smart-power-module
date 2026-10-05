@@ -402,3 +402,33 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **NEXT GATE:** engineering review and qualification closure before R2 release; R3 remains separately gated. Preserve visual/continuity → current-limited no-load → rail/dummy-load → thermal/ripple/transient → OV/crowbar/cutoff/latch/fault → telemetry N/A → Pi last. Authorized local commit outcome in [FIX1 Git log](evidence/v1a_lite/FIX1_GIT_LOG.txt); no push.
 
 **FIX1 GIT RESULT:** staging failed exit 128 because worktree `index.lock` creation returned `Operation not permitted`. Requested commit could not be made; all FIX1 work remains **uncommitted** per the brief's fallback. No push or permissions/lock changes.
+
+## V1A-Lite R3 layout resume — 2026-10-05
+
+**STATUS: CONDITIONAL PASS for owner-authorized layout generation and rule checks. Electrical release remains BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** read both full PCB briefs; audited committed placement/routing without regenerating completed steps. Corrected stale progress documentation, reviewed both copper layers, retained the two-layer cost study, and added explicit JLC PTH rules. No schematic/component changes.
+
+**EVIDENCE:** [progress](evidence/v1a_lite/LAYOUT_PROGRESS.md); fresh native [DRC](evidence/v1a_lite/layout/JLC_FINAL_DRC.json): 0 errors, 0 warnings, 0 unconnected, 0 schematic parity issues; [ERC](evidence/v1a_lite/layout/RESUME_ERC.rpt): 0 errors/0 warnings. Board hash matches saved resistance geometry. 80×60 mm, two 35 µm copper layers, 1.6 mm thickness, four M3 holes.
+
+**DECISIONS:** keep the completed placement/routing; later owner authority permits this review layout but does not close historical electrical blockers. Mesh estimates 3.232–5.843 mΩ capacitor-to-J502 round trip at 20°C, 4.058–7.335 mΩ at assumed 85°C. Larger hot copper drop 36.7 mV at 5 A. This leaves only 33.4 mV nominal Pi margin after the 40 mΩ harness allocation and cold 9 mΩ fuse; it is not a worst-case compliance result.
+
+**OPEN RISKS:** output OV/trip/delay, input cutoff fault survival, latch persistence and SCR stress; source/ambient bounds; two-layer thermal/EMI and sense routing qualification; assembly process/rotation, harness and cost. No physical test or fabrication release.
+
+**NEXT GATE:** step-5 review exports and R4 engineering review. R5 remains blocked; dummy-load-first bench sequence is mandatory. Step-3 staging failed because Git cannot create index.lock; no lock/permission changes or push.
+
+## V1A-Lite R4 review package handback — 2026-10-05
+
+**STATUS: CONDITIONAL PASS for requested export/delivery; BLOCKED for fabrication release. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** completed PCB brief steps 3–5 by verifying the already-completed committed routing, adding precise PTH design rules and generating the review package. Preserved placement, schematic and board geometry. Documented component placement, copper/ground/thermal rationale, sampled 5 A loss and deviations from the TI reference stack. Visually reviewed both copper layers, mask/paste/silk/fab/outline views, drill maps and bare-board 3D render.
+
+**EVIDENCE:** [student report and OPEN list](evidence/v1a_lite/LAYOUT_EXPLAINED.md); [package](evidence/v1a_lite/fab/README.md); [Gerber/drill ZIP](evidence/v1a_lite/fab/V1A_GERBERS_DRILL_REVIEW_ONLY.zip); [BOM](evidence/v1a_lite/fab/assembly/BOM_JLC.csv); [CPL](evidence/v1a_lite/fab/assembly/CPL_JLC.csv); [manifest](evidence/v1a_lite/fab/MANIFEST.json); [13-check integrity result](evidence/v1a_lite/layout/PACKAGE_VERIFICATION.json). Final DRC 0 errors / 0 warnings / 0 unconnected / 0 parity; ERC 0 errors / 0 warnings. No exclusions or severity downgrades. Native exports preserve input hashes and exact 100-reference BOM/CPL parity.
+
+**DECISIONS:** retain 80×60 mm, two 35 µm copper layers, 1.6 mm board and four M3 holes. Calculated sampled hot copper loop is at most 7.335 mΩ among the two evaluated capacitor endpoints, not a guaranteed manufacturing bound. D101 keeps its exact Mouser source with blank LCSC; remaining 99 purchased references have inherited LCSC numbers. All rotation offsets remain unverified. Export ZIP prominently marks review-only status.
+
+**OPEN RISKS:** electrical findings 1–4 and thermal/EMI/source/ambient qualification remain blocking. The nominal 4.7834 V Pi calculation leaves only 33.4 mV before unmodeled regulator/ripple/transient/hot-fuse effects. Sense-loop geometry and vias in solder lands require review; harness key/contacts/fuse coordination and <1M VND landed build cost remain unverified. KiCad renders the bare board but model-cache access is denied, so no populated 3D/mechanical validation is claimed. Historical schematic-only checker reports 565 passes and one obsolete pre-layout PCB-immutability failure; it is not reported as a full test pass.
+
+**NEXT GATE:** independent R4 engineering review and closure of release blockers; R5 has not begun. Follow the numbered bench plan with current-limited supply and dummy loads, Pi last. No upload, purchase, merge or push. Per-step Git staging fails because worktree index.lock cannot be created; requested commit attempts and fallback are recorded in [progress](evidence/v1a_lite/LAYOUT_PROGRESS.md).
+
+**FINAL GIT RESULT:** step-5 staging also failed exit 128 on worktree index.lock permission; no requested local commit was possible. Review deliverables remain uncommitted at `1d99ea9`. No push or permission changes. Delivery is complete under the brief's explicit Git fallback; fabrication approval is not granted.

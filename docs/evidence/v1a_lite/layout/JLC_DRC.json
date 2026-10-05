@@ -1,0 +1,287 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T13:46:25+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH3",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 66.0
+                    },
+                    "uuid": "0a27b503-bbaa-4eb6-82e8-2007b7c0fbed"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a6e4b6d6-9f54-47e8-9576-e3823c48513c"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH3",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 66.0
+                    },
+                    "uuid": "0a27b503-bbaa-4eb6-82e8-2007b7c0fbed"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "42c9995d-38c5-444f-90bf-53a198566f56"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH4",
+                    "pos": {
+                        "x": 86.0,
+                        "y": 66.0
+                    },
+                    "uuid": "5c54b17c-1a1a-44c9-a472-856f7e292a0d"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a6e4b6d6-9f54-47e8-9576-e3823c48513c"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH4",
+                    "pos": {
+                        "x": 86.0,
+                        "y": 66.0
+                    },
+                    "uuid": "5c54b17c-1a1a-44c9-a472-856f7e292a0d"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "42c9995d-38c5-444f-90bf-53a198566f56"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J502",
+                    "pos": {
+                        "x": 87.4,
+                        "y": 42.5
+                    },
+                    "uuid": "f2f07970-8700-4abf-b3ac-0a17678e1d74"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a6e4b6d6-9f54-47e8-9576-e3823c48513c"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J502",
+                    "pos": {
+                        "x": 87.4,
+                        "y": 42.5
+                    },
+                    "uuid": "f2f07970-8700-4abf-b3ac-0a17678e1d74"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "42c9995d-38c5-444f-90bf-53a198566f56"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH1",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 14.0
+                    },
+                    "uuid": "f9b56f6d-d352-4326-905f-2f98d33b890a"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a6e4b6d6-9f54-47e8-9576-e3823c48513c"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH1",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 14.0
+                    },
+                    "uuid": "f9b56f6d-d352-4326-905f-2f98d33b890a"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "42c9995d-38c5-444f-90bf-53a198566f56"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J501",
+                    "pos": {
+                        "x": 19.4,
+                        "y": 30.5
+                    },
+                    "uuid": "b9b48844-b37c-4924-b89c-53448f9a8cd8"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a6e4b6d6-9f54-47e8-9576-e3823c48513c"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J501",
+                    "pos": {
+                        "x": 19.4,
+                        "y": 30.5
+                    },
+                    "uuid": "b9b48844-b37c-4924-b89c-53448f9a8cd8"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "42c9995d-38c5-444f-90bf-53a198566f56"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH2",
+                    "pos": {
+                        "x": 86.0,
+                        "y": 14.0
+                    },
+                    "uuid": "5ded69c3-506a-429f-84f9-b61382d0b87f"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a6e4b6d6-9f54-47e8-9576-e3823c48513c"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2800 mm; actual 0.2505 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of MH2",
+                    "pos": {
+                        "x": 86.0,
+                        "y": 14.0
+                    },
+                    "uuid": "5ded69c3-506a-429f-84f9-b61382d0b87f"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "42c9995d-38c5-444f-90bf-53a198566f56"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        }
+    ]
+}

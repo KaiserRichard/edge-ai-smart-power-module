@@ -1,0 +1,17 @@
+Command: python3 -B scripts/check_v1a_lite.py
+Return code: 1
+{
+  "status": "FAIL",
+  "scope": "capture and static connectivity only; not electrical validation",
+  "checks_passed": 565,
+  "errors": [
+    "PCB byte-identical to 9c37897"
+  ],
+  "purchased_part_count": 100,
+  "pcb_feature_count": 16,
+  "core_vnd": "379299.8000",
+  "installed_purchased_vnd": "387816.9000",
+  "pcb_sha256": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a"
+}
+
+Interpretation: 565 capture checks pass. The only failure is the historical pre-layout PCB preservation contract. That condition was superseded by explicit PCB layout authorization. The checker pcb_sha256 field hashes the historical comparison bytes; it is NOT the delivered board hash. Current board identity is in fab/MANIFEST.json. Native final schematic parity is zero.

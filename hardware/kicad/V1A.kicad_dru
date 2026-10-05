@@ -1,0 +1,16 @@
+(version 1)
+
+# JLCPCB capability snapshot accessed 2026-10-05; review candidate only.
+# https://jlcpcb.com/capabilities/pcb-capabilities
+# Base project uses 0.25 mm via hole spacing and 0.25 mm via/NPTH hole-to-copper clearance.
+(rule "JLC pad drill spacing"
+  (condition "A.Type == 'Pad' || B.Type == 'Pad'")
+  (constraint hole_to_hole (min 0.45mm)))
+
+(rule "JLC plated component pad annulus"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint annular_width (min 0.20mm)))
+
+(rule "JLC plated component hole to copper"
+  (condition "(A.Type == 'Pad' && A.Pad_Type == 'Through-hole') || (B.Type == 'Pad' && B.Pad_Type == 'Through-hole')")
+  (constraint hole_clearance (min 0.28mm)))

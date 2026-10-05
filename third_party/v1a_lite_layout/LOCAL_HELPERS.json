@@ -1,0 +1,12 @@
+{
+  "/Users/quockaiser/Desktop/Research/wt-fabprep/scripts/export_fab_package.py": {
+    "sha256": "8f2bad150277d10802ad5a4c611e71e241891d48719f53a222fa45bafab94860",
+    "git_commit": "afa937da811539aa8b176b39f7a5d89032b8e5f1",
+    "git_remote": "git@github.com:KaiserRichard/edge-ai-smart-power-module.git"
+  },
+  "/Users/quockaiser/Desktop/Research/wt-pathcheck/scripts/check_5a_path.py": {
+    "sha256": "f5c786ffd2cbecd01b3f47159e2c21fd4018c06c7dc95c9829a772be65e56602",
+    "git_commit": "886dfec56e62318d107f199d66cdbf60294daefd",
+    "git_remote": "git@github.com:KaiserRichard/edge-ai-smart-power-module.git"
+  }
+}

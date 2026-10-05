@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "export integrity and native rule/capture evidence only; not electrical/fabrication release",
+  "checks": {
+    "artifact_hashes_match": true,
+    "input_hashes_match": true,
+    "export_script_hashes_match": true,
+    "bom_cpl_exact_100_refs": true,
+    "only_D101_blank_LCSC": true,
+    "no_export_source_differences": true,
+    "zero_DRC_unconnected_parity": true,
+    "ERC_zero": true,
+    "all_11_layers_PDF_PNG": true,
+    "zip_CRC_OK": true,
+    "zip_warning": true,
+    "board_not_regenerated_during_resume": true,
+    "schematics_unchanged": true
+  },
+  "zip_files": [
+    "V1A-B_Cu.gbl",
+    "V1A-B_Mask.gbs",
+    "V1A-B_Paste.gbp",
+    "V1A-B_Silkscreen.gbo",
+    "V1A-Edge_Cuts.gm1",
+    "V1A-F_Cu.gtl",
+    "V1A-F_Mask.gts",
+    "V1A-F_Paste.gtp",
+    "V1A-F_Silkscreen.gto",
+    "V1A-job.gbrjob",
+    "V1A-NPTH.drl",
+    "V1A-PTH.drl",
+    "NOT_FOR_FABRICATION.txt"
+  ],
+  "BOM_rows": 100,
+  "CPL_rows": 100,
+  "populated_3D_models": "NOT EXPORTED; macOS model-cache access denied; bare board render only",
+  "visual_review": "11 per-layer PNGs and PTH/NPTH drill maps inspected; top/bottom copper matches earlier color plots; blank B.Paste/B.SilkS/B.Fab expected; F.Fab labels are dense; dimensions/orientations still require assembly signoff."
+}

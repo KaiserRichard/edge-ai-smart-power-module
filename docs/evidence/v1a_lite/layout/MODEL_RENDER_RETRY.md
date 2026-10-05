@@ -1,0 +1,3 @@
+# 3D model retry
+
+The native render successfully exports the board but omits component bodies. A read-only retry supplied KICAD9_3DMODEL_DIR pointing at the installed models and temporary KICAD_CONFIG_HOME/XDG_CACHE_HOME directories. KiCad still attempted its macOS 3D cache in ~/Library/Caches/KiCad/9.0/3d, outside the writable workspace; creation was denied. No permissions/system preferences were changed. The second image is visually identical; the package keeps the first native board render. This is a bare-board visualization, not a populated mechanical model. See MODEL_RENDER_RETRY.log and fab/logs/render.log.
