@@ -1,0 +1,32 @@
+{
+  "distribution": "KiCad 9.0.6 installed library files; exact Git commit not available",
+  "license": "CC-BY-SA-4.0 with KiCad design exception",
+  "files": {
+    "footprints/Capacitor_SMD.pretty/C_0402_1005Metric.kicad_mod": "da1d55c1ce050af8e8efefd063ae4cd5a272b187cd36c37eca8c28c5f278fb08",
+    "footprints/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419",
+    "footprints/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc",
+    "footprints/Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod": "9343c2f817fd00cce4d60eb82049bd305d87ee6a856d04895b6c546aceac317b",
+    "footprints/Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88",
+    "footprints/Capacitor_THT.pretty/CP_Radial_D10.0mm_P5.00mm.kicad_mod": "4dc92dfba15e9e5f6e7a5d62f182619d7116b1f802aa5bc6654ff2a7746416b4",
+    "footprints/Capacitor_THT.pretty/CP_Radial_D8.0mm_P3.50mm.kicad_mod": "a408de9854a71cfd369e8d996c82712decfe96402c4331e1233c3ee62cc94653",
+    "footprints/Diode_SMD.pretty/D_SMC.kicad_mod": "27d6a82f606544b92f552e8553603bf7a9953c48b32288661478bd77be661d4b",
+    "footprints/Diode_SMD.pretty/D_SOD-123.kicad_mod": "c6832ecba7d34fbbe578f709bf8948b621c6ec058c924c2e0860acb93aad6eee",
+    "footprints/Fuse.pretty/Fuse_Littelfuse-NANO2-451_453.kicad_mod": "e6b4f15d2e78e74c86e35e4b1f496a88ddc8e627db42a96a5c2e2a5c64710a78",
+    "footprints/Package_DFN_QFN.pretty/DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm.kicad_mod": "604ba8959b0406011440b02054e0d37209974a35d13ecf6c9860306cbd0f728a",
+    "footprints/Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d",
+    "footprints/Package_TO_SOT_SMD.pretty/TO-252-2.kicad_mod": "7ebf9c684b2184a195a4d62d8b8ae81f93633d30aaf2ff2c3abd73e59a5c1640",
+    "footprints/Package_TO_SOT_THT.pretty/TO-220-3_Vertical.kicad_mod": "6b833c0eb0487be34d2a77aac4eeb30814b709a8ee52fa8d958820204ae3d48b",
+    "footprints/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4",
+    "footprints/Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod": "54fd6e17158e15e5a591053f905fbd5bd9a1aa7008c73cccd391b192a3b1a09d",
+    "footprints/TestPoint.pretty/TestPoint_Pad_D2.0mm.kicad_mod": "6f5a9866c2e9a0efe3739db3b4a1c42a4513d4520717d1b50350e9e0c3697d0c",
+    "symbols/Connector.kicad_sym": "5c46ee679a6d5ef5d67115ce3f3217636385de49f316db649f44376861de31c9",
+    "symbols/Connector_Generic.kicad_sym": "c44a0a561694b37a58027539b4e215067f64b5789cd7855bc001890dc484d51b",
+    "symbols/Device.kicad_sym": "30b780d0dbd6fee27bd187f7a03d9e5ff492f8dea5eea6c8404b397f7a95ae01",
+    "symbols/Power_Protection.kicad_sym": "d19528c2f6165defc43f2b08a9f732885c94a672d9c5fc62a9f9a86165325bc4",
+    "symbols/Reference_Voltage.kicad_sym": "4de323e2176c4c140b172ef1c0bb0f264a076da4f28da1e5bb6bf39e99f58d34",
+    "symbols/Transistor_BJT.kicad_sym": "2fb70f9e4a92152c4d6564f0ba0bfad88a37db40b5f147119a2406cde4d243a6",
+    "symbols/Transistor_FET.kicad_sym": "dde4d877dceab5df65aa6251679d164b110d0a54ee449b2274c01e2ed0e52e04",
+    "symbols/Triac_Thyristor.kicad_sym": "7b443cc12b6792217bde35e349bb5da77e0024b14669e44040b316358e1249b5",
+    "symbols/power.kicad_sym": "541c49bdad55134b5f6379e80c6d18f165c1d9e98ca7df36ad6ec2a316a6d11b"
+  }
+}

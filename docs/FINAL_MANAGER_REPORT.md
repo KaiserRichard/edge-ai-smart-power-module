@@ -1,3 +1,19 @@
+# V1A-Lite Phase D / R2 capture — 2026-10-05
+
+**STATUS: CONDITIONAL PASS for capture; electrical release and R3 remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** owner-selected option1R captured directly on `feat/v1a-lite-cost-reduction`: Sheets01/02/03/05, raw-node SCR crowbar, persistent input cutoff latch, 150V IRFR6215TRPBF correction, specified bulk/25V ceramics, IO/dummy-load/test access; Sheet04 and series shunt removed. Root plus four sheets exported to PDF/XML/BOM. PCB untouched; no purchases or push.
+
+**EVIDENCE:** [Phase D capture](evidence/v1a_lite/PHASE_D_CAPTURE.md), [ERC 0 errors / 0 warnings](evidence/v1a_lite/PHASE_D_ERC.rpt), [556 static capture checks](evidence/v1a_lite/PHASE_D_VERIFICATION.json), [schematic PDF](schematic/V1A_Lite_schematic.pdf), [100-component installed BOM](evidence/v1a_lite/V1A_LITE_BOM.csv), [test log](evidence/v1a_lite/PHASE_D_TESTS.txt), [source register](../third_party/v1a_lite_phase_d/SOURCES.md). All five rendered pages reviewed; C101 corrected to 8mm/3.5mm pitch. ERC and static tests are not electrical validation.
+
+**DECISIONS:** C2 governs over C; only selected C3 input-FET correction imported. Q102 is the forward cutoff; CTRL12 remains upstream. F301 protects Pi wiring only; no fuse/link disconnects raw caps from SCR. VOUT_PI replaces LOAD_5V1 and directly reaches J502. Installed core **379,299.80 VND** (+30,644.60 versus C2 A); with two headers **387,816.90 VND**. Twelve copper test/load features carry no separate component-purchase cost; procurement/PCB/harness/thermal overhead is excluded.
+
+**OPEN RISKS:** source/harness envelope, Pi transient limits, nuisance trips, latch startup/capture/reset, FET hot SOA/thermal/reversal, surge and capacitor containment, SCR pulse/di-dt/thermal/recovery, loop/inrush/ripple/5A qualification and landed sourcing costs. Per-sheet commit attempt failed because Git could not create `index.lock`; per owner brief, all work remains uncommitted. No lock/permission changes.
+
+**NEXT GATE:** independent R2 engineering review and electrical blocker closure; no R3 layout or fabrication release. Bench progression is documented; **no Pi until dummy-load and OV/crowbar/fault gates pass**. Old research design remains on `v1a-research-schematic` and `v1a-research-layout-wip`; existing PCB is historical, not Lite.
+
+---
+
 # V1A-Lite Phase B architecture comparison — 2026-10-05
 
 **STATUS: BLOCKED for architecture selection / R1 release; R2 and R3 remain BLOCKED. Comparison deliverables complete. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**

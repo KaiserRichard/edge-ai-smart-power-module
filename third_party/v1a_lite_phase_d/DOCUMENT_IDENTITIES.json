@@ -1,0 +1,12 @@
+{
+  "MMBTA42": {
+    "url": "https://www.mccsemi.com/pdf/Products/MMBTA42(SOT-23).pdf",
+    "revision": "Rev.3-3-12012020",
+    "sha256": "6380cc26a9d22a0e78ffd7f6849eb408c15adcb6e5452880a7cf743f50d4f8ca",
+    "reading_copy": "/private/tmp/lited-mmbta42.pdf",
+    "reviewed_pages": [
+      1
+    ],
+    "disposition": "Referenced, not modified; MCC copyright"
+  }
+}

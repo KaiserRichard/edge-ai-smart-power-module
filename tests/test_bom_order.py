@@ -4,6 +4,11 @@ import importlib.util
 from pathlib import Path
 import unittest
 
+
+# Phase D: these contracts target the preserved research V1A architecture.
+if "V1A-Lite / V1A" in (Path(__file__).resolve().parents[1] / "hardware/kicad/V1A.kicad_sch").read_text():
+    raise unittest.SkipTest("Research-V1A-only architecture; V1A-Lite uses test_v1a_lite.py and check_v1a_lite.py")
+
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('bom_closeout', ROOT/'docs/evidence/r2/bom_order/closeout.py')
 closeout = importlib.util.module_from_spec(spec)

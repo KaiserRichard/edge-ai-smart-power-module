@@ -1,931 +1,618 @@
 (kicad_sch
   (version 20250114)
   (generator "eeschema")
-  (generator_version "9.0")
-  (uuid "576b2f55-cbc6-5266-8df6-9cffc8340346")
-  (paper "A3")
+  (uuid "8e7247b1-293d-5d69-8ee6-c583401eb142")
+  (paper "A2")
   (title_block
-    (title "00 TOP - V1A Smart DC Power Module")
-    (date "2026-10-03")
-    (rev "R2-BLOCKED")
-    (company "Edge AI Smart Power Module")
+    (title "V1A-Lite / V1A")
+    (date "2026-10-05")
+    (rev "1R-D")
     (comment 1 "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED")
-    (comment 2 "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION"))
+    (comment 2 "Capture only; electrical qualification OPEN; no PCB work"))
+  (lib_symbols)
+  (text "V1A-Lite / OPTION 1R / PHASE D SCHEMATIC CAPTURE"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 3 3))
+      (justify left top))
+    (uuid "eab8f042-334d-534b-a970-04da854f2f03"))
+  (text "18-26V normal (24V nominal) -> input cutoff -> LM61460 -> raw SCR crowbar -> wiring fuse -> Pi power"
+    (at 20.32 30.48 0)
+    (effects
+      (font
+        (size 1.7 1.7))
+      (justify left top))
+    (uuid "4c0255fd-bc31-50d1-b178-1cb1bf8dbc9c"))
+  (text "Owner selected 2026-10-05. Historical research design: v1a-research-schematic / v1a-research-layout-wip."
+    (at 20.32 38.1 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid "fb847320-5673-5fcf-96ab-7199884b5da2"))
+  (text "NOT FOR FABRICATION - ENGINEERING REVIEW REQUIRED. No electrical safety or bench validation claimed."
+    (at 20.32 45.72 0)
+    (effects
+      (font
+        (size 1.7 1.7))
+      (justify left top))
+    (uuid "476725af-c7a0-5dfd-b5fe-8ee8799b343a"))
+  (text "Sheet04 telemetry removed. No I2C, USB3 or D435i routing. All power returns are GND; Kelvin geometry is an R3 gate."
+    (at 20.32 53.34 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid "c9ed5a27-fc16-5a96-ad1e-9b8727d89920"))
+  (wire
+    (pts
+      (xy 55.88 99.05999999999999)
+      (xy 40.64 99.05999999999999))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "dc7de6f0-7364-5138-9d74-569e1fce5bea"))
+  (label "VIN_RAW"
+    (at 40.64 99.05999999999999 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "f0b3e304-f0bb-5a8e-870b-fa85eca88a38"))
+  (wire
+    (pts
+      (xy 55.88 109.21999999999998)
+      (xy 40.64 109.21999999999998))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "7d016982-67a6-5a7d-a3e0-d383a6163512"))
+  (label "VIN_FUSED"
+    (at 40.64 109.21999999999998 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "e9f213b8-430f-535f-95d0-63c735522c04"))
+  (wire
+    (pts
+      (xy 55.88 119.38)
+      (xy 40.64 119.38))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "60c9949f-623c-51b3-af54-a70564f299a9"))
+  (label "VIN_PROTECTED"
+    (at 40.64 119.38 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "61b25730-1bcf-5948-92f4-165598e00f8e"))
+  (wire
+    (pts
+      (xy 55.88 129.54)
+      (xy 40.64 129.54))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "c3865d4f-0036-50e5-b31a-8b74658abb2f"))
+  (label "CTRL12"
+    (at 40.64 129.54 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "ba5cf03f-3e59-54f7-ae31-28ea4da661e6"))
+  (wire
+    (pts
+      (xy 55.88 139.7)
+      (xy 40.64 139.7))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "130e481c-ee0c-5677-bcaf-c9d0c36c6cc2"))
+  (label "CB_COLLECTOR"
+    (at 40.64 139.7 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "c9308d93-bd88-5d7c-81e0-97e52ef295e1"))
+  (wire
+    (pts
+      (xy 55.88 149.85999999999999)
+      (xy 40.64 149.85999999999999))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "9b48033d-0acd-5325-8ed9-055688aa6406"))
+  (label "GND"
+    (at 40.64 149.85999999999999 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "4e2cc35d-29ec-53cb-9375-6050c64eaceb"))
+  (sheet
+    (at 55.88 83.82)
+    (size 185.42 111.76)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid "f5eed0ac-98ac-582d-b5c8-5efe81696a94")
+    (property "Sheetname" "01_INPUT_PROTECTION"
+      (at 135.88 80.00999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Sheetfile" "01_INPUT_PROTECTION.kicad_sch"
+      (at 135.88 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "VIN_RAW" passive
+      (at 55.88 99.05999999999999 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "88006425-0752-57f6-809d-e76a01c8d7e7"))
+    (pin "VIN_FUSED" passive
+      (at 55.88 109.21999999999998 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "f1aad10e-9fc9-56c4-9ad2-38a59094d888"))
+    (pin "VIN_PROTECTED" passive
+      (at 55.88 119.38 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "d9c41beb-cd29-524b-86ec-0d6921c97c78"))
+    (pin "CTRL12" passive
+      (at 55.88 129.54 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "62f64b82-04d5-59f7-b233-dbc840e20f8e"))
+    (pin "CB_COLLECTOR" passive
+      (at 55.88 139.7 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "3c0a242f-4ce7-5966-9a58-539fc091a7fd"))
+    (pin "GND" passive
+      (at 55.88 149.85999999999999 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "9cc9f21c-5147-5685-9734-eddec961ae5d"))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142"
+          (page "2")))))
+  (wire
+    (pts
+      (xy 322.58 99.05999999999999)
+      (xy 307.34 99.05999999999999))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "3c4a036c-f95f-569a-9419-92c6ae2c15fd"))
+  (label "VIN_PROTECTED"
+    (at 307.34 99.05999999999999 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "2be25536-cb05-54ea-b084-e3380d88b0b5"))
+  (wire
+    (pts
+      (xy 322.58 109.21999999999998)
+      (xy 307.34 109.21999999999998))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "69155c0a-bc7a-5efb-86be-46a5eaa7affb"))
+  (label "VOUT_5V1"
+    (at 307.34 109.21999999999998 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "d8963a46-d3e6-5d1e-97d4-f22672599d95"))
+  (wire
+    (pts
+      (xy 322.58 119.38)
+      (xy 307.34 119.38))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2156af5d-6243-558e-a817-b24d96f13826"))
+  (label "GND"
+    (at 307.34 119.38 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "5a648661-e173-549e-8a7d-f44f30c871fc"))
+  (sheet
+    (at 322.58 83.82)
+    (size 185.42 111.76)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid "7f97c092-7776-5c95-a7c3-41c04030e739")
+    (property "Sheetname" "02_BUCK_5V"
+      (at 402.58 80.00999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Sheetfile" "02_BUCK_5V.kicad_sch"
+      (at 402.58 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "VIN_PROTECTED" passive
+      (at 322.58 99.05999999999999 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "d70f4e4f-0c77-59d6-bdb6-288f797221e4"))
+    (pin "VOUT_5V1" passive
+      (at 322.58 109.21999999999998 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "75050d92-b1d5-513a-aa17-f4fd8aadc619"))
+    (pin "GND" passive
+      (at 322.58 119.38 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "0b70c625-067d-5ac1-92b0-c3b935f6b244"))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142"
+          (page "3")))))
+  (wire
+    (pts
+      (xy 55.88 233.68)
+      (xy 40.64 233.68))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "1dacf922-7af4-5b88-86f2-cb5ef189180a"))
+  (label "VOUT_5V1"
+    (at 40.64 233.68 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "0351a2b8-d00c-5dd0-b9e4-fdb9c757a6c3"))
+  (wire
+    (pts
+      (xy 55.88 243.84)
+      (xy 40.64 243.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "10285d70-bcd7-5567-ab43-741053dcb21e"))
+  (label "VOUT_PI"
+    (at 40.64 243.84 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "fa063fe3-ec48-5274-a1c9-48f85b4c91df"))
+  (wire
+    (pts
+      (xy 55.88 254.0)
+      (xy 40.64 254.0))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "1d5e707b-09a2-50ac-bef3-f47d8ab5a3fd"))
+  (label "CB_COLLECTOR"
+    (at 40.64 254.0 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "4621911a-19c7-573a-83b0-c5acacfe4b71"))
+  (wire
+    (pts
+      (xy 55.88 264.16)
+      (xy 40.64 264.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "683e5e4a-f7da-55a8-b494-e5bfcc5d42df"))
+  (label "GND"
+    (at 40.64 264.16 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "b3d43051-1f38-501a-a195-22e0c81f80f1"))
+  (sheet
+    (at 55.88 218.44)
+    (size 185.42 111.76)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid "25d5ed6d-72ed-57c8-99e8-315aae647773")
+    (property "Sheetname" "03_OUTPUT_PROTECTION"
+      (at 135.88 214.63 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Sheetfile" "03_OUTPUT_PROTECTION.kicad_sch"
+      (at 135.88 334.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "VOUT_5V1" passive
+      (at 55.88 233.68 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "fb9d0ec2-808b-521c-b366-a77fdf09121d"))
+    (pin "VOUT_PI" passive
+      (at 55.88 243.84 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "fd5dcff8-34ec-5901-bb6a-5bd8662c6afe"))
+    (pin "CB_COLLECTOR" passive
+      (at 55.88 254.0 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "4e28d9e2-a212-5a8f-ae17-0227277f04f9"))
+    (pin "GND" passive
+      (at 55.88 264.16 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "b90b41bb-a8be-57bb-a94e-e06486729e75"))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142"
+          (page "4")))))
+  (wire
+    (pts
+      (xy 322.58 233.68)
+      (xy 307.34 233.68))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e72c0cff-fa47-5db3-af14-e9bdec0bc269"))
+  (label "VIN_RAW"
+    (at 307.34 233.68 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "c2ba53ed-a5e3-5d92-a86a-1bbdbb176248"))
+  (wire
+    (pts
+      (xy 322.58 243.84)
+      (xy 307.34 243.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "38e74ef1-6755-54c0-ba9d-22df763d88aa"))
+  (label "VIN_FUSED"
+    (at 307.34 243.84 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "2f519154-ed7b-5d06-995d-fd87aa6f9c67"))
+  (wire
+    (pts
+      (xy 322.58 254.0)
+      (xy 307.34 254.0))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "dcfa3fe6-048f-5983-9974-039203be2f71"))
+  (label "VIN_PROTECTED"
+    (at 307.34 254.0 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "5045151f-9dd0-5446-bfe3-7524cb44e793"))
+  (wire
+    (pts
+      (xy 322.58 264.16)
+      (xy 307.34 264.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b2c7c97f-462e-56ae-acc5-efc01cc2588d"))
+  (label "VOUT_5V1"
+    (at 307.34 264.16 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "ecc58b66-ef05-5cc4-8732-68189c73191f"))
+  (wire
+    (pts
+      (xy 322.58 274.32)
+      (xy 307.34 274.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "d5cfce4f-b55c-5642-9067-a5af5f7b8abb"))
+  (label "VOUT_PI"
+    (at 307.34 274.32 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "f6234882-4e62-5997-8a58-4405f77b8684"))
+  (wire
+    (pts
+      (xy 322.58 284.48)
+      (xy 307.34 284.48))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "6a93425b-0698-5ded-b3a5-61bb205f0ce2"))
+  (label "CTRL12"
+    (at 307.34 284.48 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "17a1e685-9b7d-5c9f-bbfd-a4af9e79af5c"))
+  (wire
+    (pts
+      (xy 322.58 294.64)
+      (xy 307.34 294.64))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "7dd97a30-05fd-5cbb-b170-9d2efcc1bd59"))
+  (label "CB_COLLECTOR"
+    (at 307.34 294.64 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "3959fb71-2e54-51fc-9cf5-5cbf439d1cd3"))
+  (wire
+    (pts
+      (xy 322.58 304.8)
+      (xy 307.34 304.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fdda4ffc-ced5-513c-a41a-89941cccdd02"))
+  (label "GND"
+    (at 307.34 304.8 180)
+    (effects
+      (font
+        (size 1.016 1.016))
+      (justify right bottom))
+    (uuid "46bd96c8-2b52-59cf-a68a-dce8ba406a57"))
+  (sheet
+    (at 322.58 218.44)
+    (size 185.42 111.76)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid "9c62f97c-d4c6-5e97-a2c3-4521f26b6ba2")
+    (property "Sheetname" "05_IO_TEST"
+      (at 402.58 214.63 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Sheetfile" "05_IO_TEST.kicad_sch"
+      (at 402.58 334.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "VIN_RAW" passive
+      (at 322.58 233.68 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "7a4c16a9-4519-5a19-9d71-097cd629776e"))
+    (pin "VIN_FUSED" passive
+      (at 322.58 243.84 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "ec4bfd7b-8c38-55be-bc2d-722d26fb362c"))
+    (pin "VIN_PROTECTED" passive
+      (at 322.58 254.0 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "e891d239-3bd8-570e-b65e-dbe96f86ab56"))
+    (pin "VOUT_5V1" passive
+      (at 322.58 264.16 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "3ba4422f-daa0-5cbc-9c63-8be20bb6254e"))
+    (pin "VOUT_PI" passive
+      (at 322.58 274.32 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "7a3e2793-6fb5-5661-9f10-742dd0d1fa5d"))
+    (pin "CTRL12" passive
+      (at 322.58 284.48 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "7b2ebcac-a924-542c-8b44-c40ee0325f3b"))
+    (pin "CB_COLLECTOR" passive
+      (at 322.58 294.64 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "c159c767-034d-56c2-a4bb-7a2e86eef115"))
+    (pin "GND" passive
+      (at 322.58 304.8 180)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left))
+      (uuid "ad483798-80a2-59fb-bcc3-74f65e6c1636"))
+    (instances
+      (project "V1A"
+        (path "/8e7247b1-293d-5d69-8ee6-c583401eb142"
+          (page "5")))))
+  (text "CB_COLLECTOR: Sheet03 PNP collector -> Sheet01 R163 -> SET_LATCH. Fault inhibition acts on Q102 via Q106/Q103."
+    (at 20.32 370.84 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid "a125a71d-d5e8-5024-9211-042ab3a75ef3"))
+  (text "F301-open leaves SCR301, detector and raw capacitors on the same VOUT_5V1 node. VOUT_PI is downstream of F301."
+    (at 20.32 378.46 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid "d540ee4a-2aee-5173-ab81-81901ccd0f61"))
   (sheet_instances
     (path "/"
-      (page "1")))
-  (text "V1A  |  SCHEMATIC REVIEW"
-    (at 15.24 12.7 0)
-    (effects
-      (font
-        (size 2.54 2.54))
-      (justify left top))
-    (uuid "bbf726ad-4200-53b5-a22d-8ac85a562e8f"))
-  (text "PRELIMINARY TEST BOARD — R2 BLOCKED — NOT FOR FABRICATION"
-    (at 15.24 25.4 0)
-    (effects
-      (font
-        (size 2.032 2.032))
-      (justify left top))
-    (uuid "a506a93b-0cab-52ba-8936-151aab2da9b0"))
-  (text "VIN_RAW  ->  01  ->  02  ->  03  ->  04  ->  J502"
-    (at 25.4 55.88 0)
-    (effects
-      (font
-        (size 3.048 3.048))
-      (justify left top))
-    (uuid "c379f2cb-07b8-561d-97e4-7c3a7a2c1830"))
-  (text "9-26 V DC input     |     5.1 V nominal / 5 A     |     I2C: 3.3 V, 100 kHz"
-    (at 25.4 73.66 0)
-    (effects
-      (font
-        (size 2.032 2.032))
-      (justify left top))
-    (uuid "4585fd03-ff04-5e3c-9063-baf8474291fc"))
-  (label "BUCK_INPUT_PGOOD"
-    (at 35.56 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "d7d5444f-f733-5f8e-ba85-ded53c3e8463"))
-  (label "GND"
-    (at 50.8 187.96 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "347bef09-5bd4-5853-ad8a-c24bf176683c"))
-  (label "VIN_FUSED"
-    (at 66.04 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "a0655579-06e1-5512-bdf4-e1fec27bca3d"))
-  (label "INPUT_SHDN"
-    (at 81.28 187.96 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "55b20bf7-3545-5d92-b548-c8793e67a481"))
-  (sheet
-    (at 30.48 109.22)
-    (size 71.12 71.12)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (stroke
-      (width 0.254)
-      (type solid))
-    (fill
-      (color 0 0 0 0.0000))
-    (uuid "37852ec5-fee5-5973-89ae-3cd309e38c33")
-    (property "Sheetname" "01_INPUT_PROTECTION"
-      (at 66.04 101.6 0)
-      (effects
-        (font
-          (size 2.032 2.032))))
-    (property "Sheetfile" "01_INPUT_PROTECTION.kicad_sch"
-      (at 66.04 175.26 0)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (hide yes)))
-    (pin "VIN_RAW" input
-      (at 30.48 127 180)
-      (uuid "ec14a024-92ee-5b28-ba83-c67f37b579f9")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "VIN_PROTECTED" output
-      (at 101.6 127 0)
-      (uuid "c198eb32-585e-5044-8e8f-b98bf4c735a4")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify right)))
-    (pin "BUCK_INPUT_PGOOD" output
-      (at 35.56 180.34 270)
-      (uuid "ebba8feb-e07c-5afb-942e-066f1a86370b")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "GND" passive
-      (at 50.8 180.34 270)
-      (uuid "06233e1d-a6ea-550d-bcc8-a605ac61f480")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (instances
-      (project "V1A"
-        (path "/576b2f55-cbc6-5266-8df6-9cffc8340346"
-          (page "2"))))
-    (pin "VIN_FUSED" output
-      (at 66.04 180.34 270)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left))
-      (uuid "e19c3cb4-3de5-5ba0-afa3-2546dea78f01"))
-    (pin "INPUT_SHDN" input
-      (at 81.28 180.34 270)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left))
-      (uuid "a75c6db2-4fd2-53e3-b30e-c5f8c635e667")))
-  (text "Input / reverse protection"
-    (at 35.56 142.24 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left top))
-    (uuid "069031e4-94ef-5014-951c-b564866e95f4"))
-  (label "BUCK_INPUT_PGOOD"
-    (at 129.54 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "96652df0-66b6-5270-a1f0-62dbae6a3e0d"))
-  (label "GND"
-    (at 144.78 187.96 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "b76658d9-db47-5d67-ab35-03ff41f37135"))
-  (label "BUCK_PGOOD"
-    (at 160.02 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "46e031e2-1ae8-5d4d-9744-572117955673"))
-  (sheet
-    (at 124.46 109.22)
-    (size 71.12 71.12)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (stroke
-      (width 0.254)
-      (type solid))
-    (fill
-      (color 0 0 0 0.0000))
-    (uuid "5dffa0bc-750e-519f-9b00-1681dc612371")
-    (property "Sheetname" "02_BUCK_5V"
-      (at 160.02 101.6 0)
-      (effects
-        (font
-          (size 2.032 2.032))))
-    (property "Sheetfile" "02_BUCK_5V.kicad_sch"
-      (at 160.02 175.26 0)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (hide yes)))
-    (pin "VIN_PROTECTED" input
-      (at 124.46 127 180)
-      (uuid "9f61c383-cab8-5026-bd45-a0275becd61a")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "BUCK_INPUT_PGOOD" input
-      (at 129.54 180.34 270)
-      (uuid "341043e5-b99d-5557-a9e6-931d4a2ee72d")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "VOUT_5V1" output
-      (at 195.58 127 0)
-      (uuid "2ed43ce9-b754-51c4-8194-9bc42f44bd8f")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify right)))
-    (pin "GND" passive
-      (at 144.78 180.34 270)
-      (uuid "15ccfdd5-2c06-5dce-a816-7a22e7468666")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (instances
-      (project "V1A"
-        (path "/576b2f55-cbc6-5266-8df6-9cffc8340346"
-          (page "3"))))
-    (pin "BUCK_PGOOD" output
-      (at 160.02 180.34 270)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left))
-      (uuid "3d6a1750-f0f3-54b4-beac-c4b5d0e7551d"))
-    (pin "L201_IN" passive (at 175.26 180.34 270) (effects (font (size 1.016 1.016)) (justify left)) (uuid "6e5c1a34-f5c0-519e-a6ce-28240796b2a6")))
-  (text "Buck: LM61460 / 400 kHz"
-    (at 129.54 142.24 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left top))
-    (uuid "77beed81-d115-5136-aba0-e119f20211c1"))
-  (label "VIN_FUSED"
-    (at 223.52 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "5520af41-da92-5de9-a100-a0c100743ab4"))
-  (label "GND"
-    (at 238.76 187.96 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "007102bd-d7d0-585e-8e08-0c92db67d687"))
-  (label "BUCK_PGOOD"
-    (at 254 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "1ff537df-ca6d-597c-ad4b-c8201cf74b04"))
-  (label "INPUT_SHDN"
-    (at 269.24 187.96 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "b4780507-a336-5191-b998-ff71bc97a1ca"))
-  (sheet
-    (at 218.44 109.22)
-    (size 71.12 71.12)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (stroke
-      (width 0.254)
-      (type solid))
-    (fill
-      (color 0 0 0 0.0000))
-    (uuid "75179989-af4b-5de8-b22b-4510e541985c")
-    (property "Sheetname" "03_OUTPUT_PROTECTION"
-      (at 254 101.6 0)
-      (effects
-        (font
-          (size 2.032 2.032))))
-    (property "Sheetfile" "03_OUTPUT_PROTECTION.kicad_sch"
-      (at 254 175.26 0)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (hide yes)))
-    (pin "VOUT_5V1" input
-      (at 218.44 127 180)
-      (uuid "9c7359cd-f7ee-5b01-b394-b3b7c319c08d")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "VOUT_PROTECTED" passive
-      (at 289.56 127 0)
-      (uuid "ac5a05f6-f6cc-5fe1-b7d3-2b2bc8a3a8ad")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify right)))
-    (instances
-      (project "V1A"
-        (path "/576b2f55-cbc6-5266-8df6-9cffc8340346"
-          (page "4"))))
-    (pin "VIN_FUSED" input
-      (at 223.52 180.34 270)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left))
-      (uuid "dab967b5-4657-57df-ad4f-e9d57dc3dc45"))
-    (pin "GND" passive
-      (at 238.76 180.34 270)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left))
-      (uuid "f307bcba-0fa7-521b-9c3a-fe8148747375"))
-    (pin "BUCK_PGOOD" input
-      (at 254 180.34 270)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left))
-      (uuid "8d4c0339-3c58-5416-b5e6-be99fd7709c2"))
-    (pin "INPUT_SHDN" output
-      (at 269.24 180.34 270)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left))
-      (uuid "72b62d6f-3d53-5d96-904d-a2c4f20cbc70"))
-    (pin "L201_IN" passive (at 284.48 180.34 270) (effects (font (size 1.016 1.016)) (justify left)) (uuid "4ec82165-cead-5c39-978c-bd37258eb6fa"))
-    (pin "VIN_PROTECTED" input (at 233.68 109.22 90) (effects (font (size 1.016 1.016)) (justify left)) (uuid "acba11b6-d691-5207-9aff-28329ed20c43")))
-  (text "Disconnect + crowbar"
-    (at 223.52 142.24 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left top))
-    (uuid "b8f21517-efec-5356-bfb1-1ee4718e8c3b"))
-  (label "3V3_HOST"
-    (at 317.5 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "faaf7a5a-fda2-5d8b-ac6b-4451d1982186"))
-  (label "SDA_HOST"
-    (at 332.74 187.96 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "f9476617-3103-5f94-997d-3f31fdcc1eae"))
-  (label "SCL_HOST"
-    (at 347.98 195.58 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "cee68844-aa07-5a2c-ae5d-dae2a730d076"))
-  (label "GND"
-    (at 363.22 187.96 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "04e38568-b395-5384-8024-feca7e063f9f"))
-  (sheet
-    (at 312.42 109.22)
-    (size 71.12 71.12)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (stroke
-      (width 0.254)
-      (type solid))
-    (fill
-      (color 0 0 0 0.0000))
-    (uuid "6055d333-b195-5ef3-b19f-42ca0fee65c8")
-    (property "Sheetname" "04_POWER_MONITOR"
-      (at 347.98 101.6 0)
-      (effects
-        (font
-          (size 2.032 2.032))))
-    (property "Sheetfile" "04_POWER_MONITOR.kicad_sch"
-      (at 347.98 175.26 0)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (hide yes)))
-    (pin "VOUT_PROTECTED" input
-      (at 312.42 127 180)
-      (uuid "48059837-4d5e-5b8e-84c4-c0f60251330e")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "LOAD_5V1" bidirectional
-      (at 383.54 127 0)
-      (uuid "14cebf9c-d656-5046-8593-455cf0932342")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify right)))
-    (pin "3V3_HOST" input
-      (at 317.5 180.34 270)
-      (uuid "c650e8c6-e4dd-535f-a35e-b6a0db78dcd3")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "SDA_HOST" bidirectional
-      (at 332.74 180.34 270)
-      (uuid "62540c1c-0f2c-5c4c-aad9-3e00fa7f002f")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "SCL_HOST" bidirectional
-      (at 347.98 180.34 270)
-      (uuid "0134f259-b214-58e9-90d7-5174324b8e5f")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "GND" passive
-      (at 363.22 180.34 270)
-      (uuid "31f6ee67-178d-5f5c-965e-4daaf1d680c4")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (instances
-      (project "V1A"
-        (path "/576b2f55-cbc6-5266-8df6-9cffc8340346"
-          (page "5")))))
-  (text "INA228 / Kelvin shunt"
-    (at 317.5 142.24 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left top))
-    (uuid "cf9dc58f-8fcd-55ee-85d8-5eaaf7731b94"))
-  (label "VIN_RAW"
-    (at 50.8 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "fbeab5e9-bf94-5e72-9424-7c2d3b6cd4db"))
-  (label "VIN_PROTECTED"
-    (at 99.06 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "2ee123bc-ff4e-5602-8e48-40a39c6ab70a"))
-  (label "LOAD_5V1"
-    (at 147.32 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "0296c341-917c-5572-b534-e562b3a125ea"))
-  (label "3V3_HOST"
-    (at 195.58 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "9efa8345-322e-5cee-9576-e2fb8a9c61d5"))
-  (label "SDA_HOST"
-    (at 243.84 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "ddb801db-9981-5811-846e-dfa14a9fe6b8"))
-  (label "SCL_HOST"
-    (at 292.1 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "4a1d3235-4058-5dd3-83a0-f4a7304a87b2"))
-  (label "GND"
-    (at 340.36 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "bede8ffe-b900-5742-a52a-fae02a11f142"))
-  (sheet
-    (at 30.48 220.98)
-    (size 353.06 20.32)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (stroke
-      (width 0.254)
-      (type solid))
-    (fill
-      (color 0 0 0 0.0000))
-    (uuid "8d9c57c5-d3a6-5649-afb2-3a00633471f3")
-    (property "Sheetname" "05_IO_TEST"
-      (at 207.01 213.36 0)
-      (effects
-        (font
-          (size 2.032 2.032))))
-    (property "Sheetfile" "05_IO_TEST.kicad_sch"
-      (at 207.01 236.22 0)
-      (effects
-        (font
-          (size 1.524 1.524))
-        (hide yes)))
-    (pin "VIN_RAW" output
-      (at 50.8 220.98 90)
-      (uuid "21e87f93-4035-5af0-a85d-dd9fa1276be6")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "VIN_PROTECTED" input
-      (at 99.06 220.98 90)
-      (uuid "3ec7118b-82a0-5b1f-bfa5-c9a38625c150")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "LOAD_5V1" bidirectional
-      (at 147.32 220.98 90)
-      (uuid "09018bc0-d8c9-563a-969e-58fa0adbe821")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "3V3_HOST" output
-      (at 195.58 220.98 90)
-      (uuid "3f8238b2-9e17-5016-88fe-042fd057a40b")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "SDA_HOST" bidirectional
-      (at 243.84 220.98 90)
-      (uuid "02295f75-f6d0-582b-997d-2153297fa4f4")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "SCL_HOST" bidirectional
-      (at 292.1 220.98 90)
-      (uuid "bd5e6b75-384e-53f3-8449-1d0c16514a59")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (pin "GND" passive
-      (at 340.36 220.98 90)
-      (uuid "265717a5-e5da-5697-b03c-1cd1586ab00b")
-      (effects
-        (font
-          (size 1.524 1.524))
-        (justify left)))
-    (instances
-      (project "V1A"
-        (path "/576b2f55-cbc6-5266-8df6-9cffc8340346"
-          (page "6")))))
-  (text "J501 input / J502 load / J503 host"
-    (at 35.56 233.68 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left top))
-    (uuid "893295c9-465d-571e-92d8-07abcd9d3fb1"))
-  (label "VIN_PROTECTED"
-    (at 101.6 127 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "13d37850-b639-5a33-b25b-81c901cb0363"))
-  (label "VOUT_5V1"
-    (at 195.58 127 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "5a9df2dc-32cc-5e0a-af6f-9d9f6903d2ac"))
-  (label "VOUT_PROTECTED"
-    (at 289.56 127 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "3f6afb1d-a9da-53a2-9642-e205e4e06cf1"))
-  (label "VIN_RAW"
-    (at 15.24 127 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "04e1fd6e-b038-5f50-8f90-795e6ac1d5b1"))
-  (label "LOAD_5V1"
-    (at 401.32 200.66 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left bottom))
-    (uuid "27758001-6343-5c92-b4af-7bbcfe0b112a"))
-  (text "J502\nSheet 05"
-    (at 360.68 200.66 0)
-    (effects
-      (font
-        (size 2.032 2.032))
-      (justify left top))
-    (uuid "9a32aa3e-f536-5fea-98d0-2a126ae1f0bc"))
-  (text "REVIEW BOUNDARY"
-    (at 20.32 254 0)
-    (effects
-      (font
-        (size 2.032 2.032))
-      (justify left top))
-    (uuid "3f5e528e-63f0-5836-a414-43e899696b96"))
-  (text "Sheet 03 has no bypass. No MCU; V1B remains separate.\nR2 release and R3 PCB layout remain BLOCKED.\nERC is rule-check evidence, not electrical validation.\nReview: docs/05_SCHEMATIC_REVIEW.md; docs/R2_MANAGER_PACKET.md\nSource / pin / calculation evidence: docs/evidence/r2/"
-    (at 20.32 261.62 0)
-    (effects
-      (font
-        (size 1.524 1.524))
-      (justify left top))
-    (uuid "283c436d-0279-5f84-9905-71d3fb85dcf9"))
-  (wire
-    (pts
-      (xy 35.56 180.34)
-      (xy 35.56 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "6655c270-fa8c-5e40-ae84-32954fbc5d65"))
-  (wire
-    (pts
-      (xy 50.8 180.34)
-      (xy 50.8 187.96))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "8504b04c-cb01-5824-a1f6-1c3bb90b23b9"))
-  (wire
-    (pts
-      (xy 66.04 180.34)
-      (xy 66.04 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "c37fb1a0-4622-571c-b876-cbc314dc1b0a"))
-  (wire
-    (pts
-      (xy 81.28 180.34)
-      (xy 81.28 187.96))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "cc3734cf-dd9a-5113-944f-a42d968b48b2"))
-  (wire
-    (pts
-      (xy 129.54 180.34)
-      (xy 129.54 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "c33bd8c3-674d-51d8-9124-faab50a473da"))
-  (wire
-    (pts
-      (xy 144.78 180.34)
-      (xy 144.78 187.96))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "6833bcb2-a211-5c2a-ade7-9c3340f8b17d"))
-  (wire
-    (pts
-      (xy 160.02 180.34)
-      (xy 160.02 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "98a5c053-7d7d-551f-b007-2c5b12c9aa28"))
-  (wire
-    (pts
-      (xy 223.52 180.34)
-      (xy 223.52 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "9a44a4ba-f63f-514a-a342-3c2496f77800"))
-  (wire
-    (pts
-      (xy 238.76 180.34)
-      (xy 238.76 187.96))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "3ba16020-3618-515e-ab90-d68577fba854"))
-  (wire
-    (pts
-      (xy 254 180.34)
-      (xy 254 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "8bcc70ab-5b04-5719-a895-44b1c9f48257"))
-  (wire
-    (pts
-      (xy 269.24 180.34)
-      (xy 269.24 187.96))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "43081d08-bd17-503a-8284-538cd6beac3b"))
-  (wire
-    (pts
-      (xy 317.5 180.34)
-      (xy 317.5 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "65321f52-c15b-5582-aa30-969549e19128"))
-  (wire
-    (pts
-      (xy 332.74 180.34)
-      (xy 332.74 187.96))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "f2f34a6c-c4ea-5f41-a70b-0551f92dfe2c"))
-  (wire
-    (pts
-      (xy 347.98 180.34)
-      (xy 347.98 195.58))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "15935c53-a73c-5e51-bfe3-cb0492e82c71"))
-  (wire
-    (pts
-      (xy 363.22 180.34)
-      (xy 363.22 187.96))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "ce60cbd2-373a-5a2b-a025-24b6d57f54d3"))
-  (wire
-    (pts
-      (xy 50.8 218.44)
-      (xy 50.8 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "ad71e86a-d1ba-5f9a-abb6-d2a6cc3d15b1"))
-  (wire
-    (pts
-      (xy 50.8 218.44)
-      (xy 50.8 220.98))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "572070a0-6d19-5918-92e3-2ed56269d54f"))
-  (wire
-    (pts
-      (xy 99.06 218.44)
-      (xy 99.06 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "79dd1a58-8efe-5667-86d4-67bbde403cd3"))
-  (wire
-    (pts
-      (xy 99.06 218.44)
-      (xy 99.06 220.98))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "8791b800-15de-5441-90c8-205eb3e770f3"))
-  (wire
-    (pts
-      (xy 147.32 218.44)
-      (xy 147.32 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "0d327f22-7231-502b-8950-c114e7230c58"))
-  (wire
-    (pts
-      (xy 147.32 218.44)
-      (xy 147.32 220.98))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "8f640ef6-a39d-5300-98be-536841c5775f"))
-  (wire
-    (pts
-      (xy 195.58 218.44)
-      (xy 195.58 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "eb084121-859b-5606-9f10-1d6fa311ebf7"))
-  (wire
-    (pts
-      (xy 195.58 218.44)
-      (xy 195.58 220.98))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "74e0f340-2435-5565-959c-f88e8b00941d"))
-  (wire
-    (pts
-      (xy 243.84 218.44)
-      (xy 243.84 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "2d506fd9-692d-5212-b559-16f2b77c5887"))
-  (wire
-    (pts
-      (xy 243.84 218.44)
-      (xy 243.84 220.98))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "261c5d4a-3c02-518d-975a-180a0d50d159"))
-  (wire
-    (pts
-      (xy 292.1 218.44)
-      (xy 292.1 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "e06fa531-e0b7-5e71-a678-cbca3c7f81ae"))
-  (wire
-    (pts
-      (xy 292.1 218.44)
-      (xy 292.1 220.98))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "1411540a-cd2a-5339-a7ad-269381179363"))
-  (wire
-    (pts
-      (xy 340.36 218.44)
-      (xy 340.36 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "49df7b3b-b934-5077-96fd-600daeb6c262"))
-  (wire
-    (pts
-      (xy 340.36 218.44)
-      (xy 340.36 220.98))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "f7becafe-8432-5b0d-9287-62e68c9e6785"))
-  (wire
-    (pts
-      (xy 101.6 127)
-      (xy 124.46 127))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "9b0fd10e-76c4-50c5-a783-df872f6ad24f"))
-  (wire
-    (pts
-      (xy 195.58 127)
-      (xy 218.44 127))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "a2f214db-ad40-5415-ab92-a59e13fff950"))
-  (wire
-    (pts
-      (xy 289.56 127)
-      (xy 312.42 127))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "d059d4cc-848f-5b45-b324-b498699fe0a8"))
-  (wire
-    (pts
-      (xy 15.24 127)
-      (xy 30.48 127))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "75feb585-1f34-51c4-81ce-abfd2f3f9a2d"))
-  (wire
-    (pts
-      (xy 383.54 127)
-      (xy 401.32 127))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "4f093426-af90-533f-a02c-a8b6e3816b81"))
-  (wire
-    (pts
-      (xy 401.32 127)
-      (xy 401.32 200.66))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "3ae60704-4210-54e4-b1fc-38fcf750c9aa"))
-  (lib_symbols)
-  (wire (pts (xy 175.26 180.34) (xy 175.26 187.96)) (stroke (width 0) (type default)) (uuid "6960cb2e-2a43-56f1-9da0-65338f998130"))
-  (label "L201_IN" (at 175.26 187.96 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "4d942b3e-e289-5b0e-a65e-d4579e1afa86"))
-
-  (wire (pts (xy 284.48 180.34) (xy 284.48 187.96)) (stroke (width 0) (type default)) (uuid "e8f20577-8be2-5cac-a57f-b4a79038183c"))
-  (label "L201_IN" (at 284.48 187.96 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "591e1f58-8903-5915-b2b7-631e7ea00308"))
-  (wire (pts (xy 233.68 109.22) (xy 233.68 88.9)) (stroke (width 0) (type default)) (uuid "9e572a73-a367-5a7c-9498-6563e48b3bc4"))
-  (label "VIN_PROTECTED" (at 233.68 88.9 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid "4ee6383c-c00b-5da4-b43f-02a06b03fc51"))
-)
+      (page "1"))))

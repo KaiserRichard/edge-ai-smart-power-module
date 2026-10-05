@@ -189,7 +189,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
-    result = check(args.root.resolve())
+    root = args.root.resolve()
+    # The research checker enforces the historical five-sheet hash contracts.
+    # Dispatch only when the active schematic explicitly identifies Lite.
+    if 'V1A-Lite / V1A' in (root/'hardware/kicad/V1A.kicad_sch').read_text():
+        from check_v1a_lite import run
+        result = run(root)
+        result['skipped_profile'] = 'Research-V1A-only architecture/hash contracts; historical tests and evidence retained'
+    else:
+        result = check(root)
     print(json.dumps(result, indent=2))
     return 0 if result['status'] == 'PASS' else 1
 

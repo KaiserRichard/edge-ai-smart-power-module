@@ -1,0 +1,227 @@
+[
+  {
+    "ref": "J501",
+    "value": "24V INPUT",
+    "lid": "Connector_Generic:Conn_01x02",
+    "fp": "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT",
+    "pins": {
+      "1": "VIN_RAW",
+      "2": "GND"
+    },
+    "mpn": "B2P-VH-FB-B(LF)(SN)",
+    "manufacturer": "JST",
+    "source": "https://www.lcsc.com/product-detail/C158006.html",
+    "lcsc": "C158006",
+    "price": "4258.5500",
+    "scope": "CONNECTORS"
+  },
+  {
+    "ref": "J502",
+    "value": "PI 5V OUTPUT",
+    "lid": "Connector_Generic:Conn_01x02",
+    "fp": "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT",
+    "pins": {
+      "1": "VOUT_PI",
+      "2": "GND"
+    },
+    "mpn": "B2P-VH-FB-B(LF)(SN)",
+    "manufacturer": "JST",
+    "source": "https://www.lcsc.com/product-detail/C158006.html",
+    "lcsc": "C158006",
+    "price": "4258.5500",
+    "scope": "CONNECTORS"
+  },
+  {
+    "ref": "TP501",
+    "value": "VIN_RAW",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "VIN_RAW"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "TP502",
+    "value": "VIN_FUSED",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "VIN_FUSED"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "TP503",
+    "value": "VIN_PROTECTED",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "VIN_PROTECTED"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "TP504",
+    "value": "VOUT_5V1",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "VOUT_5V1"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "TP505",
+    "value": "VOUT_PI",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "VOUT_PI"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "TP506",
+    "value": "GND",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "GND"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "TP507",
+    "value": "CTRL12",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "CTRL12"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "TP508",
+    "value": "CB_COLLECTOR",
+    "lid": "Connector:TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_D2.0mm",
+    "pins": {
+      "1": "CB_COLLECTOR"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "J503",
+    "value": "DUMMY LOAD + / -",
+    "lid": "Connector_Generic:Conn_01x02",
+    "fp": "V1A_Lite:Dummy_Load_Pads",
+    "pins": {
+      "1": "VOUT_PI",
+      "2": "GND"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "feature": true
+  },
+  {
+    "ref": "#FLG01",
+    "value": "PWR_FLAG",
+    "lid": "power:PWR_FLAG",
+    "fp": "",
+    "pins": {
+      "1": "VIN_RAW"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "flag": true
+  },
+  {
+    "ref": "#FLG02",
+    "value": "PWR_FLAG",
+    "lid": "power:PWR_FLAG",
+    "fp": "",
+    "pins": {
+      "1": "GND"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "flag": true
+  },
+  {
+    "ref": "#FLG03",
+    "value": "PWR_FLAG",
+    "lid": "power:PWR_FLAG",
+    "fp": "",
+    "pins": {
+      "1": "VIN_PROTECTED"
+    },
+    "mpn": "PCB_FEATURE",
+    "manufacturer": "PCB",
+    "source": "Project-owned copper feature",
+    "lcsc": "N/A",
+    "price": "0",
+    "scope": "PCB_FEATURE",
+    "flag": true
+  }
+]

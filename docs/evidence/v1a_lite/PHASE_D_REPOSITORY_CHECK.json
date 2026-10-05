@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "capture and static connectivity only; not electrical validation",
+  "checks_passed": 556,
+  "errors": [],
+  "purchased_part_count": 100,
+  "pcb_feature_count": 12,
+  "core_vnd": "379299.8000",
+  "installed_purchased_vnd": "387816.9000",
+  "pcb_sha256": "afaf15d9a55527c0457ce71e8437885e8dcbec3c4d640029befbc5c40c94b59a",
+  "skipped_profile": "Research-V1A-only architecture/hash contracts; historical tests and evidence retained"
+}

@@ -1,0 +1,430 @@
+[
+  {
+    "ref": "U201",
+    "value": "LM61460AANRJRR",
+    "lid": "V1A:U201_LM61460AANRJRR",
+    "fp": "V1A_Qualified:TI_RJR0014A_LM61460",
+    "pins": {
+      "1": "GND",
+      "2": "BUCK_VCC",
+      "3": "GND",
+      "4": "BUCK_FB",
+      "5": null,
+      "6": "BUCK_RT",
+      "7": "BUCK_EN",
+      "8": "VIN_PROTECTED",
+      "9": "GND",
+      "10": "BUCK_SW",
+      "11": "GND",
+      "12": "VIN_PROTECTED",
+      "13": "BUCK_RBOOT",
+      "14": "BUCK_CBOOT"
+    },
+    "mpn": "LM61460AANRJRR",
+    "manufacturer": "TI",
+    "source": "https://www.lcsc.com/product-detail/C2864505.html",
+    "lcsc": "C2864505",
+    "price": "42386.7500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "L201",
+    "value": "6.8uH / SRP1265A",
+    "lid": "Device:L",
+    "fp": "V1A_Lite:Bourns_SRP1265A",
+    "pins": {
+      "1": "BUCK_SW",
+      "2": "VOUT_5V1"
+    },
+    "mpn": "SRP1265A-6R8M",
+    "manufacturer": "BOURNS",
+    "source": "https://www.lcsc.com/product-detail/C2041326.html",
+    "lcsc": "C2041326",
+    "price": "24843.7500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C201",
+    "value": "10uF / 50V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "pins": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "mpn": "GRM32ER71H106KA12L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77102.html",
+    "lcsc": "C77102",
+    "price": "8803.3000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C202",
+    "value": "10uF / 50V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "pins": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "mpn": "GRM32ER71H106KA12L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77102.html",
+    "lcsc": "C77102",
+    "price": "8803.3000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C215",
+    "value": "10uF / 50V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "pins": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "mpn": "GRM32ER71H106KA12L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77102.html",
+    "lcsc": "C77102",
+    "price": "8803.3000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C216",
+    "value": "10uF / 50V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "pins": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "mpn": "GRM32ER71H106KA12L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77102.html",
+    "lcsc": "C77102",
+    "price": "8803.3000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C203",
+    "value": "100nF / 50V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "pins": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "mpn": "GRM188R71H104KA93D",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77055.html",
+    "lcsc": "C77055",
+    "price": "453.1500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C204",
+    "value": "100nF / 50V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "pins": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "mpn": "GRM188R71H104KA93D",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77055.html",
+    "lcsc": "C77055",
+    "price": "453.1500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C205",
+    "value": "100nF / 16V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "pins": {
+      "1": "BUCK_CBOOT",
+      "2": "BUCK_SW"
+    },
+    "mpn": "GRM188R71C104KA01D",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C45000.html",
+    "lcsc": "C45000",
+    "price": "450.5000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C206",
+    "value": "1uF / 16V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "pins": {
+      "1": "BUCK_VCC",
+      "2": "GND"
+    },
+    "mpn": "GRM21BR71C105KA01L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77079.html",
+    "lcsc": "C77079",
+    "price": "1645.6500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C207",
+    "value": "22pF / C0G",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "FF_MID"
+    },
+    "mpn": "C0402C220J4GACTU",
+    "manufacturer": "KEMET",
+    "source": "https://www.lcsc.com/product-detail/C2168192.html",
+    "lcsc": "C2168192",
+    "price": "453.1500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C209",
+    "value": "47uF / 25V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1206_3216Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "GRM31CR61E476ME44L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C403725.html",
+    "lcsc": "C403725",
+    "price": "16260.4000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C210",
+    "value": "47uF / 25V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1206_3216Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "GRM31CR61E476ME44L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C403725.html",
+    "lcsc": "C403725",
+    "price": "16260.4000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C211",
+    "value": "47uF / 25V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1206_3216Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "GRM31CR61E476ME44L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C403725.html",
+    "lcsc": "C403725",
+    "price": "16260.4000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C212",
+    "value": "47uF / 25V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1206_3216Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "GRM31CR61E476ME44L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C403725.html",
+    "lcsc": "C403725",
+    "price": "16260.4000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C213",
+    "value": "47uF / 25V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1206_3216Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "GRM31CR61E476ME44L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C403725.html",
+    "lcsc": "C403725",
+    "price": "16260.4000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C214",
+    "value": "47uF / 25V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1206_3216Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "GRM31CR61E476ME44L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C403725.html",
+    "lcsc": "C403725",
+    "price": "16260.4000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C217",
+    "value": "1000uF / 10V",
+    "lid": "Device:C_Polarized",
+    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "EEUFR1A102",
+    "manufacturer": "PANASONIC",
+    "source": "https://www.lcsc.com/product-detail/C407868.html",
+    "lcsc": "C407868",
+    "price": "4640.1500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "C218",
+    "value": "1000uF / 10V",
+    "lid": "Device:C_Polarized",
+    "fp": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "GND"
+    },
+    "mpn": "EEUFR1A102",
+    "manufacturer": "PANASONIC",
+    "source": "https://www.lcsc.com/product-detail/C407868.html",
+    "lcsc": "C407868",
+    "price": "4640.1500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "R201",
+    "value": "33.2k",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "BUCK_RT",
+      "2": "GND"
+    },
+    "mpn": "TNPW060333K2BEEA",
+    "manufacturer": "VISHAY",
+    "source": "https://www.lcsc.com/product-detail/C2075328.html",
+    "lcsc": "C2075328",
+    "price": "2408.8500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "R202",
+    "value": "100k / 0.1%",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "BUCK_FB"
+    },
+    "mpn": "TNPW0603100KBEEA",
+    "manufacturer": "VISHAY",
+    "source": "https://www.lcsc.com/product-detail/C844888.html",
+    "lcsc": "C844888",
+    "price": "2112.0500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "R203",
+    "value": "24.6k / 0.1%",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "BUCK_FB",
+      "2": "GND"
+    },
+    "mpn": "RT0603BRD0724K6L",
+    "manufacturer": "YAGEO",
+    "source": "https://www.lcsc.com/product-detail/C861250.html",
+    "lcsc": "C861250",
+    "price": "938.1000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "R204",
+    "value": "0R",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "BUCK_RBOOT",
+      "2": "BUCK_CBOOT"
+    },
+    "mpn": "0603WAF100JT5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C22859.html",
+    "lcsc": "C22859",
+    "price": "84.8000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "R205",
+    "value": "1k",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "FF_MID",
+      "2": "BUCK_FB"
+    },
+    "mpn": "0603WAF1001T5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C21190.html",
+    "lcsc": "C21190",
+    "price": "68.9000",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "R206",
+    "value": "100k",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "VIN_PROTECTED",
+      "2": "BUCK_EN"
+    },
+    "mpn": "0603WAF1003T5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C25803.html",
+    "lcsc": "C25803",
+    "price": "82.1500",
+    "scope": "COMMON_BUCK"
+  },
+  {
+    "ref": "R207",
+    "value": "24.6k / 0.1%",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "BUCK_EN",
+      "2": "GND"
+    },
+    "mpn": "RT0603BRD0724K6L",
+    "manufacturer": "YAGEO",
+    "source": "https://www.lcsc.com/product-detail/C861250.html",
+    "lcsc": "C861250",
+    "price": "938.1000",
+    "scope": "COMMON_BUCK"
+  }
+]

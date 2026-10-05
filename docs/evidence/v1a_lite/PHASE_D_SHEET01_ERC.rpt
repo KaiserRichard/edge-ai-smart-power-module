@@ -1,0 +1,34 @@
+ERC report (2026-10-05T12:05:30+0700, Encoding UTF8)
+
+***** Sheet /
+[label_dangling]: Label not connected to anything
+    ; error
+    @(40.64 mm, 99.06 mm): Label 'VIN_RAW'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(40.64 mm, 139.70 mm): Label 'CB_COLLECTOR'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(40.64 mm, 74.93 mm): Label 'VIN_RAW'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(17.78 mm, 398.78 mm): Label 'VIN_RAW'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(22.86 mm, 398.78 mm): Hierarchical Label 'VIN_RAW'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(302.26 mm, 398.78 mm): Label 'CB_COLLECTOR'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(307.34 mm, 398.78 mm): Hierarchical Label 'CB_COLLECTOR'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(421.64 mm, 306.07 mm): Label 'CB_COLLECTOR'
+
+***** Sheet /01_INPUT_PROTECTION/
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(116.84 mm, 124.46 mm): Symbol D106 Pin 1 [GND, Power input, Line]
+
+ ** ERC messages: 9  Errors 9  Warnings 0

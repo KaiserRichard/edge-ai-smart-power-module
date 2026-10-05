@@ -1,0 +1,6 @@
+(footprint "Dummy_Load_Pads" (version 20241229) (generator "pcbnew") (layer "F.Cu") (descr "Project-owned exposed copper solder pads for dummy-load leads; current/strain relief qualification OPEN") (attr smd)
+(fp_text reference "REF**" (at 0 -5) (layer "F.SilkS") (effects (font (size 1 1) (thickness .15))))
+(fp_text value "Dummy_Load_Pads" (at 0 5) (layer "F.Fab") (effects (font (size 1 1) (thickness .15))))
+(fp_rect (start -8 -3) (end 8 3) (stroke (width .05) (type default)) (fill none) (layer "F.CrtYd"))
+(pad "1" smd rect (at -5 0) (size 5 5) (layers "F.Cu" "F.Mask"))
+(pad "2" smd rect (at 5 0) (size 5 5) (layers "F.Cu" "F.Mask")))

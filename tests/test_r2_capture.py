@@ -7,6 +7,11 @@ import xml.etree.ElementTree as ET
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 
+
+# Phase D: these contracts target the preserved research V1A architecture.
+if "V1A-Lite / V1A" in (Path(__file__).resolve().parents[1] / "hardware/kicad/V1A.kicad_sch").read_text():
+    raise unittest.SkipTest("Research-V1A-only architecture; V1A-Lite uses test_v1a_lite.py and check_v1a_lite.py")
+
 ROOT = Path(__file__).resolve().parents[1]
 module_spec = importlib.util.spec_from_file_location('r2_check', ROOT/'scripts/check_r2_schematic.py')
 checker = importlib.util.module_from_spec(module_spec)

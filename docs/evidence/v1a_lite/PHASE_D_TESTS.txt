@@ -1,0 +1,34 @@
+test_bom_order (unittest.loader.ModuleSkipped.test_bom_order) ... skipped 'Research-V1A-only architecture; V1A-Lite uses test_v1a_lite.py and check_v1a_lite.py'
+test_all_nonexcluded_physical_footprints_present (test_footprint_completion.CompletionTests.test_all_nonexcluded_physical_footprints_present) ... ok
+test_each_nonexcluded_empty_and_placeholder_is_rejected (test_footprint_completion.CompletionTests.test_each_nonexcluded_empty_and_placeholder_is_rejected) ... ok
+test_exclusions_are_exact_not_a_prefix_wildcard (test_footprint_completion.CompletionTests.test_exclusions_are_exact_not_a_prefix_wildcard) ... ok
+test_held_parts_cannot_be_selected_through_field_allowlist (test_footprint_completion.CompletionTests.test_held_parts_cannot_be_selected_through_field_allowlist) ... ok
+test_jst_distinct_two_and_four_circuit_hole_diameters (test_footprint_completion.CompletionTests.test_jst_distinct_two_and_four_circuit_hole_diameters) ... ok
+test_nonallowed_properties_are_preserved (test_footprint_completion.CompletionTests.test_nonallowed_properties_are_preserved) ... ok
+test_phoenix_holes_do_not_create_extra_electrical_pins (test_footprint_completion.CompletionTests.test_phoenix_holes_do_not_create_extra_electrical_pins) ... ok
+test_pin_net_and_library_changes_cannot_hide_behind_fields (test_footprint_completion.CompletionTests.test_pin_net_and_library_changes_cannot_hide_behind_fields) ... ok
+test_source_position_and_wires_are_not_normalized_away (test_footprint_completion.CompletionTests.test_source_position_and_wires_are_not_normalized_away) ... ok
+test_tdk_b11_land_dimensions_and_nonpolar_numbering (test_footprint_completion.CompletionTests.test_tdk_b11_land_dimensions_and_nonpolar_numbering) ... ok
+test_vh_shrouded_boss_and_power_pins (test_footprint_completion.CompletionTests.test_vh_shrouded_boss_and_power_pins) ... ok
+test_gate4b_capture (unittest.loader.ModuleSkipped.test_gate4b_capture) ... skipped 'Research-V1A-only architecture; V1A-Lite uses test_v1a_lite.py and check_v1a_lite.py'
+test_q3_every_source_gate_drain_number_and_clearance (test_qualified_footprints.FootprintTests.test_q3_every_source_gate_drain_number_and_clearance) ... ok
+test_q3_stencil_is_not_full_drain_copper (test_qualified_footprints.FootprintTests.test_q3_stencil_is_not_full_drain_copper) ... ok
+test_rjr_all_fourteen_labelled_land_extents (test_qualified_footprints.FootprintTests.test_rjr_all_fourteen_labelled_land_extents) ... ok
+test_rjr_stencil_keeps_split_sw_apertures (test_qualified_footprints.FootprintTests.test_rjr_stencil_keeps_split_sw_apertures) ... ok
+test_vishay_kelvin_wide_force_narrow_sense_contract (test_qualified_footprints.FootprintTests.test_vishay_kelvin_wide_force_narrow_sense_contract) ... ok
+test_r2_capture (unittest.loader.ModuleSkipped.test_r2_capture) ... skipped 'Research-V1A-only architecture; V1A-Lite uses test_v1a_lite.py and check_v1a_lite.py'
+test_footprint_change_is_rejected (test_readability_identity.IdentityTests.test_footprint_change_is_rejected) ... ok
+test_only_export_order_and_codes_are_ignored (test_readability_identity.IdentityTests.test_only_export_order_and_codes_are_ignored) ... ok
+test_pin_membership_change_is_rejected (test_readability_identity.IdentityTests.test_pin_membership_change_is_rejected) ... ok
+test_power_flags_cannot_disappear_from_source_inventory (test_readability_identity.IdentityTests.test_power_flags_cannot_disappear_from_source_inventory) ... ok
+test_value_change_is_rejected (test_readability_identity.IdentityTests.test_value_change_is_rejected) ... ok
+test_capture (test_v1a_lite.LiteBoundaryTests.test_capture) ... ok
+test_cutoff_must_act_on_q103_base (test_v1a_lite.LiteBoundaryTests.test_cutoff_must_act_on_q103_base) ... ok
+test_fuse_must_not_disconnect_raw_crowbar (test_v1a_lite.LiteBoundaryTests.test_fuse_must_not_disconnect_raw_crowbar) ... ok
+test_latch_must_not_lose_supply_when_output_collapses (test_v1a_lite.LiteBoundaryTests.test_latch_must_not_lose_supply_when_output_collapses) ... ok
+test_pi_must_not_bypass_wiring_fuse (test_v1a_lite.LiteBoundaryTests.test_pi_must_not_bypass_wiring_fuse) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 7.790s
+
+OK (skipped=3)

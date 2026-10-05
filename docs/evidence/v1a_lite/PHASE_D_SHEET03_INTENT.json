@@ -1,0 +1,229 @@
+[
+  {
+    "ref": "F301",
+    "value": "7A / wiring backup",
+    "lid": "Device:Fuse",
+    "fp": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "VOUT_PI"
+    },
+    "mpn": "0451007.MRL",
+    "manufacturer": "Littelfuse",
+    "source": "https://www.lcsc.com/product-detail/C99548.html",
+    "lcsc": "C99548",
+    "price": "6214.2500",
+    "scope": "OPT1"
+  },
+  {
+    "ref": "SCR301",
+    "value": "TYN612RG",
+    "lid": "Triac_Thyristor:TIC106",
+    "fp": "Package_TO_SOT_THT:TO-220-3_Vertical",
+    "pins": {
+      "1": "GND",
+      "2": "VOUT_5V1",
+      "3": "SCR_GATE"
+    },
+    "mpn": "TYN612RG",
+    "manufacturer": "ST",
+    "source": "https://www.lcsc.com/product-detail/C262993.html",
+    "lcsc": "C262993",
+    "price": "15105.0000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "U301",
+    "value": "TL431BIDBZR",
+    "lid": "Reference_Voltage:TL431DBZ",
+    "fp": "Package_TO_SOT_SMD:SOT-23",
+    "pins": {
+      "1": "OVOUT_K",
+      "2": "OVOUT_REF",
+      "3": "GND"
+    },
+    "mpn": "TL431BIDBZR",
+    "manufacturer": "TI",
+    "source": "https://www.lcsc.com/product-detail/C41283.html",
+    "lcsc": "C41283",
+    "price": "2077.6000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "Q301",
+    "value": "BC807-40,215",
+    "lid": "Transistor_BJT:BC807",
+    "fp": "Package_TO_SOT_SMD:SOT-23",
+    "pins": {
+      "1": "CB_PBASE",
+      "2": "VOUT_5V1",
+      "3": "CB_COLLECTOR"
+    },
+    "mpn": "BC807-40,215",
+    "manufacturer": "Nexperia",
+    "source": "https://www.lcsc.com/product-detail/C57316.html",
+    "lcsc": "C57316",
+    "price": "530.0000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R301",
+    "value": "1k / 0.1%",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "OVOUT_D1"
+    },
+    "mpn": "RT0603BRD071KL",
+    "manufacturer": "YAGEO",
+    "source": "https://www.lcsc.com/product-detail/C110776.html",
+    "lcsc": "C110776",
+    "price": "789.7000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R302",
+    "value": "100R / 0.1%",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "OVOUT_D1",
+      "2": "OVOUT_D2"
+    },
+    "mpn": "TNPW0603100RBEEA",
+    "manufacturer": "VISHAY",
+    "source": "https://www.lcsc.com/product-detail/C844889.html",
+    "lcsc": "C844889",
+    "price": "2443.3000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R303",
+    "value": "30R / 1%",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "OVOUT_D2",
+      "2": "OVOUT_REF"
+    },
+    "mpn": "0603WAF1300T5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C22796.html",
+    "lcsc": "C22796",
+    "price": "37.1000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R304",
+    "value": "1k / 0.1%",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "OVOUT_REF",
+      "2": "GND"
+    },
+    "mpn": "RT0603BRD071KL",
+    "manufacturer": "YAGEO",
+    "source": "https://www.lcsc.com/product-detail/C110776.html",
+    "lcsc": "C110776",
+    "price": "789.7000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R305",
+    "value": "500R",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "CB_PBASE",
+      "2": "OVOUT_K"
+    },
+    "mpn": "0603WAF1501T5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C22843.html",
+    "lcsc": "C22843",
+    "price": "53.0000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R306",
+    "value": "10k",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "pins": {
+      "1": "VOUT_5V1",
+      "2": "CB_PBASE"
+    },
+    "mpn": "0805W8F1002T5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C17414.html",
+    "lcsc": "C17414",
+    "price": "90.1000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R307",
+    "value": "100R",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "CB_COLLECTOR",
+      "2": "SCR_GATE"
+    },
+    "mpn": "0603WAF1000T5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C22775.html",
+    "lcsc": "C22775",
+    "price": "84.8000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "R308",
+    "value": "1k",
+    "lid": "Device:R",
+    "fp": "Resistor_SMD:R_0603_1608Metric",
+    "pins": {
+      "1": "SCR_GATE",
+      "2": "GND"
+    },
+    "mpn": "0603WAF1001T5E",
+    "manufacturer": "UNI-ROYAL",
+    "source": "https://www.lcsc.com/product-detail/C21190.html",
+    "lcsc": "C21190",
+    "price": "68.9000",
+    "scope": "CROWBAR"
+  },
+  {
+    "ref": "C301",
+    "value": "47uF / 16V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "pins": {
+      "1": "VOUT_PI",
+      "2": "GND"
+    },
+    "mpn": "GRM32ER61C476KE15L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77101.html",
+    "lcsc": "C77101",
+    "price": "8307.7500",
+    "scope": "COMMON_OUTPUT"
+  },
+  {
+    "ref": "C302",
+    "value": "47uF / 16V",
+    "lid": "Device:C",
+    "fp": "Capacitor_SMD:C_1210_3225Metric",
+    "pins": {
+      "1": "VOUT_PI",
+      "2": "GND"
+    },
+    "mpn": "GRM32ER61C476KE15L",
+    "manufacturer": "muRata",
+    "source": "https://www.lcsc.com/product-detail/C77101.html",
+    "lcsc": "C77101",
+    "price": "8307.7500",
+    "scope": "COMMON_OUTPUT"
+  }
+]
