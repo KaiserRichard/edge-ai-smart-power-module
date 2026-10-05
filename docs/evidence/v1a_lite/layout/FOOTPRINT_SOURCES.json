@@ -1,0 +1,86 @@
+{
+  "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_THT.pretty/CP_Radial_D8.0mm_P3.50mm.kicad_mod",
+    "sha256": "a408de9854a71cfd369e8d996c82712decfe96402c4331e1233c3ee62cc94653"
+  },
+  "Capacitor_SMD:C_0805_2012Metric": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+    "sha256": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc"
+  },
+  "Diode_SMD:D_SMC": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Diode_SMD.pretty/D_SMC.kicad_mod",
+    "sha256": "27d6a82f606544b92f552e8553603bf7a9953c48b32288661478bd77be661d4b"
+  },
+  "Diode_SMD:D_SOD-123": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Diode_SMD.pretty/D_SOD-123.kicad_mod",
+    "sha256": "c6832ecba7d34fbbe578f709bf8948b621c6ec058c924c2e0860acb93aad6eee"
+  },
+  "Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_DFN_QFN.pretty/DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm.kicad_mod",
+    "sha256": "604ba8959b0406011440b02054e0d37209974a35d13ecf6c9860306cbd0f728a"
+  },
+  "Fuse:Fuse_Littelfuse-NANO2-451_453": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Fuse.pretty/Fuse_Littelfuse-NANO2-451_453.kicad_mod",
+    "sha256": "e6b4f15d2e78e74c86e35e4b1f496a88ddc8e627db42a96a5c2e2a5c64710a78"
+  },
+  "Package_TO_SOT_SMD:TO-252-2": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_SMD.pretty/TO-252-2.kicad_mod",
+    "sha256": "7ebf9c684b2184a195a4d62d8b8ae81f93633d30aaf2ff2c3abd73e59a5c1640"
+  },
+  "Package_TO_SOT_SMD:SOT-23": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod",
+    "sha256": "9b5376a4c9f789866fa4bc4a255b4ff24659d48dbd2dc1e40fb26ffb2856cc9d"
+  },
+  "Resistor_SMD:R_0805_2012Metric": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod",
+    "sha256": "54fd6e17158e15e5a591053f905fbd5bd9a1aa7008c73cccd391b192a3b1a09d"
+  },
+  "Resistor_SMD:R_0603_1608Metric": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+    "sha256": "26fc677c5d1ee32f5f59895b2cd29b884b4a60b08f66427c2fb9759e69c030c4"
+  },
+  "TestPoint:TestPoint_Pad_D2.0mm": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/TestPoint.pretty/TestPoint_Pad_D2.0mm.kicad_mod",
+    "sha256": "6f5a9866c2e9a0efe3739db3b4a1c42a4513d4520717d1b50350e9e0c3697d0c"
+  },
+  "Capacitor_SMD:C_1210_3225Metric": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+    "sha256": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88"
+  },
+  "Capacitor_SMD:C_0603_1608Metric": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+    "sha256": "6817e127719273e03bb0a41f8d885aaa677ba6bbce6ee8292b2f18223e2ec419"
+  },
+  "Capacitor_SMD:C_0402_1005Metric": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_0402_1005Metric.kicad_mod",
+    "sha256": "da1d55c1ce050af8e8efefd063ae4cd5a272b187cd36c37eca8c28c5f278fb08"
+  },
+  "Capacitor_SMD:C_1206_3216Metric": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod",
+    "sha256": "9343c2f817fd00cce4d60eb82049bd305d87ee6a856d04895b6c546aceac317b"
+  },
+  "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Capacitor_THT.pretty/CP_Radial_D10.0mm_P5.00mm.kicad_mod",
+    "sha256": "4dc92dfba15e9e5f6e7a5d62f182619d7116b1f802aa5bc6654ff2a7746416b4"
+  },
+  "V1A_Lite:Bourns_SRP1265A": {
+    "path": "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A_Lite.pretty/Bourns_SRP1265A.kicad_mod",
+    "sha256": "ebfe6efbcfca5de0b3e8f2a08febd8edfcf692017e10a2a8a14d18b7e79b7dcb"
+  },
+  "V1A_Qualified:TI_RJR0014A_LM61460": {
+    "path": "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A_Qualified.pretty/TI_RJR0014A_LM61460.kicad_mod",
+    "sha256": "436e22dc21d24526f619350c60d593faeb9b9970c142e5d85019b7f1bc9dfe8c"
+  },
+  "Package_TO_SOT_THT:TO-220-3_Vertical": {
+    "path": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_TO_SOT_THT.pretty/TO-220-3_Vertical.kicad_mod",
+    "sha256": "6b833c0eb0487be34d2a77aac4eeb30814b709a8ee52fa8d958820204ae3d48b"
+  },
+  "V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT": {
+    "path": "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A_Qualified.pretty/JST_B2P_VH_FB_B_P3.96_THT.kicad_mod",
+    "sha256": "01c24440e0b9873c4a93a4dcdaf1d2cfffa6fc41339ce292408334f9cf9ac261"
+  },
+  "V1A_Lite:Dummy_Load_Pads": {
+    "path": "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A_Lite.pretty/Dummy_Load_Pads.kicad_mod",
+    "sha256": "31074f1de7ead85f7600ad435ac3439e5f861276f47b0a6d6ac7b7a7fca45eb7"
+  }
+}

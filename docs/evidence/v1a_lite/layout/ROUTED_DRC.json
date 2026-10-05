@@ -1,0 +1,95 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T13:36:35+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'PI OUT' on F.Silkscreen",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 36.0
+                    },
+                    "uuid": "31ada1d5-cf47-4de2-8598-2d4de491b6a0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Segment of J502 on F.Silkscreen",
+                    "pos": {
+                        "x": 88.61,
+                        "y": 44.09
+                    },
+                    "uuid": "474c832f-7804-437a-86d3-ca445690b926"
+                },
+                {
+                    "description": "PCB text '+' on F.Silkscreen",
+                    "pos": {
+                        "x": 87.5,
+                        "y": 44.0
+                    },
+                    "uuid": "7b126ac0-d977-41d1-91f0-0fb6cc9e3f66"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Segment of J502 on F.Silkscreen",
+                    "pos": {
+                        "x": 87.41,
+                        "y": 44.09
+                    },
+                    "uuid": "6bdae2d9-0a4f-41b8-831a-02a96311cb9e"
+                },
+                {
+                    "description": "PCB text '+' on F.Silkscreen",
+                    "pos": {
+                        "x": 87.5,
+                        "y": 44.0
+                    },
+                    "uuid": "7b126ac0-d977-41d1-91f0-0fb6cc9e3f66"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'PI OUT' on F.Silkscreen",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 36.0
+                    },
+                    "uuid": "31ada1d5-cf47-4de2-8598-2d4de491b6a0"
+                },
+                {
+                    "description": "Circle of TP508 on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 37.0
+                    },
+                    "uuid": "9ebaa135-8e8f-4b25-8665-b4d5fa374dd5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+  "geometry_board_sha256": "597b30be4ef73be637cd79bbda192d3280ca3ef2999b7fca378f60f1cf37c908",
+  "grid_mm": 0.1,
+  "copper_um": 35,
+  "barrel_plating_um_assumed": 18,
+  "temperature_coefficient_per_K": 0.00393,
+  "method": "2-layer resistor mesh of filled zones + pads + tracks; vias/PTH barrels 1.6mm long, 18um plating. Contacts equipotential. Raster approximation, no thermal or fault validation.",
+  "results": {
+    "C209_positive_raw": {
+      "net": "/VOUT_5V1",
+      "source_pads": [
+        "C209.1"
+      ],
+      "sink_pads": [
+        "F301.1"
+      ],
+      "ohms_20C": 0.0015484731393854815,
+      "ohms_85C": 0.0019440306028415029,
+      "nodes": 20723,
+      "iterations": 2200,
+      "relative_residual": 9.84957492772951e-11
+    },
+    "C209_return": {
+      "net": "/GND",
+      "source_pads": [
+        "C209.2"
+      ],
+      "sink_pads": [
+        "J502.2"
+      ],
+      "ohms_20C": 0.000763039296050211,
+      "ohms_85C": 0.0009579576842262374,
+      "nodes": 757075,
+      "iterations": 5971,
+      "relative_residual": 9.930227253450828e-11
+    },
+    "C214_positive_raw": {
+      "net": "/VOUT_5V1",
+      "source_pads": [
+        "C214.1"
+      ],
+      "sink_pads": [
+        "F301.1"
+      ],
+      "ohms_20C": 0.004289162339789516,
+      "ohms_85C": 0.005384828859488748,
+      "nodes": 20723,
+      "iterations": 2191,
+      "relative_residual": 9.732189055039066e-11
+    },
+    "C214_return": {
+      "net": "/GND",
+      "source_pads": [
+        "C214.2"
+      ],
+      "sink_pads": [
+        "J502.2"
+      ],
+      "ohms_20C": 0.000632526558668973,
+      "ohms_85C": 0.000794105468080962,
+      "nodes": 757075,
+      "iterations": 5907,
+      "relative_residual": 9.934051126216534e-11
+    },
+    "pi_positive": {
+      "net": "/VOUT_PI",
+      "source_pads": [
+        "F301.2"
+      ],
+      "sink_pads": [
+        "J502.1"
+      ],
+      "ohms_20C": 0.0009208148718737587,
+      "ohms_85C": 0.0011560370308939104,
+      "nodes": 15400,
+      "iterations": 969,
+      "relative_residual": 9.533236342800396e-11
+    },
+    "inductor_to_fuse": {
+      "net": "/VOUT_5V1",
+      "source_pads": [
+        "L201.2"
+      ],
+      "sink_pads": [
+        "F301.1"
+      ],
+      "ohms_20C": 0.0018342557147044236,
+      "ohms_85C": 0.0023028163370256687,
+      "nodes": 20723,
+      "iterations": 2098,
+      "relative_residual": 9.870075168841151e-11
+    }
+  },
+  "C209_round_trip_ohms_20C": 0.0032323273073094514,
+  "C209_round_trip_ohms_85C": 0.004058025317961651,
+  "C214_round_trip_ohms_20C": 0.005842503770332247,
+  "C214_round_trip_ohms_85C": 0.00733497135846362
+}

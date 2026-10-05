@@ -1,0 +1,6 @@
+{'net': '/VOUT_5V1', 'source_pads': ['C209.1'], 'sink_pads': ['F301.1'], 'ohms_20C': 0.0015484731393854815, 'ohms_85C': 0.0019440306028415029, 'nodes': 20723, 'iterations': 2200, 'relative_residual': 9.84957492772951e-11}
+{'net': '/GND', 'source_pads': ['C209.2'], 'sink_pads': ['J502.2'], 'ohms_20C': 0.000763039296050211, 'ohms_85C': 0.0009579576842262374, 'nodes': 757075, 'iterations': 5971, 'relative_residual': 9.930227253450828e-11}
+{'net': '/VOUT_5V1', 'source_pads': ['C214.1'], 'sink_pads': ['F301.1'], 'ohms_20C': 0.004289162339789516, 'ohms_85C': 0.005384828859488748, 'nodes': 20723, 'iterations': 2191, 'relative_residual': 9.732189055039066e-11}
+{'net': '/GND', 'source_pads': ['C214.2'], 'sink_pads': ['J502.2'], 'ohms_20C': 0.000632526558668973, 'ohms_85C': 0.000794105468080962, 'nodes': 757075, 'iterations': 5907, 'relative_residual': 9.934051126216534e-11}
+{'net': '/VOUT_PI', 'source_pads': ['F301.2'], 'sink_pads': ['J502.1'], 'ohms_20C': 0.0009208148718737587, 'ohms_85C': 0.0011560370308939104, 'nodes': 15400, 'iterations': 969, 'relative_residual': 9.533236342800396e-11}
+{'net': '/VOUT_5V1', 'source_pads': ['L201.2'], 'sink_pads': ['F301.1'], 'ohms_20C': 0.0018342557147044236, 'ohms_85C': 0.0023028163370256687, 'nodes': 20723, 'iterations': 2098, 'relative_residual': 9.870075168841151e-11}
