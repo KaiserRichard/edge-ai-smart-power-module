@@ -1,0 +1,111 @@
+{
+  "label": "CALCULATED sensitivity only; L/C/source/timing ASSUMED, no qualification",
+  "fault_inputs": {
+    "L_H": 4.352e-06,
+    "C_F": 0.00011,
+    "V0_V": 5.124,
+    "I0_A": 6.345
+  },
+  "faults": [
+    {
+      "option": "1",
+      "vin": 24,
+      "trip": 5.43,
+      "delay_us": 0.5,
+      "threshold_time_us": 2.7396314846139207,
+      "current_at_trip_a": 18.227647955784093,
+      "peak_v": 5.517701813067735,
+      "passes_frozen_ceiling": false
+    },
+    {
+      "option": "1",
+      "vin": 28,
+      "trip": 5.43,
+      "delay_us": 0.5,
+      "threshold_time_us": 2.569709877525863,
+      "current_at_trip_a": 19.852509916884568,
+      "peak_v": 5.526132001126213,
+      "passes_frozen_ceiling": false
+    },
+    {
+      "option": "1",
+      "vin": 24,
+      "trip": 5.43,
+      "delay_us": 2,
+      "threshold_time_us": 2.7396314846139207,
+      "current_at_trip_a": 18.227647955784093,
+      "peak_v": 5.838993666040993,
+      "passes_frozen_ceiling": false
+    },
+    {
+      "option": "1",
+      "vin": 28,
+      "trip": 5.43,
+      "delay_us": 2,
+      "threshold_time_us": 2.569709877525863,
+      "current_at_trip_a": 19.852509916884568,
+      "peak_v": 5.8852478407348,
+      "passes_frozen_ceiling": false
+    },
+    {
+      "option": "2",
+      "vin": 24,
+      "trip": 5.45,
+      "delay_us": 5,
+      "threshold_time_us": 2.858642129517839,
+      "current_at_trip_a": 18.743834751098053,
+      "peak_v": 6.786357044167558,
+      "passes_frozen_ceiling": false
+    },
+    {
+      "option": "2",
+      "vin": 28,
+      "trip": 5.45,
+      "delay_us": 5,
+      "threshold_time_us": 2.6789473471072203,
+      "current_at_trip_a": 20.42670944678878,
+      "peak_v": 6.967296535682912,
+      "passes_frozen_ceiling": false
+    },
+    {
+      "option": "3",
+      "vin": 24,
+      "trip": 5.418,
+      "delay_us": 1.2,
+      "threshold_time_us": 2.666579087601868,
+      "current_at_trip_a": 17.910796612493765,
+      "peak_v": 5.6413380352379,
+      "passes_frozen_ceiling": false
+    },
+    {
+      "option": "3",
+      "vin": 28,
+      "trip": 5.418,
+      "delay_us": 1.2,
+      "threshold_time_us": 2.502623729194526,
+      "current_at_trip_a": 19.499876017705414,
+      "peak_v": 5.664689489711867,
+      "passes_frozen_ceiling": false
+    }
+  ],
+  "crowbar_static_trip_v": [
+    5.19316043956044,
+    5.426119265165165
+  ],
+  "input_static_trip_v": [
+    29.022747252747262,
+    31.263672957957954
+  ],
+  "efuse_static_trip_v": [
+    5.217352943636365,
+    5.417457113693693
+  ],
+  "scr_watts_by_current_a": {
+    "2.2": 2.0152,
+    "3": 2.82,
+    "5": 5.0,
+    "6": 6.18
+  },
+  "input_charge_limit_C": 0.00043239999999999994,
+  "input_15A_25us_peak_v": 35.37608695652174
+}

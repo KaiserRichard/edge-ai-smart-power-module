@@ -1,0 +1,46 @@
+{
+  "1": {
+    "A_core_vnd": "273601.9000",
+    "B_core_board_connectors_vnd": "307887.60000",
+    "C_first_build_vnd": "1465747.50000",
+    "core_purchase_with_spares_vnd": "794244.7500",
+    "connectors_installed_vnd": "23685.70000",
+    "connector_purchase_vnd": "263502.75000",
+    "sink_allowance_vnd": "40000",
+    "headroom_to_1000000_vnd": "-465747.50000",
+    "budget_status": "FAIL: over hard ceiling; quotes/stock also OPEN"
+  },
+  "2": {
+    "A_core_vnd": "294666.7500",
+    "B_core_board_connectors_vnd": "328952.45000",
+    "C_first_build_vnd": "1444517.45000",
+    "core_purchase_with_spares_vnd": "813014.7000",
+    "connectors_installed_vnd": "23685.70000",
+    "connector_purchase_vnd": "263502.75000",
+    "sink_allowance_vnd": "0",
+    "headroom_to_1000000_vnd": "-444517.45000",
+    "budget_status": "FAIL: over hard ceiling; quotes/stock also OPEN"
+  },
+  "3A": {
+    "A_core_vnd": "284723.9500",
+    "B_core_board_connectors_vnd": "319009.65000",
+    "C_first_build_vnd": "1421329.95000",
+    "core_purchase_with_spares_vnd": "789827.2000",
+    "connectors_installed_vnd": "23685.70000",
+    "connector_purchase_vnd": "263502.75000",
+    "sink_allowance_vnd": "0",
+    "headroom_to_1000000_vnd": "-421329.95000",
+    "budget_status": "FAIL: over hard ceiling; quotes/stock also OPEN"
+  },
+  "3B": {
+    "A_core_vnd": "306793.1500",
+    "B_core_board_connectors_vnd": "341078.85000",
+    "C_first_build_vnd": "1520101.65000",
+    "core_purchase_with_spares_vnd": "848598.9000",
+    "connectors_installed_vnd": "23685.70000",
+    "connector_purchase_vnd": "263502.75000",
+    "sink_allowance_vnd": "40000",
+    "headroom_to_1000000_vnd": "-520101.65000",
+    "budget_status": "FAIL: over hard ceiling; quotes/stock also OPEN"
+  }
+}

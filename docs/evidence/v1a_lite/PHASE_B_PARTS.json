@@ -1,0 +1,605 @@
+[
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "U201",
+    "code": "C2864505",
+    "qty": 1,
+    "value": "LM61460 retained",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "L201",
+    "code": "C2041326",
+    "qty": 1,
+    "value": "6.8uH shielded",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "C201 C202 C215 C216",
+    "code": "C77102",
+    "qty": 4,
+    "value": "10uF 50V 1210 input",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "C203 C204",
+    "code": "C77055",
+    "qty": 2,
+    "value": "100nF 50V input",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "C205",
+    "code": "C45000",
+    "qty": 1,
+    "value": "100nF 16V boot",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "C206",
+    "code": "C77079",
+    "qty": 1,
+    "value": "1uF 16V VCC",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "C207",
+    "code": "C2168192",
+    "qty": 1,
+    "value": "22pF 16V C0G feedforward",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "C209 C210 C211 C212 C213 C214",
+    "code": "C77101",
+    "qty": 6,
+    "value": "47uF 16V 1210 output",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "R201",
+    "code": "C2075328",
+    "qty": 1,
+    "value": "33.2k RT",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "R202",
+    "code": "C844888",
+    "qty": 1,
+    "value": "100k 0.1% FB upper",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "R203",
+    "code": "C861250",
+    "qty": 1,
+    "value": "24.6k 0.1% FB lower",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "R204",
+    "code": "C22859",
+    "qty": 1,
+    "value": "0R boot",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "R205",
+    "code": "C21190",
+    "qty": 1,
+    "value": "1k FF",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "R206",
+    "code": "C25803",
+    "qty": 1,
+    "value": "100k enable upper",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_BUCK",
+    "ref": "R207",
+    "code": "C861250",
+    "qty": 1,
+    "value": "24.6k enable lower",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "F101",
+    "code": "C13982",
+    "qty": 1,
+    "value": "3A very fast 125V fuse",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "D101",
+    "code": "C2863624",
+    "qty": 1,
+    "value": "33V flat clamp TVS; STOCK OPEN",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "Q101",
+    "code": "C2575",
+    "qty": 1,
+    "value": "100V reverse P-FET; Addendum 2",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "D102",
+    "code": "C124196",
+    "qty": 1,
+    "value": "12V gate zener",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "R101A R101B",
+    "code": "C17414",
+    "qty": 2,
+    "value": "2 x 10k series reverse gate pull; 64V power sharing",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "C101",
+    "code": "C178702",
+    "qty": 1,
+    "value": "100uF 50V input damping",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_OUTPUT",
+    "ref": "COUT1 COUT2",
+    "code": "C77101",
+    "qty": 2,
+    "value": "47uF 16V 1210 protected output",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT1",
+    "ref": "F301",
+    "code": "C99548",
+    "qty": 1,
+    "value": "7A output fuse; option 1 only",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "SCR301",
+    "code": "C262993",
+    "qty": 1,
+    "value": "TYN612RG crowbar",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "UCB",
+    "code": "C41283",
+    "qty": 1,
+    "value": "TL431B industrial OV detector",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "QCB",
+    "code": "C57316",
+    "qty": 1,
+    "value": "PNP SCR gate source",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_TOP_A",
+    "code": "C110776",
+    "qty": 1,
+    "value": "1k 0.1% upper divider segment",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_TOP_B",
+    "code": "C844889",
+    "qty": 1,
+    "value": "100R 0.1% upper divider segment",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_TOP_C",
+    "code": "C22796",
+    "qty": 1,
+    "value": "30R 1% upper divider segment",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_BOTTOM",
+    "code": "C110776",
+    "qty": 1,
+    "value": "1k 0.1% lower divider",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_BASE",
+    "code": "C22843",
+    "qty": 1,
+    "value": "500R PNP base to TL431 cathode",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_BE",
+    "code": "C17414",
+    "qty": 1,
+    "value": "10k PNP base-emitter",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_GATE",
+    "code": "C22775",
+    "qty": 1,
+    "value": "100R SCR gate drive",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "CROWBAR",
+    "ref": "RCB_GK",
+    "code": "C21190",
+    "qty": 1,
+    "value": "1k SCR gate-cathode",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "UOV",
+    "code": "C130035",
+    "qty": 1,
+    "value": "TLV1701 comparator; raw output supply",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "UREF",
+    "code": "C41283",
+    "qty": 1,
+    "value": "TL431B 2.495V shunt reference",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "QOV",
+    "code": "C155290",
+    "qty": 1,
+    "value": "DMP4015SPS single forward-blocking P-FET",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "DOV",
+    "code": "C124196",
+    "qty": 1,
+    "value": "12V source-gate clamp",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "ROV_TOP_A",
+    "code": "C110776",
+    "qty": 1,
+    "value": "1k 0.1% upper divider",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "ROV_TOP_B",
+    "code": "C844889",
+    "qty": 1,
+    "value": "100R 0.1% upper divider",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "ROV_TOP_C",
+    "code": "C22796",
+    "qty": 1,
+    "value": "30R 1% upper divider",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "ROV_BOTTOM",
+    "code": "C110776",
+    "qty": 1,
+    "value": "1k 0.1% lower divider",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "RREF1 RREF2 RREF3 RREF4 RREF5 RREF6 RREF7 RREF8 RREF9 RREF10",
+    "code": "C22775",
+    "qty": 10,
+    "value": "10 x 100R series shunt bias; fault power sharing",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "ROV_GS",
+    "code": "C17414",
+    "qty": 1,
+    "value": "10k source-gate turnoff pullup",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT2",
+    "ref": "COV",
+    "code": "C45000",
+    "qty": 1,
+    "value": "100nF 16V comparator decoupling; fault exposure OPEN",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "UEF",
+    "code": "C3662793",
+    "qty": 1,
+    "value": "TPS259470LRPWR adjustable OVLO eFuse",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "REF_TOP_A",
+    "code": "C2075328",
+    "qty": 1,
+    "value": "33.2k 0.1% OVLO top",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "REF_TOP_B",
+    "code": "C110776",
+    "qty": 1,
+    "value": "1k 0.1% OVLO top",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "REF_BOTTOM",
+    "code": "C844890",
+    "qty": 1,
+    "value": "10k 0.1% OVLO bottom",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "RILM_A",
+    "code": "C22843",
+    "qty": 1,
+    "value": "500R 1% ILM segment",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "RILM_B",
+    "code": "C22796",
+    "qty": 1,
+    "value": "30R 1% ILM segment",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "RILM_C",
+    "code": "C22787",
+    "qty": 1,
+    "value": "20R 1% ILM segment",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "Q102",
+    "code": "C2575",
+    "qty": 1,
+    "value": "100V input OV series cutoff P-FET",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "Q103",
+    "code": "C78715",
+    "qty": 1,
+    "value": "300V NPN gate pull-down; stock OPEN",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "UIN_OV",
+    "code": "C41283",
+    "qty": 1,
+    "value": "TL431B input OV detector",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "DIN_GS DIN_SUP",
+    "code": "C124196",
+    "qty": 2,
+    "value": "12V cutoff VGS clamp and detector supply clamp",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "DIN_SHIFT",
+    "code": "C151564",
+    "qty": 1,
+    "value": "3.3V zener level shift for Q103 base",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "RIN_TOP_A",
+    "code": "C844888",
+    "qty": 1,
+    "value": "100k 0.1% input OV upper",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "RIN_TOP_B RIN_BOTTOM",
+    "code": "C844890",
+    "qty": 2,
+    "value": "10k 0.1% divider: 110k/10k",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "RIN_PWR1 RIN_PWR2 RIN_PWR3 RIN_PWR4 RIN_PWR5 RIN_PWR6 RIN_PWR7 RIN_PWR8",
+    "code": "C22843",
+    "qty": 8,
+    "value": "8 x 500R 4k detector supply ballast",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "RIN_G1 RIN_G2 RIN_G3 RIN_G4 RIN_G5 RIN_G6",
+    "code": "C22775",
+    "qty": 6,
+    "value": "6 x 100R 600R cutoff gate sink ballast",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "RIN_GS RIN_K",
+    "code": "C21190",
+    "qty": 2,
+    "value": "1k gate-source pullup and TL431 cathode pullup",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "RIN_BASE",
+    "code": "C17414",
+    "qty": 1,
+    "value": "10k Q103 base drive",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "RIN_BE",
+    "code": "C25803",
+    "qty": 1,
+    "value": "100k Q103 base-emitter",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "COMMON_INPUT",
+    "ref": "CIN_CTRL",
+    "code": "C77079",
+    "qty": 1,
+    "value": "1uF 16V on protected 12V detector clamp rail",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "DEN",
+    "code": "C151564",
+    "qty": 1,
+    "value": "3.3V EN-to-ground clamp",
+    "safety": "yes",
+    "substitute": "no"
+  },
+  {
+    "scope": "OPT3",
+    "ref": "REN1 REN2 REN3 REN4 REN5 REN6 REN7 REN8 REN9 REN10",
+    "code": "C22775",
+    "qty": 10,
+    "value": "10 x 100R series EN feed; 28V fault power",
+    "safety": "yes",
+    "substitute": "no"
+  }
+]

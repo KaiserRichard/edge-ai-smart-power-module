@@ -1,3 +1,19 @@
+# V1A-Lite Phase B architecture comparison — 2026-10-05
+
+**STATUS: BLOCKED for architecture selection / R1 release; R2 and R3 remain BLOCKED. Comparison deliverables complete. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** resumed `db2a88c`; completed buck cost-down, input/output protection comparisons, removal ledger, reproducible BOM and first-build purchasing model. Incorporated owner Addendum 2: every option includes a discrete 100 V reverse/cutoff stage for continuous 54.6–64 V upstream pass-through. Compared an input SCR alternative. Analysis only; no CAD edits or procurement.
+
+**EVIDENCE:** [Phase B architecture](evidence/v1a_lite/PHASE_B_ARCHITECTURE.md), [BOM](evidence/v1a_lite/PHASE_B_BOM.csv), [purchasing model](evidence/v1a_lite/PHASE_B_PURCHASE_MODEL.csv), [totals](evidence/v1a_lite/PHASE_B_TOTALS.json), [calculations](evidence/v1a_lite/PHASE_B_CALCULATIONS.json), [source register](../third_party/v1a_lite_phase_b/SOURCES.md). Saved price observations reused; only three missing exact part offers queried for the new input/EN circuitry.
+
+**DECISIONS:** PROPOSED Option 1 plus 64 V input cutoff for further engineering, subject to Claude/owner selection; no build-ready option. Core estimates: 273,602 /294,667 /284,724 /306,793 VND for 1/2/3A/3B. First-build estimates including minimum lots/spares: 1,465,748 /1,444,517 /1,421,330 /1,520,102 VND. Every first-build model exceeds the unchanged <1,000,000 VND ceiling. Installed cost is not procurement cost.
+
+**OPEN RISKS:** 64 V fault cutoff timing/hot SOA; no proven Pi peak <5.5 V; output-bank 16 V fault exposure; SCR indefinite-current/hiccup survival and fuse clearing; loop/effective-C/thermal/harness limits; 26/28 V normal-input conflict; parts stock and affordable landed procurement. No behavior is claimed validated. Git section commits failed creating `index.lock`; edits remain uncommitted, with no push.
+
+**NEXT GATE:** close interface, timing/containment and budget blockers at R1; then owner architecture selection before R2 capture. No automatic return to paused PCB work. All prior manager entries below remain unchanged historical evidence.
+
+---
+
 # Gate2 manager update — 2026-09-30
 
 **STATUS: CONDITIONAL PASS for the authorized preliminary schematic capture/review package. VERDICT: PRELIMINARY — READY FOR SCHEMATIC REVIEW. R2 release and R3 remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
