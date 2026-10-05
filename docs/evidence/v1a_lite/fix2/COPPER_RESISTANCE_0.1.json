@@ -1,0 +1,128 @@
+{
+  "geometry_board_sha256": "01e7046e4072d0dfcc3dd750141c8a14cbf554cbbac3dc0db5ca3a1d246d1066",
+  "grid_mm": 0.1,
+  "copper_um": [
+    35,
+    15.2,
+    15.2,
+    35
+  ],
+  "barrel_plating_um_assumed": 18,
+  "temperature_coefficient_per_K": 0.00393,
+  "method": "4-layer resistor mesh of filled zones + pads + tracks; vias/PTH barrels split at actual layer center depths, 18um plating. Contacts equipotential. Raster approximation, no thermal or fault validation.",
+  "results": {
+    "C209_positive_raw": {
+      "net": "/VOUT_5V1",
+      "source_pads": [
+        "C209.1"
+      ],
+      "sink_pads": [
+        "F301.1"
+      ],
+      "ohms_20C": 0.0009682732341596525,
+      "ohms_85C": 0.0012156186318257357,
+      "nodes": 47916,
+      "iterations": 2844,
+      "relative_residual": 9.812755113086462e-11,
+      "max_grid_edge_current_A_at_5A": 0.38826291517470357,
+      "five_amp_drop_mV_20C": 4.8413661707982625
+    },
+    "C209_return": {
+      "net": "/GND",
+      "source_pads": [
+        "C209.2"
+      ],
+      "sink_pads": [
+        "J502.2"
+      ],
+      "ohms_20C": 0.0012977533705430338,
+      "ohms_85C": 0.0016292644690482517,
+      "nodes": 1541667,
+      "iterations": 5399,
+      "relative_residual": 9.925259278249309e-11,
+      "max_grid_edge_current_A_at_5A": 1.0054604500995208,
+      "five_amp_drop_mV_20C": 6.488766852715169
+    },
+    "C214_positive_raw": {
+      "net": "/VOUT_5V1",
+      "source_pads": [
+        "C214.1"
+      ],
+      "sink_pads": [
+        "F301.1"
+      ],
+      "ohms_20C": 0.003370144362306323,
+      "ohms_85C": 0.004231047739657472,
+      "nodes": 47916,
+      "iterations": 2779,
+      "relative_residual": 9.789185111419809e-11,
+      "max_grid_edge_current_A_at_5A": 0.47320541336550537,
+      "five_amp_drop_mV_20C": 16.850721811531614
+    },
+    "C214_return": {
+      "net": "/GND",
+      "source_pads": [
+        "C214.2"
+      ],
+      "sink_pads": [
+        "J502.2"
+      ],
+      "ohms_20C": 0.0004133532251718691,
+      "ohms_85C": 0.000518944306542023,
+      "nodes": 1541667,
+      "iterations": 5546,
+      "relative_residual": 9.938444751615738e-11,
+      "max_grid_edge_current_A_at_5A": 0.1619874965419626,
+      "five_amp_drop_mV_20C": 2.0667661258593455
+    },
+    "pi_positive": {
+      "net": "/VOUT_PI",
+      "source_pads": [
+        "F301.2"
+      ],
+      "sink_pads": [
+        "J502.1"
+      ],
+      "ohms_20C": 0.0005948987975459804,
+      "ohms_85C": 0.0007468656953791011,
+      "nodes": 16995,
+      "iterations": 992,
+      "relative_residual": 9.939218361069816e-11,
+      "max_grid_edge_current_A_at_5A": 0.2658072529401684,
+      "five_amp_drop_mV_20C": 2.974493987729902
+    },
+    "inductor_to_fuse": {
+      "net": "/VOUT_5V1",
+      "source_pads": [
+        "L201.2"
+      ],
+      "sink_pads": [
+        "F301.1"
+      ],
+      "ohms_20C": 0.0010736834662575072,
+      "ohms_85C": 0.0013479559077129873,
+      "nodes": 47916,
+      "iterations": 2788,
+      "relative_residual": 9.690612750575867e-11,
+      "max_grid_edge_current_A_at_5A": 0.37192781077109394,
+      "five_amp_drop_mV_20C": 5.368417331287536,
+      "max_sheet_edge_A_per_mm2_at_5A": 106.2650887917411,
+      "max_sheet_edge_location_mm": [
+        68.30000000000001,
+        42.85
+      ],
+      "max_sheet_edge_layer": "F.Cu",
+      "bridge_x69.5_y41_to45_current_A_by_layer": {
+        "F.Cu": 2.692937228390641,
+        "In1.Cu": 0.0,
+        "In2.Cu": 0.2998293755469896,
+        "B.Cu": 0.0
+      },
+      "bridge_sheet_density_max_A_per_mm2": 86.62242578572699
+    }
+  },
+  "C209_round_trip_ohms_20C": 0.002860925402248667,
+  "C209_round_trip_ohms_85C": 0.0035917487962530887,
+  "C214_round_trip_ohms_20C": 0.004378396385024172,
+  "C214_round_trip_ohms_85C": 0.005496857741578596
+}

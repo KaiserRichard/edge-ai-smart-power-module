@@ -6,11 +6,12 @@ import ctypes as c,json,math,argparse
 from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw
-ROOT=Path(__file__).resolve().parents[1];EV=ROOT/'docs/evidence/v1a_lite/fix1'
+ROOT=Path(__file__).resolve().parents[1]
+ap=argparse.ArgumentParser();ap.add_argument('--grid',type=float,default=.2);ap.add_argument('--evidence',type=Path,default=ROOT/'docs/evidence/v1a_lite/fix1');args=ap.parse_args();EV=args.evidence
 data=json.loads((EV/'COPPER_GEOMETRY.json').read_text());lib=c.CDLL('/tmp/lite-resistance.dylib')
 I=np.ctypeslib.ndpointer(dtype=np.int32,flags='C_CONTIGUOUS');D=np.ctypeslib.ndpointer(dtype=np.float64,flags='C_CONTIGUOUS')
 lib.solve.argtypes=[c.c_int,c.c_int,I,I,D,I,D,c.c_int,c.c_double,c.POINTER(c.c_int),c.POINTER(c.c_double)];lib.solve.restype=c.c_double
-ap=argparse.ArgumentParser();ap.add_argument('--grid',type=float,default=.2);args=ap.parse_args();s=args.grid;W=int(80/s);H=int(60/s);origin=(10,10)
+s=args.grid;W=int(80/s);H=int(60/s);origin=(10,10)
 def pt(q):return ((q[0]-10)/s-.5,(q[1]-10)/s-.5)
 def circle(draw,q,d,fill):
  x,y=pt(q);r=d/(2*s);draw.ellipse((x-r,y-r,x+r,y+r),fill=fill)

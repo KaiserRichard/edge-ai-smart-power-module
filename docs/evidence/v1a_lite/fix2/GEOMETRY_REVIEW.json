@@ -1,0 +1,528 @@
+{
+  "board_sha256": "01e7046e4072d0dfcc3dd750141c8a14cbf554cbbac3dc0db5ca3a1d246d1066",
+  "classification": "GEOMETRY evidence, not electrical validation",
+  "pin_to_cap_centerline_paths": {
+    "CBOOT": {
+      "before": {
+        "length_mm": 5.349999999999994,
+        "segments": [
+          {
+            "a": [
+              43.875,
+              42.4
+            ],
+            "b": [
+              43.875,
+              41.65
+            ],
+            "length_mm": 0.75,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              43.875,
+              41.65
+            ],
+            "b": [
+              41.725,
+              41.65
+            ],
+            "length_mm": 2.1499999999999986,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              41.725,
+              41.65
+            ],
+            "b": [
+              41.725,
+              40.8
+            ],
+            "length_mm": 0.8500000000000014,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              41.725,
+              40.8
+            ],
+            "b": [
+              41.725,
+              39.2
+            ],
+            "length_mm": 1.5999999999999943,
+            "width_mm": 0.25
+          }
+        ]
+      },
+      "after": {
+        "length_mm": 4.61604597633658,
+        "segments": [
+          {
+            "a": [
+              43.875,
+              42.4
+            ],
+            "b": [
+              43.875,
+              41.65
+            ],
+            "length_mm": 0.75,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              43.875,
+              41.65
+            ],
+            "b": [
+              42.375,
+              41.65
+            ],
+            "length_mm": 1.5,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              42.375,
+              41.65
+            ],
+            "b": [
+              42.375,
+              40.85
+            ],
+            "length_mm": 0.7999999999999972,
+            "width_mm": 0.4
+          },
+          {
+            "a": [
+              42.375,
+              40.85
+            ],
+            "b": [
+              42.825,
+              39.35
+            ],
+            "length_mm": 1.5660459763365833,
+            "width_mm": 0.4
+          }
+        ]
+      },
+      "reduction_percent": 13.718766797447001
+    },
+    "C205_SW": {
+      "before": {
+        "length_mm": 7.1954699910719615,
+        "segments": [
+          {
+            "a": [
+              43.275,
+              39.2
+            ],
+            "b": [
+              44.9,
+              39.2
+            ],
+            "length_mm": 1.625,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              44.9,
+              39.2
+            ],
+            "b": [
+              44.9,
+              43.6
+            ],
+            "length_mm": 4.399999999999999,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              44.9,
+              43.6
+            ],
+            "b": [
+              46.0,
+              44.0
+            ],
+            "length_mm": 1.1704699910719634,
+            "width_mm": 0.25
+          }
+        ]
+      },
+      "after": {
+        "length_mm": 5.9454699910719615,
+        "segments": [
+          {
+            "a": [
+              44.375,
+              39.35
+            ],
+            "b": [
+              44.9,
+              39.35
+            ],
+            "length_mm": 0.5249999999999986,
+            "width_mm": 0.4
+          },
+          {
+            "a": [
+              44.9,
+              39.35
+            ],
+            "b": [
+              44.9,
+              40.4
+            ],
+            "length_mm": 1.0499999999999972,
+            "width_mm": 0.4
+          },
+          {
+            "a": [
+              44.9,
+              40.4
+            ],
+            "b": [
+              44.9,
+              43.35
+            ],
+            "length_mm": 2.950000000000003,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              44.9,
+              43.35
+            ],
+            "b": [
+              44.9,
+              43.6
+            ],
+            "length_mm": 0.25,
+            "width_mm": 0.4
+          },
+          {
+            "a": [
+              44.9,
+              43.6
+            ],
+            "b": [
+              46.0,
+              44.0
+            ],
+            "length_mm": 1.1704699910719634,
+            "width_mm": 0.4
+          }
+        ]
+      },
+      "reduction_percent": 17.372041041808007
+    },
+    "RBOOT": {
+      "before": {
+        "length_mm": 2.6000000000000014,
+        "segments": [
+          {
+            "a": [
+              44.375,
+              42.4
+            ],
+            "b": [
+              44.375,
+              40.8
+            ],
+            "length_mm": 1.6000000000000014,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              44.375,
+              40.8
+            ],
+            "b": [
+              43.375,
+              40.8
+            ],
+            "length_mm": 1.0,
+            "width_mm": 0.25
+          }
+        ]
+      },
+      "after": {
+        "length_mm": 1.660327780786683,
+        "segments": [
+          {
+            "a": [
+              44.375,
+              42.4
+            ],
+            "b": [
+              44.375,
+              41.35
+            ],
+            "length_mm": 1.0499999999999972,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              44.375,
+              41.35
+            ],
+            "b": [
+              44.025,
+              40.85
+            ],
+            "length_mm": 0.6103277807866859,
+            "width_mm": 0.25
+          }
+        ]
+      },
+      "reduction_percent": 36.14123920051223
+    },
+    "VCC": {
+      "before": {
+        "length_mm": 2.357107036142986,
+        "segments": [
+          {
+            "a": [
+              43.15,
+              43.475
+            ],
+            "b": [
+              42.35,
+              43.475
+            ],
+            "length_mm": 0.7999999999999972,
+            "width_mm": 0.3
+          },
+          {
+            "a": [
+              42.35,
+              43.475
+            ],
+            "b": [
+              42.0,
+              43.125
+            ],
+            "length_mm": 0.4949747468305853,
+            "width_mm": 0.3
+          },
+          {
+            "a": [
+              42.0,
+              43.125
+            ],
+            "b": [
+              41.05,
+              42.65
+            ],
+            "length_mm": 1.0621322893124034,
+            "width_mm": 0.3
+          }
+        ]
+      },
+      "after": {
+        "length_mm": 2.248248773281993,
+        "segments": [
+          {
+            "a": [
+              43.15,
+              43.475
+            ],
+            "b": [
+              42.15,
+              43.475
+            ],
+            "length_mm": 1.0,
+            "width_mm": 0.3
+          },
+          {
+            "a": [
+              42.15,
+              43.475
+            ],
+            "b": [
+              41.1,
+              42.8
+            ],
+            "length_mm": 1.248248773281993,
+            "width_mm": 0.3
+          }
+        ]
+      },
+      "reduction_percent": 4.618299516814539
+    },
+    "FB": {
+      "before": {
+        "length_mm": 2.951040764008563,
+        "segments": [
+          {
+            "a": [
+              43.15,
+              44.525
+            ],
+            "b": [
+              42.15,
+              44.525
+            ],
+            "length_mm": 1.0,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              42.15,
+              44.525
+            ],
+            "b": [
+              42.15,
+              45.875
+            ],
+            "length_mm": 1.3500000000000014,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              42.15,
+              45.875
+            ],
+            "b": [
+              41.725,
+              46.3
+            ],
+            "length_mm": 0.6010407640085614,
+            "width_mm": 0.25
+          }
+        ]
+      },
+      "after": {
+        "length_mm": 2.8424621202458775,
+        "segments": [
+          {
+            "a": [
+              43.15,
+              44.525
+            ],
+            "b": [
+              42.2,
+              44.525
+            ],
+            "length_mm": 0.9499999999999957,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              42.2,
+              44.525
+            ],
+            "b": [
+              42.2,
+              45.675
+            ],
+            "length_mm": 1.1499999999999986,
+            "width_mm": 0.25
+          },
+          {
+            "a": [
+              42.2,
+              45.675
+            ],
+            "b": [
+              41.675,
+              46.2
+            ],
+            "length_mm": 0.742462120245883,
+            "width_mm": 0.25
+          }
+        ]
+      },
+      "reduction_percent": 3.6793339179495788
+    }
+  },
+  "L2_shield": {
+    "zones": 1,
+    "nets": [
+      "/GND"
+    ],
+    "filled_outlines": 1,
+    "rule_areas": 0,
+    "signal_tracks": 0
+  },
+  "main_SW_zone_unchanged": true,
+  "kelvin_cut_test": {
+    "removed": [
+      [
+        "/GND",
+        [
+          67.5,
+          58.6
+        ],
+        [
+          68.975,
+          56.0
+        ]
+      ],
+      [
+        "/VOUT_5V1",
+        [
+          64.599999,
+          57.6
+        ],
+        [
+          66.025,
+          56.0
+        ]
+      ]
+    ],
+    "unconnected_islands": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [/GND] on F.Cu, length 6.3000 mm",
+            "pos": {
+              "x": 61.2,
+              "y": 58.6
+            },
+            "uuid": "4bd159fe-97af-408e-a18f-26a9e7738f4a"
+          },
+          {
+            "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+            "pos": {
+              "x": 89.5,
+              "y": 69.5
+            },
+            "uuid": "1ed2de46-52f4-4485-accf-6136d685676a"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [/VOUT_5V1] on F.Cu, length 0.7750 mm",
+            "pos": {
+              "x": 63.825,
+              "y": 57.6
+            },
+            "uuid": "c7881019-af9f-4bc0-b574-6a32597251bb"
+          },
+          {
+            "description": "Zone '/VOUT_5V1 copper' [/VOUT_5V1] on F.Cu, priority 16",
+            "pos": {
+              "x": 65.5,
+              "y": 28.60915
+            },
+            "uuid": "7a946c47-fb80-4899-9ca8-9b386e9246c0"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ],
+    "note": "Intentional cuts on temporary copy; cut-copy violations are not final-board DRC."
+  }
+}

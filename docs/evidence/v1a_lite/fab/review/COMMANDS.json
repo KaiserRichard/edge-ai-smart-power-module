@@ -20,7 +20,7 @@
       "--exit-code-violations",
       "--all-track-errors",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/review/DRC.json",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/review/DRC.json",
       "--schematic-parity",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
@@ -37,7 +37,7 @@
       "--format",
       "kicadxml",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/review/SCHEMATIC.xml",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/review/SCHEMATIC.xml",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_sch"
     ],
     "returncode": 0,
@@ -56,7 +56,7 @@
       "6",
       "--subtract-soldermask",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/gerbers/",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/gerbers/",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -84,7 +84,7 @@
       "--map-format",
       "pdf",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/drill/",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/drill/",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -105,7 +105,7 @@
       "both",
       "--exclude-dnp",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/assembly/POSITIONS_KICAD.csv",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/assembly/POSITIONS_KICAD.csv",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -125,7 +125,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/F.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Cu.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -145,7 +145,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/In1.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/In1.Cu.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -165,7 +165,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/In2.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/In2.Cu.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -185,7 +185,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/B.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Cu.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -205,7 +205,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/F.Paste.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Paste.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -225,7 +225,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/B.Paste.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Paste.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -245,7 +245,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/F.SilkS.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.SilkS.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -265,7 +265,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/B.SilkS.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.SilkS.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -285,7 +285,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/F.Mask.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Mask.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -305,7 +305,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/B.Mask.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Mask.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -325,7 +325,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/Edge.Cuts.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/Edge.Cuts.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -345,7 +345,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/F.Fab.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Fab.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -365,7 +365,7 @@
       "--drill-shape-opt",
       "0",
       "-o",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf/B.Fab.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Fab.pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,
@@ -376,10 +376,10 @@
     "argv": [
       "/usr/bin/swift",
       "-module-cache-path",
-      "/var/folders/2k/d7w4x7fn0kz9s4h_zp41vvdh0000gn/T/v1a-fab-swift-cache-1t9tqrgo",
+      "/var/folders/2k/d7w4x7fn0kz9s4h_zp41vvdh0000gn/T/v1a-fab-swift-cache-yvowlglj",
       "/Users/quockaiser/Desktop/Research/wt-lite/scripts/lite_pdf_to_png.swift",
-      "/private/tmp/v1a-lite-fix1-handback-fab/pdf",
-      "/private/tmp/v1a-lite-fix1-handback-fab/png"
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/png"
     ],
     "returncode": 0,
     "log": "logs/layer-pngs.log"
@@ -414,7 +414,7 @@
       "--quality",
       "basic",
       "--output",
-      "/private/tmp/v1a-lite-fix1-handback-fab/render/PCB_3D.png",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/render/PCB_3D.png",
       "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
     ],
     "returncode": 0,

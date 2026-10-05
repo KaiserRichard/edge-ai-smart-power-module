@@ -87,7 +87,7 @@ R204,Resistor_SMD:R_0603_1608Metric,C22859,180.000000,0,OPEN — supplier zero-a
 R205,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 R206,Resistor_SMD:R_0603_1608Metric,C25803,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 R207,Resistor_SMD:R_0603_1608Metric,C861250,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
-R301,Resistor_SMD:R_0603_1608Metric,C110776,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R301,Resistor_SMD:R_0603_1608Metric,C110776,180.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 R302,Resistor_SMD:R_0603_1608Metric,C844889,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 R303,Resistor_SMD:R_0603_1608Metric,C22796,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
 R304,Resistor_SMD:R_0603_1608Metric,C110776,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied

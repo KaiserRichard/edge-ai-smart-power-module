@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read-only engineering inventory of the saved FIX1 board."""
 from copper_v1a_lite import *
-FIX=ROOT/'docs/evidence/v1a_lite/fix1'
+ap=argparse.ArgumentParser();ap.add_argument('--evidence',type=Path,default=ROOT/'docs/evidence/v1a_lite/fix1');args=ap.parse_args();FIX=args.evidence
 b=load();ps=pads(b)
 out={'board_sha256':hashlib.sha256(BOARD.read_bytes()).hexdigest(),'layers':b.GetCopperLayerCount(),'pads':{},'nets':{},'via_centers_in_smd_lands':[],'zone_area_mm2':[]}
 for r in ['J501','J502','J503','U201','Q101','Q102','SCR301','C217','C218','C209','C214','R204','C205','C206','R203','R308','TP113','TP114','TP301','TP302']:

@@ -1,0 +1,172 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T16:04:29+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_CBOOT] on F.Cu, length 1.5000 mm",
+                    "pos": {
+                        "x": 43.875,
+                        "y": 41.8
+                    },
+                    "uuid": "59138ddc-5316-499b-a869-acbd55445f90"
+                },
+                {
+                    "description": "Pad 1 [/GND] of U201 on F.Cu",
+                    "pos": {
+                        "x": 42.87,
+                        "y": 42.75
+                    },
+                    "uuid": "804857d5-d8e3-4026-9aa0-6acef0e5a9e4"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_SW] on F.Cu, length 2.0500 mm",
+                    "pos": {
+                        "x": 44.9,
+                        "y": 39.65
+                    },
+                    "uuid": "284f6e30-ce41-4b5c-b0c0-7ba95a430421"
+                },
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 0.9953 mm",
+                    "pos": {
+                        "x": 45.45,
+                        "y": 41.7
+                    },
+                    "uuid": "c7738899-aa19-4da8-99c1-3621fb985c59"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_SW] on F.Cu, length 2.0500 mm",
+                    "pos": {
+                        "x": 44.9,
+                        "y": 39.65
+                    },
+                    "uuid": "284f6e30-ce41-4b5c-b0c0-7ba95a430421"
+                },
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 0.8500 mm",
+                    "pos": {
+                        "x": 45.45,
+                        "y": 42.55
+                    },
+                    "uuid": "d01a77c7-461f-4ed1-b8ce-78643ba3ce33"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_SW] on F.Cu, length 2.0500 mm",
+                    "pos": {
+                        "x": 44.9,
+                        "y": 39.65
+                    },
+                    "uuid": "284f6e30-ce41-4b5c-b0c0-7ba95a430421"
+                },
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 0.8500 mm",
+                    "pos": {
+                        "x": 45.45,
+                        "y": 42.55
+                    },
+                    "uuid": "eadfd5fb-0388-432d-92db-b986c301fbf1"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 1.3500 mm",
+                    "pos": {
+                        "x": 45.45,
+                        "y": 41.2
+                    },
+                    "uuid": "028af9be-8334-4db3-b4d8-e1f458a04fea"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_SW] on F.Cu, length 2.0500 mm",
+                    "pos": {
+                        "x": 44.9,
+                        "y": 39.65
+                    },
+                    "uuid": "284f6e30-ce41-4b5c-b0c0-7ba95a430421"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 0.9953 mm",
+                    "pos": {
+                        "x": 45.45,
+                        "y": 41.7
+                    },
+                    "uuid": "173e2eef-c691-4781-966a-2f799ba4fcbe"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_SW] on F.Cu, length 2.0500 mm",
+                    "pos": {
+                        "x": 44.9,
+                        "y": 39.65
+                    },
+                    "uuid": "284f6e30-ce41-4b5c-b0c0-7ba95a430421"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint C205",
+                    "pos": {
+                        "x": 43.15,
+                        "y": 39.65
+                    },
+                    "uuid": "2849cd18-819a-435e-ad1f-b20bb9be8bc5"
+                },
+                {
+                    "description": "Footprint R204",
+                    "pos": {
+                        "x": 43.2,
+                        "y": 41.0
+                    },
+                    "uuid": "50b399fb-d285-46db-a7c3-656c00dc4433"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        }
+    ]
+}

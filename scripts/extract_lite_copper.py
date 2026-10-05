@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read-only final copper extraction for resistor mesh; KiCad Python."""
 from copper_v1a_lite import *
+ap=argparse.ArgumentParser();ap.add_argument("--out",type=Path,default=ROOT/"docs/evidence/v1a_lite/fix1/COPPER_GEOMETRY.json");args=ap.parse_args()
 def polys(pp):
  return [{'outer':[xy(pp.COutline(k).CPoint(i)) for i in range(pp.COutline(k).PointCount())], 'holes':[[xy(pp.CHole(k,h).CPoint(i)) for i in range(pp.CHole(k,h).PointCount())] for h in range(pp.HoleCount(k))]} for k in range(pp.OutlineCount())]
 b=load();layers=[p.F_Cu,p.In1_Cu,p.In2_Cu,p.B_Cu];data={'sha256':hashlib.sha256(BOARD.read_bytes()).hexdigest(),'nets':{},'pads':{},'holes':[]}
@@ -25,4 +26,4 @@ for f in b.GetFootprints():
   if q.GetDrillSize().x:data['holes'].append([*xy(q.GetPosition()),p.ToMM(q.GetDrillSize().x)])
 for t in b.GetTracks():
  if isinstance(t,p.PCB_VIA):data['holes'].append([*xy(t.GetPosition()),p.ToMM(t.GetDrill())])
-(ROOT/'docs/evidence/v1a_lite/fix1/COPPER_GEOMETRY.json').write_text(json.dumps(data,separators=(',',':'))+'\n')
+args.out.write_text(json.dumps(data,separators=(',',':'))+'\n')

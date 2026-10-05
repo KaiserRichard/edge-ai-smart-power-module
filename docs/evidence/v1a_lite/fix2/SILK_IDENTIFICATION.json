@@ -1,0 +1,214 @@
+[
+  {
+    "ref": "Q101",
+    "mark": "Q1",
+    "layer": "F.Silkscreen",
+    "pos": [
+      33.0,
+      19.25
+    ],
+    "pad_or_anchor": [
+      30.0,
+      24.0
+    ],
+    "distance": 5.618051263561058
+  },
+  {
+    "ref": "Q102",
+    "mark": "Q2",
+    "layer": "F.Silkscreen",
+    "pos": [
+      43.25,
+      24.75
+    ],
+    "pad_or_anchor": [
+      44.0,
+      20.0
+    ],
+    "distance": 4.808846015417837
+  },
+  {
+    "ref": "TP110",
+    "status": "on-board back legend with exact XY; local mark omitted to avoid ambiguous displacement"
+  },
+  {
+    "ref": "TP111",
+    "status": "on-board back legend with exact XY; local mark omitted to avoid ambiguous displacement"
+  },
+  {
+    "ref": "TP112",
+    "mark": "112",
+    "layer": "F.Silkscreen",
+    "pos": [
+      41.0,
+      13.0
+    ],
+    "pad_or_anchor": [
+      44.25,
+      13.0
+    ],
+    "distance": 3.25
+  },
+  {
+    "ref": "TP113",
+    "mark": "113",
+    "layer": "B.Silkscreen",
+    "pos": [
+      37.2,
+      24.35
+    ],
+    "pad_or_anchor": [
+      37.2,
+      21.6
+    ],
+    "distance": 2.75
+  },
+  {
+    "ref": "TP114",
+    "mark": "114",
+    "layer": "B.Silkscreen",
+    "pos": [
+      37.2,
+      15.649999999999999
+    ],
+    "pad_or_anchor": [
+      37.2,
+      18.4
+    ],
+    "distance": 2.75
+  },
+  {
+    "ref": "TP301",
+    "status": "on-board back legend with exact XY; local mark omitted to avoid ambiguous displacement"
+  },
+  {
+    "ref": "TP302",
+    "status": "on-board back legend with exact XY; local mark omitted to avoid ambiguous displacement"
+  },
+  {
+    "ref": "TP501",
+    "mark": "501",
+    "layer": "F.Silkscreen",
+    "pos": [
+      17.0,
+      20.25
+    ],
+    "pad_or_anchor": [
+      17.0,
+      23.0
+    ],
+    "distance": 2.75
+  },
+  {
+    "ref": "TP502",
+    "mark": "502",
+    "layer": "F.Silkscreen",
+    "pos": [
+      23.5,
+      22.25
+    ],
+    "pad_or_anchor": [
+      23.5,
+      25.0
+    ],
+    "distance": 2.75
+  },
+  {
+    "ref": "TP503",
+    "mark": "503",
+    "layer": "F.Silkscreen",
+    "pos": [
+      57.25,
+      35.0
+    ],
+    "pad_or_anchor": [
+      54.0,
+      35.0
+    ],
+    "distance": 3.25
+  },
+  {
+    "ref": "TP504",
+    "mark": "504",
+    "layer": "B.Silkscreen",
+    "pos": [
+      65.9,
+      53.25
+    ],
+    "pad_or_anchor": [
+      65.9,
+      56.0
+    ],
+    "distance": 2.75
+  },
+  {
+    "ref": "TP505",
+    "mark": "505",
+    "layer": "F.Silkscreen",
+    "pos": [
+      87.25,
+      56.25
+    ],
+    "pad_or_anchor": [
+      86.0,
+      59.0
+    ],
+    "distance": 3.0207614933986426
+  },
+  {
+    "ref": "TP506",
+    "mark": "506",
+    "layer": "B.Silkscreen",
+    "pos": [
+      69.35,
+      53.25
+    ],
+    "pad_or_anchor": [
+      69.35,
+      56.0
+    ],
+    "distance": 2.75
+  },
+  {
+    "ref": "TP507",
+    "mark": "507",
+    "layer": "F.Silkscreen",
+    "pos": [
+      34.0,
+      56.25
+    ],
+    "pad_or_anchor": [
+      34.0,
+      59.0
+    ],
+    "distance": 2.75
+  },
+  {
+    "ref": "TP508",
+    "mark": "508",
+    "layer": "F.Silkscreen",
+    "pos": [
+      79.75,
+      37.0
+    ],
+    "pad_or_anchor": [
+      83.0,
+      37.0
+    ],
+    "distance": 3.25
+  },
+  {
+    "ref": "U201",
+    "mark": "U2",
+    "layer": "F.Silkscreen",
+    "pos": [
+      48.75,
+      47.5
+    ],
+    "pad_or_anchor": [
+      45.0,
+      44.0
+    ],
+    "distance": 5.129571132170798
+  }
+]

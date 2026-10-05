@@ -1,0 +1,3 @@
+./src/common/stdpbase.cpp(59): assert ""traits"" failed in Get(): create wxApp before calling this
+{'CBOOT': (5.349999999999994, 4.61604597633658), 'C205_SW': (7.1954699910719615, 5.9454699910719615), 'RBOOT': (2.6000000000000014, 1.660327780786683), 'VCC': (2.357107036142986, 2.248248773281993), 'FB': (2.951040764008563, 2.8424621202458775)}
+{'zones': 1, 'nets': ['/GND'], 'filled_outlines': 1, 'rule_areas': 0, 'signal_tracks': 0}

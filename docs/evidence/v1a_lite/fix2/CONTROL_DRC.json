@@ -1,0 +1,241 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T16:07:40+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets /02_BUCK_5V/BUCK_FB and /GND)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_FB] on F.Cu, length 1.5500 mm",
+                    "pos": {
+                        "x": 42.2,
+                        "y": 44.525
+                    },
+                    "uuid": "4a8001c7-cdd9-4f60-a88c-f75ab9de8f18"
+                },
+                {
+                    "description": "Pad 2 [/GND] of C206 on F.Cu",
+                    "pos": {
+                        "x": 41.4,
+                        "y": 44.7
+                    },
+                    "uuid": "672b3745-9429-4081-bdad-f941c818b7b3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1809 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_FB] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 40.6,
+                        "y": 47.05
+                    },
+                    "uuid": "b6d60c9f-db07-42e6-8d24-259c13783ee1"
+                },
+                {
+                    "description": "Pad 2 [/GND] of R203 on F.Cu",
+                    "pos": {
+                        "x": 40.325,
+                        "y": 46.3
+                    },
+                    "uuid": "c7315bc5-2797-44fe-9c2f-c0222cb19e16"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1809 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [/GND] of R203 on F.Cu",
+                    "pos": {
+                        "x": 40.325,
+                        "y": 46.3
+                    },
+                    "uuid": "c7315bc5-2797-44fe-9c2f-c0222cb19e16"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_FB] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 40.65,
+                        "y": 47.05
+                    },
+                    "uuid": "d2ff90ba-94ac-4200-9d15-8eac0244e8d1"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /02_BUCK_5V/BUCK_FB)",
+            "items": [
+                {
+                    "description": "Pad 2 [/GND] of C206 on F.Cu",
+                    "pos": {
+                        "x": 41.4,
+                        "y": 44.7
+                    },
+                    "uuid": "672b3745-9429-4081-bdad-f941c818b7b3"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_FB] on F.Cu, length 0.9500 mm",
+                    "pos": {
+                        "x": 43.15,
+                        "y": 44.525
+                    },
+                    "uuid": "e86831dc-74bf-4787-aee9-f3754579c6c2"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1243 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [/GND] of R203 on F.Cu",
+                    "pos": {
+                        "x": 40.325,
+                        "y": 46.3
+                    },
+                    "uuid": "c7315bc5-2797-44fe-9c2f-c0222cb19e16"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_FB] on F.Cu, length 0.9899 mm",
+                    "pos": {
+                        "x": 41.35,
+                        "y": 46.35
+                    },
+                    "uuid": "f85ef3e0-46f1-45ad-a4d9-add71912f357"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_VCC] on F.Cu, length 1.0000 mm",
+                    "pos": {
+                        "x": 42.15,
+                        "y": 43.475
+                    },
+                    "uuid": "0e12f6bc-b08f-4a1f-8fbd-ccac195402e7"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.3500 mm",
+                    "pos": {
+                        "x": 41.8,
+                        "y": 44.0
+                    },
+                    "uuid": "866feada-0e70-4967-9b3a-fe270ce19319"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.3500 mm",
+                    "pos": {
+                        "x": 41.8,
+                        "y": 44.0
+                    },
+                    "uuid": "866feada-0e70-4967-9b3a-fe270ce19319"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_VCC] on F.Cu, length 1.0090 mm",
+                    "pos": {
+                        "x": 41.4,
+                        "y": 42.8
+                    },
+                    "uuid": "fbb213d6-202d-4924-932f-df7590bfad22"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint R203",
+                    "pos": {
+                        "x": 41.15,
+                        "y": 46.3
+                    },
+                    "uuid": "0fdaf323-1093-454a-b970-cf85dd911bcf"
+                },
+                {
+                    "description": "Footprint U201",
+                    "pos": {
+                        "x": 45.0,
+                        "y": 44.0
+                    },
+                    "uuid": "34f9493b-934e-4b4f-a4df-ef98f2dfd965"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_FB] on F.Cu, length 1.5500 mm",
+                    "pos": {
+                        "x": 42.2,
+                        "y": 44.525
+                    },
+                    "uuid": "4a8001c7-cdd9-4f60-a88c-f75ab9de8f18"
+                },
+                {
+                    "description": "Pad 2 [/GND] of C206 on F.Cu",
+                    "pos": {
+                        "x": 41.4,
+                        "y": 44.7
+                    },
+                    "uuid": "672b3745-9429-4081-bdad-f941c818b7b3"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_FB] on F.Cu, length 0.9500 mm",
+                    "pos": {
+                        "x": 43.15,
+                        "y": 44.525
+                    },
+                    "uuid": "e86831dc-74bf-4787-aee9-f3754579c6c2"
+                },
+                {
+                    "description": "Pad 2 [/GND] of C206 on F.Cu",
+                    "pos": {
+                        "x": 41.4,
+                        "y": 44.7
+                    },
+                    "uuid": "672b3745-9429-4081-bdad-f941c818b7b3"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        }
+    ]
+}

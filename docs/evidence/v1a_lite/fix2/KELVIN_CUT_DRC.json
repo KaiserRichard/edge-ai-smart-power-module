@@ -1,0 +1,163 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T17:39:58+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 6.3000 mm",
+                    "pos": {
+                        "x": 61.2,
+                        "y": 58.6
+                    },
+                    "uuid": "4bd159fe-97af-408e-a18f-26a9e7738f4a"
+                },
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "1ed2de46-52f4-4485-accf-6136d685676a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.7750 mm",
+                    "pos": {
+                        "x": 63.825,
+                        "y": 57.6
+                    },
+                    "uuid": "c7881019-af9f-4bc0-b574-6a32597251bb"
+                },
+                {
+                    "description": "Zone '/VOUT_5V1 copper' [/VOUT_5V1] on F.Cu, priority 16",
+                    "pos": {
+                        "x": 65.5,
+                        "y": 28.60915
+                    },
+                    "uuid": "7a946c47-fb80-4899-9ca8-9b386e9246c0"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 6.3000 mm",
+                    "pos": {
+                        "x": 61.2,
+                        "y": 58.6
+                    },
+                    "uuid": "4bd159fe-97af-408e-a18f-26a9e7738f4a"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.7750 mm",
+                    "pos": {
+                        "x": 63.825,
+                        "y": 57.6
+                    },
+                    "uuid": "c7881019-af9f-4bc0-b574-6a32597251bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'V1A_Qualified'.",
+            "items": [
+                {
+                    "description": "Footprint U201",
+                    "pos": {
+                        "x": 45.0,
+                        "y": 44.0
+                    },
+                    "uuid": "34f9493b-934e-4b4f-a4df-ef98f2dfd965"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'V1A_Lite'.",
+            "items": [
+                {
+                    "description": "Footprint L201",
+                    "pos": {
+                        "x": 57.5,
+                        "y": 44.0
+                    },
+                    "uuid": "891b0456-9444-49a3-b1ee-a547f5dafb92"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'V1A_Qualified'.",
+            "items": [
+                {
+                    "description": "Footprint J502",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 44.0
+                    },
+                    "uuid": "b9a66259-5225-4f98-b7d7-31b6566fffd1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'V1A_Lite'.",
+            "items": [
+                {
+                    "description": "Footprint J503",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 61.5
+                    },
+                    "uuid": "e1acb7eb-f4c3-4644-817a-56fe1c6897ba"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'V1A_Qualified'.",
+            "items": [
+                {
+                    "description": "Footprint J501",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 32.0
+                    },
+                    "uuid": "e3543152-327e-45ae-b7b2-62cf2d405a01"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}
