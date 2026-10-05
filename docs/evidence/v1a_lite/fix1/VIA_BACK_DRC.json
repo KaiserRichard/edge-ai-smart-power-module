@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:37:56+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/01_INPUT_PROTECTION/SET_LATCH] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 59.45,
+                        "y": 20.65
+                    },
+                    "uuid": "7aeba3cf-ce18-4661-be82-5fc0346674ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 43.125,
+                        "y": 52.1
+                    },
+                    "uuid": "1e120b07-b3e8-4c9d-8e03-a8059b903125"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 41.66,
+                        "y": 21.8
+                    },
+                    "uuid": "324731c4-628a-4edd-8607-b06e9f830f4a"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 41.66,
+                        "y": 21.0
+                    },
+                    "uuid": "cfcfe312-7406-41e0-b8db-1a7f01c545cd"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        }
+    ]
+}

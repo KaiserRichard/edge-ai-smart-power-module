@@ -1,0 +1,532 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:24:09+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 48.85,
+                        "y": 36.4
+                    },
+                    "uuid": "bc4b9717-905a-4a98-bd60-6aa5e44e37a7"
+                },
+                {
+                    "description": "Track [/VIN_PROTECTED] on B.Cu, length 1.3000 mm",
+                    "pos": {
+                        "x": 47.65,
+                        "y": 39.85
+                    },
+                    "uuid": "f63e9a4d-0ad8-4407-b38d-1c712193b0b7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets /02_BUCK_5V/BUCK_CBOOT and /02_BUCK_5V/BUCK_RBOOT)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_CBOOT] on F.Cu, length 2.1500 mm",
+                    "pos": {
+                        "x": 43.875,
+                        "y": 41.65
+                    },
+                    "uuid": "61decd5b-645b-47f9-93f3-cc90496a5437"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RBOOT] on F.Cu, length 1.1927 mm",
+                    "pos": {
+                        "x": 44.375,
+                        "y": 41.95
+                    },
+                    "uuid": "adbf1f04-2b23-4165-8675-6127b2d855b1"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /02_BUCK_5V/BUCK_RBOOT and /02_BUCK_5V/BUCK_CBOOT)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RBOOT] on F.Cu, length 1.1927 mm",
+                    "pos": {
+                        "x": 44.375,
+                        "y": 41.95
+                    },
+                    "uuid": "adbf1f04-2b23-4165-8675-6127b2d855b1"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_CBOOT] on F.Cu, length 0.7500 mm",
+                    "pos": {
+                        "x": 43.875,
+                        "y": 42.4
+                    },
+                    "uuid": "f48517a2-8b73-48e8-a16a-d573a7d378dd"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_PROTECTED and /GND)",
+            "items": [
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 46.45,
+                        "y": 41.4
+                    },
+                    "uuid": "f187358c-fe38-4e34-a6c8-51d24204b217"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1700 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 0.5500 mm",
+                    "pos": {
+                        "x": 46.45,
+                        "y": 41.95
+                    },
+                    "uuid": "40aa4eda-e63b-4b54-bad1-3b3948bcd5ee"
+                },
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /02_BUCK_5V/BUCK_SW and /VIN_PROTECTED)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_SW] on F.Cu, length 4.4000 mm",
+                    "pos": {
+                        "x": 44.9,
+                        "y": 39.2
+                    },
+                    "uuid": "e3c8e506-4784-4977-a4f2-b23f8a8dc6a5"
+                },
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 0.4854 mm",
+                    "pos": {
+                        "x": 45.175,
+                        "y": 40.8
+                    },
+                    "uuid": "f7290653-0eeb-4ba8-8aac-68d7c2850b81"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VIN_PROTECTED and /GND)",
+            "items": [
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 46.6,
+                        "y": 40.5
+                    },
+                    "uuid": "bfc4a11e-e9b8-408e-a525-6c6ba8a5927e"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1453 mm)",
+            "items": [
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.3721 mm",
+                    "pos": {
+                        "x": 46.725,
+                        "y": 40.8
+                    },
+                    "uuid": "efbf5b9b-81e6-4d1e-aaba-bad430d8a94b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_RBOOT] on F.Cu, length 0.5000 mm",
+                    "pos": {
+                        "x": 43.375,
+                        "y": 41.3
+                    },
+                    "uuid": "220ddfe1-95ed-40da-a583-281e9e6b3dbe"
+                },
+                {
+                    "description": "Track [/02_BUCK_5V/BUCK_CBOOT] on F.Cu, length 2.1500 mm",
+                    "pos": {
+                        "x": 43.875,
+                        "y": 41.65
+                    },
+                    "uuid": "61decd5b-645b-47f9-93f3-cc90496a5437"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1200 mm)",
+            "items": [
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 46.45,
+                        "y": 41.4
+                    },
+                    "uuid": "f187358c-fe38-4e34-a6c8-51d24204b217"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1275 mm)",
+            "items": [
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 46.6,
+                        "y": 40.5
+                    },
+                    "uuid": "bfc4a11e-e9b8-408e-a525-6c6ba8a5927e"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 46.6,
+                        "y": 40.5
+                    },
+                    "uuid": "bfc4a11e-e9b8-408e-a525-6c6ba8a5927e"
+                },
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 46.45,
+                        "y": 41.4
+                    },
+                    "uuid": "f187358c-fe38-4e34-a6c8-51d24204b217"
+                },
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of C204 on F.Cu",
+                    "pos": {
+                        "x": 45.875,
+                        "y": 40.8
+                    },
+                    "uuid": "4257742b-a3d4-410c-a002-80f41e3b2b23"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 54.0
+                    },
+                    "uuid": "77267578-a904-4303-bf9c-7a0aeb061635"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 64.0
+                    },
+                    "uuid": "8cb926ed-9ceb-461d-b12c-4362bb4d4ee3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'J503 +' on F.Silkscreen",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 64.0
+                    },
+                    "uuid": "9c3c0c21-85d2-4d19-be89-d5884ff1b133"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 54.0
+                    },
+                    "uuid": "77267578-a904-4303-bf9c-7a0aeb061635"
+                },
+                {
+                    "description": "Segment of C302 on F.Silkscreen",
+                    "pos": {
+                        "x": 82.288748,
+                        "y": 53.64
+                    },
+                    "uuid": "f37d2a64-9be9-433e-879f-c6b881cb93a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP302 on F.Silkscreen",
+                    "pos": {
+                        "x": 79.75,
+                        "y": 37.25
+                    },
+                    "uuid": "51cbfd8e-6ff4-4fc5-9ff0-f235f24ecf1c"
+                },
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP508 on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 37.0
+                    },
+                    "uuid": "9ebaa135-8e8f-4b25-8665-b4d5fa374dd5"
+                },
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.77
+                    },
+                    "uuid": "adc57d5c-22dc-4f03-b4d4-a27aa1b18f95"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 16.3,
+                        "y": 28.17
+                    },
+                    "uuid": "ac0dbef2-2da0-49eb-abd9-eb792668a02c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 15.7,
+                        "y": 28.17
+                    },
+                    "uuid": "5e2497cb-94a8-4b8b-81f0-3e8c6eedb292"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 43.0
+                    },
+                    "uuid": "e5eab5ce-ffc7-4110-b9ab-41718c7028a3"
+                },
+                {
+                    "description": "PCB text '24V IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 42.0
+                    },
+                    "uuid": "fb55f3ee-c5b9-42c6-a750-e1f4bbb10f81"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

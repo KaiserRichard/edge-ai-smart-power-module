@@ -1,4 +1,3 @@
-01:50:40 PM: Error: Directory '/Users/quockaiser/Library/Preferences/kicad/9.0/3d' couldn't be created (error 1: Operation not permitted)
 Loading…
 Build board outline
 
@@ -70,7 +69,8 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.368 s
+Reload time 0.570 s
+Rendering: 72 %
 Rendering: 100 %
-Rendering time 0.363 s
+Rendering time 0.513 s
 Successfully created 3D render image

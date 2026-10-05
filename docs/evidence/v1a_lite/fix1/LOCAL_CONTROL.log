@@ -1,0 +1,8 @@
+./src/common/stdpbase.cpp(59): assert ""traits"" failed in Get(): create wxApp before calling this
+('R203', '1') ('R202', '2') False
+Traceback (most recent call last):
+  File "/Users/quockaiser/Desktop/Research/wt-lite/scripts/fix1_v1a_lite.py", line 264, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/Users/quockaiser/Desktop/Research/wt-lite/scripts/fix1_v1a_lite.py", line 262, in local_control
+    if not ok:raise RuntimeError((a,c))
+RuntimeError: (('R203', '1'), ('R202', '2'))

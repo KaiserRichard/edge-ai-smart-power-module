@@ -112,9 +112,13 @@ def assemble(board, raw_pos, out, mapping, schematic):
             missing_lcsc.append(ref)
         rotation.append({'Designator': ref, 'Footprint': fp.GetFPIDAsString(),
             'LCSC Part #': code, 'Native Rotation': row['Rot'],
-            'Applied Offset': '0', 'Status': 'OPEN — verify JLC zero-angle, pin 1/polarity and centroid'})
+            'Applied Offset': '0', 'Status': ('MANUAL / EXCLUDE FROM JLC PLACEMENT' if ref=='D101' or fp.GetAttributes() & pcbnew.FP_THROUGH_HOLE else 'OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied')})
     write_csv(out/'BOM_JLC.csv', ['Comment','Designator','Footprint','LCSC Part #'], bom)
     write_csv(out/'CPL_JLC.csv', ['Designator','Mid X','Mid Y','Layer','Rotation'], cpl)
+    manual={r for r,f in fps.items() if r=='D101' or f.GetAttributes() & pcbnew.FP_THROUGH_HOLE}
+    write_csv(out/'BOM_JLC_SMT_REVIEW.csv', ['Comment','Designator','Footprint','LCSC Part #'], [r for r in bom if r['Designator'] not in manual])
+    write_csv(out/'CPL_JLC_SMT_REVIEW.csv', ['Designator','Mid X','Mid Y','Layer','Rotation'], [r for r in cpl if r['Designator'] not in manual])
+    write_csv(out/'MANUAL_ASSEMBLY.csv', ['Designator','Reason'], [{'Designator':r,'Reason':'External Bourns SMCJ64CA; manual install' if r=='D101' else 'THT manual assembly; native pin anchor is not a body centroid'} for r in sorted(manual) if r in mapping])
     write_csv(out/'EXCLUDED.csv', ['Designator','Reason'], omissions)
     write_csv(out/'ROTATION_REVIEW.csv', ['Designator','Footprint','LCSC Part #',
         'Native Rotation','Applied Offset','Status'], rotation)
@@ -195,13 +199,13 @@ def main():
         'unique_footprint_positions':len({(f.GetPosition().x,f.GetPosition().y) for f in board.GetFootprints()})}
     risks = ['JLC rotation/centroid offsets OPEN for every component; no offsets assumed verified.',
         'Electrical review findings 1–4 remain blocking; R4 fabrication release is BLOCKED.',
-        'Saved copper fills match zero-error native DRC; two-layer thermal/EMI performance remains unqualified.',
+        'Saved copper fills match zero-error native DRC; four-layer thermal/EMI performance remains unqualified.',
         '3D model completeness, pad numbering and polarity require review; a render is not validation.',
         'TP113/114 and TP301/302 lead geometry requires differential-probe review; do not infer ideal Kelvin accuracy.',
-        'Vias in capacitor/FET solder lands require reviewed tenting/fill and assembly process; no premium via process assumed.',
+        'Drain vias moved outside FET solder lands; residual small-component via-in-pad locations remain OPEN in FIX1 report. Ordinary tenting is not filled/capped via-in-pad.',
         'First-build landed cost below 1,000,000 VND is unverified; no purchase, quote or upload performed.']
-    if count != 2:
-        raise RuntimeError('Lite export requires the reviewed two-layer board')
+    if count != 4:
+        raise RuntimeError('Lite export requires the reviewed four-layer board')
     if inventory['edge_graphics']==0:
         risks.append('PCB has no Edge.Cuts outline; empty outline Gerber is a review artifact only.')
     if inventory['unique_footprint_positions']<=1:
@@ -209,7 +213,7 @@ def main():
     if inventory['thickness_mm'] != 1.6:
         risks.append('Actual board thickness differs from assumed 1.6 mm.')
     drc_args = [cli,'pcb','drc','--format','json','--severity-all','--exit-code-violations',
-                '-o',out/'review/DRC.json']
+                '--all-track-errors','-o',out/'review/DRC.json']
     schematic = pcb.with_suffix('.kicad_sch')
     if schematic.is_file():
         drc_args.append('--schematic-parity')
@@ -283,7 +287,7 @@ def main():
         'exporter_sha256':{p.name:sha(p) for p in (ROOT/'scripts/export_lite_fab.py',ROOT/'scripts/lite_pdf_to_png.swift')},
         'input_sha256':before,'input_unchanged':True,'inventory':inventory,'gerber_layers':layers,
         'origin':'absolute; native KiCad XY; no bottom-X negation; positive CCW angle modulo 360',
-        'assumed_target_stack':'2-layer / 1.6 mm / 35-35 um; thermal qualification OPEN',
+        'assumed_target_stack':'4-layer / nominal 1.6 mm / 35-15.2-15.2-35 um JLC standard; thermal qualification OPEN',
         'drc':drc_summary,'assembly':assembly,'render':render,'open_risks':risks,
         'zip':archive.name,'artifacts_sha256':{str(p.relative_to(out)):sha(p)
         for p in sorted(out.rglob('*')) if p.is_file() and p != status}}
@@ -291,7 +295,7 @@ def main():
     (out/'README.md').write_text('# V1A-Lite fabrication export review\n\n**'+WARNING+'**\n\n'
         'Export commands completed. This is not a fabrication-ready package.\n\n'
         + '\n'.join('- **OPEN:** '+r for r in risks)+'\n\n'
-        'BOM and CPL use identical populated reference sets. Through-hole parts are included for assembly review. '
+        'BOM and CPL use identical populated reference sets. Through-hole parts are included in the complete review inventory; the separate SMT_REVIEW BOM/CPL exclude manual parts listed in MANUAL_ASSEMBLY.csv. '
         'EXCLUDED.csv records board flags; blank LCSC numbers remain unresolved. '
         'D101 retains Bourns SMCJ64CA / Mouser 652-SMCJ64CA and has a blank LCSC field; it is not orderable through this JLC BOM. Through-hole assembly service and all rotations remain OPEN.\n\n'
         'Per-layer PDF/PNG views use native page coordinates; all bottom layers are unmirrored. '

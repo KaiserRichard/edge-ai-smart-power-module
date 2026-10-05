@@ -1,0 +1,385 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:24:45+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 42.5,
+                        "y": 50.3
+                    },
+                    "uuid": "3bd9a70c-5c53-4f02-88b2-32bb35f7655c"
+                },
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 37.75,
+                        "y": 50.15
+                    },
+                    "uuid": "669f5f4b-dc08-45bd-b473-5953950da9db"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone '/VIN_PROTECTED copper' [/VIN_PROTECTED] on F.Cu, priority 14",
+                    "pos": {
+                        "x": 49.294018,
+                        "y": 23.234809
+                    },
+                    "uuid": "c83de58c-13d9-41eb-968e-267890ddb8ae"
+                },
+                {
+                    "description": "Zone '/VIN_PROTECTED copper' [/VIN_PROTECTED] on F.Cu, priority 14",
+                    "pos": {
+                        "x": 49.294018,
+                        "y": 23.234809
+                    },
+                    "uuid": "c83de58c-13d9-41eb-968e-267890ddb8ae"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/VIN_PROTECTED] on F.Cu, length 1.7715 mm",
+                    "pos": {
+                        "x": 45.175,
+                        "y": 47.2
+                    },
+                    "uuid": "f4a1a4f7-f431-4c0c-b065-334afed8103a"
+                },
+                {
+                    "description": "Pad 12 [/VIN_PROTECTED] of U201 on F.Cu",
+                    "pos": {
+                        "x": 45.45,
+                        "y": 42.55
+                    },
+                    "uuid": "06f5aeb6-8ba2-4cec-a846-8ea694078a44"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of TP503 on F.Cu",
+                    "pos": {
+                        "x": 54.0,
+                        "y": 35.0
+                    },
+                    "uuid": "b63208a1-df94-48c4-b00f-69d818669b6f"
+                },
+                {
+                    "description": "Zone '/VIN_PROTECTED copper' [/VIN_PROTECTED] on F.Cu, priority 14",
+                    "pos": {
+                        "x": 49.294018,
+                        "y": 23.234809
+                    },
+                    "uuid": "c83de58c-13d9-41eb-968e-267890ddb8ae"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 42.5,
+                        "y": 50.3
+                    },
+                    "uuid": "3bd9a70c-5c53-4f02-88b2-32bb35f7655c"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 37.75,
+                        "y": 50.15
+                    },
+                    "uuid": "669f5f4b-dc08-45bd-b473-5953950da9db"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 45.55,
+                        "y": 41.3
+                    },
+                    "uuid": "68b22aef-3e31-4ef2-bf92-5c81fcab082d"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 48.05,
+                        "y": 45.75
+                    },
+                    "uuid": "e19bc75f-eedb-4dc0-8e8e-17c77e3fcf57"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 54.0
+                    },
+                    "uuid": "77267578-a904-4303-bf9c-7a0aeb061635"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 64.0
+                    },
+                    "uuid": "8cb926ed-9ceb-461d-b12c-4362bb4d4ee3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'J503 +' on F.Silkscreen",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 64.0
+                    },
+                    "uuid": "9c3c0c21-85d2-4d19-be89-d5884ff1b133"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 54.0
+                    },
+                    "uuid": "77267578-a904-4303-bf9c-7a0aeb061635"
+                },
+                {
+                    "description": "Segment of C302 on F.Silkscreen",
+                    "pos": {
+                        "x": 82.288748,
+                        "y": 53.64
+                    },
+                    "uuid": "f37d2a64-9be9-433e-879f-c6b881cb93a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP302 on F.Silkscreen",
+                    "pos": {
+                        "x": 79.75,
+                        "y": 37.25
+                    },
+                    "uuid": "51cbfd8e-6ff4-4fc5-9ff0-f235f24ecf1c"
+                },
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP508 on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 37.0
+                    },
+                    "uuid": "9ebaa135-8e8f-4b25-8665-b4d5fa374dd5"
+                },
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.77
+                    },
+                    "uuid": "adc57d5c-22dc-4f03-b4d4-a27aa1b18f95"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 16.3,
+                        "y": 28.17
+                    },
+                    "uuid": "ac0dbef2-2da0-49eb-abd9-eb792668a02c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 15.7,
+                        "y": 28.17
+                    },
+                    "uuid": "5e2497cb-94a8-4b8b-81f0-3e8c6eedb292"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 43.0
+                    },
+                    "uuid": "e5eab5ce-ffc7-4110-b9ab-41718c7028a3"
+                },
+                {
+                    "description": "PCB text '24V IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 42.0
+                    },
+                    "uuid": "fb55f3ee-c5b9-42c6-a750-e1f4bbb10f81"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

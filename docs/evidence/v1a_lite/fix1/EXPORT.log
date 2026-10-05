@@ -1,0 +1,33 @@
+./src/common/stdpbase.cpp(59): assert ""traits"" failed in Get(): create wxApp before calling this
+version
+drc
+schematic-netlist
+gerbers
+drill
+positions
+pdf-F.Cu
+pdf-In1.Cu
+pdf-In2.Cu
+pdf-B.Cu
+pdf-F.Paste
+pdf-B.Paste
+pdf-F.SilkS
+pdf-B.SilkS
+pdf-F.Mask
+pdf-B.Mask
+pdf-Edge.Cuts
+pdf-F.Fab
+pdf-B.Fab
+layer-pngs
+render-availability
+render
+Export complete: /Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab
+NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED
+OPEN: JLC rotation/centroid offsets OPEN for every component; no offsets assumed verified.
+OPEN: Electrical review findings 1–4 remain blocking; R4 fabrication release is BLOCKED.
+OPEN: Saved copper fills match zero-error native DRC; four-layer thermal/EMI performance remains unqualified.
+OPEN: 3D model completeness, pad numbering and polarity require review; a render is not validation.
+OPEN: TP113/114 and TP301/302 lead geometry requires differential-probe review; do not infer ideal Kelvin accuracy.
+OPEN: Drain vias moved outside FET solder lands; residual small-component via-in-pad locations remain OPEN in FIX1 report. Ordinary tenting is not filled/capped via-in-pad.
+OPEN: First-build landed cost below 1,000,000 VND is unverified; no purchase, quote or upload performed.
+OPEN: 1 assembly references have blank LCSC Part #; sourcing/assembly route OPEN.

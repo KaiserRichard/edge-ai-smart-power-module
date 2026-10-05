@@ -18,6 +18,7 @@
       "json",
       "--severity-all",
       "--exit-code-violations",
+      "--all-track-errors",
       "-o",
       "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/review/DRC.json",
       "--schematic-parity",
@@ -50,7 +51,7 @@
       "export",
       "gerbers",
       "--layers",
-      "F.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts",
+      "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts",
       "--precision",
       "6",
       "--subtract-soldermask",
@@ -129,6 +130,46 @@
     ],
     "returncode": 0,
     "log": "logs/pdf-F.Cu.log"
+  },
+  {
+    "step": "pdf-In1.Cu",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "In1.Cu",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/In1.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-In1.Cu.log"
+  },
+  {
+    "step": "pdf-In2.Cu",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "In2.Cu",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/In2.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-In2.Cu.log"
   },
   {
     "step": "pdf-B.Cu",
@@ -335,7 +376,7 @@
     "argv": [
       "/usr/bin/swift",
       "-module-cache-path",
-      "/var/folders/2k/d7w4x7fn0kz9s4h_zp41vvdh0000gn/T/v1a-fab-swift-cache-1j9yxx37",
+      "/var/folders/2k/d7w4x7fn0kz9s4h_zp41vvdh0000gn/T/v1a-fab-swift-cache-0y4tlh9o",
       "/Users/quockaiser/Desktop/Research/wt-lite/scripts/lite_pdf_to_png.swift",
       "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf",
       "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/png"

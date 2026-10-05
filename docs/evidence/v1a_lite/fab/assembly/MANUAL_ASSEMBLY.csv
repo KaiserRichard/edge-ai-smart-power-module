@@ -1,0 +1,8 @@
+Designator,Reason
+C101,THT manual assembly; native pin anchor is not a body centroid
+C217,THT manual assembly; native pin anchor is not a body centroid
+C218,THT manual assembly; native pin anchor is not a body centroid
+D101,External Bourns SMCJ64CA; manual install
+J501,THT manual assembly; native pin anchor is not a body centroid
+J502,THT manual assembly; native pin anchor is not a body centroid
+SCR301,THT manual assembly; native pin anchor is not a body centroid

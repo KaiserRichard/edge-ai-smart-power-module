@@ -1,0 +1,161 @@
+{
+  "classification": "CALCULATED using ASSUMED thermal boundary conditions; NOT VALIDATED",
+  "board_sha256": "7c6157f95bd1f44c2ec752e5eaddd74a85ff80e7888d5e0bf94667860e026083",
+  "grid_mm": 2.0,
+  "copper_W_mK": 400,
+  "FR4_W_mK": 0.3,
+  "ambient_C_assumed": 50,
+  "combined_convection_radiation_W_m2K_assumed": [
+    5,
+    10,
+    15
+  ],
+  "barrel_plating_mm_assumed": 0.018,
+  "package_series_K_W_assumed": [
+    1.4,
+    1.4,
+    19.2
+  ],
+  "limitations": [
+    "2mm cells homogenize small gaps; no calibrated anisotropic laminate/package/enclosure model",
+    "All package heat injected into board; package top/air paths omitted",
+    "U201 RthetaJB=19.2 is a JEDEC characterization, used as sensitivity proxy only",
+    "50C ambient and 110C junction screen are historical assumptions, not approved requirements",
+    "RDS(on) 0.58 ohm applies at 150C and -10V gate; not an upper bound above 150C",
+    "Other resistor/inductor/fuse heat omitted; computed temperatures are not release limits"
+  ],
+  "input_current_A_at_buck_18V": 1.563284151360032,
+  "fet_loss_W_25C_at_buck_18V": 0.7209379146785693,
+  "fet_loss_W_150C_at_buck_18V": 1.417437255978204,
+  "input_current_A_at_module_18V": 1.7637614348568282,
+  "coupled_fet_loss_W_each": 1.804295551471166,
+  "U201_loss_W_screen": 2.417,
+  "scenarios": [
+    {
+      "h": 5,
+      "power_W": [
+        1.804295551471166,
+        1.804295551471166,
+        2.417
+      ],
+      "board_rise_K": [
+        193.1530323926433,
+        192.9943391665414,
+        173.43291148725783
+      ],
+      "junction_C_estimate": [
+        245.67904616470292,
+        245.52035293860104,
+        269.8393114872578
+      ],
+      "source_to_board_K_W_columns": [
+        [
+          56.22181112303234,
+          23.55178536553579,
+          20.363213538490417
+        ],
+        [
+          23.551785359144283,
+          55.704150111792735,
+          20.683991461388253
+        ],
+        [
+          20.36321353288238,
+          20.68399145918015,
+          41.11362106165594
+        ]
+      ],
+      "iterations": 256,
+      "residual_W": 8.985326971707863e-10,
+      "screen_110C": [
+        "FAIL",
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "h": 10,
+      "power_W": [
+        1.804295551471166,
+        1.804295551471166,
+        2.417
+      ],
+      "board_rise_K": [
+        128.38253805114,
+        128.87959626540146,
+        110.19851757345484
+      ],
+      "junction_C_estimate": [
+        180.90855182319962,
+        181.4056100374611,
+        206.60491757345483
+      ],
+      "source_to_board_K_W_columns": [
+        [
+          45.02774161131126,
+          12.826805751577309,
+          9.927941914822153
+        ],
+        [
+          12.826805748086638,
+          44.85079549168887,
+          10.265683462754637
+        ],
+        [
+          9.927941921240325,
+          10.265683455507144,
+          30.518514330171726
+        ]
+      ],
+      "iterations": 250,
+      "residual_W": 8.979584491128906e-10,
+      "screen_110C": [
+        "FAIL",
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "h": 15,
+      "power_W": [
+        1.804295551471166,
+        1.804295551471166,
+        2.417
+      ],
+      "board_rise_K": [
+        105.84145174723378,
+        106.79901059808799,
+        88.85668069238812
+      ],
+      "junction_C_estimate": [
+        158.3674655192934,
+        159.32502437014762,
+        185.26308069238812
+      ],
+      "source_to_board_K_W_columns": [
+        [
+          40.92178194516576,
+          9.102232565013884,
+          6.447391349013153
+        ],
+        [
+          9.102232560699065,
+          40.99147349893424,
+          6.791543071823771
+        ],
+        [
+          6.447391361378518,
+          6.791543068783126,
+          26.88031866050849
+        ]
+      ],
+      "iterations": 245,
+      "residual_W": 8.956475436486204e-10,
+      "screen_110C": [
+        "FAIL",
+        "FAIL",
+        "FAIL"
+      ]
+    }
+  ]
+}

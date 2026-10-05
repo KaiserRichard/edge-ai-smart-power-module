@@ -1,0 +1,627 @@
+{
+  "board_sha256": "7c6157f95bd1f44c2ec752e5eaddd74a85ff80e7888d5e0bf94667860e026083",
+  "layers": 4,
+  "pads": {
+    "J501": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          16.0,
+          35.96
+        ]
+      },
+      "1": {
+        "net": "/VIN_RAW",
+        "pos": [
+          16.0,
+          32.0
+        ]
+      }
+    },
+    "J502": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          84.0,
+          47.96
+        ]
+      },
+      "1": {
+        "net": "/VOUT_PI",
+        "pos": [
+          84.0,
+          44.0
+        ]
+      }
+    },
+    "J503": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          78.0,
+          61.5
+        ]
+      },
+      "1": {
+        "net": "/VOUT_PI",
+        "pos": [
+          68.0,
+          61.5
+        ]
+      }
+    },
+    "U201": {
+      "14": {
+        "net": "/02_BUCK_5V/BUCK_CBOOT",
+        "pos": [
+          43.875,
+          42.4
+        ]
+      },
+      "13": {
+        "net": "/02_BUCK_5V/BUCK_RBOOT",
+        "pos": [
+          44.375,
+          42.4
+        ]
+      },
+      "12": {
+        "net": "/VIN_PROTECTED",
+        "pos": [
+          45.45,
+          42.55
+        ]
+      },
+      "11": {
+        "net": "/GND",
+        "pos": [
+          46.48,
+          42.15
+        ]
+      },
+      "10": {
+        "net": "/02_BUCK_5V/BUCK_SW",
+        "pos": [
+          46.0,
+          44.0
+        ]
+      },
+      "9": {
+        "net": "/GND",
+        "pos": [
+          46.48,
+          45.05
+        ]
+      },
+      "8": {
+        "net": "/VIN_PROTECTED",
+        "pos": [
+          45.45,
+          45.45
+        ]
+      },
+      "7": {
+        "net": "/02_BUCK_5V/BUCK_EN",
+        "pos": [
+          44.375,
+          45.6
+        ]
+      },
+      "6": {
+        "net": "/02_BUCK_5V/BUCK_RT",
+        "pos": [
+          43.875,
+          45.6
+        ]
+      },
+      "5": {
+        "net": "unconnected-(U201-PGOOD-Pad5)",
+        "pos": [
+          42.87,
+          45.05
+        ]
+      },
+      "4": {
+        "net": "/02_BUCK_5V/BUCK_FB",
+        "pos": [
+          43.15,
+          44.525
+        ]
+      },
+      "3": {
+        "net": "/GND",
+        "pos": [
+          43.15,
+          44.0
+        ]
+      },
+      "2": {
+        "net": "/02_BUCK_5V/BUCK_VCC",
+        "pos": [
+          43.15,
+          43.475
+        ]
+      },
+      "1": {
+        "net": "/GND",
+        "pos": [
+          42.87,
+          42.75
+        ]
+      }
+    },
+    "Q101": {
+      "3": {
+        "net": "/01_INPUT_PROTECTION/S_COMMON",
+        "pos": [
+          35.04,
+          21.72
+        ]
+      },
+      "2": {
+        "net": "/VIN_FUSED",
+        "pos": [
+          28.74,
+          24.0
+        ]
+      },
+      "1": {
+        "net": "/01_INPUT_PROTECTION/REV_GATE",
+        "pos": [
+          35.04,
+          26.28
+        ]
+      }
+    },
+    "Q102": {
+      "3": {
+        "net": "/01_INPUT_PROTECTION/S_COMMON",
+        "pos": [
+          38.96,
+          22.28
+        ]
+      },
+      "2": {
+        "net": "/VIN_PROTECTED",
+        "pos": [
+          45.26,
+          20.0
+        ]
+      },
+      "1": {
+        "net": "/01_INPUT_PROTECTION/CUT_GATE",
+        "pos": [
+          38.96,
+          17.72
+        ]
+      }
+    },
+    "SCR301": {
+      "3": {
+        "net": "/03_OUTPUT_PROTECTION/SCR_GATE",
+        "pos": [
+          63.92,
+          33.4
+        ]
+      },
+      "2": {
+        "net": "/VOUT_5V1",
+        "pos": [
+          66.46,
+          33.4
+        ]
+      },
+      "1": {
+        "net": "/GND",
+        "pos": [
+          69.0,
+          33.4
+        ]
+      }
+    },
+    "C217": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          69.0,
+          26.0
+        ]
+      },
+      "1": {
+        "net": "/VOUT_5V1",
+        "pos": [
+          64.0,
+          26.0
+        ]
+      }
+    },
+    "C218": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          76.0,
+          26.0
+        ]
+      },
+      "1": {
+        "net": "/VOUT_5V1",
+        "pos": [
+          81.0,
+          26.0
+        ]
+      }
+    },
+    "C209": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          68.975,
+          41.0
+        ]
+      },
+      "1": {
+        "net": "/VOUT_5V1",
+        "pos": [
+          66.025,
+          41.0
+        ]
+      }
+    },
+    "C214": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          68.975,
+          56.0
+        ]
+      },
+      "1": {
+        "net": "/VOUT_5V1",
+        "pos": [
+          66.025,
+          56.0
+        ]
+      }
+    },
+    "R204": {
+      "2": {
+        "net": "/02_BUCK_5V/BUCK_CBOOT",
+        "pos": [
+          41.725,
+          40.8
+        ]
+      },
+      "1": {
+        "net": "/02_BUCK_5V/BUCK_RBOOT",
+        "pos": [
+          43.375,
+          40.8
+        ]
+      }
+    },
+    "C205": {
+      "2": {
+        "net": "/02_BUCK_5V/BUCK_SW",
+        "pos": [
+          43.275,
+          39.2
+        ]
+      },
+      "1": {
+        "net": "/02_BUCK_5V/BUCK_CBOOT",
+        "pos": [
+          41.725,
+          39.2
+        ]
+      }
+    },
+    "C206": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          41.05,
+          44.55
+        ]
+      },
+      "1": {
+        "net": "/02_BUCK_5V/BUCK_VCC",
+        "pos": [
+          41.05,
+          42.65
+        ]
+      }
+    },
+    "R203": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          40.075,
+          46.3
+        ]
+      },
+      "1": {
+        "net": "/02_BUCK_5V/BUCK_FB",
+        "pos": [
+          41.725,
+          46.3
+        ]
+      }
+    },
+    "R308": {
+      "2": {
+        "net": "/GND",
+        "pos": [
+          60.175,
+          30.7
+        ]
+      },
+      "1": {
+        "net": "/03_OUTPUT_PROTECTION/SCR_GATE",
+        "pos": [
+          61.825,
+          30.7
+        ]
+      }
+    },
+    "TP113": {
+      "1": {
+        "net": "/01_INPUT_PROTECTION/S_COMMON",
+        "pos": [
+          42.5,
+          25.25
+        ]
+      }
+    },
+    "TP114": {
+      "1": {
+        "net": "/01_INPUT_PROTECTION/CUT_GATE",
+        "pos": [
+          40.0,
+          13.0
+        ]
+      }
+    },
+    "TP301": {
+      "1": {
+        "net": "/03_OUTPUT_PROTECTION/SCR_GATE",
+        "pos": [
+          66.5,
+          38.35
+        ]
+      }
+    },
+    "TP302": {
+      "1": {
+        "net": "/GND",
+        "pos": [
+          69.6,
+          38.35
+        ]
+      }
+    }
+  },
+  "nets": {
+    "BUCK_RBOOT": {
+      "via_count": 0,
+      "track_length_mm": 2.6000000000000014,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    "BUCK_CBOOT": {
+      "via_count": 0,
+      "track_length_mm": 5.349999999999994,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    "BUCK_VCC": {
+      "via_count": 0,
+      "track_length_mm": 2.357107036142986,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    "BUCK_FB": {
+      "via_count": 0,
+      "track_length_mm": 10.542209588551719,
+      "layers": [
+        "F.Cu"
+      ]
+    }
+  },
+  "via_centers_in_smd_lands": [
+    {
+      "pos": [
+        25.0,
+        31.2
+      ],
+      "net": "/01_INPUT_PROTECTION/OVIN_D1",
+      "lands": [
+        "R150.2"
+      ]
+    },
+    {
+      "pos": [
+        25.35,
+        29.0
+      ],
+      "net": "/01_INPUT_PROTECTION/OVIN_D2",
+      "lands": [
+        "R151.2"
+      ]
+    },
+    {
+      "pos": [
+        45.9,
+        24.65
+      ],
+      "net": "/01_INPUT_PROTECTION/PUA",
+      "lands": [
+        "R140.2"
+      ]
+    },
+    {
+      "pos": [
+        50.0,
+        21.8
+      ],
+      "net": "/01_INPUT_PROTECTION/PUA",
+      "lands": [
+        "R141.1"
+      ]
+    },
+    {
+      "pos": [
+        25.0,
+        32.85
+      ],
+      "net": "/01_INPUT_PROTECTION/S_COMMON",
+      "lands": [
+        "R150.1"
+      ]
+    },
+    {
+      "pos": [
+        57.1,
+        18.0
+      ],
+      "net": "/CTRL12",
+      "lands": [
+        "Q105.2"
+      ]
+    },
+    {
+      "pos": [
+        69.0,
+        40.5
+      ],
+      "net": "/GND",
+      "lands": [
+        "C209.2"
+      ]
+    },
+    {
+      "pos": [
+        30.85,
+        18.65
+      ],
+      "net": "/GND",
+      "lands": [
+        "R102.2"
+      ]
+    },
+    {
+      "pos": [
+        41.7,
+        49.1
+      ],
+      "net": "/GND",
+      "lands": [
+        "R201.2"
+      ]
+    },
+    {
+      "pos": [
+        46.7,
+        47.55
+      ],
+      "net": "/GND",
+      "lands": [
+        "C203.2"
+      ]
+    }
+  ],
+  "zone_area_mm2": [
+    {
+      "net": "/02_BUCK_5V/BUCK_SW",
+      "layer": "F.Cu",
+      "area": 11.135376744
+    },
+    {
+      "net": "/VIN_RAW",
+      "layer": "F.Cu",
+      "area": 48.030376744
+    },
+    {
+      "net": "/VIN_FUSED",
+      "layer": "F.Cu",
+      "area": 142.5684023029155
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "area": 3192.090486686822
+    },
+    {
+      "net": "/01_INPUT_PROTECTION/S_COMMON",
+      "layer": "F.Cu",
+      "area": 4.9853394076515
+    },
+    {
+      "net": "/VOUT_5V1",
+      "layer": "F.Cu",
+      "area": 129.304120776699
+    },
+    {
+      "net": "/VOUT_PI",
+      "layer": "F.Cu",
+      "area": 123.6329833740655
+    },
+    {
+      "net": "/VIN_PROTECTED",
+      "layer": "F.Cu",
+      "area": 146.936545526069
+    },
+    {
+      "net": "/VIN_PROTECTED",
+      "layer": "F.Cu",
+      "area": 11.2103571424025
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "area": 4009.1693193120345
+    },
+    {
+      "net": "/VIN_FUSED",
+      "layer": "B.Cu",
+      "area": 138.8678024058705
+    },
+    {
+      "net": "/VIN_PROTECTED",
+      "layer": "B.Cu",
+      "area": 42.691862065683
+    },
+    {
+      "net": "/VIN_PROTECTED",
+      "layer": "B.Cu",
+      "area": 105.2200429689495
+    },
+    {
+      "net": "/GND",
+      "layer": "In1.Cu",
+      "area": 4491.294104526671
+    },
+    {
+      "net": "/VIN_FUSED",
+      "layer": "In2.Cu",
+      "area": 142.531432532741
+    },
+    {
+      "net": "/VIN_PROTECTED",
+      "layer": "In2.Cu",
+      "area": 307.332142236902
+    },
+    {
+      "net": "/VOUT_5V1",
+      "layer": "In2.Cu",
+      "area": 280.745132456167
+    },
+    {
+      "net": "/GND",
+      "layer": "In2.Cu",
+      "area": 3728.9663670727737
+    }
+  ]
+}

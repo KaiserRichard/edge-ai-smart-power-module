@@ -1,0 +1,2677 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:26:06+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [/03_OUTPUT_PROTECTION/SCR_GATE] of R308 on F.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.825
+                    },
+                    "uuid": "57cf88dc-5d6a-48f0-9a13-623000618ea9"
+                },
+                {
+                    "description": "PTH pad 3 [/03_OUTPUT_PROTECTION/SCR_GATE] of SCR301",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 34.0
+                    },
+                    "uuid": "8edb74f8-c962-47f4-be7a-9b9cfc2cbde9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone '/GND copper' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 89.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a6e4b6d6-9f54-47e8-9576-e3823c48513c"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 0.9000 mm",
+                    "pos": {
+                        "x": 69.575,
+                        "y": 38.0
+                    },
+                    "uuid": "f2fc6af0-347a-4026-ac3a-b6a60cc854eb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FIX1 VIN feed' [/VIN_PROTECTED] on In2.Cu, priority 30",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 23.0
+                    },
+                    "uuid": "db6e7659-5887-455e-a347-450e6ed621a2"
+                },
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 37.75,
+                        "y": 50.15
+                    },
+                    "uuid": "669f5f4b-dc08-45bd-b473-5953950da9db"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone '/VIN_PROTECTED copper' [/VIN_PROTECTED] on F.Cu, priority 14",
+                    "pos": {
+                        "x": 49.294018,
+                        "y": 23.234809
+                    },
+                    "uuid": "c83de58c-13d9-41eb-968e-267890ddb8ae"
+                },
+                {
+                    "description": "Pad 1 [/VIN_PROTECTED] of TP503 on F.Cu",
+                    "pos": {
+                        "x": 54.0,
+                        "y": 35.0
+                    },
+                    "uuid": "b63208a1-df94-48c4-b00f-69d818669b6f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1750 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.2121 mm",
+                    "pos": {
+                        "x": 69.55,
+                        "y": 35.5
+                    },
+                    "uuid": "7066709d-b379-4b22-b359-03cb2da9fe9b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0250 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.75,
+                        "y": 34.4
+                    },
+                    "uuid": "7c0af59d-10a3-4a0e-bb53-3a407fb9f716"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0475 mm)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 70.1,
+                        "y": 33.4
+                    },
+                    "uuid": "7d91fe49-8af9-4e6a-89c7-804f6fdec81a"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 69.7,
+                        "y": 34.9
+                    },
+                    "uuid": "965b69be-9944-4462-8a5d-2747ddcc34d8"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VOUT_5V1)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 69.25,
+                        "y": 35.05
+                    },
+                    "uuid": "a3d8d73b-b8bf-46b1-9bdc-60cc5b2a664e"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.3000 mm",
+                    "pos": {
+                        "x": 69.85,
+                        "y": 34.0
+                    },
+                    "uuid": "a7a9bfdd-3b2c-4788-a06d-a973a7614f22"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /CB_COLLECTOR and /03_OUTPUT_PROTECTION/SCR_GATE)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.4243 mm",
+                    "pos": {
+                        "x": 67.6,
+                        "y": 31.6
+                    },
+                    "uuid": "0038974a-2d4d-48a5-8c5d-b4569e19fe3d"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 69.55,
+                        "y": 35.25
+                    },
+                    "uuid": "a8e35d26-025c-44e7-94d6-f3b072af311a"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 69.1,
+                        "y": 32.75
+                    },
+                    "uuid": "0a9b43f2-7572-445d-a4ac-0f895d068afc"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.2500 mm",
+                    "pos": {
+                        "x": 69.55,
+                        "y": 35.5
+                    },
+                    "uuid": "a96eaeea-be6e-4aa9-9f12-223f9f1030e2"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.2121 mm",
+                    "pos": {
+                        "x": 68.95,
+                        "y": 32.6
+                    },
+                    "uuid": "2546a93a-57c2-4c2c-9e63-ef38ab8ad824"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 5.0500 mm",
+                    "pos": {
+                        "x": 71.15,
+                        "y": 33.0
+                    },
+                    "uuid": "28711a53-ba91-4eaa-b115-af836e39c10e"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 5.6223 mm",
+                    "pos": {
+                        "x": 74.0,
+                        "y": 32.0
+                    },
+                    "uuid": "ff4193cf-c637-4c9d-b07d-f08557f34940"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.2121 mm",
+                    "pos": {
+                        "x": 68.6,
+                        "y": 32.35
+                    },
+                    "uuid": "39e54cf4-92f5-4055-8991-4a85aa0d6bf0"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1475 mm)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 33.3
+                    },
+                    "uuid": "b9ee93c7-ced3-44a4-9fff-e08a8332be67"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0250 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.2121 mm",
+                    "pos": {
+                        "x": 69.4,
+                        "y": 35.3
+                    },
+                    "uuid": "be1cea4d-df95-4cdc-8777-d09a9cf82fae"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 69.15,
+                        "y": 32.75
+                    },
+                    "uuid": "55cfa79c-ca8b-446d-a196-bd0ccfafb7a7"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /CB_COLLECTOR and /03_OUTPUT_PROTECTION/SCR_GATE)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.1,
+                        "y": 32.05
+                    },
+                    "uuid": "6da42e72-f9c8-4f3f-a2ba-2d2d3a721c13"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.2121 mm",
+                    "pos": {
+                        "x": 67.95,
+                        "y": 31.9
+                    },
+                    "uuid": "75fe0c30-49f0-4cf1-8d2a-a58647fc3b87"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets /CB_COLLECTOR and /GND)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 1.7000 mm",
+                    "pos": {
+                        "x": 69.35,
+                        "y": 32.9
+                    },
+                    "uuid": "80d16493-2160-4bef-8a13-12fa5a1850eb"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /CB_COLLECTOR)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 67.9,
+                        "y": 31.9
+                    },
+                    "uuid": "941945f7-8793-41a5-b95e-3775d5b401a8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VOUT_5V1)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 75.399999,
+                        "y": 26.7
+                    },
+                    "uuid": "cd2f91e4-802c-4b52-9ea8-380177f02da1"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.7500 mm",
+                    "pos": {
+                        "x": 69.75,
+                        "y": 34.85
+                    },
+                    "uuid": "d15c83db-8c13-436b-aca1-20bbb6a48c16"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1750 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 69.4,
+                        "y": 35.35
+                    },
+                    "uuid": "d2595eb0-0411-44fe-9f41-9353029ba7e5"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VOUT_5V1)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 3.6062 mm",
+                    "pos": {
+                        "x": 72.85,
+                        "y": 29.25
+                    },
+                    "uuid": "d2c7a12b-b7bf-4a90-9c56-d4a8f4a142e3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.55,
+                        "y": 32.35
+                    },
+                    "uuid": "b2969f82-946e-4395-8c3b-6409b37a2012"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /CB_COLLECTOR)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.4,
+                        "y": 32.25
+                    },
+                    "uuid": "b3bf0b47-9c28-4272-bbb4-12d5f78a0602"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /CB_COLLECTOR)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 68.3,
+                        "y": 32.15
+                    },
+                    "uuid": "c3ce722b-eb06-4d9b-be5f-13182440f8bc"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /CB_COLLECTOR)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 68.15,
+                        "y": 32.05
+                    },
+                    "uuid": "da11e01f-7f7e-4df4-ae7b-91da8c891522"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /CB_COLLECTOR)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 68.45,
+                        "y": 32.25
+                    },
+                    "uuid": "da6caaea-2a41-48bf-914d-af8f85ebde01"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /CB_COLLECTOR and /GND)",
+            "items": [
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 69.3,
+                        "y": 32.85
+                    },
+                    "uuid": "dd97479c-8bc8-4206-b69a-d77a19cac004"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 69.6,
+                        "y": 35.05
+                    },
+                    "uuid": "e0146223-6342-421e-894d-eb0191965b91"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /CB_COLLECTOR)",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.25,
+                        "y": 32.15
+                    },
+                    "uuid": "e41a2a5a-5455-428e-a9ca-4305de09041f"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /03_OUTPUT_PROTECTION/SCR_GATE and /GND)",
+            "items": [
+                {
+                    "description": "Pad 1 [/03_OUTPUT_PROTECTION/SCR_GATE] of R308 on F.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.825
+                    },
+                    "uuid": "57cf88dc-5d6a-48f0-9a13-623000618ea9"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.825
+                    },
+                    "uuid": "b868399b-e05f-4318-9f79-9135e59fb620"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0250 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 69.25,
+                        "y": 35.15
+                    },
+                    "uuid": "e5d152fb-73d2-4353-b295-6a5e2165cdde"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                },
+                {
+                    "description": "Track [/CB_COLLECTOR] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 69.25,
+                        "y": 32.85
+                    },
+                    "uuid": "f8d044ca-8f43-4bd2-af80-02e5b2b66a58"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 69.05,
+                        "y": 34.85
+                    },
+                    "uuid": "04a886d2-2b71-4338-a682-b1a8ce22e01e"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VOUT_5V1)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.8485 mm",
+                    "pos": {
+                        "x": 75.399999,
+                        "y": 26.6
+                    },
+                    "uuid": "eb0292db-33e8-44e7-bac7-25a2028a4162"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /VOUT_5V1)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                },
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1500 mm",
+                    "pos": {
+                        "x": 69.6,
+                        "y": 35.2
+                    },
+                    "uuid": "f574dedf-6d16-47c9-a413-b92bcf041834"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0250 mm)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 1.5556 mm",
+                    "pos": {
+                        "x": 68.75,
+                        "y": 34.35
+                    },
+                    "uuid": "00469e43-c894-4e9e-ada6-77a88ec90cc4"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 69.05,
+                        "y": 34.85
+                    },
+                    "uuid": "04a886d2-2b71-4338-a682-b1a8ce22e01e"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.8,
+                        "y": 34.5
+                    },
+                    "uuid": "0df47d24-88ce-4657-9426-1a192cebf9a3"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 68.8,
+                        "y": 34.45
+                    },
+                    "uuid": "15a2732c-ed8b-4b57-8735-78bd90881ce9"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.3536 mm",
+                    "pos": {
+                        "x": 69.05,
+                        "y": 34.75
+                    },
+                    "uuid": "1af7bc92-89f6-4319-888f-ca350d92d5f3"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "632f462f-dd91-45fb-95b9-acdc382019c8"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 31.5
+                    },
+                    "uuid": "40ed17d3-6a68-49e7-a385-e72035ae475e"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0475 mm)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 70.1,
+                        "y": 33.45
+                    },
+                    "uuid": "1d5c7b72-39e9-4089-9275-a9f1cb9180f3"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 69.7,
+                        "y": 34.95
+                    },
+                    "uuid": "2a428add-0c09-4929-8624-ade5b0e569ff"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.3536 mm",
+                    "pos": {
+                        "x": 69.85,
+                        "y": 33.7
+                    },
+                    "uuid": "40851672-da39-4154-8d20-bd757db3be0d"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1475 mm)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.9192 mm",
+                    "pos": {
+                        "x": 70.2,
+                        "y": 33.25
+                    },
+                    "uuid": "45189ecc-cdef-4d5e-a1de-5249a4912ddc"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 31.5
+                    },
+                    "uuid": "56b272d9-90ce-42bd-ab21-1b2e9ceb8cca"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on B.Cu, length 10.0800 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 32.0
+                    },
+                    "uuid": "7e7c5f07-cda3-4349-81e1-c37499aec7dc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /VOUT_5V1 and /GND)",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 69.75,
+                        "y": 34.1
+                    },
+                    "uuid": "4cb188a9-b4eb-44f9-8bbd-b2d907722093"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /GND and /03_OUTPUT_PROTECTION/SCR_GATE)",
+            "items": [
+                {
+                    "description": "Pad 2 [/GND] of R308 on F.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 33.175
+                    },
+                    "uuid": "709cea3f-5351-4ef8-9e13-531991a511ef"
+                },
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on F.Cu, length 1.6423 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 34.0
+                    },
+                    "uuid": "f83a9278-763d-48f5-9baa-7febabaf4be2"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Pad 1 [/03_OUTPUT_PROTECTION/SCR_GATE] of R308 on F.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.825
+                    },
+                    "uuid": "57cf88dc-5d6a-48f0-9a13-623000618ea9"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.825
+                    },
+                    "uuid": "b868399b-e05f-4318-9f79-9135e59fb620"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power' clearance 0.2000 mm; actual 0.1299 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [/GND] of R308 on F.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 33.175
+                    },
+                    "uuid": "709cea3f-5351-4ef8-9e13-531991a511ef"
+                },
+                {
+                    "description": "PTH pad 3 [/03_OUTPUT_PROTECTION/SCR_GATE] of SCR301",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 34.0
+                    },
+                    "uuid": "8edb74f8-c962-47f4-be7a-9b9cfc2cbde9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 66.168623,
+                        "y": 40.974821
+                    },
+                    "uuid": "08302d95-5223-40e5-b6ba-d1ce7d7ba3e0"
+                },
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 64.959999,
+                        "y": 33.9
+                    },
+                    "uuid": "87d0afbd-b9f5-49f9-8539-b6e3ff7b1364"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 62.669907,
+                        "y": 30.700609
+                    },
+                    "uuid": "235b2327-6eb5-4f71-982b-f4b521478354"
+                },
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 25.9
+                    },
+                    "uuid": "6a849f0a-35ce-4915-bbbc-83453a9eff8f"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 62.669907,
+                        "y": 30.700609
+                    },
+                    "uuid": "235b2327-6eb5-4f71-982b-f4b521478354"
+                },
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 64.959999,
+                        "y": 33.9
+                    },
+                    "uuid": "87d0afbd-b9f5-49f9-8539-b6e3ff7b1364"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'GND' [/GND] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 25.9
+                    },
+                    "uuid": "34091d14-c4ac-4af5-a7e5-456700114bde"
+                },
+                {
+                    "description": "Zone 'GND' [/GND] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 70.340781,
+                        "y": 28.628609
+                    },
+                    "uuid": "ca62cdfc-37d0-4b47-9b3e-da0789b62bc7"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 62.669907,
+                        "y": 30.700609
+                    },
+                    "uuid": "235b2327-6eb5-4f71-982b-f4b521478354"
+                },
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 72.569716,
+                        "y": 29.822139
+                    },
+                    "uuid": "ebf9685f-46ce-463a-8bcc-e610cc35ae9c"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'GND' [/GND] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 76.1,
+                        "y": 28.25
+                    },
+                    "uuid": "4047c2db-8b8a-4ddc-b82b-86718c5ee6c7"
+                },
+                {
+                    "description": "Zone 'GND' [/GND] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 75.25,
+                        "y": 25.9
+                    },
+                    "uuid": "568a482b-1e87-4772-a071-5f52883a463b"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'GND' [/GND] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 76.1,
+                        "y": 28.25
+                    },
+                    "uuid": "4047c2db-8b8a-4ddc-b82b-86718c5ee6c7"
+                },
+                {
+                    "description": "Zone 'GND' [/GND] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 70.340781,
+                        "y": 28.628609
+                    },
+                    "uuid": "ca62cdfc-37d0-4b47-9b3e-da0789b62bc7"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 79.773982,
+                        "y": 26.263402
+                    },
+                    "uuid": "a6d7b19d-fff3-4c85-9b0e-8a6ad8d3e348"
+                },
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 82.6,
+                        "y": 29.75
+                    },
+                    "uuid": "e7cb2dc2-1585-45a6-b3bb-ff36c33cf782"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 64.959999,
+                        "y": 33.9
+                    },
+                    "uuid": "87d0afbd-b9f5-49f9-8539-b6e3ff7b1364"
+                },
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 72.569716,
+                        "y": 29.822139
+                    },
+                    "uuid": "ebf9685f-46ce-463a-8bcc-e610cc35ae9c"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Copper zones intersect (intersecting zones must have distinct priorities)",
+            "items": [
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 82.6,
+                        "y": 29.75
+                    },
+                    "uuid": "e7cb2dc2-1585-45a6-b3bb-ff36c33cf782"
+                },
+                {
+                    "description": "Zone 'VOUT_5V1' [/VOUT_5V1] on F.Cu, priority 10",
+                    "pos": {
+                        "x": 72.569716,
+                        "y": 29.822139
+                    },
+                    "uuid": "ebf9685f-46ce-463a-8bcc-e610cc35ae9c"
+                }
+            ],
+            "severity": "error",
+            "type": "zones_intersect"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP302",
+                    "pos": {
+                        "x": 66.75,
+                        "y": 38.0
+                    },
+                    "uuid": "1bed0b65-ed7a-4c5b-9a59-500b8b5b5546"
+                },
+                {
+                    "description": "Footprint SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "68140291-f470-4d24-9d89-12dd5678dbf1"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP302",
+                    "pos": {
+                        "x": 66.75,
+                        "y": 38.0
+                    },
+                    "uuid": "1bed0b65-ed7a-4c5b-9a59-500b8b5b5546"
+                },
+                {
+                    "description": "Footprint TP301",
+                    "pos": {
+                        "x": 64.25,
+                        "y": 38.0
+                    },
+                    "uuid": "d99859fe-34a3-4a84-8d0b-00d8da8a4a3e"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint R308",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.0
+                    },
+                    "uuid": "22a3dc40-9d95-4910-9d97-e1642994bc4a"
+                },
+                {
+                    "description": "Footprint SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "68140291-f470-4d24-9d89-12dd5678dbf1"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "68140291-f470-4d24-9d89-12dd5678dbf1"
+                },
+                {
+                    "description": "Footprint L201",
+                    "pos": {
+                        "x": 57.5,
+                        "y": 44.0
+                    },
+                    "uuid": "891b0456-9444-49a3-b1ee-a547f5dafb92"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "68140291-f470-4d24-9d89-12dd5678dbf1"
+                },
+                {
+                    "description": "Footprint TP301",
+                    "pos": {
+                        "x": 64.25,
+                        "y": 38.0
+                    },
+                    "uuid": "d99859fe-34a3-4a84-8d0b-00d8da8a4a3e"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint L201",
+                    "pos": {
+                        "x": 57.5,
+                        "y": 44.0
+                    },
+                    "uuid": "891b0456-9444-49a3-b1ee-a547f5dafb92"
+                },
+                {
+                    "description": "Footprint TP301",
+                    "pos": {
+                        "x": 64.25,
+                        "y": 38.0
+                    },
+                    "uuid": "d99859fe-34a3-4a84-8d0b-00d8da8a4a3e"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/03_OUTPUT_PROTECTION/SCR_GATE] on F.Cu, length 1.6423 mm",
+                    "pos": {
+                        "x": 63.92,
+                        "y": 34.0
+                    },
+                    "uuid": "f83a9278-763d-48f5-9baa-7febabaf4be2"
+                },
+                {
+                    "description": "Pad 2 [/GND] of R308 on F.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 33.175
+                    },
+                    "uuid": "709cea3f-5351-4ef8-9e13-531991a511ef"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.825
+                    },
+                    "uuid": "b868399b-e05f-4318-9f79-9135e59fb620"
+                },
+                {
+                    "description": "Pad 1 [/03_OUTPUT_PROTECTION/SCR_GATE] of R308 on F.Cu",
+                    "pos": {
+                        "x": 62.5,
+                        "y": 34.825
+                    },
+                    "uuid": "57cf88dc-5d6a-48f0-9a13-623000618ea9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 1.5556 mm",
+                    "pos": {
+                        "x": 68.75,
+                        "y": 34.35
+                    },
+                    "uuid": "00469e43-c894-4e9e-ada6-77a88ec90cc4"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 69.05,
+                        "y": 34.85
+                    },
+                    "uuid": "04a886d2-2b71-4338-a682-b1a8ce22e01e"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.8,
+                        "y": 34.5
+                    },
+                    "uuid": "0df47d24-88ce-4657-9426-1a192cebf9a3"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 68.8,
+                        "y": 34.45
+                    },
+                    "uuid": "15a2732c-ed8b-4b57-8735-78bd90881ce9"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.3536 mm",
+                    "pos": {
+                        "x": 69.05,
+                        "y": 34.75
+                    },
+                    "uuid": "1af7bc92-89f6-4319-888f-ca350d92d5f3"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 69.7,
+                        "y": 34.95
+                    },
+                    "uuid": "2a428add-0c09-4929-8624-ade5b0e569ff"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.3536 mm",
+                    "pos": {
+                        "x": 69.85,
+                        "y": 33.7
+                    },
+                    "uuid": "40851672-da39-4154-8d20-bd757db3be0d"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 69.75,
+                        "y": 34.1
+                    },
+                    "uuid": "4cb188a9-b4eb-44f9-8bbd-b2d907722093"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 68.75,
+                        "y": 34.4
+                    },
+                    "uuid": "7c0af59d-10a3-4a0e-bb53-3a407fb9f716"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 69.7,
+                        "y": 34.9
+                    },
+                    "uuid": "965b69be-9944-4462-8a5d-2747ddcc34d8"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 69.25,
+                        "y": 35.05
+                    },
+                    "uuid": "a3d8d73b-b8bf-46b1-9bdc-60cc5b2a664e"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.3000 mm",
+                    "pos": {
+                        "x": 69.85,
+                        "y": 34.0
+                    },
+                    "uuid": "a7a9bfdd-3b2c-4788-a06d-a973a7614f22"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 75.399999,
+                        "y": 26.7
+                    },
+                    "uuid": "cd2f91e4-802c-4b52-9ea8-380177f02da1"
+                },
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.7500 mm",
+                    "pos": {
+                        "x": 69.75,
+                        "y": 34.85
+                    },
+                    "uuid": "d15c83db-8c13-436b-aca1-20bbb6a48c16"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 3.6062 mm",
+                    "pos": {
+                        "x": 72.85,
+                        "y": 29.25
+                    },
+                    "uuid": "d2c7a12b-b7bf-4a90-9c56-d4a8f4a142e3"
+                },
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 69.6,
+                        "y": 35.05
+                    },
+                    "uuid": "e0146223-6342-421e-894d-eb0191965b91"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 69.25,
+                        "y": 35.15
+                    },
+                    "uuid": "e5d152fb-73d2-4353-b295-6a5e2165cdde"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.8485 mm",
+                    "pos": {
+                        "x": 75.399999,
+                        "y": 26.6
+                    },
+                    "uuid": "eb0292db-33e8-44e7-bac7-25a2028a4162"
+                },
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/VOUT_5V1] on F.Cu, length 0.1500 mm",
+                    "pos": {
+                        "x": 69.6,
+                        "y": 35.2
+                    },
+                    "uuid": "f574dedf-6d16-47c9-a413-b92bcf041834"
+                },
+                {
+                    "description": "PTH pad 1 [/GND] of SCR301",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 34.0
+                    },
+                    "uuid": "ef3415ea-55a4-4545-894a-0c6962254cb8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 0.9000 mm",
+                    "pos": {
+                        "x": 69.575,
+                        "y": 38.0
+                    },
+                    "uuid": "f2fc6af0-347a-4026-ac3a-b6a60cc854eb"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/VIN_PROTECTED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 37.75,
+                        "y": 50.15
+                    },
+                    "uuid": "669f5f4b-dc08-45bd-b473-5953950da9db"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Drilled hole too close to other hole (rule 'JLC pad drill spacing' min 0.4495 mm; actual 0.3500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C217",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 26.0
+                    },
+                    "uuid": "1c67760c-3493-4bfc-b567-93ffcc9e3d9b"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 26.0
+                    },
+                    "uuid": "91cbd995-18d1-4d22-baab-e65cd821d13a"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (rule 'JLC pad drill spacing' min 0.4495 mm; actual 0.3500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C217",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 26.0
+                    },
+                    "uuid": "1c67760c-3493-4bfc-b567-93ffcc9e3d9b"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 26.0
+                    },
+                    "uuid": "c8d09391-3912-454b-b664-cdd5d1087db7"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (rule 'JLC pad drill spacing' min 0.4495 mm; actual 0.3500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 75.0,
+                        "y": 26.0
+                    },
+                    "uuid": "e4e99aba-036a-4155-8b0d-4869f1c5b1cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (rule 'JLC pad drill spacing' min 0.4495 mm; actual 0.3500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C217",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 26.0
+                    },
+                    "uuid": "1c67760c-3493-4bfc-b567-93ffcc9e3d9b"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 26.0
+                    },
+                    "uuid": "91cbd995-18d1-4d22-baab-e65cd821d13a"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (rule 'JLC pad drill spacing' min 0.4495 mm; actual 0.3500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C217",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 26.0
+                    },
+                    "uuid": "1c67760c-3493-4bfc-b567-93ffcc9e3d9b"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 26.0
+                    },
+                    "uuid": "c8d09391-3912-454b-b664-cdd5d1087db7"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (rule 'JLC pad drill spacing' min 0.4495 mm; actual 0.3500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/GND] of C218",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 26.0
+                    },
+                    "uuid": "14e18b00-71f3-4dd5-9530-52fbdc7ca857"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 75.0,
+                        "y": 26.0
+                    },
+                    "uuid": "e4e99aba-036a-4155-8b0d-4869f1c5b1cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 54.0
+                    },
+                    "uuid": "77267578-a904-4303-bf9c-7a0aeb061635"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 64.0
+                    },
+                    "uuid": "8cb926ed-9ceb-461d-b12c-4362bb4d4ee3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'J503 +' on F.Silkscreen",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 64.0
+                    },
+                    "uuid": "9c3c0c21-85d2-4d19-be89-d5884ff1b133"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of R308 on F.Silkscreen",
+                    "pos": {
+                        "x": 63.0225,
+                        "y": 34.237258
+                    },
+                    "uuid": "aa0d1e8e-3f70-4de4-ba4b-b5521c4f5c33"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of SCR301 on F.Silkscreen",
+                    "pos": {
+                        "x": 64.61,
+                        "y": 37.26
+                    },
+                    "uuid": "30b1fb3b-dfbf-4418-a914-103a2e0bf433"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of SCR301 on F.Silkscreen",
+                    "pos": {
+                        "x": 71.57,
+                        "y": 37.26
+                    },
+                    "uuid": "f62ce9fc-2645-4d94-b5f4-f567dbe774d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 54.0
+                    },
+                    "uuid": "77267578-a904-4303-bf9c-7a0aeb061635"
+                },
+                {
+                    "description": "Segment of C302 on F.Silkscreen",
+                    "pos": {
+                        "x": 82.288748,
+                        "y": 53.64
+                    },
+                    "uuid": "f37d2a64-9be9-433e-879f-c6b881cb93a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Segment of SCR301 on F.Silkscreen",
+                    "pos": {
+                        "x": 64.61,
+                        "y": 37.26
+                    },
+                    "uuid": "30b1fb3b-dfbf-4418-a914-103a2e0bf433"
+                },
+                {
+                    "description": "Circle of TP301 on F.Silkscreen",
+                    "pos": {
+                        "x": 64.25,
+                        "y": 38.0
+                    },
+                    "uuid": "d57a3eab-991a-4c64-a574-2ea25a7c746c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP302 on F.Silkscreen",
+                    "pos": {
+                        "x": 66.75,
+                        "y": 38.0
+                    },
+                    "uuid": "51cbfd8e-6ff4-4fc5-9ff0-f235f24ecf1c"
+                },
+                {
+                    "description": "Segment of SCR301 on F.Silkscreen",
+                    "pos": {
+                        "x": 71.57,
+                        "y": 37.26
+                    },
+                    "uuid": "f62ce9fc-2645-4d94-b5f4-f567dbe774d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP302 on F.Silkscreen",
+                    "pos": {
+                        "x": 66.75,
+                        "y": 38.0
+                    },
+                    "uuid": "51cbfd8e-6ff4-4fc5-9ff0-f235f24ecf1c"
+                },
+                {
+                    "description": "Circle of TP301 on F.Silkscreen",
+                    "pos": {
+                        "x": 64.25,
+                        "y": 38.0
+                    },
+                    "uuid": "d57a3eab-991a-4c64-a574-2ea25a7c746c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP301 on F.Silkscreen",
+                    "pos": {
+                        "x": 64.25,
+                        "y": 38.0
+                    },
+                    "uuid": "d57a3eab-991a-4c64-a574-2ea25a7c746c"
+                },
+                {
+                    "description": "Segment of SCR301 on F.Silkscreen",
+                    "pos": {
+                        "x": 71.57,
+                        "y": 37.26
+                    },
+                    "uuid": "f62ce9fc-2645-4d94-b5f4-f567dbe774d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of TP508 on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 37.0
+                    },
+                    "uuid": "9ebaa135-8e8f-4b25-8665-b4d5fa374dd5"
+                },
+                {
+                    "description": "PCB text 'J502 1 +5V' on F.Silkscreen",
+                    "pos": {
+                        "x": 83.0,
+                        "y": 38.0
+                    },
+                    "uuid": "d09c6a87-fef4-4911-9a2e-e6961c1bab72"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.77
+                    },
+                    "uuid": "adc57d5c-22dc-4f03-b4d4-a27aa1b18f95"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 16.3,
+                        "y": 28.17
+                    },
+                    "uuid": "ac0dbef2-2da0-49eb-abd9-eb792668a02c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text 'J501 1 VIN+' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 28.0
+                    },
+                    "uuid": "12532c72-cb6b-4e96-8e4f-5a66a5549b78"
+                },
+                {
+                    "description": "Segment of J501 on F.Silkscreen",
+                    "pos": {
+                        "x": 15.7,
+                        "y": 28.17
+                    },
+                    "uuid": "5e2497cb-94a8-4b8b-81f0-3e8c6eedb292"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB text '2 GND' on F.Silkscreen",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 43.0
+                    },
+                    "uuid": "e5eab5ce-ffc7-4110-b9ab-41718c7028a3"
+                },
+                {
+                    "description": "PCB text '24V IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 42.0
+                    },
+                    "uuid": "fb55f3ee-c5b9-42c6-a750-e1f4bbb10f81"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

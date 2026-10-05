@@ -1,101 +1,101 @@
 Designator,Footprint,LCSC Part #,Native Rotation,Applied Offset,Status
-C101,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,C178702,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C102,Capacitor_SMD:C_0805_2012Metric,C77079,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C201,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C202,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C203,Capacitor_SMD:C_0603_1608Metric,C77055,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C204,Capacitor_SMD:C_0603_1608Metric,C77055,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C205,Capacitor_SMD:C_0603_1608Metric,C45000,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C206,Capacitor_SMD:C_0805_2012Metric,C77079,-90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C207,Capacitor_SMD:C_0402_1005Metric,C2168192,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C209,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C210,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C211,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C212,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C213,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C214,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C215,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C216,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C217,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C407868,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C218,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C407868,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C301,Capacitor_SMD:C_1210_3225Metric,C77101,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-C302,Capacitor_SMD:C_1210_3225Metric,C77101,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-D101,Diode_SMD:D_SMC,,-90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-D102,Diode_SMD:D_SOD-123,C124196,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-D103,Diode_SMD:D_SOD-123,C124196,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-D104,Diode_SMD:D_SOD-123,C124196,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-D105,Diode_SMD:D_SOD-123,C151564,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-D106,Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,C2863624,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-F101,Fuse:Fuse_Littelfuse-NANO2-451_453,C13982,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-F301,Fuse:Fuse_Littelfuse-NANO2-451_453,C99548,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-J501,V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT,C158006,-90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-J502,V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT,C158006,-90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-L201,V1A_Lite:Bourns_SRP1265A,C2041326,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-Q101,Package_TO_SOT_SMD:TO-252-2,C150936,180.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-Q102,Package_TO_SOT_SMD:TO-252-2,C150936,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-Q103,Package_TO_SOT_SMD:SOT-23,C78715,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-Q104,Package_TO_SOT_SMD:SOT-23,C78715,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-Q105,Package_TO_SOT_SMD:SOT-23,C57316,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-Q106,Package_TO_SOT_SMD:SOT-23,C78715,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-Q301,Package_TO_SOT_SMD:SOT-23,C57316,180.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R101,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R102,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R110,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R111,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R112,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R113,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R114,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R115,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R116,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R117,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R118,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R119,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R120,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R121,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R122,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R123,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R124,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R125,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R130,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R131,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R132,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R133,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R134,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R135,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R140,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R141,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R142,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R143,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R144,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R145,Resistor_SMD:R_0805_2012Metric,C17414,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R146,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R150,Resistor_SMD:R_0603_1608Metric,C844888,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R151,Resistor_SMD:R_0603_1608Metric,C110776,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R152,Resistor_SMD:R_0603_1608Metric,C110776,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R153,Resistor_SMD:R_0603_1608Metric,C844890,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R160,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R161,Resistor_SMD:R_0805_2012Metric,C17414,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R162,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R163,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R164,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R165,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R166,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R201,Resistor_SMD:R_0603_1608Metric,C2075328,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R202,Resistor_SMD:R_0603_1608Metric,C844888,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R203,Resistor_SMD:R_0603_1608Metric,C861250,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R204,Resistor_SMD:R_0603_1608Metric,C22859,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R205,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R206,Resistor_SMD:R_0603_1608Metric,C25803,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R207,Resistor_SMD:R_0603_1608Metric,C861250,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R301,Resistor_SMD:R_0603_1608Metric,C110776,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R302,Resistor_SMD:R_0603_1608Metric,C844889,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R303,Resistor_SMD:R_0603_1608Metric,C22796,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R304,Resistor_SMD:R_0603_1608Metric,C110776,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R305,Resistor_SMD:R_0603_1608Metric,C22843,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R306,Resistor_SMD:R_0805_2012Metric,C17414,90.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R307,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-R308,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-SCR301,Package_TO_SOT_THT:TO-220-3_Vertical,C262993,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-U101,Package_TO_SOT_SMD:SOT-23,C41283,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-U201,V1A_Qualified:TI_RJR0014A_LM61460,C2864505,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
-U301,Package_TO_SOT_SMD:SOT-23,C41283,0.000000,0,"OPEN — verify JLC zero-angle, pin 1/polarity and centroid"
+C101,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,C178702,0.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
+C102,Capacitor_SMD:C_0805_2012Metric,C77079,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C201,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C202,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C203,Capacitor_SMD:C_0603_1608Metric,C77055,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C204,Capacitor_SMD:C_0603_1608Metric,C77055,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C205,Capacitor_SMD:C_0603_1608Metric,C45000,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C206,Capacitor_SMD:C_0805_2012Metric,C77079,-90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C207,Capacitor_SMD:C_0402_1005Metric,C2168192,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C209,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C210,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C211,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C212,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C213,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C214,Capacitor_SMD:C_1206_3216Metric,C403725,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C215,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C216,Capacitor_SMD:C_1210_3225Metric,C77102,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C217,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C407868,0.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
+C218,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C407868,180.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
+C301,Capacitor_SMD:C_1210_3225Metric,C77101,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+C302,Capacitor_SMD:C_1210_3225Metric,C77101,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+D101,Diode_SMD:D_SMC,,-90.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
+D102,Diode_SMD:D_SOD-123,C124196,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+D103,Diode_SMD:D_SOD-123,C124196,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+D104,Diode_SMD:D_SOD-123,C124196,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+D105,Diode_SMD:D_SOD-123,C151564,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+D106,Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,C2863624,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+F101,Fuse:Fuse_Littelfuse-NANO2-451_453,C13982,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+F301,Fuse:Fuse_Littelfuse-NANO2-451_453,C99548,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+J501,V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT,C158006,-90.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
+J502,V1A_Qualified:JST_B2P_VH_FB_B_P3.96_THT,C158006,-90.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
+L201,V1A_Lite:Bourns_SRP1265A,C2041326,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+Q101,Package_TO_SOT_SMD:TO-252-2,C150936,180.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+Q102,Package_TO_SOT_SMD:TO-252-2,C150936,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+Q103,Package_TO_SOT_SMD:SOT-23,C78715,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+Q104,Package_TO_SOT_SMD:SOT-23,C78715,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+Q105,Package_TO_SOT_SMD:SOT-23,C57316,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+Q106,Package_TO_SOT_SMD:SOT-23,C78715,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+Q301,Package_TO_SOT_SMD:SOT-23,C57316,180.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R101,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R102,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R110,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R111,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R112,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R113,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R114,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R115,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R116,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R117,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R118,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R119,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R120,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R121,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R122,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R123,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R124,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R125,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R130,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R131,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R132,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R133,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R134,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R135,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R140,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R141,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R142,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R143,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R144,Resistor_SMD:R_0603_1608Metric,C21190,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R145,Resistor_SMD:R_0805_2012Metric,C17414,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R146,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R150,Resistor_SMD:R_0603_1608Metric,C844888,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R151,Resistor_SMD:R_0603_1608Metric,C110776,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R152,Resistor_SMD:R_0603_1608Metric,C110776,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R153,Resistor_SMD:R_0603_1608Metric,C844890,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R160,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R161,Resistor_SMD:R_0805_2012Metric,C17414,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R162,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R163,Resistor_SMD:R_0805_2012Metric,C17414,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R164,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R165,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R166,Resistor_SMD:R_0603_1608Metric,C25803,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R201,Resistor_SMD:R_0603_1608Metric,C2075328,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R202,Resistor_SMD:R_0603_1608Metric,C844888,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R203,Resistor_SMD:R_0603_1608Metric,C861250,180.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R204,Resistor_SMD:R_0603_1608Metric,C22859,180.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R205,Resistor_SMD:R_0603_1608Metric,C21190,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R206,Resistor_SMD:R_0603_1608Metric,C25803,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R207,Resistor_SMD:R_0603_1608Metric,C861250,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R301,Resistor_SMD:R_0603_1608Metric,C110776,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R302,Resistor_SMD:R_0603_1608Metric,C844889,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R303,Resistor_SMD:R_0603_1608Metric,C22796,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R304,Resistor_SMD:R_0603_1608Metric,C110776,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R305,Resistor_SMD:R_0603_1608Metric,C22843,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R306,Resistor_SMD:R_0805_2012Metric,C17414,90.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R307,Resistor_SMD:R_0603_1608Metric,C22775,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+R308,Resistor_SMD:R_0603_1608Metric,C21190,180.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+SCR301,Package_TO_SOT_THT:TO-220-3_Vertical,C262993,180.000000,0,MANUAL / EXCLUDE FROM JLC PLACEMENT
+U101,Package_TO_SOT_SMD:SOT-23,C41283,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+U201,V1A_Qualified:TI_RJR0014A_LM61460,C2864505,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied
+U301,Package_TO_SOT_SMD:SOT-23,C41283,0.000000,0,OPEN — supplier zero-angle / centroid / pin-1 match not accepted; no offset applied

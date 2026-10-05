@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-05T14:34:23+0700",
+    "kicad_version": "9.0.6",
+    "schematic_parity": [],
+    "source": "V1A.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'J503 +' on F.Silkscreen",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 57.5
+                    },
+                    "uuid": "efa88b6d-c280-4c58-9b6e-85f308c2062a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen overlap (board setup constraints silk clearance 0.1500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment of C214 on F.Silkscreen",
+                    "pos": {
+                        "x": 66.788748,
+                        "y": 56.91
+                    },
+                    "uuid": "822a8618-8de5-428e-a13d-7ec704de3e1d"
+                },
+                {
+                    "description": "PCB text 'J503 +' on F.Silkscreen",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 57.5
+                    },
+                    "uuid": "efa88b6d-c280-4c58-9b6e-85f308c2062a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

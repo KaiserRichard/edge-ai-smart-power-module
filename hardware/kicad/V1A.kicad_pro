@@ -22,7 +22,10 @@
         "min_hole_clearance": 0.25,
         "min_copper_edge_clearance": 0.5,
         "solder_mask_clearance": 0.0,
-        "solder_mask_min_width": 0.1
+        "solder_mask_min_width": 0.1,
+        "min_silk_text_height": 1.0,
+        "min_silk_text_thickness": 0.15,
+        "min_silk_clearance": 0.15
       },
       "drc_exclusions": []
     }

@@ -1,0 +1,382 @@
+[
+  {
+    "step": "version",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "--version"
+    ],
+    "returncode": 0,
+    "log": "logs/version.log"
+  },
+  {
+    "step": "drc",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/review/DRC.json",
+      "--schematic-parity",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/drc.log"
+  },
+  {
+    "step": "schematic-netlist",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/review/SCHEMATIC.xml",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_sch"
+    ],
+    "returncode": 0,
+    "log": "logs/schematic-netlist.log"
+  },
+  {
+    "step": "gerbers",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "gerbers",
+      "--layers",
+      "F.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts",
+      "--precision",
+      "6",
+      "--subtract-soldermask",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/gerbers/",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/gerbers.log"
+  },
+  {
+    "step": "drill",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "drill",
+      "--format",
+      "excellon",
+      "--drill-origin",
+      "absolute",
+      "--excellon-units",
+      "mm",
+      "--excellon-zeros-format",
+      "decimal",
+      "--excellon-oval-format",
+      "alternate",
+      "--excellon-separate-th",
+      "--generate-map",
+      "--map-format",
+      "pdf",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/drill/",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/drill.log"
+  },
+  {
+    "step": "positions",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pos",
+      "--format",
+      "csv",
+      "--units",
+      "mm",
+      "--side",
+      "both",
+      "--exclude-dnp",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/assembly/POSITIONS_KICAD.csv",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/positions.log"
+  },
+  {
+    "step": "pdf-F.Cu",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "F.Cu",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-F.Cu.log"
+  },
+  {
+    "step": "pdf-B.Cu",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "B.Cu",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Cu.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-B.Cu.log"
+  },
+  {
+    "step": "pdf-F.Paste",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "F.Paste",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Paste.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-F.Paste.log"
+  },
+  {
+    "step": "pdf-B.Paste",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "B.Paste",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Paste.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-B.Paste.log"
+  },
+  {
+    "step": "pdf-F.SilkS",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "F.SilkS",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.SilkS.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-F.SilkS.log"
+  },
+  {
+    "step": "pdf-B.SilkS",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "B.SilkS",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.SilkS.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-B.SilkS.log"
+  },
+  {
+    "step": "pdf-F.Mask",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "F.Mask",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Mask.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-F.Mask.log"
+  },
+  {
+    "step": "pdf-B.Mask",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "B.Mask",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Mask.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-B.Mask.log"
+  },
+  {
+    "step": "pdf-Edge.Cuts",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "Edge.Cuts",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/Edge.Cuts.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-Edge.Cuts.log"
+  },
+  {
+    "step": "pdf-F.Fab",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "F.Fab",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/F.Fab.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-F.Fab.log"
+  },
+  {
+    "step": "pdf-B.Fab",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "pdf",
+      "--layers",
+      "B.Fab",
+      "--mode-single",
+      "--black-and-white",
+      "--drill-shape-opt",
+      "0",
+      "-o",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf/B.Fab.pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/pdf-B.Fab.log"
+  },
+  {
+    "step": "layer-pngs",
+    "argv": [
+      "/usr/bin/swift",
+      "-module-cache-path",
+      "/var/folders/2k/d7w4x7fn0kz9s4h_zp41vvdh0000gn/T/v1a-fab-swift-cache-1j9yxx37",
+      "/Users/quockaiser/Desktop/Research/wt-lite/scripts/lite_pdf_to_png.swift",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/pdf",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/png"
+    ],
+    "returncode": 0,
+    "log": "logs/layer-pngs.log"
+  },
+  {
+    "step": "render-availability",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "render",
+      "--help"
+    ],
+    "returncode": 0,
+    "log": "logs/render-availability.log"
+  },
+  {
+    "step": "render",
+    "argv": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "render",
+      "--width",
+      "1600",
+      "--height",
+      "1000",
+      "--side",
+      "top",
+      "--rotate",
+      "20,0,15",
+      "--background",
+      "opaque",
+      "--quality",
+      "basic",
+      "--output",
+      "/Users/quockaiser/Desktop/Research/wt-lite/docs/evidence/v1a_lite/fab/render/PCB_3D.png",
+      "/Users/quockaiser/Desktop/Research/wt-lite/hardware/kicad/V1A.kicad_pcb"
+    ],
+    "returncode": 0,
+    "log": "logs/render.log"
+  }
+]
