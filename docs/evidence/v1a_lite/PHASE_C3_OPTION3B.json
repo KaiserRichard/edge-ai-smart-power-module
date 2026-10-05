@@ -1,0 +1,752 @@
+{
+  "date": "2026-10-05",
+  "status": "BLOCKED for R1 electrical release; C3 study complete",
+  "safety": "NOT FOR FABRICATION \u2014 ENGINEERING REVIEW REQUIRED",
+  "selected": {
+    "efuse": "TPS26630RGET",
+    "input_fets": "2x IRFR6215TRPBF",
+    "reverse_blocker": "CSD18540Q5B + JSCJ 2N7002",
+    "status": "SELECTED for analysis/cost only; no candidate fully satisfies every requirement"
+  },
+  "inputs": {
+    "normal_high_v": {
+      "label": "KNOWN requested screen",
+      "value": [
+        5.17,
+        5.25
+      ]
+    },
+    "pi_ceiling_v": {
+      "label": "KNOWN",
+      "value": 5.5
+    },
+    "raw_fault_v": {
+      "label": "KNOWN requested envelope plus inherited upper trip",
+      "value": [
+        24,
+        29.26
+      ]
+    },
+    "ceramic_c_f": {
+      "label": "ASSUMED effective minimum, requires biased-cap evidence",
+      "value": 4e-05
+    },
+    "bulk_esr_each_ohm": {
+      "label": "ASSUMED from28mohm catalog impedance, not ESR guarantee",
+      "value": 0.028
+    },
+    "efuse_ovp_max_s": {
+      "label": "KNOWN TPS2663 p8, OVP+20mV toFLT; -40..125C",
+      "value": 1.4e-05
+    },
+    "current_loop_max_s": {
+      "label": "OPEN not specified for this fault",
+      "value": null
+    },
+    "crowbar_response_max_s": {
+      "label": "OPEN",
+      "value": null
+    },
+    "latch_cutoff_max_s": {
+      "label": "OPEN",
+      "value": null
+    }
+  },
+  "ovp": {
+    "label": "CALCULATED, excluding unbounded added clamp leakage",
+    "resistor_error": 0.0035,
+    "nominal_v": 5.376,
+    "low_v": 5.234694286053812,
+    "high_v": 5.518679634776719,
+    "raw_voltage_for_20mV_overdrive_v": 5.608768545965881,
+    "nuisance_margin_at_5p17_v": 0.064694286053812,
+    "nuisance_margin_at_5p25_v": -0.015305713946188071,
+    "unprotected_ovp_pin_at_29p26_v": 6.53125,
+    "clamp_leakage_1uA_shift_v": 0.0348,
+    "ideal_divider_feasible_gain": [
+      4.464285714285714,
+      4.493464052287582
+    ]
+  },
+  "backup": {
+    "label": "CALCULATED screen; not guaranteed comparator trip",
+    "nominal_v": 5.7385,
+    "low_v": 5.597683792544572,
+    "high_v": 5.870160149667095
+  },
+  "current_limit": {
+    "label": "CALCULATED interpolated \u00b17% model plus resistor tolerance/TCR; exact3.1k at high VDS OPEN",
+    "nominal_a": 5.806451612903226,
+    "min_a": 5.381165919282512,
+    "max_a": 6.234724762475115,
+    "rilim_ohm": 3100
+  },
+  "cap_windows": [
+    {
+      "label": "CALCULATED after established ideal current limit",
+      "bulk_count": 1,
+      "load_a": 0,
+      "effective_c_f": 0.00084,
+      "net_charge_a": 6.234724762475115,
+      "ideal_window_us": 33.68232087227415,
+      "esr_window_us": 12.34918755907171,
+      "pi_v_after14us": 5.512253979713875,
+      "pi_v_after14us_ESR_2x": 5.670149242364135
+    },
+    {
+      "label": "CALCULATED after established ideal current limit",
+      "bulk_count": 1,
+      "load_a": 5,
+      "effective_c_f": 0.00084,
+      "net_charge_a": 1.234724762475115,
+      "ideal_window_us": 170.07839024709963,
+      "esr_window_us": 148.74505691376626,
+      "pi_v_after14us": 5.301936772695932,
+      "pi_v_after14us_ESR_2x": 5.333206347231952
+    },
+    {
+      "label": "CALCULATED after established ideal current limit",
+      "bulk_count": 2,
+      "load_a": 0,
+      "effective_c_f": 0.0016400000000000002,
+      "net_charge_a": 6.234724762475115,
+      "ideal_window_us": 65.76072170301141,
+      "esr_window_us": 43.907063166426056,
+      "pi_v_after14us": 5.3863034711599775,
+      "pi_v_after14us_ESR_2x": 5.469383229121034
+    },
+    {
+      "label": "CALCULATED after established ideal current limit",
+      "bulk_count": 2,
+      "load_a": 5,
+      "effective_c_f": 0.0016400000000000002,
+      "net_charge_a": 1.234724762475115,
+      "ideal_window_us": 332.0578095300517,
+      "esr_window_us": 310.2041509934663,
+      "pi_v_after14us": 5.276993536597713,
+      "pi_v_after14us_ESR_2x": 5.2934466501388835
+    }
+  ],
+  "conduction": [
+    {
+      "efuse_r_ohm": 0.03044,
+      "drop_at5a_v": 0.1522,
+      "loss_at5a_w": 0.761,
+      "tj_at50c_JEDEC": 73.8954,
+      "pi_at5a_without_harness_v": 4.755290253156152,
+      "extra_path_budget_ohm": 0.001058050631230316
+    },
+    {
+      "efuse_r_ohm": 0.045,
+      "drop_at5a_v": 0.22499999999999998,
+      "loss_at5a_w": 1.125,
+      "tj_at50c_JEDEC": 85.32499999999999,
+      "pi_at5a_without_harness_v": 4.682490253156152,
+      "extra_path_budget_ohm": -0.013501949368769684
+    },
+    {
+      "efuse_r_ohm": 0.053,
+      "drop_at5a_v": 0.265,
+      "loss_at5a_w": 1.325,
+      "tj_at50c_JEDEC": 91.60499999999999,
+      "pi_at5a_without_harness_v": 4.642490253156152,
+      "extra_path_budget_ohm": -0.021501949368769684
+    }
+  ],
+  "charge_screen": {
+    "label": "CALCULATED, ASSUMED45A pre-limit pulse, not current bound",
+    "pi_v_at1us_45a": 5.780925557558567,
+    "min_ideal_c_for14us_f": 0.00034914458669860644,
+    "stored_harness_2uH_5A_j": 2.4999999999999998e-05,
+    "lossless_rise_at5p25_40uF_v": 0.117727638395972
+  },
+  "startup": {
+    "label": "CALCULATED from TPS2663 p7,100nF\u00b110%, no load-loop qualification",
+    "slew_max_v_s": 642.7777777777777,
+    "slew_min_v_s": 379.20454545454544,
+    "nominal_ramp_ms": 10.2,
+    "max_cap_charge_a": 1.6091298888888885,
+    "minimum_current_limit_a": 5.381165919282512
+  },
+  "input_fet": {
+    "label": "CALCULATED from IRFR6215 p1-2; thermal environment/source unknown",
+    "vds_rating_v": 150,
+    "tvs_rated_clamp_v": 103,
+    "margin_v": 47,
+    "r25_each_ohm": 0.295,
+    "r150_each_ohm": 0.58,
+    "pair_loss_1p574a_25_w": 1.46171084,
+    "pair_loss_1p574a_150_w": 2.87387216,
+    "qg_scaled_13p35_v_nc": 88.11,
+    "cutoff_screen_us": 108.11,
+    "selected_latch_cutoff_sensitivity_us": 150
+  },
+  "fault_models": [
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": false,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": null,
+      "pi_peak_v": 5.139586922768094,
+      "raw_peak_v": 6.180776646035354,
+      "events": {
+        "current_limit_cross_us": 1.3899999999999966,
+        "ovp_20mV_overdrive_us": 3.1799999999999797,
+        "backup_threshold_us": 4.989999999999962,
+        "scr_fire_us": 6.999999999999943,
+        "ideal_efuse_open_us": 17.18000000000017
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": false,
+      "limit_delay_us": 5,
+      "scr_delay_us": 2,
+      "harness_l_h": null,
+      "pi_peak_v": 5.264246984847575,
+      "raw_peak_v": 6.26448569203908,
+      "events": {
+        "current_limit_cross_us": 1.3899999999999966,
+        "ovp_20mV_overdrive_us": 3.469999999999977,
+        "backup_threshold_us": 5.6699999999999555,
+        "scr_fire_us": 7.679999999999937,
+        "ideal_efuse_open_us": 17.470000000000216
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": false,
+      "limit_delay_us": 20,
+      "scr_delay_us": 2,
+      "harness_l_h": null,
+      "pi_peak_v": 5.311832603926365,
+      "raw_peak_v": 6.12183786332415,
+      "events": {
+        "current_limit_cross_us": 1.3899999999999966,
+        "ovp_20mV_overdrive_us": 3.469999999999977,
+        "backup_threshold_us": 5.6699999999999555,
+        "scr_fire_us": 7.679999999999937,
+        "ideal_efuse_open_us": 17.470000000000216
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": false,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": null,
+      "pi_peak_v": 5.136408397356548,
+      "raw_peak_v": 6.256903017355089,
+      "events": {
+        "current_limit_cross_us": 1.139999999999999,
+        "ovp_20mV_overdrive_us": 2.619999999999985,
+        "backup_threshold_us": 4.069999999999971,
+        "scr_fire_us": 6.079999999999952,
+        "ideal_efuse_open_us": 16.620000000000083
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": false,
+      "limit_delay_us": 5,
+      "scr_delay_us": 2,
+      "harness_l_h": null,
+      "pi_peak_v": 5.298347845889067,
+      "raw_peak_v": 6.292365418921581,
+      "events": {
+        "current_limit_cross_us": 1.139999999999999,
+        "ovp_20mV_overdrive_us": 2.839999999999983,
+        "backup_threshold_us": 4.609999999999966,
+        "scr_fire_us": 6.619999999999947,
+        "ideal_efuse_open_us": 16.840000000000117
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": false,
+      "limit_delay_us": 20,
+      "scr_delay_us": 2,
+      "harness_l_h": null,
+      "pi_peak_v": 5.319774245974156,
+      "raw_peak_v": 6.184610642241991,
+      "events": {
+        "current_limit_cross_us": 1.139999999999999,
+        "ovp_20mV_overdrive_us": 2.839999999999983,
+        "backup_threshold_us": 4.609999999999966,
+        "scr_fire_us": 6.619999999999947,
+        "ideal_efuse_open_us": 16.840000000000117
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": false,
+      "limit_delay_us": 0,
+      "scr_delay_us": 1000,
+      "harness_l_h": null,
+      "pi_peak_v": 5.175645159925208,
+      "raw_peak_v": 35.257791572252955,
+      "events": {
+        "current_limit_cross_us": 1.139999999999999,
+        "ovp_20mV_overdrive_us": 2.619999999999985,
+        "backup_threshold_us": 4.069999999999971,
+        "ideal_efuse_open_us": 16.620000000000083,
+        "raw_10_us": 21.43000000000085,
+        "raw_25_us": 67.00000000000409
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": false,
+      "limit_delay_us": 5,
+      "scr_delay_us": 1000,
+      "harness_l_h": null,
+      "pi_peak_v": 5.298347845889067,
+      "raw_peak_v": 35.26626078175315,
+      "events": {
+        "current_limit_cross_us": 1.139999999999999,
+        "ovp_20mV_overdrive_us": 2.839999999999983,
+        "backup_threshold_us": 4.609999999999966,
+        "ideal_efuse_open_us": 16.840000000000117,
+        "raw_10_us": 21.470000000000855,
+        "raw_25_us": 66.9900000000041
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": false,
+      "limit_delay_us": 20,
+      "scr_delay_us": 1000,
+      "harness_l_h": null,
+      "pi_peak_v": 5.9011584526368575,
+      "raw_peak_v": 35.33078579511395,
+      "events": {
+        "current_limit_cross_us": 1.139999999999999,
+        "ovp_20mV_overdrive_us": 2.839999999999983,
+        "backup_threshold_us": 4.609999999999966,
+        "pi_5p5_us": 10.239999999999911,
+        "ideal_efuse_open_us": 16.840000000000117,
+        "raw_10_us": 21.93000000000093,
+        "raw_25_us": 67.02000000000409
+      },
+      "screen": "FAIL",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 0.5,
+      "harness_l_h": 2e-07,
+      "pi_peak_v": 5.317522068367358,
+      "raw_peak_v": 5.934102924867107,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.1599999999999797,
+        "backup_threshold_us": 5.2299999999999605,
+        "scr_fire_us": 5.739999999999955
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 0.5,
+      "harness_l_h": 1e-06,
+      "pi_peak_v": 5.257709810205789,
+      "raw_peak_v": 5.944680252919573,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.0799999999999805,
+        "backup_threshold_us": 4.939999999999963,
+        "scr_fire_us": 5.4499999999999575
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 0.5,
+      "harness_l_h": 2e-06,
+      "pi_peak_v": 5.249467815047541,
+      "raw_peak_v": 5.946120784257744,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.0699999999999807,
+        "backup_threshold_us": 4.899999999999963,
+        "scr_fire_us": 5.409999999999958
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": 2e-07,
+      "pi_peak_v": 5.374820444370674,
+      "raw_peak_v": 6.120703389419959,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.1599999999999797,
+        "backup_threshold_us": 5.2299999999999605,
+        "scr_fire_us": 7.239999999999941
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": 1e-06,
+      "pi_peak_v": 5.278390079178113,
+      "raw_peak_v": 6.164569452136056,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.0799999999999805,
+        "backup_threshold_us": 4.939999999999963,
+        "scr_fire_us": 6.949999999999943
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": 2e-06,
+      "pi_peak_v": 5.263018998436167,
+      "raw_peak_v": 6.172165009821775,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.0699999999999807,
+        "backup_threshold_us": 4.899999999999963,
+        "scr_fire_us": 6.909999999999944
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 5,
+      "harness_l_h": 2e-07,
+      "pi_peak_v": 5.51701015017858,
+      "raw_peak_v": 6.496624730354815,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.1599999999999797,
+        "backup_threshold_us": 5.2299999999999605,
+        "scr_fire_us": 10.239999999999911,
+        "pi_5p5_us": 10.249999999999911
+      },
+      "screen": "FAIL",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 5,
+      "harness_l_h": 1e-06,
+      "pi_peak_v": 5.336344930648213,
+      "raw_peak_v": 6.620071395778123,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.0799999999999805,
+        "backup_threshold_us": 4.939999999999963,
+        "scr_fire_us": 9.949999999999914
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 24,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 5,
+      "harness_l_h": 2e-06,
+      "pi_peak_v": 5.301698715397003,
+      "raw_peak_v": 6.64598729562303,
+      "events": {
+        "ovp_20mV_overdrive_us": 3.0699999999999807,
+        "backup_threshold_us": 4.899999999999963,
+        "scr_fire_us": 9.909999999999915
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 0.5,
+      "harness_l_h": 2e-07,
+      "pi_peak_v": 5.302967492033673,
+      "raw_peak_v": 5.952502872668317,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.5799999999999854,
+        "backup_threshold_us": 4.19999999999997,
+        "scr_fire_us": 4.709999999999965
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 0.5,
+      "harness_l_h": 1e-06,
+      "pi_peak_v": 5.252211160102335,
+      "raw_peak_v": 5.963972489238892,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.529999999999986,
+        "backup_threshold_us": 4.019999999999972,
+        "scr_fire_us": 4.5299999999999665
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 0.5,
+      "harness_l_h": 2e-06,
+      "pi_peak_v": 5.245330277113968,
+      "raw_peak_v": 5.964480166594779,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.529999999999986,
+        "backup_threshold_us": 3.989999999999972,
+        "scr_fire_us": 4.499999999999967
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": 2e-07,
+      "pi_peak_v": 5.366845793263057,
+      "raw_peak_v": 6.191079005255243,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.5799999999999854,
+        "backup_threshold_us": 4.19999999999997,
+        "scr_fire_us": 6.209999999999951
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": 1e-06,
+      "pi_peak_v": 5.274309551970773,
+      "raw_peak_v": 6.240440203850121,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.529999999999986,
+        "backup_threshold_us": 4.019999999999972,
+        "scr_fire_us": 6.029999999999952
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 2,
+      "harness_l_h": 2e-06,
+      "pi_peak_v": 5.2597344582971095,
+      "raw_peak_v": 6.247456662466358,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.529999999999986,
+        "backup_threshold_us": 3.989999999999972,
+        "scr_fire_us": 5.999999999999953
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 5,
+      "harness_l_h": 2e-07,
+      "pi_peak_v": 5.533772935445234,
+      "raw_peak_v": 6.668264016656214,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.5799999999999854,
+        "backup_threshold_us": 4.19999999999997,
+        "pi_5p5_us": 9.039999999999923,
+        "scr_fire_us": 9.209999999999923
+      },
+      "screen": "FAIL",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 5,
+      "harness_l_h": 1e-06,
+      "pi_peak_v": 5.340738096383016,
+      "raw_peak_v": 6.81447439170927,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.529999999999986,
+        "backup_threshold_us": 4.019999999999972,
+        "scr_fire_us": 9.029999999999923
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    },
+    {
+      "label": "CALCULATED from ASSUMED ideal device/source/ESR dynamics",
+      "vin_v": 29.26,
+      "failed_short": true,
+      "limit_delay_us": 0,
+      "scr_delay_us": 5,
+      "harness_l_h": 2e-06,
+      "pi_peak_v": 5.310109368189322,
+      "raw_peak_v": 6.842255327497884,
+      "events": {
+        "ovp_20mV_overdrive_us": 2.529999999999986,
+        "backup_threshold_us": 3.989999999999972,
+        "scr_fire_us": 8.999999999999924
+      },
+      "screen": "PASS",
+      "guarantee": "OPEN: no maximum current-loop response, crowbar or commutation bound"
+    }
+  ],
+  "costs": {
+    "label": "CALCULATED planning totals; not a complete buyable qualified quote",
+    "A_core_vnd": "650445.1500",
+    "B_core_board_connectors_vnd": "684730.85000",
+    "C_first_build_vnd": "2159363.8000",
+    "C_local_sourcing_vnd": "1855943.1500",
+    "conventional_core_purchase_vnd": "1487861.0500",
+    "local_core_purchase_vnd": "1418224.1500",
+    "conventional_fixed_vnd": {
+      "pcb_five_board_lot": "53000",
+      "connector_lots": "263502.75",
+      "wire_heatshrink": "35000"
+    },
+    "conventional_reserves_vnd": {
+      "freight_tax": 180000,
+      "assembly_consumables": 50000,
+      "rework": 50000,
+      "thermal_contingency": 40000
+    },
+    "local_fixed_vnd": {
+      "pcb_five_board_lot": 53000,
+      "local_connector_kits": 4719,
+      "wire_heatshrink": 20000
+    },
+    "local_reserves_vnd": {
+      "component_shipping_import": 80000,
+      "pcb_shipping_tax": 120000,
+      "local_delivery": 20000,
+      "assembly_consumables": 50000,
+      "rework": 50000,
+      "thermal_contingency": 40000
+    },
+    "C_gap_vnd": "1159363.8000",
+    "C_local_gap_vnd": "855943.1500",
+    "stock_open": [
+      "CSD18540Q5B",
+      "IRFR6215TRPBF",
+      "MMBTA42-TP",
+      "RT0603BRD0734K8L",
+      "TVS3300DRVR"
+    ],
+    "local_basis_sha256": "cc8027f7968c58794adcb9394757b93d7396dc92e116dd87fb9083b651d08bdb",
+    "unpriced": "Qualified low-drop replacement; precise/leakage-qualified OVP; hot input-FET thermal hardware; persistent latch/reset fixes; final interconnect. Not zero."
+  },
+  "checks": {
+    "150V_FET_vs_103V_rated_TVS_clamp": "PASS",
+    "eFuse_IN_and_positive_IN_OUT_voltage_at_29p26V": "PASS",
+    "raw_OVP_pin_without_added_clamp": "FAIL",
+    "OVP_pin_clamp_leakage_and_dynamic_survival": "OPEN",
+    "6A_class_current_limit_static_screen": "PASS",
+    "14us_datasheet_max_at_stated_test_conditions": "PASS",
+    "Pi_cap_two_bulk_14us_ideal_limit_ESR_screen": "PASS",
+    "current_limit_from_fault_inception_argument": "FAIL",
+    "guaranteed_Pi_peak_below5p5V": "OPEN",
+    "efuse_nuisance_at5p25V_full_temperature_screen": "FAIL",
+    "efuse_static_high_trip_below5p5V": "FAIL",
+    "backup_crowbar_nuisance_at5p25V_static_screen": "PASS",
+    "Pi_min4p75_at5A_hot_series_drop_screen": "FAIL",
+    "startup5A_plus_cap_charge_below_low_limit": "FAIL",
+    "eFuse_short_backup_Pi5p5V_protection": "FAIL",
+    "raw_caps_latch_SCR_input_FET_hot_SOA": "OPEN",
+    "complete_in_stock_low_cost_BOM": "OPEN",
+    "C_under1000000VND": "FAIL",
+    "local_C_under1000000VND": "FAIL",
+    "documents_calculations_PhaseD_list": "PASS",
+    "R1_release_and_PhaseD_capture": "OPEN"
+  },
+  "scr_added_energy": {
+    "label": "CALCULATED positive initial tolerance; voltage containment OPEN",
+    "output_c_max_f": 0.0052418,
+    "energy_at6v_j": 0.09435239999999999,
+    "local10nH_didt_a_us": 515.0
+  },
+  "reproducer_sha256": {
+    "calculate_phase_c.py": "2e546568350208c62034e316b17339b857d9297e05124810300b08c8bd67f60c",
+    "calculate_phase_c3.py": "1e8565f5169f59b98578fb664a4575ded458714c8b7150262741a16fe9c24ef8"
+  },
+  "preserved_baseline_sha256": {
+    "PHASE_C_CALCULATIONS.json": "1d70683b17e2263ada06246c071d93e7eaa981b2eefca42132541b26e119267b",
+    "PHASE_C2_REVISION.json": "49cfcab5bd494401296b34dd5510e2c8469b274ee79c631d9424cce0e142a116",
+    "PHASE_C2_BOM.csv": "d421074accd334b3f4a3a8988b22374de5a73d385a19205153a13f47126e28bd"
+  },
+  "source_manifest_sha256": "cbc565b7b910242997b8df85a565c4fb0d2885d58b57ea49384365ca3d862cc0"
+}

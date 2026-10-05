@@ -1,0 +1,74 @@
+[
+  {
+    "file": "tps2663.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+    "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "tps25983.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps25983.pdf",
+    "sha256": "1330709a5d2225c1acc5fcfb7e91f0d8dca43c63725bf11bc5c77c57d95a6818",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "irfr6215.pdf",
+    "url": "https://datasheet.lcsc.com/datasheet/pdf/b1860821aec98141b79b37cd1b5fa137.pdf?productCode=C150936",
+    "sha256": "2fcf9f58051e3124280dab0a2ca9d562fd70c89597ba7537a4842998d4cbac08",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "csd18540q5b.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/csd18540q5b.pdf",
+    "sha256": "2e43c4a2ac82af8a089be0a9e413282326f8d7857254ac07390b458deca854e0",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "rt_resistor.pdf",
+    "url": "https://datasheet.lcsc.com/datasheet/pdf/46d7760c582640714d605308a25a220a.pdf?productCode=C861338",
+    "sha256": "0a729d144519a7021c82a0ef242b064e467c70d44afcf9eabd6c7ffdc4b673a3",
+    "date": "2026-10-05"
+  },
+  {
+    "file": null,
+    "url": "https://www.richtek.com/assets/product_file/RT1720/DS1720-01.pdf",
+    "error": "PDF download unavailable",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "ap22615.pdf",
+    "url": "https://www.diodes.com/datasheet/download/AP22815_615.pdf",
+    "sha256": "275b781c64ec6275cfb7ea48790bf73b5c0d91ce43959d83bd7043e029661ba9",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "nis6150.pdf",
+    "url": "https://www.onsemi.com/download/data-sheet/pdf/nis6150-d.pdf",
+    "sha256": "eeca7743765df9bff56db3800a93d3222b5e93de08927bdff849b8d6d1305957",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "sgm2546.pdf",
+    "url": "https://www.sg-micro.com/rect/assets/2dd76bde-981b-4336-afe7-b75d4b8c1b84/SGM2546.pdf",
+    "sha256": "927b5ccfb033aee1f3c3691c9073a8a24788ef36d33616decb79fdfdddeceec7",
+    "date": "2026-10-05"
+  },
+  {
+    "file": null,
+    "url": "https://www.silergy.com/download/downloadFile?ftype=note&id=6315&type=product",
+    "error": "PDF download unavailable",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "tps2596.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps2596.pdf",
+    "sha256": "66f6bae4494f7bfe7dfdc314e508f0291d9ca1e87265cca9b6fdfeaa5cb19fe9",
+    "date": "2026-10-05"
+  },
+  {
+    "file": "2n7002_jscj.pdf",
+    "url": "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf?productCode=C8545",
+    "sha256": "7941fb423af7c6c6c8979063a7e8819bb19217ece275efcce18948950a41d9f6",
+    "date": "2026-10-05"
+  }
+]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Phase C screening calculations. Standard library only; no CAD or network writes.
 
-Run from any directory; --c2 generates additive Phase C2 evidence only.
+Run from any directory; --c2 / --c3 generate additive revision evidence only.
 Results are models, not electrical qualification.
 All numeric model inputs carry an epistemic label; derived sections inherit
 CALCULATED, and their assumptions are explicitly listed in inputs / report.
@@ -739,6 +739,11 @@ def calculate_c2():
 
 def main():
     import sys
+    if "--c3" in sys.argv:
+        sys.dont_write_bytecode = True
+        from calculate_phase_c3 import calculate_c3
+        calculate_c3()
+        return
     if "--c2" in sys.argv:
         calculate_c2()
         return

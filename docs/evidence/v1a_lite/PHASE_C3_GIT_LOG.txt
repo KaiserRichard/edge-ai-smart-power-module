@@ -1,0 +1,10 @@
+Phase C3 authorized Git handback — 2026-10-05
+Baseline: b20b51c, feat/v1a-lite-cost-reduction
+Scope: documents/calculations/manufacturer evidence only; no push.
+Numerical/accounting/scope verification: PASS. Electrical release: BLOCKED.
+Requested commit: docs(v1a-lite): evaluate Phase C3 series eFuse and backup crowbar
+
+git add exit 128
+fatal: Unable to create '/Users/quockaiser/Desktop/Research/edge-ai-smart-power-module/.git/worktrees/wt-lite/index.lock': Operation not permitted
+
+Commit not run because staging failed. Leave uncommitted per brief; no permission/lock changes or push.

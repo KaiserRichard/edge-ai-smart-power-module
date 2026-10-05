@@ -1,0 +1,59 @@
+{
+  "historical_artifacts_unchanged": [
+    "docs/evidence/v1a_lite/PHASE_C_BOM.csv",
+    "docs/evidence/v1a_lite/PHASE_C_CALCULATIONS.json",
+    "docs/evidence/v1a_lite/PHASE_C_CALCULATIONS.md",
+    "docs/evidence/v1a_lite/PHASE_C_GIT_LOG.txt",
+    "docs/evidence/v1a_lite/PHASE_C_PURCHASE_MODEL.csv",
+    "docs/evidence/v1a_lite/PHASE_C_VERIFICATION.json",
+    "docs/evidence/v1a_lite/PHASE_C2_BOM.csv",
+    "docs/evidence/v1a_lite/PHASE_C2_GIT_LOG.txt",
+    "docs/evidence/v1a_lite/PHASE_C2_PURCHASE_MODEL.csv",
+    "docs/evidence/v1a_lite/PHASE_C2_REVISION.json",
+    "docs/evidence/v1a_lite/PHASE_C2_REVISION.md",
+    "docs/evidence/v1a_lite/PHASE_C2_VERIFICATION.json"
+  ],
+  "C_C2_functions_unchanged": "PASS",
+  "deterministic_regeneration": "PASS",
+  "analytic_vs_independent_midpoint_cap_error_v": 1.1102230246251565e-16,
+  "capacitor_charge_conservation_error_c": 3.6591823321385775e-19,
+  "transient_step_halving": [
+    {
+      "case": {
+        "vin": 24,
+        "ilim": 6.234724762475115
+      },
+      "pi_delta_v": 4.53330602692148e-05,
+      "screen": "PASS"
+    },
+    {
+      "case": {
+        "vin": 29.26,
+        "ilim": 6.234724762475115,
+        "limit_delay_us": 20,
+        "scr_delay_us": 1000
+      },
+      "pi_delta_v": 0.0003381579530117307,
+      "screen": "FAIL"
+    },
+    {
+      "case": {
+        "vin": 29.26,
+        "failed_short": true,
+        "scr_delay_us": 5,
+        "harness_l": 2e-07
+      },
+      "pi_delta_v": 0.0006296190554104797,
+      "screen": "FAIL"
+    }
+  ],
+  "BOM_reference_quantities_costs_MOQ_reserves": "PASS",
+  "source_PDF_hashes": "PASS",
+  "CAD_changes": "NONE; ERC/DRC not applicable",
+  "scope": "Numerical evidence only. Electrical release BLOCKED.",
+  "reproducer_hashes": {
+    "calculate_phase_c.py": "2e546568350208c62034e316b17339b857d9297e05124810300b08c8bd67f60c",
+    "calculate_phase_c3.py": "1e8565f5169f59b98578fb664a4575ded458714c8b7150262741a16fe9c24ef8"
+  },
+  "verifier_sha256": "8de0cc128dcff9ccf2b3881151ec51a446be7ae006c4fe75742056f49d3f5ee6"
+}
