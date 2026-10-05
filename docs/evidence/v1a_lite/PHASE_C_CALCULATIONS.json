@@ -1,0 +1,1357 @@
+{
+  "label": "CALCULATED; conditional screens, no hardware validation",
+  "inputs": {
+    "vin_normal": {
+      "value": [
+        18,
+        26
+      ],
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "Phase C owner requirement"
+    },
+    "vin_fault": {
+      "value": [
+        54.6,
+        64
+      ],
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "Phase C continuous fault requirement"
+    },
+    "pi_window": {
+      "value": [
+        4.75,
+        5.5
+      ],
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "project requirement; upper bound strict"
+    },
+    "load": {
+      "value": 5,
+      "label": "KNOWN",
+      "unit": "A",
+      "basis": "continuous design requirement; peak/duration OPEN"
+    },
+    "temperature_screen": {
+      "value": [
+        -40,
+        85
+      ],
+      "label": "ASSUMED",
+      "unit": "degC",
+      "basis": "TL431BI range; system ambient remains OPEN"
+    },
+    "fet_vds": {
+      "value": 100,
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "Infineon IRF9540NPBF absolute maximum"
+    },
+    "tvs_standoff": {
+      "value": 64,
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "Bourns SMCJ64CA"
+    },
+    "tvs_clamp": {
+      "value": 103,
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "SMCJ64CA at rated 14.6 A pulse; not arbitrary source"
+    },
+    "input_divider": {
+      "value": [
+        102000,
+        10000
+      ],
+      "label": "SELECTED",
+      "unit": "ohm",
+      "basis": "100k + 1k + 1k /10k; E96"
+    },
+    "precision_r_tolerance": {
+      "value": 0.001,
+      "label": "KNOWN",
+      "unit": "fraction",
+      "basis": "selected 0.1% parts"
+    },
+    "precision_tcr_screen": {
+      "value": 2.5e-05,
+      "label": "ASSUMED",
+      "unit": "/degC",
+      "basis": "qualify exact resistor suffixes"
+    },
+    "tl431_ref_nom": {
+      "value": 2.495,
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "TI TL431BI table6.12"
+    },
+    "tl431_ref_25": {
+      "value": [
+        2.483,
+        2.507
+      ],
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "table6.12 at 10mA"
+    },
+    "tl431_temp_deviation": {
+      "value": 0.034,
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "conservatively added both ways"
+    },
+    "tl431_iref_max": {
+      "value": 6.5e-06,
+      "label": "CALCULATED",
+      "unit": "A",
+      "basis": "4uA +2.5uA full-temperature deviation"
+    },
+    "input_cathode_shift_reserve": {
+      "value": 0.026,
+      "label": "ASSUMED",
+      "unit": "V",
+      "basis": "26mV lowering screen; actual transition OPEN"
+    },
+    "cin_min_screen": {
+      "value": 9.2e-05,
+      "label": "ASSUMED",
+      "unit": "F",
+      "basis": "80uF electrolytic +12uF effective ceramics"
+    },
+    "fet_qgd_screen": {
+      "value": 3.4e-08,
+      "label": "ASSUMED",
+      "unit": "C",
+      "basis": "Phase B typical-charge screen; not a maximum"
+    },
+    "turnoff_delay_screen": {
+      "value": 2.5e-05,
+      "label": "ASSUMED",
+      "unit": "s",
+      "basis": "TL431+storage+gate total, not guaranteed"
+    },
+    "input_excess_currents": {
+      "value": [
+        3,
+        15,
+        100
+      ],
+      "label": "ASSUMED",
+      "unit": "A",
+      "basis": "source sensitivity; not UENPO specification"
+    },
+    "fb_resistors": {
+      "value": [
+        100000,
+        24600
+      ],
+      "label": "SELECTED",
+      "unit": "ohm",
+      "basis": "retain owner divider"
+    },
+    "fb_reference": {
+      "value": [
+        0.99,
+        1,
+        1.01
+      ],
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "LM61460 FPWM accuracy; auto light-load OPEN"
+    },
+    "fb_current_typ": {
+      "value": 1e-08,
+      "label": "KNOWN",
+      "unit": "A",
+      "basis": "typical only, no specified max"
+    },
+    "rt": {
+      "value": 33200,
+      "label": "SELECTED",
+      "unit": "ohm",
+      "basis": "400kHz setting"
+    },
+    "frequency_screen": {
+      "value": [
+        356400,
+        400000,
+        444400
+      ],
+      "label": "ASSUMED",
+      "unit": "Hz",
+      "basis": "360\u2013440kHz table expanded by 1%"
+    },
+    "inductance": {
+      "value": 6.8e-06,
+      "label": "SELECTED",
+      "unit": "H",
+      "basis": "SRP1265A-6R8M \u00b120%"
+    },
+    "magnetic_retention": {
+      "value": 0.8,
+      "label": "ASSUMED",
+      "unit": "fraction",
+      "basis": "additional screening drop; not hot guaranteed L"
+    },
+    "inductor_dcr_max": {
+      "value": 0.0115,
+      "label": "KNOWN",
+      "unit": "ohm",
+      "basis": "Bourns at25C"
+    },
+    "output_c_effective": {
+      "value": [
+        2.9728753e-05,
+        2.8008429e-05
+      ],
+      "label": "KNOWN",
+      "unit": "F/part",
+      "basis": "saved typical Murata model at5.1/5.5V"
+    },
+    "c_derating_factors": {
+      "value": [
+        0.9,
+        0.85,
+        0.9
+      ],
+      "label": "ASSUMED",
+      "unit": "fraction",
+      "basis": "initial/temp/aging-model screen"
+    },
+    "cout_normal": {
+      "value": 0.00012,
+      "label": "ASSUMED",
+      "unit": "F",
+      "basis": "six raw ceramics; acceptance target not guarantee"
+    },
+    "cout_fault": {
+      "value": 0.00011,
+      "label": "ASSUMED",
+      "unit": "F",
+      "basis": "reduced at5.5V; lumped sensitivity model"
+    },
+    "cout_esr": {
+      "value": 0.003,
+      "label": "ASSUMED",
+      "unit": "ohm",
+      "basis": "raw bank effective ESR"
+    },
+    "load_release_overshoot": {
+      "value": [
+        0.025,
+        0.1
+      ],
+      "label": "ASSUMED",
+      "unit": "V",
+      "basis": "sensitivity, not a measured maximum"
+    },
+    "crowbar_divider": {
+      "value": [
+        1000,
+        100,
+        30,
+        1000
+      ],
+      "label": "SELECTED",
+      "unit": "ohm",
+      "basis": "upper3 segments/lower1k"
+    },
+    "crowbar_30r_tcr": {
+      "value": 0.0001,
+      "label": "ASSUMED",
+      "unit": "/degC",
+      "basis": "1% thick-film segment; exact maximum OPEN"
+    },
+    "crowbar_cathode_shift": {
+      "value": 0.008,
+      "label": "ASSUMED",
+      "unit": "V",
+      "basis": "Phase B 8mV lowering reserve"
+    },
+    "fault_l_screens": {
+      "value": [
+        4.352e-06,
+        2e-06
+      ],
+      "label": "ASSUMED",
+      "unit": "H",
+      "basis": "normal stressed L /saturation sensitivity"
+    },
+    "fault_c_screens": {
+      "value": [
+        4e-05,
+        0.00011,
+        0.00015
+      ],
+      "label": "ASSUMED",
+      "unit": "F",
+      "basis": "local only /raw lump /combined lump"
+    },
+    "fault_delays": {
+      "value": [
+        2e-07,
+        5e-07,
+        2e-06,
+        5e-06
+      ],
+      "label": "ASSUMED",
+      "unit": "s",
+      "basis": "total detector+PNP+SCR+commutation; no datasheet max"
+    },
+    "scr_igt_25": {
+      "value": 0.015,
+      "label": "KNOWN",
+      "unit": "A",
+      "basis": "TYN612RG maximum at25C"
+    },
+    "scr_cold_igt_screen": {
+      "value": 0.03,
+      "label": "ASSUMED",
+      "unit": "A",
+      "basis": "2x25C max; cold maximum OPEN"
+    },
+    "scr_vgt_25": {
+      "value": 1.3,
+      "label": "KNOWN",
+      "unit": "V",
+      "basis": "25C test maximum; full-temp bound OPEN"
+    },
+    "scr_hot_model": {
+      "value": [
+        0.85,
+        0.03
+      ],
+      "label": "KNOWN",
+      "unit": "V,ohm",
+      "basis": "ST on-state model at125C"
+    },
+    "fuse_i2t": {
+      "value": [
+        1.65,
+        10.32
+      ],
+      "label": "KNOWN",
+      "unit": "A2s",
+      "basis": "nominal melting F101/F301; not total clearing"
+    },
+    "scr_i2t": {
+      "value": 98,
+      "label": "KNOWN",
+      "unit": "A2s",
+      "basis": "nonrepetitive25C specified pulse"
+    },
+    "switch_edge_sum": {
+      "value": [
+        1e-08,
+        3e-08
+      ],
+      "label": "ASSUMED",
+      "unit": "s",
+      "basis": "overlap-loss sensitivity, not vendor bound"
+    },
+    "buck_extra_loss": {
+      "value": [
+        0.1,
+        0.3
+      ],
+      "label": "ASSUMED",
+      "unit": "W",
+      "basis": "LDO/gate/deadtime/Coss placeholder"
+    },
+    "inductor_ac_loss": {
+      "value": [
+        0.05,
+        0.3
+      ],
+      "label": "ASSUMED",
+      "unit": "W",
+      "basis": "core/AC screen; vendor loss model OPEN"
+    },
+    "fet_hot_multiplier": {
+      "value": 2,
+      "label": "ASSUMED",
+      "unit": "ratio",
+      "basis": "relative to117mohm at25C"
+    },
+    "thermal_ambient_target": {
+      "value": [
+        50,
+        110
+      ],
+      "label": "ASSUMED",
+      "unit": "degC",
+      "basis": "ambient/junction design screen, not requirements"
+    },
+    "scr_sink_interface": {
+      "value": 1,
+      "label": "ASSUMED",
+      "unit": "degC/W",
+      "basis": "insulator/contact provisional"
+    },
+    "scr_fault_currents": {
+      "value": [
+        2.2,
+        3,
+        5,
+        6,
+        10,
+        14
+      ],
+      "label": "ASSUMED",
+      "unit": "A",
+      "basis": "source/clearing sensitivity only"
+    }
+  },
+  "input_ratings": {
+    "label": "CALCULATED",
+    "fet_dc_margin_v": 36,
+    "tvs_to_fet_margin_v": -3,
+    "powered_reverse_margin_v": 0
+  },
+  "input_cutoff": {
+    "label": "CALCULATED; assumptions as in inputs and report",
+    "nominal_trip_v": 27.944,
+    "nominal_with_typ_iref_v": 28.148,
+    "static_trip_screen_v": [
+      27.008188056352076,
+      29.260369050272594
+    ],
+    "release_screen_v": [
+      27.008188056352076,
+      29.260369050272594
+    ],
+    "guaranteed_hysteresis_v": null,
+    "bias": [
+      {
+        "vin_v": 18,
+        "ctrl12_tl_off_v": 12,
+        "npn_base_available_a": 0.0007202727272727273,
+        "ctrl12_tl_on_v": 5.6,
+        "detector_ik_a": 0.0030999999999999995,
+        "ballast_w": 0.03844,
+        "ballast_each_of_16_w": 0.0024025,
+        "shunt_zener_w": 2.4286128663675298e-18
+      },
+      {
+        "vin_v": 24,
+        "ctrl12_tl_off_v": 12,
+        "npn_base_available_a": 0.0007202727272727273,
+        "ctrl12_tl_on_v": 6.8,
+        "detector_ik_a": 0.0043,
+        "ballast_w": 0.07396,
+        "ballast_each_of_16_w": 0.0046225,
+        "shunt_zener_w": 0.0
+      },
+      {
+        "vin_v": 26,
+        "ctrl12_tl_off_v": 12,
+        "npn_base_available_a": 0.0007202727272727273,
+        "ctrl12_tl_on_v": 7.2,
+        "detector_ik_a": 0.0047,
+        "ballast_w": 0.08836000000000001,
+        "ballast_each_of_16_w": 0.0055225000000000005,
+        "shunt_zener_w": 0.0
+      },
+      {
+        "vin_v": 27.944,
+        "ctrl12_tl_off_v": 12,
+        "npn_base_available_a": 0.0007202727272727273,
+        "ctrl12_tl_on_v": 7.5888,
+        "detector_ik_a": 0.0050888,
+        "ballast_w": 0.10358354176000001,
+        "ballast_each_of_16_w": 0.0064739713600000005,
+        "shunt_zener_w": 0.0
+      },
+      {
+        "vin_v": 54.6,
+        "ctrl12_tl_off_v": 12,
+        "npn_base_available_a": 0.0007202727272727273,
+        "ctrl12_tl_on_v": 12,
+        "detector_ik_a": 0.0095,
+        "ballast_w": 0.45369000000000004,
+        "ballast_each_of_16_w": 0.028355625000000002,
+        "shunt_zener_w": 0.0138
+      },
+      {
+        "vin_v": 64,
+        "ctrl12_tl_off_v": 12,
+        "npn_base_available_a": 0.0007202727272727273,
+        "ctrl12_tl_on_v": 12,
+        "detector_ik_a": 0.0095,
+        "ballast_w": 0.676,
+        "ballast_each_of_16_w": 0.04225,
+        "shunt_zener_w": 0.041999999999999996
+      }
+    ],
+    "charge_to_36_c": 0.0006200460473749213,
+    "charge_to_42_c": 0.0011720460473749214,
+    "transients": [
+      {
+        "excess_current_a": 3,
+        "dv_dt_v_per_us": 0.03260869565217391,
+        "max_delay_to_36_us": 206.68201579164045,
+        "peak_at_25us_v": 30.07558644157694,
+        "overlap_screen_j": 0.0048000000000000004
+      },
+      {
+        "excess_current_a": 15,
+        "dv_dt_v_per_us": 0.16304347826086957,
+        "max_delay_to_36_us": 41.33640315832809,
+        "peak_at_25us_v": 33.336456006794336,
+        "overlap_screen_j": 0.024
+      },
+      {
+        "excess_current_a": 100,
+        "dv_dt_v_per_us": 1.0869565217391304,
+        "max_delay_to_36_us": 6.200460473749214,
+        "peak_at_25us_v": 56.43428209375085,
+        "overlap_screen_j": 0.16
+      }
+    ],
+    "typical_miller_time_us": [
+      8.5,
+      17.0
+    ],
+    "reverse_gate_chain_w": 0.1352,
+    "q102_pullup_w": 0.144,
+    "q102_gate_sink_pulse_w": 4.472066666666667,
+    "startup_cap_energy_j": 0.031096
+  },
+  "buck": {
+    "label": "CALCULATED; normal-operation model, not qualification",
+    "nominal_v": 5.065040650406504,
+    "resistor_and_reference_screen_v": [
+      4.9933175110457,
+      5.137302665431719
+    ],
+    "typical_fb_current_shift_v": 0.001,
+    "rt_formula_hz": 400069.1947314513,
+    "rows": [
+      {
+        "vin_v": 18,
+        "ripple_a": 1.3437499999999998,
+        "peak_a": 5.671875,
+        "stressed_ripple_a": 2.356463945005611,
+        "stressed_peak_a": 6.178231972502806,
+        "irms_a": 5.046062180255936,
+        "output_cap_rms_a": 0.6802525464923185,
+        "input_cap_rms_a": 2.2530843057659626,
+        "dcr_loss_25_w": 0.2928215505606068,
+        "dcr_loss_100_w": 0.3791307025883457
+      },
+      {
+        "vin_v": 24,
+        "ripple_a": 1.4765624999999998,
+        "peak_a": 5.73828125,
+        "stressed_ripple_a": 2.5893702651515142,
+        "stressed_peak_a": 6.294685132575757,
+        "irms_a": 5.0555649071926245,
+        "output_cap_rms_a": 0.7474868098084197,
+        "input_cap_rms_a": 2.0453835214941964,
+        "dcr_loss_25_w": 0.29392547010463205,
+        "dcr_loss_100_w": 0.3805600024179724
+      },
+      {
+        "vin_v": 26,
+        "ripple_a": 1.5072115384615385,
+        "peak_a": 5.753605769230769,
+        "stressed_ripple_a": 2.643117877492877,
+        "stressed_peak_a": 6.321558938746438,
+        "irms_a": 5.0578822323373185,
+        "output_cap_rms_a": 0.7630024090352125,
+        "input_cap_rms_a": 1.9854314064763066,
+        "dcr_loss_25_w": 0.29419498577622566,
+        "dcr_loss_100_w": 0.3809089578337682
+      },
+      {
+        "vin_v": 36,
+        "ripple_a": 1.609375,
+        "peak_a": 5.8046875,
+        "stressed_ripple_a": 2.822276585297418,
+        "stressed_peak_a": 6.411138292648709,
+        "irms_a": 5.065942205255916,
+        "output_cap_rms_a": 0.8147210731245211,
+        "input_cap_rms_a": 1.7435396627423063,
+        "dcr_loss_25_w": 0.2951333599104215,
+        "dcr_loss_100_w": 0.38212391774401827
+      }
+    ],
+    "ripple_pp_v": 0.015654515779097825,
+    "input_effective_c_screen_f": 1.2240000000000001e-05,
+    "output_effective_c_screen_f": [
+      0.000122809478643,
+      0.000115702820199
+    ],
+    "min_l_h": 2.861952861952862e-06,
+    "min_ripple_a": 1.0079132913291329,
+    "normal_high_screens_v": [
+      5.171129923321268,
+      5.246129923321267
+    ],
+    "path_resistance_budget_ohm": 0.04709805063123026,
+    "feedforward_zero_hz": 72343.15595086152,
+    "feedforward_pole_hz": 366421.0256698107,
+    "esr_zero_hz": 442097.06414415373,
+    "lc_resonance_hz": 5571.537427154808,
+    "load_step_10us_droop_v": 0.4316666666666667,
+    "en_normal_v": [
+      3.5537720706260028,
+      5.13322632423756,
+      7.1075441412520055
+    ],
+    "en_rise_nom_v": 6.397146341463414,
+    "en_fall_nom_v": 4.605945365853659,
+    "on_time_26v_444k_ns": 441.3902928754414
+  },
+  "crowbar": {
+    "label": "CALCULATED; temperature/delay/saturation assumptions unresolved",
+    "nominal_trip_v": 5.31435,
+    "static_trip_screen_v": [
+      5.183873275152724,
+      5.435871618409418
+    ],
+    "normal_overshoot_budget_v": 0.03774335183145627,
+    "false_trip_margins_v": [
+      0.012743351831455918,
+      -0.06225664816854337
+    ],
+    "gate_nominal_screen_a": 0.03516086151016298,
+    "gate_pessimistic_screen_a": 0.02802814823883585,
+    "base_drive_screen_a": 0.0034415132361260052,
+    "initial_fault_v": 5.146129923321268,
+    "initial_fault_a": 6.321558938746438,
+    "faults": [
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 1.277003717863218,
+        "trip_current_a": 11.815614508089375,
+        "allowed_delay_us": 0.20920565205682132,
+        "peak_cap_v": 5.497080214898453,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.5,
+        "trip_time_us": 1.277003717863218,
+        "trip_current_a": 11.815614508089375,
+        "allowed_delay_us": 0.20920565205682132,
+        "peak_cap_v": 5.596860026007653,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 2.0,
+        "trip_time_us": 1.277003717863218,
+        "trip_current_a": 11.815614508089375,
+        "allowed_delay_us": 0.20920565205682132,
+        "peak_cap_v": 6.2372670921225515,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 5.0,
+        "trip_time_us": 1.277003717863218,
+        "trip_current_a": 11.815614508089375,
+        "allowed_delay_us": 0.20920565205682132,
+        "peak_cap_v": 8.194865129434636,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 2.648161883057113,
+        "trip_current_a": 17.719773251435615,
+        "allowed_delay_us": 0.380670865619686,
+        "peak_cap_v": 5.4688645074389335,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.5,
+        "trip_time_us": 2.648161883057113,
+        "trip_current_a": 17.719773251435615,
+        "allowed_delay_us": 0.380670865619686,
+        "peak_cap_v": 5.521256155776582,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 2.0,
+        "trip_time_us": 2.648161883057113,
+        "trip_current_a": 17.719773251435615,
+        "allowed_delay_us": 0.380670865619686,
+        "peak_cap_v": 5.835104202125266,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 5.0,
+        "trip_time_us": 2.648161883057113,
+        "trip_current_a": 17.719773251435615,
+        "allowed_delay_us": 0.380670865619686,
+        "peak_cap_v": 6.716951372885949,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 3.2560410030887397,
+        "trip_current_a": 20.338067825386524,
+        "allowed_delay_us": 0.451604541970778,
+        "peak_cap_v": 5.463557516272065,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.5,
+        "trip_time_us": 3.2560410030887397,
+        "trip_current_a": 20.338067825386524,
+        "allowed_delay_us": 0.451604541970778,
+        "peak_cap_v": 5.507215449448987,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 2.0,
+        "trip_time_us": 3.2560410030887397,
+        "trip_current_a": 20.338067825386524,
+        "allowed_delay_us": 0.451604541970778,
+        "peak_cap_v": 5.7636153639308905,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 5.0,
+        "trip_time_us": 3.2560410030887397,
+        "trip_current_a": 20.338067825386524,
+        "allowed_delay_us": 0.451604541970778,
+        "peak_cap_v": 6.463826601040382,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 1.0361169872188933,
+        "trip_current_a": 16.02476812369335,
+        "allowed_delay_us": 0.1532766622698339,
+        "peak_cap_v": 5.520629620930372,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.5,
+        "trip_time_us": 1.0361169872188933,
+        "trip_current_a": 16.02476812369335,
+        "allowed_delay_us": 0.1532766622698339,
+        "peak_cap_v": 5.665075805958001,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 2.0,
+        "trip_time_us": 1.0361169872188933,
+        "trip_current_a": 16.02476812369335,
+        "allowed_delay_us": 0.1532766622698339,
+        "peak_cap_v": 6.692622376714094,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 5.0,
+        "trip_time_us": 1.0361169872188933,
+        "trip_current_a": 16.02476812369335,
+        "allowed_delay_us": 0.1532766622698339,
+        "peak_cap_v": 10.162147666204142,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 2.0175569663140416,
+        "trip_current_a": 25.22394881698351,
+        "allowed_delay_us": 0.26659726415368434,
+        "peak_cap_v": 5.483419576259014,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.5,
+        "trip_time_us": 2.0175569663140416,
+        "trip_current_a": 25.22394881698351,
+        "allowed_delay_us": 0.26659726415368434,
+        "peak_cap_v": 5.561051019025612,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 2.0,
+        "trip_time_us": 2.0175569663140416,
+        "trip_current_a": 25.22394881698351,
+        "allowed_delay_us": 0.26659726415368434,
+        "peak_cap_v": 6.0616096373860895,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 5.0,
+        "trip_time_us": 2.0175569663140416,
+        "trip_current_a": 25.22394881698351,
+        "allowed_delay_us": 0.26659726415368434,
+        "peak_cap_v": 7.605652293772076,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 2.442462493221705,
+        "trip_current_a": 29.207510676603363,
+        "allowed_delay_us": 0.31372059150117826,
+        "peak_cap_v": 5.476051695383895,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.5,
+        "trip_time_us": 2.442462493221705,
+        "trip_current_a": 29.207510676603363,
+        "allowed_delay_us": 0.31372059150117826,
+        "peak_cap_v": 5.5409509822499095,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 2.0,
+        "trip_time_us": 2.442462493221705,
+        "trip_current_a": 29.207510676603363,
+        "allowed_delay_us": 0.31372059150117826,
+        "peak_cap_v": 5.9480636680461805,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 24,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 5.0,
+        "trip_time_us": 2.442462493221705,
+        "trip_current_a": 29.207510676603363,
+        "allowed_delay_us": 0.31372059150117826,
+        "peak_cap_v": 7.164138225072953,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 1.246636909199598,
+        "trip_current_a": 12.258099950870918,
+        "allowed_delay_us": 0.20144691788977734,
+        "peak_cap_v": 5.499522332396877,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.5,
+        "trip_time_us": 1.246636909199598,
+        "trip_current_a": 12.258099950870918,
+        "allowed_delay_us": 0.20144691788977734,
+        "peak_cap_v": 5.603825719718075,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 2.0,
+        "trip_time_us": 1.246636909199598,
+        "trip_current_a": 12.258099950870918,
+        "allowed_delay_us": 0.20144691788977734,
+        "peak_cap_v": 6.282240709229591,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 4e-05,
+        "delay_us": 5.0,
+        "trip_time_us": 1.246636909199598,
+        "trip_current_a": 12.258099950870918,
+        "allowed_delay_us": 0.20144691788977734,
+        "peak_cap_v": 8.390763037948592,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 2.5622384358278447,
+        "trip_current_a": 18.52792761312392,
+        "allowed_delay_us": 0.36386360571725057,
+        "peak_cap_v": 5.470417414111149,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.5,
+        "trip_time_us": 2.5622384358278447,
+        "trip_current_a": 18.52792761312392,
+        "allowed_delay_us": 0.36386360571725057,
+        "peak_cap_v": 5.525451468184614,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 2.0,
+        "trip_time_us": 2.5622384358278447,
+        "trip_current_a": 18.52792761312392,
+        "allowed_delay_us": 0.36386360571725057,
+        "peak_cap_v": 5.858127262402684,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00011,
+        "delay_us": 5.0,
+        "trip_time_us": 2.5622384358278447,
+        "trip_current_a": 18.52792761312392,
+        "allowed_delay_us": 0.36386360571725057,
+        "peak_cap_v": 6.80536249144425,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 3.143224023946382,
+        "trip_current_a": 21.297488317326525,
+        "allowed_delay_us": 0.43106880685802457,
+        "peak_cap_v": 5.464898004727609,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.5,
+        "trip_time_us": 3.143224023946382,
+        "trip_current_a": 21.297488317326525,
+        "allowed_delay_us": 0.43106880685802457,
+        "peak_cap_v": 5.5107962670988275,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 2.0,
+        "trip_time_us": 3.143224023946382,
+        "trip_current_a": 21.297488317326525,
+        "allowed_delay_us": 0.43106880685802457,
+        "peak_cap_v": 5.782518899968855,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 4.352e-06,
+        "c_f": 0.00015,
+        "delay_us": 5.0,
+        "trip_time_us": 3.143224023946382,
+        "trip_current_a": 21.297488317326525,
+        "allowed_delay_us": 0.43106880685802457,
+        "peak_cap_v": 6.53377805515164,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 1.0043825331798841,
+        "trip_current_a": 16.73237965817148,
+        "allowed_delay_us": 0.14669825174535164,
+        "peak_cap_v": 5.524667362939008,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 0.5,
+        "trip_time_us": 1.0043825331798841,
+        "trip_current_a": 16.73237965817148,
+        "allowed_delay_us": 0.14669825174535164,
+        "peak_cap_v": 5.677040530295499,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 2.0,
+        "trip_time_us": 1.0043825331798841,
+        "trip_current_a": 16.73237965817148,
+        "allowed_delay_us": 0.14669825174535164,
+        "peak_cap_v": 6.7775008650961395,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 4e-05,
+        "delay_us": 5.0,
+        "trip_time_us": 1.0043825331798841,
+        "trip_current_a": 16.73237965817148,
+        "allowed_delay_us": 0.14669825174535164,
+        "peak_cap_v": 10.550509989594735,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 1.9418621263445823,
+        "trip_current_a": 26.457338619770432,
+        "allowed_delay_us": 0.25408999323129106,
+        "peak_cap_v": 5.485843850645442,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 0.5,
+        "trip_time_us": 1.9418621263445823,
+        "trip_current_a": 26.457338619770432,
+        "allowed_delay_us": 0.25408999323129106,
+        "peak_cap_v": 5.567792530599067,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 2.0,
+        "trip_time_us": 1.9418621263445823,
+        "trip_current_a": 26.457338619770432,
+        "allowed_delay_us": 0.25408999323129106,
+        "peak_cap_v": 6.102121299580415,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00011,
+        "delay_us": 5.0,
+        "trip_time_us": 1.9418621263445823,
+        "trip_current_a": 26.457338619770432,
+        "allowed_delay_us": 0.25408999323129106,
+        "peak_cap_v": 7.773224010372163,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.19999999999999998,
+        "trip_time_us": 2.346866954741092,
+        "trip_current_a": 30.659438814993756,
+        "allowed_delay_us": 0.29879062896516684,
+        "peak_cap_v": 5.478120888400469,
+        "screen_status": "PASS"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 0.5,
+        "trip_time_us": 2.346866954741092,
+        "trip_current_a": 30.659438814993756,
+        "allowed_delay_us": 0.29879062896516684,
+        "peak_cap_v": 5.546623346014836,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 2.0,
+        "trip_time_us": 2.346866954741092,
+        "trip_current_a": 30.659438814993756,
+        "allowed_delay_us": 0.29879062896516684,
+        "peak_cap_v": 5.980698243570668,
+        "screen_status": "FAIL"
+      },
+      {
+        "vin_v": 26,
+        "l_h": 2e-06,
+        "c_f": 0.00015,
+        "delay_us": 5.0,
+        "trip_time_us": 2.346866954741092,
+        "trip_current_a": 30.659438814993756,
+        "allowed_delay_us": 0.29879062896516684,
+        "peak_cap_v": 7.2946226707196224,
+        "screen_status": "FAIL"
+      }
+    ],
+    "fuse_nominal_melt_s_at_50a": [
+      0.00066,
+      0.004128
+    ],
+    "fuse_i2t_to_scr_ratio": 0.10530612244897959,
+    "local_loop_initial_di_dt_a_us": 420.0,
+    "local_cap_energy_j": 0.0006050000000000001,
+    "total_cap_energy_j": 0.00226875,
+    "fuse_clearing_source_current_for_5s_a": 14,
+    "source_limit_and_clearing_time": "OPEN: no authoritative UENPO limit/waveform"
+  },
+  "thermal": {
+    "label": "CALCULATED; thermal hardware, enclosure and source waveform OPEN",
+    "normal": [
+      {
+        "vin_v": 18,
+        "buck_conduction_w": 1.412757886690232,
+        "buck_switching_screen_w": [
+          0.18000000000000002,
+          0.5399999999999999
+        ],
+        "buck_total_screen_w": [
+          1.692757886690232,
+          2.252757886690232
+        ],
+        "control_gate_total_w": 0.2355428571428571,
+        "input_current_high_screen_a": 1.6822864121224383,
+        "input_fets_w": 1.3244809838887162,
+        "input_fuse_w": 0.06424298789374756,
+        "output_fuse_w": 0.22499999999999998,
+        "inductor_screen_w": [
+          0.4291307025883457,
+          0.6791307025883457
+        ],
+        "total_efficiency_high_loss": 0.84210789343495,
+        "required_buck_theta_ja": 26.63402061734758
+      },
+      {
+        "vin_v": 24,
+        "buck_conduction_w": 1.351098709861401,
+        "buck_switching_screen_w": [
+          0.24,
+          0.72
+        ],
+        "buck_total_screen_w": [
+          1.691098709861401,
+          2.3710987098614007
+        ],
+        "control_gate_total_w": 0.5635428571428572,
+        "input_current_high_screen_a": 1.254695471138532,
+        "input_fets_w": 0.7367540194383141,
+        "input_fuse_w": 0.035735718464208824,
+        "output_fuse_w": 0.22499999999999998,
+        "inductor_screen_w": [
+          0.4305600024179724,
+          0.6805600024179723
+        ],
+        "total_efficiency_high_loss": 0.8468190285534939,
+        "required_buck_theta_ja": 25.30472466222514
+      },
+      {
+        "vin_v": 26,
+        "buck_conduction_w": 1.3368653082747755,
+        "buck_switching_screen_w": [
+          0.26,
+          0.78
+        ],
+        "buck_total_screen_w": [
+          1.6968653082747756,
+          2.416865308274775
+        ],
+        "control_gate_total_w": 0.7132357142857143,
+        "input_current_high_screen_a": 1.1614599616016057,
+        "input_fets_w": 0.6313269654448864,
+        "input_fuse_w": 0.0306220558025618,
+        "output_fuse_w": 0.22499999999999998,
+        "inductor_screen_w": [
+          0.4309089578337682,
+          0.6809089578337681
+        ],
+        "total_efficiency_high_loss": 0.8444279296694741,
+        "required_buck_theta_ja": 24.825545633252375
+      }
+    ],
+    "scr": [
+      {
+        "current_a": 2.2,
+        "power_w": 2.0152,
+        "free_air_rise_c": 120.912,
+        "required_total_theta": 29.773719730051607,
+        "allowable_sink_theta": 27.473719730051606
+      },
+      {
+        "current_a": 3,
+        "power_w": 2.82,
+        "free_air_rise_c": 169.2,
+        "required_total_theta": 21.27659574468085,
+        "allowable_sink_theta": 18.97659574468085
+      },
+      {
+        "current_a": 5,
+        "power_w": 5.0,
+        "free_air_rise_c": 300.0,
+        "required_total_theta": 12.0,
+        "allowable_sink_theta": 9.7
+      },
+      {
+        "current_a": 6,
+        "power_w": 6.18,
+        "free_air_rise_c": 370.79999999999995,
+        "required_total_theta": 9.708737864077671,
+        "allowable_sink_theta": 7.40873786407767
+      },
+      {
+        "current_a": 10,
+        "power_w": 11.5,
+        "free_air_rise_c": 690.0,
+        "required_total_theta": 5.217391304347826,
+        "allowable_sink_theta": 2.9173913043478263
+      },
+      {
+        "current_a": 14,
+        "power_w": 17.78,
+        "free_air_rise_c": 1066.8000000000002,
+        "required_total_theta": 3.3745781777277837,
+        "allowable_sink_theta": 1.0745781777277834
+      }
+    ],
+    "correction": "Phase B prose 5A/6A values wrong; correct5.00W/6.18W"
+  },
+  "totals": {
+    "label": "CALCULATED planning totals; NOT a complete qualified purchase quote",
+    "fx": {
+      "value": 26500,
+      "label": "ASSUMED",
+      "unit": "VND/USD",
+      "basis": "Phase A/B accounting convention, not spot rate"
+    },
+    "A_core_vnd": "287432.2500",
+    "A_dated_price_subtotal_vnd": "274182.2500",
+    "A_new_tvs_allowance_vnd": "13250",
+    "B_core_board_connectors_vnd": "321717.95000",
+    "C_first_build_vnd": "1492247.50000",
+    "core_purchase_with_spares_vnd": "820744.7500",
+    "connector_purchase_vnd": "263502.75000",
+    "connectors_installed_vnd": "23685.70000",
+    "overhead_assumed_vnd": {
+      "pcb_five_board_lot": 53000,
+      "wire_fanout": 35000,
+      "shipping_tax": 180000,
+      "assembly_consumables": 50000,
+      "rework": 50000,
+      "scr_sink_kit": 40000
+    },
+    "unpriced": "Input FET fault thermal hardware and safety redesign; not zero",
+    "headroom_to_1000000_vnd": "-492247.50000",
+    "budget_status": "FAIL estimate; exact landed total OPEN",
+    "bom_lines": 54,
+    "unique_core_mpns": 33
+  },
+  "checks": {
+    "01_input_64V_FET_DC_voltage_only": "PASS",
+    "02_upstream_TVS_to_100V_FET": "FAIL",
+    "03_input_trip_static_screen": "PASS",
+    "04_input_VIN_never_above_36V": "OPEN",
+    "05_input_bias_timing_startup_release_SOA": "OPEN",
+    "06_reverse_and_powered_reversal": "OPEN",
+    "07_buck_L_and_catalog_Isat_screens": "PASS",
+    "08_capacitance_ripple_current_loop_margin": "OPEN",
+    "09_Pi_normal_window_5A_harness": "OPEN",
+    "10_crowbar_HS_short_24V_0p5us_screen": "FAIL",
+    "11_crowbar_max_IGT_VGT_delay_over_temp": "OPEN",
+    "12_fuse_SCR_UENPO_clearing": "OPEN",
+    "13_raw_16V_caps_after_output_fuse_opens": "FAIL",
+    "14_unsinked_SCR_indefinite_fault": "FAIL",
+    "15_whole_board_thermal": "OPEN",
+    "16_cost_C_under_1000000": "FAIL",
+    "17_exact_local_sourcing_and_full_cost": "OPEN",
+    "18_removed_function_and_bench_plan_documented": "PASS",
+    "19_Phase_D_change_list_documented": "PASS",
+    "20_hardware_qualification": "OPEN"
+  },
+  "selected_mpns": {
+    "input_fets": "2x IRF9540NPBF",
+    "input_tvs_candidate": "Bourns SMCJ64CA (surge coordination FAIL)",
+    "protected_tvs": "TVS3300DRVR",
+    "input_fuse": "0451003.MRL",
+    "detectors": "2x TL431BIDBZR",
+    "gate_clamps": "BZT52C12-7-F",
+    "level_shift": "BZT52C3V3-7-F",
+    "gate_sink": "MMBTA42-TP",
+    "buck": "LM61460AANRJRR",
+    "inductor": "SRP1265A-6R8M",
+    "input_ceramics": "GRM32ER71H106KA12L",
+    "input_bulk": "EEUFR1H101",
+    "output_ceramics": "GRM32ER61C476KE15L (raw fault rating FAIL)",
+    "output_fuse": "0451007.MRL",
+    "scr": "TYN612RG",
+    "scr_driver": "BC807-40,215"
+  },
+  "reproducer_sha256": "4a39663d2f687dd5b1d7874dec383dc6b9c78e93f19b4bec6804012844061e15"
+}

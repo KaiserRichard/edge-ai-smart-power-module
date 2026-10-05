@@ -1,0 +1,38 @@
+[
+  {
+    "name": "IRF9540N",
+    "url": "https://www.infineon.com/dgdl/Infineon-IRF9540N-DataSheet-v01_01-EN.pdf?fileId=5546d462533600a401535611cfa21dc8",
+    "access_date": "2026-10-05",
+    "result": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:992)>"
+  },
+  {
+    "name": "BZT52",
+    "url": "https://www.diodes.com/_files/datasheets/ds18004.pdf",
+    "access_date": "2026-10-05",
+    "result": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+  },
+  {
+    "name": "TYN612",
+    "url": "https://www.st.com/resource/en/datasheet/tyn612.pdf",
+    "access_date": "2026-10-05",
+    "result": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+  },
+  {
+    "name": "451",
+    "url": "https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1",
+    "access_date": "2026-10-05",
+    "result": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+  },
+  {
+    "name": "BC807",
+    "url": "https://assets.nexperia.com/documents/data-sheet/BC807_SER.pdf",
+    "access_date": "2026-10-05",
+    "result": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+  },
+  {
+    "name": "MMBTA42",
+    "url": "https://www.mccsemi.com/pdf/Products/MMBTA42%28SOT-23%29.pdf",
+    "access_date": "2026-10-05",
+    "result": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)>"
+  }
+]

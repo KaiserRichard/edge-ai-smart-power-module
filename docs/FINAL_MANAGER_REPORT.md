@@ -321,3 +321,19 @@ Historical handoff: its visual PASS was subsequently superseded by the independe
 **OPEN RISKS:** the guide worktree remains outside current writable roots, so installation and its requested local commit cannot be completed here. Existing electrical/thermal/fault risks and local-bypass/return questions persist. **NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
 **NEXT GATE:** install and review the prepared guide patch from a session with the required filesystem access, resolve R2 items and authorize placement before R3 work. Follow the established current-limited/dummy-load-first bring-up sequence before SBC use.
+
+## V1A-Lite Phase C — Option 1 calculation review, 2026-10-05
+
+**STATUS: BLOCKED for R1 electrical release / Phase D implementation. Phase C documentation and reproducible calculations delivered.**
+
+**WHAT WAS DONE:** followed the complete Phase C brief directly, without sub-agents. Recalculated the selected 18–26 V input / continuous 54.6–64 V fault architecture, 100 V input cutoff, LM61460 buck, TL431/SCR output crowbar, fuse coordination, thermal screens and Option 1 costs. Documented removed functions, staged dummy-load qualification and exact future schematic/refdes/net changes. No schematic, PCB or library was edited.
+
+**EVIDENCE:** [calculation report](evidence/v1a_lite/PHASE_C_CALCULATIONS.md), [standard-library reproducer](evidence/v1a_lite/calculate_phase_c.py), [labeled JSON](evidence/v1a_lite/PHASE_C_CALCULATIONS.json), [candidate BOM](evidence/v1a_lite/PHASE_C_BOM.csv), [minimum-lot purchase model](evidence/v1a_lite/PHASE_C_PURCHASE_MODEL.csv), [source register](../third_party/v1a_lite_phase_c/SOURCES.md), [verification](evidence/v1a_lite/PHASE_C_VERIFICATION.json), [Git attempt log](evidence/v1a_lite/PHASE_C_GIT_LOG.txt). All physical tests NOT RUN; fresh ERC/DRC N/A because CAD is unchanged.
+
+**DECISIONS:** retain owner Option 1 and 100 kΩ/24.6 kΩ FB divider (5.065 V nominal). Analyze two IRF9540NPBF input FETs, 102 kΩ/10 kΩ input detector, SRP1265A-6R8M, TL431BIDBZR detectors, TYN612RG and 0451003.MRL/0451007.MRL fuses. Split input control ballast/pullup for dissipation. Keep exact-MPN sourcing restrictions; candidate selection is not purchase or fabrication approval. Phase B prose SCR-loss error is corrected in new evidence only.
+
+**OPEN RISKS:** Bourns SMCJ64CA standoff supports nominal ±64 V but its rated clamp exceeds 100 V FET rating. Input timing, hot SOA, startup/reversal and release remain unqualified. Output fault model at 24 V with assumed 0.5 µs response reaches 5.521 V, failing <5.5 V before parasitics. Full-temperature SCR trigger/response, UENPO current-limit/hiccup envelope, maximum fuse clearing, effective C, normal transient window and thermal hardware are OPEN. Raw 16 V capacitors can overvolt after output-fuse-first opening. Planning A/B/C =287,432.25 /321,717.95 /1,492,247.50 VND; C is already above budget and excludes unresolved input fault thermal hardware/safety redesign, so a complete qualified total remains OPEN.
+
+**NEXT GATE:** resolve these R1 protection/interface issues and reconcile the separate local-sourcing plan before Phase D/R2 capture. No R3/R4/fabrication release. Qualify visual/continuity → limited no-load startup → rail checks → dummy-load steps → thermal/ripple/transients → fault tests → telemetry N/A → Pi only after all preceding gates pass.
+
+**Git handback:** each section's authorized staging/commit attempt failed because Git could not create the worktree `index.lock` (Operation not permitted). Files remain uncommitted under the brief's explicit fallback. No permissions changed, push, purchase or manufacturing action.

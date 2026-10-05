@@ -1,0 +1,26 @@
+# Phase C source and provenance register
+
+KNOWN access date: 2026-10-05. Manufacturer documentation is authoritative. All entries are **referenced**, no PCB/reference implementation copied, no upstream file modified. Copyright remains with the manufacturer; no open redistribution license is asserted. Required attribution: retain manufacturer, title, revision and URL. Proposed adaptations are documented in Phase C; no CAD implementation occurred. Existing Phase B source/model/price records are referenced in place, not rewritten. Failed direct downloads are recorded in RETRIEVAL.json; successful web access is identified below.
+
+| Document / exact revision | URL / relevant source | Function / changes in our analysis |
+| --- | --- | --- |
+| TI LM61460 SNVSBD5D, July 2022 | https://www.ti.com/lit/ds/symlink/lm61460.pdf ; read-only sibling LM61460AANRJRR.pdf and /private/tmp/liteb/LM61460AANRJRR.txt; web opened | §§7–9 regulator selection, pins, equations; revised L/C, retain divider |
+| TI TL431 SLVS543S, May 2024 | https://www.ti.com/lit/ds/symlink/tl431.pdf ; /private/tmp/liteb/tl431.txt; web opened | §6.12 industrial B grade; new input divider, output PNP interface |
+| Infineon IRF9540N v01_01, printed 01/04 | https://www.infineon.com/dgdl/Infineon-IRF9540N-DataSheet-v01_01-EN.pdf?fileId=5546d462533600a401535611cfa21dc8 ; web PDF pp1–4, 8 | VDS/VGS, charge, SOA, pinout; common-source two-FET concept |
+| ST TYN612 DocID7475 Rev 11, October 2016 | https://www.st.com/resource/en/datasheet/tyn612.pdf ; web tables1–4, curves | SCR trigger, fault/thermal ratings; reference only |
+| Littelfuse 451/453, GD.12/01/25 | https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1 ; web pp1–3 | Exact 3 A /7 A fuses, clearing conditions |
+| Littelfuse SMCJ64CA product, undated dynamic page; exact document revision OPEN | https://www.littelfuse.com/products/overvoltage-protection/tvs-diodes/surface-mount/smcj/smcj64ca ; web page returned no extractable text; manufacturer's SMCJ64CA-E and SMCJ-HRA tables cross-check family only | New upstream TVS candidate; exact ordering sheet/temperature curve OPEN; no alternate grade substituted |
+| Diodes SMCJ64CA manufacturer part page, undated | https://www.diodes.com/part/view/SMCJ64CA ; web opened/indexed | Independent same-rating comparison, NOT evidence of Littelfuse grade interchangeability |
+| Diodes BZT52 family DS18004 Rev38-2, October2017 | https://www.diodes.com/_files/datasheets/ds18004.pdf ; web pp1–2 | Exact -7-F ordering convention, zener voltage/TCR; original assets URL failed |
+| Nexperia BC807 series Rev8, 1 July2022 | https://assets.nexperia.com/documents/data-sheet/BC807_SER.pdf ; web opened | PNP saturation drive; no guaranteed low-current/cold saturation inferred |
+| MCC MMBTA42 manufacturer indexed PDF; printed revision OPEN in current retrieval | https://www.mccsemi.com/pdf/Products/MMBTA42%28SOT-23%29.pdf ; direct web failed; prior Phase B Rev3-3-12012020 | Indexed 300 V rating only; full gain/storage proof OPEN |
+| Bourns SRP1265A Rev06/24 | https://www.bourns.com/docs/product-datasheets/srp1265a.pdf ; /private/tmp/liteb/bourns.txt; web opened | Current/inductance table; normal ripple and fault saturation caveat |
+| TI TVS3300 SLVSDO2C, February2018 | https://www.ti.com/lit/ds/symlink/tvs3300.pdf ; /private/tmp/liteb/tvs3300.txt | Downstream clamp, package-specific pulses |
+| Murata SimSurfing undated model, saved exact response hashes | ../v1a_lite_phase_b/MURATA_05V_OBSERVATIONS.json ; https://ds.murata.com/simserve/characteristics ; original access2026-10-04 | Bias-effective C data inherited, not a fresh minimum guarantee |
+| Panasonic/JST/passive part evidence | ../v1a_lite_phase_b/SOURCES.md and ../../docs/evidence/v1a_lite/PHASE_B_BOM.csv ; dated original observations | Exact identities retained; hot current, resistor TCR and capacitor minima explicitly OPEN when no verified bound |
+| LCSC /DigiKey price records, dynamic pages | ../v1a_lite_phase_b/LCSC_OBSERVATIONS.json and Phase B BOM URLs/dates | Price tiers/MOQs inherited 2026-10-03–05, never described as fresh local quotes |
+| UENPO S4-T482410 | Owner Phase C brief, 2026-10-05; exact manufacturer manual/revision/license OPEN | Identity and fault envelope are owner requirements. Exact-name search yielded no authoritative current-limit specification; no schematic reused |
+
+Local input evidence is pinned to repository baseline `6cfe313`. Future substitutions require a new source record and recalculation. System-wide TLS/configuration was not changed after direct-download certificate errors.
+
+SELECTED TVS identity clarification: D101 is **Bourns SMCJ64CA**, not the initially inspected Littelfuse candidate. Authoritative source https://www.bourns.com/data/global/pdfs/SMCJ.pdf , six pages, electrical table p2 and ordering p1; accessed2026-10-05, **Rev.09/20**, footer p5. Referenced only, no modifications, Bourns copyright; retain this citation. Its10/1000µs clamp is103 V at14.6 A; its8/20µs clamp is133.9 V at73 A. Both exceed100 V. Initial Littelfuse/Diodes searches are comparison provenance only; no supplier price is transferred between manufacturers.

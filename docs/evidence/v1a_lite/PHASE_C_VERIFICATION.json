@@ -1,0 +1,25 @@
+{
+  "label": "KNOWN execution evidence / CALCULATED numerical comparison; no hardware validation",
+  "date": "2026-10-05",
+  "head": "6cfe3131a23f7c1db5bcdc8ee6b9306b1c14ebad",
+  "standard_library_reproducer": "PASS",
+  "run_from_other_directory": "PASS",
+  "deterministic_outputs": "PASS",
+  "output_sha256": {
+    "PHASE_C_CALCULATIONS.json": "1d70683b17e2263ada06246c071d93e7eaa981b2eefca42132541b26e119267b",
+    "PHASE_C_BOM.csv": "f0a5d7f1e6381d711b5dfef6158974ecd3da8ebd8beac7cd49b5ef5ec5dd9714",
+    "PHASE_C_PURCHASE_MODEL.csv": "a3e4ef624e7c51b3a7d7313058306e774539cd5303726538459b444d3c9f89b7"
+  },
+  "independent_RK4_error_v": 1.1546319456101628e-14,
+  "LC_model_cases": 48,
+  "BOM_reference_uniqueness": "PASS",
+  "planned_physical_references": 94,
+  "BOM_Decimal_extensions": "PASS",
+  "selected_option_only": "PASS",
+  "preserved_baseline_files": 47,
+  "hardware_and_Phase_A_B_unchanged": "PASS",
+  "physical_tests": "NOT RUN",
+  "ERC_DRC": "N/A; no CAD edits",
+  "git_commit": "BLOCKED index.lock; see log",
+  "overall_electrical_release": "BLOCKED"
+}
