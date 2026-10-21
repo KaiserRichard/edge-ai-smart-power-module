@@ -3850,5 +3850,1133 @@
       "startup/reset, auxiliary dropout/reverse/transient behavior, thermal and SOA",
       "remaining R2/R3 release criteria"
     ]
+  },
+  "gate_2c": {
+    "classification": "Independent CALCULATED conditional screens; actual worst case OPEN",
+    "source_register": "third_party/sheet03_gate2c_source_register.json",
+    "source_conditions_and_assumptions": "docs/evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md",
+    "equations_and_model": "scripts/calculate_sheet03_gate2c.py",
+    "verdict": "BLOCKED",
+    "baseline": "c47409fb2637c94ccaa685c3ac4cbbd10681d5a2",
+    "netlist_sha256": "8e7e4fd0ab4e3f6541d030f37904412a38eace9c075c9f732dbd34a13e5591ad",
+    "captured_values": {
+      "C101": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 100V",
+        "SI": 1e-06
+      },
+      "C102": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 100V",
+        "SI": 1e-06
+      },
+      "C103": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 16V",
+        "SI": 1.0000000000000001e-07
+      },
+      "R101": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "332k",
+        "SI": 332000.0
+      },
+      "R102": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "54.9k",
+        "SI": 54900.0
+      },
+      "R103": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "348k",
+        "SI": 348000.0
+      },
+      "R104": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "15.8k",
+        "SI": 15800.0
+      },
+      "R105": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "4.02k",
+        "SI": 4019.9999999999995
+      },
+      "R106": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "56.2k",
+        "SI": 56200.0
+      },
+      "R107": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "R108": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100k",
+        "SI": 100000.0
+      },
+      "C201": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C202": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C203": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 50V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C204": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 50V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C205": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 16V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C206": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 16V",
+        "SI": 1e-06
+      },
+      "C207": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22pF 50V",
+        "SI": 22.0
+      },
+      "C209": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C210": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C211": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C212": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C213": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C214": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "L201": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "6.8uH",
+        "SI": 6.799999999999999e-06
+      },
+      "R201": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "33.2k",
+        "SI": 33200.0
+      },
+      "R202": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100k",
+        "SI": 100000.0
+      },
+      "R203": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "24.4k",
+        "SI": 24400.0
+      },
+      "R204": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "0",
+        "SI": 0.0
+      },
+      "R205": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1k",
+        "SI": 1000.0
+      },
+      "R206": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100k",
+        "SI": 100000.0
+      },
+      "R207": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "24.9k",
+        "SI": 24900.0
+      },
+      "C301": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "220nF 50V",
+        "SI": 2.2e-07
+      },
+      "C302": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 16V",
+        "SI": 1e-06
+      },
+      "C303": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C304": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C305": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10uF 25V",
+        "SI": 9.999999999999999e-06
+      },
+      "C306": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10uF 25V",
+        "SI": 9.999999999999999e-06
+      },
+      "C307": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 50V",
+        "SI": 1e-06
+      },
+      "C308": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C309": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 25V",
+        "SI": 1e-06
+      },
+      "C310": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C311": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 25V",
+        "SI": 1e-06
+      },
+      "C312": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10nF 25V",
+        "SI": 1e-08
+      },
+      "C313": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10nF 25V",
+        "SI": 1e-08
+      },
+      "C314": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "220nF 25V",
+        "SI": 2.2e-07
+      },
+      "C315": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C316": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C317": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10nF 25V",
+        "SI": 1e-08
+      },
+      "C318": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C319": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C320": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C321": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C322": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C323": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C324": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C325": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 25V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C330": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "C331": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "C332": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "C333": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "C334": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "C335": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "C336": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "C337": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "470uF 35V",
+        "SI": 0.00047
+      },
+      "R301": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "11.3k",
+        "SI": 11300.0
+      },
+      "R302": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10.0k",
+        "SI": 10000.0
+      },
+      "R303": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1.00k",
+        "SI": 1000.0
+      },
+      "R304": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100",
+        "SI": 100.0
+      },
+      "R305": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "2.2M",
+        "SI": 2200000.0
+      },
+      "R306": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1.00",
+        "SI": 1.0
+      },
+      "R307": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "R308": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "0.033",
+        "SI": 0.033
+      },
+      "R309": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "0.033",
+        "SI": 0.033
+      },
+      "R310": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "0.033",
+        "SI": 0.033
+      },
+      "R311": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "0.033",
+        "SI": 0.033
+      },
+      "R312": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "31.9k",
+        "SI": 31900.0
+      },
+      "R313": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10.0k",
+        "SI": 10000.0
+      },
+      "R314": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "53.9k",
+        "SI": 53900.0
+      },
+      "R315": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10.0k",
+        "SI": 10000.0
+      },
+      "R316": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "R317": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "R318": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "47k",
+        "SI": 47000.0
+      },
+      "R319": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100k",
+        "SI": 100000.0
+      },
+      "R320": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "R321": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100k",
+        "SI": 100000.0
+      },
+      "R322": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100k",
+        "SI": 100000.0
+      },
+      "R323": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "C401": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 50V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C402": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 16V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C403": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "1uF 50V",
+        "SI": 1e-06
+      },
+      "C404": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "22uF 50V",
+        "SI": 2.2e-05
+      },
+      "C405": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 16V",
+        "SI": 1.0000000000000001e-07
+      },
+      "C406": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "100nF 16V",
+        "SI": 1.0000000000000001e-07
+      },
+      "R401": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "2mOhm KELVIN",
+        "SI": 0.002
+      },
+      "R402": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10",
+        "SI": 10.0
+      },
+      "R403": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10",
+        "SI": 10.0
+      },
+      "R404": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "R405": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      },
+      "R406": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "4.7k",
+        "SI": 4700.0
+      },
+      "R407": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "4.7k",
+        "SI": 4700.0
+      },
+      "R408": {
+        "classification": "ASSUMED as-fitted nominal from captured XML; not measured",
+        "source": "V1A_gate2.net.xml",
+        "text": "10k",
+        "SI": 10000.0
+      }
+    },
+    "threshold": {
+      "classification": "CALCULATED (worst-case within ASSUMED stack only)",
+      "formula": "(Vref +/- offset+hysteresis)*(1+Rt/Rb) +/- Ib*Rt",
+      "nominal_V": 5.324999999999999,
+      "min_V": 5.293568153160679,
+      "max_V": 5.356562531846693,
+      "reference_fraction": 0.0012125,
+      "R303_bias_extra_V_screen": 1.065e-05,
+      "actual_worst_case_V": null
+    },
+    "buck_static": {
+      "classification": "CALCULATED (typical only: IFB has no maximum)",
+      "min_V": 5.038271401729418,
+      "max_V": 5.158632237795172
+    },
+    "input": {
+      "classification": "CALCULATED (worst-case with ASSUMED +/-0.1% resistors, no drift)",
+      "OVP_nominal_V": 27.63037974683544,
+      "OVP_min_V": 26.973872559387452,
+      "OVP_max_V": 28.289211488402323,
+      "UVLO_rising_nominal_V": 8.456830601092896,
+      "UVLO_rising_V": [
+        8.223734610271697,
+        8.690635766294163
+      ],
+      "UVLO_falling_V": [
+        7.618700857139583,
+        8.16823530754762
+      ],
+      "UVLO_falling_nominal_V": 7.9071366120218585,
+      "input_PGOOD_rising_V": [
+        7.763493395034966,
+        8.12508996153153
+      ],
+      "input_PGOOD_falling_V": [
+        7.195139069360641,
+        7.634377368938938
+      ],
+      "ILIM_formula_nominal_A": 4.477611940298508,
+      "ILIM_min_A": 4.180819180819181,
+      "ILIM_max_A": 4.81981981981982,
+      "24V_tolerance_headroom_to_OVP_min_fraction": 0.12391135664114383,
+      "selected_converter": null,
+      "module_isolated": null,
+      "converter_fault_containment": "OPEN: exact converter not supplied"
+    },
+    "supplies": {
+      "classification": "CALCULATED regulated screen; dropout/ramp validity OPEN",
+      "DET_5V": {
+        "nominal_V": 4.99867,
+        "min_V": 4.880624530499002,
+        "max_V": 5.1173980301002
+      },
+      "DRV_7V5": {
+        "nominal_V": 7.62327,
+        "min_V": 7.4402690342914175,
+        "max_V": 7.807424257755512
+      },
+      "PG_driver_floor_screen_V": 6.175423298461876,
+      "PG_detector_floor_screen_V": 4.050918360314172,
+      "TPS3808_reference_reset_V": [
+        2.2950500000000003,
+        2.36495
+      ],
+      "TPS3808_release_nominal_s": 1.257642857142857,
+      "TPS3808_release_assumed_scaled_s": [
+        0.6062222222222223,
+        2.112
+      ]
+    },
+    "timing": {
+      "classification": "DATASHEET stage tests; APPLICATION MAXIMUM OPEN",
+      "TLV3201_fall_ns": [
+        null,
+        45,
+        55
+      ],
+      "SN74LVC1G11_per_stage_ns": [
+        1.0,
+        null,
+        4.6
+      ],
+      "SN74LVC1G74_async_clear_ns": [
+        1.6,
+        null,
+        6.1
+      ],
+      "UCC27511_INplus_ns_4p5V": [
+        4,
+        15,
+        26
+      ],
+      "UCC27511_INplus_ns_12V": [
+        4,
+        13,
+        23
+      ],
+      "LTC7001_propagation_ns_10V": [
+        null,
+        35,
+        70
+      ],
+      "TPS26630_SHDN_to_off_us": [
+        0.8,
+        1.0,
+        1.5
+      ],
+      "TPS26630_hot_short_us": [
+        null,
+        1.0,
+        null
+      ],
+      "TPS26630_soft_short_us": [
+        2.2,
+        3.2,
+        4.5
+      ],
+      "TPS26630_limit_timeout_ms": [
+        129,
+        162,
+        202
+      ],
+      "gate_to_4p5V_regulated_charge_screen_ns": 120.26110395888139,
+      "complete_digital_plus_charge_regulated_screen_ns": 216.5611039588814,
+      "complete_digital_plus_charge_PG_floor_screen_ns": 307.3511417172143,
+      "actual_OV_onset_to_commutation_max_ns": null,
+      "actual_OV_onset_to_series_off_max_ns": null
+    },
+    "fault_conditional_cases": [
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 30.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 5e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": false,
+        "efuse_response_delay_s": null,
+        "efuse_delay_origin": null,
+        "efuse_absolute_off_s": null,
+        "continued_input_A": null,
+        "comparator_overdrive_crossing_s": 3.592000000000188e-06,
+        "Pi_peak_V": 5.481354985745168,
+        "fault_margin_V": 0.0186450142548318,
+        "inductor_peak_A": 204.4090602374557,
+        "crowbar_peak_A": 132.8943276802013,
+        "crowbar_initial_I2t_A2s": 0.029007727607398462,
+        "ballast_initial_total_J": 0.0009716138362098115,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 30.0,
+        "crowbar_action_s": 4e-07,
+        "L_floor_H": 5e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": false,
+        "efuse_response_delay_s": null,
+        "efuse_delay_origin": null,
+        "efuse_absolute_off_s": null,
+        "continued_input_A": null,
+        "comparator_overdrive_crossing_s": 3.592000000000188e-06,
+        "Pi_peak_V": 5.502486404014413,
+        "fault_margin_V": -0.0024864040144136727,
+        "inductor_peak_A": 204.31145030407254,
+        "crowbar_peak_A": 133.02091062036487,
+        "crowbar_initial_I2t_A2s": 0.027466294606205786,
+        "ballast_initial_total_J": 0.000919983537834863,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 5e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": false,
+        "efuse_response_delay_s": null,
+        "efuse_delay_origin": null,
+        "efuse_absolute_off_s": null,
+        "continued_input_A": null,
+        "comparator_overdrive_crossing_s": 4.579999999999938e-06,
+        "Pi_peak_V": 5.468710962966523,
+        "fault_margin_V": 0.03128903703347642,
+        "inductor_peak_A": 174.73065234180822,
+        "crowbar_peak_A": 131.71809465904525,
+        "crowbar_initial_I2t_A2s": 0.02847528379367614,
+        "ballast_initial_total_J": 0.0009537796306691819,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 4e-07,
+        "L_floor_H": 5e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": false,
+        "efuse_response_delay_s": null,
+        "efuse_delay_origin": null,
+        "efuse_absolute_off_s": null,
+        "continued_input_A": null,
+        "comparator_overdrive_crossing_s": 4.579999999999938e-06,
+        "Pi_peak_V": 5.485506100566638,
+        "fault_margin_V": 0.014493899433361896,
+        "inductor_peak_A": 174.63330725372208,
+        "crowbar_peak_A": 132.12412483586633,
+        "crowbar_initial_I2t_A2s": 0.026941443546683538,
+        "ballast_initial_total_J": 0.0009024036515961635,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 1e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": false,
+        "efuse_response_delay_s": null,
+        "efuse_delay_origin": null,
+        "efuse_absolute_off_s": null,
+        "continued_input_A": null,
+        "comparator_overdrive_crossing_s": 2.9550000000001403e-06,
+        "Pi_peak_V": 6.26805205792627,
+        "fault_margin_V": -0.7680520579262704,
+        "inductor_peak_A": 502.9431639681016,
+        "crowbar_peak_A": 155.83120234259312,
+        "crowbar_initial_I2t_A2s": 0.03502198636921685,
+        "ballast_initial_total_J": 0.001173061433436919,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 4e-07,
+        "L_floor_H": 1e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": false,
+        "efuse_response_delay_s": null,
+        "efuse_delay_origin": null,
+        "efuse_absolute_off_s": null,
+        "continued_input_A": null,
+        "comparator_overdrive_crossing_s": 2.9550000000001403e-06,
+        "Pi_peak_V": 6.2719415794365885,
+        "fault_margin_V": -0.7719415794365889,
+        "inductor_peak_A": 502.4568894240004,
+        "crowbar_peak_A": 155.92820998719515,
+        "crowbar_initial_I2t_A2s": 0.033392248680140284,
+        "ballast_initial_total_J": 0.0011184733695413,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      }
+    ],
+    "finite_input_conditional_cases": [
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 5e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": true,
+        "efuse_response_delay_s": 1e-06,
+        "efuse_delay_origin": "overdrive",
+        "efuse_absolute_off_s": 5.579999999999938e-06,
+        "continued_input_A": 0,
+        "comparator_overdrive_crossing_s": 4.579999999999938e-06,
+        "Pi_peak_V": 5.468710962966523,
+        "fault_margin_V": 0.03128903703347642,
+        "inductor_peak_A": 172.2867810675828,
+        "crowbar_peak_A": 131.71809465904525,
+        "crowbar_initial_I2t_A2s": 0.028464400926873405,
+        "ballast_initial_total_J": 0.0009534151090456269,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 1e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": true,
+        "efuse_response_delay_s": 1e-06,
+        "efuse_delay_origin": "overdrive",
+        "efuse_absolute_off_s": 3.95500000000014e-06,
+        "continued_input_A": 0,
+        "comparator_overdrive_crossing_s": 2.9550000000001403e-06,
+        "Pi_peak_V": 6.1982993712633085,
+        "fault_margin_V": -0.698299371263309,
+        "inductor_peak_A": 472.15497301160394,
+        "crowbar_peak_A": 154.09151692887664,
+        "crowbar_initial_I2t_A2s": 0.03486477739118198,
+        "ballast_initial_total_J": 0.0011677957187176393,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 1e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": true,
+        "efuse_response_delay_s": 1e-06,
+        "efuse_delay_origin": "overdrive",
+        "efuse_absolute_off_s": 3.95500000000014e-06,
+        "continued_input_A": 4.81981981981982,
+        "comparator_overdrive_crossing_s": 2.9550000000001403e-06,
+        "Pi_peak_V": 6.199187965746387,
+        "fault_margin_V": -0.6991879657463875,
+        "inductor_peak_A": 472.5419829591405,
+        "crowbar_peak_A": 154.11367915566498,
+        "crowbar_initial_I2t_A2s": 0.03486684395912306,
+        "ballast_initial_total_J": 0.0011678649384108254,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 1e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": true,
+        "efuse_response_delay_s": 1.8e-06,
+        "efuse_delay_origin": "overdrive",
+        "efuse_absolute_off_s": 4.75500000000014e-06,
+        "continued_input_A": 0,
+        "comparator_overdrive_crossing_s": 2.9550000000001403e-06,
+        "Pi_peak_V": 6.265629573599903,
+        "fault_margin_V": -0.7656295735999037,
+        "inductor_peak_A": 501.37427014860936,
+        "crowbar_peak_A": 155.77078372864207,
+        "crowbar_initial_I2t_A2s": 0.03502078339654506,
+        "ballast_initial_total_J": 0.00117302113986728,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 5e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": true,
+        "efuse_response_delay_s": 1e-06,
+        "efuse_delay_origin": "hot_short_current",
+        "efuse_absolute_off_s": 4.1210000000001525e-06,
+        "continued_input_A": 0,
+        "comparator_overdrive_crossing_s": 4.583999999999937e-06,
+        "Pi_peak_V": 5.4674388767291635,
+        "fault_margin_V": 0.03256112327083606,
+        "inductor_peak_A": 163.8291340479571,
+        "crowbar_peak_A": 131.6871986602303,
+        "crowbar_initial_I2t_A2s": 0.028340719763836942,
+        "ballast_initial_total_J": 0.0009492724084897212,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      },
+      {
+        "classification": "CALCULATED conditional sensitivity; no optimized worst-case claim",
+        "vin_V": 24.0,
+        "crowbar_action_s": 3e-07,
+        "L_floor_H": 1e-07,
+        "series_off_s_after_overdrive": 2e-06,
+        "finite_input": true,
+        "efuse_response_delay_s": 1e-06,
+        "efuse_delay_origin": "hot_short_current",
+        "efuse_absolute_off_s": 3.4640000000001035e-06,
+        "continued_input_A": 0,
+        "comparator_overdrive_crossing_s": 2.9550000000001403e-06,
+        "Pi_peak_V": 6.126414808872878,
+        "fault_margin_V": -0.626414808872878,
+        "inductor_peak_A": 446.2556186506592,
+        "crowbar_peak_A": 152.29866090217928,
+        "crowbar_initial_I2t_A2s": 0.03456394337192511,
+        "ballast_initial_total_J": 0.001157719283242632,
+        "actual_application_worst_case": null,
+        "limitations": "No saturated-L guarantee, eFuse hot-short max, commutation/supply/capacitance/source bound."
+      }
+    ],
+    "energy": {
+      "classification": "CALCULATED within ASSUMED voltage/C/time/temperature envelope",
+      "resistor_initial_terminal_C_ASSUMED": 125,
+      "resistor_terminal_max_C_DATASHEET": 95,
+      "resistor_terminal_headroom_C_CALCULATED": -30,
+      "resistor_terminal_envelope_status": "BLOCKING: inherited assumption exceeds datasheet maximum",
+      "L_initial_6A_nominal_J": 0.0001224,
+      "L_11p5A_linear_max_J": 0.0005395799999999999,
+      "L_14A_linear_nominal_J": 0.0006663999999999999,
+      "actual_saturated_L_energy_J": null,
+      "input_cap_screen_max_F": 6.0996e-05,
+      "input_cap_24V_screen_J": 0.017566848,
+      "bulk_min_screen_F": 0.0024064000000000004,
+      "bulk_max_screen_F": 0.005414399999999999,
+      "raw_bulk_5p5V_max_screen_J": 0.08189279999999999,
+      "ballast_R_min_ohm": 0.032505,
+      "ballast_R_max_ohm": 0.033495,
+      "crowbar_ceiling_current_A": 169.20473773265653,
+      "FET_loadline_peak_W": 232.65651438240272,
+      "downstream_220uF_energy_J": 0.0033275,
+      "downstream_I2t_upper_A2s": 0.1023688663282572,
+      "raw_bulk_I2t_upper_A2s": 2.519390862944162,
+      "per_resistor_100us_rectangle_J": 0.02326565143824027,
+      "per_resistor_peak_W": 232.6565143824027,
+      "assumed_hot_resistor_100us_limit_J": 0.045000000000000005,
+      "assumed_FET_100us_rise_K": 9.30626057529611,
+      "actual_SOA_pass": null,
+      "actual_resistor_pulse_pass": null
+    },
+    "margins": {
+      "fault": {
+        "classification": "OPEN",
+        "claimed_V": 0.018388,
+        "worst_case_V": null,
+        "conditional_selected_V": 0.0186450142548318
+      },
+      "harness": {
+        "classification": "OPEN",
+        "claimed_V": 0.011431,
+        "worst_case_V": null,
+        "reduced_R_ohm": 0.0553677405019685,
+        "original_R_ohm": 0.07555453848425196,
+        "conditional_reduced_V": 0.011432699219574793,
+        "conditional_original_V": -0.08950129069184243
+      },
+      "false_trip": {
+        "classification": "OPEN",
+        "claimed_V": 0.021954,
+        "worst_case_V": null,
+        "conditional_20us_V": 0.021954176723427705,
+        "conditional_30us_V": -0.002979333914870033,
+        "normal_20us_V": 5.261613976437252,
+        "allowed_loop_delay_s": 2.880508847787633e-05
+      }
+    },
+    "24V_vs_12V": {
+      "classification": "CALCULATED (typical only); APPLICATION THERMAL OPEN",
+      "captured_BIAS": "GND; datasheet application curves use output bias; efficiency transfer OPEN",
+      "partial_loss_screens": [
+        {
+          "classification": "CALCULATED (typical only); assumed 10ns total switching edge",
+          "vin_V": 12.0,
+          "output_V": 5.098360655737705,
+          "output_A": 5.0,
+          "duty": 0.42486338797814205,
+          "ripple_A_pp": 1.0780345126494566,
+          "switch_conduction_typ_W": 0.7402884021401099,
+          "switch_conduction_max_screen_W": 1.5238791501445657,
+          "assumed_switching_W": 0.12,
+          "inductor_copper_25C_W": 0.3639042747459766,
+          "IC_partial_loss_typ_W": 0.8602884021401099,
+          "actual_total_loss_W": null
+        },
+        {
+          "classification": "CALCULATED (typical only); assumed 10ns total switching edge",
+          "vin_V": 24.0,
+          "output_V": 5.098360655737705,
+          "output_A": 5.0,
+          "duty": 0.21243169398907102,
+          "ripple_A_pp": 1.4762159062765126,
+          "switch_conduction_typ_W": 0.6358010271055015,
+          "switch_conduction_max_screen_W": 1.331098747013674,
+          "assumed_switching_W": 0.24,
+          "inductor_copper_25C_W": 0.3651332161940154,
+          "IC_partial_loss_typ_W": 0.8758010271055015,
+          "actual_total_loss_W": null
+        }
+      ],
+      "auxiliary_loss_screens": [
+        {
+          "classification": "CALCULATED (typical only, ASSUMED 10mA per rail/0.5V diode)",
+          "vin_V": 12.0,
+          "detector_LDO_W": 0.06501330000000001,
+          "driver_LDO_W": 0.038767300000000005,
+          "aux_bleed_W": 0.013225,
+          "actual_thermal_max": null
+        },
+        {
+          "classification": "CALCULATED (typical only, ASSUMED 10mA per rail/0.5V diode)",
+          "vin_V": 24.0,
+          "detector_LDO_W": 0.1850133,
+          "driver_LDO_W": 0.1587673,
+          "aux_bleed_W": 0.055225,
+          "actual_thermal_max": null
+        }
+      ],
+      "24V_efficiency_graph_assumed_reading": [
+        0.935,
+        0.945
+      ],
+      "13p5V_efficiency_graph_assumed_reading": [
+        0.94,
+        0.95
+      ],
+      "12V_400kHz_efficiency": null,
+      "24V_total_buck_loss_screen_W": [
+        1.483649926272881,
+        1.7721574471815507
+      ],
+      "actual_24V_module_compatibility": null
+    }
   }
 }

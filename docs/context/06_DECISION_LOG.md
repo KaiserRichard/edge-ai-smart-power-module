@@ -12,6 +12,17 @@ Consolidated 2026-09-26; this is an index into existing decisions, not a replace
 | R2 must close before PCB work | [Manager report](../FINAL_MANAGER_REPORT.md); [gate workflow](05_WORKFLOW_AND_GATES.md) | R2/R3 BLOCKED; R3 requires separate authorization |
 | Never fabricate qualification state | [AGENTS.md](../../AGENTS.md); [engineering state](03_ENGINEERING_STATE.md) | Permanent evidence discipline |
 
+## 2026-09-30 — Gate2c analysis override
+
+[Gate2c closure](../evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md): BLOCKED;
+all application worst-case margins OPEN. Preserve historical arithmetic,
+correct common-source wording, disclose conditional negative cases and the
+resistor-terminal rating conflict. No circuit edits or physical validation.
+The senior has not selected the upstream converter. Write selection limits
+and honestly leave model-specific tolerance/trim/OVP/isolation/containment
+OPEN; nominal higher-rail operation has not been rejected, so no fallback
+module shortlist is authorized by that conditional request yet.
+
 ## 2026-09-30 — Gate2 preliminary capture completed
 
 Retain and reconcile `13e4c2d`; do not replace its two-latch startup/fault implementation with the overlapping alternative. Manufacturer pin review corrects UCC27511 to 1 VDD / 2 OUTH / 3 OUTL / 4 GND / 5 IN− / 6 IN+; the series-FET footprint retains pads 1–8. The auxiliary diode, driver divider 53.9 kΩ/10kΩ and reviewed package/polarity corrections are captured. Unrelated sheets are preserved with the explicitly listed hierarchy exceptions. See [Gate2 validation](../evidence/r2/sheet03/GATE2_VALIDATION.md).

@@ -4,7 +4,18 @@ Consolidated 2026-09-26 from the 2026-09-14 continuation in [FINAL_MANAGER_REPOR
 
 **R2 schematic release: BLOCKED. R3 PCB release: BLOCKED. No printed circuit board (PCB) creation or routing authorized. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
 
-## Sheet 03 — Gates1d + 2, completed 2026-09-30
+## Sheet03 Gate2c — current override, 2026-09-30
+
+**BLOCKED:** [review closure](../evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md)
+supersedes the historical preliminary-readiness interpretation below. All
+application worst-case margins are OPEN. Fault-current/saturated-inductance,
+energy-disposal, full timing/supply and inherited resistor-terminal thermal
+premises are BLOCKING. Conditional negative cases are disclosed. No native
+KiCad files were opened or changed; proposed electrical changes remain proposals.
+The future upstream converter is not selected; nominal rail operation is
+plausible, but its tolerance/trim/OVP/isolation/containment contract remains OPEN.
+
+## Sheet 03 — historical Gates1d + 2, completed 2026-09-30
 
 **PRELIMINARY — READY FOR SCHEMATIC REVIEW; Gate1d/Gate2 CONDITIONAL PASS.** Candidate C + crowbar is captured using the two-latch circuit from `13e4c2d`, CSD18540Q5B, four WFMB2512R0330FEA drain-ballast elements (33mΩ equivalent), UCC27511 and a common-source BSC034N06NS pair driven by LTC7001. The independent driver rail is 7.62327 V nominal, with the existing `DRV_7V5` net name retained.
 
