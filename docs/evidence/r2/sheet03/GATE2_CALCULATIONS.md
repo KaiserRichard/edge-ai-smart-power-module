@@ -1,3 +1,57 @@
+# Gate 2c — independent bounds override
+
+**BLOCKED — PRELIMINARY — NOT FOR FABRICATION.**
+
+This section supersedes positive-margin interpretations of the historical Gate2 screen below.
+Run `python3 -B scripts/calculate_sheet03_gate2c.py --write`. Only exported XML is read.
+Historical JSON members are retained; actual worst-case margins are `null` / **OPEN**.
+Sources, tolerance conditions, timelines and proposed changes: [review closure](GATE2C_REVIEW_CLOSURE.md).
+
+Finite entries below are **CALCULATED conditional screens**. Divider/resistor corners are extrema within explicitly **ASSUMED** tolerance stacks; fault curves are sensitivities, not optimized extrema.
+They do not establish the application worst case. Efficiency/loss screens are **CALCULATED (typical only)**.
+
+| Margin | Historical claimed CALCULATED screen | Independent conditional calculation | Application worst case |
+|---|---:|---:|---|
+| Fault | 18.388 mV | 18.645 mV, historical source/L/timing box | OPEN |
+| Harness | 11.431 mV | 11.433 mV, reduced path | OPEN |
+| False trip | 21.954 mV | 21.954 mV, assumed response | OPEN |
+
+**BLOCKING conditional counterexamples:** retained harness -89.501 mV; assumed longer load release -2.979 mV. Also, the inherited ASSUMED resistor-terminal temperature exceeds the DATASHEET maximum by CALCULATED 30 K. These are premise conflicts, not measured device behavior.
+
+| Conditional shorted-high-side sensitivity — ASSUMED inputs | CALCULATED Pi peak | CALCULATED margin | CALCULATED L peak |
+|---|---:|---:|---:|
+| 30 V, 0.3 µs action, 0.5 µH floor | 5.481355 V | 18.645 mV | 204.409 A |
+| 30 V, 0.4 µs action, 0.5 µH floor | 5.502486 V | -2.486 mV | 204.311 A |
+| 24 V, 0.3 µs action, 0.5 µH floor | 5.468711 V | 31.289 mV | 174.731 A |
+| 24 V, 0.4 µs action, 0.5 µH floor | 5.485506 V | 14.494 mV | 174.633 A |
+| 24 V, 0.3 µs action, 0.1 µH floor | 6.268052 V | -768.052 mV | 502.943 A |
+| 24 V, 0.4 µs action, 0.1 µH floor | 6.271942 V | -771.942 mV | 502.457 A |
+
+Negative cases are **BLOCKING** evidence against claiming the assumed floor/timing as a guaranteed bound.
+
+| CALCULATED input/supply screen | Result |
+|---|---|
+| Input OVP, resistor initial tolerance only | 27.630380 V nominal; 26.973873–28.289211 V |
+| Falling UVLO | 7.907137 V nominal; 7.618701–8.168235 V |
+| eFuse ILIM | 4.477612 A formula nominal; 4.180819–4.819820 A |
+| DET_5V regulated | 4.880625–5.117398 V |
+| DRV_7V5 regulated / PG floor screen | 7.440269–7.807424 V / 6.175423 V |
+| Supervisor release, nominal external capacitor | 1.257643 s typical equation; maximum application delay OPEN |
+
+| CALCULATED energy/pulse screen, ASSUMED ceiling and isolation | Result |
+|---|---:|
+| Initial nominal inductor energy | 122.400 µJ |
+| Input capacitors at nominal rail, conditional upper C | 17.567 mJ |
+| Raw bulk energy at assumed ceiling | 81.893 mJ |
+| Downstream tail I²t ceiling | 0.102369 A²s |
+| Raw-bulk-only I²t ceiling, if still connected | 2.519391 A²s |
+| Each ballast rectangle | 23.265651 mJ |
+
+**24 V rail:** nominal operation is plausible; exact converter tolerance/trim/OVP/isolation and fault containment remain OPEN pending its model. No fallback-module shortlist is justified yet.
+
+<!-- GATE2C GENERATED END -->
+
+## Historical Gate 2 screen — preserved, superseded
 # Gate 2 — captured-value calculation
 
 **CALCULATED — PRELIMINARY — R2 BLOCKED — NOT FOR FABRICATION.**

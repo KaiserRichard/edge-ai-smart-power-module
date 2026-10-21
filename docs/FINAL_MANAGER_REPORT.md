@@ -1,3 +1,38 @@
+# Gate2c manager update — 2026-09-30
+
+**STATUS: BLOCKED. PRELIMINARY — R2/R3 BLOCKED — NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
+
+**WHAT WAS DONE:** independently reviewed the input findings and manufacturer
+limits; created numerical scripts/tests, complete stage/supply tables, pulse-tail
+energy and current sensitivities; corrected common-source text. No native KiCad
+file was opened or saved. All electrical changes remain PROPOSED CHANGES.
+
+**EVIDENCE:** [Gate2c closure](evidence/r2/sheet03/GATE2C_REVIEW_CLOSURE.md),
+[calculations](evidence/r2/sheet03/GATE2_CALCULATIONS.md), appended `gate_2c`
+JSON member, manufacturer source register, preserved independent input review,
+and numerical tests. Historical members are retained. Numerical PASS does
+not establish an electrical protection envelope.
+
+**DECISIONS:** supersede the earlier preliminary-readiness interpretation with
+BLOCKED. Application worst-case margins are OPEN. Finite conditional negative
+cases and the DATASHEET resistor-terminal rating conflict are disclosed.
+The future converter is not selected; nominal rail operation is plausible,
+while its exact tolerance/trim/OVP/isolation/containment remains OPEN. Provide
+selection requirements; no fallback-module shortlist yet.
+
+**OPEN RISKS:** saturated-L/current and energy disposal; applicable complete
+delays and supply qualification/hold-up/reset/back-power; hot resistor terminal
+and pulse rating; series inrush/VGS/SOA; actual harness/effective C/loop/startup;
+source/converter fault envelope and thermal qualification. codex-a owns revised
+PDF readability and new capture reconciliation.
+
+**NEXT GATE:** senior R2 engineering decisions on the proposed changes and
+qualification contracts. R2/R3 release remains BLOCKED. No merge, fabrication,
+procurement, board routing or expensive-SBC first test. Earlier reports below
+are historical evidence.
+
+---
+
 # Gate2 manager update — 2026-09-30
 
 **STATUS: CONDITIONAL PASS for the authorized preliminary schematic capture/review package. VERDICT: PRELIMINARY — READY FOR SCHEMATIC REVIEW. R2 release and R3 remain BLOCKED. NOT FOR FABRICATION — ENGINEERING REVIEW REQUIRED.**
